@@ -14,12 +14,14 @@ export const inject = ['webServer']
 
 export function apply(ctx: Context): void {
   const dshHome = resolveDshHome()
+  const logger = ctx.logger('dsh-marketplace')
   const registry = new RegistryService({
     baseUrl: resolveRegistryBaseUrl(),
     cacheDir: join(dshHome, 'cache', 'dsh-marketplace', 'v1'),
+    logger,
   })
   const installed = new InstalledService(resolveCurrentProfile(ctx.baseUrl, dshHome), registry)
-  const mutations = new MutationManager(registry, installed, new CommandRunner())
+  const mutations = new MutationManager(registry, installed, new CommandRunner(), logger)
   const handler = createRouter({ registry, installed, mutations })
   ctx.effect(
     () => ctx.webServer.register({ kind: 'prefix', path: '/dsh-marketplace', handler }),

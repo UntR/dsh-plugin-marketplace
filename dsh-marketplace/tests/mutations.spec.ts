@@ -37,4 +37,22 @@ describe('MutationManager', () => {
       .rejects.toMatchObject({ code: 'build-approval-required' })
     expect(runner.run).not.toHaveBeenCalled()
   })
+
+  it('logs mutation lifecycle without command output', async () => {
+    const registry = { getPlugin: async () => ({
+      install: {
+        available: true, spec: 'dsh-example@1.0.0', packageName: 'dsh-example', version: '1.0.0',
+        requiresBuildApproval: false, reason: null,
+      },
+    }) } as unknown as RegistryService
+    const runner = { run: vi.fn(async () => ({ output: 'secret command output' })) } as unknown as CommandRunner
+    const installed = { profileName: 'web', markRestartRequired: vi.fn() } as unknown as InstalledService
+    const logger = { info: vi.fn(), warn: vi.fn() }
+
+    await new MutationManager(registry, installed, runner, logger).install('gh:1', false)
+
+    expect(logger.info).toHaveBeenNthCalledWith(1, 'Plugin %s started for %s.', 'install', 'gh:1')
+    expect(logger.info).toHaveBeenNthCalledWith(2, 'Plugin %s succeeded for %s.', 'install', 'gh:1')
+    expect(JSON.stringify(logger.info.mock.calls)).not.toContain('secret command output')
+  })
 })

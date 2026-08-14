@@ -1,5 +1,6 @@
 import type { RegistryService } from '../registry/service.js'
 import { MarketplaceError } from '../shared/errors.js'
+import { silentLogger, type MarketplaceLogger } from '../shared/logging.js'
 import type { CommandRunner } from './command-runner.js'
 import type { InstalledService } from './installed.js'
 
@@ -17,22 +18,37 @@ export class MutationManager {
     private readonly registry: RegistryService,
     private readonly installed: InstalledService,
     private readonly runner: CommandRunner,
+    private readonly logger: MarketplaceLogger = silentLogger,
   ) {}
 
-  private async exclusive(operation: () => Promise<MutationResult>): Promise<MutationResult> {
+  private async exclusive(
+    name: 'install' | 'update' | 'remove',
+    target: string,
+    operation: () => Promise<MutationResult>,
+  ): Promise<MutationResult> {
     if (this.busy) throw new MarketplaceError('operation-in-progress', 'Another plugin operation is in progress.', 409)
     this.busy = true
+    this.logger.info('Plugin %s started for %s.', name, target)
     try {
       const result = await operation()
       this.installed.markRestartRequired()
+      this.logger.info('Plugin %s succeeded for %s.', name, target)
       return result
+    } catch (error) {
+      this.logger.warn(
+        'Plugin %s failed for %s (%s).',
+        name,
+        target,
+        error instanceof MarketplaceError ? error.code : 'unexpected-error',
+      )
+      throw error
     } finally {
       this.busy = false
     }
   }
 
   install(pluginId: string, allowBuildScripts: boolean): Promise<MutationResult> {
-    return this.exclusive(async () => {
+    return this.exclusive('install', pluginId, async () => {
       const detail = await this.registry.getPlugin(pluginId)
       if (!detail.install.available || detail.install.spec === null || detail.install.packageName === null) {
         throw new MarketplaceError('plugin-not-installable', detail.install.reason ?? 'Plugin cannot be installed automatically.', 409)
@@ -58,7 +74,7 @@ export class MutationManager {
   }
 
   update(packageName: string): Promise<MutationResult> {
-    return this.exclusive(async () => {
+    return this.exclusive('update', packageName, async () => {
       const state = await this.installed.list()
       const plugin = state.plugins.find(item => item.packageName === packageName)
       if (plugin === undefined) throw new MarketplaceError('unknown-installed-plugin', 'Installed plugin was not found.', 404)
@@ -89,7 +105,7 @@ export class MutationManager {
   }
 
   remove(packageName: string): Promise<MutationResult> {
-    return this.exclusive(async () => {
+    return this.exclusive('remove', packageName, async () => {
       const state = await this.installed.list()
       const plugin = state.plugins.find(item => item.packageName === packageName)
       if (plugin === undefined) throw new MarketplaceError('unknown-installed-plugin', 'Installed plugin was not found.', 404)
@@ -105,4 +121,3 @@ export class MutationManager {
     })
   }
 }
-

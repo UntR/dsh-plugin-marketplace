@@ -1,4 +1,4 @@
-import { mkdtemp, readFile } from 'node:fs/promises'
+import { mkdtemp, readFile, readdir } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { describe, expect, it, vi } from 'vitest'
@@ -40,6 +40,28 @@ describe('RegistryService', () => {
     expect(fetch).toHaveBeenCalledTimes(2)
   })
 
+  it('revalidates after TTL expiry and manual refresh without replacing an unchanged revision', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'marketplace-cache-'))
+    const fetch = vi.fn(async (url: string | URL | Request) => String(url).endsWith('meta.json') ? json(meta) : json(index))
+    let now = 0
+    const service = new RegistryService({
+      baseUrl: 'https://registry.example/v1',
+      cacheDir: join(root, 'v1'),
+      fetch,
+      now: () => now,
+    })
+    await service.getCatalog()
+    now = 15 * 60 * 1_000 + 1
+    await service.getCatalog()
+    await service.getCatalog(true)
+    expect(fetch.mock.calls.map(([url]) => String(url))).toEqual([
+      'https://registry.example/v1/meta.json',
+      'https://registry.example/v1/index.json',
+      'https://registry.example/v1/meta.json',
+      'https://registry.example/v1/meta.json',
+    ])
+  })
+
   it('uses last-good disk data when refresh fails', async () => {
     const root = await mkdtemp(join(tmpdir(), 'marketplace-cache-'))
     const cacheDir = join(root, 'v1')
@@ -49,14 +71,20 @@ describe('RegistryService', () => {
       fetch: vi.fn(async (url: string | URL | Request) => String(url).endsWith('meta.json') ? json(meta) : json(index)),
     })
     await first.getCatalog()
+    const logger = { info: vi.fn(), warn: vi.fn() }
     const offline = new RegistryService({
       baseUrl: 'https://registry.example/v1',
       cacheDir,
       fetch: vi.fn(async () => { throw new Error('offline') }),
+      logger,
     })
     await expect(offline.getCatalog(true)).resolves.toMatchObject({ registry: { stale: true } })
     await expect(offline.getCatalog()).resolves.toMatchObject({ registry: { stale: true } })
     expect(JSON.parse(await readFile(join(cacheDir, 'meta.json'), 'utf8'))).toMatchObject({ revision })
+    expect(logger.warn).toHaveBeenCalledWith(
+      'Plugin registry refresh failed; using the last-good cache (%s).',
+      'registry-unavailable',
+    )
   })
 
   it('reports an unsupported future schema distinctly', async () => {
@@ -90,13 +118,22 @@ describe('RegistryService', () => {
     ]
     const fetch = vi.fn(async () => responses.shift() ?? json(index))
     const sleep = vi.fn(async () => {})
+    const logger = { info: vi.fn(), warn: vi.fn() }
     const service = new RegistryService({
       baseUrl: 'https://registry.example/v1',
       cacheDir: join(root, 'v1'),
       fetch,
       sleep,
+      logger,
     })
     await expect(service.getCatalog()).resolves.toMatchObject({ registry: { revision: nextRevision } })
     expect(sleep).toHaveBeenCalledWith(100)
+    expect(logger.info).toHaveBeenCalledWith(
+      'Plugin registry revision changed from %s to %s.',
+      'none',
+      nextRevision,
+    )
+    expect(await readdir(root)).toEqual(['v1'])
+    expect(JSON.parse(await readFile(join(root, 'v1', 'index.json'), 'utf8'))).toMatchObject({ revision: nextRevision })
   })
 })

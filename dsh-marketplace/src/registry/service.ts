@@ -2,6 +2,7 @@ import { mkdir, mkdtemp, readFile, rename, rm, writeFile } from 'node:fs/promise
 import { dirname, join } from 'node:path'
 import { CACHE_TTL_MS, FETCH_TIMEOUT_MS } from '../shared/constants.js'
 import { MarketplaceError } from '../shared/errors.js'
+import { silentLogger, type MarketplaceLogger } from '../shared/logging.js'
 import {
   registryIndexSchema,
   registryMetaSchema,
@@ -32,6 +33,7 @@ export interface RegistryServiceOptions {
   fetch?: typeof globalThis.fetch
   now?: () => number
   sleep?: (milliseconds: number) => Promise<void>
+  logger?: MarketplaceLogger
 }
 
 async function readSnapshot(cacheDir: string): Promise<Snapshot | null> {
@@ -80,6 +82,7 @@ export class RegistryService {
   private readonly fetchImpl: typeof globalThis.fetch
   private readonly now: () => number
   private readonly sleep: (milliseconds: number) => Promise<void>
+  private readonly logger: MarketplaceLogger
   private memory: Snapshot | null = null
   private memoryStale = false
   private expiresAt = 0
@@ -88,6 +91,7 @@ export class RegistryService {
     this.fetchImpl = options.fetch ?? globalThis.fetch
     this.now = options.now ?? Date.now
     this.sleep = options.sleep ?? (milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds)))
+    this.logger = options.logger ?? silentLogger
   }
 
   private async fetchJson(path: string): Promise<unknown> {
@@ -116,6 +120,7 @@ export class RegistryService {
       return this.catalog(this.memory, this.memoryStale)
     }
     const local = this.memory ?? await readSnapshot(this.options.cacheDir)
+    this.logger.info('Refreshing plugin registry metadata.')
     try {
       for (let attempt = 0; attempt < 2; attempt += 1) {
         const metaValue = await this.fetchJson('meta.json')
@@ -148,6 +153,11 @@ export class RegistryService {
         }
         const snapshot = { meta: metaResult.data, index: indexResult.data }
         await replaceSnapshot(this.options.cacheDir, snapshot)
+        this.logger.info(
+          'Plugin registry revision changed from %s to %s.',
+          local?.meta.revision ?? 'none',
+          snapshot.meta.revision,
+        )
         this.memory = snapshot
         this.memoryStale = false
         this.expiresAt = this.now() + CACHE_TTL_MS
@@ -156,6 +166,10 @@ export class RegistryService {
       throw new MarketplaceError('registry-invalid', 'Plugin registry revision is inconsistent.', 502)
     } catch (error) {
       if (local !== null) {
+        this.logger.warn(
+          'Plugin registry refresh failed; using the last-good cache (%s).',
+          error instanceof MarketplaceError ? error.code : 'registry-unavailable',
+        )
         this.memory = local
         this.memoryStale = true
         this.expiresAt = this.now() + CACHE_TTL_MS
