@@ -29,4 +29,14 @@ The tarball was reinstalled and DSH Web was started on `127.0.0.1:43891`. A read
 - Installed rendered the current `web` profile and the registry-missing Marketplace bundle.
 - The browser console contained no warnings or errors during the flow.
 
-This local E2E verifies the package and integration contract. Production Registry run `31799255745` subsequently deployed Schema v1 to `https://untr.github.io/dsh-plugin-marketplace/registry/v1`; the production Marketplace `RegistryService` loaded its 1,830-entry catalog and a plugin detail with `stale=false`. The external add/remove-topic lifecycle remains a separate public-repository mutation check rather than a local fixture claim.
+This local E2E verifies the package and integration contract. Schema v1 is deployed at `https://untr.github.io/dsh-plugin-marketplace/registry/v1`, and the production Marketplace `RegistryService` loads it with `stale=false`.
+
+## Production topic lifecycle
+
+An authorized disposable public repository, `UntR/dsh-plugin-marketplace-e2e-verification` (GitHub database ID `1334185509`), completed the external lifecycle check.
+
+1. With `dsh-plugin` present, Registry run `31804353272` published `gh:1334185509`; a fresh production Marketplace cache found the entry and loaded its detail with `stale=false`.
+2. After the topic was removed, Registry run `31805631288` reported one removal, committed `7c0d9a6`, and deployed Pages. The production index no longer contained the database ID, its detail file was deleted, and a fresh Marketplace cache returned `found=false` with `stale=false`.
+3. The temporary repository was then deleted; the GitHub API returned HTTP 404.
+
+The lifecycle is therefore verified through actual GitHub topic mutation, automated Registry publication, deployed Pages content, and the Marketplace service path.

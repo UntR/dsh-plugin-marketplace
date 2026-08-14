@@ -18,7 +18,7 @@ The v1 implementation and release artifact are published at `https://github.com/
 | Protocol and security boundaries | Zod and generated JSON Schemas validate meta/index/detail. Private repositories are filtered before publication. Registry artifacts contain no credential field or user token flow. |
 | Automation | The workflow supports manual dispatch and `17 */2 * * *`, uses the dedicated secret with `github.token` fallback, publishes a summary, and is configured for GitHub Pages. |
 
-Verification: Registry typecheck and build succeeded; 34 tests passed; regenerated schemas produced no Git diff. GitHub Actions run `31799255745` discovered and deployed 1,830 public repositories. The published meta, index, and a plugin detail were loaded and validated through the production Marketplace `RegistryService` with `stale=false`.
+Verification: Registry typecheck and build succeeded; 35 tests passed; regenerated schemas produced no Git diff. GitHub Actions run `31805631288` discovered and deployed 1,939 public repositories with zero enrichment failures. The published meta, index, and plugin details were loaded and validated through the production Marketplace `RegistryService` with `stale=false`.
 
 ## Marketplace evidence
 
@@ -37,11 +37,12 @@ Verification: Marketplace typecheck and build succeeded; 32 tests passed. The pa
 
 The published `@deepseek-ai/dsh@0.1.0-rc.6` integration was also exercised with a temporary DSH home and profile. Install, update, remove, client bundle loading, both settings tabs, and host APIs succeeded; see `docs/e2e-verification.md`.
 
-## Remaining live verification
+## Live topic lifecycle verification
 
-The repository, Actions workflow, Pages deployment, production Registry URL, and Marketplace HTTPS loading path are complete. One destructive external-state Definition-of-Done check remains intentionally pending:
+The destructive external-state Definition-of-Done check was completed with the authorized disposable public repository `UntR/dsh-plugin-marketplace-e2e-verification`, GitHub database ID `1334185509`.
 
-1. Create or designate a disposable public repository, add the `dsh-plugin` topic, run Registry sync, and confirm the deployed Marketplace observes the addition.
-2. Remove the topic, run Registry sync again, and confirm the plugin disappears without changing its historical GitHub identity.
+1. With the `dsh-plugin` topic present, Actions run `31804353272` deployed the repository. The production Registry contained `gh:1334185509`, and the production Marketplace `RegistryService` returned `found=true` and `stale=false` while loading its detail.
+2. After the topic was removed, Actions run `31805631288` reported `Removed: 1`, committed the generated deletion as `7c0d9a6`, and deployed Pages successfully. Both the production Registry and a fresh Marketplace cache returned no matching entry with `stale=false`; the detail file was absent.
+3. The disposable repository was deleted after verification, and the GitHub repository API returned HTTP 404.
 
-This check requires authorization to mutate a public test repository. It is not inferred from fixture tests or from the successful production deployment.
+This verifies the complete discovery and removal lifecycle against production GitHub state, deployed Registry artifacts, and the Marketplace client path rather than only fixtures.
