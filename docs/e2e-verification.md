@@ -29,4 +29,4 @@ The tarball was reinstalled and DSH Web was started on `127.0.0.1:43891`. A read
 - Installed rendered the current `web` profile and the registry-missing Marketplace bundle.
 - The browser console contained no warnings or errors during the flow.
 
-This local E2E verifies the package and integration contract. A production GitHub Pages URL and live topic discovery run remain deployment concerns, not local fixture claims.
+This local E2E verifies the package and integration contract. Production Registry run `31799255745` subsequently deployed Schema v1 to `https://untr.github.io/dsh-plugin-marketplace/registry/v1`; the production Marketplace `RegistryService` loaded its 1,830-entry catalog and a plugin detail with `stale=false`. The external add/remove-topic lifecycle remains a separate public-repository mutation check rather than a local fixture claim.

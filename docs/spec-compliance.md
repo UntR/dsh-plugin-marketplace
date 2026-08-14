@@ -4,7 +4,7 @@ Date: 2026-08-14
 
 ## Current status
 
-The local v1 implementation and release artifact satisfy the requirements that can be verified without a public GitHub repository. Production deployment remains intentionally unclaimed because this workspace has no Git remote and no assigned GitHub Pages URL.
+The v1 implementation and release artifact are published at `https://github.com/UntR/dsh-plugin-marketplace`. Registry Schema v1 is deployed through GitHub Pages at `https://untr.github.io/dsh-plugin-marketplace/registry/v1`.
 
 ## Registry evidence
 
@@ -18,7 +18,7 @@ The local v1 implementation and release artifact satisfy the requirements that c
 | Protocol and security boundaries | Zod and generated JSON Schemas validate meta/index/detail. Private repositories are filtered before publication. Registry artifacts contain no credential field or user token flow. |
 | Automation | The workflow supports manual dispatch and `17 */2 * * *`, uses the dedicated secret with `github.token` fallback, publishes a summary, and is configured for GitHub Pages. |
 
-Verification: Registry typecheck and build succeeded; 33 tests passed; regenerated schemas produced no Git diff.
+Verification: Registry typecheck and build succeeded; 34 tests passed; regenerated schemas produced no Git diff. GitHub Actions run `31799255745` discovered and deployed 1,830 public repositories. The published meta, index, and a plugin detail were loaded and validated through the production Marketplace `RegistryService` with `stale=false`.
 
 ## Marketplace evidence
 
@@ -37,13 +37,11 @@ Verification: Marketplace typecheck and build succeeded; 32 tests passed. The pa
 
 The published `@deepseek-ai/dsh@0.1.0-rc.6` integration was also exercised with a temporary DSH home and profile. Install, update, remove, client bundle loading, both settings tabs, and host APIs succeeded; see `docs/e2e-verification.md`.
 
-## Remaining deployment inputs
+## Remaining live verification
 
-These items cannot be completed honestly until a public GitHub repository is assigned:
+The repository, Actions workflow, Pages deployment, production Registry URL, and Marketplace HTTPS loading path are complete. One destructive external-state Definition-of-Done check remains intentionally pending:
 
-1. Add the Git remote and push the current `main` history.
-2. Enable GitHub Actions and Pages, then run the Registry workflow against the live `dsh-plugin` topic.
-3. Replace the placeholder production Registry URL with `https://<owner>.github.io/<repository>/registry/v1` (development can already use `DSH_MARKETPLACE_REGISTRY_URL`).
-4. Run the live Definition-of-Done add/remove-topic flow and confirm the deployed Marketplace observes both changes.
+1. Create or designate a disposable public repository, add the `dsh-plugin` topic, run Registry sync, and confirm the deployed Marketplace observes the addition.
+2. Remove the topic, run Registry sync again, and confirm the plugin disappears without changing its historical GitHub identity.
 
-Until those inputs exist, “Registry is publicly available through static HTTPS” and the live end-to-end topic lifecycle remain pending rather than passed.
+This check requires authorization to mutate a public test repository. It is not inferred from fixture tests or from the successful production deployment.
