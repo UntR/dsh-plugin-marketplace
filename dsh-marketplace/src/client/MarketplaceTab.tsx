@@ -1,9 +1,22 @@
-import { useEffect, useMemo, useState } from 'react'
+import { type ReactNode, useEffect, useMemo, useState } from 'react'
+import {
+  IconCordisPluginOutline14,
+  IconRefreshOutline16,
+  IconSearchOutline16,
+} from '@deepseek-ai/dsh-client-ui-primitives'
 import type { Catalog } from '../registry/service.js'
 import type { RegistryIndexEntry } from '../shared/schema.js'
-import { filterCatalog, sortCatalog, type CatalogSort } from './catalog.js'
+import {
+  catalogLanguageCounts,
+  filterCatalog,
+  filterCatalogAvailability,
+  sortCatalog,
+  type CatalogAvailability,
+  type CatalogSort,
+} from './catalog.js'
 import { InstallDialog } from './InstallDialog.js'
 import type { LocaleKey } from './locales.js'
+import { MarketplaceStyles } from './marketplaceStyles.js'
 import { MutationFailure, runMutation } from './mutation.js'
 import { PluginDetails } from './PluginDetails.js'
 
@@ -29,21 +42,31 @@ function rememberTrust(): void {
 function CatalogCover({ plugin, t }: { plugin: RegistryIndexEntry; t: (key: LocaleKey) => string }) {
   const [failed, setFailed] = useState(false)
   if (plugin.coverUrl === null || failed) {
-    return <div role="img" aria-label={`${plugin.name} ${t('cover')}`} style={catalogCoverStyle} />
+    return <div role="img" aria-label={`${plugin.name} ${t('cover')}`} className="dshm-plugin-cover">
+      <IconCordisPluginOutline14 size={24} />
+    </div>
   }
-  return <img src={plugin.coverUrl} alt={`${plugin.name} ${t('cover')}`} onError={() => setFailed(true)}
-    style={{ ...catalogCoverStyle, objectFit: 'cover' }} />
+  return <div className="dshm-plugin-cover"><img src={plugin.coverUrl} alt={`${plugin.name} ${t('cover')}`}
+    onError={() => setFailed(true)} /></div>
+}
+
+function dateLabel(value: string): string {
+  return new Date(value).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })
 }
 
 export interface MarketplaceTabInjected {
   t: (key: LocaleKey) => string
+  fullPage?: boolean
+  headerActions?: ReactNode
 }
 
-export function MarketplaceTab({ t }: MarketplaceTabInjected) {
+export function MarketplaceTab({ t, fullPage = false, headerActions }: MarketplaceTabInjected) {
   const [catalog, setCatalog] = useState<Catalog | null>(null)
   const [error, setError] = useState(false)
   const [query, setQuery] = useState('')
-  const [sort, setSort] = useState<CatalogSort>('name')
+  const [sort, setSort] = useState<CatalogSort>('stars')
+  const [availability, setAvailability] = useState<CatalogAvailability>('all')
+  const [language, setLanguage] = useState('all')
   const [page, setPage] = useState(1)
   const [selected, setSelected] = useState<RegistryIndexEntry | null>(null)
   const [prompt, setPrompt] = useState<{ plugin: RegistryIndexEntry; kind: 'trust' | 'build' } | null>(null)
@@ -64,13 +87,24 @@ export function MarketplaceTab({ t }: MarketplaceTabInjected) {
     }
   }
   useEffect(() => { void load() }, [])
-  useEffect(() => { setPage(1) }, [query, sort])
-  const plugins = useMemo(
-    () => sortCatalog(filterCatalog(catalog?.plugins ?? [], query), sort),
-    [catalog, query, sort],
-  )
+  useEffect(() => { setPage(1) }, [query, sort, availability, language])
+
+  const searched = useMemo(() => filterCatalog(catalog?.plugins ?? [], query), [catalog, query])
+  const languageCounts = useMemo(() => catalogLanguageCounts(catalog?.plugins ?? []), [catalog])
+  const plugins = useMemo(() => {
+    const available = filterCatalogAvailability(searched, availability)
+    const byLanguage = language === 'all' ? available : available.filter(plugin => plugin.language === language)
+    return sortCatalog(byLanguage, sort)
+  }, [availability, language, searched, sort])
   const pageCount = Math.max(1, Math.ceil(plugins.length / PAGE_SIZE))
   const visible = plugins.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
+
+  const availabilityCounts = useMemo(() => ({
+    all: catalog?.plugins.length ?? 0,
+    installable: filterCatalogAvailability(catalog?.plugins ?? [], 'installable').length,
+    configuration: filterCatalogAvailability(catalog?.plugins ?? [], 'configuration').length,
+    unavailable: filterCatalogAvailability(catalog?.plugins ?? [], 'unavailable').length,
+  }), [catalog])
 
   const install = async (plugin: RegistryIndexEntry) => {
     setInstallingId(plugin.id)
@@ -107,67 +141,142 @@ export function MarketplaceTab({ t }: MarketplaceTabInjected) {
     return t('install')
   }
 
+  const clearFilters = () => {
+    setAvailability('all')
+    setLanguage('all')
+    setSort('stars')
+  }
+
   if (catalog === null && !error) return <p role="status">{t('loading')}</p>
   if (catalog === null) return <p role="alert">{t('unavailable')}</p>
+  const Heading = fullPage ? 'h1' : 'h2'
+  const availabilityOptions: ReadonlyArray<readonly [CatalogAvailability, LocaleKey]> = [
+    ['all', 'allPlugins'],
+    ['installable', 'installableOnly'],
+    ['configuration', 'configurationOnly'],
+    ['unavailable', 'unavailableOnly'],
+  ]
+
   return (
-    <section aria-labelledby="marketplace-heading">
-      <h2 id="marketplace-heading">{t('marketplace')}</h2>
-      {changeCount > 0 && <p role="status">{t('changesPendingRestart').replace('{count}', String(changeCount))}</p>}
-      <p>{catalog.registry.pluginCount} {t('plugins')} · {new Date(catalog.registry.generatedAt).toLocaleString()}</p>
-      {catalog.registry.stale && <p role="status">{t('cached')}</p>}
-      {error && <p role="alert">{t('unavailable')}</p>}
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBlock: '1rem' }}>
-        <label>
-          <span style={visuallyHidden}>{t('search')}</span>
-          <input aria-label={t('search')} value={query} placeholder={t('searchPlaceholder')}
-            onChange={event => setQuery(event.currentTarget.value)} />
-        </label>
-        <label>
-          <span style={visuallyHidden}>{t('sort')}</span>
-          <select aria-label={t('sort')} value={sort} onChange={event => setSort(event.currentTarget.value as CatalogSort)}>
-            <option value="name">{t('nameSort')}</option>
-            <option value="updated">{t('updatedSort')}</option>
-            <option value="pushed">{t('pushedSort')}</option>
-            <option value="stars">{t('starsSort')}</option>
-          </select>
-        </label>
-        <button type="button" onClick={() => void load(true)}>{t('refresh')}</button>
-      </div>
-      {visible.length === 0 && <p>{t('noResults')}</p>}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(16rem, 1fr))', gap: '1rem' }}>
-        {visible.map(plugin => (
-          <article key={plugin.id} style={{ border: '1px solid currentColor', borderRadius: '0.75rem', overflow: 'hidden' }}>
-            <CatalogCover plugin={plugin} t={t} />
-            <div style={{ padding: '0.85rem' }}>
-              <h3>{plugin.name}</h3>
-              <p>{plugin.owner.login}</p>
-              <p style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{plugin.description}</p>
-              <p>{plugin.language ?? '—'} · {plugin.license ?? '—'} · ★ {plugin.stats.stars}</p>
-              <p>{plugin.state.archived && <span>{t('archived')} </span>}{plugin.state.fork && <span>{t('fork')}</span>}</p>
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '0.5rem' }}>
-                <button type="button" onClick={() => setSelected(plugin)}>{t('details')}</button>
-                <button type="button" disabled={!plugin.install.available || installingId !== null || installedIds.has(plugin.id)}
-                  onClick={() => requestInstall(plugin)}
-                  aria-describedby={!plugin.install.available ? `reason-${plugin.githubDatabaseId}` : undefined}>
-                  {installLabel(plugin)}
-                </button>
-                {!plugin.install.available && <span id={`reason-${plugin.githubDatabaseId}`} style={visuallyHidden}>
-                  {t('installUnavailable')}; {t('details')}
-                </span>}
-              </div>
-              {failure?.pluginId === plugin.id && <div role="alert">
-                <p>{failure.message}</p>
-                {failure.output !== null && <details><summary>{t('commandOutput')}</summary><pre>{failure.output}</pre></details>}
-              </div>}
+    <section className={`dshm-page${fullPage ? '' : ' dshm-page--embedded'}`} aria-labelledby="marketplace-heading">
+      <MarketplaceStyles />
+      <header className="dshm-header">
+        <div>
+          <Heading id="marketplace-heading" className="dshm-title">{t('marketplace')}</Heading>
+          <p className="dshm-subtitle">{t('marketplaceSubtitle')}</p>
+        </div>
+        {headerActions !== undefined && <div className="dshm-header-actions">{headerActions}</div>}
+      </header>
+      {changeCount > 0 && <p className="dshm-notice" role="status">{t('changesPendingRestart').replace('{count}', String(changeCount))}</p>}
+      {catalog.registry.stale && <p className="dshm-notice" role="status">{t('cached')}</p>}
+      {error && <p className="dshm-alert" role="alert">{t('unavailable')}</p>}
+      <form className="dshm-search" role="search" onSubmit={event => event.preventDefault()}>
+        <IconSearchOutline16 size={16} />
+        <label className="dshm-visually-hidden" htmlFor="dshm-market-search">{t('search')}</label>
+        <input id="dshm-market-search" aria-label={t('search')} value={query} placeholder={t('searchPlaceholder')}
+          onChange={event => setQuery(event.currentTarget.value)} />
+        <button type="submit" className="dshm-button">{t('searchAction')}</button>
+      </form>
+      <div className={`dshm-layout${fullPage ? '' : ' dshm-layout--embedded'}`}>
+        {fullPage && <aside className="dshm-filters" aria-label={t('filters')}>
+          <div className="dshm-filter-heading">
+            <h2>{t('filters')}</h2>
+            <button type="button" className="dshm-clear" onClick={clearFilters}>{t('clearFilters')}</button>
+          </div>
+          <fieldset className="dshm-filter-group">
+            <legend>{t('availability')}</legend>
+            <div className="dshm-filter-options">
+              {availabilityOptions.map(([value, label]) => <label key={value} className="dshm-filter-option">
+                <input type="radio" name="market-availability" value={value} checked={availability === value}
+                  onChange={() => setAvailability(value)} />
+                <span>{t(label)}</span><span className="dshm-filter-count">{availabilityCounts[value]}</span>
+              </label>)}
             </div>
-          </article>
-        ))}
+          </fieldset>
+          <fieldset className="dshm-filter-group">
+            <legend>{t('languages')}</legend>
+            <div className="dshm-filter-options">
+              <label className="dshm-filter-option">
+                <input type="radio" name="market-language" value="all" checked={language === 'all'}
+                  onChange={() => setLanguage('all')} />
+                <span>{t('allLanguages')}</span><span className="dshm-filter-count">{catalog.plugins.length}</span>
+              </label>
+              {languageCounts.map(([value, count]) => <label key={value} className="dshm-filter-option">
+                <input type="radio" name="market-language" value={value} checked={language === value}
+                  onChange={() => setLanguage(value)} />
+                <span>{value}</span><span className="dshm-filter-count">{count}</span>
+              </label>)}
+            </div>
+          </fieldset>
+        </aside>}
+        <div className="dshm-results">
+          <div className="dshm-results-toolbar">
+            <span className="dshm-result-count">{plugins.length} {t('results')}</span>
+            <div className="dshm-results-controls">
+              <label className="dshm-visually-hidden" htmlFor="dshm-market-sort">{t('sort')}</label>
+              <select id="dshm-market-sort" className="dshm-select" aria-label={t('sort')} value={sort}
+                onChange={event => setSort(event.currentTarget.value as CatalogSort)}>
+                <option value="stars">{t('starsSort')}</option>
+                <option value="updated">{t('updatedSort')}</option>
+                <option value="pushed">{t('pushedSort')}</option>
+                <option value="name">{t('nameSort')}</option>
+              </select>
+              <button type="button" className="dshm-icon-button" aria-label={t('refresh')} onClick={() => void load(true)}>
+                <IconRefreshOutline16 size={16} />
+              </button>
+            </div>
+          </div>
+          {visible.length === 0
+            ? <p className="dshm-empty">{t('noResults')}</p>
+            : <div className="dshm-list">
+              {visible.map(plugin => (
+                <article key={plugin.id} className="dshm-plugin-row">
+                  <CatalogCover plugin={plugin} t={t} />
+                  <div className="dshm-plugin-main">
+                    <div className="dshm-plugin-title-line">
+                      <h3 className="dshm-plugin-title">{plugin.name}</h3>
+                      <span className="dshm-plugin-owner">by {plugin.owner.login}</span>
+                    </div>
+                    <p className="dshm-plugin-description">{plugin.description}</p>
+                    <div className="dshm-plugin-meta">
+                      <span>{plugin.language ?? '—'}</span>
+                      <span>{plugin.license ?? '—'}</span>
+                      {plugin.state.archived && <span>{t('archived')}</span>}
+                      {plugin.state.fork && <span>{t('fork')}</span>}
+                    </div>
+                  </div>
+                  <div className="dshm-plugin-state">
+                    <span>★ {plugin.stats.stars}</span>
+                    <span>{t('lastUpdated')} {dateLabel(plugin.timestamps.updatedAt)}</span>
+                  </div>
+                  <div className="dshm-plugin-actions">
+                    <button type="button" className="dshm-install-button"
+                      disabled={!plugin.install.available || installingId !== null || installedIds.has(plugin.id)}
+                      onClick={() => requestInstall(plugin)}
+                      aria-describedby={!plugin.install.available ? `reason-${plugin.githubDatabaseId}` : undefined}>
+                      {installLabel(plugin)}
+                    </button>
+                    <button type="button" className="dshm-details-button" onClick={() => setSelected(plugin)}>{t('details')}</button>
+                    {!plugin.install.available && <span id={`reason-${plugin.githubDatabaseId}`} className="dshm-visually-hidden">
+                      {t('installUnavailable')}; {t('details')}
+                    </span>}
+                  </div>
+                  {failure?.pluginId === plugin.id && <div className="dshm-alert" role="alert">
+                    <p>{failure.message}</p>
+                    {failure.output !== null && <details><summary>{t('commandOutput')}</summary><pre>{failure.output}</pre></details>}
+                  </div>}
+                </article>
+              ))}
+            </div>}
+          <nav aria-label="Pagination" className="dshm-pagination">
+            <button type="button" className="dshm-button" disabled={page === 1}
+              onClick={() => setPage(value => Math.max(1, value - 1))}>{t('previous')}</button>
+            <span>{t('page')} {page} / {pageCount}</span>
+            <button type="button" className="dshm-button" disabled={page === pageCount}
+              onClick={() => setPage(value => Math.min(pageCount, value + 1))}>{t('next')}</button>
+          </nav>
+        </div>
       </div>
-      <nav aria-label="Pagination" style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem', marginBlock: '1rem' }}>
-        <button type="button" disabled={page === 1} onClick={() => setPage(value => Math.max(1, value - 1))}>{t('previous')}</button>
-        <span>{t('page')} {page} / {pageCount}</span>
-        <button type="button" disabled={page === pageCount} onClick={() => setPage(value => Math.min(pageCount, value + 1))}>{t('next')}</button>
-      </nav>
       {selected !== null && <PluginDetails plugin={selected} t={t} onClose={() => setSelected(null)}
         onInstall={() => { setSelected(null); requestInstall(selected) }} />}
       {prompt !== null && <InstallDialog plugin={prompt.plugin} kind={prompt.kind} t={t}
@@ -181,12 +290,3 @@ export function MarketplaceTab({ t }: MarketplaceTabInjected) {
     </section>
   )
 }
-
-const visuallyHidden = {
-  position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px',
-  overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', border: 0,
-} as const
-
-const catalogCoverStyle = {
-  display: 'block', width: '100%', aspectRatio: '16 / 9', background: 'linear-gradient(135deg, #255, #69a)',
-} as const

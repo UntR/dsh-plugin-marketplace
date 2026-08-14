@@ -1,5 +1,10 @@
 import { describe, expect, it } from 'vitest'
-import { filterCatalog, sortCatalog } from '../src/client/catalog.js'
+import {
+  catalogLanguageCounts,
+  filterCatalog,
+  filterCatalogAvailability,
+  sortCatalog,
+} from '../src/client/catalog.js'
 import type { RegistryIndexEntry } from '../src/shared/schema.js'
 
 function plugin(id: number, name: string, stars: number): RegistryIndexEntry {
@@ -42,5 +47,21 @@ describe('Marketplace catalog transforms', () => {
     expect(sortCatalog(plugins, 'stars').map(item => item.name)).toEqual(['zeta', 'alpha'])
     expect(sortCatalog(plugins, 'updated').map(item => item.name)).toEqual(['zeta', 'alpha'])
   })
-})
 
+  it('filters by factual installation state and counts languages', () => {
+    const configuration = {
+      ...plugin(3, 'configured', 1),
+      language: 'JavaScript',
+      install: { available: true, packageName: 'configured', version: '1.0.0', requiresBuildApproval: true },
+    }
+    const unavailable = {
+      ...plugin(4, 'unavailable', 1),
+      install: { available: false, packageName: null, version: null, requiresBuildApproval: false },
+    }
+    const catalog = [...plugins, configuration, unavailable]
+    expect(filterCatalogAvailability(catalog, 'installable')).toHaveLength(2)
+    expect(filterCatalogAvailability(catalog, 'configuration').map(item => item.name)).toEqual(['configured'])
+    expect(filterCatalogAvailability(catalog, 'unavailable').map(item => item.name)).toEqual(['unavailable'])
+    expect(catalogLanguageCounts(catalog)).toEqual([['TypeScript', 3], ['JavaScript', 1]])
+  })
+})

@@ -4,6 +4,12 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { MarketplaceTab } from '../src/client/MarketplaceTab.js'
 import { en, type LocaleKey } from '../src/client/locales.js'
 
+vi.mock('@deepseek-ai/dsh-client-ui-primitives', () => ({
+  IconCordisPluginOutline14: () => <span data-testid="plugin-icon" />,
+  IconRefreshOutline16: () => <span data-testid="refresh-icon" />,
+  IconSearchOutline16: () => <span data-testid="search-icon" />,
+}))
+
 const t = (key: LocaleKey) => en[key]
 const catalog = {
   registry: {
@@ -94,7 +100,7 @@ describe('MarketplaceTab', () => {
         slug: `owner/plugin-${String(id).padStart(2, '0')}`,
         name: `plugin-${String(id).padStart(2, '0')}`,
         coverUrl: null,
-        state: { archived: false, fork: id === 1 },
+        state: { archived: false, fork: id === 49 },
         stats: { stars: id, forks: 0 },
         detailPath: `./plugins/${id}.json`,
       }

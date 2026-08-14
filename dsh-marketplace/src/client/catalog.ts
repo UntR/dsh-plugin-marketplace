@@ -1,6 +1,7 @@
 import type { RegistryIndexEntry } from '../shared/schema.js'
 
 export type CatalogSort = 'name' | 'updated' | 'pushed' | 'stars'
+export type CatalogAvailability = 'all' | 'installable' | 'configuration' | 'unavailable'
 
 function normalized(value: string): string {
   return value.trim().toLocaleLowerCase().replace(/\s+/g, ' ')
@@ -42,3 +43,26 @@ export function sortCatalog(
   })
 }
 
+export function filterCatalogAvailability(
+  plugins: readonly RegistryIndexEntry[],
+  availability: CatalogAvailability,
+): RegistryIndexEntry[] {
+  if (availability === 'all') return [...plugins]
+  if (availability === 'installable') {
+    return plugins.filter(plugin => plugin.install.available && !plugin.install.requiresBuildApproval)
+  }
+  if (availability === 'configuration') {
+    return plugins.filter(plugin => plugin.install.available && plugin.install.requiresBuildApproval)
+  }
+  return plugins.filter(plugin => !plugin.install.available)
+}
+
+export function catalogLanguageCounts(
+  plugins: readonly RegistryIndexEntry[],
+): ReadonlyArray<readonly [language: string, count: number]> {
+  const counts = new Map<string, number>()
+  for (const plugin of plugins) {
+    if (plugin.language !== null) counts.set(plugin.language, (counts.get(plugin.language) ?? 0) + 1)
+  }
+  return [...counts.entries()].sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0])).slice(0, 6)
+}
