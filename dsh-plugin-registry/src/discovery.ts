@@ -5,7 +5,7 @@ export const DISCOVERY_QUERY = `query DshPluginRepositories($cursor: String) {
     repositories(
       first: 100
       after: $cursor
-      orderBy: { field: UPDATED_AT, direction: ASC }
+      orderBy: { field: CREATED_AT, direction: ASC }
     ) {
       pageInfo {
         hasNextPage

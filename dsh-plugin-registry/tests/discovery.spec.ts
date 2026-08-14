@@ -123,5 +123,6 @@ describe('GitHub topic discovery', () => {
     expect(DISCOVERY_QUERY).toContain('repositories(')
     expect(DISCOVERY_QUERY).toContain('first: 100')
     expect(DISCOVERY_QUERY).toContain('after: $cursor')
+    expect(DISCOVERY_QUERY).toContain('orderBy: { field: CREATED_AT, direction: ASC }')
   })
 })
