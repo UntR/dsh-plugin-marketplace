@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T13:41:45.237Z",
+    "enrichedAt": "2026-08-14T15:11:21.477Z",
     "enrichmentStatus": "ok",
-    "headSha": "06a7016487f6e52adbbffeed6de9a6619386a21e"
+    "headSha": "5a7bc620420c792e31f87dd907d7924ab94c8984"
   },
   "github": {
     "archived": false,
@@ -17,57 +17,78 @@
     "description": "DeepSeek 额度与用量仪表盘 — DSH (DeepSeek Harness) 动态 Cordis 插件",
     "fork": false,
     "forks": 0,
-    "headSha": "06a7016487f6e52adbbffeed6de9a6619386a21e",
+    "headSha": "5a7bc620420c792e31f87dd907d7924ab94c8984",
     "homepageUrl": null,
-    "language": null,
+    "language": "TypeScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4adqA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/40410be9cbc8506572104bfffffc24a6457d7bdc1d75de14e2fee15edf0460b9/Cassius0924/dsh-usage-dashboard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e3d0b37a6ce06a70d4dd0a455d12963e1cd3018279097f755f18502d646e8ae9/Cassius0924/dsh-usage-dashboard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/62874592?v=4",
       "login": "Cassius0924"
     },
-    "pushedAt": "2026-08-14T13:41:06Z",
+    "pushedAt": "2026-08-14T14:29:41Z",
     "slug": "Cassius0924/dsh-usage-dashboard",
-    "stars": 0,
+    "stars": 1,
     "topics": [
+      "cordis",
+      "deepseek",
+      "deepseek-harness",
+      "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-14T13:41:30Z",
+    "updatedAt": "2026-08-14T14:29:47Z",
     "url": "https://github.com/Cassius0924/dsh-usage-dashboard"
   },
   "id": "gh:1334222248",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-usage-dashboard",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:Cassius0924/dsh-usage-dashboard#5a7bc620420c792e31f87dd907d7924ab94c8984",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-usage-dashboard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/40410be9cbc8506572104bfffffc24a6457d7bdc1d75de14e2fee15edf0460b9/Cassius0924/dsh-usage-dashboard",
+    "coverUrl": "https://opengraph.githubassets.com/e3d0b37a6ce06a70d4dd0a455d12963e1cd3018279097f755f18502d646e8ae9/Cassius0924/dsh-usage-dashboard",
     "description": "DeepSeek 额度与用量仪表盘 — DSH (DeepSeek Harness) 动态 Cordis 插件"
   },
   "readme": {
     "available": true,
-    "excerpt": "一个给 DeepSeek Harness（DSH）Web GUI 用的额度与用量仪表盘插件，以动态 Cordis 插件的形式运行。"
+    "excerpt": "一个给 DeepSeek Harness（DSH）Web GUI 用的额度与用量仪表盘插件，以 DSH 插件包（bundle） 的形式安装。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

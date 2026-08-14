@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T13:41:45.237Z",
+    "enrichedAt": "2026-08-14T15:11:21.477Z",
     "enrichmentStatus": "ok",
-    "headSha": "da70d5ee37ebda8d9c511f40ebec63c333041056"
+    "headSha": "5a0b51780ac4aab72393e9d646f85c4c29ee2058"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-14T09:18:47Z",
     "databaseId": 1334006880,
     "defaultBranch": "main",
-    "description": "Retrieved ≠ injected: CBDC-gated local long-term memory for DeepSeek Harness (SQLite + FTS5, bounded recall, auditable, no extra model call)",
+    "description": "Retrieved ≠ injected: CBDC-gated memory for DeepSeek Harness — decides how memory is USED (use/verify/ignore + feedback learning + audit), not just stored",
     "fork": false,
     "forks": 0,
-    "headSha": "da70d5ee37ebda8d9c511f40ebec63c333041056",
+    "headSha": "5a0b51780ac4aab72393e9d646f85c4c29ee2058",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4NUYA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/8272329ca1fd438453e01954a65cea24c24c3cbc4858937e59ab1eb431a8851b/GIT121995/dsh-memory-gate",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/09efdab240d1c122f0fc5a75d95c0b9adc35fdb519ac09db1cfb9b4deb95f4f2/GIT121995/dsh-memory-gate",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/269385000?v=4",
       "login": "GIT121995"
     },
-    "pushedAt": "2026-08-14T13:28:11Z",
+    "pushedAt": "2026-08-14T14:23:08Z",
     "slug": "GIT121995/dsh-memory-gate",
     "stars": 1,
     "topics": [
@@ -44,7 +44,7 @@
       "sqlite",
       "typescript"
     ],
-    "updatedAt": "2026-08-14T13:28:55Z",
+    "updatedAt": "2026-08-14T14:24:17Z",
     "url": "https://github.com/GIT121995/dsh-memory-gate"
   },
   "id": "gh:1334006880",
@@ -54,11 +54,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-memory-gate@0.3.0",
-    "version": "0.3.0"
+    "spec": "dsh-memory-gate@0.3.2",
+    "version": "0.3.2"
   },
   "npm": {
-    "latestVersion": "0.3.0",
+    "latestVersion": "0.3.2",
     "published": true,
     "repositoryMatches": true
   },
@@ -73,15 +73,15 @@
     "name": "dsh-memory-gate",
     "status": "valid",
     "type": "module",
-    "version": "0.3.0"
+    "version": "0.3.2"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/8272329ca1fd438453e01954a65cea24c24c3cbc4858937e59ab1eb431a8851b/GIT121995/dsh-memory-gate",
-    "description": "Retrieved ≠ injected: CBDC-gated local long-term memory for DeepSeek Harness (SQLite + FTS5, bounded recall, auditable, no extra model call)"
+    "coverUrl": "https://opengraph.githubassets.com/09efdab240d1c122f0fc5a75d95c0b9adc35fdb519ac09db1cfb9b4deb95f4f2/GIT121995/dsh-memory-gate",
+    "description": "Retrieved ≠ injected: CBDC-gated memory for DeepSeek Harness — decides how memory is USED (use/verify/ignore + feedback learning + audit), not just stored"
   },
   "readme": {
     "available": true,
-    "excerpt": "DeepSeek Harness 的本地长期记忆插件，核心立场是检索到 ≠ 注入： 它把稳定信息保存为可撤销的 Claim，并在每次模型调用前执行 CBDC （Claim → Belief → Decision → Consumption）权威门控，每条记忆都要 经过裁决才能进入上下文。有界（默认 ≤3 条 / 1200 字符）、全程可审计、 不增加第二次模型调用。"
+    "excerpt": "DeepSeek Harness 的长期记忆插件，只回答一个问题：记忆记住了，然后呢？ 它把稳定信息保存为可撤销的 Claim，并在每次模型调用前执行 CBDC （Claim → Belief → Decision → Consumption）权威门控——每条记忆先经裁决 （use / verify / ignore），才决定能否进入上下文；使用后的反馈 （helped/harmful）反向更新置信度，越用越准，全程可审计。默认注入 ≤3 条 / 1200 字符，不增加第二次模型调用。"
   },
   "schemaVersion": 1,
   "scripts": {
