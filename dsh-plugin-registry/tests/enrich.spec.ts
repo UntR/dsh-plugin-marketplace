@@ -107,7 +107,7 @@ describe('repository enrichment', () => {
       client: { readText, exists: async () => false, npmMetadata },
       enrichedAt: '2026-08-14T06:30:00.000Z',
     })
-    expect(readText).toHaveBeenCalledTimes(2)
+    expect(readText).not.toHaveBeenCalled()
     expect(npmMetadata).toHaveBeenCalledWith('dsh-plugin-1')
     expect(result[0]?.crawl.enrichedAt).toBe('2026-08-14T06:30:00.000Z')
   })

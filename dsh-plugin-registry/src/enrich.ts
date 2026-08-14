@@ -30,6 +30,20 @@ function packageRecord(pkg: ParsedPackage): RegistryPluginDetail['package'] {
   }
 }
 
+function parsedPackageFromDetail(detail: RegistryPluginDetail): ParsedPackage {
+  if (detail.package === null || detail.package.status === 'invalid') return detail.package
+  return {
+    status: 'valid',
+    name: detail.package.name,
+    version: detail.package.version,
+    type: detail.package.type,
+    main: detail.package.main,
+    ...(detail.package.exports !== undefined ? { exports: detail.package.exports } : {}),
+    dshPatch: detail.bundle.patch,
+    scripts: detail.scripts,
+  }
+}
+
 function githubRecord(repository: DiscoveredRepository): RegistryPluginDetail['github'] {
   return {
     databaseId: repository.githubDatabaseId,
@@ -145,6 +159,32 @@ function reuseDerived(
   }
 }
 
+async function refreshNpmFacts(
+  repository: DiscoveredRepository,
+  previous: RegistryPluginDetail,
+  client: RepositoryEnrichmentClient,
+  enrichedAt: string,
+): Promise<RegistryPluginDetail> {
+  const pkg = parsedPackageFromDetail(previous)
+  if (pkg === null || pkg.status === 'invalid' || pkg.name === null) {
+    return reuseDerived(repository, previous, 'ok', enrichedAt)
+  }
+  const { npm, install } = await inferInstall({
+    package: pkg,
+    patchExists: previous.bundle.patchExists,
+    repositorySlug: repository.slug,
+    headSha: repository.headSha,
+    npmMetadata: await client.npmMetadata(pkg.name),
+    fileExists: path => client.exists(repository, path),
+  })
+  return {
+    ...reuseDerived(repository, previous, 'ok', enrichedAt),
+    npm,
+    install,
+    crawl: { headSha: repository.headSha, enrichmentStatus: 'ok', enrichedAt },
+  }
+}
+
 export async function enrichRepositories(options: {
   repositories: readonly DiscoveredRepository[]
   previous: ReadonlyMap<string, RegistryPluginDetail>
@@ -163,17 +203,17 @@ export async function enrichRepositories(options: {
       const cacheAge = previous === undefined
         ? Number.POSITIVE_INFINITY
         : Date.parse(options.enrichedAt) - Date.parse(previous.crawl.enrichedAt)
-      const cacheFresh = previous !== undefined
+      const unchangedHead = previous !== undefined
         && previous.crawl.enrichmentStatus === 'ok'
         && previous.crawl.headSha === repository.headSha
-        && cacheAge >= 0
-        && cacheAge < NPM_CACHE_TTL_MS
-      if (cacheFresh) {
+      if (unchangedHead && cacheAge >= 0 && cacheAge < NPM_CACHE_TTL_MS) {
         details[index] = reuseDerived(repository, previous, 'ok', options.enrichedAt)
         continue
       }
       try {
-        details[index] = await enrichRepository(repository, options.client, options.enrichedAt)
+        details[index] = unchangedHead
+          ? await refreshNpmFacts(repository, previous, options.client, options.enrichedAt)
+          : await enrichRepository(repository, options.client, options.enrichedAt)
       } catch {
         details[index] = previous === undefined
           ? minimalDetail(repository, options.enrichedAt, 'failed')
