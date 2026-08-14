@@ -8,6 +8,7 @@ export interface GitHubClientOptions {
   fetch?: typeof globalThis.fetch
   sleep?: (milliseconds: number) => Promise<void>
   timeoutMs?: number
+  graphqlTimeoutMs?: number
 }
 
 function retryDelay(response: Response | null, attempt: number): number {
@@ -27,6 +28,7 @@ export class GitHubClient implements RepositoryEnrichmentClient {
   private readonly fetchImpl: typeof globalThis.fetch
   private readonly sleep: (milliseconds: number) => Promise<void>
   private readonly timeoutMs: number
+  private readonly graphqlTimeoutMs: number
   private readonly headers: HeadersInit
 
   constructor(options: GitHubClientOptions) {
@@ -34,6 +36,7 @@ export class GitHubClient implements RepositoryEnrichmentClient {
     this.fetchImpl = options.fetch ?? globalThis.fetch
     this.sleep = options.sleep ?? (milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds)))
     this.timeoutMs = options.timeoutMs ?? 10_000
+    this.graphqlTimeoutMs = options.graphqlTimeoutMs ?? 30_000
     this.headers = {
       accept: 'application/vnd.github+json',
       authorization: `Bearer ${options.token}`,
@@ -42,7 +45,7 @@ export class GitHubClient implements RepositoryEnrichmentClient {
     }
   }
 
-  private async request(url: string, init: RequestInit): Promise<Response> {
+  private async request(url: string, init: RequestInit, timeoutMs = this.timeoutMs): Promise<Response> {
     let lastError: unknown
     for (let attempt = 0; attempt < 5; attempt += 1) {
       let response: Response | null = null
@@ -50,7 +53,7 @@ export class GitHubClient implements RepositoryEnrichmentClient {
         response = await this.fetchImpl(url, {
           ...init,
           headers: { ...this.headers, ...init.headers },
-          signal: AbortSignal.timeout(this.timeoutMs),
+          signal: AbortSignal.timeout(timeoutMs),
         })
         if (!retryable(response)) return response
         lastError = new Error(`GitHub API returned ${response.status}.`)
@@ -67,7 +70,7 @@ export class GitHubClient implements RepositoryEnrichmentClient {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ query, variables }),
-    })
+    }, this.graphqlTimeoutMs)
     if (!response.ok) throw new Error(`GitHub GraphQL request failed with ${response.status}.`)
     const envelope = await response.json() as { data?: unknown; errors?: unknown }
     if (envelope.errors !== undefined) {

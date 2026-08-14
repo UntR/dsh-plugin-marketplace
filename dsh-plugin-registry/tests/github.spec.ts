@@ -30,4 +30,31 @@ describe('GitHub client', () => {
     } as Parameters<GitHubClient['readText']>[0]
     await expect(client.readText(repository, 'README.md')).resolves.toBeNull()
   })
+
+  it('allows GraphQL discovery to use a longer timeout than content requests', async () => {
+    const fetch = vi.fn<typeof globalThis.fetch>(async (_input, init) => {
+      await new Promise<void>((resolve, reject) => {
+        const timer = setTimeout(resolve, 20)
+        init?.signal?.addEventListener('abort', () => {
+          clearTimeout(timer)
+          reject(init.signal?.reason)
+        }, { once: true })
+      })
+      return new Response(JSON.stringify({ data: { topic: null } }), {
+        status: 200,
+        headers: { 'content-type': 'application/json' },
+      })
+    })
+    const client = new GitHubClient({
+      token: 'secret-token',
+      fetch,
+      sleep: async () => {},
+      timeoutMs: 5,
+      graphqlTimeoutMs: 50,
+    })
+
+    await expect(client.graphql('query { topic(name: "dsh-plugin") { name } }', { cursor: null }))
+      .resolves.toEqual({ topic: null })
+    expect(fetch).toHaveBeenCalledTimes(1)
+  })
 })
