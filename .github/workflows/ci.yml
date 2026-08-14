@@ -26,4 +26,6 @@ jobs:
       - run: pnpm --filter dsh-plugin-registry build
       - run: pnpm --filter dsh-plugin-registry generate:schemas
       - run: git diff --exit-code -- dsh-plugin-registry/schemas
-
+      - run: pnpm --filter dsh-marketplace typecheck
+      - run: pnpm --filter dsh-marketplace test
+      - run: pnpm --filter dsh-marketplace build
