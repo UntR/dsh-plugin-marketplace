@@ -1,15 +1,17 @@
-name: CI
+name: Marketplace release
 
 on:
-  pull_request:
+  workflow_dispatch:
   push:
-    branches: [main]
+    tags:
+      - "dsh-marketplace-v*"
 
 permissions:
   contents: read
+  id-token: write
 
 jobs:
-  registry:
+  package:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -20,18 +22,22 @@ jobs:
         with:
           node-version: 24
           cache: pnpm
+          registry-url: https://registry.npmjs.org
       - run: pnpm install --frozen-lockfile
-      - run: pnpm --filter dsh-plugin-registry typecheck
-      - run: pnpm --filter dsh-plugin-registry test
-      - run: pnpm --filter dsh-plugin-registry build
-      - run: pnpm --filter dsh-plugin-registry generate:schemas
-      - run: git diff --exit-code -- dsh-plugin-registry/schemas
       - run: pnpm --filter dsh-marketplace typecheck
       - run: pnpm --filter dsh-marketplace test
       - run: pnpm --filter dsh-marketplace build
-      - name: Verify Marketplace package
+      - name: Pack and verify
         run: |
           mkdir -p "$RUNNER_TEMP/dsh-marketplace-pack"
           pnpm --filter dsh-marketplace pack --pack-destination "$RUNNER_TEMP/dsh-marketplace-pack"
           tarball=$(find "$RUNNER_TEMP/dsh-marketplace-pack" -maxdepth 1 -name '*.tgz' -print -quit)
           node --import tsx dsh-marketplace/scripts/verify-pack.ts "$tarball"
+          echo "tarball=$tarball" >> "$GITHUB_ENV"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dsh-marketplace-package
+          path: ${{ env.tarball }}
+      - name: Publish tagged release
+        if: startsWith(github.ref, 'refs/tags/dsh-marketplace-v')
+        run: npm publish "$tarball" --access public --provenance
