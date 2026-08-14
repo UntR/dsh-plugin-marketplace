@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichedAt": "2026-08-14T17:16:20.483Z",
     "enrichmentStatus": "ok",
-    "headSha": "aea96669cf83615bdc210ae07079c708ff01cf80"
+    "headSha": "4461361d46cd26e4974dc5a70946f89318f09730"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness dynamic plugin: QR-code sidebar button for connecting mobile devices to the web UI",
     "fork": false,
     "forks": 0,
-    "headSha": "aea96669cf83615bdc210ae07079c708ff01cf80",
+    "headSha": "4461361d46cd26e4974dc5a70946f89318f09730",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,31 +25,31 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4SjXA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7abf9994c458d79a3e8577ddb3419b3653bbdbc1a700dba5d2123c72f3d16c49/mervyn-teo/dsh-plugin-qr-connect",
+    "openGraphImageUrl": "https://repository-images.githubusercontent.com/1334092636/f33a13c0-a3ef-4c25-a802-ed05a55c7763",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/16864813?v=4",
       "login": "mervyn-teo"
     },
-    "pushedAt": "2026-08-14T13:19:23Z",
+    "pushedAt": "2026-08-14T17:02:14Z",
     "slug": "mervyn-teo/dsh-plugin-qr-connect",
-    "stars": 0,
+    "stars": 2,
     "topics": [
       "deepseek-harness",
       "dsh-plugin",
       "qr-code"
     ],
-    "updatedAt": "2026-08-14T13:20:24Z",
+    "updatedAt": "2026-08-14T17:15:04Z",
     "url": "https://github.com/mervyn-teo/dsh-plugin-qr-connect"
   },
   "id": "gh:1334092636",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-plugin-qr-connect",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:mervyn-teo/dsh-plugin-qr-connect#4461361d46cd26e4974dc5a70946f89318f09730",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
@@ -57,19 +57,32 @@
     "repositoryMatches": null
   },
   "package": {
-    "main": null,
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./invariant": {
+        "default": "./lib/invariant.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
     "name": "dsh-plugin-qr-connect",
     "status": "valid",
-    "type": null,
+    "type": "module",
     "version": "0.1.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7abf9994c458d79a3e8577ddb3419b3653bbdbc1a700dba5d2123c72f3d16c49/mervyn-teo/dsh-plugin-qr-connect",
+    "coverUrl": "https://repository-images.githubusercontent.com/1334092636/f33a13c0-a3ef-4c25-a802-ed05a55c7763",
     "description": "DeepSeek Harness dynamic plugin: QR-code sidebar button for connecting mobile devices to the web UI"
   },
   "readme": {
     "available": true,
-    "excerpt": "A DeepSeek Harness (DSH) dynamic Cordis plugin that adds a QR-code button above the Settings button in the sidebar footer. It runs a small auth-gated reverse proxy so a phone on the same network (or the internet) can scan a QR code and open the web UI securely."
+    "excerpt": "A DeepSeek Harness (DSH) Web plugin that adds a QR-code button above the Settings button in the sidebar footer. It runs a small auth-gated reverse proxy so a phone on the same network (or the internet) can scan a QR code and open the web UI securely. It is a persistent bundle plu"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichedAt": "2026-08-14T17:16:20.483Z",
     "enrichmentStatus": "ok",
-    "headSha": "3b6fa144ba3e437c82677aff35309b9fea024d51"
+    "headSha": "6720eda4c9ead92d4ba92d9de4f1b00e8dcf34a6"
   },
   "github": {
     "archived": false,
@@ -17,54 +17,76 @@
     "description": "learn how to write cordis dsh plugin",
     "fork": false,
     "forks": 0,
-    "headSha": "3b6fa144ba3e437c82677aff35309b9fea024d51",
+    "headSha": "6720eda4c9ead92d4ba92d9de4f1b00e8dcf34a6",
     "homepageUrl": null,
     "language": "TypeScript",
-    "license": null,
+    "license": {
+      "name": "MIT License",
+      "spdxId": "MIT"
+    },
     "nodeId": "R_kgDOT4RRmg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/dcaab679975d9dd30e355e4b5f9bb1065a98bc687f946d135be0bbd7e39a5bbf/Ri0n72Y/dsh-plugin-practice",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/fa6cd6a1a046f0c55a61f90c8b2eefd7e690d886735ae59f012b79a8677e1788/Ri0n72Y/dsh-plugin-practice",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/16500109?u=92ea2e03680feb598bb96b45618471e247c02e9b&v=4",
       "login": "Ri0n72Y"
     },
-    "pushedAt": "2026-08-14T12:22:44Z",
+    "pushedAt": "2026-08-14T15:58:33Z",
     "slug": "Ri0n72Y/dsh-plugin-practice",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-14T12:22:50Z",
+    "updatedAt": "2026-08-14T15:59:35Z",
     "url": "https://github.com/Ri0n72Y/dsh-plugin-practice"
   },
   "id": "gh:1334071706",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-practice",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:Ri0n72Y/dsh-plugin-practice#6720eda4c9ead92d4ba92d9de4f1b00e8dcf34a6",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/plugin.js",
+      "./configurable-greet": "./lib/configurable-greet.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./plugin": "./lib/plugin.js",
+      "./workspace-event-contract": "./lib/workspace-event-contract.js",
+      "./workspace-event-emitter": "./lib/workspace-event-emitter.js",
+      "./workspace-event-listener": "./lib/workspace-event-listener.js",
+      "./workspace-info": "./lib/workspace-info.js",
+      "./workspace-name-service": "./lib/workspace-name-service.js",
+      "./workspace-name-tool": "./lib/workspace-name-tool.js"
+    },
+    "main": "lib/plugin.js",
+    "name": "dsh-plugin-practice",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/dcaab679975d9dd30e355e4b5f9bb1065a98bc687f946d135be0bbd7e39a5bbf/Ri0n72Y/dsh-plugin-practice",
+    "coverUrl": "https://opengraph.githubassets.com/fa6cd6a1a046f0c55a61f90c8b2eefd7e690d886735ae59f012b79a8677e1788/Ri0n72Y/dsh-plugin-practice",
     "description": "learn how to write cordis dsh plugin"
   },
   "readme": {
     "available": true,
-    "excerpt": "A minimal practice repository for learning DeepSeek Harness plugin development one concept at a time."
+    "excerpt": "用于学习 DeepSeek Harness / Cordis 插件开发的最小练习仓库。代码按课程逐步累积，同时也可以作为一个标准 DSH Bundle 安装进 profile。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
