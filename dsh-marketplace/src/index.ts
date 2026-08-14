@@ -4,6 +4,8 @@ import { resolveDshHome } from '@deepseek-ai/dsh-home-paths'
 import type {} from '@deepseek-ai/dsh-host-webserver'
 import { createRouter } from './http/router.js'
 import { InstalledService } from './manager/installed.js'
+import { CommandRunner } from './manager/command-runner.js'
+import { MutationManager } from './manager/mutations.js'
 import { resolveCurrentProfile } from './manager/profile.js'
 import { RegistryService } from './registry/service.js'
 import { resolveRegistryBaseUrl } from './shared/constants.js'
@@ -17,7 +19,8 @@ export function apply(ctx: Context): void {
     cacheDir: join(dshHome, 'cache', 'dsh-marketplace', 'v1'),
   })
   const installed = new InstalledService(resolveCurrentProfile(ctx.baseUrl, dshHome), registry)
-  const handler = createRouter({ registry, installed })
+  const mutations = new MutationManager(registry, installed, new CommandRunner())
+  const handler = createRouter({ registry, installed, mutations })
   ctx.effect(
     () => ctx.webServer.register({ kind: 'prefix', path: '/dsh-marketplace', handler }),
     'dsh-marketplace: HTTP API',

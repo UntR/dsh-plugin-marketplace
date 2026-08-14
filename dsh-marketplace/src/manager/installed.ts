@@ -72,6 +72,10 @@ export class InstalledService {
     private readonly registry: RegistryService,
   ) {}
 
+  get profileName(): string {
+    return this.profile.name
+  }
+
   markRestartRequired(): void {
     this.restartRequired = true
   }
