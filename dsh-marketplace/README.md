@@ -14,10 +14,16 @@ Restart DSH after installation or any plugin change. Marketplace deliberately do
 
 ## Registry URL
 
-The host fetches Registry Schema v1 over HTTPS. Until the deployment repository URL is assigned, set the static registry root explicitly before starting DSH:
+The host fetches Registry Schema v1 from the public default:
+
+```text
+https://untr.github.io/dsh-plugin-marketplace/registry/v1
+```
+
+Development environments and mirrors can override it before starting DSH:
 
 ```bash
-export DSH_MARKETPLACE_REGISTRY_URL=https://OWNER.github.io/REPOSITORY/registry/v1
+export DSH_MARKETPLACE_REGISTRY_URL=https://mirror.example/registry/v1
 ```
 
 The URL must serve `meta.json`, `index.json`, and `plugins/<github-database-id>.json`. The browser never calls GitHub and never needs a GitHub token.

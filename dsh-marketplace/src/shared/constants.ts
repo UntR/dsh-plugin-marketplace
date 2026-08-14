@@ -2,9 +2,7 @@ export const API_PREFIX = '/dsh-marketplace/api'
 export const CACHE_TTL_MS = 15 * 60 * 1_000
 export const FETCH_TIMEOUT_MS = 10_000
 
-// Replace this after assigning the public Pages repository.
-// Development and mirrors can use DSH_MARKETPLACE_REGISTRY_URL immediately.
-export const DEFAULT_REGISTRY_BASE_URL = 'https://example.invalid/dsh-plugin-registry/registry/v1'
+export const DEFAULT_REGISTRY_BASE_URL = 'https://untr.github.io/dsh-plugin-marketplace/registry/v1'
 
 export function resolveRegistryBaseUrl(env: Record<string, string | undefined> = process.env): string {
   const configured = env.DSH_MARKETPLACE_REGISTRY_URL?.trim()
