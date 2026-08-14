@@ -33,9 +33,9 @@ Verification: Registry typecheck and build succeeded; 35 tests passed; regenerat
 | HTTP and observability | Same-origin mutation checks, strict bodies, query validation, input validation, and body limits are tested. Logs cover Registry refresh/revision/fallback and mutation lifecycle without dumping Registry, environment, credentials, or command output. |
 | Localization and accessibility | English and Chinese locales are present. Dialogs provide labels, focus entry/return, Tab containment, Escape handling, disabled states, and external-link protections. |
 
-Verification: Marketplace typecheck and build succeeded; 32 tests passed. The packed `dsh-marketplace-0.1.0.tgz` contained 30 files and passed the release artifact verifier.
+Verification: Marketplace typecheck and build succeeded; 34 tests passed. The packed `untr-dsh-marketplace-0.1.0.tgz` passed the release artifact verifier.
 
-The published `@deepseek-ai/dsh@0.1.0-rc.6` integration was also exercised with a temporary DSH home and profile. Install, update, remove, client bundle loading, both settings tabs, and host APIs succeeded; see `docs/e2e-verification.md`.
+The published `@deepseek-ai/dsh@0.1.0-rc.6` integration was also exercised with a temporary DSH home and profile. Install, remove, renamed client-bundle loading, both settings tabs through component tests, and host APIs succeeded; see `docs/e2e-verification.md`.
 
 ## Live topic lifecycle verification
 

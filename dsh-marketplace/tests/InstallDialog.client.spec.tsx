@@ -17,19 +17,13 @@ afterEach(() => {
 })
 
 describe('InstallDialog', () => {
-  it('requires an explicit checkbox before enabling an install with build scripts', async () => {
-    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify({
-      install: {
-        available: true, preferred: 'github', spec: 'github:owner/memory#abc', packageName: 'dsh-memory',
-        version: '1.0.0', requiresBuildApproval: true, reason: null,
-      },
-    }), { status: 200 })))
-    render(<InstallDialog plugin={plugin} t={t} onClose={() => {}} onInstalled={() => {}} />)
+  it('confirms third-party trust without exposing install internals', () => {
+    const confirm = vi.fn()
+    render(<InstallDialog plugin={plugin} kind="trust" t={t} onClose={() => {}} onConfirm={confirm} />)
     const dialog = screen.getByRole('dialog')
-    const checkbox = await within(dialog).findByRole('checkbox', { name: en.allowBuildScripts })
-    const install = within(dialog).getByRole('button', { name: en.install })
-    expect(install.hasAttribute('disabled')).toBe(true)
-    fireEvent.click(checkbox)
-    expect(install.hasAttribute('disabled')).toBe(false)
+    expect(within(dialog).getByText(en.thirdPartyWarning)).toBeTruthy()
+    expect(within(dialog).queryByText(/github:owner\/memory/)).toBeNull()
+    fireEvent.click(within(dialog).getByRole('button', { name: en.understandAndInstall }))
+    expect(confirm).toHaveBeenCalledOnce()
   })
 })

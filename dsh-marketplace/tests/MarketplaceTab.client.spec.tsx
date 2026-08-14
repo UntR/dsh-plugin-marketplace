@@ -26,6 +26,7 @@ const catalog = {
 
 afterEach(() => {
   cleanup()
+  localStorage.clear()
   vi.unstubAllGlobals()
 })
 
@@ -114,7 +115,7 @@ describe('MarketplaceTab', () => {
     expect(screen.getByText(`${en.page} 2 / 2`)).toBeTruthy()
   })
 
-  it('installs by registry identity without exposing an install spec to the browser', async () => {
+  it('asks for trust once, then installs by registry identity without exposing an install spec', async () => {
     const installableCatalog = {
       ...catalog,
       plugins: [{
@@ -153,11 +154,41 @@ describe('MarketplaceTab', () => {
     await screen.findByRole('heading', { name: en.marketplace })
     fireEvent.click(screen.getByRole('button', { name: en.install }))
     const dialog = await screen.findByRole('dialog')
-    await within(dialog).findByText('dsh-memory@1.0.0')
-    fireEvent.click(within(dialog).getByRole('button', { name: en.install }))
-    await within(dialog).findByText(new RegExp(en.installedSuccessfully))
+    expect(within(dialog).getByText(en.thirdPartyWarning)).toBeTruthy()
+    fireEvent.click(within(dialog).getByRole('button', { name: en.understandAndInstall }))
+    await screen.findByText(en.waitingForRestart, { selector: 'button' })
+    expect(screen.getByRole('status').textContent).toContain('1')
     const post = fetchMock.mock.calls.find(([, init]) => init?.method === 'POST')
     expect(post?.[0]).toBe('/dsh-marketplace/api/install')
     expect(JSON.parse(String(post?.[1]?.body))).toEqual({ pluginId: 'gh:1', allowBuildScripts: false })
+
+    cleanup()
+    render(<MarketplaceTab t={t} />)
+    await screen.findByRole('heading', { name: en.marketplace })
+    fireEvent.click(screen.getByRole('button', { name: en.install }))
+    await waitFor(() => expect(fetchMock.mock.calls.filter(([, init]) => init?.method === 'POST')).toHaveLength(2))
+    expect(screen.queryByRole('dialog')).toBeNull()
+  })
+
+  it('routes build-script plugins to guidance instead of attempting installation', async () => {
+    const buildCatalog = {
+      ...catalog,
+      plugins: [{
+        ...catalog.plugins[0],
+        state: { archived: false, fork: false },
+        install: { available: true, packageName: 'dsh-memory', version: '1.0.0', requiresBuildApproval: true },
+      }],
+    }
+    const fetchMock = vi.fn(async (_input: string | URL | Request, _init?: RequestInit) => (
+      new Response(JSON.stringify(buildCatalog), { status: 200 })
+    ))
+    vi.stubGlobal('fetch', fetchMock)
+    render(<MarketplaceTab t={t} />)
+    await screen.findByRole('heading', { name: en.marketplace })
+    fireEvent.click(screen.getByRole('button', { name: en.additionalConfiguration }))
+    const dialog = screen.getByRole('dialog')
+    expect(within(dialog).getByText(en.buildApprovalUnavailable)).toBeTruthy()
+    expect(within(dialog).queryByRole('checkbox')).toBeNull()
+    expect(fetchMock.mock.calls.some(([, init]) => init?.method === 'POST')).toBe(false)
   })
 })

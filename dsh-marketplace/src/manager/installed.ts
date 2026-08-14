@@ -130,7 +130,7 @@ export class InstalledService {
           available: comparable && gt(latestVersion, version),
           latestVersion: comparable ? latestVersion : null,
         },
-        self: packageName === 'dsh-marketplace',
+        self: packageName === 'untr-dsh-marketplace',
       })
     }
     plugins.sort((left, right) => left.packageName.localeCompare(right.packageName, 'en'))

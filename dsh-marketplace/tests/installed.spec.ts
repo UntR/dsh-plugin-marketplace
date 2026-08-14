@@ -59,4 +59,22 @@ describe('InstalledService', () => {
     const state = await new InstalledService({ name: 'web', directory: profile }, registry).list()
     expect(state.plugins[0]?.update).toEqual({ available: false, latestVersion: null })
   })
+
+  it('recognizes the renamed publication package as Marketplace itself', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'dsh-installed-'))
+    const profile = join(root, 'profiles', 'web')
+    await mkdir(profile, { recursive: true })
+    await writeFile(join(profile, 'package.json'), JSON.stringify({ dependencies: { 'untr-dsh-marketplace': '0.1.0' } }))
+    await installFixture(profile, 'untr-dsh-marketplace', {
+      name: 'untr-dsh-marketplace', version: '0.1.0', dsh: { bundle: { patch: './cordis.patch.yml' } },
+    })
+    const registry = {
+      getCatalog: async () => ({
+        registry: { revision: 'x', generatedAt: 'x', pluginCount: 0, stale: false },
+        plugins: [],
+      }),
+    } as unknown as RegistryService
+    const state = await new InstalledService({ name: 'web', directory: profile }, registry).list()
+    expect(state.plugins[0]).toMatchObject({ packageName: 'untr-dsh-marketplace', self: true })
+  })
 })

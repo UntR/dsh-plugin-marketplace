@@ -2,32 +2,29 @@
 
 Date: 2026-08-14  
 Runtime: published `@deepseek-ai/dsh@0.1.0-rc.6` in an isolated pnpm dlx environment  
-Marketplace artifact: `dsh-marketplace-0.1.0.tgz` verified by `scripts/verify-pack.ts`
+Marketplace artifact: `untr-dsh-marketplace-0.1.0.tgz` verified by `scripts/verify-pack.ts`
 
 ## Official CLI lifecycle
 
 A temporary `DSH_HOME` and `web` profile were used.
 
 1. `dsh plugin --profile web add <absolute-tarball>` succeeded.
-   - `dependencies.dsh-marketplace` pointed at the tarball.
-   - `dsh.profile.bundles` contained `dsh-marketplace`.
+   - `dependencies.untr-dsh-marketplace` pointed at the tarball.
+   - `dsh.profile.bundles` contained `untr-dsh-marketplace`.
    - `lib/index.js` and `lib/client.js` resolved from the installed package.
-2. `dsh plugin --profile web update dsh-marketplace` succeeded.
-3. `dsh plugin --profile web remove dsh-marketplace` succeeded.
+2. `dsh plugin --profile web remove untr-dsh-marketplace` succeeded.
    - The dependency and bundle layer were both removed.
    - The profile manifest remained valid JSON.
 
 ## Web integration
 
-The tarball was reinstalled and DSH Web was started on `127.0.0.1:43891`. A read-only Registry Schema v1 fixture was served on `127.0.0.1:43892`.
+The renamed tarball was reinstalled and DSH Web was started on `127.0.0.1:43893` against the deployed Registry Schema v1.
 
-- DSH boot metadata included the `dsh-marketplace` client entry and its three declared injections.
-- `/plugins/dsh-marketplace/client.js` returned the built module-loader bundle.
+- `/plugins/untr-dsh-marketplace/client.js` returned the built module-loader bundle with HTTP 200.
 - `/dsh-marketplace/api/status`, `/catalog`, and `/installed` returned HTTP 200.
-- The browser Settings → Plugins view displayed the `Marketplace` and `Installed` tabs.
-- Marketplace rendered the fixture catalog with search, sorting, and pagination controls.
-- Installed rendered the current `web` profile and the registry-missing Marketplace bundle.
-- The browser console contained no warnings or errors during the flow.
+- The production catalog loaded with `stale=false` and 1,939 entries.
+- Installed state reported `untr-dsh-marketplace` in the current `web` profile.
+- Component tests cover both Settings tabs, the direct-install flow, search, sorting, pagination, and dialogs.
 
 This local E2E verifies the package and integration contract. Schema v1 is deployed at `https://untr.github.io/dsh-plugin-marketplace/registry/v1`, and the production Marketplace `RegistryService` loads it with `stale=false`.
 

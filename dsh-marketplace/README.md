@@ -4,13 +4,13 @@ DSH Marketplace is an external DeepSeek Harness bundle. It adds **Marketplace** 
 
 ## Install
 
-After the package is published, add it to the profile that runs DSH Web:
+Run one command to install Marketplace into the DSH Web profile. This form also works when the `dsh` CLI is not installed globally:
 
 ```bash
-dsh plugin --profile web add dsh-marketplace@0.1.0
+npx -y --package @deepseek-ai/dsh dsh plugin --profile web add untr-dsh-marketplace@latest
 ```
 
-Restart DSH after installation or any plugin change. Marketplace deliberately does not restart or hot-unload DSH.
+Restart DSH, then open **Settings → Plugins → Marketplace**. Marketplace deliberately does not restart or hot-unload DSH.
 
 ## Registry URL
 
@@ -42,10 +42,10 @@ The URL must serve `meta.json`, `index.json`, and `plugins/<github-database-id>.
 From the workspace root:
 
 ```bash
-pnpm --filter dsh-marketplace typecheck
-pnpm --filter dsh-marketplace test
-pnpm --filter dsh-marketplace build
-pnpm --filter dsh-marketplace pack
+pnpm --filter untr-dsh-marketplace typecheck
+pnpm --filter untr-dsh-marketplace test
+pnpm --filter untr-dsh-marketplace build
+pnpm --filter untr-dsh-marketplace pack
 ```
 
 Compatibility details are recorded in [`COMPATIBILITY.md`](./COMPATIBILITY.md).
