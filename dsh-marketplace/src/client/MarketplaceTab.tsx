@@ -6,12 +6,16 @@ import {
 } from '@deepseek-ai/dsh-client-ui-primitives'
 import type { Catalog } from '../registry/service.js'
 import type { RegistryIndexEntry } from '../shared/schema.js'
+import type { PluginCategory } from '../shared/category.js'
 import {
+  catalogCategoryCounts,
   catalogLanguageCounts,
   filterCatalog,
   filterCatalogAvailability,
+  filterCatalogCategory,
   sortCatalog,
   type CatalogAvailability,
+  type CatalogCategory,
   type CatalogSort,
 } from './catalog.js'
 import { InstallDialog } from './InstallDialog.js'
@@ -65,7 +69,8 @@ export function MarketplaceTab({ t, fullPage = false, headerActions }: Marketpla
   const [error, setError] = useState(false)
   const [query, setQuery] = useState('')
   const [sort, setSort] = useState<CatalogSort>('stars')
-  const [availability, setAvailability] = useState<CatalogAvailability>('all')
+  const [category, setCategory] = useState<CatalogCategory>('all')
+  const [availability, setAvailability] = useState<CatalogAvailability>(fullPage ? 'installable' : 'all')
   const [language, setLanguage] = useState('all')
   const [page, setPage] = useState(1)
   const [selected, setSelected] = useState<RegistryIndexEntry | null>(null)
@@ -87,24 +92,19 @@ export function MarketplaceTab({ t, fullPage = false, headerActions }: Marketpla
     }
   }
   useEffect(() => { void load() }, [])
-  useEffect(() => { setPage(1) }, [query, sort, availability, language])
+  useEffect(() => { setPage(1) }, [query, sort, category, availability, language])
 
   const searched = useMemo(() => filterCatalog(catalog?.plugins ?? [], query), [catalog, query])
-  const languageCounts = useMemo(() => catalogLanguageCounts(catalog?.plugins ?? []), [catalog])
+  const available = useMemo(() => filterCatalogAvailability(searched, availability), [availability, searched])
+  const categoryCounts = useMemo(() => catalogCategoryCounts(available), [available])
+  const categorized = useMemo(() => filterCatalogCategory(available, category), [available, category])
+  const languageCounts = useMemo(() => catalogLanguageCounts(categorized), [categorized])
   const plugins = useMemo(() => {
-    const available = filterCatalogAvailability(searched, availability)
-    const byLanguage = language === 'all' ? available : available.filter(plugin => plugin.language === language)
+    const byLanguage = language === 'all' ? categorized : categorized.filter(plugin => plugin.language === language)
     return sortCatalog(byLanguage, sort)
-  }, [availability, language, searched, sort])
+  }, [categorized, language, sort])
   const pageCount = Math.max(1, Math.ceil(plugins.length / PAGE_SIZE))
   const visible = plugins.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
-
-  const availabilityCounts = useMemo(() => ({
-    all: catalog?.plugins.length ?? 0,
-    installable: filterCatalogAvailability(catalog?.plugins ?? [], 'installable').length,
-    configuration: filterCatalogAvailability(catalog?.plugins ?? [], 'configuration').length,
-    unavailable: filterCatalogAvailability(catalog?.plugins ?? [], 'unavailable').length,
-  }), [catalog])
 
   const install = async (plugin: RegistryIndexEntry) => {
     setInstallingId(plugin.id)
@@ -142,7 +142,8 @@ export function MarketplaceTab({ t, fullPage = false, headerActions }: Marketpla
   }
 
   const clearFilters = () => {
-    setAvailability('all')
+    setCategory('all')
+    setAvailability(fullPage ? 'installable' : 'all')
     setLanguage('all')
     setSort('stars')
   }
@@ -155,6 +156,18 @@ export function MarketplaceTab({ t, fullPage = false, headerActions }: Marketpla
     ['installable', 'installableOnly'],
     ['configuration', 'configurationOnly'],
     ['unavailable', 'unavailableOnly'],
+  ]
+  const categoryOptions: ReadonlyArray<readonly [PluginCategory, LocaleKey]> = [
+    ['agents-automation', 'categoryAgentsAutomation'],
+    ['coding-development', 'categoryCodingDevelopment'],
+    ['search-research', 'categorySearchResearch'],
+    ['knowledge-memory', 'categoryKnowledgeMemory'],
+    ['files-data', 'categoryFilesData'],
+    ['media-creation', 'categoryMediaCreation'],
+    ['communication-integrations', 'categoryCommunicationIntegrations'],
+    ['interface-personalization', 'categoryInterfacePersonalization'],
+    ['security-operations', 'categorySecurityOperations'],
+    ['other', 'categoryOther'],
   ]
 
   return (
@@ -183,31 +196,39 @@ export function MarketplaceTab({ t, fullPage = false, headerActions }: Marketpla
             <h2>{t('filters')}</h2>
             <button type="button" className="dshm-clear" onClick={clearFilters}>{t('clearFilters')}</button>
           </div>
-          <fieldset className="dshm-filter-group">
-            <legend>{t('availability')}</legend>
-            <div className="dshm-filter-options">
-              {availabilityOptions.map(([value, label]) => <label key={value} className="dshm-filter-option">
-                <input type="radio" name="market-availability" value={value} checked={availability === value}
-                  onChange={() => setAvailability(value)} />
-                <span>{t(label)}</span><span className="dshm-filter-count">{availabilityCounts[value]}</span>
-              </label>)}
-            </div>
-          </fieldset>
-          <fieldset className="dshm-filter-group">
-            <legend>{t('languages')}</legend>
+          <fieldset className="dshm-category-filter">
+            <legend>{t('categories')}</legend>
             <div className="dshm-filter-options">
               <label className="dshm-filter-option">
-                <input type="radio" name="market-language" value="all" checked={language === 'all'}
-                  onChange={() => setLanguage('all')} />
-                <span>{t('allLanguages')}</span><span className="dshm-filter-count">{catalog.plugins.length}</span>
+                <input type="radio" name="market-category" value="all" checked={category === 'all'}
+                  onChange={() => setCategory('all')} />
+                <span>{t('allCategories')}</span><span className="dshm-filter-count">{available.length}</span>
               </label>
-              {languageCounts.map(([value, count]) => <label key={value} className="dshm-filter-option">
-                <input type="radio" name="market-language" value={value} checked={language === value}
-                  onChange={() => setLanguage(value)} />
-                <span>{value}</span><span className="dshm-filter-count">{count}</span>
+              {categoryOptions.map(([value, label]) => <label key={value} className="dshm-filter-option">
+                <input type="radio" name="market-category" value={value} checked={category === value}
+                  onChange={() => setCategory(value)} />
+                <span>{t(label)}</span><span className="dshm-filter-count">{categoryCounts[value]}</span>
               </label>)}
             </div>
           </fieldset>
+          <div className="dshm-filter-select-row">
+            <label htmlFor="dshm-market-availability">{t('availability')}</label>
+            <select id="dshm-market-availability" className="dshm-filter-select" value={availability}
+              onChange={event => setAvailability(event.currentTarget.value as CatalogAvailability)}>
+              {availabilityOptions.map(([value, label]) => <option key={value} value={value}>{t(label)}</option>)}
+            </select>
+          </div>
+          <details className="dshm-more-filters">
+            <summary>{t('moreFilters')}{language !== 'all' && <span>{language}</span>}</summary>
+            <div className="dshm-more-filters-body">
+              <label htmlFor="dshm-market-language">{t('languages')}</label>
+              <select id="dshm-market-language" className="dshm-filter-select" value={language}
+                onChange={event => setLanguage(event.currentTarget.value)}>
+                <option value="all">{t('allLanguages')}</option>
+                {languageCounts.map(([value, count]) => <option key={value} value={value}>{value} · {count}</option>)}
+              </select>
+            </div>
+          </details>
         </aside>}
         <div className="dshm-results">
           <div className="dshm-results-toolbar">

@@ -3,11 +3,13 @@ import { dirname, join } from 'node:path'
 import { CACHE_TTL_MS, FETCH_TIMEOUT_MS } from '../shared/constants.js'
 import { MarketplaceError } from '../shared/errors.js'
 import { silentLogger, type MarketplaceLogger } from '../shared/logging.js'
+import { classifyPluginCategory, type PluginCategory } from '../shared/category.js'
 import {
   registryIndexSchema,
   registryMetaSchema,
   registryPluginDetailSchema,
   type RegistryIndex,
+  type RegistryIndexEntry,
   type RegistryMeta,
   type RegistryPluginDetail,
 } from '../shared/schema.js'
@@ -24,7 +26,7 @@ export interface Catalog {
     pluginCount: number
     stale: boolean
   }
-  plugins: RegistryIndex['plugins']
+  plugins: Array<RegistryIndexEntry & { category: PluginCategory }>
 }
 
 export interface RegistryServiceOptions {
@@ -111,7 +113,10 @@ export class RegistryService {
         pluginCount: snapshot.meta.pluginCount,
         stale,
       },
-      plugins: snapshot.index.plugins,
+      plugins: snapshot.index.plugins.map(plugin => ({
+        ...plugin,
+        category: plugin.category ?? classifyPluginCategory(plugin),
+      })),
     }
   }
 

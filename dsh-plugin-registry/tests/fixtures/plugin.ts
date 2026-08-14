@@ -11,6 +11,7 @@ export const entry: RegistryIndexEntry = {
   homepageUrl: null,
   description: 'A deterministic DSH memory plugin fixture.',
   coverUrl: null,
+  category: 'knowledge-memory',
   topics: ['dsh-plugin'],
   language: 'TypeScript',
   license: 'MIT',

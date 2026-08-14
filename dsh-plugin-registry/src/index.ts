@@ -6,6 +6,7 @@ export {
 } from './schema.js'
 export { buildRegistryDocuments, type RegistryDocuments } from './protocol.js'
 export { stableStringify } from './stable-json.js'
+export { classifyPluginCategory, PLUGIN_CATEGORIES, type PluginCategory } from './category.js'
 export {
   DISCOVERY_QUERY,
   discoverRepositories,

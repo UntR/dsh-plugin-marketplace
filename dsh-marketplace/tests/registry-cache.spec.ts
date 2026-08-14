@@ -131,6 +131,22 @@ describe('RegistryService', () => {
     await expect(readFile(join(cacheDir, 'plugins', '1.json'), 'utf8')).rejects.toMatchObject({ code: 'ENOENT' })
   })
 
+  it('adds a deterministic category when a v1 Registry index does not provide one', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'marketplace-cache-'))
+    const metaWithPlugin = { ...meta, pluginCount: 1 }
+    const memoryPlugin = { ...plugin, name: 'memory', slug: 'owner/memory', description: 'Session memory' }
+    const service = new RegistryService({
+      baseUrl: 'https://registry.example/v1',
+      cacheDir: join(root, 'v1'),
+      fetch: vi.fn(async (url: string | URL | Request) => String(url).endsWith('meta.json')
+        ? json(metaWithPlugin)
+        : json({ ...index, plugins: [memoryPlugin] })),
+    })
+    await expect(service.getCatalog()).resolves.toMatchObject({
+      plugins: [expect.objectContaining({ category: 'knowledge-memory' })],
+    })
+  })
+
   it('reports an unsupported future schema distinctly', async () => {
     const root = await mkdtemp(join(tmpdir(), 'marketplace-cache-'))
     const service = new RegistryService({

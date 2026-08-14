@@ -1,47 +1,52 @@
-# Marketplace design QA
+# Marketplace category-filter design QA
 
 ## Evidence
 
-- Source visual truth: `/Users/rzhang15/.codex/generated_images/01a00081-5af4-7aa1-af0c-e9637cc9e80e/exec-4dfa6617-c603-4bdc-bc38-7b9d220d0146.png`
-- Browser-rendered implementation: `/Users/rzhang15/.codex/visualizations/2026/08/14/01a00081-5af4-7aa1-af0c-e9637cc9e80e/marketplace-implementation-1487x1058.png`
-- Full-view comparison: `/Users/rzhang15/.codex/visualizations/2026/08/14/01a00081-5af4-7aa1-af0c-e9637cc9e80e/marketplace-comparison.png`
-- Focused top/content comparison: `/Users/rzhang15/.codex/visualizations/2026/08/14/01a00081-5af4-7aa1-af0c-e9637cc9e80e/marketplace-comparison-top.png`
-- Focused footer-entry comparison: `/Users/rzhang15/.codex/visualizations/2026/08/14/01a00081-5af4-7aa1-af0c-e9637cc9e80e/marketplace-comparison-footer.png`
-- Responsive evidence: `/Users/rzhang15/.codex/visualizations/2026/08/14/01a00081-5af4-7aa1-af0c-e9637cc9e80e/marketplace-responsive-900.png`
-- Viewport: 1487 x 1058 CSS px for the source comparison; 900 x 900 CSS px for the narrow-window check.
-- Pixel dimensions: source 1487 x 1058; implementation 1487 x 1058. Both were compared at 1:1 size with no density normalization.
-- State: DSH dark theme, Marketplace open from the official sidebar footer action, page scrolled to the top, live registry loaded, default Stars sorting, all install states and languages selected.
+- Source visual truth: `/var/folders/qn/g2v78j4n3zz65mt8p8kf7pbw0000gn/T/codex-clipboard-b3fbbe35-c488-41e1-9cb8-10aa1eb91774.png`
+- Browser-rendered implementation: `/Users/rzhang15/.codex/visualizations/2026/08/14/01a00081-5af4-7aa1-af0c-e9637cc9e80e/category-filter-implementation-final.png`
+- Full-view comparison: `/Users/rzhang15/.codex/visualizations/2026/08/14/01a00081-5af4-7aa1-af0c-e9637cc9e80e/category-filter-comparison.png`
+- Responsive evidence: `/Users/rzhang15/.codex/visualizations/2026/08/14/01a00081-5af4-7aa1-af0c-e9637cc9e80e/category-filter-responsive-900.png`
+- Viewport: 1227 x 994 CSS px for the source comparison; 900 x 900 CSS px for the narrow-window check.
+- Pixel dimensions and normalization: source 2453 x 1988 pixels, normalized with Lanczos to 1227 x 994 to match the implementation's 1227 x 994 capture at the same CSS viewport. Comparison was then performed at 1:1 pixels.
+- State: DSH dark theme, full-page Marketplace open, page at top, live registry loaded, category set to all, availability set to directly installable, language set to all, and Stars sorting selected.
 
 ## Findings
 
 No actionable P0, P1, or P2 differences remain.
 
-- Fonts and typography: the implementation uses the host DSH font stack and token hierarchy. Heading, subtitle, control text, metadata, wrapping, and truncation preserve the reference hierarchy at the target viewport.
-- Spacing and layout rhythm: the DSH sidebar remains visible; the marketplace occupies the remaining shell surface with the same search-first hierarchy, filter rail, dense result list, dividers, and compact actions. The 900 px check collapses the DSH sidebar and moves filters above results without overlap or clipped controls.
-- Colors and visual tokens: all surfaces, borders, text levels, hover/selected states, and disabled controls use DSH theme variables. The restrained dark palette matches the reference intent and adds no gradients or unrelated accent colors.
-- Image quality and assets: the footer and search/refresh/fallback icons come from the DSH open-source icon primitives. Registry cover images are rendered at their native aspect ratio with `object-fit: cover`; no handwritten SVG, CSS art, emoji placeholder, or fake product art is used.
-- Copy and content: the page title and discovery-oriented subtitle match the selected direction. Result text and counts intentionally use live registry data (2083 plugins during this pass), rather than the mock's fictional 142-plugin catalog.
-- Interaction and accessibility: search, install-state filtering, Installed view switching, back navigation, close/reopen, Escape close, labelled inputs, native radio/select controls, disabled install states, and `aria-pressed` on the footer entry were verified. The console contained no error-level entries.
+- Fonts and typography: the implementation keeps DSH's host font stack, sizes, weights, line heights, wrapping, and truncation. The category labels and counts scan as one primary group, with technical filters visually subordinate.
+- Spacing and layout rhythm: the fragmented bordered fieldsets from the source have been removed. Category is presented as a cohesive filter list; availability is a compact row; language is collapsed under “更多筛选”. At 900 px the category choices form a three-column grid and neither overlap nor clip the results.
+- Colors and visual tokens: surfaces, borders, text levels, selected radio state, dropdowns, and disclosure use existing DSH theme variables. Contrast and disabled states remain consistent with the host.
+- Image quality and asset fidelity: registry cover images and DSH's existing open-source icons are unchanged and remain sharp at their intended size. No handwritten SVG, CSS art, emoji substitute, or placeholder asset was introduced.
+- Copy and content: capability-oriented categories replace implementation-language-first discovery. The full page now defaults to “可直接安装”, producing 821 actionable results in this verification run; counts remain live registry data.
+- Icons and affordances: existing search, refresh, close, and Marketplace icons retain their original alignment and stroke family. Category radios, native selects, and the details disclosure clearly communicate state.
+- Interaction and accessibility: category filtering, availability switching, expanding “更多筛选”, language filtering, clearing all filters, closing and reopening the Marketplace, labels, native controls, and focus states were exercised. The browser console contained no error-level entries.
 
 ## Open Questions
 
-None blocking. The host's official `sidebar.footer.action` slot renders Marketplace immediately above Settings, while the visual reference places it below Settings. This is an accepted P3 host-integration difference because it preserves the official additive slot and avoids replacing DSH navigation.
+None blocking. Category assignment is deterministic at Registry build time and the Marketplace also classifies older v1 entries that do not yet contain `category`; this compatibility path can be removed after the published Registry is fully regenerated.
 
 ## Implementation Checklist
 
-- [x] Keep the original DSH sidebar and conversation surface intact.
-- [x] Open a dedicated full marketplace surface from the sidebar footer.
-- [x] Provide working search, install-state and language filters, sorting, refresh, pagination, details, and install actions.
-- [x] Reuse DSH design tokens and open-source icon primitives.
-- [x] Verify target and narrow desktop viewports in the in-app browser.
+- [x] Make category the primary discovery filter.
+- [x] Default the full-page Marketplace to directly installable plugins.
+- [x] Compact availability into a dropdown.
+- [x] Move language into a collapsed secondary-filter section.
+- [x] Generate stable categories during Registry sync without runtime AI.
+- [x] Preserve compatibility with older Registry v1 entries.
+- [x] Verify default, combined-filter, clear, close/reopen, and responsive states.
 - [x] Check the browser console for errors.
 
 ## Follow-up Polish
 
-- [P3] If DSH later exposes ordering inside the footer region, match the reference's Settings-then-Marketplace order without changing the current official slot integration.
+- [P3] The selected Marketplace footer action can show a transient browser focus outline after mouse interaction. It is an accessible host focus state and does not affect the filter redesign.
 
 ## Comparison History
 
-- Pass 1: source and implementation were captured at the same 1487 x 1058 viewport and compared in one combined image. No P0/P1/P2 mismatch was found, so no visual-fix iteration was required. Focused top/content and footer comparisons confirmed hierarchy, spacing, icon treatment, and the accepted footer-order difference.
+- Earlier source state: “安装状态” and “开发语言” were separate boxed fieldsets; language occupied most of the primary discovery rail and visually split the filter area.
+- Fix applied: replaced language-first discovery with deterministic capability categories, compacted availability, moved language into “更多筛选”, and removed fieldset borders.
+- Post-fix evidence: the normalized side-by-side comparison shows a single coherent discovery group at 1227 x 994; the 900 x 900 capture confirms the category grid and result list remain usable without clipping. No P0/P1/P2 issue remained, so no additional visual-fix iteration was required.
+
+Focused-region comparison was not needed because the combined 1227 x 994 comparison keeps all changed controls, labels, counts, spacing, and border treatments legible; imagery and result-card internals were unchanged.
 
 final result: passed

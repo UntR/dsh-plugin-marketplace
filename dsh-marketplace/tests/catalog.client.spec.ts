@@ -1,8 +1,10 @@
 import { describe, expect, it } from 'vitest'
 import {
   catalogLanguageCounts,
+  catalogCategoryCounts,
   filterCatalog,
   filterCatalogAvailability,
+  filterCatalogCategory,
   sortCatalog,
 } from '../src/client/catalog.js'
 import type { RegistryIndexEntry } from '../src/shared/schema.js'
@@ -19,6 +21,7 @@ function plugin(id: number, name: string, stars: number): RegistryIndexEntry {
     homepageUrl: null,
     description: `${name} session memory`,
     coverUrl: null,
+    category: 'knowledge-memory',
     topics: ['dsh-plugin'],
     language: 'TypeScript',
     license: 'MIT',
@@ -63,5 +66,17 @@ describe('Marketplace catalog transforms', () => {
     expect(filterCatalogAvailability(catalog, 'configuration').map(item => item.name)).toEqual(['configured'])
     expect(filterCatalogAvailability(catalog, 'unavailable').map(item => item.name)).toEqual(['unavailable'])
     expect(catalogLanguageCounts(catalog)).toEqual([['TypeScript', 3], ['JavaScript', 1]])
+  })
+
+  it('filters and counts stable primary categories', () => {
+    const interfacePlugin = { ...plugin(3, 'theme', 1), category: 'interface-personalization' as const }
+    const catalog = [...plugins, interfacePlugin]
+    expect(filterCatalogCategory(catalog, 'knowledge-memory')).toHaveLength(2)
+    expect(filterCatalogCategory(catalog, 'interface-personalization').map(item => item.name)).toEqual(['theme'])
+    expect(catalogCategoryCounts(catalog)).toMatchObject({
+      'knowledge-memory': 2,
+      'interface-personalization': 1,
+      other: 0,
+    })
   })
 })

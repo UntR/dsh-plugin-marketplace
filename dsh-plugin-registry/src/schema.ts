@@ -1,10 +1,12 @@
 import { z } from 'zod'
+import { PLUGIN_CATEGORIES } from './category.js'
 
 const sha256 = z.string().regex(/^sha256:[0-9a-f]{64}$/)
 const githubId = z.string().regex(/^gh:[0-9]+$/)
 const dateTime = z.iso.datetime({ offset: true })
 const nullableUrl = z.url().nullable()
 const nonNegativeInteger = z.int().nonnegative()
+export const pluginCategorySchema = z.enum(PLUGIN_CATEGORIES)
 
 const ownerSchema = z.object({
   login: z.string().min(1),
@@ -29,6 +31,7 @@ export const registryIndexEntrySchema = z.object({
   homepageUrl: nullableUrl,
   description: z.string(),
   coverUrl: nullableUrl,
+  category: pluginCategorySchema.optional(),
   topics: z.array(z.string().min(1)),
   language: z.string().min(1).nullable(),
   license: z.string().min(1).nullable(),
@@ -148,4 +151,3 @@ export const registryPluginDetailSchema = z.object({
     enrichedAt: dateTime,
   }).passthrough(),
 }).passthrough()
-

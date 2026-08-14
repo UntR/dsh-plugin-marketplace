@@ -1,7 +1,9 @@
 import type { RegistryIndexEntry } from '../shared/schema.js'
+import { PLUGIN_CATEGORIES, type PluginCategory } from '../shared/category.js'
 
 export type CatalogSort = 'name' | 'updated' | 'pushed' | 'stars'
 export type CatalogAvailability = 'all' | 'installable' | 'configuration' | 'unavailable'
+export type CatalogCategory = 'all' | PluginCategory
 
 function normalized(value: string): string {
   return value.trim().toLocaleLowerCase().replace(/\s+/g, ' ')
@@ -55,6 +57,22 @@ export function filterCatalogAvailability(
     return plugins.filter(plugin => plugin.install.available && plugin.install.requiresBuildApproval)
   }
   return plugins.filter(plugin => !plugin.install.available)
+}
+
+export function filterCatalogCategory(
+  plugins: readonly RegistryIndexEntry[],
+  category: CatalogCategory,
+): RegistryIndexEntry[] {
+  if (category === 'all') return [...plugins]
+  return plugins.filter(plugin => (plugin.category ?? 'other') === category)
+}
+
+export function catalogCategoryCounts(
+  plugins: readonly RegistryIndexEntry[],
+): Record<PluginCategory, number> {
+  const counts = Object.fromEntries(PLUGIN_CATEGORIES.map(category => [category, 0])) as Record<PluginCategory, number>
+  for (const plugin of plugins) counts[plugin.category ?? 'other'] += 1
+  return counts
 }
 
 export function catalogLanguageCounts(

@@ -89,8 +89,11 @@ describe('registry sync', () => {
       enrichment: variantEnrichment,
       now: () => new Date('2026-08-14T06:30:00.000Z'),
     })
-    const index = JSON.parse(await readFile(join(root, 'v1/index.json'), 'utf8')) as { plugins: unknown[] }
+    const index = JSON.parse(await readFile(join(root, 'v1/index.json'), 'utf8')) as {
+      plugins: Array<{ category: string }>
+    }
     expect(index.plugins).toHaveLength(7)
+    expect(index.plugins.every(plugin => plugin.category === 'other')).toBe(true)
     expect(summary).toMatchObject({ discovered: 7, added: 7, registryChanged: true })
     expect(await readdir(join(root, 'v1/plugins'))).toHaveLength(7)
   })

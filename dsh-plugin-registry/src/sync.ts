@@ -3,6 +3,7 @@ import { enrichRepositories, type RepositoryEnrichmentClient } from './enrich.js
 import { loadRegistry, replaceRegistry } from './filesystem.js'
 import type { GraphqlRequest, DiscoveredRepository } from './discovery.js'
 import { buildRegistryDocuments } from './protocol.js'
+import { classifyPluginCategory } from './category.js'
 import type { RegistryIndexEntry, RegistryPluginDetail } from './types.js'
 
 function indexEntry(repository: DiscoveredRepository, detail: RegistryPluginDetail): RegistryIndexEntry {
@@ -17,6 +18,12 @@ function indexEntry(repository: DiscoveredRepository, detail: RegistryPluginDeta
     homepageUrl: repository.homepageUrl,
     description: detail.presentation.description,
     coverUrl: detail.presentation.coverUrl,
+    category: classifyPluginCategory({
+      name: repository.name,
+      slug: repository.slug,
+      description: detail.presentation.description,
+      topics: repository.topics,
+    }),
     topics: repository.topics,
     language: repository.language,
     license: repository.license?.spdxId ?? repository.license?.name ?? null,
@@ -121,4 +128,3 @@ export function formatSyncSummary(summary: SyncSummary): string {
     `Registry changed:  ${summary.registryChanged ? 'yes' : 'no'}`,
   ].join('\n')
 }
-

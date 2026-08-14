@@ -22,7 +22,7 @@ const catalog = {
     id: 'gh:1', githubDatabaseId: 1, githubNodeId: 'R_1', slug: 'owner/memory', name: 'memory',
     owner: { login: 'owner', avatarUrl: 'https://avatars.example/owner.png' },
     repositoryUrl: 'https://github.com/owner/memory', homepageUrl: 'https://memory.example/',
-    description: 'Session memory', coverUrl: 'https://images.example/memory.png', topics: ['dsh-plugin'], language: 'TypeScript', license: 'MIT',
+    description: 'Session memory', coverUrl: 'https://images.example/memory.png', category: 'knowledge-memory', topics: ['dsh-plugin'], language: 'TypeScript', license: 'MIT',
     stats: { stars: 10, forks: 1 }, state: { archived: true, fork: false },
     timestamps: { createdAt: '2026-08-01T00:00:00.000Z', updatedAt: '2026-08-14T00:00:00.000Z', pushedAt: null },
     install: { available: false, packageName: null, version: null, requiresBuildApproval: false },
@@ -87,6 +87,41 @@ describe('MarketplaceTab', () => {
     vi.stubGlobal('fetch', vi.fn(async () => { throw new Error('offline') }))
     render(<MarketplaceTab t={t} />)
     expect((await screen.findByRole('alert')).textContent).toContain(en.unavailable)
+  })
+
+  it('uses categories as the primary filter and keeps technical filters compact', async () => {
+    const plugins = [
+      {
+        ...catalog.plugins[0],
+        state: { archived: false, fork: false },
+        install: { available: true, packageName: 'memory', version: '1.0.0', requiresBuildApproval: false },
+      },
+      {
+        ...catalog.plugins[0], id: 'gh:2', githubDatabaseId: 2, githubNodeId: 'R_2',
+        slug: 'owner/theme', name: 'theme', description: 'Interface theme', category: 'interface-personalization',
+        language: 'JavaScript', state: { archived: false, fork: false },
+        install: { available: true, packageName: 'theme', version: '1.0.0', requiresBuildApproval: false },
+        detailPath: './plugins/2.json',
+      },
+      {
+        ...catalog.plugins[0], id: 'gh:3', githubDatabaseId: 3, githubNodeId: 'R_3',
+        slug: 'owner/legacy', name: 'legacy', description: 'Legacy memory', category: 'knowledge-memory',
+        state: { archived: false, fork: false }, detailPath: './plugins/3.json',
+      },
+    ]
+    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify({
+      registry: { ...catalog.registry, pluginCount: plugins.length }, plugins,
+    }), { status: 200 })))
+    render(<MarketplaceTab t={t} fullPage />)
+    await screen.findByRole('heading', { name: en.marketplace })
+    expect(screen.getByText(`2 ${en.results}`)).toBeTruthy()
+    fireEvent.click(screen.getByRole('radio', { name: new RegExp(en.categoryKnowledgeMemory) }))
+    expect(screen.getByText(`1 ${en.results}`)).toBeTruthy()
+    expect(screen.queryByRole('heading', { name: 'theme' })).toBeNull()
+    fireEvent.change(screen.getByLabelText(en.availability), { target: { value: 'all' } })
+    expect(screen.getByText(`2 ${en.results}`)).toBeTruthy()
+    expect(screen.getByText(en.moreFilters)).toBeTruthy()
+    expect(screen.getByLabelText(en.languages).tagName).toBe('SELECT')
   })
 
   it('shows stale and fork states, sorts by stars and paginates 48 cards', async () => {
