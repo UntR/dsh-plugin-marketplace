@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "172d0c33a557217b8928f47972ac8856cacd5f35"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-precise-cache",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f612b98d5290b0bb7fbc8dc3d5a3d1f40274f0f4d33ed057674b0f49d0666f6b/Townrain/dsh-precise-cache",
     "description": "Five-decimal cache-hit readout beside the chat stats line for the DeepSeek Harness Web GUI (dsh-plugin)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 加一个小功能：在聊天输入框下方的统计栏旁边，多显示一行精确到小数点后五位的缓存命中率，长这样："
   },
   "schemaVersion": 1,
   "scripts": {

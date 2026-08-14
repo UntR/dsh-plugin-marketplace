@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "47074316abfbe809757b10377f25c5dbb0630518"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1333973853",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-better-archive",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:huahai0202/dsh-better-archive#47074316abfbe809757b10377f25c5dbb0630518",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-better-archive",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8b9b290c231c7153862598bb40d6b8f8cc66c967c4fc3d655f22ba0e8448adf5/huahai0202/dsh-better-archive",
     "description": "DeepSeek Harness (DSH) web-GUI plugin: archived-session panel with unarchive & delete"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 网页 GUI 的「已归档会话」面板插件：在侧边栏设置区新增「已归档」入口，列出所有已归档会话，支持取消归档、单个/批量永久删除（按项目删除 / 全部删除）。"
   },
   "schemaVersion": 1,
   "scripts": {

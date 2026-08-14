@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "a6d01de7320ac36cd30a03ec814f3964b97d9e44"
   },
   "github": {
@@ -47,27 +47,42 @@
   },
   "id": "gh:1333995538",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-personalize",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Zephyr-vibe/dsh-personalize#a6d01de7320ac36cd30a03ec814f3964b97d9e44",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-personalize",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bb45a8004a3f26309ef74b2c9a6d0c9c88b909f81fa717abde451efee7d9820d/Zephyr-vibe/dsh-personalize",
     "description": "Per-host personalization for DSH: custom instructions, local long-term memory, and reply-tone presets."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DSH web plugin: per-host personalization — global custom instructions, local long-term memory, and reply-tone presets, applied to every conversation on this machine."
   },
   "schemaVersion": 1,
   "scripts": {

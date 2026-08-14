@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "c3030a6beac3a770711d1624e546a99aea014e54"
   },
   "github": {
@@ -42,27 +42,45 @@
   },
   "id": "gh:1333985407",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workspace-inspector",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:GIGHT111/dsh-workspace-inspector#c3030a6beac3a770711d1624e546a99aea014e54",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workspace-inspector",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fe97d6cff8c95dcfeba80f8812be1d7b0b7f5a04123026e8c4ed18595dcf8f50/GIGHT111/dsh-workspace-inspector",
     "description": "DeepSeek Harness (dsh) Web 右侧面板插件：Token 用量与占比、全部历史消息目录（可折叠/点击跳转）、上下文压力、工作区文件树（点击系统默认打开）。跨平台（macOS / Windows / Linux）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness (DSH) Web 客户端插件：在右侧详情列显示当前会话的 Token 用量、消息目录（全部历史） 与 工作区文件树。跨平台（macOS / Windows / Linux）。"
   },
   "schemaVersion": 1,
   "scripts": {

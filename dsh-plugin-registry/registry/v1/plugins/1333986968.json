@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "627dd06aebf236d27a555b4eaf1bfcaf662297cf"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "meow-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a06532655f1adea4302f41b4a8322a359a74d69158885d1479fa2f0149a9573a/Phant0Meow/dsh-memory-meow",
-    "description": ""
+    "description": "Cross-session project memory for DeepSeek Harness (DSH). Born from the \"meow\" fork — hence the name — but works on any DSH profile."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Cross-session project memory for DeepSeek Harness (DSH). Born from the \"meow\" fork — hence the name — but works on any DSH profile."
   },
   "schemaVersion": 1,
   "scripts": {

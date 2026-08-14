@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "4391c060637d9662be8570885d4d811019680115"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,18 +59,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@local/dsh-project-file-explorer",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e69ad4088105a7c8ef744a2e0e716334addc940dd1309e50b7e9c22ee4a75f8b/BillionSeniors/dsh-project-file-explorer",
     "description": "DeepSeek Harness ?????????:??????? + ????(??/??/??/???/PDF)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness (dsh) 的项目文件浏览器插件：右侧停靠项目文件树，点击文件在主会话区打开预览标签，支持代码 / 文本 / 图片 / 音视频 / PDF，窄屏自动降级为右侧抽屉（响应式）。"
   },
   "schemaVersion": 1,
   "scripts": {
-    "install": false,
+    "install": true,
     "postinstall": false,
     "preinstall": false,
     "prepare": false

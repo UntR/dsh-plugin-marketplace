@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "cf36f61f708100d9f2c67db3a1722a8b85b53757"
   },
   "github": {
@@ -25,52 +25,70 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4L7qA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/24dd5d841bedbeff38fe49242af95e19b6cbd5080ca567def22f602b058c0500/loguhan/dsh-workshop",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/77a964c71f50c8f283831c68f3d7d33aca43d851e7ed847c5283952f7c483fee/loguhan/dsh-workshop",
     "owner": {
-      "avatarUrl": "https://avatars.githubusercontent.com/u/163630859?v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/163630859?u=7e13f7970cb1beb260fc9bd336354aa1945408a0&v=4",
       "login": "loguhan"
     },
     "pushedAt": "2026-08-14T11:01:21Z",
     "slug": "loguhan/dsh-workshop",
-    "stars": 1,
+    "stars": 2,
     "topics": [
       "deepseek-harness",
       "dsh",
       "dsh-plugin",
       "web-ui"
     ],
-    "updatedAt": "2026-08-14T11:01:53Z",
+    "updatedAt": "2026-08-14T12:15:27Z",
     "url": "https://github.com/loguhan/dsh-workshop"
   },
   "id": "gh:1333984168",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-workshop",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:loguhan/dsh-workshop#cf36f61f708100d9f2c67db3a1722a8b85b53757",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/host/index.mjs",
+        "types": "./lib/host/index.d.mts"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./web": {
+        "default": "./lib/host/web.mjs",
+        "types": "./lib/host/web.d.mts"
+      }
+    },
+    "main": "lib/host/index.mjs",
+    "name": "dsh-workshop",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/24dd5d841bedbeff38fe49242af95e19b6cbd5080ca567def22f602b058c0500/loguhan/dsh-workshop",
+    "coverUrl": "https://opengraph.githubassets.com/77a964c71f50c8f283831c68f3d7d33aca43d851e7ed847c5283952f7c483fee/loguhan/dsh-workshop",
     "description": "Steam Workshop style plugin store for DeepSeek Harness Web UI: browse 850+ community plugins, one-click install with GitHub mirror acceleration, progress UI, security checks, Chinese descriptions"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Steam Workshop 风格的 DeepSeek Harness Web UI 插件商店：浏览、搜索、一键安装社区插件，自动镜像加速与安全校验。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

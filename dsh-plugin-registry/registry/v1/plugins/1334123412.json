@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
     "enrichmentStatus": "ok",
-    "headSha": "df35476778b0a40b78bde723c90d7286c33ff89c"
+    "headSha": "d6ba7b5b67963272c18c9ccedb397d610a6fe18a"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Advanced cross-session full-text search for DeepSeek Harness — search past and current DSH sessions using the built-in sessionQuery service",
     "fork": false,
     "forks": 0,
-    "headSha": "df35476778b0a40b78bde723c90d7286c33ff89c",
+    "headSha": "d6ba7b5b67963272c18c9ccedb397d610a6fe18a",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,32 +25,32 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4UblA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/51c02ddef92c21b74e7dddce8d77b2c9e2256206c90c60139a94b4d7d1490a66/LeslieWylie/dsh-session-search-pro",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ddd6b2027a2233e880c3bea6de8909a3c70b60a940284e90f8fc548e381b68a2/LeslieWylie/dsh-session-search-pro",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/112309453?u=8a9acd73794ab682859fd610bec129026470b68a&v=4",
       "login": "LeslieWylie"
     },
-    "pushedAt": "2026-08-14T11:45:18Z",
+    "pushedAt": "2026-08-14T13:21:35Z",
     "slug": "LeslieWylie/dsh-session-search-pro",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "agent-tools",
       "deepseek-harness",
       "dsh-plugin",
       "session-search"
     ],
-    "updatedAt": "2026-08-14T11:45:34Z",
+    "updatedAt": "2026-08-14T13:22:42Z",
     "url": "https://github.com/LeslieWylie/dsh-session-search-pro"
   },
   "id": "gh:1334123412",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-session-search-pro",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:LeslieWylie/dsh-session-search-pro#d6ba7b5b67963272c18c9ccedb397d610a6fe18a",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
@@ -58,19 +58,25 @@
     "repositoryMatches": null
   },
   "package": {
-    "main": null,
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
     "name": "dsh-session-search-pro",
     "status": "valid",
-    "type": null,
-    "version": "0.1.0"
+    "type": "module",
+    "version": "0.2.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/51c02ddef92c21b74e7dddce8d77b2c9e2256206c90c60139a94b4d7d1490a66/LeslieWylie/dsh-session-search-pro",
+    "coverUrl": "https://opengraph.githubassets.com/ddd6b2027a2233e880c3bea6de8909a3c70b60a940284e90f8fc548e381b68a2/LeslieWylie/dsh-session-search-pro",
     "description": "Advanced cross-session full-text search for DeepSeek Harness — search past and current DSH sessions using the built-in sessionQuery service"
   },
   "readme": {
     "available": true,
-    "excerpt": "The existing dsh-session-search is well-engineered, but it's index-free — every search decompresses and scans all zstd session files from scratch. This plugin takes a different approach: it uses DSH's built-in sessionQuery service, which provides indexed, full-text search across "
+    "excerpt": "Three agent tools for DeepSeek Harness, built on the runtime's own indexed sessionQuery service instead of scanning session files by hand."
   },
   "schemaVersion": 1,
   "scripts": {

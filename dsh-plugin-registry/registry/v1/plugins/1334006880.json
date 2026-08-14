@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
-    "headSha": "2e4741679ea898aa62ce3e0c0a1474e4bcab6aa0"
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
+    "headSha": "680c2cd0be19b205009774648cdb3eeea2a1061e"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-14T09:18:47Z",
     "databaseId": 1334006880,
     "defaultBranch": "main",
-    "description": "Lightweight local long-term memory plugin for DeepSeek Harness — SQLite, bounded recall, no extra model call",
+    "description": "Retrieved ≠ injected: CBDC-gated local long-term memory for DeepSeek Harness (SQLite + FTS5, bounded recall, auditable, no extra model call)",
     "fork": false,
     "forks": 0,
-    "headSha": "2e4741679ea898aa62ce3e0c0a1474e4bcab6aa0",
+    "headSha": "680c2cd0be19b205009774648cdb3eeea2a1061e",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4NUYA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/1c18167a3a4dfd2ff0a1879a39a788efb219f50b0ca84bc9333678b5003822c1/GIT121995/dsh-memory-cbdc-plugin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d320461e9a10593182637818e5bc1e5119d049f3ab01cf29fa816bb685b573c0/GIT121995/dsh-memory-gate",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/269385000?v=4",
       "login": "GIT121995"
     },
-    "pushedAt": "2026-08-14T10:21:49Z",
-    "slug": "GIT121995/dsh-memory-cbdc-plugin",
-    "stars": 0,
+    "pushedAt": "2026-08-14T13:12:40Z",
+    "slug": "GIT121995/dsh-memory-gate",
+    "stars": 1,
     "topics": [
       "agent-memory",
       "cbdc",
@@ -44,32 +44,44 @@
       "sqlite",
       "typescript"
     ],
-    "updatedAt": "2026-08-14T11:59:40Z",
-    "url": "https://github.com/GIT121995/dsh-memory-cbdc-plugin"
+    "updatedAt": "2026-08-14T13:14:06Z",
+    "url": "https://github.com/GIT121995/dsh-memory-gate"
   },
   "id": "gh:1334006880",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-memory-gate",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-memory-gate@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-memory-gate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/1c18167a3a4dfd2ff0a1879a39a788efb219f50b0ca84bc9333678b5003822c1/GIT121995/dsh-memory-cbdc-plugin",
-    "description": "Lightweight local long-term memory plugin for DeepSeek Harness — SQLite, bounded recall, no extra model call"
+    "coverUrl": "https://opengraph.githubassets.com/d320461e9a10593182637818e5bc1e5119d049f3ab01cf29fa816bb685b573c0/GIT121995/dsh-memory-gate",
+    "description": "Retrieved ≠ injected: CBDC-gated local long-term memory for DeepSeek Harness (SQLite + FTS5, bounded recall, auditable, no extra model call)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的本地长期记忆插件，核心立场是检索到 ≠ 注入： 它把稳定信息保存为可撤销的 Claim，并在每次模型调用前执行 CBDC （Claim → Belief → Decision → Consumption）权威门控，每条记忆都要 经过裁决才能进入上下文。有界（默认 ≤3 条 / 1200 字符）、全程可审计、 不增加第二次模型调用。"
   },
   "schemaVersion": 1,
   "scripts": {

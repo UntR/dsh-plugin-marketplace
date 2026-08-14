@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "363cf026a147b1b4794d75dce2a1e6e17f5a5450"
   },
   "github": {
@@ -42,7 +42,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -52,14 +52,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "y1n-web-gate",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/312d370ffd10ced881b51aad88ba0e0337e472e5adc8a170f016628220a5a75b/zzy2210/dsh-web-gate",
     "description": "DeepSeek Harness (dsh) Web 密钥门禁 / Access gate for dsh Web GUI — 替换出厂 webserver 行,HTTP/WebSocket/SPA 全部先过密钥:登录页 + HMAC Cookie + Bearer Token + 防爆破;host/port/key 环境变量或行内可配;0.0.0.0 无密钥拒绝启动(安全锁). Login page, HMAC cookie, bearer token, lockout; env/row config; refuses 0.0.0.0 without "
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh web profile 的网页密钥门禁(本地包)。把\"需要密钥才能进入界面\"落在真正的 HTTP 边界上: 所有 HTTP 路由(/api、插件包路由、HMR)、WebSocket upgrade (/api/events.mux、/api/events.host)以及 SPA fallback(页面与静态资源), 在任何业务逻辑之前先过鉴权。"
   },
   "schemaVersion": 1,
   "scripts": {

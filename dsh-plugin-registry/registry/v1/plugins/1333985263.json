@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "2c9c09712e81b50470064ee8940eb8212bb9fcc3"
   },
   "github": {
@@ -53,7 +53,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -63,14 +63,20 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": "plugins/dsh-mmx-multimodal.mjs",
+    "name": "dsh-mmx-multimodal",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1be95c7258dc04895732199a7f13f81844fe89e6ab1e5ff9e8caf0af42ec5dd6/welsione/dsh-mmx-multimodal",
     "description": "MiniMax multimodal capability hub for DeepSeek Harness (DSH): image understanding (VLM), text/image-to-video, speech, music, audio cover, web search, quota — one mmx_multimodal model tool wrapping the mmx-cli."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Registers a single DSH model tool that dispatches to the MiniMax mmx CLI (npm package mmx-cli). Your agent gets image understanding, image/video generation, TTS, music, audio cover, web search and quota checks through one tool — no API wiring, no custom endpoints."
   },
   "schemaVersion": 1,
   "scripts": {

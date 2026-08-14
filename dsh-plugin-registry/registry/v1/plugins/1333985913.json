@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "10480f4b72c58883accd472fa6773d25e0533b53"
   },
   "github": {
@@ -43,27 +43,44 @@
   },
   "id": "gh:1333985913",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-provider-label",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:haiyoucuv/dsh-model-provider-label#10480f4b72c58883accd472fa6773d25e0533b53",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-model-provider-label",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d28976c3b928a6433ca9ead15edcc9e129401ba90a50dce5d336ec42a4df59f6/haiyoucuv/dsh-model-provider-label",
     "description": "DeepSeek Harness plugin that disambiguates same-named models by showing their provider"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "默认模型选择器只显示模型名（如 DeepSeek V4 Flash）。当你配置多个 provider、且不同 provider 下有同名的模型时无法区分。本插件把 provider 的 displayName 一并显示：DeepSeek · DeepSeek V4 Flash。"
   },
   "schemaVersion": 1,
   "scripts": {

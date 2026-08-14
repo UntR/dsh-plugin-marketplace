@@ -5,9 +5,9 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
-    "headSha": "127b51cd520ad935cd6dace91907f62842dfff90"
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
+    "headSha": "747d5a2ae13282ccb58af8ad932f93c9d65bb990"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "KoboldCpp for DeepSeek Harness - a tool plugin that lets the harness online model hand repetitive text and vision (OCR) labor to a local KoboldCpp (llama.cpp) server.",
     "fork": false,
     "forks": 0,
-    "headSha": "127b51cd520ad935cd6dace91907f62842dfff90",
+    "headSha": "747d5a2ae13282ccb58af8ad932f93c9d65bb990",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-koboldcpp-hands",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0ed41f42765b0c133371f083d96cc910248482b7af557943d7ee3f52917e3abb/MicroHEROX/dsh-koboldcpp-hands",
     "description": "KoboldCpp for DeepSeek Harness - a tool plugin that lets the harness online model hand repetitive text and vision (OCR) labor to a local KoboldCpp (llama.cpp) server."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-koboldcpp-hands — give your DeepSeek Harness agent a pair of local hands."
   },
   "schemaVersion": 1,
   "scripts": {

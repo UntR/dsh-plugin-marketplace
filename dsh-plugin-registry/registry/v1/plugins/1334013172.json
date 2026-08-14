@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
-    "headSha": "a7c4d9ecd12b920bfaa1cec4e67a3e848442a1fc"
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
+    "headSha": "16fe3ffc2ceccea5dfb90c57a9fa8664c51ab898"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-14T09:26:16Z",
     "databaseId": 1334013172,
     "defaultBranch": "main",
-    "description": "DeepSeek Harness 插件：在「设置 → 通用」中选择模型推理思考（chain of thought）使用的语言。基于系统提示词实现，零额外调用、零延迟，支持 12 种语言。",
+    "description": "DeepSeek Harness (DSH) plugin: a \"Thinking Language\" selector under Settings → General that tells the model which language to reason in (chain of thought) via a system-prompt section. Zero extra calls, zero latency, 12 languages.",
     "fork": false,
     "forks": 0,
-    "headSha": "a7c4d9ecd12b920bfaa1cec4e67a3e848442a1fc",
+    "headSha": "16fe3ffc2ceccea5dfb90c57a9fa8664c51ab898",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,49 +25,65 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4Ns9A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3e33727eae1e314c342ace480775a400ad8ea670cc65dbcaa2793fc02b68677a/lco117/dsh-think-any-lang",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/9481de3046f1b87f299728befba8299d318d0da94b93e43636515a707749ba31/lco117/dsh-think-any-lang",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/41671323?u=120d15e4ac6ece6225bb808b8c1d6d40067b6790&v=4",
       "login": "lco117"
     },
-    "pushedAt": "2026-08-14T11:37:49Z",
+    "pushedAt": "2026-08-14T12:52:31Z",
     "slug": "lco117/dsh-think-any-lang",
-    "stars": 1,
+    "stars": 2,
     "topics": [
+      "cot",
       "deepseek-harness",
       "deepseek-harness-plugin",
       "deepseek-harness-plugins",
       "dsh",
       "dsh-bundle",
       "dsh-plugin",
-      "dsh-plugins"
+      "dsh-plugins",
+      "llm",
+      "plugin",
+      "reasoning"
     ],
-    "updatedAt": "2026-08-14T11:38:39Z",
+    "updatedAt": "2026-08-14T12:58:15Z",
     "url": "https://github.com/lco117/dsh-think-any-lang"
   },
   "id": "gh:1334013172",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-think-any-lang",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lco117/dsh-think-any-lang#16fe3ffc2ceccea5dfb90c57a9fa8664c51ab898",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-think-any-lang",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3e33727eae1e314c342ace480775a400ad8ea670cc65dbcaa2793fc02b68677a/lco117/dsh-think-any-lang",
-    "description": "DeepSeek Harness 插件：在「设置 → 通用」中选择模型推理思考（chain of thought）使用的语言。基于系统提示词实现，零额外调用、零延迟，支持 12 种语言。"
+    "coverUrl": "https://opengraph.githubassets.com/9481de3046f1b87f299728befba8299d318d0da94b93e43636515a707749ba31/lco117/dsh-think-any-lang",
+    "description": "DeepSeek Harness (DSH) plugin: a \"Thinking Language\" selector under Settings → General that tells the model which language to reason in (chain of thought) via a system-prompt section. Zero extra calls, zero latency, 12 languages."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that adds a Thinking Language dropdown under Settings → General, letting you choose which language the model uses for its reasoning / chain of thought (中文, English, 日本語, 한국어, Deutsch, …). The final reply stays in the user's language."
   },
   "schemaVersion": 1,
   "scripts": {

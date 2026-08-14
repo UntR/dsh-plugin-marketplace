@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "dabdf7c22bf2cb140fec980c7aa98b7b5b617165"
   },
   "github": {
@@ -46,27 +46,47 @@
   },
   "id": "gh:1333969047",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tokenledger",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zh667/TokenLedger#dabdf7c22bf2cb140fec980c7aa98b7b5b617165",
+    "version": "0.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./adapters/detect": "./src/adapters/detect.js",
+      "./adapters/newapi": "./src/adapters/newapi.js",
+      "./adapters/sub2api": "./src/adapters/sub2api.js",
+      "./package.json": "./package.json",
+      "./plugin": "./src/plugin.js",
+      "./pricing": "./src/pricing.js",
+      "./reconcile": "./src/reconcile.js",
+      "./relay-sites": "./src/relay-sites.js",
+      "./report": "./src/report.js",
+      "./store": "./src/store.js",
+      "./usage": "./src/usage.js"
+    },
+    "main": null,
+    "name": "dsh-tokenledger",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/db613c3a4bbd18f40cbede9479daf6283d1ea57b8d8dde3fa85e90527709bd65/zh667/TokenLedger",
     "description": "Token usage accounting for DeepSeek Harness, reconciled against New API and Sub2API relay-site billing"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "统计 DeepSeek Harness 的 Token 消耗，并和 New API、Sub2API 中转站的实际扣费对账。"
   },
   "schemaVersion": 1,
   "scripts": {

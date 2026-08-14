@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "b0d5a3d766eea8a2b361ec3626d64eb2d2c152c7"
   },
   "github": {
@@ -44,27 +44,45 @@
   },
   "id": "gh:1334033473",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mcp-json",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:caopu16/dsh-mcp-json#b0d5a3d766eea8a2b361ec3626d64eb2d2c152c7",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-mcp-json",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/94bcb2cad0e09649fa99d08401a9ab0e1d94de6e0aff6f5df56b80297e195c71/caopu16/dsh-mcp-json",
     "description": "deepseek-harness自动读取mcp相关配置文件（如.mcp.json），自动加载mcp"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Mount MCP servers in the DeepSeek Harness from the configuration files your agent tools already have. It reads the mcp.json of Claude Code, Kiro, OpenCode, and Codex, merges them, and keeps the running server set in step with the files."
   },
   "schemaVersion": 1,
   "scripts": {

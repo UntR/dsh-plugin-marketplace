@@ -5,45 +5,45 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
     "enrichmentStatus": "ok",
-    "headSha": "e8614e15bb72adb21db0f4c4f2ae591643f332af"
+    "headSha": "211c3178eb0cf638cd68dc212a40c449dabf8b18"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-14T11:51:29Z",
     "databaseId": 1334128345,
     "defaultBranch": "main",
-    "description": "Markdown preview drawer for the DeepSeek Harness web GUI — browse, render, edit, and export standalone HTML without leaving the session. Zero runtime dependencies.",
+    "description": "Render Markdown to standalone, self-contained HTML in the DeepSeek Harness — an md_html_render tool that works headless, plus a preview/export drawer in the web GUI. One renderer behind both. Zero dependencies.",
     "fork": false,
     "forks": 0,
-    "headSha": "e8614e15bb72adb21db0f4c4f2ae591643f332af",
-    "homepageUrl": "https://github.com/LeslieWylie/dsh-md-preview#readme",
+    "headSha": "211c3178eb0cf638cd68dc212a40c449dabf8b18",
+    "homepageUrl": "https://github.com/topics/dsh-plugin",
     "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4Uu2Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e754687cf3b7108962ab70cf90d5c395ae8bc57230750499c3f422fac6577937/LeslieWylie/dsh-md-preview",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/412f3034a731dd2b40a2cbc811902238e6d0504efcf6b4b3e4a58526186bee3d/LeslieWylie/dsh-md-preview",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/112309453?u=8a9acd73794ab682859fd610bec129026470b68a&v=4",
       "login": "LeslieWylie"
     },
-    "pushedAt": "2026-08-14T11:57:45Z",
+    "pushedAt": "2026-08-14T12:47:37Z",
     "slug": "LeslieWylie/dsh-md-preview",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "cordis",
       "deepseek-harness",
       "dsh",
       "dsh-plugin",
+      "html-export",
       "markdown",
-      "preview",
-      "web-gui",
+      "markdown-to-html",
       "zero-dependency"
     ],
-    "updatedAt": "2026-08-14T11:58:04Z",
+    "updatedAt": "2026-08-14T13:05:02Z",
     "url": "https://github.com/LeslieWylie/dsh-md-preview"
   },
   "id": "gh:1334128345",
@@ -53,8 +53,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:LeslieWylie/dsh-md-preview#e8614e15bb72adb21db0f4c4f2ae591643f332af",
-    "version": "0.1.0"
+    "spec": "github:LeslieWylie/dsh-md-preview#211c3178eb0cf638cd68dc212a40c449dabf8b18",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
@@ -69,21 +69,24 @@
       "./client": {
         "default": "./lib/client.js"
       },
-      "./package.json": "./package.json"
+      "./package.json": "./package.json",
+      "./render": {
+        "default": "./lib/render.js"
+      }
     },
     "main": "./lib/index.js",
     "name": "dsh-md-preview",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.2.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e754687cf3b7108962ab70cf90d5c395ae8bc57230750499c3f422fac6577937/LeslieWylie/dsh-md-preview",
-    "description": "Markdown preview drawer for the DeepSeek Harness web GUI — browse, render, edit, and export standalone HTML without leaving the session. Zero runtime dependencies."
+    "coverUrl": "https://opengraph.githubassets.com/412f3034a731dd2b40a2cbc811902238e6d0504efcf6b4b3e4a58526186bee3d/LeslieWylie/dsh-md-preview",
+    "description": "Render Markdown to standalone, self-contained HTML in the DeepSeek Harness — an md_html_render tool that works headless, plus a preview/export drawer in the web GUI. One renderer behind both. Zero dependencies."
   },
   "readme": {
     "available": true,
-    "excerpt": "A preview drawer for the DeepSeek Harness web GUI. Press MD in the session header, browse the working directory, click a .md file — it renders in place. No new tab, no second editor, no context switch."
+    "excerpt": "A Markdown renderer for the DeepSeek Harness with two front doors and one engine behind them:"
   },
   "schemaVersion": 1,
   "scripts": {

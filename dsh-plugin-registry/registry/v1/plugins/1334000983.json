@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "d27941fee787cadfaa2d17e87dd372260b784919"
   },
   "github": {
@@ -25,51 +25,69 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4M9Vw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/09f57f5a884b4fe739ee2f94e9e20be6628a5c1023ba8507c8d69e1280ea75ba/LingLambda/dsh-logger-panel",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/80ed97c180bcceaf390e0d1af8c7ccdc51e477bf48116d6e3a9c511d500a305b/LingLambda/dsh-logger-panel",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/101567686?u=21a8a2a01cb1be716e19723ca9a72b96b9949626&v=4",
       "login": "LingLambda"
     },
     "pushedAt": "2026-08-14T10:50:47Z",
     "slug": "LingLambda/dsh-logger-panel",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "dsh",
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-08-14T10:55:09Z",
+    "updatedAt": "2026-08-14T12:15:37Z",
     "url": "https://github.com/LingLambda/dsh-logger-panel"
   },
   "id": "gh:1334000983",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-logger-panel",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-logger-panel@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client-types/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-logger-panel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/09f57f5a884b4fe739ee2f94e9e20be6628a5c1023ba8507c8d69e1280ea75ba/LingLambda/dsh-logger-panel",
+    "coverUrl": "https://opengraph.githubassets.com/80ed97c180bcceaf390e0d1af8c7ccdc51e477bf48116d6e3a9c511d500a305b/LingLambda/dsh-logger-panel",
     "description": "Runtime log panel for DeepSeek Harness (dsh): live SSE log view in Settings plus bounded date/size rotating JSONL files."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Runtime log panel for DeepSeek Harness (dsh). It captures the Host's Cordis logger output, streams it live into a Settings > Logs page over SSE, and persists the same records to bounded, date-and-size rotating JSONL files under the private $DSHHOME/logs/dsh-logger-panel directory"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "eaf5f8bbfa6d0ba6b972195e57bd297f7d0b3b39"
   },
   "github": {
@@ -42,27 +42,37 @@
   },
   "id": "gh:1333997120",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-vision-tool",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:visail/dsh-vision-tool#eaf5f8bbfa6d0ba6b972195e57bd297f7d0b3b39",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./vision-tool.mjs",
+      "./prompt": "./vision-prompt.mjs"
+    },
+    "main": "./vision-tool.mjs",
+    "name": "dsh-vision-tool",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/83ea91d44bbd15a36ed82e9bdb54b2ab3212f083cfa2fe1190174fa7a4406851/visail/dsh-vision-tool",
     "description": "Paste an image into the chat box and text-only DSH models can \"see\" it — auto-rewrite of pasted images + analyze_image tool routed to a Kimi vision model."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Image routing for text-only models in DeepSeek Harness (DSH)."
   },
   "schemaVersion": 1,
   "scripts": {

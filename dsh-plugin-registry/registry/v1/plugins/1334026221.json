@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "c64ff04a144fa4e68bdd56639bcc0736ee464ede"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1334026221",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "remielle-dsh",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jackuh105/remielle-dsh-plugin#c64ff04a144fa4e68bdd56639bcc0736ee464ede",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "remielle-dsh",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3cb3aa3967dcea02b93aeac1d8499ca30cc491716379df88ad6c91c0e7d281e3/jackuh105/remielle-dsh-plugin",
     "description": "Remielle desktop pet for DeepSeek Harness — session events drive the pet's animations: working, expecting, celebrating, waiting."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "小蕾米（Remielle）桌寵的 DeepSeek Harness plugin 移植版：把桌面寵物變成 DSH 插件，直接監聽 DSH 的 session 事件流，即時驅動寵物動作。"
   },
   "schemaVersion": 1,
   "scripts": {

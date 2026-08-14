@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "b9fb9ed17bad376016dda478972f18ff70d3005d"
   },
   "github": {
@@ -63,7 +63,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -73,14 +73,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-pet",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d2c74f38ae6c51c972980e9dda1809818e91fccfe7dc1cf77d282712df96c4c6/c-ling/dsh-plugin-pet",
     "description": "DeepSeek Harness 桌面电子宠物插件：跟随 agent 状态变换心情的内置/自定义/Codex 精灵图伙伴。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个为 DeepSeek Harness Web GUI 打造的桌面电子宠物插件，灵感来自 Codex companion 与 Claude Code Buddy。宠物常驻页面右下角，实时响应 agent 的状态（思考 / 调用工具 / 报错 / 完成 / 等待你操作），并支持改名、缩放、隐藏与完全换肤："
   },
   "schemaVersion": 1,
   "scripts": {

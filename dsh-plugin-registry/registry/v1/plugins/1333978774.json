@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "d97974f4bc84a6148d3ab36048a37197646bdc21"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1333978774",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tavily-web-search",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:paul-yangmy/dsh-tavily-web-search#d97974f4bc84a6148d3ab36048a37197646bdc21",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-tavily-web-search",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ce4b6f2da23317109da5a4e0934932b3dfb37da3b834cf4f53bd9b6f53fa1b08/paul-yangmy/dsh-tavily-web-search",
     "description": "Tavily-backed web search provider plugin (bundle) for DeepSeek Harness (dsh)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Tavily 搜索提供者插件（组合包 / bundle），为 DeepSeek Harness（dsh）注册 ctx.web 搜索能力，走 Tavily 原生 REST API（POST https://api.tavily.com/search）。"
   },
   "schemaVersion": 1,
   "scripts": {

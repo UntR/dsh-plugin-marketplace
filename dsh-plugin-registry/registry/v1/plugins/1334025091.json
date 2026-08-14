@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "1bbc45f6211c2173fdace24eb34256692cade349"
   },
   "github": {
@@ -25,45 +25,63 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4Obgw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/552d429585195a09fb0d246e6fcf30e86f9057346baa542fd5fb6b18be9a86b9/Blackspace2/dsh-math-copy",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/1e87ab33bf6a06a33035529d106d2306ebe81ee19d3dc759bb5eb332561a2960/Blackspace2/dsh-math-copy",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/102143166?u=6a71051061fcb7451c29c7242ca4e4c7bdfe2401&v=4",
       "login": "Blackspace2"
     },
     "pushedAt": "2026-08-14T10:28:08Z",
     "slug": "Blackspace2/dsh-math-copy",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "deepseek-harness",
       "dsh-plugin",
       "latex"
     ],
-    "updatedAt": "2026-08-14T10:28:33Z",
+    "updatedAt": "2026-08-14T13:04:59Z",
     "url": "https://github.com/Blackspace2/dsh-math-copy"
   },
   "id": "gh:1334025091",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "math-copy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Blackspace2/dsh-math-copy#1bbc45f6211c2173fdace24eb34256692cade349",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "math-copy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/552d429585195a09fb0d246e6fcf30e86f9057346baa542fd5fb6b18be9a86b9/Blackspace2/dsh-math-copy",
+    "coverUrl": "https://opengraph.githubassets.com/1e87ab33bf6a06a33035529d106d2306ebe81ee19d3dc759bb5eb332561a2960/Blackspace2/dsh-math-copy",
     "description": "copy mathematical formula in dsh web"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness Web 对话中的 KaTeX 数学公式添加轻量、可访问的复制交互。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-14T13:26:17.438Z",
+    "enrichmentStatus": "ok",
     "headSha": "6ff526595088d210a384291a2235f3e9169cc62c"
   },
   "github": {
@@ -48,33 +48,47 @@
   },
   "id": "gh:1334036805",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-synbio",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:Hongcheng-LI/dsh-synbio#6ff526595088d210a384291a2235f3e9169cc62c",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-synbio",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/665617b9f02116cb1475804aca047f11f334741a6af0aff472a1dec3ddf3bdce/Hongcheng-LI/dsh-synbio",
     "description": "Synthetic biology research tools for DeepSeek Harness: literature (Europe PMC), pathways/enzymes/compounds (KEGG), protein structures (RCSB PDB)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的合成生物学科研工具插件：让 agent 直接检索生物医学文献（Europe PMC，覆盖 PubMed/MEDLINE）、查询通路/酶/化合物（KEGG）、检索蛋白三维结构（RCSB PDB）。纯 Node 实现，零核心改动，无需 API Key。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
