@@ -25,6 +25,17 @@ export const en = {
   plugins: 'plugins',
   cover: 'cover',
   page: 'Page',
+  loadingInstalled: 'Loading installed plugins...',
+  installedUnavailable: 'Installed plugins are currently unavailable.',
+  currentProfile: 'Current profile',
+  restartRequired: 'Plugin changes were made. Restart DSH to apply them.',
+  noneInstalled: 'No dependency-managed third-party bundles are installed.',
+  notInRegistry: 'Not in Marketplace Registry',
+  updateAvailable: 'Update available',
+  updateUnknown: 'Update status unknown',
+  upToDate: 'Up to date',
+  update: 'Update',
+  remove: 'Remove',
 } as const
 
 export const zh: Record<keyof typeof en, string> = {
@@ -54,7 +65,18 @@ export const zh: Record<keyof typeof en, string> = {
   plugins: '个插件',
   cover: '封面',
   page: '第',
+  loadingInstalled: '正在加载已安装插件…',
+  installedUnavailable: '当前无法读取已安装插件。',
+  currentProfile: '当前 Profile',
+  restartRequired: '插件已发生变更，请重启 DSH 以应用。',
+  noneInstalled: '当前未安装由依赖管理的第三方 Bundle。',
+  notInRegistry: '不在 Marketplace Registry 中',
+  updateAvailable: '有可用更新',
+  updateUnknown: '更新状态未知',
+  upToDate: '已是最新',
+  update: '更新',
+  remove: '卸载',
 }
 
-export type LocaleKey = keyof typeof en
 
+export type LocaleKey = keyof typeof en

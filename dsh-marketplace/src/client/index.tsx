@@ -2,6 +2,7 @@ import type {} from '@deepseek-ai/dsh-client-locale/client'
 import type { ClientContext } from '@deepseek-ai/dsh-client-runtime/client'
 import type {} from '@deepseek-ai/dsh-client-ui-settings/client'
 import { MarketplaceTab, type MarketplaceTabInjected } from './MarketplaceTab.js'
+import { InstalledTab, type InstalledTabInjected } from './InstalledTab.js'
 import { en, zh, type LocaleKey } from './locales.js'
 
 declare module '@deepseek-ai/dsh-client-ui-slots' {
@@ -24,5 +25,12 @@ export function apply(ctx: ClientContext): void {
     locale: NS,
     inject: (): MarketplaceTabInjected => ({ t }),
   }, MarketplaceTab))
+  ctx.slots.inject('settings.plugins.tab', () => ctx.slots.register({
+    name: 'settings.plugins.tab',
+    id: 'installed',
+    order: 30,
+    label: () => t('installed'),
+    locale: NS,
+    inject: (): InstalledTabInjected => ({ t }),
+  }, InstalledTab))
 }
-

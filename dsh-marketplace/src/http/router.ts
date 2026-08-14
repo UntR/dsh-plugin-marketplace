@@ -1,10 +1,11 @@
 import type { IncomingMessage, ServerResponse } from 'node:http'
 import type { RegistryService } from '../registry/service.js'
+import type { InstalledService } from '../manager/installed.js'
 import { API_PREFIX } from '../shared/constants.js'
 import { MarketplaceError } from '../shared/errors.js'
 import { sendError, sendJson } from './json.js'
 
-export function createRouter(registry: RegistryService): (
+export function createRouter(services: { registry: RegistryService; installed: InstalledService }): (
   request: IncomingMessage,
   response: ServerResponse,
 ) => Promise<void> {
@@ -12,12 +13,16 @@ export function createRouter(registry: RegistryService): (
     try {
       const url = new URL(request.url ?? '/', 'http://localhost')
       if (request.method === 'GET' && url.pathname === `${API_PREFIX}/catalog`) {
-        sendJson(response, 200, await registry.getCatalog(url.searchParams.get('refresh') === '1'))
+        sendJson(response, 200, await services.registry.getCatalog(url.searchParams.get('refresh') === '1'))
         return
       }
       if (request.method === 'GET' && url.pathname.startsWith(`${API_PREFIX}/plugin/`)) {
         const id = decodeURIComponent(url.pathname.slice(`${API_PREFIX}/plugin/`.length))
-        sendJson(response, 200, await registry.getPlugin(id))
+        sendJson(response, 200, await services.registry.getPlugin(id))
+        return
+      }
+      if (request.method === 'GET' && url.pathname === `${API_PREFIX}/installed`) {
+        sendJson(response, 200, await services.installed.list())
         return
       }
       if (request.method === 'GET' && url.pathname === `${API_PREFIX}/status`) {
@@ -30,4 +35,3 @@ export function createRouter(registry: RegistryService): (
     }
   }
 }
-
