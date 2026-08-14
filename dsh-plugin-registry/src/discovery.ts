@@ -3,7 +3,7 @@ import { z } from 'zod'
 export const DISCOVERY_QUERY = `query DshPluginRepositories($cursor: String) {
   topic(name: "dsh-plugin") {
     repositories(
-      first: 100
+      first: 50
       after: $cursor
       orderBy: { field: CREATED_AT, direction: ASC }
     ) {
