@@ -15,6 +15,18 @@ const meta = {
   indexPath: './index.json',
 }
 const index = { schemaVersion: 1, revision, plugins: [] }
+const plugin = {
+  id: 'gh:1', githubDatabaseId: 1, githubNodeId: 'R_1', slug: 'owner/plugin', name: 'plugin',
+  owner: { login: 'owner', avatarUrl: 'https://avatars.example/owner.png' },
+  repositoryUrl: 'https://github.com/owner/plugin', homepageUrl: null, description: '', coverUrl: null,
+  topics: ['dsh-plugin'], language: null, license: null, stats: { stars: 0, forks: 0 },
+  state: { archived: false, fork: false },
+  timestamps: {
+    createdAt: '2026-08-01T00:00:00.000Z', updatedAt: '2026-08-14T00:00:00.000Z', pushedAt: null,
+  },
+  install: { available: false, packageName: null, version: null, requiresBuildApproval: false },
+  detailPath: './plugins/1.json',
+}
 
 function json(value: unknown): Response {
   return new Response(JSON.stringify(value), {
@@ -85,6 +97,38 @@ describe('RegistryService', () => {
       'Plugin registry refresh failed; using the last-good cache (%s).',
       'registry-unavailable',
     )
+  })
+
+  it('keeps last-good disk data when remote metadata is invalid', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'marketplace-cache-'))
+    const cacheDir = join(root, 'v1')
+    await new RegistryService({
+      baseUrl: 'https://registry.example/v1', cacheDir,
+      fetch: vi.fn(async (url: string | URL | Request) => String(url).endsWith('meta.json') ? json(meta) : json(index)),
+    }).getCatalog()
+    const invalid = new RegistryService({
+      baseUrl: 'https://registry.example/v1', cacheDir,
+      fetch: vi.fn(async () => json({ ...meta, pluginCount: -1 })),
+    })
+    await expect(invalid.getCatalog(true)).resolves.toMatchObject({ registry: { revision, stale: true } })
+    expect(JSON.parse(await readFile(join(cacheDir, 'meta.json'), 'utf8'))).toEqual(meta)
+  })
+
+  it('rejects an invalid lazy detail without writing it into cache', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'marketplace-cache-'))
+    const cacheDir = join(root, 'v1')
+    const metaWithPlugin = { ...meta, pluginCount: 1 }
+    const indexWithPlugin = { ...index, plugins: [plugin] }
+    const fetch = vi.fn(async (url: string | URL | Request) => {
+      const path = String(url)
+      if (path.endsWith('meta.json')) return json(metaWithPlugin)
+      if (path.endsWith('index.json')) return json(indexWithPlugin)
+      return json({ schemaVersion: 1, id: 'gh:1' })
+    })
+    const service = new RegistryService({ baseUrl: 'https://registry.example/v1', cacheDir, fetch })
+    await service.getCatalog()
+    await expect(service.getPlugin('gh:1')).rejects.toMatchObject({ code: 'registry-invalid' })
+    await expect(readFile(join(cacheDir, 'plugins', '1.json'), 'utf8')).rejects.toMatchObject({ code: 'ENOENT' })
   })
 
   it('reports an unsupported future schema distinctly', async () => {
