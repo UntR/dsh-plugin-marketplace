@@ -3,6 +3,9 @@ import { inferInstall, parsePackageJson, type ParsedPackage } from './install.js
 import type { DiscoveredRepository } from './discovery.js'
 import type { RegistryPluginDetail } from './types.js'
 
+const NPM_CACHE_TTL_MS = 24 * 60 * 60 * 1_000
+const ENRICHMENT_CONCURRENCY = 6
+
 export interface RepositoryEnrichmentClient {
   readText(repository: DiscoveredRepository, path: string): Promise<string | null>
   exists(repository: DiscoveredRepository, path: string): Promise<boolean>
@@ -148,21 +151,39 @@ export async function enrichRepositories(options: {
   client: RepositoryEnrichmentClient
   enrichedAt: string
 }): Promise<RegistryPluginDetail[]> {
-  const details: RegistryPluginDetail[] = []
-  for (const repository of options.repositories) {
-    const previous = options.previous.get(repository.id)
-    if (previous !== undefined && previous.crawl.headSha === repository.headSha) {
-      details.push(reuseDerived(repository, previous, 'ok', options.enrichedAt))
-      continue
-    }
-    try {
-      details.push(await enrichRepository(repository, options.client, options.enrichedAt))
-    } catch {
-      details.push(previous === undefined
-        ? minimalDetail(repository, options.enrichedAt, 'failed')
-        : reuseDerived(repository, previous, 'stale', options.enrichedAt))
+  const details = new Array<RegistryPluginDetail>(options.repositories.length)
+  let nextIndex = 0
+  const enrichNext = async (): Promise<void> => {
+    while (nextIndex < options.repositories.length) {
+      const index = nextIndex
+      nextIndex += 1
+      const repository = options.repositories[index]
+      if (repository === undefined) return
+      const previous = options.previous.get(repository.id)
+      const cacheAge = previous === undefined
+        ? Number.POSITIVE_INFINITY
+        : Date.parse(options.enrichedAt) - Date.parse(previous.crawl.enrichedAt)
+      const cacheFresh = previous !== undefined
+        && previous.crawl.enrichmentStatus === 'ok'
+        && previous.crawl.headSha === repository.headSha
+        && cacheAge >= 0
+        && cacheAge < NPM_CACHE_TTL_MS
+      if (cacheFresh) {
+        details[index] = reuseDerived(repository, previous, 'ok', options.enrichedAt)
+        continue
+      }
+      try {
+        details[index] = await enrichRepository(repository, options.client, options.enrichedAt)
+      } catch {
+        details[index] = previous === undefined
+          ? minimalDetail(repository, options.enrichedAt, 'failed')
+          : reuseDerived(repository, previous, 'stale', options.enrichedAt)
+      }
     }
   }
+  await Promise.all(Array.from(
+    { length: Math.min(ENRICHMENT_CONCURRENCY, options.repositories.length) },
+    enrichNext,
+  ))
   return details
 }
-

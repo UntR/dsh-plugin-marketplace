@@ -10,20 +10,38 @@ export const installRequestSchema = z.object({
 }).strict()
 
 export const packageRequestSchema = z.object({
-  packageName: z.string().regex(/^(?:@[a-z0-9][a-z0-9._-]*\/[a-z0-9][a-z0-9._-]*|[a-z0-9][a-z0-9._-]*)$/i),
+  packageName: z.string().max(214).regex(/^(?:@[a-z0-9][a-z0-9._-]*\/[a-z0-9][a-z0-9._-]*|[a-z0-9][a-z0-9._-]*)$/i),
 }).strict()
 
-export function verifySameOrigin(request: Pick<IncomingMessage, 'headers'>): void {
+export function requireNoQuery(url: URL): void {
+  if ([...url.searchParams].length !== 0) {
+    throw new MarketplaceError('invalid-request', 'This route does not accept query parameters.', 400)
+  }
+}
+
+export function catalogRefreshRequested(url: URL): boolean {
+  const parameters = [...url.searchParams]
+  if (parameters.length === 0) return false
+  if (parameters.length !== 1 || parameters[0]?.[0] !== 'refresh' || parameters[0][1] !== '1') {
+    throw new MarketplaceError('invalid-request', 'Catalog query parameters are invalid.', 400)
+  }
+  return true
+}
+
+export function verifySameOrigin(
+  request: Pick<IncomingMessage, 'headers'> & Partial<Pick<IncomingMessage, 'socket'>>,
+): void {
   const origin = request.headers.origin
   if (origin === undefined) return
   const host = request.headers.host
-  let originHost: string
+  let originUrl: URL
   try {
-    originHost = new URL(origin).host
+    originUrl = new URL(origin)
   } catch {
     throw new MarketplaceError('cross-origin-request', 'Mutation origin is invalid.', 403)
   }
-  if (host === undefined || originHost !== host) {
+  const protocol = (request.socket as { encrypted?: boolean } | undefined)?.encrypted === true ? 'https:' : 'http:'
+  if (host === undefined || originUrl.host !== host || originUrl.protocol !== protocol) {
     throw new MarketplaceError('cross-origin-request', 'Cross-origin mutation was rejected.', 403)
   }
 }
@@ -46,4 +64,3 @@ export async function readJsonBody(request: IncomingMessage): Promise<unknown> {
     throw new MarketplaceError('invalid-request', 'Request body must contain valid JSON.', 400)
   }
 }
-

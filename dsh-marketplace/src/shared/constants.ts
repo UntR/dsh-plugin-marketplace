@@ -8,6 +8,20 @@ export const DEFAULT_REGISTRY_BASE_URL = 'https://example.invalid/dsh-plugin-reg
 
 export function resolveRegistryBaseUrl(env: Record<string, string | undefined> = process.env): string {
   const configured = env.DSH_MARKETPLACE_REGISTRY_URL?.trim()
-  return (configured === undefined || configured === '' ? DEFAULT_REGISTRY_BASE_URL : configured).replace(/\/$/, '')
+  const value = configured === undefined || configured === '' ? DEFAULT_REGISTRY_BASE_URL : configured
+  let url: URL
+  try {
+    url = new URL(value)
+  } catch {
+    throw new Error('DSH_MARKETPLACE_REGISTRY_URL must be an absolute URL.')
+  }
+  const localHttp = url.protocol === 'http:'
+    && (url.hostname === 'localhost' || url.hostname === '127.0.0.1' || url.hostname === '[::1]')
+  if (url.protocol !== 'https:' && !localHttp) {
+    throw new Error('DSH_MARKETPLACE_REGISTRY_URL must use HTTPS, except on localhost.')
+  }
+  if (url.username !== '' || url.password !== '' || url.search !== '' || url.hash !== '') {
+    throw new Error('DSH_MARKETPLACE_REGISTRY_URL cannot contain credentials, query parameters, or a fragment.')
+  }
+  return url.toString().replace(/\/$/, '')
 }
-

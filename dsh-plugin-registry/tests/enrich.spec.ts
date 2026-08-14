@@ -95,4 +95,63 @@ describe('repository enrichment', () => {
     expect(result[1]?.crawl.enrichmentStatus).toBe('failed')
     expect(result[1]?.install.available).toBe(false)
   })
+
+  it('refreshes npm facts when the enrichment cache reaches 24 hours', async () => {
+    const packageJson = JSON.stringify({ name: 'dsh-plugin-1', version: '1.0.0' })
+    const old = await enrichRepository(repository(1), client(packageJson), '2026-08-13T06:30:00.000Z')
+    const npmMetadata = vi.fn(async () => null)
+    const readText = vi.fn(client(packageJson).readText)
+    const result = await enrichRepositories({
+      repositories: [repository(1)],
+      previous: new Map([[old.id, old]]),
+      client: { readText, exists: async () => false, npmMetadata },
+      enrichedAt: '2026-08-14T06:30:00.000Z',
+    })
+    expect(readText).toHaveBeenCalledTimes(2)
+    expect(npmMetadata).toHaveBeenCalledWith('dsh-plugin-1')
+    expect(result[0]?.crawl.enrichedAt).toBe('2026-08-14T06:30:00.000Z')
+  })
+
+  it('retries an unchanged HEAD after a stale enrichment instead of marking it ok', async () => {
+    const old = await enrichRepository(repository(1), client(), '2026-08-14T06:30:00.000Z')
+    const failed = await enrichRepositories({
+      repositories: [repository(1, 'b'.repeat(40))],
+      previous: new Map([[old.id, old]]),
+      client: {
+        readText: async () => { throw new Error('network') },
+        exists: async () => false,
+        npmMetadata: async () => null,
+      },
+      enrichedAt: '2026-08-14T07:30:00.000Z',
+    })
+    const readText = vi.fn(client().readText)
+    const retried = await enrichRepositories({
+      repositories: [repository(1, 'b'.repeat(40))],
+      previous: new Map([[failed[0]!.id, failed[0]!]]),
+      client: { readText, exists: async () => false, npmMetadata: async () => null },
+      enrichedAt: '2026-08-14T08:30:00.000Z',
+    })
+    expect(readText).toHaveBeenCalledTimes(2)
+    expect(retried[0]?.crawl.enrichmentStatus).toBe('ok')
+  })
+
+  it('runs at most six repository enrichments concurrently', async () => {
+    let active = 0
+    let maximum = 0
+    const readText = async (_repo: DiscoveredRepository, path: string) => {
+      if (path !== 'README.md') return null
+      active += 1
+      maximum = Math.max(maximum, active)
+      await new Promise(resolve => setTimeout(resolve, 1))
+      active -= 1
+      return '# Plugin'
+    }
+    await enrichRepositories({
+      repositories: Array.from({ length: 20 }, (_, index) => repository(index + 1)),
+      previous: new Map(),
+      client: { readText, exists: async () => false, npmMetadata: async () => null },
+      enrichedAt: '2026-08-14T08:30:00.000Z',
+    })
+    expect(maximum).toBe(6)
+  })
 })
