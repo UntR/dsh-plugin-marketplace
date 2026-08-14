@@ -24,6 +24,7 @@ describe('InstalledTab', () => {
     await screen.findByRole('heading', { name: en.installed })
     fireEvent.click(screen.getByRole('button', { name: en.remove }))
     const dialog = screen.getByRole('dialog')
+    expect(dialog.style.background).toBe('var(--dsw-alias-bg-layer-2)')
     expect(within(dialog).getByText(en.selfRemoveConfirm)).toBeTruthy()
     expect(within(dialog).getByRole('button', { name: en.removeMarketplace })).toBeTruthy()
     fireEvent.click(within(dialog).getByRole('button', { name: en.cancel }))

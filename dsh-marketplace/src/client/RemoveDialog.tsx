@@ -58,6 +58,6 @@ const overlayStyle = {
 } as const
 
 const dialogStyle = {
-  width: 'min(30rem, 100%)', background: 'var(--dsh-background, #fff)', color: 'inherit',
+  width: 'min(30rem, 100%)', background: 'var(--dsw-alias-bg-layer-2)', color: 'inherit',
   borderRadius: '0.75rem', padding: '1.25rem',
 } as const

@@ -62,9 +62,12 @@ export interface MarketplaceTabInjected {
   t: (key: LocaleKey) => string
   fullPage?: boolean
   headerActions?: ReactNode
+  onAgentInstall?: AgentInstallHandler
 }
 
-export function MarketplaceTab({ t, fullPage = false, headerActions }: MarketplaceTabInjected) {
+export type AgentInstallHandler = (plugin: RegistryIndexEntry) => Promise<void>
+
+export function MarketplaceTab({ t, fullPage = false, headerActions, onAgentInstall }: MarketplaceTabInjected) {
   const [catalog, setCatalog] = useState<Catalog | null>(null)
   const [error, setError] = useState(false)
   const [query, setQuery] = useState('')
@@ -74,7 +77,7 @@ export function MarketplaceTab({ t, fullPage = false, headerActions }: Marketpla
   const [language, setLanguage] = useState('all')
   const [page, setPage] = useState(1)
   const [selected, setSelected] = useState<RegistryIndexEntry | null>(null)
-  const [prompt, setPrompt] = useState<{ plugin: RegistryIndexEntry; kind: 'trust' | 'build' } | null>(null)
+  const [prompt, setPrompt] = useState<{ plugin: RegistryIndexEntry; kind: 'trust' | 'build' | 'agent' } | null>(null)
   const [trusted, setTrusted] = useState(storedTrust)
   const [installingId, setInstallingId] = useState<string | null>(null)
   const [installedIds, setInstalledIds] = useState<ReadonlySet<string>>(() => new Set())
@@ -123,7 +126,9 @@ export function MarketplaceTab({ t, fullPage = false, headerActions }: Marketpla
   }
 
   const requestInstall = (plugin: RegistryIndexEntry) => {
-    if (plugin.install.requiresBuildApproval) {
+    if (!plugin.install.available) {
+      setPrompt({ plugin, kind: 'agent' })
+    } else if (plugin.install.requiresBuildApproval) {
       setPrompt({ plugin, kind: 'build' })
     } else if (!trusted) {
       setPrompt({ plugin, kind: 'trust' })
@@ -133,7 +138,7 @@ export function MarketplaceTab({ t, fullPage = false, headerActions }: Marketpla
   }
 
   const installLabel = (plugin: RegistryIndexEntry): string => {
-    if (!plugin.install.available) return t('installUnavailable')
+    if (!plugin.install.available) return t('installViaAgent')
     if (plugin.install.requiresBuildApproval) return t('additionalConfiguration')
     if (installingId === plugin.id) return t('installing')
     if (installedIds.has(plugin.id)) return t('waitingForRestart')
@@ -272,14 +277,14 @@ export function MarketplaceTab({ t, fullPage = false, headerActions }: Marketpla
                   </div>
                   <div className="dshm-plugin-actions">
                     <button type="button" className="dshm-install-button"
-                      disabled={!plugin.install.available || installingId !== null || installedIds.has(plugin.id)}
+                      disabled={installingId !== null || installedIds.has(plugin.id)}
                       onClick={() => requestInstall(plugin)}
                       aria-describedby={!plugin.install.available ? `reason-${plugin.githubDatabaseId}` : undefined}>
                       {installLabel(plugin)}
                     </button>
                     <button type="button" className="dshm-details-button" onClick={() => setSelected(plugin)}>{t('details')}</button>
                     {!plugin.install.available && <span id={`reason-${plugin.githubDatabaseId}`} className="dshm-visually-hidden">
-                      {t('installUnavailable')}; {t('details')}
+                      {t('agentInstallWarning')}
                     </span>}
                   </div>
                   {failure?.pluginId === plugin.id && <div className="dshm-alert" role="alert">
@@ -303,6 +308,24 @@ export function MarketplaceTab({ t, fullPage = false, headerActions }: Marketpla
       {prompt !== null && <InstallDialog plugin={prompt.plugin} kind={prompt.kind} t={t}
         onClose={() => setPrompt(null)} onConfirm={() => {
           const plugin = prompt.plugin
+          if (prompt.kind === 'agent') {
+            setPrompt(null)
+            setInstallingId(plugin.id)
+            setFailure(null)
+            if (onAgentInstall === undefined) {
+              setFailure({ pluginId: plugin.id, message: t('agentInstallSessionFailed'), output: null })
+              setInstallingId(null)
+              return
+            }
+            void onAgentInstall(plugin).catch(error => {
+              setFailure({
+                pluginId: plugin.id,
+                message: error instanceof Error ? error.message : t('operationFailed'),
+                output: null,
+              })
+            }).finally(() => setInstallingId(null))
+            return
+          }
           rememberTrust()
           setTrusted(true)
           setPrompt(null)

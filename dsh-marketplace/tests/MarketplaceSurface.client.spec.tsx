@@ -39,7 +39,7 @@ describe('MarketplaceSurface', () => {
     const surface = new MarketplaceSurfaceController()
     render(<>
       <MarketplaceFooterAction surface={surface} t={t} wide />
-      <div data-shell-overlay><MarketplaceSurface surface={surface} t={t} /></div>
+      <div data-shell-overlay><MarketplaceSurface surface={surface} t={t} onAgentInstall={vi.fn()} /></div>
     </>)
 
     const trigger = screen.getByRole('button', { name: en.openMarketplace })

@@ -74,6 +74,7 @@ describe('MarketplaceTab', () => {
     fireEvent.change(screen.getByLabelText(en.search), { target: { value: 'memory' } })
     fireEvent.click(screen.getByRole('button', { name: en.details }))
     const dialog = screen.getByRole('dialog')
+    expect(dialog.style.background).toBe('var(--dsw-alias-bg-layer-2)')
     expect(dialog.getAttribute('aria-labelledby')).toBe('marketplace-detail-title')
     expect(within(dialog).getByRole('heading', { name: 'memory' })).toBeTruthy()
     expect(await within(dialog).findByText('README excerpt', { selector: 'p' })).toBeTruthy()
@@ -87,6 +88,27 @@ describe('MarketplaceTab', () => {
     vi.stubGlobal('fetch', vi.fn(async () => { throw new Error('offline') }))
     render(<MarketplaceTab t={t} />)
     expect((await screen.findByRole('alert')).textContent).toContain(en.unavailable)
+  })
+
+  it('hands unavailable plugins to a new Agent installation session after confirmation', async () => {
+    const fetchMock = vi.fn(async (_input: string | URL | Request, _init?: RequestInit) => (
+      new Response(JSON.stringify(catalog), { status: 200 })
+    ))
+    const onAgentInstall = vi.fn(async () => {})
+    vi.stubGlobal('fetch', fetchMock)
+    render(<MarketplaceTab t={t} onAgentInstall={onAgentInstall} />)
+    await screen.findByRole('heading', { name: en.marketplace })
+
+    const install = screen.getByRole('button', { name: en.installViaAgent })
+    expect(install.hasAttribute('disabled')).toBe(false)
+    fireEvent.click(install)
+    const dialog = screen.getByRole('dialog')
+    expect(dialog.style.background).toBe('var(--dsw-alias-bg-layer-2)')
+    expect(within(dialog).getByText(en.agentInstallWarning)).toBeTruthy()
+    fireEvent.click(within(dialog).getByRole('button', { name: en.startAgentInstall }))
+
+    await waitFor(() => expect(onAgentInstall).toHaveBeenCalledWith(catalog.plugins[0]))
+    expect(fetchMock.mock.calls.some(([, init]) => init?.method === 'POST')).toBe(false)
   })
 
   it('uses categories as the primary filter and keeps technical filters compact', async () => {

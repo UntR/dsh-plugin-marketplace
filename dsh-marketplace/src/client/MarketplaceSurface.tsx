@@ -7,7 +7,7 @@ import {
 import { InstalledTab } from './InstalledTab.js'
 import type { LocaleKey } from './locales.js'
 import { MarketplaceStyles } from './marketplaceStyles.js'
-import { MarketplaceTab } from './MarketplaceTab.js'
+import { MarketplaceTab, type AgentInstallHandler } from './MarketplaceTab.js'
 
 export class MarketplaceSurfaceController {
   private opened = false
@@ -53,9 +53,9 @@ export function MarketplaceFooterAction({ surface, t, wide }: MarketplaceFooterA
   return <><MarketplaceStyles />{wide ? button : <Tooltip label={t('marketplace')}>{button}</Tooltip>}</>
 }
 
-export type MarketplaceSurfaceProps = SurfaceInjected
+export type MarketplaceSurfaceProps = SurfaceInjected & { onAgentInstall: AgentInstallHandler }
 
-export function MarketplaceSurface({ surface, t }: MarketplaceSurfaceProps) {
+export function MarketplaceSurface({ surface, t, onAgentInstall }: MarketplaceSurfaceProps) {
   const opened = useSyncExternalStore(surface.subscribe, surface.getSnapshot)
   const [view, setView] = useState<'marketplace' | 'installed'>('marketplace')
   const [sidebarWidth, setSidebarWidth] = useState(280)
@@ -92,7 +92,7 @@ export function MarketplaceSurface({ surface, t }: MarketplaceSurfaceProps) {
     <div ref={rootRef} className="dshm-surface" style={{ left: sidebarWidth }} aria-label={t('marketplace')}>
       <MarketplaceStyles />
       {view === 'marketplace'
-        ? <MarketplaceTab t={t} fullPage headerActions={<>
+        ? <MarketplaceTab t={t} fullPage onAgentInstall={onAgentInstall} headerActions={<>
           <button type="button" className="dshm-button" onClick={() => setView('installed')}>{t('installed')}</button>
           <button type="button" className="dshm-icon-button" aria-label={t('closeMarketplace')} onClick={surface.close}>
             <IconCloseOutline16 size={16} />

@@ -94,8 +94,8 @@ export function PluginDetails({ plugin, t, onClose, onInstall }: Props) {
             <a href={plugin.repositoryUrl} target="_blank" rel="noopener noreferrer">{t('openGitHub')}</a>
             {plugin.homepageUrl !== null && <a href={plugin.homepageUrl} target="_blank" rel="noopener noreferrer">{t('openHomepage')}</a>}
           </div>
-          <button type="button" disabled={detail?.install.available !== true} onClick={onInstall}>
-            {detail?.install.available === false ? t('installUnavailable') : t('install')}
+          <button type="button" disabled={detail === null} onClick={onInstall}>
+            {detail?.install.available === false ? t('installViaAgent') : t('install')}
           </button>
         </div>
       </div>
@@ -110,7 +110,7 @@ const overlayStyle = {
 
 const dialogStyle = {
   width: 'min(40rem, 100%)', maxHeight: '85vh', overflow: 'auto',
-  background: 'var(--dsh-background, #fff)', color: 'inherit', borderRadius: '0.75rem', padding: '1.25rem',
+  background: 'var(--dsw-alias-bg-layer-2)', color: 'inherit', borderRadius: '0.75rem', padding: '1.25rem',
 } as const
 
 const coverPlaceholderStyle = {

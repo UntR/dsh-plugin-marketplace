@@ -21,6 +21,7 @@ describe('InstallDialog', () => {
     const confirm = vi.fn()
     render(<InstallDialog plugin={plugin} kind="trust" t={t} onClose={() => {}} onConfirm={confirm} />)
     const dialog = screen.getByRole('dialog')
+    expect(dialog.style.background).toBe('var(--dsw-alias-bg-layer-2)')
     expect(within(dialog).getByText(en.thirdPartyWarning)).toBeTruthy()
     expect(within(dialog).queryByText(/github:owner\/memory/)).toBeNull()
     fireEvent.click(within(dialog).getByRole('button', { name: en.understandAndInstall }))

@@ -4,7 +4,7 @@ import type { LocaleKey } from './locales.js'
 
 interface Props {
   plugin: RegistryIndexEntry
-  kind: 'trust' | 'build'
+  kind: 'trust' | 'build' | 'agent'
   t: (key: LocaleKey) => string
   onClose: () => void
   onConfirm?: () => void
@@ -44,14 +44,20 @@ export function InstallDialog({ plugin, kind, t, onClose, onConfirm }: Props) {
     }}>
       <div ref={dialog} role="dialog" aria-modal="true" aria-labelledby="install-dialog-title" style={dialogStyle}>
         <button ref={close} type="button" aria-label={t('close')} onClick={onClose} style={{ float: 'right' }}>×</button>
-        <h2 id="install-dialog-title">{kind === 'trust' ? t('allowThirdPartyPlugins') : t('additionalConfiguration')}</h2>
+        <h2 id="install-dialog-title">{kind === 'trust'
+          ? t('allowThirdPartyPlugins')
+          : kind === 'agent' ? t('agentInstallTitle') : t('additionalConfiguration')}</h2>
         <h3>{plugin.install.packageName ?? plugin.name}</h3>
-        <p>{kind === 'trust' ? t('thirdPartyWarning') : t('buildApprovalUnavailable')}</p>
+        <p>{kind === 'trust'
+          ? t('thirdPartyWarning')
+          : kind === 'agent' ? t('agentInstallWarning') : t('buildApprovalUnavailable')}</p>
         <div style={{ display: 'flex', justifyContent: 'space-between', gap: '0.75rem', marginTop: '1rem' }}>
           <a href={plugin.repositoryUrl} target="_blank" rel="noopener noreferrer">{t('openGitHub')}</a>
           <div style={{ display: 'flex', gap: '0.5rem' }}>
-            <button type="button" onClick={onClose}>{kind === 'trust' ? t('cancel') : t('close')}</button>
-            {kind === 'trust' && <button type="button" onClick={onConfirm}>{t('understandAndInstall')}</button>}
+            <button type="button" onClick={onClose}>{kind === 'build' ? t('close') : t('cancel')}</button>
+            {kind !== 'build' && <button type="button" onClick={onConfirm}>
+              {kind === 'agent' ? t('startAgentInstall') : t('understandAndInstall')}
+            </button>}
           </div>
         </div>
       </div>
@@ -66,5 +72,5 @@ const overlayStyle = {
 
 const dialogStyle = {
   width: 'min(40rem, 100%)', maxHeight: '85vh', overflow: 'auto',
-  background: 'var(--dsh-background, #fff)', color: 'inherit', borderRadius: '0.75rem', padding: '1.25rem',
+  background: 'var(--dsw-alias-bg-layer-2)', color: 'inherit', borderRadius: '0.75rem', padding: '1.25rem',
 } as const
