@@ -1,16 +1,16 @@
 # DSH Marketplace
 
-DSH Marketplace is an external DeepSeek Harness bundle. It adds **Marketplace** and **Installed** tabs to the existing Plugins settings area without modifying DSH upstream.
+DSH Marketplace is an external DeepSeek Harness bundle. It adds a **Marketplace** surface and an **Installed** view without modifying DSH upstream.
 
 ## Install
 
-Run one command to install Marketplace into the DSH Web profile. This form also works when the `dsh` CLI is not installed globally:
+Install Marketplace into the DSH Web profile. This also works when the `dsh` CLI is not installed globally:
 
 ```bash
 npx -y --package @deepseek-ai/dsh dsh plugin --profile web add untr-dsh-marketplace@latest
 ```
 
-Restart DSH, then open **Settings → Plugins → Marketplace**. Marketplace deliberately does not restart or hot-unload DSH.
+Restart DSH, then click **Marketplace** in the lower-left sidebar. Marketplace deliberately does not restart or hot-unload DSH.
 
 ## Registry URL
 
