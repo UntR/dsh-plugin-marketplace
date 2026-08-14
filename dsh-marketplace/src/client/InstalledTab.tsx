@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import type { InstalledPlugin, InstalledState } from '../manager/installed.js'
 import type { LocaleKey } from './locales.js'
 import { MutationFailure, runMutation } from './mutation.js'
+import { RemoveDialog } from './RemoveDialog.js'
 
 export interface InstalledTabInjected {
   t: (key: LocaleKey) => string
@@ -13,6 +14,7 @@ export function InstalledTab({ t }: InstalledTabInjected) {
   const [operation, setOperation] = useState<{ packageName: string; action: 'update' | 'remove' } | null>(null)
   const [notice, setNotice] = useState<string | null>(null)
   const [failure, setFailure] = useState<{ message: string; output: string | null } | null>(null)
+  const [removeTarget, setRemoveTarget] = useState<InstalledPlugin | null>(null)
   const load = async () => {
     const response = await fetch('/dsh-marketplace/api/installed')
     if (!response.ok) throw new Error(`installed ${response.status}`)
@@ -22,7 +24,6 @@ export function InstalledTab({ t }: InstalledTabInjected) {
     void load().catch(() => setError(true))
   }, [])
   const mutate = async (plugin: InstalledPlugin, action: 'update' | 'remove') => {
-    if (action === 'remove' && !window.confirm(plugin.self ? t('selfRemoveConfirm') : t('removeConfirm'))) return
     setOperation({ packageName: plugin.packageName, action })
     setFailure(null)
     try {
@@ -62,13 +63,19 @@ export function InstalledTab({ t }: InstalledTabInjected) {
               <button type="button" disabled={operation !== null} onClick={() => void mutate(plugin, 'update')}>
                 {operation?.packageName === plugin.packageName && operation.action === 'update' ? t('updating') : t('update')}
               </button>
-              <button type="button" disabled={operation !== null} onClick={() => void mutate(plugin, 'remove')}>
+              <button type="button" disabled={operation !== null} onClick={() => setRemoveTarget(plugin)}>
                 {operation?.packageName === plugin.packageName && operation.action === 'remove' ? t('removing') : t('remove')}
               </button>
             </div>
           </article>
         ))}
       </div>
+      {removeTarget !== null && <RemoveDialog plugin={removeTarget} t={t}
+        onClose={() => setRemoveTarget(null)} onConfirm={() => {
+          const plugin = removeTarget
+          setRemoveTarget(null)
+          void mutate(plugin, 'remove')
+        }} />}
     </section>
   )
 }

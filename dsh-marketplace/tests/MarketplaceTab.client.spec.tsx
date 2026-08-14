@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { fireEvent, render, screen, waitFor, within } from '@testing-library/react'
+import { cleanup, fireEvent, render, screen, waitFor, within } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { MarketplaceTab } from '../src/client/MarketplaceTab.js'
 import { en, type LocaleKey } from '../src/client/locales.js'
@@ -15,8 +15,8 @@ const catalog = {
   plugins: [{
     id: 'gh:1', githubDatabaseId: 1, githubNodeId: 'R_1', slug: 'owner/memory', name: 'memory',
     owner: { login: 'owner', avatarUrl: 'https://avatars.example/owner.png' },
-    repositoryUrl: 'https://github.com/owner/memory', homepageUrl: null,
-    description: 'Session memory', coverUrl: null, topics: ['dsh-plugin'], language: 'TypeScript', license: 'MIT',
+    repositoryUrl: 'https://github.com/owner/memory', homepageUrl: 'https://memory.example/',
+    description: 'Session memory', coverUrl: 'https://images.example/memory.png', topics: ['dsh-plugin'], language: 'TypeScript', license: 'MIT',
     stats: { stars: 10, forks: 1 }, state: { archived: true, fork: false },
     timestamps: { createdAt: '2026-08-01T00:00:00.000Z', updatedAt: '2026-08-14T00:00:00.000Z', pushedAt: null },
     install: { available: false, packageName: null, version: null, requiresBuildApproval: false },
@@ -24,7 +24,10 @@ const catalog = {
   }],
 }
 
-afterEach(() => vi.unstubAllGlobals())
+afterEach(() => {
+  cleanup()
+  vi.unstubAllGlobals()
+})
 
 describe('MarketplaceTab', () => {
   it('loads, searches and opens an accessible detail dialog', async () => {
@@ -56,13 +59,19 @@ describe('MarketplaceTab', () => {
     expect(screen.getByRole('status').textContent).toContain(en.loading)
     await screen.findByRole('heading', { name: en.marketplace })
     expect(screen.getByText(en.archived)).toBeTruthy()
+    const cover = screen.getByRole('img', { name: `memory ${en.cover}` })
+    fireEvent.error(cover)
+    expect(screen.getByRole('img', { name: `memory ${en.cover}` }).tagName).toBe('DIV')
     fireEvent.change(screen.getByLabelText(en.search), { target: { value: 'missing' } })
     expect(screen.getByText(en.noResults)).toBeTruthy()
     fireEvent.change(screen.getByLabelText(en.search), { target: { value: 'memory' } })
     fireEvent.click(screen.getByRole('button', { name: en.details }))
-    expect(screen.getByRole('dialog').getAttribute('aria-labelledby')).toBe('marketplace-detail-title')
-    expect(screen.getByRole('heading', { name: 'owner/memory' })).toBeTruthy()
-    expect(await screen.findByText('README excerpt')).toBeTruthy()
+    const dialog = screen.getByRole('dialog')
+    expect(dialog.getAttribute('aria-labelledby')).toBe('marketplace-detail-title')
+    expect(within(dialog).getByRole('heading', { name: 'memory' })).toBeTruthy()
+    expect(await within(dialog).findByText('README excerpt', { selector: 'p' })).toBeTruthy()
+    expect(screen.getByRole('link', { name: en.openHomepage }).getAttribute('href')).toBe('https://memory.example/')
+    expect(screen.getByText(new RegExp(en.created))).toBeTruthy()
     fireEvent.keyDown(document, { key: 'Escape' })
     await waitFor(() => expect(screen.queryByRole('dialog')).toBeNull())
   })
@@ -71,6 +80,38 @@ describe('MarketplaceTab', () => {
     vi.stubGlobal('fetch', vi.fn(async () => { throw new Error('offline') }))
     render(<MarketplaceTab t={t} />)
     expect((await screen.findByRole('alert')).textContent).toContain(en.unavailable)
+  })
+
+  it('shows stale and fork states, sorts by stars and paginates 48 cards', async () => {
+    const plugins = Array.from({ length: 49 }, (_, offset) => {
+      const id = offset + 1
+      return {
+        ...catalog.plugins[0],
+        id: `gh:${id}`,
+        githubDatabaseId: id,
+        githubNodeId: `R_${id}`,
+        slug: `owner/plugin-${String(id).padStart(2, '0')}`,
+        name: `plugin-${String(id).padStart(2, '0')}`,
+        coverUrl: null,
+        state: { archived: false, fork: id === 1 },
+        stats: { stars: id, forks: 0 },
+        detailPath: `./plugins/${id}.json`,
+      }
+    })
+    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify({
+      registry: { ...catalog.registry, pluginCount: plugins.length, stale: true },
+      plugins,
+    }), { status: 200 })))
+    render(<MarketplaceTab t={t} />)
+    await screen.findByRole('heading', { name: en.marketplace })
+    expect(screen.getByText(en.cached)).toBeTruthy()
+    expect(screen.getByText(en.fork)).toBeTruthy()
+    expect(screen.getAllByRole('article')).toHaveLength(48)
+    fireEvent.change(screen.getByLabelText(en.sort), { target: { value: 'stars' } })
+    expect(within(screen.getAllByRole('article')[0]!).getByRole('heading', { name: 'plugin-49' })).toBeTruthy()
+    fireEvent.click(screen.getByRole('button', { name: en.next }))
+    expect(screen.getAllByRole('article')).toHaveLength(1)
+    expect(screen.getByText(`${en.page} 2 / 2`)).toBeTruthy()
   })
 
   it('installs by registry identity without exposing an install spec to the browser', async () => {

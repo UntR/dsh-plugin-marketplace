@@ -8,6 +8,15 @@ import { PluginDetails } from './PluginDetails.js'
 
 const PAGE_SIZE = 48
 
+function CatalogCover({ plugin, t }: { plugin: RegistryIndexEntry; t: (key: LocaleKey) => string }) {
+  const [failed, setFailed] = useState(false)
+  if (plugin.coverUrl === null || failed) {
+    return <div role="img" aria-label={`${plugin.name} ${t('cover')}`} style={catalogCoverStyle} />
+  }
+  return <img src={plugin.coverUrl} alt={`${plugin.name} ${t('cover')}`} onError={() => setFailed(true)}
+    style={{ ...catalogCoverStyle, objectFit: 'cover' }} />
+}
+
 export interface MarketplaceTabInjected {
   t: (key: LocaleKey) => string
 }
@@ -71,9 +80,7 @@ export function MarketplaceTab({ t }: MarketplaceTabInjected) {
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(16rem, 1fr))', gap: '1rem' }}>
         {visible.map(plugin => (
           <article key={plugin.id} style={{ border: '1px solid currentColor', borderRadius: '0.75rem', overflow: 'hidden' }}>
-            {plugin.coverUrl === null
-              ? <div role="img" aria-label={`${plugin.name} ${t('cover')}`} style={{ aspectRatio: '16 / 9', background: 'linear-gradient(135deg, #255, #69a)' }} />
-              : <img src={plugin.coverUrl} alt={`${plugin.name} ${t('cover')}`} style={{ width: '100%', aspectRatio: '16 / 9', objectFit: 'cover' }} />}
+            <CatalogCover plugin={plugin} t={t} />
             <div style={{ padding: '0.85rem' }}>
               <h3>{plugin.name}</h3>
               <p>{plugin.owner.login}</p>
@@ -87,7 +94,9 @@ export function MarketplaceTab({ t }: MarketplaceTabInjected) {
                   aria-describedby={!plugin.install.available ? `reason-${plugin.githubDatabaseId}` : undefined}>
                   {plugin.install.available ? t('install') : t('installUnavailable')}
                 </button>
-                {!plugin.install.available && <span id={`reason-${plugin.githubDatabaseId}`} style={visuallyHidden}>{t('installUnavailable')}</span>}
+                {!plugin.install.available && <span id={`reason-${plugin.githubDatabaseId}`} style={visuallyHidden}>
+                  {t('installUnavailable')}; {t('details')}
+                </span>}
               </div>
             </div>
           </article>
@@ -109,4 +118,8 @@ export function MarketplaceTab({ t }: MarketplaceTabInjected) {
 const visuallyHidden = {
   position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px',
   overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', border: 0,
+} as const
+
+const catalogCoverStyle = {
+  display: 'block', width: '100%', aspectRatio: '16 / 9', background: 'linear-gradient(135deg, #255, #69a)',
 } as const
