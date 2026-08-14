@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T17:16:20.483Z",
+    "enrichedAt": "2026-08-14T22:45:44.209Z",
     "enrichmentStatus": "ok",
-    "headSha": "4dfa6735a932c6bbf0fa41af0eafef17f7dc88b6"
+    "headSha": "19a1b2546baad70b3168726d6b09aa520d9c63f5"
   },
   "github": {
     "archived": false,
@@ -17,57 +17,78 @@
     "description": "自主覆盖与调整第三方模型的思考等级，修复工具内置预设缺失或不匹配的问题。",
     "fork": false,
     "forks": 0,
-    "headSha": "4dfa6735a932c6bbf0fa41af0eafef17f7dc88b6",
+    "headSha": "19a1b2546baad70b3168726d6b09aa520d9c63f5",
     "homepageUrl": null,
-    "language": null,
+    "language": "TypeScript",
     "license": {
       "name": "Apache License 2.0",
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOT4h6aA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/9f592f0098e18d014afb17b51281d7902fdefb0b70dc63b78ab84b952b5055f4/my-dsh-plugin/thinking-level-override",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/fbf2eaa6abec2851d8cabb3c1a1c4f4045e9e2e9c258664de069d68331f2d24d/my-dsh-plugin/thinking-level-override",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/317021424?v=4",
       "login": "my-dsh-plugin"
     },
-    "pushedAt": "2026-08-14T15:55:35Z",
+    "pushedAt": "2026-08-14T21:37:35Z",
     "slug": "my-dsh-plugin/thinking-level-override",
-    "stars": 0,
+    "stars": 2,
     "topics": [
-      "dsh-plugin"
+      "cordis",
+      "deepseek-harness",
+      "dsh",
+      "dsh-plugin",
+      "dsh-plugins"
     ],
-    "updatedAt": "2026-08-14T15:58:06Z",
+    "updatedAt": "2026-08-14T21:54:14Z",
     "url": "https://github.com/my-dsh-plugin/thinking-level-override"
   },
   "id": "gh:1334344296",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-thinking-level-override",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:my-dsh-plugin/thinking-level-override#19a1b2546baad70b3168726d6b09aa520d9c63f5",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-thinking-level-override",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/9f592f0098e18d014afb17b51281d7902fdefb0b70dc63b78ab84b952b5055f4/my-dsh-plugin/thinking-level-override",
+    "coverUrl": "https://opengraph.githubassets.com/fbf2eaa6abec2851d8cabb3c1a1c4f4045e9e2e9c258664de069d68331f2d24d/my-dsh-plugin/thinking-level-override",
     "description": "自主覆盖与调整第三方模型的思考等级，修复工具内置预设缺失或不匹配的问题。"
   },
   "readme": {
     "available": true,
-    "excerpt": "自主覆盖与调整第三方模型的思考等级，修复工具内置预设缺失或不匹配的问题。"
+    "excerpt": "A DeepSeek Harness plugin that fixes missing or mismatched thinking-level presets of third-party models: it overrides and adjusts the reasoning effort on every request, and lets you choose exactly which thinking levels each model offers."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
