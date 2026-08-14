@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import type { Catalog } from '../registry/service.js'
 import type { RegistryIndexEntry } from '../shared/schema.js'
 import { filterCatalog, sortCatalog, type CatalogSort } from './catalog.js'
+import { InstallDialog } from './InstallDialog.js'
 import type { LocaleKey } from './locales.js'
 import { PluginDetails } from './PluginDetails.js'
 
@@ -18,6 +19,8 @@ export function MarketplaceTab({ t }: MarketplaceTabInjected) {
   const [sort, setSort] = useState<CatalogSort>('name')
   const [page, setPage] = useState(1)
   const [selected, setSelected] = useState<RegistryIndexEntry | null>(null)
+  const [installTarget, setInstallTarget] = useState<RegistryIndexEntry | null>(null)
+  const [restartRequired, setRestartRequired] = useState(false)
 
   const load = async (refresh = false) => {
     setError(false)
@@ -43,6 +46,7 @@ export function MarketplaceTab({ t }: MarketplaceTabInjected) {
   return (
     <section aria-labelledby="marketplace-heading">
       <h2 id="marketplace-heading">{t('marketplace')}</h2>
+      {restartRequired && <p role="status">{t('restartRequired')}</p>}
       <p>{catalog.registry.pluginCount} {t('plugins')} · {new Date(catalog.registry.generatedAt).toLocaleString()}</p>
       {catalog.registry.stale && <p role="status">{t('cached')}</p>}
       {error && <p role="alert">{t('unavailable')}</p>}
@@ -79,6 +83,7 @@ export function MarketplaceTab({ t }: MarketplaceTabInjected) {
               <div style={{ display: 'flex', justifyContent: 'space-between', gap: '0.5rem' }}>
                 <button type="button" onClick={() => setSelected(plugin)}>{t('details')}</button>
                 <button type="button" disabled={!plugin.install.available}
+                  onClick={() => setInstallTarget(plugin)}
                   aria-describedby={!plugin.install.available ? `reason-${plugin.githubDatabaseId}` : undefined}>
                   {plugin.install.available ? t('install') : t('installUnavailable')}
                 </button>
@@ -93,7 +98,10 @@ export function MarketplaceTab({ t }: MarketplaceTabInjected) {
         <span>{t('page')} {page} / {pageCount}</span>
         <button type="button" disabled={page === pageCount} onClick={() => setPage(value => Math.min(pageCount, value + 1))}>{t('next')}</button>
       </nav>
-      {selected !== null && <PluginDetails plugin={selected} t={t} onClose={() => setSelected(null)} />}
+      {selected !== null && <PluginDetails plugin={selected} t={t} onClose={() => setSelected(null)}
+        onInstall={() => { setSelected(null); setInstallTarget(selected) }} />}
+      {installTarget !== null && <InstallDialog plugin={installTarget} t={t}
+        onClose={() => setInstallTarget(null)} onInstalled={() => setRestartRequired(true)} />}
     </section>
   )
 }
@@ -102,4 +110,3 @@ const visuallyHidden = {
   position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px',
   overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', border: 0,
 } as const
-

@@ -6,9 +6,10 @@ interface Props {
   plugin: RegistryIndexEntry
   t: (key: LocaleKey) => string
   onClose: () => void
+  onInstall: () => void
 }
 
-export function PluginDetails({ plugin, t, onClose }: Props) {
+export function PluginDetails({ plugin, t, onClose, onInstall }: Props) {
   const dialog = useRef<HTMLDivElement>(null)
   const close = useRef<HTMLButtonElement>(null)
   const [detail, setDetail] = useState<RegistryPluginDetail | null>(null)
@@ -68,13 +69,19 @@ export function PluginDetails({ plugin, t, onClose }: Props) {
           <>
             <p>DSH bundle: {detail.bundle.detected ? 'Detected' : 'Not detected'}</p>
             <p>Install source: {detail.install.preferred ?? '—'}</p>
+            {!detail.install.available && <p role="status">{detail.install.reason ?? t('installUnavailable')}</p>}
             <p>{detail.readme.excerpt}</p>
             <p>{detail.github.topics.join(' · ')}</p>
           </>
         )}
         {detail === null && !failed && <p role="status">{t('loading')}</p>}
         {failed && <p role="alert">{t('unavailable')}</p>}
-        <a href={plugin.repositoryUrl} target="_blank" rel="noopener noreferrer">{t('openGitHub')}</a>
+        <div style={{ display: 'flex', justifyContent: 'space-between', gap: '0.75rem' }}>
+          <a href={plugin.repositoryUrl} target="_blank" rel="noopener noreferrer">{t('openGitHub')}</a>
+          <button type="button" disabled={detail?.install.available !== true} onClick={onInstall}>
+            {detail?.install.available === false ? t('installUnavailable') : t('install')}
+          </button>
+        </div>
       </div>
     </div>
   )
