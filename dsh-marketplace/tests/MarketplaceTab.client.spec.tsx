@@ -66,6 +66,7 @@ describe('MarketplaceTab', () => {
     expect(screen.getByRole('status').textContent).toContain(en.loading)
     await screen.findByRole('heading', { name: en.marketplace })
     expect(screen.getByText(en.archived)).toBeTruthy()
+    expect(screen.getByText('Updated Aug 14, 2026')).toBeTruthy()
     const cover = screen.getByRole('img', { name: `memory ${en.cover}` })
     fireEvent.error(cover)
     expect(screen.getByRole('img', { name: `memory ${en.cover}` }).tagName).toBe('DIV')

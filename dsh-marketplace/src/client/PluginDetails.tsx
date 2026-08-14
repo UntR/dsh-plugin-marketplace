@@ -51,7 +51,7 @@ export function PluginDetails({ plugin, t, onClose, onInstall }: Props) {
     }
   }, [onClose])
   const coverUrl = detail?.presentation.coverUrl ?? plugin.coverUrl
-  const formatDate = (value: string | null) => value === null ? '—' : new Date(value).toLocaleString()
+  const formatDate = (value: string | null) => value === null ? '—' : new Date(value).toLocaleString(t('dateLocale'))
   return (
     <div role="presentation" style={overlayStyle} onMouseDown={event => {
       if (event.target === event.currentTarget) onClose()

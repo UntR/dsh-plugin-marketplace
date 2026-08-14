@@ -54,8 +54,8 @@ function CatalogCover({ plugin, t }: { plugin: RegistryIndexEntry; t: (key: Loca
     onError={() => setFailed(true)} /></div>
 }
 
-function dateLabel(value: string): string {
-  return new Date(value).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })
+function dateLabel(value: string, t: (key: LocaleKey) => string): string {
+  return new Date(value).toLocaleDateString(t('dateLocale'), { year: 'numeric', month: 'short', day: 'numeric' })
 }
 
 export interface MarketplaceTabInjected {
@@ -273,7 +273,7 @@ export function MarketplaceTab({ t, fullPage = false, headerActions, onAgentInst
                   </div>
                   <div className="dshm-plugin-state">
                     <span>★ {plugin.stats.stars}</span>
-                    <span>{t('lastUpdated')} {dateLabel(plugin.timestamps.updatedAt)}</span>
+                    <span>{t('lastUpdated')} {dateLabel(plugin.timestamps.updatedAt, t)}</span>
                   </div>
                   <div className="dshm-plugin-actions">
                     <button type="button" className="dshm-install-button"

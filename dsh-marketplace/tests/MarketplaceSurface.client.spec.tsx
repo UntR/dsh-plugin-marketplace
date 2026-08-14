@@ -7,7 +7,7 @@ import {
   MarketplaceSurface,
   MarketplaceSurfaceController,
 } from '../src/client/MarketplaceSurface.js'
-import { en, type LocaleKey } from '../src/client/locales.js'
+import { en, zh, type LocaleKey } from '../src/client/locales.js'
 
 vi.mock('@deepseek-ai/dsh-client-ui-primitives', () => ({
   IconCloseOutline16: () => <span data-testid="close-icon" />,
@@ -18,6 +18,7 @@ vi.mock('@deepseek-ai/dsh-client-ui-primitives', () => ({
 }))
 
 const t = (key: LocaleKey) => en[key]
+const zhT = (key: LocaleKey) => zh[key]
 const catalog = {
   registry: {
     revision: `sha256:${'a'.repeat(64)}`,
@@ -49,5 +50,19 @@ describe('MarketplaceSurface', () => {
     expect(await screen.findByRole('heading', { name: en.marketplace })).toBeTruthy()
     fireEvent.keyDown(document, { key: 'Escape' })
     expect(screen.queryByRole('heading', { name: en.marketplace })).toBeNull()
+  })
+
+  it('follows the translator supplied by the DSH locale service', async () => {
+    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify(catalog), { status: 200 })))
+    const surface = new MarketplaceSurfaceController()
+    surface.open()
+    const { rerender } = render(
+      <div data-shell-overlay><MarketplaceSurface surface={surface} t={t} onAgentInstall={vi.fn()} /></div>,
+    )
+    expect(await screen.findByRole('heading', { name: en.marketplace })).toBeTruthy()
+
+    rerender(<div data-shell-overlay><MarketplaceSurface surface={surface} t={zhT} onAgentInstall={vi.fn()} /></div>)
+    expect(screen.getByRole('heading', { name: zh.marketplace })).toBeTruthy()
+    expect(screen.getByRole('button', { name: zh.installed })).toBeTruthy()
   })
 })

@@ -8,7 +8,7 @@ The baseline was verified against DeepSeek Harness commit `47f943859bef60e416049
 
 Integration points used by Marketplace:
 
-- `settings.plugins.tab` client slot
+- `sidebar.footer.action` and `shell.overlay` client slots
 - `ctx.webServer.register({ kind: 'prefix', ... })`
 - `ctx.baseUrl` as the active profile anchor
 - `$DSH_HOME/profiles/<name>` profile layout

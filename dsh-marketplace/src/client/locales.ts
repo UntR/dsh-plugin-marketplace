@@ -1,4 +1,5 @@
 export const en = {
+  dateLocale: 'en-US',
   marketplace: 'Marketplace',
   marketplaceSubtitle: 'Discover and install plugins to extend DeepSeek Harness.',
   openMarketplace: 'Open Marketplace',
@@ -115,6 +116,7 @@ export const en = {
 } as const
 
 export const zh: Record<keyof typeof en, string> = {
+  dateLocale: 'zh-CN',
   marketplace: '插件市场',
   marketplaceSubtitle: '发现并安装插件，扩展 DeepSeek Harness 的能力。',
   openMarketplace: '打开插件市场',

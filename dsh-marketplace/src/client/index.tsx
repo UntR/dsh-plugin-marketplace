@@ -3,10 +3,8 @@ import type { ClientContext } from '@deepseek-ai/dsh-client-runtime/client'
 import type {} from '@deepseek-ai/dsh-client-ui-conversation/client'
 import type {} from '@deepseek-ai/dsh-client-ui-layout/client'
 import type {} from '@deepseek-ai/dsh-client-ui-sidebar/client'
-import type {} from '@deepseek-ai/dsh-client-ui-settings/client'
 import type { RegistryIndexEntry } from '../shared/schema.js'
-import { MarketplaceTab, type AgentInstallHandler, type MarketplaceTabInjected } from './MarketplaceTab.js'
-import { InstalledTab, type InstalledTabInjected } from './InstalledTab.js'
+import type { AgentInstallHandler } from './MarketplaceTab.js'
 import { en, zh, type LocaleKey } from './locales.js'
 import {
   MarketplaceFooterAction,
@@ -71,20 +69,4 @@ export function apply(ctx: ClientContext): void {
     locale: NS,
     inject: (): MarketplaceSurfaceProps => ({ t, surface, onAgentInstall }),
   }, MarketplaceSurface))
-  ctx.slots.inject('settings.plugins.tab', () => ctx.slots.register({
-    name: 'settings.plugins.tab',
-    id: 'marketplace',
-    order: 20,
-    label: () => t('marketplace'),
-    locale: NS,
-    inject: (): MarketplaceTabInjected => ({ t, onAgentInstall }),
-  }, MarketplaceTab))
-  ctx.slots.inject('settings.plugins.tab', () => ctx.slots.register({
-    name: 'settings.plugins.tab',
-    id: 'installed',
-    order: 30,
-    label: () => t('installed'),
-    locale: NS,
-    inject: (): InstalledTabInjected => ({ t }),
-  }, InstalledTab))
 }
