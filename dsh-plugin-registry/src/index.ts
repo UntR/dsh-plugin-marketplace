@@ -27,6 +27,9 @@ export {
   enrichRepository,
   type RepositoryEnrichmentClient,
 } from './enrich.js'
+export { GitHubClient, type GitHubClientOptions } from './github.js'
+export { loadRegistry, replaceRegistry } from './filesystem.js'
+export { formatSyncSummary, syncRegistry, type SyncSummary } from './sync.js'
 export type {
   RegistryIndex,
   RegistryIndexEntry,

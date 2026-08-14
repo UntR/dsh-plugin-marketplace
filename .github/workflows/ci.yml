@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.19.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter dsh-plugin-registry typecheck
+      - run: pnpm --filter dsh-plugin-registry test
+      - run: pnpm --filter dsh-plugin-registry build
+      - run: pnpm --filter dsh-plugin-registry generate:schemas
+      - run: git diff --exit-code -- dsh-plugin-registry/schemas
+

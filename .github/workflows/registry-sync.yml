@@ -1,0 +1,64 @@
+name: Registry sync
+
+on:
+  schedule:
+    - cron: "17 */2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: dsh-plugin-registry-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.19.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Build Registry
+        env:
+          GH_TOKEN: ${{ secrets.REGISTRY_GITHUB_TOKEN || github.token }}
+        run: pnpm --filter dsh-plugin-registry sync | tee /tmp/dsh-registry-summary.txt
+      - name: Publish job summary
+        if: always()
+        run: test ! -f /tmp/dsh-registry-summary.txt || cat /tmp/dsh-registry-summary.txt >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit changed Registry
+        run: |
+          if git diff --quiet -- dsh-plugin-registry/registry/v1; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dsh-plugin-registry/registry/v1
+          git commit -m "chore(registry): publish changed plugin facts"
+          git push
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dsh-plugin-registry
+
+  deploy:
+    needs: sync
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy static Registry
+        id: deployment
+        uses: actions/deploy-pages@v4
+
