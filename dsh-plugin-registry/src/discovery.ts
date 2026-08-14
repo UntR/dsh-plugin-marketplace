@@ -68,7 +68,7 @@ const repositorySchema = z.object({
   nameWithOwner: z.string().regex(/^[^/]+\/[^/]+$/),
   url: z.url(),
   description: z.string().nullable(),
-  homepageUrl: z.url().nullable(),
+  homepageUrl: z.string().nullable(),
   visibility: z.enum(['PUBLIC', 'PRIVATE', 'INTERNAL']),
   isArchived: z.boolean(),
   isFork: z.boolean(),
@@ -151,7 +151,7 @@ function normalizeRepository(repository: z.infer<typeof repositorySchema>): Disc
     slug: repository.nameWithOwner,
     repositoryUrl: repository.url,
     description: repository.description,
-    homepageUrl: repository.homepageUrl,
+    homepageUrl: normalizeHttpUrl(repository.homepageUrl),
     archived: repository.isArchived,
     fork: repository.isFork,
     stars: repository.stargazerCount,
@@ -169,6 +169,16 @@ function normalizeRepository(repository: z.infer<typeof repositorySchema>): Disc
     topics: repository.repositoryTopics.nodes
       .flatMap(node => node === null ? [] : [node.topic.name])
       .sort((left, right) => left.localeCompare(right, 'en')),
+  }
+}
+
+function normalizeHttpUrl(value: string | null): string | null {
+  if (value === null) return null
+  try {
+    const url = new URL(value)
+    return url.protocol === 'http:' || url.protocol === 'https:' ? url.toString() : null
+  } catch {
+    return null
   }
 }
 
@@ -195,4 +205,3 @@ export async function discoverRepositories(request: GraphqlRequest): Promise<Dis
     cursor = connection.pageInfo.endCursor
   }
 }
-

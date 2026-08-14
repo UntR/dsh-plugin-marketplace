@@ -32,7 +32,9 @@ jobs:
       - name: Build Registry
         env:
           GH_TOKEN: ${{ secrets.REGISTRY_GITHUB_TOKEN || github.token }}
-        run: pnpm --filter dsh-plugin-registry sync | tee /tmp/dsh-registry-summary.txt
+        run: |
+          set -o pipefail
+          pnpm --filter dsh-plugin-registry sync | tee /tmp/dsh-registry-summary.txt
       - name: Publish job summary
         if: always()
         run: test ! -f /tmp/dsh-registry-summary.txt || cat /tmp/dsh-registry-summary.txt >> "$GITHUB_STEP_SUMMARY"
@@ -47,9 +49,13 @@ jobs:
           git commit -m "chore(registry): publish changed plugin facts"
           git push
       - uses: actions/configure-pages@v5
+      - name: Prepare minimal Pages artifact
+        run: |
+          mkdir -p "$RUNNER_TEMP/dsh-plugin-registry-pages/registry"
+          cp -R dsh-plugin-registry/registry/v1 "$RUNNER_TEMP/dsh-plugin-registry-pages/registry/v1"
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: dsh-plugin-registry
+          path: ${{ runner.temp }}/dsh-plugin-registry-pages
 
   deploy:
     needs: sync
@@ -61,4 +67,3 @@ jobs:
       - name: Deploy static Registry
         id: deployment
         uses: actions/deploy-pages@v4
-

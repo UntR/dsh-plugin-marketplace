@@ -78,6 +78,20 @@ describe('GitHub topic discovery', () => {
     expect(result[1]?.fork).toBe(true)
   })
 
+  it('keeps discovery complete when GitHub returns a malformed homepage URL', async () => {
+    const malformed = { ...repository(1), homepageUrl: 'not a valid absolute URL' }
+    const valid = { ...repository(2), homepageUrl: 'https://plugin.example/docs' }
+    const result = await discoverRepositories(async () => ({
+      topic: {
+        repositories: {
+          pageInfo: { hasNextPage: false, endCursor: null },
+          nodes: [malformed, valid],
+        },
+      },
+    }))
+    expect(result.map(item => item.homepageUrl)).toEqual([null, 'https://plugin.example/docs'])
+  })
+
   it('fails the whole discovery when a later page fails', async () => {
     let page = 0
     await expect(discoverRepositories(async () => {
