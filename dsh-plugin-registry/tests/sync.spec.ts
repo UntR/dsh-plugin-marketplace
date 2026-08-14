@@ -110,6 +110,33 @@ describe('registry sync', () => {
     expect(summary.removed).toBe(1)
   })
 
+  it('keeps the stable id and detail filename across a repository rename or transfer', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'dsh-registry-'))
+    const directory = join(root, 'v1')
+    const original = {
+      ...node(100),
+      name: 'old',
+      nameWithOwner: 'owner/old',
+      url: 'https://github.com/owner/old',
+    }
+    const transferred = {
+      ...original,
+      name: 'new',
+      nameWithOwner: 'next-owner/new',
+      url: 'https://github.com/next-owner/new',
+      owner: { login: 'next-owner', avatarUrl: 'https://avatars.example/next-owner.png' },
+    }
+    await syncRegistry({ directory, graphql: graphql([original]), enrichment })
+    await syncRegistry({ directory, graphql: graphql([transferred]), enrichment })
+    const index = JSON.parse(await readFile(join(directory, 'index.json'), 'utf8')) as {
+      plugins: Array<{ id: string; slug: string; detailPath: string }>
+    }
+    expect(index.plugins).toEqual([expect.objectContaining({
+      id: 'gh:100', slug: 'next-owner/new', detailPath: './plugins/100.json',
+    })])
+    expect(await readdir(join(directory, 'plugins'))).toEqual(['100.json'])
+  })
+
   it('does not rewrite a no-op registry', async () => {
     const root = await mkdtemp(join(tmpdir(), 'dsh-registry-'))
     const directory = join(root, 'v1')

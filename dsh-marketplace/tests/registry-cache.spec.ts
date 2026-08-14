@@ -141,6 +141,18 @@ describe('RegistryService', () => {
     await expect(service.getCatalog()).rejects.toMatchObject({ code: 'registry-version-unsupported' })
   })
 
+  it('rejects an invalid index when there is no last-good cache', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'marketplace-cache-'))
+    const service = new RegistryService({
+      baseUrl: 'https://registry.example/v1',
+      cacheDir: join(root, 'missing'),
+      fetch: vi.fn(async (url: string | URL | Request) => String(url).endsWith('meta.json')
+        ? json(meta)
+        : json({ ...index, plugins: 'invalid' })),
+    })
+    await expect(service.getCatalog()).rejects.toMatchObject({ code: 'registry-invalid' })
+  })
+
   it('returns registry-unavailable when remote and disk are absent', async () => {
     const root = await mkdtemp(join(tmpdir(), 'marketplace-cache-'))
     const service = new RegistryService({

@@ -51,6 +51,8 @@ describe('InstalledTab', () => {
     await screen.findByRole('heading', { name: en.installed })
     expect(screen.getByText(en.updateAvailable)).toBeTruthy()
     expect(screen.getByText(en.notInRegistry)).toBeTruthy()
+    expect(screen.getByText(en.updateUnknown)).toBeTruthy()
+    expect(screen.getByText('Registry: 1.1.0')).toBeTruthy()
     expect(screen.getByRole('status').textContent).toContain(en.restartRequired)
     const privateCard = screen.getByRole('heading', { name: 'dsh-private' }).closest('article')
     expect(privateCard).not.toBeNull()
