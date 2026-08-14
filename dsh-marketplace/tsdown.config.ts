@@ -34,7 +34,7 @@ export default defineConfig([
     deps: { neverBundle: platformModules },
     outputOptions: {
       entryFileNames: 'client.js',
-      banner: 'window.__ModuleLoader__.load({ id: "dsh-marketplace", factory: (require) => {',
+      banner: 'window.__ModuleLoader__.load({ id: "untr-dsh-marketplace", factory: (require) => {',
       footer: 'return module.exports; } });',
       intro: 'var module = { exports: {} }; var exports = module.exports;',
     },

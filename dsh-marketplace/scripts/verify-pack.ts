@@ -26,6 +26,10 @@ try {
   }
   execFileSync('tar', ['-xzf', tarball, '-C', directory])
   const manifest = JSON.parse(await readFile(join(directory, 'package', 'package.json'), 'utf8')) as Record<string, unknown>
+  const client = await readFile(join(directory, 'package', 'lib', 'client.js'), 'utf8')
+  if (!/__ModuleLoader__\.load\(\{\s*id:\s*"untr-dsh-marketplace"/.test(client)) {
+    throw new Error('Client bundle does not register the published package name')
+  }
   const serialized = JSON.stringify(manifest)
   for (const forbidden of ['workspace:', '../../deepseek-harness', '../deepseek-harness']) {
     if (serialized.includes(forbidden)) throw new Error(`Published manifest contains forbidden reference: ${forbidden}`)
