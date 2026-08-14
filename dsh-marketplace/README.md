@@ -20,7 +20,7 @@ The host fetches Registry Schema v1 over HTTPS. Until the deployment repository 
 export DSH_MARKETPLACE_REGISTRY_URL=https://OWNER.github.io/REPOSITORY/registry/v1
 ```
 
-The URL must serve `registry.json`, `index.json`, and `plugins/<github-database-id>.json`. The browser never calls GitHub and never needs a GitHub token.
+The URL must serve `meta.json`, `index.json`, and `plugins/<github-database-id>.json`. The browser never calls GitHub and never needs a GitHub token.
 
 ## Security model
 
