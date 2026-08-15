@@ -55,4 +55,27 @@ describe('MutationManager', () => {
     expect(logger.info).toHaveBeenNthCalledWith(2, 'Plugin %s succeeded for %s.', 'install', 'gh:1')
     expect(JSON.stringify(logger.info.mock.calls)).not.toContain('secret command output')
   })
+
+  it('updates an unmatched public npm plugin to the discovered latest version', async () => {
+    const registry = { getPlugin: vi.fn() } as unknown as RegistryService
+    const runner = { run: vi.fn(async () => ({ output: 'updated' })) } as unknown as CommandRunner
+    const installed = {
+      profileName: 'web',
+      markRestartRequired: vi.fn(),
+      list: async () => ({
+        profile: 'web', restartRequired: false, plugins: [{
+          packageName: 'dsh-public', version: '1.0.0', dependencySpec: '1.0.0', registryId: null,
+          registryVersion: null, registryEntry: null, source: { kind: 'npm' }, display: {
+            name: 'dsh-public', description: null, owner: null, coverUrl: null, repositoryUrl: null,
+          }, update: { status: 'available', available: true, latestVersion: '1.2.0', canUpdate: true }, self: false,
+        }],
+      }),
+    } as unknown as InstalledService
+
+    const result = await new MutationManager(registry, installed, runner).update('dsh-public')
+
+    expect(runner.run).toHaveBeenCalledWith(['plugin', '--profile', 'web', 'add', 'dsh-public@1.2.0'])
+    expect(result.plugin.version).toBe('1.2.0')
+    expect(registry.getPlugin).not.toHaveBeenCalled()
+  })
 })

@@ -102,7 +102,8 @@ export function MarketplaceSurface({ surface, t, onAgentInstall }: MarketplaceSu
           <div className="dshm-installed-shell">
             <header className="dshm-header">
               <div>
-                <h1 className="dshm-title">{t('installed')}</h1>
+                <h1 className="dshm-title">{t('installedPlugins')}</h1>
+                <p className="dshm-subtitle">{t('installedSubtitle')}</p>
               </div>
               <div className="dshm-header-actions">
                 <button type="button" className="dshm-button" onClick={() => setView('marketplace')}>{t('backToMarketplace')}</button>
@@ -111,7 +112,7 @@ export function MarketplaceSurface({ surface, t, onAgentInstall }: MarketplaceSu
                 </button>
               </div>
             </header>
-            <div className="dshm-installed-body"><InstalledTab t={t} /></div>
+            <div className="dshm-installed-body"><InstalledTab t={t} onBrowse={() => setView('marketplace')} /></div>
           </div>
         </div>}
     </div>

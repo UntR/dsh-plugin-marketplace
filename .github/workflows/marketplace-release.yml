@@ -24,13 +24,13 @@ jobs:
           cache: pnpm
           registry-url: https://registry.npmjs.org
       - run: pnpm install --frozen-lockfile
-      - run: pnpm --filter dsh-marketplace typecheck
-      - run: pnpm --filter dsh-marketplace test
-      - run: pnpm --filter dsh-marketplace build
+      - run: pnpm --filter untr-dsh-marketplace typecheck
+      - run: pnpm --filter untr-dsh-marketplace test
+      - run: pnpm --filter untr-dsh-marketplace build
       - name: Pack and verify
         run: |
           mkdir -p "$RUNNER_TEMP/dsh-marketplace-pack"
-          pnpm --filter dsh-marketplace pack --pack-destination "$RUNNER_TEMP/dsh-marketplace-pack"
+          pnpm --filter untr-dsh-marketplace pack --pack-destination "$RUNNER_TEMP/dsh-marketplace-pack"
           tarball=$(find "$RUNNER_TEMP/dsh-marketplace-pack" -maxdepth 1 -name '*.tgz' -print -quit)
           node --import tsx dsh-marketplace/scripts/verify-pack.ts "$tarball"
           echo "tarball=$tarball" >> "$GITHUB_ENV"

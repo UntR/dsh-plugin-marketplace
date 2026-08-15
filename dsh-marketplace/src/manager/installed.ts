@@ -4,9 +4,13 @@ import { createRequire } from 'node:module'
 import { join } from 'node:path'
 import { gt, valid } from 'semver'
 import type { RegistryService } from '../registry/service.js'
+import { CACHE_TTL_MS, FETCH_TIMEOUT_MS } from '../shared/constants.js'
 import { MarketplaceError } from '../shared/errors.js'
 import type { RegistryIndexEntry } from '../shared/schema.js'
 import type { CurrentProfile } from './profile.js'
+
+export type InstalledSourceKind = 'npm' | 'github' | 'local' | 'url'
+export type InstalledUpdateStatus = 'available' | 'current' | 'unknown' | 'source'
 
 export interface InstalledPlugin {
   packageName: string
@@ -14,7 +18,21 @@ export interface InstalledPlugin {
   dependencySpec: string
   registryId: string | null
   registryVersion: string | null
-  update: { available: boolean; latestVersion: string | null }
+  registryEntry: RegistryIndexEntry | null
+  display: {
+    name: string
+    description: string | null
+    owner: string | null
+    coverUrl: string | null
+    repositoryUrl: string | null
+  }
+  source: { kind: InstalledSourceKind }
+  update: {
+    status: InstalledUpdateStatus
+    available: boolean
+    latestVersion: string | null
+    canUpdate: boolean
+  }
   self: boolean
 }
 
@@ -33,14 +51,19 @@ function packageDirectory(profileDirectory: string, packageName: string): string
   return null
 }
 
-function normalizeRepository(value: unknown): string | null {
+interface RepositoryInfo {
+  url: string | null
+  slug: string | null
+}
+
+function repositoryInfo(value: unknown): RepositoryInfo {
   let source: string | null = null
   if (typeof value === 'string') source = value
   else if (typeof value === 'object' && value !== null) {
     const url = (value as Record<string, unknown>).url
     if (typeof url === 'string') source = url
   }
-  if (source === null) return null
+  if (source === null) return { url: null, slug: null }
   const normalized = source.trim()
     .replace(/^git\+/, '')
     .replace(/^git@github\.com:/, 'https://github.com/')
@@ -48,7 +71,9 @@ function normalizeRepository(value: unknown): string | null {
     .replace(/^git:\/\/github\.com\//, 'https://github.com/')
     .replace(/\.git(?:#.*)?$/, '')
     .replace(/\/$/, '')
-  return /^https:\/\/github\.com\/([^/]+\/[^/]+)$/i.exec(normalized)?.[1]?.toLowerCase() ?? null
+  const slug = /^https:\/\/github\.com\/([^/]+\/[^/]+)$/i.exec(normalized)?.[1]?.toLowerCase() ?? null
+  if (slug !== null) return { url: `https://github.com/${slug}`, slug }
+  return { url: /^https?:\/\//.test(normalized) ? normalized : null, slug: null }
 }
 
 function registryMatch(
@@ -64,13 +89,32 @@ function npmManaged(spec: string): boolean {
   return !/^(?:github:|git\+|git:|https?:|file:|link:|workspace:|\.\.?[/\\])/.test(spec)
 }
 
+function sourceKind(spec: string): InstalledSourceKind {
+  if (npmManaged(spec)) return 'npm'
+  if (/^(?:github:|git\+(?:https?|ssh):\/\/github\.com\/|git@github\.com:)/i.test(spec)) return 'github'
+  if (/^(?:file:|link:|workspace:|\.\.?[/\\]|[/\\])/.test(spec)) return 'local'
+  return 'url'
+}
+
+export interface InstalledServiceOptions {
+  fetch?: typeof globalThis.fetch
+  now?: () => number
+}
+
 export class InstalledService {
   private restartRequired = false
+  private readonly fetchImpl: typeof globalThis.fetch
+  private readonly now: () => number
+  private readonly npmVersions = new Map<string, { version: string | null; expiresAt: number }>()
 
   constructor(
     private readonly profile: CurrentProfile,
     private readonly registry: RegistryService,
-  ) {}
+    options: InstalledServiceOptions = {},
+  ) {
+    this.fetchImpl = options.fetch ?? globalThis.fetch
+    this.now = options.now ?? Date.now
+  }
 
   get profileName(): string {
     return this.profile.name
@@ -78,6 +122,34 @@ export class InstalledService {
 
   markRestartRequired(): void {
     this.restartRequired = true
+  }
+
+  private async latestNpmVersion(packageName: string): Promise<string | null> {
+    const cached = this.npmVersions.get(packageName)
+    if (cached !== undefined && cached.expiresAt > this.now()) return cached.version
+    let version: string | null = null
+    try {
+      const encoded = packageName.startsWith('@')
+        ? `@${encodeURIComponent(packageName.slice(1))}`
+        : encodeURIComponent(packageName)
+      const response = await this.fetchImpl(`https://registry.npmjs.org/${encoded}/latest`, {
+        headers: { accept: 'application/json' },
+        signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+      })
+      if (response.ok) {
+        const value: unknown = await response.json()
+        const npmVersion = typeof value === 'object' && value !== null
+          ? (value as Record<string, unknown>).version
+          : null
+        if (typeof npmVersion === 'string') {
+          version = npmVersion
+        }
+      }
+    } catch {
+      // An unavailable or private registry should not hide locally installed plugins.
+    }
+    this.npmVersions.set(packageName, { version, expiresAt: this.now() + CACHE_TTL_MS })
+    return version
   }
 
   async list(): Promise<InstalledState> {
@@ -94,7 +166,7 @@ export class InstalledService {
     const dependencies = typeof dependenciesValue === 'object' && dependenciesValue !== null && !Array.isArray(dependenciesValue)
       ? dependenciesValue as Record<string, unknown>
       : {}
-    const catalog = await this.registry.getCatalog()
+    const catalog = await this.registry.getCatalog().catch(() => ({ plugins: [] }))
     const plugins: InstalledPlugin[] = []
     for (const [packageName, dependencyValue] of Object.entries(dependencies)) {
       if (typeof dependencyValue !== 'string') continue
@@ -116,19 +188,38 @@ export class InstalledService {
         : null
       if (typeof bundle?.patch !== 'string') continue
       const version = typeof manifest.version === 'string' ? manifest.version : null
-      const match = registryMatch(packageName, normalizeRepository(manifest.repository), catalog.plugins)
-      const latestVersion = match?.install.version ?? null
-      const comparable = version !== null && latestVersion !== null && npmManaged(dependencyValue)
+      const repository = repositoryInfo(manifest.repository)
+      const match = registryMatch(packageName, repository.slug, catalog.plugins)
+      const source = sourceKind(dependencyValue)
+      const latestVersion = source === 'npm'
+        ? match?.install.version ?? await this.latestNpmVersion(packageName)
+        : null
+      const comparable = version !== null && latestVersion !== null
         && valid(version) !== null && valid(latestVersion) !== null
+      const available = comparable && gt(latestVersion, version)
+      const status: InstalledUpdateStatus = source !== 'npm'
+        ? 'source'
+        : comparable ? available ? 'available' : 'current' : 'unknown'
       plugins.push({
         packageName,
         version,
         dependencySpec: dependencyValue,
         registryId: match?.id ?? null,
-        registryVersion: latestVersion,
+        registryVersion: match?.install.version ?? null,
+        registryEntry: match,
+        display: {
+          name: match?.name ?? (typeof manifest.name === 'string' ? manifest.name : packageName),
+          description: match?.description ?? (typeof manifest.description === 'string' ? manifest.description : null),
+          owner: match?.owner.login ?? null,
+          coverUrl: match?.coverUrl ?? null,
+          repositoryUrl: match?.repositoryUrl ?? repository.url,
+        },
+        source: { kind: source },
         update: {
-          available: comparable && gt(latestVersion, version),
+          status,
+          available,
           latestVersion: comparable ? latestVersion : null,
+          canUpdate: available || source === 'github',
         },
         self: packageName === 'untr-dsh-marketplace',
       })

@@ -226,8 +226,83 @@ const styles = `
 .dshm-empty { padding: 48px 20px; color: var(--dsw-alias-label-secondary); text-align: center; }
 .dshm-pagination { min-height: 42px; margin-top: 14px; display: flex; justify-content: center; align-items: center; gap: 12px; color: var(--dsw-alias-label-secondary); font-size: 12px; }
 .dshm-installed-shell { max-width: 980px; margin: 0 auto; }
-.dshm-installed-shell > section > h2 { display: none; }
 .dshm-installed-body { padding-top: 6px; }
+.dshm-installed-intro {
+  margin: 0 0 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  color: var(--dsw-alias-label-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+.dshm-installed-intro p { margin: 0; }
+.dshm-installed-intro p:last-child { max-width: 520px; text-align: right; }
+.dshm-installed-notice { display: flex; align-items: center; gap: 8px; }
+.dshm-installed-notice span { color: var(--dsw-alias-label-secondary); }
+.dshm-installed-row { min-height: 112px; }
+.dshm-installed-state {
+  min-width: 118px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  color: var(--dsw-alias-label-secondary);
+  font-size: 11px;
+  line-height: 17px;
+  text-align: right;
+}
+.dshm-installed-status-dot { width: 7px; height: 7px; flex: none; border-radius: 50%; background: var(--dsw-alias-label-quaternary); }
+.dshm-installed-state[data-status="available"] .dshm-installed-status-dot { background: var(--dsw-static-blue-450); }
+.dshm-installed-state[data-status="current"] .dshm-installed-status-dot { background: var(--dsw-static-green-450); }
+.dshm-installed-actions { min-width: 96px; }
+.dshm-remove-button { color: var(--dsw-alias-label-error); }
+.dshm-installed-details {
+  min-width: 0;
+  grid-column: 2 / -1;
+  padding-top: 14px;
+  border-top: 1px solid var(--dsw-alias-border-l1);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  color: var(--dsw-alias-label-secondary);
+  font-size: 11px;
+}
+.dshm-installed-details dl { min-width: 0; margin: 0; display: grid; gap: 7px; }
+.dshm-installed-details dl div { min-width: 0; display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 8px; }
+.dshm-installed-details dt { color: var(--dsw-alias-label-tertiary); }
+.dshm-installed-details dd { min-width: 0; margin: 0; }
+.dshm-installed-details code { display: block; overflow: auto; color: var(--dsw-alias-label-primary); font: inherit; white-space: nowrap; }
+.dshm-installed-details a { flex: none; color: var(--dsw-static-blue-450); text-decoration: none; }
+.dshm-installed-details a:hover { text-decoration: underline; }
+.dshm-installed-empty h3 { margin: 0; color: var(--dsw-alias-label-primary); font-size: 15px; font-weight: 500; }
+.dshm-installed-empty p { margin: 6px 0 16px; }
+.dshm-dialog-overlay {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0 0 0 / 48%);
+}
+.dshm-dialog {
+  box-sizing: border-box;
+  width: min(420px, 100%);
+  padding: 22px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 14px;
+  background: var(--dsw-alias-bg-layer-2);
+  box-shadow: var(--dsw-alias-elevation-shadow-l3);
+}
+.dshm-dialog h2 { margin: 0 0 10px; font-size: 18px; font-weight: 600; line-height: 26px; }
+.dshm-dialog p { margin: 0; color: var(--dsw-alias-label-secondary); font-size: 13px; line-height: 20px; }
+.dshm-dialog-plugin { margin-top: 16px !important; color: var(--dsw-alias-label-primary) !important; }
+.dshm-dialog-meta { margin-top: 3px !important; color: var(--dsw-alias-label-tertiary) !important; font-size: 11px !important; }
+.dshm-dialog-actions { margin-top: 22px; display: flex; justify-content: flex-end; gap: 8px; }
+.dshm-button--danger { color: var(--dsw-alias-label-error); }
 .dshm-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 @media (max-width: 980px) {
   .dshm-page { padding: 24px 22px; }
@@ -240,6 +315,7 @@ const styles = `
   .dshm-more-filters { border: 0; }
   .dshm-plugin-row { grid-template-columns: 52px minmax(160px, 1fr) auto; }
   .dshm-plugin-state { display: none; }
+  .dshm-installed-state { display: none; }
 }
 @media (max-width: 720px) {
   .dshm-page { padding: 18px 16px; }
@@ -250,6 +326,10 @@ const styles = `
   .dshm-plugin-row { grid-template-columns: 44px minmax(0, 1fr); gap: 10px; }
   .dshm-plugin-cover { width: 44px; height: 44px; }
   .dshm-plugin-actions { grid-column: 2; grid-template-columns: 1fr auto; }
+  .dshm-installed-actions { grid-template-columns: repeat(3, auto); justify-content: start; }
+  .dshm-installed-details { grid-column: 1 / -1; }
+  .dshm-installed-intro { display: block; }
+  .dshm-installed-intro p:last-child { margin-top: 5px; text-align: left; }
   .dshm-results-toolbar { align-items: flex-end; }
   .dshm-results-controls { flex-wrap: wrap; justify-content: flex-end; }
 }

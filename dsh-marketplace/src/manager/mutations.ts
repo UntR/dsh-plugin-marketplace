@@ -93,6 +93,11 @@ export class MutationManager {
           args = ['plugin', '--profile', this.installed.profileName, 'add', detail.install.spec]
           version = detail.install.version
         }
+      } else if (plugin.source.kind === 'npm' && plugin.update.available && plugin.update.latestVersion !== null) {
+        args = [
+          'plugin', '--profile', this.installed.profileName, 'add', `${packageName}@${plugin.update.latestVersion}`,
+        ]
+        version = plugin.update.latestVersion
       }
       const command = await this.runner.run(args)
       return {

@@ -4,12 +4,13 @@ import type { LocaleKey } from './locales.js'
 
 interface Props {
   plugin: InstalledPlugin
+  profile: string
   t: (key: LocaleKey) => string
   onClose: () => void
   onConfirm: () => void
 }
 
-export function RemoveDialog({ plugin, t, onClose, onConfirm }: Props) {
+export function RemoveDialog({ plugin, profile, t, onClose, onConfirm }: Props) {
   const dialog = useRef<HTMLDivElement>(null)
   const cancel = useRef<HTMLButtonElement>(null)
   useEffect(() => {
@@ -36,28 +37,21 @@ export function RemoveDialog({ plugin, t, onClose, onConfirm }: Props) {
     }
   }, [onClose])
   return (
-    <div role="presentation" style={overlayStyle} onMouseDown={event => {
+    <div role="presentation" className="dshm-dialog-overlay" onMouseDown={event => {
       if (event.target === event.currentTarget) onClose()
     }}>
-      <div ref={dialog} role="dialog" aria-modal="true" aria-labelledby="remove-dialog-title" style={dialogStyle}>
+      <div ref={dialog} role="dialog" aria-modal="true" aria-labelledby="remove-dialog-title" className="dshm-dialog">
         <h2 id="remove-dialog-title">{t('removePluginTitle')}</h2>
-        <p><strong>{plugin.packageName}</strong></p>
+        <p className="dshm-dialog-plugin"><strong>{plugin.display.name}</strong></p>
         <p>{plugin.self ? t('selfRemoveConfirm') : t('removeConfirm')}</p>
-        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.5rem' }}>
-          <button ref={cancel} type="button" onClick={onClose}>{t('cancel')}</button>
-          <button type="button" onClick={onConfirm}>{plugin.self ? t('removeMarketplace') : t('remove')}</button>
+        <p className="dshm-dialog-meta">{t('currentProfile')}: <strong>{profile}</strong></p>
+        <div className="dshm-dialog-actions">
+          <button ref={cancel} type="button" className="dshm-button" onClick={onClose}>{t('cancel')}</button>
+          <button type="button" className="dshm-button dshm-button--danger" onClick={onConfirm}>
+            {plugin.self ? t('removeMarketplace') : t('remove')}
+          </button>
         </div>
       </div>
     </div>
   )
 }
-
-const overlayStyle = {
-  position: 'fixed', inset: 0, background: 'rgba(0, 0, 0, 0.55)', display: 'grid',
-  placeItems: 'center', padding: '1rem', zIndex: 1000,
-} as const
-
-const dialogStyle = {
-  width: 'min(30rem, 100%)', background: 'var(--dsw-alias-bg-layer-2)', color: 'inherit',
-  borderRadius: '0.75rem', padding: '1.25rem',
-} as const
