@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./octie/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-15T18:55:03.756Z",
+    "enrichedAt": "2026-08-15T20:46:24.060Z",
     "enrichmentStatus": "ok",
-    "headSha": "0ea8102489bb5b2fd35ab870cfc40a18099e3300"
+    "headSha": "16555d8f9d461e6e1dda5041be30b6fdc2a116cb"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-14T21:11:28Z",
     "databaseId": 1334581157,
     "defaultBranch": "main",
-    "description": "Octie refactored as a DeepSeek Harness bundle plugin: durable DAG task-graph state machine with octie_* tools, octie Cordis service, and events.",
+    "description": "State-oriented task graph kernel for the agentic era - a DeepSeek Harness bundle: 13 octie_* tools, octie Cordis service & events, realtime DAG task panel, bundled agent preset. State is derived, not set.",
     "fork": false,
     "forks": 1,
-    "headSha": "0ea8102489bb5b2fd35ab870cfc40a18099e3300",
+    "headSha": "16555d8f9d461e6e1dda5041be30b6fdc2a116cb",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -30,7 +30,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/68600511?u=2f7c9dd306f45a7c71e1b258e019e3614acb2ec9&v=4",
       "login": "StarChen-Cycler"
     },
-    "pushedAt": "2026-08-15T18:26:12Z",
+    "pushedAt": "2026-08-15T20:41:08Z",
     "slug": "StarChen-Cycler/octie-dsh-plugin",
     "stars": 3,
     "topics": [
@@ -41,32 +41,48 @@
       "octie",
       "task-management"
     ],
-    "updatedAt": "2026-08-15T18:26:48Z",
+    "updatedAt": "2026-08-15T20:41:12Z",
     "url": "https://github.com/StarChen-Cycler/octie-dsh-plugin"
   },
   "id": "gh:1334581157",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "octie-cli",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:StarChen-Cycler/octie-dsh-plugin#16555d8f9d461e6e1dda5041be30b6fdc2a116cb",
+    "version": "1.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./octie/plugin/index.mjs",
+      "./client": "./octie/client.js",
+      "./cordis.patch.yml": "./octie/cordis.patch.yml",
+      "./core": {
+        "import": "./octie/dist/index.js",
+        "types": "./octie/dist/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./octie/plugin/index.mjs",
+    "name": "octie-cli",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1334581157/360f465e-b00a-4933-a789-4fe154089c13",
-    "description": "Octie refactored as a DeepSeek Harness bundle plugin: durable DAG task-graph state machine with octie_* tools, octie Cordis service, and events."
+    "description": "State-oriented task graph kernel for the agentic era - a DeepSeek Harness bundle: 13 octie_* tools, octie Cordis service & events, realtime DAG task panel, bundled agent preset. State is derived, not set."
   },
   "readme": {
     "available": true,
-    "excerpt": "Octie，重构为 DeepSeek Harness（DSH）可安装的 bundle 插件。"
+    "excerpt": "Octie —— agent 时代的状态导向任务图内核（state-oriented task graph kernel）， 重构为 DeepSeek Harness（DSH）可安装的 bundle 插件。State is derived, not set： 状态只读派生，而非手工设置——the task layer that every agent framework can call。"
   },
   "schemaVersion": 1,
   "scripts": {
