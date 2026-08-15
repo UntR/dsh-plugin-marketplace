@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-15T07:03:13.343Z",
+    "enrichedAt": "2026-08-15T16:47:47.441Z",
     "enrichmentStatus": "ok",
-    "headSha": "0aff8483d409c500494e2fd9aff102c3d910704d"
+    "headSha": "0a8390b693827328a3d0d1ecc8568918a0fdab65"
   },
   "github": {
     "archived": false,
@@ -17,22 +17,22 @@
     "description": "Multi-session agent status monitor for DeepSeek Harness.",
     "fork": false,
     "forks": 0,
-    "headSha": "0aff8483d409c500494e2fd9aff102c3d910704d",
+    "headSha": "0a8390b693827328a3d0d1ecc8568918a0fdab65",
     "homepageUrl": null,
-    "language": null,
+    "language": "TypeScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT5AcbQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f2955f58838b3870218eb60e8edec0abd77da72e94752693d66c42c6b7a269f2/yimeng-dev/dsh-traffic-light",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/44c3308c8b5e66f5c735e9849a021fba5144e0665c12c958f1c22d50d6e46d93/yimeng-dev/dsh-traffic-light",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/141389826?v=4",
       "login": "yimeng-dev"
     },
-    "pushedAt": "2026-08-15T06:21:06Z",
+    "pushedAt": "2026-08-15T16:41:51Z",
     "slug": "yimeng-dev/dsh-traffic-light",
-    "stars": 1,
+    "stars": 2,
     "topics": [
       "agent-monitor",
       "deepseek",
@@ -40,7 +40,7 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-15T06:29:02Z",
+    "updatedAt": "2026-08-15T16:43:50Z",
     "url": "https://github.com/yimeng-dev/dsh-traffic-light"
   },
   "id": "gh:1334844525",
@@ -48,24 +48,38 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/host/index.js",
+        "types": "./dist/host/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/host/index.js",
+    "name": "dsh-traffic-light",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f2955f58838b3870218eb60e8edec0abd77da72e94752693d66c42c6b7a269f2/yimeng-dev/dsh-traffic-light",
+    "coverUrl": "https://opengraph.githubassets.com/44c3308c8b5e66f5c735e9849a021fba5144e0665c12c958f1c22d50d6e46d93/yimeng-dev/dsh-traffic-light",
     "description": "Multi-session agent status monitor for DeepSeek Harness."
   },
   "readme": {
     "available": true,
-    "excerpt": "Multi-session agent status monitor for DeepSeek Harness."
+    "excerpt": "在终端执行："
   },
   "schemaVersion": 1,
   "scripts": {
