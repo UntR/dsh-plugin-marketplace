@@ -1,33 +1,36 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-15T01:54:13.844Z",
+    "enrichedAt": "2026-08-15T03:09:19.218Z",
     "enrichmentStatus": "ok",
-    "headSha": null
+    "headSha": "15576bd292d8f56cde4456759b7d562953992ff8"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-15T01:32:15Z",
     "databaseId": 1334706363,
-    "defaultBranch": null,
+    "defaultBranch": "main",
     "description": "Scheduled tasks (cron) for DeepSeek Harness: model- and human-callable scheduling that fires followup/inject into agent sessions",
     "fork": false,
     "forks": 0,
-    "headSha": null,
+    "headSha": "15576bd292d8f56cde4456759b7d562953992ff8",
     "homepageUrl": null,
-    "language": null,
-    "license": null,
+    "language": "TypeScript",
+    "license": {
+      "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+      "spdxId": "BSD-3-Clause"
+    },
     "nodeId": "R_kgDOT44Auw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/4efdf06f16e8130946093bb7f7516e65c033b32fc3185d7d45a09f98dde1aec3/omdsh-dev/dsh-cron",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/22541791686321457d041666da26ea57e6d8203f14e1350f9cb8b2549ddbb30c/omdsh-dev/dsh-cron",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/312905287?v=4",
       "login": "omdsh-dev"
     },
-    "pushedAt": "2026-08-15T01:32:16Z",
+    "pushedAt": "2026-08-15T02:48:40Z",
     "slug": "omdsh-dev/dsh-cron",
     "stars": 0,
     "topics": [
@@ -36,38 +39,52 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-15T01:37:34Z",
+    "updatedAt": "2026-08-15T02:48:44Z",
     "url": "https://github.com/omdsh-dev/dsh-cron"
   },
   "id": "gh:1334706363",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-cron",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:omdsh-dev/dsh-cron#15576bd292d8f56cde4456759b7d562953992ff8",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-cron",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/4efdf06f16e8130946093bb7f7516e65c033b32fc3185d7d45a09f98dde1aec3/omdsh-dev/dsh-cron",
+    "coverUrl": "https://opengraph.githubassets.com/22541791686321457d041666da26ea57e6d8203f14e1350f9cb8b2549ddbb30c/omdsh-dev/dsh-cron",
     "description": "Scheduled tasks (cron) for DeepSeek Harness: model- and human-callable scheduling that fires followup/inject into agent sessions"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Scheduled tasks for DeepSeek Harness: five-field cron calendar rules and cross-session durable jobs that fire a follow-up turn or an injected notice into agent sessions."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

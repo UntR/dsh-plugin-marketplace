@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T20:50:46.893Z",
+    "enrichedAt": "2026-08-15T03:09:19.218Z",
     "enrichmentStatus": "ok",
-    "headSha": "34900125f0dd01d3ea309fdda8ba386451784ad7"
+    "headSha": "659d38cad7d1c7a83239934f8b31b4fb1870f928"
   },
   "github": {
     "archived": false,
@@ -17,52 +17,63 @@
     "description": "DSH plugin: model sampling sliders (temperature/maxTokens) with hot & persist modes, for all providers",
     "fork": false,
     "forks": 0,
-    "headSha": "34900125f0dd01d3ea309fdda8ba386451784ad7",
+    "headSha": "659d38cad7d1c7a83239934f8b31b4fb1870f928",
     "homepageUrl": null,
-    "language": "JavaScript",
+    "language": "TypeScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4vF9g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/25b183d2013227dadba9561ceb92d516fce6ddc056e0b5aa4abbfb565c12591d/Semidia/dsh-sampling-sliders",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e7de8e80570fb36c2020fc7275cd397adda6104e0b60254d8f073620d66f9e1e/Semidia/dsh-sampling-sliders",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/128688039?v=4",
       "login": "Semidia"
     },
-    "pushedAt": "2026-08-14T20:37:34Z",
+    "pushedAt": "2026-08-15T02:39:28Z",
     "slug": "Semidia/dsh-sampling-sliders",
     "stars": 1,
     "topics": [
       "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-15T00:59:17Z",
+    "updatedAt": "2026-08-15T02:39:44Z",
     "url": "https://github.com/Semidia/dsh-sampling-sliders"
   },
   "id": "gh:1334560246",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-sampling-sliders",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Semidia/dsh-sampling-sliders#659d38cad7d1c7a83239934f8b31b4fb1870f928",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/index.js",
+      "./client": "./dist/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-sampling-sliders",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/25b183d2013227dadba9561ceb92d516fce6ddc056e0b5aa4abbfb565c12591d/Semidia/dsh-sampling-sliders",
+    "coverUrl": "https://opengraph.githubassets.com/e7de8e80570fb36c2020fc7275cd397adda6104e0b60254d8f073620d66f9e1e/Semidia/dsh-sampling-sliders",
     "description": "DSH plugin: model sampling sliders (temperature/maxTokens) with hot & persist modes, for all providers"
   },
   "readme": {
     "available": true,
-    "excerpt": "English · 中文"
+    "excerpt": "模型采样参数滑杆 — DeepSeek Harness (DSH) 插件。输入栏「采样」按钮弹出面板，用 temperature / maxTokens 滑杆微调每次模型调用的采样参数，经 agent/request 钩子作用于所有 Provider（官方 DeepSeek 与第三方接入）。"
   },
   "schemaVersion": 1,
   "scripts": {
