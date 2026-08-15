@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T17:16:20.483Z",
+    "enrichedAt": "2026-08-15T10:44:21.083Z",
     "enrichmentStatus": "ok",
-    "headSha": "e90a69ca9865568ab85eb46c47118986b4c7685b"
+    "headSha": "a2e81b01c0598c9df3602900be94319dbfba6a4d"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Durable Git worktree isolation and delivery plugin for DeepSeek Harness",
     "fork": false,
     "forks": 0,
-    "headSha": "e90a69ca9865568ab85eb46c47118986b4c7685b",
+    "headSha": "a2e81b01c0598c9df3602900be94319dbfba6a4d",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4g1GQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/1ba57d5955a9f49a57d3f5d90a4d4362e5c227909e66eec5fd4b3cb5b11d62cc/paradoxSCH/dsh-worktree",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/fb2a29029f87f09200aea68997f677d80cb2a9e3fea39edaca3940ac32261d04/paradoxSCH/dsh-worktree",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/64133628?u=b61b67ca18707b6b436603d05bd7c8059e514484&v=4",
       "login": "paradoxSCH"
     },
-    "pushedAt": "2026-08-14T15:36:50Z",
+    "pushedAt": "2026-08-15T09:41:11Z",
     "slug": "paradoxSCH/dsh-worktree",
     "stars": 2,
     "topics": [
@@ -39,23 +39,23 @@
       "dsh-plugin",
       "git-worktree"
     ],
-    "updatedAt": "2026-08-15T00:59:49Z",
+    "updatedAt": "2026-08-15T09:41:15Z",
     "url": "https://github.com/paradoxSCH/dsh-worktree"
   },
   "id": "gh:1334326553",
   "install": {
     "available": true,
-    "packageName": "dsh-worktree",
+    "packageName": "@paradoxsch/dsh-worktree",
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:paradoxSCH/dsh-worktree#e90a69ca9865568ab85eb46c47118986b4c7685b",
+    "spec": "github:paradoxSCH/dsh-worktree#a2e81b01c0598c9df3602900be94319dbfba6a4d",
     "version": "0.1.0-alpha.1"
   },
   "npm": {
-    "latestVersion": "0.1.0",
-    "published": true,
-    "repositoryMatches": false
+    "latestVersion": null,
+    "published": false,
+    "repositoryMatches": null
   },
   "package": {
     "exports": {
@@ -63,22 +63,34 @@
         "default": "./lib/index.js",
         "types": "./lib/index.d.ts"
       },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./commands": {
+        "default": "./lib/commands.js",
+        "types": "./lib/commands.d.ts"
+      },
       "./cordis.patch.yml": "./cordis.patch.yml",
-      "./package.json": "./package.json"
+      "./package.json": "./package.json",
+      "./tools": {
+        "default": "./lib/tools.js",
+        "types": "./lib/tools.d.ts"
+      }
     },
     "main": "lib/index.js",
-    "name": "dsh-worktree",
+    "name": "@paradoxsch/dsh-worktree",
     "status": "valid",
     "type": "module",
     "version": "0.1.0-alpha.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/1ba57d5955a9f49a57d3f5d90a4d4362e5c227909e66eec5fd4b3cb5b11d62cc/paradoxSCH/dsh-worktree",
+    "coverUrl": "https://opengraph.githubassets.com/fb2a29029f87f09200aea68997f677d80cb2a9e3fea39edaca3940ac32261d04/paradoxSCH/dsh-worktree",
     "description": "Durable Git worktree isolation and delivery plugin for DeepSeek Harness"
   },
   "readme": {
     "available": true,
-    "excerpt": "面向 DeepSeek Harness 的独立 Git worktree 插件。每个子代理在受管理的 checkout 中工作，主工作区不会被并发任务直接修改；任务结束后，插件根据精确状态指纹安全清理或保留结果。"
+    "excerpt": "面向 DeepSeek Harness 的独立、可全局安装的 Git worktree 产品。每个 one-shot 或 continuable 子代理在受管理的 checkout 中工作；主工作区不会被并发任务直接修改。任务结束后可在同一套持久化状态上审阅、验证、提交、交付、归档或恢复。"
   },
   "schemaVersion": 1,
   "scripts": {
