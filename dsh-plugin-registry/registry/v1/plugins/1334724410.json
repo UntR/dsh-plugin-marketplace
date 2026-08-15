@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./dsh-plugin-session-terminal/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-15T03:09:19.218Z",
+    "enrichedAt": "2026-08-15T04:52:11.563Z",
     "enrichmentStatus": "ok",
-    "headSha": "0344fda001c4afae76c8e1b4903a336671971ef6"
+    "headSha": "01b3d623bc377c74e6288f381f4926c9cd62cc3d"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-15T02:12:22Z",
     "databaseId": 1334724410,
     "defaultBranch": "main",
-    "description": "在会话视图环中新增“终端”页签，实时展示当前会话执行的bash命令、结果与执行时间（精确到秒）。纯前端观察，不提供执行/交互能力，不会修改命令。",
+    "description": "原生UI界面。在会话视图环中新增“终端”页签，实时展示当前会话执行的bash命令、结果与执行时间（精确到秒）。纯前端观察，不提供执行/交互能力，不会修改命令。",
     "fork": false,
     "forks": 0,
-    "headSha": "0344fda001c4afae76c8e1b4903a336671971ef6",
+    "headSha": "01b3d623bc377c74e6288f381f4926c9cd62cc3d",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,40 +25,52 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT45HOg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/22781a7dc2ca5fc055b618a235ff510e4b79948daf5d9f5be633887aa9fb16a8/GHJIVHIDD/dsh-plugin-session-terminal",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/24c82babe470eeca2d09af9c54600af04658436cd7592a12ebd27248096b9993/GHJIVHIDD/dsh-plugin-session-terminal",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/95120131?v=4",
       "login": "GHJIVHIDD"
     },
-    "pushedAt": "2026-08-15T03:08:26Z",
+    "pushedAt": "2026-08-15T03:54:39Z",
     "slug": "GHJIVHIDD/dsh-plugin-session-terminal",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "dsh-plugin",
+      "dsh-plugin-market",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-08-15T03:08:21Z",
+    "updatedAt": "2026-08-15T04:36:11Z",
     "url": "https://github.com/GHJIVHIDD/dsh-plugin-session-terminal"
   },
   "id": "gh:1334724410",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@deepseek-ai/dsh-plugin-session-terminal",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:GHJIVHIDD/dsh-plugin-session-terminal#01b3d623bc377c74e6288f381f4926c9cd62cc3d",
+    "version": "0.0.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dsh-plugin-session-terminal/lib/index.js",
+      "./client": "./dsh-plugin-session-terminal/lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "dsh-plugin-session-terminal/lib/index.js",
+    "name": "@deepseek-ai/dsh-plugin-session-terminal",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/22781a7dc2ca5fc055b618a235ff510e4b79948daf5d9f5be633887aa9fb16a8/GHJIVHIDD/dsh-plugin-session-terminal",
-    "description": "在会话视图环中新增“终端”页签，实时展示当前会话执行的bash命令、结果与执行时间（精确到秒）。纯前端观察，不提供执行/交互能力，不会修改命令。"
+    "coverUrl": "https://opengraph.githubassets.com/24c82babe470eeca2d09af9c54600af04658436cd7592a12ebd27248096b9993/GHJIVHIDD/dsh-plugin-session-terminal",
+    "description": "原生UI界面。在会话视图环中新增“终端”页签，实时展示当前会话执行的bash命令、结果与执行时间（精确到秒）。纯前端观察，不提供执行/交互能力，不会修改命令。"
   },
   "readme": {
     "available": true,
@@ -69,6 +81,6 @@
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

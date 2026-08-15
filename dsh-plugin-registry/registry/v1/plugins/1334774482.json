@@ -1,0 +1,154 @@
+{
+  "bundle": {
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
+  },
+  "crawl": {
+    "enrichedAt": "2026-08-15T04:52:11.563Z",
+    "enrichmentStatus": "ok",
+    "headSha": "8eaa82614dac9e430b6f66e2027b68ea81a0346e"
+  },
+  "github": {
+    "archived": false,
+    "createdAt": "2026-08-15T03:57:03Z",
+    "databaseId": 1334774482,
+    "defaultBranch": "main",
+    "description": "Out-of-tree DeepSeek Harness plugin for workspace-scoped Cordis configuration, agent presets, and MCP routing",
+    "fork": false,
+    "forks": 0,
+    "headSha": "8eaa82614dac9e430b6f66e2027b68ea81a0346e",
+    "homepageUrl": null,
+    "language": "TypeScript",
+    "license": {
+      "name": "MIT License",
+      "spdxId": "MIT"
+    },
+    "nodeId": "R_kgDOT48K0g",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/1d755705b552a0e40007d7ae72f7573ce6116eb7a9fd506e91eb7bf754ad5038/TTTPOB/dsh-workspace-overlay",
+    "owner": {
+      "avatarUrl": "https://avatars.githubusercontent.com/u/19909103?u=cb1cf2b58508c5506294eba7e4dddcf417b14549&v=4",
+      "login": "TTTPOB"
+    },
+    "pushedAt": "2026-08-15T03:57:20Z",
+    "slug": "TTTPOB/dsh-workspace-overlay",
+    "stars": 0,
+    "topics": [
+      "dsh-plugin"
+    ],
+    "updatedAt": "2026-08-15T03:57:45Z",
+    "url": "https://github.com/TTTPOB/dsh-workspace-overlay"
+  },
+  "id": "gh:1334774482",
+  "install": {
+    "available": false,
+    "packageName": null,
+    "preferred": null,
+    "reason": "Repository does not expose a ready package entry point.",
+    "requiresBuildApproval": false,
+    "spec": null,
+    "version": null
+  },
+  "npm": {
+    "latestVersion": null,
+    "published": false,
+    "repositoryMatches": null
+  },
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/registry.js",
+        "types": "./dist/registry.d.ts"
+      },
+      "./agent-integration": {
+        "default": "./dist/agent-integration.js",
+        "types": "./dist/agent-integration.d.ts"
+      },
+      "./agent-presets-decorator": {
+        "default": "./dist/agent-presets-decorator.js",
+        "types": "./dist/agent-presets-decorator.d.ts"
+      },
+      "./agent-registry-decorator": {
+        "default": "./dist/agent-registry-decorator.js",
+        "types": "./dist/agent-registry-decorator.d.ts"
+      },
+      "./coordinator": {
+        "default": "./dist/coordinator.js",
+        "types": "./dist/coordinator.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./integration-plugin": {
+        "default": "./dist/integration-plugin.js",
+        "types": "./dist/integration-plugin.d.ts"
+      },
+      "./mcp": {
+        "default": "./dist/mcp/index.js",
+        "types": "./dist/mcp/index.d.ts"
+      },
+      "./mcp/config": {
+        "default": "./dist/mcp/config.js",
+        "types": "./dist/mcp/config.d.ts"
+      },
+      "./mcp/connection": {
+        "default": "./dist/mcp/connection.js",
+        "types": "./dist/mcp/connection.d.ts"
+      },
+      "./mcp/manager": {
+        "default": "./dist/mcp/manager.js",
+        "types": "./dist/mcp/manager.d.ts"
+      },
+      "./mcp/tools": {
+        "default": "./dist/mcp/tools.js",
+        "types": "./dist/mcp/tools.d.ts"
+      },
+      "./mcp/transport": {
+        "default": "./dist/mcp/transport.js",
+        "types": "./dist/mcp/transport.d.ts"
+      },
+      "./mcp/types": {
+        "default": "./dist/mcp/types.js",
+        "types": "./dist/mcp/types.d.ts"
+      },
+      "./mcp/workspace-client": {
+        "default": "./dist/mcp/workspace-client.js",
+        "types": "./dist/mcp/workspace-client.d.ts"
+      },
+      "./method-wrapper": {
+        "default": "./dist/method-wrapper.js",
+        "types": "./dist/method-wrapper.d.ts"
+      },
+      "./registry": {
+        "default": "./dist/registry.js",
+        "types": "./dist/registry.d.ts"
+      },
+      "./workspace-presets": {
+        "default": "./dist/workspace-presets.js",
+        "types": "./dist/workspace-presets.d.ts"
+      },
+      "./workspace-tree": {
+        "default": "./dist/workspace-tree.js",
+        "types": "./dist/workspace-tree.d.ts"
+      }
+    },
+    "main": "./dist/registry.js",
+    "name": "dsh-workspace-overlay",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
+  "presentation": {
+    "coverUrl": "https://opengraph.githubassets.com/1d755705b552a0e40007d7ae72f7573ce6116eb7a9fd506e91eb7bf754ad5038/TTTPOB/dsh-workspace-overlay",
+    "description": "Out-of-tree DeepSeek Harness plugin for workspace-scoped Cordis configuration, agent presets, and MCP routing"
+  },
+  "readme": {
+    "available": true,
+    "excerpt": "DSH 树外插件：为每个 canonical workspace 路径提供共享的 Cordis scope（workspaceCordis service）。同一 workspace 的所有消费者（session、agent）租用同一个 scope；最后一个租约释放时 scope 被 dispose。可选地，首个租约会把 /.dsh/cordis.yml 挂载为该 workspace 的 Cordis composition；bundle 同时接线 Agent 集成：ctx.agents.create/resume 前置 workspace 绑定，官方 "
+  },
+  "schemaVersion": 1,
+  "scripts": {
+    "install": false,
+    "postinstall": false,
+    "preinstall": false,
+    "prepare": false
+  }
+}
