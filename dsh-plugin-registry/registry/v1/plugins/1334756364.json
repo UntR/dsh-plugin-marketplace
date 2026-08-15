@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-15T04:52:11.563Z",
+    "enrichedAt": "2026-08-15T13:04:52.257Z",
     "enrichmentStatus": "ok",
-    "headSha": "3af4bb19eb188283a59c192dfa0deb33098f3d04"
+    "headSha": "17d64af443006e9cdd91dafef2dc26f4dd8eb71a"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness 插件：把文本形式的会话统计（轮/步、LLM/工具耗时、首 token、tok/s、缓存命中、输入/输出 token）替换为页面右侧直观醒目的图表面板。",
     "fork": false,
     "forks": 0,
-    "headSha": "3af4bb19eb188283a59c192dfa0deb33098f3d04",
+    "headSha": "17d64af443006e9cdd91dafef2dc26f4dd8eb71a",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,30 +25,30 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT47EDA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/47fd7e54b8ef0efdb70a4143291f3720342bae1266a9e5cb27617fafbb06f813/Yaing-Yan/dsh-better-status",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a5648be9da8d762354fe116af60962f86e2ce92edb61241e1d2f3259baf95a1a/Yaing-Yan/dsh-better-status",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/244255438?v=4",
       "login": "Yaing-Yan"
     },
-    "pushedAt": "2026-08-15T03:31:45Z",
+    "pushedAt": "2026-08-15T12:46:35Z",
     "slug": "Yaing-Yan/dsh-better-status",
     "stars": 1,
     "topics": [
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-15T03:32:26Z",
+    "updatedAt": "2026-08-15T12:46:55Z",
     "url": "https://github.com/Yaing-Yan/dsh-better-status"
   },
   "id": "gh:1334756364",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-better-status",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Yaing-Yan/dsh-better-status#17d64af443006e9cdd91dafef2dc26f4dd8eb71a",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
@@ -56,19 +56,24 @@
     "repositoryMatches": null
   },
   "package": {
-    "main": null,
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
     "name": "dsh-better-status",
     "status": "valid",
-    "type": null,
+    "type": "module",
     "version": "1.0.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/47fd7e54b8ef0efdb70a4143291f3720342bae1266a9e5cb27617fafbb06f813/Yaing-Yan/dsh-better-status",
+    "coverUrl": "https://opengraph.githubassets.com/a5648be9da8d762354fe116af60962f86e2ce92edb61241e1d2f3259baf95a1a/Yaing-Yan/dsh-better-status",
     "description": "DeepSeek Harness 插件：把文本形式的会话统计（轮/步、LLM/工具耗时、首 token、tok/s、缓存命中、输入/输出 token）替换为页面右侧直观醒目的图表面板。"
   },
   "readme": {
     "available": true,
-    "excerpt": "A DeepSeek Harness dynamic Cordis plugin that replaces the plain-text session stats line with a compact, eye-catching chart panel docked to the right side of the page, refreshed every second, plus estimated cost and DeepSeek account balance."
+    "excerpt": "A real (auto-loading) DeepSeek Harness plugin that replaces the plain-text session stats line with a compact, eye-catching chart panel docked to the right side of the page, refreshed every second, plus estimated cost and DeepSeek account balance."
   },
   "schemaVersion": 1,
   "scripts": {
