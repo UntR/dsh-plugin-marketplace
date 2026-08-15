@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-15T13:04:52.257Z",
+    "enrichedAt": "2026-08-15T18:55:03.756Z",
     "enrichmentStatus": "ok",
-    "headSha": "8a59f6566258665b22b63d5f07fdd37fba46db11"
+    "headSha": "994465be9fff633a20ad582caeee2741fbba9ea3"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-13T18:36:23Z",
     "databaseId": 1333429820,
     "defaultBranch": "main",
-    "description": "Native capability guide for DeepSeek Harness — installable DSH runtime plugin, Agent Skill, and CLI.",
+    "description": "Task-aware native capability manager for DeepSeek Harness — use, prepare, and verify built-in DSH tools before adding another plugin.",
     "fork": false,
     "forks": 0,
-    "headSha": "8a59f6566258665b22b63d5f07fdd37fba46db11",
+    "headSha": "994465be9fff633a20ad582caeee2741fbba9ea3",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,17 +25,19 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT3qGPA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b34024c6f3940c7900035e6bc1f4fab5a834108072d3a25a8897fee7214c6e45/cyanseek/dsh-native-playbook",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/4d8b7bef9f6b053d033137bd78e21319fbf02bd54902e66d201915a9b03deff3/cyanseek/dsh-native-playbook",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/289931646?v=4",
       "login": "cyanseek"
     },
-    "pushedAt": "2026-08-13T19:44:50Z",
+    "pushedAt": "2026-08-15T17:14:18Z",
     "slug": "cyanseek/dsh-native-playbook",
     "stars": 1,
     "topics": [
       "agent-skills",
       "ai-agents",
+      "automation",
+      "capability-manager",
       "cli",
       "codex",
       "coding-agent",
@@ -44,11 +46,13 @@
       "developer-tools",
       "dsh",
       "dsh-plugin",
+      "lsp",
       "playbook",
+      "session",
       "subagents",
       "workflow"
     ],
-    "updatedAt": "2026-08-15T00:59:30Z",
+    "updatedAt": "2026-08-15T17:20:03Z",
     "url": "https://github.com/cyanseek/dsh-native-playbook"
   },
   "id": "gh:1333429820",
@@ -57,9 +61,9 @@
     "packageName": "dsh-native-playbook",
     "preferred": "github",
     "reason": null,
-    "requiresBuildApproval": true,
-    "spec": "github:cyanseek/dsh-native-playbook#8a59f6566258665b22b63d5f07fdd37fba46db11",
-    "version": "0.1.0"
+    "requiresBuildApproval": false,
+    "spec": "github:cyanseek/dsh-native-playbook#994465be9fff633a20ad582caeee2741fbba9ea3",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
@@ -75,27 +79,31 @@
       "./plugin": {
         "import": "./dist/plugin.js",
         "types": "./dist/plugin.d.ts"
+      },
+      "./session-query": {
+        "import": "./dist/session-query.js",
+        "types": "./dist/session-query.d.ts"
       }
     },
     "main": "./dist/api.js",
     "name": "dsh-native-playbook",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.2.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b34024c6f3940c7900035e6bc1f4fab5a834108072d3a25a8897fee7214c6e45/cyanseek/dsh-native-playbook",
-    "description": "Native capability guide for DeepSeek Harness — installable DSH runtime plugin, Agent Skill, and CLI."
+    "coverUrl": "https://opengraph.githubassets.com/4d8b7bef9f6b053d033137bd78e21319fbf02bd54902e66d201915a9b03deff3/cyanseek/dsh-native-playbook",
+    "description": "Task-aware native capability manager for DeepSeek Harness — use, prepare, and verify built-in DSH tools before adding another plugin."
   },
   "readme": {
     "available": true,
-    "excerpt": "Use what DeepSeek Harness already ships before building more."
+    "excerpt": "Unlock the DeepSeek Harness you already installed."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": true
+    "prepare": false
   }
 }
