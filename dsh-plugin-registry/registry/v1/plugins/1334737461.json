@@ -1,74 +1,99 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-15T03:09:19.218Z",
+    "enrichedAt": "2026-08-15T07:03:13.343Z",
     "enrichmentStatus": "ok",
-    "headSha": "3e54bf67cc5fb2647b313d2c60d06f8b9b7aafe8"
+    "headSha": "19f316cc72af56877d775bd8a925d082ccf83af2"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-15T02:38:57Z",
     "databaseId": 1334737461,
     "defaultBranch": "main",
-    "description": "Click any UI element in your running dev page to jump to its Vue / React / Svelte / Angular source. A click-to-source inspector for DeepSeek Harness (dsh-better-sidebar): preview local dev servers, pick an element, and the source location lands in the DSH chat for the agent to tweak.",
+    "description": "在开发页面点击任意 UI 元素，一键定位 Vue / React / Svelte / Angular 源码。DSH 点击定位源码检查器，兼容 dsh-better-sidebar：预览本地 dev server，点击元素，源码直达 DSH 聊天，交给助手微调。Click a UI element in your dev page to jump to its Vue / React / Svelte / Angular source in the DSH chat. DeepSeek Harness click-to-source inspector, dsh-better-sidebar compatible.",
     "fork": false,
     "forks": 0,
-    "headSha": "3e54bf67cc5fb2647b313d2c60d06f8b9b7aafe8",
+    "headSha": "19f316cc72af56877d775bd8a925d082ccf83af2",
     "homepageUrl": null,
-    "language": null,
+    "language": "TypeScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT456NQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/318aa34ff3764d91e18dd3e6ac3c81524a8240aa5fe2fcbfad1b7c5f573700a7/GULI-lab/DSH-element-source",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/6457daae69fcad89794018b168f9e70b20705389db89d0d2cae9f905b23a1da7/GULI-lab/DSH-element-source",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/191756896?v=4",
       "login": "GULI-lab"
     },
-    "pushedAt": "2026-08-15T02:38:58Z",
+    "pushedAt": "2026-08-15T05:19:19Z",
     "slug": "GULI-lab/DSH-element-source",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "dsh",
-      "dsh-plugin"
+      "dsh-better-sidebar",
+      "dsh-plugin",
+      "react",
+      "vue"
     ],
-    "updatedAt": "2026-08-15T02:56:36Z",
+    "updatedAt": "2026-08-15T05:19:23Z",
     "url": "https://github.com/GULI-lab/DSH-element-source"
   },
   "id": "gh:1334737461",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-element-source",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-element-source@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./inject.js": "./lib/inject.js",
+      "./package.json": "./package.json",
+      "./vite-plugin": {
+        "default": "./lib/vite-plugin.js",
+        "types": "./vite-plugin/index.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-element-source",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/318aa34ff3764d91e18dd3e6ac3c81524a8240aa5fe2fcbfad1b7c5f573700a7/GULI-lab/DSH-element-source",
-    "description": "Click any UI element in your running dev page to jump to its Vue / React / Svelte / Angular source. A click-to-source inspector for DeepSeek Harness (dsh-better-sidebar): preview local dev servers, pick an element, and the source location lands in the DSH chat for the agent to tw"
+    "coverUrl": "https://opengraph.githubassets.com/6457daae69fcad89794018b168f9e70b20705389db89d0d2cae9f905b23a1da7/GULI-lab/DSH-element-source",
+    "description": "在开发页面点击任意 UI 元素，一键定位 Vue / React / Svelte / Angular 源码。DSH 点击定位源码检查器，兼容 dsh-better-sidebar：预览本地 dev server，点击元素，源码直达 DSH 聊天，交给助手微调。Click a UI element in your dev page to jump to its Vue / React / Svelte / Angular source in the DSH chat. DeepSeek Harness click-to-source inspector,"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Finding \"that button on the page\" ↔ \"the line of code that renders it\" becomes a single click:"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
