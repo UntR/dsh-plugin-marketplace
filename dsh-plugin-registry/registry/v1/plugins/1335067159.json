@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-15T13:04:52.257Z",
+    "enrichedAt": "2026-08-15T14:45:37.928Z",
     "enrichmentStatus": "ok",
-    "headSha": "cde7eec87c75f028ce56e03ae442260db7cb0b61"
+    "headSha": "cbbc519566e8e5b7d70b1b6b6174ab2e96c4a8b5"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "[STU-XIE] 将你的本地dsh接入微信，尝试使用微信进行工作吧，至少比openclaw的体验要好很多",
     "fork": false,
     "forks": 0,
-    "headSha": "cde7eec87c75f028ce56e03ae442260db7cb0b61",
+    "headSha": "cbbc519566e8e5b7d70b1b6b6174ab2e96c4a8b5",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT5OCFw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/8d8e2e1c050d2220fb310383df2849cabd1f0d45eab994c46f12da86cd423152/Stu-KatoMegumi/dsh-weixin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d1602428a488dee961b07e12184d4e9b961334289db921fc3d9cf6c1f34cf9ab/Stu-KatoMegumi/dsh-weixin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/109196681?u=4e649034adf957a28cecd89911dd849b13d36d33&v=4",
       "login": "Stu-KatoMegumi"
     },
-    "pushedAt": "2026-08-15T12:35:59Z",
+    "pushedAt": "2026-08-15T14:20:05Z",
     "slug": "Stu-KatoMegumi/dsh-weixin",
     "stars": 1,
     "topics": [
@@ -39,18 +39,18 @@
       "dsh-plugins",
       "dsh-skill"
     ],
-    "updatedAt": "2026-08-15T12:48:06Z",
+    "updatedAt": "2026-08-15T14:20:57Z",
     "url": "https://github.com/Stu-KatoMegumi/dsh-weixin"
   },
   "id": "gh:1335067159",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "@deepseek-ai/dsh-weixin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Stu-KatoMegumi/dsh-weixin#cbbc519566e8e5b7d70b1b6b6174ab2e96c4a8b5",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
@@ -58,23 +58,26 @@
     "repositoryMatches": null
   },
   "package": {
-    "main": null,
-    "name": "weixin-bot",
+    "exports": {
+      ".": "./src/plugin/index.mjs"
+    },
+    "main": "./src/plugin/index.mjs",
+    "name": "@deepseek-ai/dsh-weixin",
     "status": "valid",
     "type": "module",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/8d8e2e1c050d2220fb310383df2849cabd1f0d45eab994c46f12da86cd423152/Stu-KatoMegumi/dsh-weixin",
+    "coverUrl": "https://opengraph.githubassets.com/d1602428a488dee961b07e12184d4e9b961334289db921fc3d9cf6c1f34cf9ab/Stu-KatoMegumi/dsh-weixin",
     "description": "[STU-XIE] 将你的本地dsh接入微信，尝试使用微信进行工作吧，至少比openclaw的体验要好很多"
   },
   "readme": {
     "available": true,
-    "excerpt": "weixin-bot 是一个把微信 ClawBot/iLink 官方通道接入 DSH 的桥接器。它接收微信单聊文本，将消息交给 DSH agent，再把结果发送回微信；同一套核心同时支持独立进程和 DSH 插件两种运行方式。"
+    "excerpt": "dsh-weixin 是把微信 ClawBot/iLink 单聊消息接入 DSH agent 的官方 bundle 插件。插件模式使用 DSH 的 apiProxy，独立模式使用 DSH Web 的 HTTP + SSE API；两种模式共享微信客户端、会话持久化和回合编排逻辑。"
   },
   "schemaVersion": 1,
   "scripts": {
-    "install": true,
+    "install": false,
     "postinstall": false,
     "preinstall": false,
     "prepare": false

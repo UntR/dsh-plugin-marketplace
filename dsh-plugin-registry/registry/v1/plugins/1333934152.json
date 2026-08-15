@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-15T08:50:25.871Z",
+    "enrichedAt": "2026-08-15T14:45:37.928Z",
     "enrichmentStatus": "ok",
-    "headSha": "6d675783e3cba33a16297fefbb2ff035b1a9b1e6"
+    "headSha": "47fb81a60d03736081725b5e4d61cf340cc7bf09"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "给纯文本 DeepSeek Harness 模型加上识图能力：analyze_image 把图片转发到任意 OpenAI 兼容视觉端点 | Vision bridge for text-only DSH models",
     "fork": false,
     "forks": 0,
-    "headSha": "6d675783e3cba33a16297fefbb2ff035b1a9b1e6",
+    "headSha": "47fb81a60d03736081725b5e4d61cf340cc7bf09",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,13 +25,13 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4I4SA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7b6ae5b76b3bf17f067f00617b8b6420c750093cf400610a3bd8fe15ba19cb8d/CaseyTso/analyze_image_tool",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ae603aaf0be637294f1a634817e028266232c599fd32d7b34cc6c4143d6aa295/CaseyTso/dsh-analyze-image-tool",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/177442366?u=2c75bf6b89a9bdca832ff4291a25de5fef99ec70&v=4",
       "login": "CaseyTso"
     },
-    "pushedAt": "2026-08-15T07:33:14Z",
-    "slug": "CaseyTso/analyze_image_tool",
+    "pushedAt": "2026-08-15T14:36:12Z",
+    "slug": "CaseyTso/dsh-analyze-image-tool",
     "stars": 0,
     "topics": [
       "deepseek-harness",
@@ -41,8 +41,8 @@
       "vision",
       "vlm"
     ],
-    "updatedAt": "2026-08-15T07:33:17Z",
-    "url": "https://github.com/CaseyTso/analyze_image_tool"
+    "updatedAt": "2026-08-15T14:36:37Z",
+    "url": "https://github.com/CaseyTso/dsh-analyze-image-tool"
   },
   "id": "gh:1333934152",
   "install": {
@@ -50,8 +50,8 @@
     "packageName": "analyze-image-tool",
     "preferred": "github",
     "reason": null,
-    "requiresBuildApproval": false,
-    "spec": "github:CaseyTso/analyze_image_tool#6d675783e3cba33a16297fefbb2ff035b1a9b1e6",
+    "requiresBuildApproval": true,
+    "spec": "github:CaseyTso/dsh-analyze-image-tool#47fb81a60d03736081725b5e4d61cf340cc7bf09",
     "version": "0.1.0"
   },
   "npm": {
@@ -62,6 +62,7 @@
   "package": {
     "exports": {
       ".": "./lib/index.js",
+      "./client": "./lib/client.js",
       "./package.json": "./package.json"
     },
     "main": "lib/index.js",
@@ -71,18 +72,18 @@
     "version": "0.1.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7b6ae5b76b3bf17f067f00617b8b6420c750093cf400610a3bd8fe15ba19cb8d/CaseyTso/analyze_image_tool",
+    "coverUrl": "https://opengraph.githubassets.com/ae603aaf0be637294f1a634817e028266232c599fd32d7b34cc6c4143d6aa295/CaseyTso/dsh-analyze-image-tool",
     "description": "给纯文本 DeepSeek Harness 模型加上识图能力：analyze_image 把图片转发到任意 OpenAI 兼容视觉端点 | Vision bridge for text-only DSH models"
   },
   "readme": {
     "available": true,
-    "excerpt": "给纯文本的 DeepSeek Harness 模型加上「眼睛」：注册一个 analyzeimage 工具，把图片和问题转发给任意 OpenAI 兼容的视觉/多模态端点，把答案以文本返回。装上之后，即使主模型本身不支持图片输入，所有 dsh 入口（web、TUI、远程通道）也能识图。"
+    "excerpt": "A vision bridge for text-only DeepSeek Harness models: registers an analyzeimage tool that answers questions about images via any OpenAI-compatible vision/multimodal endpoint. No vendor is hard-coded — bring your own baseURL + apiKey + model."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
