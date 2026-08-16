@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-15T13:04:52.257Z",
+    "enrichedAt": "2026-08-16T02:04:59.553Z",
     "enrichmentStatus": "ok",
-    "headSha": "35f2d9ce1b884e5f24ede5e3dd66f6a767877d56"
+    "headSha": "abd9c9218d3066d40fd3e98ffc6fff1ae67ca9a4"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-15T10:42:02Z",
     "databaseId": 1335002278,
     "defaultBranch": "master",
-    "description": "DeepSeek Harness 插件：让 deepseek-v4-flash 等不能看图的模型也能处理聊天里的图片，配合识图技能使用。安装：dsh plugin --profile web add dsh-image-pathify",
+    "description": "DeepSeek Harness 插件：让 deepseek-v4-flash 等不能看图的模型也能处理聊天图片，内置识图工具。安装：dsh plugin --profile web add dsh-image-pathify",
     "fork": false,
     "forks": 0,
-    "headSha": "35f2d9ce1b884e5f24ede5e3dd66f6a767877d56",
+    "headSha": "abd9c9218d3066d40fd3e98ffc6fff1ae67ca9a4",
     "homepageUrl": "https://www.npmjs.com/package/dsh-image-pathify",
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT5KEpg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f46c33771fbcdb9284b4f5b77078baa9761e7500c52acd63401c0870b598d767/dami9527/dsh-image-pathify",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ff3ce1d6f66e3f74fd5c819f85f73f59dae33fb830e66b6828ee7b6f536243c3/dami9527/dsh-image-pathify",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/111410514?u=0584cba4405aedd3aacfd5c90b7b04f0c675a31a&v=4",
       "login": "dami9527"
     },
-    "pushedAt": "2026-08-15T12:30:57Z",
+    "pushedAt": "2026-08-16T01:35:09Z",
     "slug": "dami9527/dsh-image-pathify",
     "stars": 0,
     "topics": [
@@ -42,7 +42,7 @@
       "plugin",
       "vision"
     ],
-    "updatedAt": "2026-08-15T12:50:11Z",
+    "updatedAt": "2026-08-16T01:37:10Z",
     "url": "https://github.com/dami9527/dsh-image-pathify"
   },
   "id": "gh:1335002278",
@@ -51,12 +51,12 @@
     "packageName": "dsh-image-pathify",
     "preferred": "npm",
     "reason": null,
-    "requiresBuildApproval": false,
-    "spec": "dsh-image-pathify@0.1.0",
-    "version": "0.1.0"
+    "requiresBuildApproval": true,
+    "spec": "dsh-image-pathify@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": "0.1.0",
+    "latestVersion": "0.1.1",
     "published": true,
     "repositoryMatches": true
   },
@@ -66,27 +66,31 @@
         "default": "./lib/index.js",
         "types": "./lib/types/index.d.ts"
       },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
       "./package.json": "./package.json"
     },
     "main": "lib/index.js",
     "name": "dsh-image-pathify",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.1.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f46c33771fbcdb9284b4f5b77078baa9761e7500c52acd63401c0870b598d767/dami9527/dsh-image-pathify",
-    "description": "DeepSeek Harness 插件：让 deepseek-v4-flash 等不能看图的模型也能处理聊天里的图片，配合识图技能使用。安装：dsh plugin --profile web add dsh-image-pathify"
+    "coverUrl": "https://opengraph.githubassets.com/ff3ce1d6f66e3f74fd5c819f85f73f59dae33fb830e66b6828ee7b6f536243c3/dami9527/dsh-image-pathify",
+    "description": "DeepSeek Harness 插件：让 deepseek-v4-flash 等不能看图的模型也能处理聊天图片，内置识图工具。安装：dsh plugin --profile web add dsh-image-pathify"
   },
   "readme": {
     "available": true,
-    "excerpt": "让 deepseek-v4-flash 这类「不能看图」的模型，也能处理你贴进聊天里的图片。"
+    "excerpt": "让 deepseek-v4-flash 这类「不能看图」的模型，也能处理你贴进聊天里的图片，并直接调用插件内置的识图工具。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
