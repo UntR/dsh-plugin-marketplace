@@ -1,74 +1,91 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
+    "enrichedAt": "2026-08-16T18:57:04.332Z",
     "enrichmentStatus": "ok",
-    "headSha": "17b22eeae2dc832bbe21685f8c6a8388089993f5"
+    "headSha": "aa720fa85fd9882953d481c307a7c815470addb7"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-13T16:02:17Z",
     "databaseId": 1333296107,
     "defaultBranch": "main",
-    "description": "DeepSeek Harness Code IDE Plugin",
+    "description": "DeepSeek Harness的 IDE插件，以最小破坏性的方式增加代码审阅能力",
     "fork": false,
     "forks": 0,
-    "headSha": "17b22eeae2dc832bbe21685f8c6a8388089993f5",
+    "headSha": "aa720fa85fd9882953d481c307a7c815470addb7",
     "homepageUrl": null,
-    "language": null,
+    "language": "TypeScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT3h76w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5489d2253027ee5da6d6eb9f9ae7cd5f354ceec0acf0f425ed33295aa9f6b1a0/SakalioLabs/dsh-code-ide",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/bc4eabf0f53d3fb08de4ead3ed432e6fb06f78766722968dfe5ec17d822d3aed/SakalioLabs/dsh-code-ide",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/293286782?v=4",
       "login": "SakalioLabs"
     },
-    "pushedAt": "2026-08-13T16:02:18Z",
+    "pushedAt": "2026-08-16T18:37:10Z",
     "slug": "SakalioLabs/dsh-code-ide",
-    "stars": 1,
+    "stars": 3,
     "topics": [
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-13T16:46:38Z",
+    "updatedAt": "2026-08-16T18:46:01Z",
     "url": "https://github.com/SakalioLabs/dsh-code-ide"
   },
   "id": "gh:1333296107",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-code-ide",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:SakalioLabs/dsh-code-ide#aa720fa85fd9882953d481c307a7c815470addb7",
+    "version": "0.1.0-alpha.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/host/index.js",
+        "types": "./dist/host/index.d.ts"
+      },
+      "./client": {
+        "default": "./dist/harness-client/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/host/index.js",
+    "name": "dsh-code-ide",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-alpha.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5489d2253027ee5da6d6eb9f9ae7cd5f354ceec0acf0f425ed33295aa9f6b1a0/SakalioLabs/dsh-code-ide",
-    "description": "DeepSeek Harness Code IDE Plugin"
+    "coverUrl": "https://opengraph.githubassets.com/bc4eabf0f53d3fb08de4ead3ed432e6fb06f78766722968dfe5ec17d822d3aed/SakalioLabs/dsh-code-ide",
+    "description": "DeepSeek Harness的 IDE插件，以最小破坏性的方式增加代码审阅能力"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "简体中文 · English · 日本語 · Deutsch"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
