@@ -227,6 +227,31 @@ const styles = `
 .dshm-pagination { min-height: 42px; margin-top: 14px; display: flex; justify-content: center; align-items: center; gap: 12px; color: var(--dsw-alias-label-secondary); font-size: 12px; }
 .dshm-installed-shell { max-width: 980px; margin: 0 auto; }
 .dshm-installed-body { padding-top: 6px; }
+.dshm-about-shell { max-width: 760px; margin: 0 auto; }
+.dshm-about-grid { display: grid; gap: 14px; padding-top: 6px; }
+.dshm-about-card {
+  padding: 22px;
+  border: 1px solid var(--dsw-alias-border-l1);
+  border-radius: 14px;
+  background: var(--dsw-alias-bg-layer-1);
+}
+.dshm-about-card--boundary { border-color: var(--dsw-alias-border-l2); background: var(--dsw-alias-bg-layer-2); }
+.dshm-about-card h2 { margin: 0; font-size: 16px; font-weight: 600; line-height: 24px; }
+.dshm-about-card p { margin: 8px 0 0; color: var(--dsw-alias-label-secondary); font-size: 13px; line-height: 21px; }
+.dshm-about-link {
+  min-height: 34px;
+  margin-top: 18px;
+  padding: 6px 14px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  background: var(--dsw-static-blue-450);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.dshm-about-link:hover { filter: brightness(.96); }
 .dshm-installed-intro {
   margin: 0 0 16px;
   display: flex;

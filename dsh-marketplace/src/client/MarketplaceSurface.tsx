@@ -9,6 +9,8 @@ import type { LocaleKey } from './locales.js'
 import { MarketplaceStyles } from './marketplaceStyles.js'
 import { MarketplaceTab, type AgentInstallHandler } from './MarketplaceTab.js'
 
+const PROJECT_URL = 'https://github.com/UntR/dsh-plugin-marketplace'
+
 export class MarketplaceSurfaceController {
   private opened = false
   private readonly listeners = new Set<() => void>()
@@ -55,9 +57,43 @@ export function MarketplaceFooterAction({ surface, t, wide }: MarketplaceFooterA
 
 export type MarketplaceSurfaceProps = SurfaceInjected & { onAgentInstall: AgentInstallHandler }
 
+function AboutPage({ t, onBack, onClose }: {
+  t: (key: LocaleKey) => string
+  onBack: () => void
+  onClose: () => void
+}) {
+  return <div className="dshm-page">
+    <div className="dshm-about-shell">
+      <header className="dshm-header">
+        <div>
+          <h1 className="dshm-title">{t('aboutTitle')}</h1>
+          <p className="dshm-subtitle">{t('aboutSubtitle')}</p>
+        </div>
+        <div className="dshm-header-actions">
+          <button type="button" className="dshm-button" onClick={onBack}>{t('backToMarketplace')}</button>
+          <button type="button" className="dshm-icon-button" aria-label={t('closeMarketplace')} onClick={onClose}>
+            <IconCloseOutline16 size={16} />
+          </button>
+        </div>
+      </header>
+      <div className="dshm-about-grid">
+        <section className="dshm-about-card">
+          <h2>{t('githubTitle')}</h2>
+          <p>{t('githubDescription')}</p>
+          <a className="dshm-about-link" href={PROJECT_URL} target="_blank" rel="noreferrer">{t('viewOnGitHub')}</a>
+        </section>
+        <section className="dshm-about-card dshm-about-card--boundary">
+          <h2>{t('registryBoundaryTitle')}</h2>
+          <p>{t('registryBoundaryDescription')}</p>
+        </section>
+      </div>
+    </div>
+  </div>
+}
+
 export function MarketplaceSurface({ surface, t, onAgentInstall }: MarketplaceSurfaceProps) {
   const opened = useSyncExternalStore(surface.subscribe, surface.getSnapshot)
-  const [view, setView] = useState<'marketplace' | 'installed'>('marketplace')
+  const [view, setView] = useState<'marketplace' | 'installed' | 'about'>('marketplace')
   const [sidebarWidth, setSidebarWidth] = useState(280)
   const rootRef = useRef<HTMLDivElement>(null)
 
@@ -94,11 +130,12 @@ export function MarketplaceSurface({ surface, t, onAgentInstall }: MarketplaceSu
       {view === 'marketplace'
         ? <MarketplaceTab t={t} fullPage onAgentInstall={onAgentInstall} headerActions={<>
           <button type="button" className="dshm-button" onClick={() => setView('installed')}>{t('installed')}</button>
+          <button type="button" className="dshm-button" onClick={() => setView('about')}>{t('about')}</button>
           <button type="button" className="dshm-icon-button" aria-label={t('closeMarketplace')} onClick={surface.close}>
             <IconCloseOutline16 size={16} />
           </button>
         </>} />
-        : <div className="dshm-page">
+        : view === 'installed' ? <div className="dshm-page">
           <div className="dshm-installed-shell">
             <header className="dshm-header">
               <div>
@@ -114,7 +151,8 @@ export function MarketplaceSurface({ surface, t, onAgentInstall }: MarketplaceSu
             </header>
             <div className="dshm-installed-body"><InstalledTab t={t} onBrowse={() => setView('marketplace')} /></div>
           </div>
-        </div>}
+        </div>
+          : <AboutPage t={t} onBack={() => setView('marketplace')} onClose={surface.close} />}
     </div>
   )
 }

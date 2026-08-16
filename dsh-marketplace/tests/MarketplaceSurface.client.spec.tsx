@@ -65,4 +65,18 @@ describe('MarketplaceSurface', () => {
     expect(screen.getByRole('heading', { name: zh.marketplace })).toBeTruthy()
     expect(screen.getByRole('button', { name: zh.installed })).toBeTruthy()
   })
+
+  it('links npm users to GitHub and states the registry boundary', async () => {
+    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify(catalog), { status: 200 })))
+    const surface = new MarketplaceSurfaceController()
+    surface.open()
+    render(<div data-shell-overlay><MarketplaceSurface surface={surface} t={t} onAgentInstall={vi.fn()} /></div>)
+
+    fireEvent.click(await screen.findByRole('button', { name: en.about }))
+
+    expect(screen.getByRole('heading', { name: en.aboutTitle })).toBeTruthy()
+    const githubLink = screen.getByRole('link', { name: en.viewOnGitHub })
+    expect(githubLink.getAttribute('href')).toBe('https://github.com/UntR/dsh-plugin-marketplace')
+    expect(screen.getByText(en.registryBoundaryDescription)).toBeTruthy()
+  })
 })
