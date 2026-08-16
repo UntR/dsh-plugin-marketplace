@@ -1,0 +1,96 @@
+{
+  "bundle": {
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
+  },
+  "crawl": {
+    "enrichedAt": "2026-08-16T10:48:36.583Z",
+    "enrichmentStatus": "ok",
+    "headSha": "e51135788f72b92bb568f997bd1438baf31cfbf1"
+  },
+  "github": {
+    "archived": false,
+    "createdAt": "2026-08-16T05:31:58Z",
+    "databaseId": 1335647083,
+    "defaultBranch": "main",
+    "description": "把 DeepSeek Harness 的 Web GUI 安全地开放到局域网或公网，自带密码鉴权，支持TLS。Securely expose DeepSeek Harness's Web GUI to your local network or the public internet, with built-in password authentication and TLS support.",
+    "fork": false,
+    "forks": 0,
+    "headSha": "e51135788f72b92bb568f997bd1438baf31cfbf1",
+    "homepageUrl": null,
+    "language": "TypeScript",
+    "license": {
+      "name": "MIT License",
+      "spdxId": "MIT"
+    },
+    "nodeId": "R_kgDOT5xbaw",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/977928887ddf84a0158029459a78d12111e89de592fe06a786151cf17e558b43/rice-awa/dsh-lan-gateway",
+    "owner": {
+      "avatarUrl": "https://avatars.githubusercontent.com/u/141110807?u=614baed06ab0bf8827960f533ffb402abf22f934&v=4",
+      "login": "rice-awa"
+    },
+    "pushedAt": "2026-08-16T08:36:09Z",
+    "slug": "rice-awa/dsh-lan-gateway",
+    "stars": 1,
+    "topics": [
+      "deepseek-harness",
+      "deepseek-harness-plugins",
+      "dsh",
+      "dsh-plugin",
+      "gateway",
+      "nodejs",
+      "plugin-discovery"
+    ],
+    "updatedAt": "2026-08-16T08:45:35Z",
+    "url": "https://github.com/rice-awa/dsh-lan-gateway"
+  },
+  "id": "gh:1335647083",
+  "install": {
+    "available": false,
+    "packageName": null,
+    "preferred": null,
+    "reason": "Repository does not expose a ready package entry point.",
+    "requiresBuildApproval": false,
+    "spec": null,
+    "version": null
+  },
+  "npm": {
+    "latestVersion": null,
+    "published": false,
+    "repositoryMatches": null
+  },
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@dsh-external/dsh-lan-gateway",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
+  "presentation": {
+    "coverUrl": "https://opengraph.githubassets.com/977928887ddf84a0158029459a78d12111e89de592fe06a786151cf17e558b43/rice-awa/dsh-lan-gateway",
+    "description": "把 DeepSeek Harness 的 Web GUI 安全地开放到局域网或公网，自带密码鉴权，支持TLS。Securely expose DeepSeek Harness's Web GUI to your local network or the public internet, with built-in password authentication and TLS support."
+  },
+  "readme": {
+    "available": true,
+    "excerpt": "dsh 的 web CLI 会硬拒绝 --host 0.0.0.0（避免把远程代码执行暴露到网络），所以本插件 让 dsh 继续只绑 127.0.0.1，自己另起一个 0.0.0.0 反向代理网关转发到 loopback 端口， 改写 Host/Origin 以通过 /api 信任围栏。LAN 与 loopback 来源免密代理；非 LAN 来源 必须先完成登录页并出示 HMAC cookie。"
+  },
+  "schemaVersion": 1,
+  "scripts": {
+    "install": false,
+    "postinstall": false,
+    "preinstall": false,
+    "prepare": false
+  }
+}

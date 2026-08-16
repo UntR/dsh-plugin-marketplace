@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-15T03:09:19.218Z",
+    "enrichedAt": "2026-08-16T10:48:36.583Z",
     "enrichmentStatus": "ok",
-    "headSha": "9fa94b696d9b48bb1482469cb460c54d77323fc6"
+    "headSha": "a557d305f1512510b275d515035c7e74e9a5f992"
   },
   "github": {
     "archived": false,
@@ -17,20 +17,20 @@
     "description": "为 DeepSeek Harness（dsh）Web UI 提供的 19 个精品风格主题，完整移植自 YiziMarkdown 的设计语言。",
     "fork": false,
     "forks": 0,
-    "headSha": "9fa94b696d9b48bb1482469cb460c54d77323fc6",
+    "headSha": "a557d305f1512510b275d515035c7e74e9a5f992",
     "homepageUrl": null,
-    "language": "CSS",
+    "language": "TypeScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT43aJg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/9753a1c30f069780a88c37c59799035378f25597cdc8f8790ebc7b7486beabf0/laoduu/DeepSeek-Harness-yizi-themes",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ac58bd27872b26c2c18bf0c79c7591b7a4a33090f5c11030465a440c766fc599/laoduu/DeepSeek-Harness-yizi-themes",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/41679822?v=4",
       "login": "laoduu"
     },
-    "pushedAt": "2026-08-15T02:58:25Z",
+    "pushedAt": "2026-08-16T09:46:25Z",
     "slug": "laoduu/DeepSeek-Harness-yizi-themes",
     "stars": 1,
     "topics": [
@@ -46,38 +46,53 @@
       "themes",
       "yizimarkdown"
     ],
-    "updatedAt": "2026-08-15T02:58:29Z",
+    "updatedAt": "2026-08-16T09:46:39Z",
     "url": "https://github.com/laoduu/DeepSeek-Harness-yizi-themes"
   },
   "id": "gh:1334696486",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-yizi-themes",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:laoduu/DeepSeek-Harness-yizi-themes#a557d305f1512510b275d515035c7e74e9a5f992",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js"
+      },
+      "./client": {
+        "default": "./dist/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "dist/index.js",
+    "name": "dsh-yizi-themes",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/9753a1c30f069780a88c37c59799035378f25597cdc8f8790ebc7b7486beabf0/laoduu/DeepSeek-Harness-yizi-themes",
+    "coverUrl": "https://opengraph.githubassets.com/ac58bd27872b26c2c18bf0c79c7591b7a4a33090f5c11030465a440c766fc599/laoduu/DeepSeek-Harness-yizi-themes",
     "description": "为 DeepSeek Harness（dsh）Web UI 提供的 19 个精品风格主题，完整移植自 YiziMarkdown 的设计语言。"
   },
   "readme": {
     "available": true,
-    "excerpt": "19 个精品风格主题 for DeepSeek Harness Web UI"
+    "excerpt": "19 个精品风格主题 + 自定义品牌 for DeepSeek Harness Web UI"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

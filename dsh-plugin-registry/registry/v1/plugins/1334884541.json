@@ -5,9 +5,9 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-15T08:50:25.871Z",
+    "enrichedAt": "2026-08-16T10:48:36.583Z",
     "enrichmentStatus": "ok",
-    "headSha": "bab3df0c188403ae0df7759eca229e3e44f56487"
+    "headSha": "ac9419725ceced0e6b2101323c96672127c52693"
   },
   "github": {
     "archived": false,
@@ -17,23 +17,23 @@
     "description": "A plugin for DSH that checks whether your work has actually been completed. It automatically loops over the model’s responses to check for errors or shortcomings.",
     "fork": false,
     "forks": 0,
-    "headSha": "bab3df0c188403ae0df7759eca229e3e44f56487",
+    "headSha": "ac9419725ceced0e6b2101323c96672127c52693",
     "homepageUrl": null,
-    "language": "JavaScript",
+    "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOT5C4vQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e41e876c713241a5b4b21428cec54f6c72f7bd6073b3e44578c53ef949c53505/linkage18/donecheck",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e9a94c9c25e12c427ac9395564403fadb4ffa9820540270ae37f154e0f63d121/linkage18/donecheck",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/88624230?v=4",
       "login": "linkage18"
     },
-    "pushedAt": "2026-08-15T07:43:08Z",
+    "pushedAt": "2026-08-16T08:13:40Z",
     "slug": "linkage18/donecheck",
     "stars": 1,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-15T08:46:07Z",
+    "updatedAt": "2026-08-16T08:14:14Z",
     "url": "https://github.com/linkage18/donecheck"
   },
   "id": "gh:1334884541",
@@ -51,14 +51,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-donecheck",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e41e876c713241a5b4b21428cec54f6c72f7bd6073b3e44578c53ef949c53505/linkage18/donecheck",
+    "coverUrl": "https://opengraph.githubassets.com/e9a94c9c25e12c427ac9395564403fadb4ffa9820540270ae37f154e0f63d121/linkage18/donecheck",
     "description": "A plugin for DSH that checks whether your work has actually been completed. It automatically loops over the model’s responses to check for errors or shortcomings."
   },
   "readme": {
     "available": true,
-    "excerpt": "LLM 代理最常见的隐性失败不是\"答错\"，而是提前自我终止：它认为自己已经完成任务、改完了代码，实际上没有。DoneCheck 在每次回答结束后自动执行一轮带实际操作结果的复查，发现问题就带着工具权限迭代修复，直到满足要求或达到轮次上限——并全程把\"做了什么、为什么停\"讲清楚。"
+    "excerpt": "DSH 插件：LLM 复查-修复闭环，阻止 agent 提前声称完成。"
   },
   "schemaVersion": 1,
   "scripts": {

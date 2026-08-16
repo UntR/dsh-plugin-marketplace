@@ -1,68 +1,84 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-15T22:44:32.196Z",
+    "enrichedAt": "2026-08-16T10:48:36.583Z",
     "enrichmentStatus": "ok",
-    "headSha": "ace57e5e57578924c86587537481ad3c5171e879"
+    "headSha": "c4c96ec8bcb16fa32ad2b3580c55f5ed03ed42de"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-15T20:25:24Z",
     "databaseId": 1335385695,
-    "defaultBranch": "main",
+    "defaultBranch": "master",
     "description": "Provide notebook‑style workbench and local shell for DeepSeek Harness Web GUI",
     "fork": false,
     "forks": 0,
-    "headSha": "ace57e5e57578924c86587537481ad3c5171e879",
+    "headSha": "c4c96ec8bcb16fa32ad2b3580c55f5ed03ed42de",
     "homepageUrl": null,
-    "language": null,
-    "license": {
-      "name": "Apache License 2.0",
-      "spdxId": "Apache-2.0"
-    },
+    "language": "JavaScript",
+    "license": null,
     "nodeId": "R_kgDOT5heXw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/6cd8e87ab6bda834d49c581a212786028454813166fb2eb8e3e328ae95ab84b8/kikulmj/dsh-jupyter",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f6fab0224374bca9e64d71063566acc17bcfdeb089595572ee85b858313e0fa5/kikulmj/dsh-jupyter",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/247947046?u=c6d85a783358582029576d8d1e7bd3bd09514603&v=4",
       "login": "kikulmj"
     },
-    "pushedAt": "2026-08-15T20:45:50Z",
+    "pushedAt": "2026-08-16T09:25:40Z",
     "slug": "kikulmj/dsh-jupyter",
-    "stars": 0,
+    "stars": 2,
     "topics": [
-      "dsh-plugin",
-      "dsh-plugins"
+      "deepseek-harness",
+      "dsh",
+      "dsh-plugin"
     ],
-    "updatedAt": "2026-08-15T21:34:42Z",
+    "updatedAt": "2026-08-16T10:41:25Z",
     "url": "https://github.com/kikulmj/dsh-jupyter"
   },
   "id": "gh:1335385695",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "@dsh-local/dsh-jupyter",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kikulmj/dsh-jupyter#c4c96ec8bcb16fa32ad2b3580c55f5ed03ed42de",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@dsh-local/dsh-jupyter",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/6cd8e87ab6bda834d49c581a212786028454813166fb2eb8e3e328ae95ab84b8/kikulmj/dsh-jupyter",
+    "coverUrl": "https://opengraph.githubassets.com/f6fab0224374bca9e64d71063566acc17bcfdeb089595572ee85b858313e0fa5/kikulmj/dsh-jupyter",
     "description": "Provide notebook‑style workbench and local shell for DeepSeek Harness Web GUI"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Jupyter notebook 编辑 / 运行 + Web 终端的 dsh 插件（profile bundle 层安装）。"
   },
   "schemaVersion": 1,
   "scripts": {
