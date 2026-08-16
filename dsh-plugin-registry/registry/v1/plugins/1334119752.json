@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-15T20:46:24.060Z",
+    "enrichedAt": "2026-08-16T14:47:59.364Z",
     "enrichmentStatus": "ok",
-    "headSha": "200e19fd2420354b6669c7c65335f92e9db3ef7b"
+    "headSha": "b9710da9f4677a497186e178bfc836be3009b20f"
   },
   "github": {
     "archived": false,
@@ -17,23 +17,23 @@
     "description": "云之家 (Yunzhijia) plugin bundle for DeepSeek Harness: yzj-cli bridge, 41 model-facing tools, floating workspace panel with drag/@ reference chips",
     "fork": false,
     "forks": 1,
-    "headSha": "200e19fd2420354b6669c7c65335f92e9db3ef7b",
+    "headSha": "b9710da9f4677a497186e178bfc836be3009b20f",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOT4UNSA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a0382aa8f70d884697dbb535dd2e7fe911d28919bd2f0ce0aa1b99411ba96377/GuoxinShan/dsh-yzj",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/1d6c52282c10f376c994b8d9f3d6199aeb9bf5818aeb9f208f33a501ce770bf2/GuoxinShan/dsh-yzj",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/53245276?v=4",
       "login": "GuoxinShan"
     },
-    "pushedAt": "2026-08-15T20:32:56Z",
+    "pushedAt": "2026-08-16T14:40:04Z",
     "slug": "GuoxinShan/dsh-yzj",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-15T20:33:01Z",
+    "updatedAt": "2026-08-16T14:41:33Z",
     "url": "https://github.com/GuoxinShan/dsh-yzj"
   },
   "id": "gh:1334119752",
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -52,14 +52,25 @@
     "repositoryMatches": null
   },
   "package": {
+    "exports": {
+      "./bridge": "./lib/bridge.mjs",
+      "./client": "./lib/client.js",
+      "./memory-yzj": "./lib/memory-yzj.mjs",
+      "./model-yzj": "./lib/model-yzj.mjs",
+      "./package.json": "./package.json",
+      "./robot-yzj": "./lib/robot-yzj.mjs",
+      "./tool-yzj": "./lib/tool-yzj.mjs",
+      "./ui-yzj": "./lib/ui-yzj.mjs",
+      "./ui-yzj/package.json": "./package.json"
+    },
     "main": null,
-    "name": "dsh-yzj",
+    "name": "@dsh-yzj/bundle",
     "status": "valid",
     "type": "module",
-    "version": null
+    "version": "0.1.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a0382aa8f70d884697dbb535dd2e7fe911d28919bd2f0ce0aa1b99411ba96377/GuoxinShan/dsh-yzj",
+    "coverUrl": "https://opengraph.githubassets.com/1d6c52282c10f376c994b8d9f3d6199aeb9bf5818aeb9f208f33a501ce770bf2/GuoxinShan/dsh-yzj",
     "description": "云之家 (Yunzhijia) plugin bundle for DeepSeek Harness: yzj-cli bridge, 41 model-facing tools, floating workspace panel with drag/@ reference chips"
   },
   "readme": {

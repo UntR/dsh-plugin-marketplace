@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-16T10:48:36.583Z",
+    "enrichedAt": "2026-08-16T14:47:59.364Z",
     "enrichmentStatus": "ok",
-    "headSha": "299fbab82f997ee89011ff335a4e983e2956bb23"
+    "headSha": "17945c59ea7a574e27acb6d41591222722a7f1b1"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Domi-grade git worktree isolation and delivery for DeepSeek Harness: permanent worktrees, ready-for-review / apply / finish / discard lifecycle, conflict handling, safe cleanup",
     "fork": false,
     "forks": 0,
-    "headSha": "299fbab82f997ee89011ff335a4e983e2956bb23",
+    "headSha": "17945c59ea7a574e27acb6d41591222722a7f1b1",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT5CX7g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e656713af088b82921df01ae1df92f0ea1b5159bb0bb3fc62f66c47718577ca6/wloops/dsh-git-worktree",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/bc21a07850d86a13c75dca2e17977786bb7c517993e8ae6e8d913486b06fb0f9/wloops/dsh-git-worktree",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/28558522?u=dc9eb8c21a39cc408c60fe4ecb4bb0a248b915e3&v=4",
       "login": "wloops"
     },
-    "pushedAt": "2026-08-15T10:08:50Z",
+    "pushedAt": "2026-08-16T14:14:38Z",
     "slug": "wloops/dsh-git-worktree",
     "stars": 1,
     "topics": [
@@ -38,7 +38,7 @@
       "dsh-plugin",
       "git-worktree"
     ],
-    "updatedAt": "2026-08-15T17:32:53Z",
+    "updatedAt": "2026-08-16T14:15:53Z",
     "url": "https://github.com/wloops/dsh-git-worktree"
   },
   "id": "gh:1334876142",
@@ -62,12 +62,24 @@
         "default": "./lib/index.js",
         "types": "./lib/index.d.ts"
       },
-      "./cordis.patch.yml": "./cordis.patch.yml",
-      "./manager": {
-        "default": "./lib/manager.js",
-        "types": "./lib/manager.d.ts"
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/console-remote/index.d.ts"
       },
-      "./package.json": "./package.json"
+      "./console-contract": {
+        "default": "./lib/console-contract.js",
+        "types": "./lib/console-contract.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/console-remote/remote.js",
+        "types": "./lib/console-remote/remote.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/console-remote/typert.js",
+        "types": "./lib/console-remote/typert.d.ts"
+      }
     },
     "main": "lib/index.js",
     "name": "dsh-git-worktree",
@@ -76,12 +88,12 @@
     "version": "0.1.2"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e656713af088b82921df01ae1df92f0ea1b5159bb0bb3fc62f66c47718577ca6/wloops/dsh-git-worktree",
+    "coverUrl": "https://opengraph.githubassets.com/bc21a07850d86a13c75dca2e17977786bb7c517993e8ae6e8d913486b06fb0f9/wloops/dsh-git-worktree",
     "description": "Domi-grade git worktree isolation and delivery for DeepSeek Harness: permanent worktrees, ready-for-review / apply / finish / discard lifecycle, conflict handling, safe cleanup"
   },
   "readme": {
     "available": true,
-    "excerpt": "Domi-grade git worktree isolation and delivery for DeepSeek Harness: permanent worktrees, a ready-for-review / apply / finish / discard lifecycle, conflict handling, and safe cleanup."
+    "excerpt": "An experimental Git worktree Session Target plugin for DeepSeek Harness. It ports Domi's hardened checkout/apply engine and adapts the product flow to Harness's authoritative Workspace/Session cwd model."
   },
   "schemaVersion": 1,
   "scripts": {
