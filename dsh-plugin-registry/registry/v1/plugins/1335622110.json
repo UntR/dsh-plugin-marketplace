@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-16T13:09:36.692Z",
+    "enrichedAt": "2026-08-16T16:51:26.804Z",
     "enrichmentStatus": "ok",
-    "headSha": "10b6f948bd4edc6a38862d420210005161892bbb"
+    "headSha": "ee461e81fb66da70692816aad075468da488d1de"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,17 @@
     "description": "DSH plugin bridging DeepSeek Harness agents to Cheat Engine: dynamic debugging, memory scanning, pointer analysis, breakpoints, and game memory hacking via ce_* tools.",
     "fork": false,
     "forks": 0,
-    "headSha": "10b6f948bd4edc6a38862d420210005161892bbb",
+    "headSha": "ee461e81fb66da70692816aad075468da488d1de",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOT5v53g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/60a821b2e0217afcd8c17bcca3363de175a507ccdc74575f4b28a0f4942021e0/TindalosKorone/dsh-cheatengine",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8495f9f5779a43a73b3f4b8e1ae6df1fe1bf8a4b16f5273779a80b3bb4c38346/TindalosKorone/dsh-cheatengine",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/64648600?v=4",
       "login": "TindalosKorone"
     },
-    "pushedAt": "2026-08-16T12:54:56Z",
+    "pushedAt": "2026-08-16T16:43:27Z",
     "slug": "TindalosKorone/dsh-cheatengine",
     "stars": 0,
     "topics": [
@@ -41,7 +41,7 @@
       "memory-scanner",
       "reverse-engineering"
     ],
-    "updatedAt": "2026-08-16T12:54:51Z",
+    "updatedAt": "2026-08-16T16:20:57Z",
     "url": "https://github.com/TindalosKorone/dsh-cheatengine"
   },
   "id": "gh:1335622110",
@@ -51,8 +51,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:TindalosKorone/dsh-cheatengine#10b6f948bd4edc6a38862d420210005161892bbb",
-    "version": "0.4.1"
+    "spec": "github:TindalosKorone/dsh-cheatengine#ee461e81fb66da70692816aad075468da488d1de",
+    "version": "0.5.1"
   },
   "npm": {
     "latestVersion": null,
@@ -60,19 +60,30 @@
     "repositoryMatches": null
   },
   "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
     "main": "./lib/index.js",
     "name": "@dsh-external/dsh-cheatengine",
     "status": "valid",
     "type": "module",
-    "version": "0.4.1"
+    "version": "0.5.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/60a821b2e0217afcd8c17bcca3363de175a507ccdc74575f4b28a0f4942021e0/TindalosKorone/dsh-cheatengine",
+    "coverUrl": "https://opengraph.githubassets.com/8495f9f5779a43a73b3f4b8e1ae6df1fe1bf8a4b16f5273779a80b3bb4c38346/TindalosKorone/dsh-cheatengine",
     "description": "DSH plugin bridging DeepSeek Harness agents to Cheat Engine: dynamic debugging, memory scanning, pointer analysis, breakpoints, and game memory hacking via ce_* tools."
   },
   "readme": {
     "available": true,
-    "excerpt": "让 DSH Agent 通过 ce 工具调用 Cheat Engine 做动态调试（进程附加、内存扫描、读写、反汇编、断点、寄存器、指针分析、Lua/AA 脚本等）。"
+    "excerpt": "让 DSH Agent 直接操作 Cheat Engine，做单机游戏动态调试：找数值、找基址、锁定资源、分析写入者等。"
   },
   "schemaVersion": 1,
   "scripts": {
