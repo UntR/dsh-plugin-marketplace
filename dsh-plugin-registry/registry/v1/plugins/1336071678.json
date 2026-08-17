@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-16T16:51:26.804Z",
+    "enrichedAt": "2026-08-17T20:56:04.920Z",
     "enrichmentStatus": "ok",
-    "headSha": "11a8cd97dcab9f2774a37bd03ae4dd4e3c0eef54"
+    "headSha": "a1393729eb60a8d2de683c4d4d8580c0cb68b504"
   },
   "github": {
     "archived": false,
@@ -17,57 +17,75 @@
     "description": "DSH plugin: decide WHEN to search the web, enforce search-first answers, and stay out of the way for local tasks.",
     "fork": false,
     "forks": 0,
-    "headSha": "11a8cd97dcab9f2774a37bd03ae4dd4e3c0eef54",
+    "headSha": "a1393729eb60a8d2de683c4d4d8580c0cb68b504",
     "homepageUrl": null,
-    "language": null,
+    "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT6LV_g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/64911f85a648a98a8b2cbed9c31f76201fd3d81278658c90562532d5254911fd/windygo123/dsh-see-world",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/59be29cc074160224b5fddba071308e4359154e3a603f0455298816b7169bd5c/windygo123/dsh-see-world",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/276131986?v=4",
       "login": "windygo123"
     },
-    "pushedAt": "2026-08-16T15:23:59Z",
+    "pushedAt": "2026-08-17T20:53:37Z",
     "slug": "windygo123/dsh-see-world",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-16T15:46:40Z",
+    "updatedAt": "2026-08-17T20:53:54Z",
     "url": "https://github.com/windygo123/dsh-see-world"
   },
   "id": "gh:1336071678",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-see-world",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:windygo123/dsh-see-world#a1393729eb60a8d2de683c4d4d8580c0cb68b504",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-see-world",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/64911f85a648a98a8b2cbed9c31f76201fd3d81278658c90562532d5254911fd/windygo123/dsh-see-world",
+    "coverUrl": "https://opengraph.githubassets.com/59be29cc074160224b5fddba071308e4359154e3a603f0455298816b7169bd5c/windygo123/dsh-see-world",
     "description": "DSH plugin: decide WHEN to search the web, enforce search-first answers, and stay out of the way for local tasks."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 agent 在「该上网搜索」的时候先搜再答——把「靠自觉」变成「靠机制」，本地任务零打扰。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
