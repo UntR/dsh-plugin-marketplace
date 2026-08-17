@@ -57,7 +57,7 @@ pnpm --filter untr-dsh-marketplace build
 pnpm --filter untr-dsh-marketplace pack
 
 npx -y --package @deepseek-ai/dsh dsh plugin \
-  --profile web add "$PWD/dsh-marketplace/untr-dsh-marketplace-0.1.2.tgz"
+  --profile web add "$PWD/dsh-marketplace/untr-dsh-marketplace-0.1.3.tgz"
 ```
 
 </details>

@@ -108,9 +108,50 @@ describe('InstalledService', () => {
           install: { packageName: 'dsh-known', version: '2.0.0' },
         }],
       }),
+      getPlugin: async () => { throw new Error('offline') },
     } as unknown as RegistryService
     const state = await new InstalledService({ name: 'web', directory: profile }, registry).list()
     expect(state.plugins[0]?.update).toEqual({
+      status: 'source', available: false, latestVersion: null, canUpdate: true,
+    })
+  })
+
+  it('does not offer to sync a GitHub plugin already pinned to the current Registry commit', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'dsh-installed-'))
+    const profile = join(root, 'profiles', 'web')
+    const spec = 'github:owner/known#0123456789abcdef0123456789abcdef01234567'
+    await mkdir(profile, { recursive: true })
+    await writeFile(join(profile, 'package.json'), JSON.stringify({ dependencies: { 'dsh-known': spec } }))
+    await installFixture(profile, 'dsh-known', {
+      name: 'dsh-known', version: '1.0.0', repository: 'https://github.com/owner/known.git',
+      dsh: { bundle: { patch: './cordis.patch.yml' } },
+    })
+    const registry = {
+      getCatalog: async () => ({
+        registry: { revision: 'x', generatedAt: 'x', pluginCount: 1, stale: false },
+        plugins: [{
+          id: 'gh:1', slug: 'owner/known', name: 'dsh-known', description: '', coverUrl: null,
+          repositoryUrl: 'https://github.com/owner/known',
+          owner: { login: 'owner', avatarUrl: 'https://example.com/avatar.png' },
+          install: { packageName: 'dsh-known', version: '1.0.0' },
+        }],
+      }),
+      getPlugin: async () => ({
+        install: { available: true, preferred: 'github', spec },
+      }),
+    } as unknown as RegistryService
+
+    const state = await new InstalledService({ name: 'web', directory: profile }, registry).list()
+
+    expect(state.plugins[0]?.update).toEqual({
+      status: 'current', available: false, latestVersion: null, canUpdate: false,
+    })
+
+    await writeFile(join(profile, 'package.json'), JSON.stringify({
+      dependencies: { 'dsh-known': 'github:owner/known#fedcba9876543210fedcba9876543210fedcba98' },
+    }))
+    const behind = await new InstalledService({ name: 'web', directory: profile }, registry).list()
+    expect(behind.plugins[0]?.update).toEqual({
       status: 'source', available: false, latestVersion: null, canUpdate: true,
     })
   })

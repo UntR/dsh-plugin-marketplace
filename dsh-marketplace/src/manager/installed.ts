@@ -96,6 +96,22 @@ function sourceKind(spec: string): InstalledSourceKind {
   return 'url'
 }
 
+function githubTarget(spec: string): string | null {
+  const normalized = spec.trim()
+    .replace(/^github:/i, 'https://github.com/')
+    .replace(/^git\+/, '')
+    .replace(/^ssh:\/\/git@github\.com\//i, 'https://github.com/')
+    .replace(/^git@github\.com:/i, 'https://github.com/')
+    .replace(/^git:\/\/github\.com\//i, 'https://github.com/')
+  const match = /^https:\/\/github\.com\/([^/#]+\/[^/#]+?)(?:\.git)?#(.+)$/i.exec(normalized)
+  return match === null ? null : `${match[1]?.toLowerCase()}#${match[2]}`
+}
+
+function sameGitHubTarget(left: string, right: string): boolean {
+  const leftTarget = githubTarget(left)
+  return leftTarget !== null && leftTarget === githubTarget(right)
+}
+
 export interface InstalledServiceOptions {
   fetch?: typeof globalThis.fetch
   now?: () => number
@@ -191,14 +207,23 @@ export class InstalledService {
       const repository = repositoryInfo(manifest.repository)
       const match = registryMatch(packageName, repository.slug, catalog.plugins)
       const source = sourceKind(dependencyValue)
+      let currentGitHubSource = false
+      if (source === 'github' && match !== null) {
+        const detail = await this.registry.getPlugin(match.id).catch(() => null)
+        currentGitHubSource = detail?.install.available === true
+          && detail.install.preferred === 'github'
+          && detail.install.spec !== null
+          && sameGitHubTarget(dependencyValue, detail.install.spec)
+      }
       const latestVersion = source === 'npm'
         ? match?.install.version ?? await this.latestNpmVersion(packageName)
         : null
       const comparable = version !== null && latestVersion !== null
         && valid(version) !== null && valid(latestVersion) !== null
       const available = comparable && gt(latestVersion, version)
-      const status: InstalledUpdateStatus = source !== 'npm'
-        ? 'source'
+      const status: InstalledUpdateStatus = source === 'github'
+        ? currentGitHubSource ? 'current' : 'source'
+        : source !== 'npm' ? 'source'
         : comparable ? available ? 'available' : 'current' : 'unknown'
       plugins.push({
         packageName,
@@ -219,7 +244,7 @@ export class InstalledService {
           status,
           available,
           latestVersion: comparable ? latestVersion : null,
-          canUpdate: available || source === 'github',
+          canUpdate: available || (source === 'github' && !currentGitHubSource),
         },
         self: packageName === 'untr-dsh-marketplace',
       })
