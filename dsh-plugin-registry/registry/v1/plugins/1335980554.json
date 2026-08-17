@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-16T14:47:59.364Z",
+    "enrichedAt": "2026-08-17T02:05:54.294Z",
     "enrichmentStatus": "ok",
-    "headSha": "032c37113d22afe1423b8d380d8cd6681696b930"
+    "headSha": "0b38a9868505599be8808c09cdeb480a645eb653"
   },
   "github": {
     "archived": false,
@@ -17,19 +17,22 @@
     "description": "DSH plugin for DeepSeek API prefix cache hit-rate monitoring, token usage statistics and cost estimation. ​DeepSeek Harness 插件，用于监控前缀缓存命中率、统计 Token 消耗与估算 API 运行成本。",
     "fork": false,
     "forks": 0,
-    "headSha": "032c37113d22afe1423b8d380d8cd6681696b930",
+    "headSha": "0b38a9868505599be8808c09cdeb480a645eb653",
     "homepageUrl": null,
-    "language": null,
-    "license": null,
+    "language": "TypeScript",
+    "license": {
+      "name": "MIT License",
+      "spdxId": "MIT"
+    },
     "nodeId": "R_kgDOT6FyCg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5c4cad328e6e24fa9569894e4c26bc096c4e9dc57044e7db47315e9f39e055b5/eurt-nano/dsh-cache-cost-monitor",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b6500ef25886cd6e33abdc7531e15d7cc635b8a0ab817d6af515edd689f2aab5/eurt-nano/dsh-cache-cost-monitor",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/261958474?u=839ef062e2524069b5bb277ffdbe14964bf7c494&v=4",
       "login": "eurt-nano"
     },
-    "pushedAt": "2026-08-16T13:46:57Z",
+    "pushedAt": "2026-08-17T00:32:23Z",
     "slug": "eurt-nano/dsh-cache-cost-monitor",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "ai-agent",
       "cache-optimization",
@@ -37,38 +40,52 @@
       "dsh-plugin",
       "token-monitoring"
     ],
-    "updatedAt": "2026-08-16T14:21:00Z",
+    "updatedAt": "2026-08-17T00:51:00Z",
     "url": "https://github.com/eurt-nano/dsh-cache-cost-monitor"
   },
   "id": "gh:1335980554",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-cache-cost-monitor",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:eurt-nano/dsh-cache-cost-monitor#0b38a9868505599be8808c09cdeb480a645eb653",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-cache-cost-monitor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5c4cad328e6e24fa9569894e4c26bc096c4e9dc57044e7db47315e9f39e055b5/eurt-nano/dsh-cache-cost-monitor",
+    "coverUrl": "https://opengraph.githubassets.com/b6500ef25886cd6e33abdc7531e15d7cc635b8a0ab817d6af515edd689f2aab5/eurt-nano/dsh-cache-cost-monitor",
     "description": "DSH plugin for DeepSeek API prefix cache hit-rate monitoring, token usage statistics and cost estimation. ​DeepSeek Harness 插件，用于监控前缀缓存命中率、统计 Token 消耗与估算 API 运行成本。"
   },
   "readme": {
     "available": true,
-    "excerpt": "DSH plugin for DeepSeek API prefix cache hit-rate monitoring, token usage statistics and cos"
+    "excerpt": "DSH（DeepSeek Harness）v0.1.x 的 Cordis 插件：自动监听每一轮 Agent 的模型 API 调用，从流式响应中提取 promptcachehittokens / promptcachemisstokens / completiontokens（经 DSH 适配器归一化为 provider 中立的 TokenUsage），实时统计："
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
