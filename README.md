@@ -24,18 +24,19 @@ Marketplace 把流程缩短成：
 
 ## 安装
 
-不需要先全局安装 `dsh`，复制这一条就行：
+不需要先全局安装 `dsh`。Windows PowerShell、Linux 和 macOS 都可以复制这一条：
 
 ```bash
-npx -y --package @deepseek-ai/dsh dsh plugin \
-  --profile web add untr-dsh-marketplace@latest
+npx -y --package @deepseek-ai/dsh dsh plugin --profile web add untr-dsh-marketplace@latest
 ```
 
-如果已经安装了 `dsh`，只安装 Marketplace 插件：
+如果更习惯 `npm exec`，三端通用的等价命令是：
 
 ```bash
-dsh plugin --profile web add untr-dsh-marketplace@latest
+npm exec --yes --package=@deepseek-ai/dsh -- dsh plugin --profile web add untr-dsh-marketplace@latest
 ```
+
+`npx` 和 `npm exec` 都只会临时调用 DSH CLI；持久安装的是 Marketplace 插件，`dsh` 不会因此加入系统 `PATH`。
 
 安装完成后重启 DSH。
 
