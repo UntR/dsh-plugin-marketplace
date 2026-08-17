@@ -1,46 +1,45 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-17T11:01:28.435Z",
+    "enrichedAt": "2026-08-17T13:19:40.641Z",
     "enrichmentStatus": "ok",
-    "headSha": "aae47b4d1c25c1e7b1fac21d70f73afce1360f7d"
+    "headSha": "3d11aec049aa04202c0d8eb09cbf24b63d7ac154"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-17T10:49:48Z",
     "databaseId": 1337033099,
     "defaultBranch": "main",
-    "description": "Persistent side conversations for DeepSeek Harness without leaving the main thread.",
+    "description": "DeepSeek Harness 持久化侧边追问插件：不离开主对话即可分支追问、自动保存并随时恢复。",
     "fork": false,
     "forks": 0,
-    "headSha": "aae47b4d1c25c1e7b1fac21d70f73afce1360f7d",
-    "homepageUrl": null,
+    "headSha": "3d11aec049aa04202c0d8eb09cbf24b63d7ac154",
+    "homepageUrl": "https://github.com/Srien11/dsh-sidecar",
     "language": null,
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT7GBiw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7cca62d3bdeed60edd64abe1b086a8b94ef566d7f0fe0a97b779b626207ba40d/Srien11/dsh-sidecar",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e04531ad57abc358c59f46e422be05696ec32a93fdc3626f818f4b8d92379edd/Srien11/dsh-sidecar",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/270531252?u=5061ceee1c763272a30c6d20378eb35e18fe0f3e&v=4",
       "login": "Srien11"
     },
-    "pushedAt": "2026-08-17T10:55:55Z",
+    "pushedAt": "2026-08-17T13:18:50Z",
     "slug": "Srien11/dsh-sidecar",
     "stars": 0,
     "topics": [
-      "conversation",
+      "conversation-branching",
       "deepseek-harness",
       "dsh-plugin",
-      "sidecar",
-      "typescript"
+      "sidecar"
     ],
-    "updatedAt": "2026-08-17T10:57:17Z",
+    "updatedAt": "2026-08-17T13:18:53Z",
     "url": "https://github.com/Srien11/dsh-sidecar"
   },
   "id": "gh:1337033099",
@@ -48,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,15 +58,27 @@
     "repositoryMatches": null
   },
   "package": {
-    "main": null,
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/src/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/src/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
     "name": "dsh-sidecar",
     "status": "valid",
     "type": "module",
-    "version": "0.0.0"
+    "version": "0.1.0-beta.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7cca62d3bdeed60edd64abe1b086a8b94ef566d7f0fe0a97b779b626207ba40d/Srien11/dsh-sidecar",
-    "description": "Persistent side conversations for DeepSeek Harness without leaving the main thread."
+    "coverUrl": "https://opengraph.githubassets.com/e04531ad57abc358c59f46e422be05696ec32a93fdc3626f818f4b8d92379edd/Srien11/dsh-sidecar",
+    "description": "DeepSeek Harness 持久化侧边追问插件：不离开主对话即可分支追问、自动保存并随时恢复。"
   },
   "readme": {
     "available": true,
