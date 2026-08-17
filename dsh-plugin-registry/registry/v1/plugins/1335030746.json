@@ -1,23 +1,23 @@
 {
   "bundle": {
     "detected": true,
-    "patch": "./cordis.patch.yml",
+    "patch": "./dsh-plugin-container/cordis.patch.yml",
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-16T16:51:26.804Z",
+    "enrichedAt": "2026-08-17T11:01:28.435Z",
     "enrichmentStatus": "ok",
-    "headSha": "e3686257e93ca6d33bc69c3beaa8f39d9c56f091"
+    "headSha": "0cf15889433173be7298c0f8bb978fddbf2a0caf"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-15T11:28:54Z",
     "databaseId": 1335030746,
     "defaultBranch": "main",
-    "description": "DeepSeek Harness 的本地 Docker 容器管理部署级插件：在会话视图环提供「容器」页签，支持仅观察/干预双模式、18 个 docker_* 智能体工具、只读实时 Shell 观察与 /dock-api/* 路由。",
+    "description": "Docker 容器沙箱部署级插件(与 dsh-plugin-vm-sandbox 全能力对齐,无需 OrbStack):39 个 docker_* 模型工具、快照/回滚、文件传输、端口转发、后台任务、审计、共享/配额/回收、网络策略与华丽原生 UI。",
     "fork": false,
     "forks": 0,
-    "headSha": "e3686257e93ca6d33bc69c3beaa8f39d9c56f091",
+    "headSha": "0cf15889433173be7298c0f8bb978fddbf2a0caf",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT5Lz2g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/01a053772ae03b2ba579f17ca2c0a077fa01a4ca8593634b101b4f5874761ac9/GHJIVHIDD/dsh-plugin-container",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/0943741f6cb79080572b4f4a05d8ce34a0525211a42d717efe1a1fe748fd6590/GHJIVHIDD/dsh-plugin-container",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/95120131?v=4",
       "login": "GHJIVHIDD"
     },
-    "pushedAt": "2026-08-15T15:19:33Z",
+    "pushedAt": "2026-08-17T10:47:28Z",
     "slug": "GHJIVHIDD/dsh-plugin-container",
     "stars": 1,
     "topics": [
@@ -39,7 +39,7 @@
       "dsh-plugin-verify",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-08-15T15:32:07Z",
+    "updatedAt": "2026-08-17T10:48:42Z",
     "url": "https://github.com/GHJIVHIDD/dsh-plugin-container"
   },
   "id": "gh:1335030746",
@@ -48,9 +48,9 @@
     "packageName": "@dsh-community/dsh-plugin-container",
     "preferred": "github",
     "reason": null,
-    "requiresBuildApproval": false,
-    "spec": "github:GHJIVHIDD/dsh-plugin-container#e3686257e93ca6d33bc69c3beaa8f39d9c56f091",
-    "version": "0.1.0"
+    "requiresBuildApproval": true,
+    "spec": "github:GHJIVHIDD/dsh-plugin-container#0cf15889433173be7298c0f8bb978fddbf2a0caf",
+    "version": "1.0.3"
   },
   "npm": {
     "latestVersion": null,
@@ -60,22 +60,22 @@
   "package": {
     "exports": {
       ".": {
-        "default": "./lib/index.js",
-        "types": "./lib/types/index.d.ts"
+        "default": "./dsh-plugin-container/lib/index.js",
+        "types": "./dsh-plugin-container/lib/types/index.d.ts"
       },
-      "./client": "./lib/client.js",
-      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./client": "./dsh-plugin-container/lib/client.js",
+      "./cordis.patch.yml": "./dsh-plugin-container/cordis.patch.yml",
       "./package.json": "./package.json"
     },
-    "main": "lib/index.js",
+    "main": "dsh-plugin-container/lib/index.js",
     "name": "@dsh-community/dsh-plugin-container",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "1.0.3"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/01a053772ae03b2ba579f17ca2c0a077fa01a4ca8593634b101b4f5874761ac9/GHJIVHIDD/dsh-plugin-container",
-    "description": "DeepSeek Harness 的本地 Docker 容器管理部署级插件：在会话视图环提供「容器」页签，支持仅观察/干预双模式、18 个 docker_* 智能体工具、只读实时 Shell 观察与 /dock-api/* 路由。"
+    "coverUrl": "https://opengraph.githubassets.com/0943741f6cb79080572b4f4a05d8ce34a0525211a42d717efe1a1fe748fd6590/GHJIVHIDD/dsh-plugin-container",
+    "description": "Docker 容器沙箱部署级插件(与 dsh-plugin-vm-sandbox 全能力对齐,无需 OrbStack):39 个 docker_* 模型工具、快照/回滚、文件传输、端口转发、后台任务、审计、共享/配额/回收、网络策略与华丽原生 UI。"
   },
   "readme": {
     "available": true,
@@ -86,6 +86,6 @@
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,56 +1,58 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-17T09:13:21.209Z",
+    "enrichedAt": "2026-08-17T11:01:28.435Z",
     "enrichmentStatus": "ok",
-    "headSha": "5f20cd9802b1af8a1f35ab743f1079766a0b861c"
+    "headSha": "d8fcd4652c14ba5eb20606f3272d45c3f6c80711"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-17T07:52:45Z",
     "databaseId": 1336849011,
     "defaultBranch": "main",
-    "description": "DeepSeek Harness 插件：跨 preset 会话迁移（固定 schema 交接摘要），含 26 组实测 benchmark 与测试/验证集",
+    "description": "Cross-preset session migration for DeepSeek Harness: fixed-schema handoff summaries instead of bypassing the preset lock. 26-run benchmark + A/B evidence. 跨 preset 会话迁移插件（固定 schema 交接摘要），含实测 benchmark 与 A/B 对照。",
     "fork": false,
     "forks": 0,
-    "headSha": "5f20cd9802b1af8a1f35ab743f1079766a0b861c",
+    "headSha": "d8fcd4652c14ba5eb20606f3272d45c3f6c80711",
     "homepageUrl": null,
-    "language": "TypeScript",
+    "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT66ycw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e239ef031c9ac58dfe43e0f02d3c75223fb114aae69af87df21ad9de11e9e968/Totoro-qaq/dsh-plugin-bridge",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/af58266463ea2dea40562abd081098473b94735dab9f0edce86a7c1bc64bdbdc/Totoro-qaq/dsh-plugin-bridge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/279883115?u=824c34362538f7900b0e84c1c759ab4684badba3&v=4",
       "login": "Totoro-qaq"
     },
-    "pushedAt": "2026-08-17T07:52:50Z",
+    "pushedAt": "2026-08-17T10:55:21Z",
     "slug": "Totoro-qaq/dsh-plugin-bridge",
     "stars": 0,
     "topics": [
       "context-migration",
       "cordis",
       "deepseek-harness",
-      "dsh-plugin"
+      "dsh-plugin",
+      "preset-migration",
+      "session-migration"
     ],
-    "updatedAt": "2026-08-17T07:54:56Z",
+    "updatedAt": "2026-08-17T10:57:25Z",
     "url": "https://github.com/Totoro-qaq/dsh-plugin-bridge"
   },
   "id": "gh:1336849011",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-plugin-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Totoro-qaq/dsh-plugin-bridge#d8fcd4652c14ba5eb20606f3272d45c3f6c80711",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
@@ -65,18 +67,18 @@
     "version": "0.1.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e239ef031c9ac58dfe43e0f02d3c75223fb114aae69af87df21ad9de11e9e968/Totoro-qaq/dsh-plugin-bridge",
-    "description": "DeepSeek Harness 插件：跨 preset 会话迁移（固定 schema 交接摘要），含 26 组实测 benchmark 与测试/验证集"
+    "coverUrl": "https://opengraph.githubassets.com/af58266463ea2dea40562abd081098473b94735dab9f0edce86a7c1bc64bdbdc/Totoro-qaq/dsh-plugin-bridge",
+    "description": "Cross-preset session migration for DeepSeek Harness: fixed-schema handoff summaries instead of bypassing the preset lock. 26-run benchmark + A/B evidence. 跨 preset 会话迁移插件（固定 schema 交接摘要），含实测 benchmark 与 A/B 对照。"
   },
   "readme": {
     "available": true,
-    "excerpt": "跨 preset 会话迁移插件（DeepSeek Harness / Cordis bundle）：用固定 schema 的交接摘要把会话从一种工具模式「搬家」到另一种，而不是绕开官方的模式锁。"
+    "excerpt": "A preset is not a \"tone dial\" — it is a whole assembly: system prompt + tool set + plugins. Every tool call in a session's history (bash, file reads, edits) is legal only under the assembly that produced it. Swap the assembly mid-session and the new one may lack the old tools — l"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": true
+    "prepare": false
   }
 }
