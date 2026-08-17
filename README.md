@@ -31,6 +31,12 @@ npx -y --package @deepseek-ai/dsh dsh plugin \
   --profile web add untr-dsh-marketplace@latest
 ```
 
+如果已经安装了 `dsh`，只安装 Marketplace 插件：
+
+```bash
+dsh plugin --profile web add untr-dsh-marketplace@latest
+```
+
 安装完成后重启 DSH。
 
 Marketplace 不会偷偷重启或热更新 DSH。这不是偷懒，是不想在你工作到一半时表演赛博拔电源。
