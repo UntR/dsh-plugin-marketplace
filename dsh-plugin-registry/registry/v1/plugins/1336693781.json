@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-17T07:29:15.875Z",
+    "enrichedAt": "2026-08-17T09:13:21.209Z",
     "enrichmentStatus": "ok",
-    "headSha": "6c62c7c879f35bde031fef09169beead35c9d40b"
+    "headSha": "d4d6e82d720e46302fef2a02087bfb9c2e13d5c3"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "为 deepseek harness 的 waterfall 和 serial 进行确定性 hooks 监听排序",
     "fork": false,
     "forks": 0,
-    "headSha": "6c62c7c879f35bde031fef09169beead35c9d40b",
+    "headSha": "d4d6e82d720e46302fef2a02087bfb9c2e13d5c3",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,34 +25,34 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT6xUFQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/be0af7e8c648349b137922a4eca6bf2ae2108394001945123021ed912cc1da67/xinyuehtx/dsh-plugin-hooks-ordering",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/172ee5eefef4f0341926354c96426c9a7823428fba3e0cd85c0450ca8be8bb83/xinyuehtx/dsh-plugin-hooks-ordering",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/20579424?u=6df93d6ec4ccdc5d3862092093474ce4b08ab107&v=4",
       "login": "xinyuehtx"
     },
-    "pushedAt": "2026-08-17T05:50:16Z",
+    "pushedAt": "2026-08-17T08:28:44Z",
     "slug": "xinyuehtx/dsh-plugin-hooks-ordering",
     "stars": 1,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-17T06:21:47Z",
+    "updatedAt": "2026-08-17T08:30:30Z",
     "url": "https://github.com/xinyuehtx/dsh-plugin-hooks-ordering"
   },
   "id": "gh:1336693781",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "@tengxiaohtx/dsh-plugin-hooks-ordering",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@tengxiaohtx/dsh-plugin-hooks-ordering@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
   "package": {
     "exports": {
@@ -60,25 +60,42 @@
         "default": "./lib/index.js",
         "types": "./lib/index.d.ts"
       },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./dag": {
+        "default": "./lib/dag.js",
+        "types": "./lib/dag.d.ts"
+      },
+      "./dsh": {
+        "default": "./lib/dsh.js",
+        "types": "./lib/dsh.d.ts"
+      },
       "./package.json": "./package.json",
+      "./serial": {
+        "default": "./lib/serial.js",
+        "types": "./lib/serial.d.ts"
+      },
       "./topo-sort": {
         "default": "./lib/topo-sort.js",
         "types": "./lib/topo-sort.d.ts"
+      },
+      "./waterfall": {
+        "default": "./lib/waterfall.js",
+        "types": "./lib/waterfall.d.ts"
       }
     },
     "main": "lib/index.js",
     "name": "@tengxiaohtx/dsh-plugin-hooks-ordering",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/be0af7e8c648349b137922a4eca6bf2ae2108394001945123021ed912cc1da67/xinyuehtx/dsh-plugin-hooks-ordering",
+    "coverUrl": "https://opengraph.githubassets.com/172ee5eefef4f0341926354c96426c9a7823428fba3e0cd85c0450ca8be8bb83/xinyuehtx/dsh-plugin-hooks-ordering",
     "description": "为 deepseek harness 的 waterfall 和 serial 进行确定性 hooks 监听排序"
   },
   "readme": {
     "available": true,
-    "excerpt": "Deterministic before/after ordering for Cordis waterfall hooks whose participants are contributed by independent, mutually-unaware plugins."
+    "excerpt": "Deterministic before/after ordering for Cordis hooks whose participants are contributed by independent, mutually-unaware plugins — for both waterfall and serial dispatch, with an optional DeepSeek-Harness layer that controls real dsh hooks out of the box."
   },
   "schemaVersion": 1,
   "scripts": {
