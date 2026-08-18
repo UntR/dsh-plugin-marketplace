@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-17T09:13:21.209Z",
+    "enrichedAt": "2026-08-18T13:21:41.899Z",
     "enrichmentStatus": "ok",
-    "headSha": "8c03fa733a0ebb44da4a33494ad2c52552f39461"
+    "headSha": "f5abff882cb930036303024817b77c4dff639ecd"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,20 @@
     "description": "一个DeepSeek Harness的公众号运营插件，DeepSeek Harness community plugin for AI-assisted WeChat article writing, review, image workflows, knowledge bases, and publishing.",
     "fork": false,
     "forks": 0,
-    "headSha": "8c03fa733a0ebb44da4a33494ad2c52552f39461",
+    "headSha": "f5abff882cb930036303024817b77c4dff639ecd",
     "homepageUrl": "https://aiworkskills.cn/",
-    "language": null,
-    "license": null,
+    "language": "TypeScript",
+    "license": {
+      "name": "Apache License 2.0",
+      "spdxId": "Apache-2.0"
+    },
     "nodeId": "R_kgDOT6u12A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/8159c3850bf0d47d7d9be56615f24568aa0b8c8f3462b45850063d5eaece4dd7/aiworkskills/dsh-wechat-article",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f1402d270aea95834403100518ea1fe28ef8384702d0646d29caa004eb75a176/aiworkskills/dsh-wechat-article",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/19565483?u=e490967196cefd4566e45c21e6d39517e2a696f4&v=4",
       "login": "aiworkskills"
     },
-    "pushedAt": "2026-08-17T08:12:09Z",
+    "pushedAt": "2026-08-18T11:54:25Z",
     "slug": "aiworkskills/dsh-wechat-article",
     "stars": 1,
     "topics": [
@@ -43,7 +46,7 @@
       "wechat-article",
       "wechat-official-account"
     ],
-    "updatedAt": "2026-08-18T08:26:10Z",
+    "updatedAt": "2026-08-18T11:33:13Z",
     "url": "https://github.com/aiworkskills/dsh-wechat-article"
   },
   "id": "gh:1336653272",
@@ -51,7 +54,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,14 +64,60 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./commands": {
+        "default": "./lib/commands.js",
+        "types": "./lib/types/commands.d.ts"
+      },
+      "./configuration": {
+        "default": "./lib/configuration.js",
+        "types": "./lib/types/configuration.d.ts"
+      },
+      "./configuration-route": {
+        "default": "./lib/configuration-route.js",
+        "types": "./lib/types/configuration-route.d.ts"
+      },
+      "./contracts": {
+        "default": "./lib/contracts.js",
+        "types": "./lib/types/contracts.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./library": {
+        "default": "./lib/library.js",
+        "types": "./lib/types/library.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./skills": {
+        "default": "./lib/skills.js",
+        "types": "./lib/types/skills.d.ts"
+      },
+      "./tools": {
+        "default": "./lib/tools.js",
+        "types": "./lib/types/tools.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "@aiworkskills/aws-wechat-article",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/8159c3850bf0d47d7d9be56615f24568aa0b8c8f3462b45850063d5eaece4dd7/aiworkskills/dsh-wechat-article",
-    "description": "DeepSeek Harness community plugin for AI-assisted WeChat article writing, review, image workflows, knowledge bases, and publishing."
+    "coverUrl": "https://opengraph.githubassets.com/f1402d270aea95834403100518ea1fe28ef8384702d0646d29caa004eb75a176/aiworkskills/dsh-wechat-article",
+    "description": "一个DeepSeek Harness的公众号运营插件，DeepSeek Harness community plugin for AI-assisted WeChat article writing, review, image workflows, knowledge bases, and publishing."
   },
   "readme": {
     "available": true,
-    "excerpt": "面向 DeepSeek Harness 的公众号创作社区插件。项目将 aiworkskills/wechat-article-skills 的完整工作流接入 Harness，并提供原生会话工作台、产品知识库和产品图片库工具。"
+    "excerpt": "aws-wechat-article 是一个运行在 DeepSeek Harness 中的微信公众号创作插件。"
   },
   "schemaVersion": 1,
   "scripts": {

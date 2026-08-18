@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-18T05:03:29.383Z",
+    "enrichedAt": "2026-08-18T13:21:41.899Z",
     "enrichmentStatus": "ok",
-    "headSha": "520d872be1f693f252b2f07f94ad37f4405f2b90"
+    "headSha": "00e114472919218a36ff8656d8a201e005d67a4d"
   },
   "github": {
     "archived": false,
@@ -17,20 +17,20 @@
     "description": "DeepSeek Harness 凭证加密插件，通过设置密码使用AES-256-GCM+SHA3-256实现的全流程加密+校验，运行时临时解密，内存安全。",
     "fork": false,
     "forks": 2,
-    "headSha": "520d872be1f693f252b2f07f94ad37f4405f2b90",
+    "headSha": "00e114472919218a36ff8656d8a201e005d67a4d",
     "homepageUrl": null,
-    "language": "JavaScript",
+    "language": "TypeScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT5aeZg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/01fb423525f0a7ce3858115b61c34081b319a5119f6ad535c7215a563fe982b3/yauntyour/DSH-Encrypt",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a4e24907cba32dfab4f825e7da59a65ec0511dde7ac1a7d9c133d4fb0bf07379/yauntyour/DSH-Encrypt",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/63139381?u=83fcc8835ace626420dadf28d1fa0e685672cd73&v=4",
       "login": "yauntyour"
     },
-    "pushedAt": "2026-08-18T03:19:54Z",
+    "pushedAt": "2026-08-18T11:58:06Z",
     "slug": "yauntyour/DSH-Encrypt",
     "stars": 6,
     "topics": [
@@ -49,7 +49,7 @@
       "encryption-tool",
       "encryptor"
     ],
-    "updatedAt": "2026-08-18T07:17:18Z",
+    "updatedAt": "2026-08-18T12:02:27Z",
     "url": "https://github.com/yauntyour/DSH-Encrypt"
   },
   "id": "gh:1335271014",
@@ -59,7 +59,7 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:yauntyour/DSH-Encrypt#520d872be1f693f252b2f07f94ad37f4405f2b90",
+    "spec": "github:yauntyour/DSH-Encrypt#00e114472919218a36ff8656d8a201e005d67a4d",
     "version": "0.1.0-rc.12"
   },
   "npm": {
@@ -69,26 +69,39 @@
   },
   "package": {
     "exports": {
-      ".": "./lib/index.js",
-      "./client": "./lib/client.js",
+      ".": {
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "import": "./lib/client.js",
+        "types": "./lib/client.d.ts"
+      },
       "./cordis.patch.yml": "./cordis.patch.yml",
       "./package.json": "./package.json",
-      "./vault": "./lib/vault.js",
-      "./web": "./lib/web.js"
+      "./vault": {
+        "import": "./lib/vault.js",
+        "types": "./lib/vault.d.ts"
+      },
+      "./web": {
+        "import": "./lib/web.js",
+        "types": "./lib/web.d.ts"
+      }
     },
-    "main": "lib/index.js",
+    "main": "./lib/index.js",
     "name": "dsh-encrypt",
     "status": "valid",
     "type": "module",
     "version": "0.1.0-rc.12"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/01fb423525f0a7ce3858115b61c34081b319a5119f6ad535c7215a563fe982b3/yauntyour/DSH-Encrypt",
+    "coverUrl": "https://opengraph.githubassets.com/a4e24907cba32dfab4f825e7da59a65ec0511dde7ac1a7d9c133d4fb0bf07379/yauntyour/DSH-Encrypt",
     "description": "DeepSeek Harness 凭证加密插件，通过设置密码使用AES-256-GCM+SHA3-256实现的全流程加密+校验，运行时临时解密，内存安全。"
   },
   "readme": {
     "available": true,
-    "excerpt": "bundle 形态由三个组合行构成:"
+    "excerpt": "实现代码采用领域、应用、基础设施、传输、安全和客户端分层。index.ts、vault.ts、web.ts、client.ts 保留为兼容入口；磁盘结构与 HTTP 输入由 Valibot 校验，Cordis 静态配置继续使用宿主要求的 Schemastery。项目的字符语法和泄露匹配均使用显式解析，不使用正则表达式。完整边界与变更规则见 ARCHITECTURE.md。"
   },
   "schemaVersion": 1,
   "scripts": {
