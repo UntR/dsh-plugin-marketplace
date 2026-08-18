@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-17T09:13:21.209Z",
+    "enrichedAt": "2026-08-18T03:20:18.790Z",
     "enrichmentStatus": "ok",
-    "headSha": "c009879bdb4b8ac5d8595cb5b389d09eeee70001"
+    "headSha": "21bdb6c9bcd05ab4826b94f579ba90e78f7611c0"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness 凭证加密插件，通过设置密码使用AES-256-GCM+SHA3-256实现的全流程加密+校验，运行时临时解密，内存安全。",
     "fork": true,
     "forks": 0,
-    "headSha": "c009879bdb4b8ac5d8595cb5b389d09eeee70001",
+    "headSha": "21bdb6c9bcd05ab4826b94f579ba90e78f7611c0",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT5_4fQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/efa10105e545c2c96cc61e207cbb5f15b742be9f94bd16d4e4ecf06abfa51b50/omdsh-dev/DSH-Encrypt",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b4b549229c491a2c202d8176b27ad2ea9dbdb92aa35f4ceac7daf4f8f01b5c11/omdsh-dev/DSH-Encrypt",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/312905287?v=4",
       "login": "omdsh-dev"
     },
-    "pushedAt": "2026-08-17T08:25:42Z",
+    "pushedAt": "2026-08-18T03:08:52Z",
     "slug": "omdsh-dev/DSH-Encrypt",
     "stars": 0,
     "topics": [
@@ -38,7 +38,7 @@
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-08-17T08:26:04Z",
+    "updatedAt": "2026-08-18T03:09:34Z",
     "url": "https://github.com/omdsh-dev/DSH-Encrypt"
   },
   "id": "gh:1335883901",
@@ -48,7 +48,7 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:omdsh-dev/DSH-Encrypt#c009879bdb4b8ac5d8595cb5b389d09eeee70001",
+    "spec": "github:omdsh-dev/DSH-Encrypt#21bdb6c9bcd05ab4826b94f579ba90e78f7611c0",
     "version": "0.1.0-rc.10"
   },
   "npm": {
@@ -58,26 +58,28 @@
   },
   "package": {
     "exports": {
-      ".": "./lib/index.js",
+      ".": "./lib/fabric-entry.js",
       "./client": "./lib/client.js",
       "./cordis.patch.yml": "./cordis.patch.yml",
+      "./migrate": "./lib/migrate.js",
       "./package.json": "./package.json",
+      "./plain": "./lib/plain.js",
       "./vault": "./lib/vault.js",
       "./web": "./lib/web.js"
     },
-    "main": "lib/index.js",
+    "main": "lib/fabric-entry.js",
     "name": "dsh-encrypt",
     "status": "valid",
     "type": "module",
     "version": "0.1.0-rc.10"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/efa10105e545c2c96cc61e207cbb5f15b742be9f94bd16d4e4ecf06abfa51b50/omdsh-dev/DSH-Encrypt",
+    "coverUrl": "https://opengraph.githubassets.com/b4b549229c491a2c202d8176b27ad2ea9dbdb92aa35f4ceac7daf4f8f01b5c11/omdsh-dev/DSH-Encrypt",
     "description": "DeepSeek Harness 凭证加密插件，通过设置密码使用AES-256-GCM+SHA3-256实现的全流程加密+校验，运行时临时解密，内存安全。"
   },
   "readme": {
     "available": true,
-    "excerpt": "DSH 默认的凭证存储把密钥以明文 YAML 写在 $DSHHOME/.credentials.yaml。dsh-encrypt 用同一个文件提供可选的加密形态：设置密码前零改动、完全兼容；设置密码后文件内容被替换为密文文档，凭证只在模型调用发生时临时解密。"
+    "excerpt": "Fabric 版本不再禁用或复制官方 credentials-local row。官方 provider 继续负责 .credentials.yaml 的 YAML 解析、环境变量优先级、watcher、文件锁、明文写入和 credentials/updated 生命周期；本插件只挂载 EncryptController 并注册目标函数的 hook。"
   },
   "schemaVersion": 1,
   "scripts": {
