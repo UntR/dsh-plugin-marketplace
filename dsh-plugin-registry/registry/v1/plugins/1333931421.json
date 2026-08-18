@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-17T22:52:30.638Z",
+    "enrichedAt": "2026-08-18T02:03:20.614Z",
     "enrichmentStatus": "ok",
-    "headSha": "9ec2ed12efaee68e04d3f09f9188f130bbeb3d88"
+    "headSha": "ed082d84a30ef0a8b17f45fd0e98551d74a70809"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh-conv-search（对话内文本搜索）— in-conversation text search plugin for DeepSeek Harness (Ctrl+F, match case, whole word, streaming-aware)",
     "fork": false,
     "forks": 0,
-    "headSha": "9ec2ed12efaee68e04d3f09f9188f130bbeb3d88",
+    "headSha": "ed082d84a30ef0a8b17f45fd0e98551d74a70809",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4ItnQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/8f254a820daaf7d413d471c4ec09dc54a18660964fc6faa7c3a5c9082deb2f98/beijingwahw/dsh-conv-search",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/82251d127fbdb94ee98203a3db0b9290cb59628fc27d145b38de377a37d29f20/beijingwahw/dsh-conv-search",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/299978857?v=4",
       "login": "beijingwahw"
     },
-    "pushedAt": "2026-08-17T22:32:11Z",
+    "pushedAt": "2026-08-17T23:45:00Z",
     "slug": "beijingwahw/dsh-conv-search",
     "stars": 3,
     "topics": [
@@ -39,7 +39,7 @@
       "dsh-plugin",
       "in-conversation-search"
     ],
-    "updatedAt": "2026-08-17T22:32:56Z",
+    "updatedAt": "2026-08-17T23:45:06Z",
     "url": "https://github.com/beijingwahw/dsh-conv-search"
   },
   "id": "gh:1333931421",
@@ -48,8 +48,8 @@
     "packageName": "@dsh-external/dsh-conv-search",
     "preferred": "github",
     "reason": null,
-    "requiresBuildApproval": true,
-    "spec": "github:beijingwahw/dsh-conv-search#9ec2ed12efaee68e04d3f09f9188f130bbeb3d88",
+    "requiresBuildApproval": false,
+    "spec": "github:beijingwahw/dsh-conv-search#ed082d84a30ef0a8b17f45fd0e98551d74a70809",
     "version": "0.1.0"
   },
   "npm": {
@@ -59,10 +59,19 @@
   },
   "package": {
     "exports": {
-      ".": "./lib/index.js",
-      "./client": "./lib/client.js",
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client.d.ts"
+      },
       "./cordis.patch.yml": "./cordis.patch.yml",
-      "./invariant": "./lib/invariant.js",
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/invariant.d.ts"
+      },
       "./package.json": "./package.json"
     },
     "main": "lib/index.js",
@@ -72,7 +81,7 @@
     "version": "0.1.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/8f254a820daaf7d413d471c4ec09dc54a18660964fc6faa7c3a5c9082deb2f98/beijingwahw/dsh-conv-search",
+    "coverUrl": "https://opengraph.githubassets.com/82251d127fbdb94ee98203a3db0b9290cb59628fc27d145b38de377a37d29f20/beijingwahw/dsh-conv-search",
     "description": "dsh-conv-search（对话内文本搜索）— in-conversation text search plugin for DeepSeek Harness (Ctrl+F, match case, whole word, streaming-aware)"
   },
   "readme": {
@@ -83,7 +92,7 @@
   "scripts": {
     "install": false,
     "postinstall": false,
-    "preinstall": true,
+    "preinstall": false,
     "prepare": false
   }
 }

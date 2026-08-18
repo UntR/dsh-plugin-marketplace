@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-17T09:13:21.209Z",
+    "enrichedAt": "2026-08-18T02:03:20.614Z",
     "enrichmentStatus": "ok",
-    "headSha": "8158dd0161537ba7424b02cf1ef1b507ec28bd52"
+    "headSha": "bc78aea17092f0797f048a588f081253d1858df6"
   },
   "github": {
     "archived": false,
@@ -17,22 +17,22 @@
     "description": "Agent 会话的时光机。 一个 DeepSeek Harness 插件,把 append-only 会话日志变成可交互的回放:可播放的时间线 + 逐步 token 账单、安全审计视图、fork 血缘树、双会话对比 —— 全部内嵌在 Harness 的 Web UI 里。",
     "fork": false,
     "forks": 0,
-    "headSha": "8158dd0161537ba7424b02cf1ef1b507ec28bd52",
+    "headSha": "bc78aea17092f0797f048a588f081253d1858df6",
     "homepageUrl": null,
-    "language": null,
+    "language": "TypeScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT660mQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/cf4ef20b2e8f6640821fa6cb1f55aed95cbb4c4d174cf14c9205305505079289/MingoZhou/dsh-replay",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/84673c87d6caa6ef79a4cc8de9ea2817bf7334963eb6c718131586c1caea9524/MingoZhou/dsh-replay",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/82087816?u=497de4378501c7b0f490f19b0f174ad10364e132&v=4",
       "login": "MingoZhou"
     },
-    "pushedAt": "2026-08-17T07:53:18Z",
+    "pushedAt": "2026-08-18T01:15:44Z",
     "slug": "MingoZhou/dsh-replay",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "deepseek-harness",
       "deepseek-harness-plugin",
@@ -41,38 +41,60 @@
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-08-17T08:26:59Z",
+    "updatedAt": "2026-08-18T01:15:58Z",
     "url": "https://github.com/MingoZhou/dsh-replay"
   },
   "id": "gh:1336849561",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-replay",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:MingoZhou/dsh-replay#bc78aea17092f0797f048a588f081253d1858df6",
+    "version": "0.3.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/src/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/src/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./core": {
+        "default": "./lib/core.js",
+        "types": "./lib/types/src/core/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-replay",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/cf4ef20b2e8f6640821fa6cb1f55aed95cbb4c4d174cf14c9205305505079289/MingoZhou/dsh-replay",
+    "coverUrl": "https://opengraph.githubassets.com/84673c87d6caa6ef79a4cc8de9ea2817bf7334963eb6c718131586c1caea9524/MingoZhou/dsh-replay",
     "description": "Agent 会话的时光机。 一个 DeepSeek Harness 插件,把 append-only 会话日志变成可交互的回放:可播放的时间线 + 逐步 token 账单、安全审计视图、fork 血缘树、双会话对比 —— 全部内嵌在 Harness 的 Web UI 里。"
   },
   "readme": {
     "available": true,
-    "excerpt": "Agent 会话的时光机。 一个 DeepSeek Harness 插件,把 append-only 会话日志变成可交互的回放:可播放的时间线 + 逐步 token 账单、安全审计视图、fork 血缘树、双会话对比 —— 全部内嵌在 Harness 的 Web UI 里。"
+    "excerpt": "Time machine for your agent sessions. Replay · Audit · Cost · Fork tree · Compare — inside the DeepSeek Harness web UI."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
