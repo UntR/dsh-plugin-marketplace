@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-18T17:03:38.664Z",
+    "enrichedAt": "2026-08-18T20:56:28.492Z",
     "enrichmentStatus": "ok",
-    "headSha": "db3738fbfa0eca57d95c9d6c90d00ad4705ad656"
+    "headSha": "77693fc949c09467275028f24b13ec96e7cfc7d6"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,17 @@
     "description": "deepseek-harness dsh thinging levels 调整 reasoning强度调整",
     "fork": false,
     "forks": 0,
-    "headSha": "db3738fbfa0eca57d95c9d6c90d00ad4705ad656",
+    "headSha": "77693fc949c09467275028f24b13ec96e7cfc7d6",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOT8j97g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/c819d608b3e8de775506074f070fee09a81eb9302786006dc720be30eb3681e4/drscrewdriver/dsh-thinking-levels",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/dc26deafd3917e3a2958d636f08e789c97ce582fabff082160dc6b390b191626/drscrewdriver/dsh-thinking-levels",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/19632018?u=2d7614545514d34083f753282e17aa16e1d3dd70&v=4",
       "login": "drscrewdriver"
     },
-    "pushedAt": "2026-08-18T16:18:23Z",
+    "pushedAt": "2026-08-18T20:51:34Z",
     "slug": "drscrewdriver/dsh-thinking-levels",
     "stars": 1,
     "topics": [
@@ -40,49 +40,52 @@
       "node",
       "typescript"
     ],
-    "updatedAt": "2026-08-18T16:21:44Z",
+    "updatedAt": "2026-08-18T20:52:38Z",
     "url": "https://github.com/drscrewdriver/dsh-thinking-levels"
   },
   "id": "gh:1338572270",
   "install": {
     "available": true,
     "packageName": "dsh-thinking-levels",
-    "preferred": "github",
+    "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:drscrewdriver/dsh-thinking-levels#db3738fbfa0eca57d95c9d6c90d00ad4705ad656",
-    "version": "0.1.0"
+    "spec": "dsh-thinking-levels@0.3.1",
+    "version": "0.3.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.1",
+    "published": true,
+    "repositoryMatches": true
   },
   "package": {
     "exports": {
       ".": {
-        "default": "./src/index.ts",
-        "types": "./src/index.ts"
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
       },
       "./package.json": "./package.json",
       "./thinking-level": {
-        "default": "./src/thinking-level.ts",
-        "types": "./src/thinking-level.ts"
+        "default": "./lib/thinking-level.js",
+        "types": "./lib/thinking-level.d.ts"
       }
     },
-    "main": "src/index.ts",
+    "main": "lib/index.js",
     "name": "dsh-thinking-levels",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.3.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/c819d608b3e8de775506074f070fee09a81eb9302786006dc720be30eb3681e4/drscrewdriver/dsh-thinking-levels",
+    "coverUrl": "https://opengraph.githubassets.com/dc26deafd3917e3a2958d636f08e789c97ce582fabff082160dc6b390b191626/drscrewdriver/dsh-thinking-levels",
     "description": "deepseek-harness dsh thinging levels 调整 reasoning强度调整"
   },
   "readme": {
     "available": true,
-    "excerpt": "Per-round thinking-level (reasoningeffort) control for DeepSeek Harness (dsh): five levels — off / low / high / max for manual control, plus an auto scheduler that keeps cheap tool rounds cheap and never starves heavy work."
+    "excerpt": "Per-round thinking-level (reasoningeffort) control for DeepSeek Harness (dsh): pick Auto (a mask) in the session model selector and the plugin schedules low / high / max from the recent tool-call history before submitting the API effort — or fix a wire level (off / low / high / m"
   },
   "schemaVersion": 1,
   "scripts": {
