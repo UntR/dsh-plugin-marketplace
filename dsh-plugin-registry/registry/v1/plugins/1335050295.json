@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-17T16:59:20.842Z",
+    "enrichedAt": "2026-08-18T05:03:29.383Z",
     "enrichmentStatus": "ok",
-    "headSha": "e9cb28b354b9e122a22a67b0065dcb160da8d97e"
+    "headSha": "478217c3bc8515be9e1fb4297c40d325216f3590"
   },
   "github": {
     "archived": false,
@@ -17,27 +17,27 @@
     "description": "DeepSeek Harness 消耗统计插件：设置页 Token 用量 KPI、半年活跃热力图、按模型堆叠柱状图与模型环形图（dsh-plugin）",
     "fork": false,
     "forks": 0,
-    "headSha": "e9cb28b354b9e122a22a67b0065dcb160da8d97e",
+    "headSha": "478217c3bc8515be9e1fb4297c40d325216f3590",
     "homepageUrl": null,
-    "language": "JavaScript",
+    "language": "TypeScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT5NANw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/1452e09c96c2cd35f2e351bcaf510e8a9baac85b4e5d52fa607465c272df57c8/AlfredChaos/dsh-usage-panel",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/268c1df768f0b30bc9ece92c78421756c6c337a167ec8be1cac63d66ed694f1d/AlfredChaos/dsh-usage-panel",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/48818977?u=413813447ffc6cea0ef0ef8843c1276af8cbfacf&v=4",
       "login": "AlfredChaos"
     },
-    "pushedAt": "2026-08-17T15:23:07Z",
+    "pushedAt": "2026-08-18T04:30:56Z",
     "slug": "AlfredChaos/dsh-usage-panel",
     "stars": 1,
     "topics": [
       "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-15T15:52:15Z",
+    "updatedAt": "2026-08-18T04:31:26Z",
     "url": "https://github.com/AlfredChaos/dsh-usage-panel"
   },
   "id": "gh:1335050295",
@@ -47,17 +47,20 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-usage-panel@0.1.0",
-    "version": "0.1.0"
+    "spec": "dsh-usage-panel@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": "0.1.0",
+    "latestVersion": "0.2.0",
     "published": true,
     "repositoryMatches": true
   },
   "package": {
     "exports": {
-      ".": "./lib/index.js",
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/host/index.d.ts"
+      },
       "./client": "./lib/client.js",
       "./package.json": "./package.json"
     },
@@ -65,15 +68,15 @@
     "name": "dsh-usage-panel",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/1452e09c96c2cd35f2e351bcaf510e8a9baac85b4e5d52fa607465c272df57c8/AlfredChaos/dsh-usage-panel",
+    "coverUrl": "https://opengraph.githubassets.com/268c1df768f0b30bc9ece92c78421756c6c337a167ec8be1cac63d66ed694f1d/AlfredChaos/dsh-usage-panel",
     "description": "DeepSeek Harness 消耗统计插件：设置页 Token 用量 KPI、半年活跃热力图、按模型堆叠柱状图与模型环形图（dsh-plugin）"
   },
   "readme": {
     "available": true,
-    "excerpt": "Token usage statistics for DeepSeek Harness, shown as a page under Settings → Usage in the web GUI. The plugin rescans persisted session logs and never writes anything back."
+    "excerpt": "Token usage statistics for DeepSeek Harness, shown as a page under Settings → Usage in the web GUI. The plugin aggregates persisted session logs (incrementally, via the session-projection mechanism) and never writes anything back."
   },
   "schemaVersion": 1,
   "scripts": {
