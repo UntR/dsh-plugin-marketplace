@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-18T09:06:00.833Z",
+    "enrichedAt": "2026-08-18T10:59:05.558Z",
     "enrichmentStatus": "ok",
-    "headSha": "2d55f5ba40b19cb152c84e94fe25d06404c521c6"
+    "headSha": "a038f86c8f4ba78d008641d273c472a49b1382fe"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Tavily web-search provider for DeepSeek Harness (ctx.web). Keyless or API-key modes with a configurable UI card; provider framework designed to be extended to more search APIs.",
     "fork": false,
     "forks": 0,
-    "headSha": "2d55f5ba40b19cb152c84e94fe25d06404c521c6",
+    "headSha": "a038f86c8f4ba78d008641d273c472a49b1382fe",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,34 +25,34 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT8HY4g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/823e89de247a05e027c0187a63ebf287f0c5d8564871b1dd143dfd50f11d5cf5/X-C1811/dsh-web-search-plugin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/6291ea80d963e02ad18f756f72dc7efde766f5be14422dbf6b75946d4a11a5ec/X-C1811/dsh-web-search-plugin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/238832248?v=4",
       "login": "X-C1811"
     },
-    "pushedAt": "2026-08-18T08:57:44Z",
+    "pushedAt": "2026-08-18T10:22:12Z",
     "slug": "X-C1811/dsh-web-search-plugin",
-    "stars": 1,
+    "stars": 2,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-18T08:51:49Z",
+    "updatedAt": "2026-08-18T10:14:44Z",
     "url": "https://github.com/X-C1811/dsh-web-search-plugin"
   },
   "id": "gh:1338104034",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-web-search-plugin",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-web-search-plugin@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
   "package": {
     "exports": {
@@ -62,21 +62,22 @@
       "./client": {
         "default": "./lib/client.js"
       },
+      "./cordis.patch.yml": "./cordis.patch.yml",
       "./package.json": "./package.json"
     },
     "main": "lib/index.js",
     "name": "dsh-web-search-plugin",
     "status": "valid",
     "type": "module",
-    "version": "0.1.1"
+    "version": "0.2.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/823e89de247a05e027c0187a63ebf287f0c5d8564871b1dd143dfd50f11d5cf5/X-C1811/dsh-web-search-plugin",
+    "coverUrl": "https://opengraph.githubassets.com/6291ea80d963e02ad18f756f72dc7efde766f5be14422dbf6b75946d4a11a5ec/X-C1811/dsh-web-search-plugin",
     "description": "Tavily web-search provider for DeepSeek Harness (ctx.web). Keyless or API-key modes with a configurable UI card; provider framework designed to be extended to more search APIs."
   },
   "readme": {
     "available": true,
-    "excerpt": "A Tavily-backed web search provider for the DeepSeek Harness web capability seam (ctx.web). It registers a WebSearchProvider under the stable id tavily, so the model-facing websearch tool runs against Tavily instead of the built-in DeepSeek search endpoint — with or without an AP"
+    "excerpt": "面向 DeepSeek Harness web 能力接缝（ctx.web）的统一网页搜索插件，内置 DeepSeek（官方）/ Tavily / Brave Search 三个后端。本包只向接缝注册 一个 WebSearchProvider，稳定 id 为 dsh-web-search。在设置卡里切换引擎即可，不必再改 web.searchProvider。"
   },
   "schemaVersion": 1,
   "scripts": {
