@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-19T13:26:51.511Z",
+    "enrichedAt": "2026-08-19T17:06:25.966Z",
     "enrichmentStatus": "ok",
-    "headSha": "812cd9ff5d57cccd97ecaaf930b281a59c4e7e71"
+    "headSha": "c561e68c671d5cfcecb0fc1cf4bf5e8c2c28e857"
   },
   "github": {
     "archived": false,
@@ -17,20 +17,20 @@
     "description": "DSH plugin for voice input",
     "fork": false,
     "forks": 0,
-    "headSha": "812cd9ff5d57cccd97ecaaf930b281a59c4e7e71",
+    "headSha": "c561e68c671d5cfcecb0fc1cf4bf5e8c2c28e857",
     "homepageUrl": null,
-    "language": "JavaScript",
+    "language": "TypeScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT8vKGQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/6e2b77c0a1405f2c2eff5847b9e67bcbcb07da689691d3e8b08a5ad40d4ee207/KotDath/dsh-voice",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/049895a2d464e3413e8dc06b20944e7208f3538b502039ae912f5520bdec5354/KotDath/dsh-voice",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/97358902?u=f483b6e381d3bec3479b1af4e2863b9162811e63&v=4",
       "login": "KotDath"
     },
-    "pushedAt": "2026-08-19T13:46:49Z",
+    "pushedAt": "2026-08-19T16:59:39Z",
     "slug": "KotDath/dsh-voice",
     "stars": 0,
     "topics": [
@@ -38,32 +38,54 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-19T12:40:30Z",
+    "updatedAt": "2026-08-19T17:00:02Z",
     "url": "https://github.com/KotDath/dsh-voice"
   },
   "id": "gh:1338755609",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-voice",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:KotDath/dsh-voice#c561e68c671d5cfcecb0fc1cf4bf5e8c2c28e857",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-voice",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/6e2b77c0a1405f2c2eff5847b9e67bcbcb07da689691d3e8b08a5ad40d4ee207/KotDath/dsh-voice",
+    "coverUrl": "https://opengraph.githubassets.com/049895a2d464e3413e8dc06b20944e7208f3538b502039ae912f5520bdec5354/KotDath/dsh-voice",
     "description": "DSH plugin for voice input"
   },
   "readme": {
     "available": true,
-    "excerpt": "Voice input for the DeepSeek Harness Web GUI (dynamic Cordis Plugin)."
+    "excerpt": "Voice input for the DeepSeek Harness Web GUI — as an official plugin bundle."
   },
   "schemaVersion": 1,
   "scripts": {

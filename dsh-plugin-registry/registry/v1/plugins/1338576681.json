@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-19T11:01:26.037Z",
+    "enrichedAt": "2026-08-19T17:06:25.966Z",
     "enrichmentStatus": "ok",
-    "headSha": "0924803a9babf81d99b6a033badc819de1170324"
+    "headSha": "b6c40a344e4ff46e3eb21f4b0a244eb0dea74eef"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Delegate long-running work to DeepSeek Harness from any MCP agent—and monitor it to completion.",
     "fork": false,
     "forks": 0,
-    "headSha": "0924803a9babf81d99b6a033badc819de1170324",
+    "headSha": "b6c40a344e4ff46e3eb21f4b0a244eb0dea74eef",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT8kPKQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/cf505612bd0e40d647deb689f65eea3113e39b0a4ba2b72b41a1f27f5843a25d/tonytanglab/deepseek-harness-relay-mcp",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/fd45ceb4c7a290dda80090c2966761f924ab5a05e24bba582a28e840c9e4be84/tonytanglab/deepseek-harness-relay-mcp",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/246197484?v=4",
       "login": "tonytanglab"
     },
-    "pushedAt": "2026-08-19T09:30:42Z",
+    "pushedAt": "2026-08-19T16:47:43Z",
     "slug": "tonytanglab/deepseek-harness-relay-mcp",
     "stars": 1,
     "topics": [
@@ -41,50 +41,60 @@
       "mcp",
       "model-context-protocol"
     ],
-    "updatedAt": "2026-08-19T09:33:21Z",
+    "updatedAt": "2026-08-19T16:03:05Z",
     "url": "https://github.com/tonytanglab/deepseek-harness-relay-mcp"
   },
   "id": "gh:1338576681",
   "install": {
     "available": true,
-    "packageName": "dsh-agents-relay",
-    "preferred": "github",
+    "packageName": "harness-relay-mcp",
+    "preferred": "npm",
     "reason": null,
-    "requiresBuildApproval": true,
-    "spec": "github:tonytanglab/deepseek-harness-relay-mcp#0924803a9babf81d99b6a033badc819de1170324",
-    "version": "0.1.5"
+    "requiresBuildApproval": false,
+    "spec": "harness-relay-mcp@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
   "package": {
     "exports": {
-      ".": "./lib/index.js",
+      ".": {
+        "default": "./dist/dsh-relay-harness.mjs",
+        "types": "./dist/types/harness-entry.d.ts"
+      },
       "./cordis.patch.yml": "./cordis.patch.yml",
-      "./mcp": "./lib/mcp.js",
-      "./package.json": "./package.json"
+      "./harness": {
+        "default": "./dist/dsh-relay-harness.mjs",
+        "types": "./dist/types/harness-entry.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./standalone": {
+        "default": "./dist/dsh-relay.mjs",
+        "types": "./dist/types/index.d.ts"
+      }
     },
-    "main": "lib/index.js",
-    "name": "dsh-agents-relay",
+    "main": "./dist/dsh-relay-harness.mjs",
+    "name": "harness-relay-mcp",
     "status": "valid",
     "type": "module",
-    "version": "0.1.5"
+    "version": "0.2.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/cf505612bd0e40d647deb689f65eea3113e39b0a4ba2b72b41a1f27f5843a25d/tonytanglab/deepseek-harness-relay-mcp",
+    "coverUrl": "https://opengraph.githubassets.com/fd45ceb4c7a290dda80090c2966761f924ab5a05e24bba582a28e840c9e4be84/tonytanglab/deepseek-harness-relay-mcp",
     "description": "Delegate long-running work to DeepSeek Harness from any MCP agent—and monitor it to completion."
   },
   "readme": {
     "available": true,
-    "excerpt": "Web-profile helper that writes MCP config so Cursor, Codex, or Claude Code can attach to an already-running Harness Web (http://127.0.0.1:3080 by default). It does not run the MCP stdio server in the Web process, and it does not spawn dsh --profile codex. In the Web plugin list t"
+    "excerpt": "Delegate and monitor DeepSeek Harness work from any MCP agent."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": true
+    "prepare": false
   }
 }
