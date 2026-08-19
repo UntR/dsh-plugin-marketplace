@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-19T07:20:41.273Z",
+    "enrichedAt": "2026-08-19T09:10:36.389Z",
     "enrichmentStatus": "ok",
-    "headSha": "543b4f0973ea120b8d70202c3ff2e39f3dc80b81"
+    "headSha": "91fec8dfc1f89061cebc6a200d5f58c6bc997157"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Unofficial DeepSeek Harness plugin for board serial console, logging, and model-visible interaction.",
     "fork": false,
     "forks": 0,
-    "headSha": "543b4f0973ea120b8d70202c3ff2e39f3dc80b81",
+    "headSha": "91fec8dfc1f89061cebc6a200d5f58c6bc997157",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT7GD5A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e1fc2d4212f0fb28c99056a2a492d91d987c037271a656f9b4b2bb3350bba3fe/InfinitePersistence/dsh-serial-console",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/dea621c66357d5426a5eb4e1f12c5cdfc81088e420962369351540c9579e5443/InfinitePersistence/dsh-serial-console",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/248005465?u=43375725dec4b1c190656d1a5497594afe187f8e&v=4",
       "login": "InfinitePersistence"
     },
-    "pushedAt": "2026-08-19T07:05:42Z",
+    "pushedAt": "2026-08-19T07:58:09Z",
     "slug": "InfinitePersistence/dsh-serial-console",
     "stars": 4,
     "topics": [
@@ -44,23 +44,23 @@
       "serialport",
       "uart"
     ],
-    "updatedAt": "2026-08-19T07:06:11Z",
+    "updatedAt": "2026-08-19T08:00:30Z",
     "url": "https://github.com/InfinitePersistence/dsh-serial-console"
   },
   "id": "gh:1337033700",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "@infinitepersistence/dsh-serial-console",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@infinitepersistence/dsh-serial-console@0.1.0-alpha.1",
+    "version": "0.1.0-alpha.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0-alpha.1",
+    "published": true,
+    "repositoryMatches": true
   },
   "package": {
     "exports": {
@@ -69,8 +69,8 @@
         "types": "./dist/index.d.ts"
       },
       "./client": {
-        "import": "./dist/client/index.js",
-        "types": "./dist/client/index.d.ts"
+        "default": "./dist/client.js",
+        "types": "./dist/harness/client.d.ts"
       },
       "./client/serial-console.css": "./dist/client/serial-console.css",
       "./package.json": "./package.json",
@@ -78,19 +78,35 @@
         "import": "./dist/protocol.js",
         "types": "./dist/protocol.d.ts"
       },
+      "./react": {
+        "import": "./dist/client/index.js",
+        "types": "./dist/client/index.d.ts"
+      },
+      "./remote": {
+        "default": "./dist/harness/remote.js",
+        "types": "./dist/harness/remote.d.ts"
+      },
       "./serial": {
         "import": "./dist/serial/index.js",
         "types": "./dist/serial/index.d.ts"
+      },
+      "./tool": {
+        "default": "./dist/harness/tool.js",
+        "types": "./dist/harness/tool.d.ts"
+      },
+      "./typert": {
+        "default": "./dist/harness/typert.js",
+        "types": "./dist/harness/typert.d.ts"
       }
     },
     "main": "./dist/index.js",
     "name": "@infinitepersistence/dsh-serial-console",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0-alpha.0"
+    "version": "0.1.0-alpha.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e1fc2d4212f0fb28c99056a2a492d91d987c037271a656f9b4b2bb3350bba3fe/InfinitePersistence/dsh-serial-console",
+    "coverUrl": "https://opengraph.githubassets.com/dea621c66357d5426a5eb4e1f12c5cdfc81088e420962369351540c9579e5443/InfinitePersistence/dsh-serial-console",
     "description": "Unofficial DeepSeek Harness plugin for board serial console, logging, and model-visible interaction."
   },
   "readme": {
