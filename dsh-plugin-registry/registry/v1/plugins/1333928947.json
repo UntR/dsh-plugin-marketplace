@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "dsh-token-viewer.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-19T03:25:05.260Z",
+    "enrichedAt": "2026-08-19T07:20:41.273Z",
     "enrichmentStatus": "ok",
-    "headSha": "8de9734b5113c69aae112e903a3e31c8aa1a0b26"
+    "headSha": "9c24e8e237baa603a02827f41fea8a3eacaf8789"
   },
   "github": {
     "archived": false,
@@ -17,20 +17,20 @@
     "description": "Developer tool: live token usage & cost monitoring for DeepSeek Harness - consumed tokens for the current session and across all sessions, read from token-meter projections. No model calls.",
     "fork": false,
     "forks": 0,
-    "headSha": "8de9734b5113c69aae112e903a3e31c8aa1a0b26",
+    "headSha": "9c24e8e237baa603a02827f41fea8a3eacaf8789",
     "homepageUrl": null,
-    "language": "TypeScript",
+    "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4Ij8w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/c859f0fc1e73f3a05334ed0d03978f5b230d8889f4cf3bd1cf50837063f4c9bc/qwert702/dsh-token-viewer",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/dee83876ec5d503b2d2c1bce82f2d67c269531ce2569b6e5d07f9e8773a4327d/qwert702/dsh-token-viewer",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/269858453?v=4",
       "login": "qwert702"
     },
-    "pushedAt": "2026-08-17T00:42:15Z",
+    "pushedAt": "2026-08-19T07:00:04Z",
     "slug": "qwert702/dsh-token-viewer",
     "stars": 6,
     "topics": [
@@ -43,18 +43,18 @@
       "monitoring",
       "token-meter"
     ],
-    "updatedAt": "2026-08-18T07:28:38Z",
+    "updatedAt": "2026-08-19T07:01:22Z",
     "url": "https://github.com/qwert702/dsh-token-viewer"
   },
   "id": "gh:1333928947",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-token-viewer",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:qwert702/dsh-token-viewer#9c24e8e237baa603a02827f41fea8a3eacaf8789",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
@@ -64,33 +64,26 @@
   "package": {
     "exports": {
       ".": {
-        "default": "./lib/index.js",
-        "types": "./lib/types/index.d.ts"
+        "default": "./lib/index.js"
       },
       "./client": {
-        "default": "./lib/client.js",
-        "types": "./lib/types/client/index.d.ts"
+        "default": "./lib/client.js"
       },
-      "./invariant": {
-        "default": "./lib/invariant.js",
-        "types": "./lib/types/invariant.d.ts"
-      },
-      "./package.json": "./package.json",
-      "./src/*": "./src/*"
+      "./package.json": "./package.json"
     },
     "main": "lib/index.js",
-    "name": "@deepseek-ai/dsh-client-ui-token-viewer",
+    "name": "dsh-token-viewer",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0-rc.5"
+    "version": "0.2.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/c859f0fc1e73f3a05334ed0d03978f5b230d8889f4cf3bd1cf50837063f4c9bc/qwert702/dsh-token-viewer",
+    "coverUrl": "https://opengraph.githubassets.com/dee83876ec5d503b2d2c1bce82f2d67c269531ce2569b6e5d07f9e8773a4327d/qwert702/dsh-token-viewer",
     "description": "Developer tool: live token usage & cost monitoring for DeepSeek Harness - consumed tokens for the current session and across all sessions, read from token-meter projections. No model calls."
   },
   "readme": {
     "available": true,
-    "excerpt": "Token consumption surface plugin: read-only surfaces over the host-computed token-meter session projections (tokenUsage, contextPressure, contextBreakdown) plus a DeepSeek account-balance read. The browser half owns no domain store, refresh chain, or event listener; the node half"
+    "excerpt": "CC Switch-style token consumption statistics for the DeepSeek Harness Web GUI. Read-only surfaces over the harness's host-computed projections plus one balance read; the plugin adds no prompt content, tools, or provider requests."
   },
   "schemaVersion": 1,
   "scripts": {
