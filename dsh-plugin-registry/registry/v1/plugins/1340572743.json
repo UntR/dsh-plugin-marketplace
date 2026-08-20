@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-20T11:05:46.829Z",
+    "enrichedAt": "2026-08-20T13:28:54.914Z",
     "enrichmentStatus": "ok",
-    "headSha": "98038fc6996306624666c56180e9be676b482659"
+    "headSha": "38bb4f5bd81c826943c2f05a18750d3a228ff319"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-20T10:28:32Z",
     "databaseId": 1340572743,
     "defaultBranch": "main",
-    "description": "把其他 Agent 的技能一键迁入 DeepSeek Harness：支持 14 个平台 + 共享层识别、冲突分组、软链接去重、回滚。DSH dynamic Cordis plugin (skill migration).",
+    "description": "把其他 Agent 的技能一键搬进 DeepSeek Harness：支持 14 个平台 + 共享层识别、同名技能合并、不重复搬运、可回滚。DSH 技能搬家插件 (skill mover).",
     "fork": false,
     "forks": 0,
-    "headSha": "98038fc6996306624666c56180e9be676b482659",
+    "headSha": "38bb4f5bd81c826943c2f05a18750d3a228ff319",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT-eERw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/ce579e6bb0b1dec30da63eca80260e344598b962dc778cbfd50db4b6261e08f9/mjylfz/dsh-skill-migrator",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a323b771b57a8981d19b8006b77e613f8f970293f363c342a2009d3af2c90945/mjylfz/dsh-skill-mover",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/15664087?v=4",
       "login": "mjylfz"
     },
-    "pushedAt": "2026-08-20T10:28:36Z",
-    "slug": "mjylfz/dsh-skill-migrator",
-    "stars": 0,
+    "pushedAt": "2026-08-20T13:13:14Z",
+    "slug": "mjylfz/dsh-skill-mover",
+    "stars": 1,
     "topics": [
       "agent-skills",
       "cordis",
@@ -45,28 +45,43 @@
       "skill-migration",
       "skills"
     ],
-    "updatedAt": "2026-08-20T10:30:22Z",
-    "url": "https://github.com/mjylfz/dsh-skill-migrator"
+    "updatedAt": "2026-08-20T13:18:33Z",
+    "url": "https://github.com/mjylfz/dsh-skill-mover"
   },
   "id": "gh:1340572743",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-skill-mover",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:mjylfz/dsh-skill-mover#38bb4f5bd81c826943c2f05a18750d3a228ff319",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js"
+      },
+      "./client": {
+        "default": "./dist/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "dist/index.js",
+    "name": "dsh-skill-mover",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/ce579e6bb0b1dec30da63eca80260e344598b962dc778cbfd50db4b6261e08f9/mjylfz/dsh-skill-migrator",
-    "description": "把其他 Agent 的技能一键迁入 DeepSeek Harness：支持 14 个平台 + 共享层识别、冲突分组、软链接去重、回滚。DSH dynamic Cordis plugin (skill migration)."
+    "coverUrl": "https://opengraph.githubassets.com/a323b771b57a8981d19b8006b77e613f8f970293f363c342a2009d3af2c90945/mjylfz/dsh-skill-mover",
+    "description": "把其他 Agent 的技能一键搬进 DeepSeek Harness：支持 14 个平台 + 共享层识别、同名技能合并、不重复搬运、可回滚。DSH 技能搬家插件 (skill mover)."
   },
   "readme": {
     "available": true,
