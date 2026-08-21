@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-21T11:07:00.674Z",
+    "enrichedAt": "2026-08-21T17:12:57.245Z",
     "enrichmentStatus": "ok",
-    "headSha": "b7f3b33e0b36fba422ffcae759b066715297ad6c"
+    "headSha": "660aef92c4091fb001a8c71242158c8d3ed45325"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness web 用量与计费插件：官方余额、Token 用量、贡献热图与按小时计费统计。Balance, token usage, contribution heatmap & per-hour cost stats for dsh web.",
     "fork": false,
     "forks": 0,
-    "headSha": "b7f3b33e0b36fba422ffcae759b066715297ad6c",
+    "headSha": "660aef92c4091fb001a8c71242158c8d3ed45325",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,19 +25,19 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT9MOzQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/95abbde32c5c36cd5d6a2d0345c0a1a9e4bd1c2702a2db5691295b2e4c83db33/wannanbigpig/dsh-usage-stats",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5bd2609e9b0b904c1ed3b4fcff8e4382619b48a7ab9139fca2196b34658c7796/wannanbigpig/dsh-usage-stats",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/48752601?u=a5186bde5cfa36aa647b8b37951ed46eb19731ba&v=4",
       "login": "wannanbigpig"
     },
-    "pushedAt": "2026-08-19T09:15:36Z",
+    "pushedAt": "2026-08-21T16:38:57Z",
     "slug": "wannanbigpig/dsh-usage-stats",
     "stars": 1,
     "topics": [
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-08-20T02:21:21Z",
+    "updatedAt": "2026-08-21T16:39:00Z",
     "url": "https://github.com/wannanbigpig/dsh-usage-stats"
   },
   "id": "gh:1339231949",
@@ -47,11 +47,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "@wannanbigpig/dsh-usage-stats@0.1.4",
-    "version": "0.1.4"
+    "spec": "@wannanbigpig/dsh-usage-stats@0.1.5",
+    "version": "0.1.5"
   },
   "npm": {
-    "latestVersion": "0.1.4",
+    "latestVersion": "0.1.5",
     "published": true,
     "repositoryMatches": true
   },
@@ -62,6 +62,8 @@
       "./client": "./lib/client.js",
       "./ledger": "./lib/ledger.js",
       "./package.json": "./package.json",
+      "./pricing": "./lib/pricing.js",
+      "./providers": "./lib/providers.js",
       "./tokenizer": "./lib/tokenizer.js",
       "./usage": "./lib/usage.js"
     },
@@ -69,15 +71,15 @@
     "name": "@wannanbigpig/dsh-usage-stats",
     "status": "valid",
     "type": "module",
-    "version": "0.1.4"
+    "version": "0.1.5"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/95abbde32c5c36cd5d6a2d0345c0a1a9e4bd1c2702a2db5691295b2e4c83db33/wannanbigpig/dsh-usage-stats",
+    "coverUrl": "https://opengraph.githubassets.com/5bd2609e9b0b904c1ed3b4fcff8e4382619b48a7ab9139fca2196b34658c7796/wannanbigpig/dsh-usage-stats",
     "description": "DeepSeek Harness web 用量与计费插件：官方余额、Token 用量、贡献热图与按小时计费统计。Balance, token usage, contribution heatmap & per-hour cost stats for dsh web."
   },
   "readme": {
     "available": true,
-    "excerpt": "为 DeepSeek Harness 网页端（dsh web）提供的用量与计费插件：侧栏「用量/余额」查询中心展示 DeepSeek 官方账户余额、Token 用量/贡献热图/按小时统计；设置页提供独立的「用量与计费」配置入口。查询与配置分离：弹窗只读，会改变计费或调用行为的设置全部在设置页。支持切换 API Key 和切换模型。"
+    "excerpt": "为 DeepSeek Harness 网页端（dsh web）提供用量、余额与计费估算能力。侧栏「用量/余额」查询中心提供概览和明细；所有会改变计费、限额、通知或会话展示行为的配置都位于「设置 → 用量与计费」，查询浮层保持只读。默认展示供应商为 deepseek-official，也可跟随 Harness「模型」设置中当前已添加的 provider route。"
   },
   "schemaVersion": 1,
   "scripts": {
