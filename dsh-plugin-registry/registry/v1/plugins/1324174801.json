@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-20T13:28:54.914Z",
+    "enrichedAt": "2026-08-21T11:07:00.674Z",
     "enrichmentStatus": "ok",
-    "headSha": "a03d50556272ca7e7383673c3913c6718ab8d622"
+    "headSha": "531331f9be5f2a120384ec857207571560120a92"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,17 @@
     "description": "Qwen-MM-Plugins支持",
     "fork": false,
     "forks": 0,
-    "headSha": "a03d50556272ca7e7383673c3913c6718ab8d622",
+    "headSha": "531331f9be5f2a120384ec857207571560120a92",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOTu1N0Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/42cd471d19ad571bbb9a3b49e33af6f5129b5e9381e4d0a7432e95b67971f2f9/omdsh-dev/Qwen-MM-Plugins",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/cfe31c463343bf82293337c6af8ce08db65d7ae161b7b93b91bee5c10bfb1487/omdsh-dev/Qwen-MM-Plugins",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/312905287?v=4",
       "login": "omdsh-dev"
     },
-    "pushedAt": "2026-08-09T10:59:51Z",
+    "pushedAt": "2026-08-21T10:00:54Z",
     "slug": "omdsh-dev/Qwen-MM-Plugins",
     "stars": 5,
     "topics": [
@@ -35,7 +35,7 @@
       "dsh-plugin",
       "qwen"
     ],
-    "updatedAt": "2026-08-19T07:08:21Z",
+    "updatedAt": "2026-08-21T10:01:14Z",
     "url": "https://github.com/omdsh-dev/Qwen-MM-Plugins"
   },
   "id": "gh:1324174801",
@@ -45,8 +45,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": true,
-    "spec": "github:omdsh-dev/Qwen-MM-Plugins#a03d50556272ca7e7383673c3913c6718ab8d622",
-    "version": "0.0.2"
+    "spec": "github:omdsh-dev/Qwen-MM-Plugins#531331f9be5f2a120384ec857207571560120a92",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
@@ -59,6 +59,10 @@
         "default": "./lib/index.js",
         "types": "./lib/types/index.d.ts"
       },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
       "./invariant": {
         "default": "./lib/invariant.js",
         "types": "./lib/types/invariant.d.ts"
@@ -70,15 +74,15 @@
     "name": "@deepseek-ai/dsh-qwen-mm",
     "status": "valid",
     "type": "module",
-    "version": "0.0.2"
+    "version": "0.1.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/42cd471d19ad571bbb9a3b49e33af6f5129b5e9381e4d0a7432e95b67971f2f9/omdsh-dev/Qwen-MM-Plugins",
+    "coverUrl": "https://opengraph.githubassets.com/cfe31c463343bf82293337c6af8ce08db65d7ae161b7b93b91bee5c10bfb1487/omdsh-dev/Qwen-MM-Plugins",
     "description": "Qwen-MM-Plugins支持"
   },
   "readme": {
     "available": true,
-    "excerpt": "Qwen-MM capabilities as an installable DSH profile bundle. The package keeps the Qwen-MM implementation small and explicit: it fetches each selected Agent Skill at a configured upstream ref, starts its MCP server through the existing DSH client in required-initial-discovery mode,"
+    "excerpt": "Qwen-MM capabilities as an explicit DSH profile bundle. The package fetches selected Agent Skills at an exact upstream ref, starts each MCP server through the current DSH client, waits for initial tool discovery, and mounts the skill only after its tools are ready."
   },
   "schemaVersion": 1,
   "scripts": {
