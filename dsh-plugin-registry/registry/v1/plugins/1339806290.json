@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-20T17:10:21.256Z",
+    "enrichedAt": "2026-08-21T07:27:14.438Z",
     "enrichmentStatus": "ok",
-    "headSha": "429615731c87e1eb70f96f9db0e5ab7f11f8ecd6"
+    "headSha": "bbdad9f294e20da49f18ed94407f2e9cc2167cc3"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Multi-model governance, routing, fallback, quota, and usage for DeepSeek Harness",
     "fork": false,
     "forks": 0,
-    "headSha": "429615731c87e1eb70f96f9db0e5ab7f11f8ecd6",
+    "headSha": "bbdad9f294e20da49f18ed94407f2e9cc2167cc3",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT9vSUg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d3b218edd684f9c88082d51de0ffed34ceaa7cccdc71917f59e7c8966b3a7e2f/young-tim/dsh-llm-governor",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ab0d6f931bbecad659b336b82d9f193fa06150654389a06aaf2dd15ea77a0611/young-tim/dsh-llm-governor",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/30109536?u=1c04a2c71508da0f5fe1bc3e1dfacd21f75ac7b8&v=4",
       "login": "young-tim"
     },
-    "pushedAt": "2026-08-20T15:40:43Z",
+    "pushedAt": "2026-08-21T07:03:50Z",
     "slug": "young-tim/dsh-llm-governor",
     "stars": 1,
     "topics": [
@@ -48,7 +48,7 @@
       "typescript",
       "usage-analytics"
     ],
-    "updatedAt": "2026-08-20T15:52:10Z",
+    "updatedAt": "2026-08-21T07:04:15Z",
     "url": "https://github.com/young-tim/dsh-llm-governor"
   },
   "id": "gh:1339806290",
@@ -58,7 +58,7 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:young-tim/dsh-llm-governor#429615731c87e1eb70f96f9db0e5ab7f11f8ecd6",
+    "spec": "github:young-tim/dsh-llm-governor#bbdad9f294e20da49f18ed94407f2e9cc2167cc3",
     "version": "0.1.0"
   },
   "npm": {
@@ -72,11 +72,23 @@
         "default": "./dist/plugin/mod.js",
         "types": "./dist/plugin/mod.d.ts"
       },
+      "./client": {
+        "default": "./dist/client.js",
+        "types": "./dist/client/index.d.ts"
+      },
       "./cordis.patch.yml": "./cordis.patch.yml",
       "./package.json": "./package.json",
+      "./remote": {
+        "default": "./dist/plugin/typert-remote-client.js",
+        "types": "./dist/plugin/typert-remote-client.d.ts"
+      },
       "./service": {
         "default": "./dist/plugin/service.js",
         "types": "./dist/plugin/service.d.ts"
+      },
+      "./typert": {
+        "default": "./dist/plugin/typert-host.js",
+        "types": "./dist/plugin/typert-host.d.ts"
       },
       "./ui": {
         "default": "./dist/ui/index.js",
@@ -90,12 +102,12 @@
     "version": "0.1.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d3b218edd684f9c88082d51de0ffed34ceaa7cccdc71917f59e7c8966b3a7e2f/young-tim/dsh-llm-governor",
+    "coverUrl": "https://opengraph.githubassets.com/ab0d6f931bbecad659b336b82d9f193fa06150654389a06aaf2dd15ea77a0611/young-tim/dsh-llm-governor",
     "description": "Multi-model governance, routing, fallback, quota, and usage for DeepSeek Harness"
   },
   "readme": {
     "available": true,
-    "excerpt": "dsh-llm-governor 是 DeepSeek Harness 的多模型治理插件。它在 DSH 现有模型调用链上 提供模型画像、用户访问控制、月度 Credits、Manual / Quality First / Credit First / Auto Routing、失败重路由和 Usage 审计；它不代理模型请求，也不管理 Provider 凭证。"
+    "excerpt": "dsh-llm-governor 是 DeepSeek Harness 的多模型治理插件。它在 DSH 现有模型调用链上 提供模型画像、用户访问控制、月度 Credits、Manual / Quality First / Credit First / Auto Routing、失败重路由和 Usage 审计；它不代理模型请求，也不管理 Provider 凭证。 模型选择直接进入 Composer（含 Auto），治理配置进入 DSH 原生 Settings，决策记录在 同一 Session 的 Governor Trajectory 视图中展示；默认不启"
   },
   "schemaVersion": 1,
   "scripts": {
