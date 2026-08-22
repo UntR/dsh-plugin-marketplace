@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-22T19:06:53.152Z",
+    "enrichedAt": "2026-08-22T20:57:34.620Z",
     "enrichmentStatus": "ok",
-    "headSha": "ff55a9230c8bf56abb375831efc88c86e99ac704"
+    "headSha": "97d497653b403c8b5db7b65562dc2bd4d7a4c3a8"
   },
   "github": {
     "archived": false,
@@ -17,54 +17,72 @@
     "description": null,
     "fork": false,
     "forks": 0,
-    "headSha": "ff55a9230c8bf56abb375831efc88c86e99ac704",
+    "headSha": "97d497653b403c8b5db7b65562dc2bd4d7a4c3a8",
     "homepageUrl": null,
-    "language": null,
-    "license": null,
+    "language": "TypeScript",
+    "license": {
+      "name": "MIT License",
+      "spdxId": "MIT"
+    },
     "nodeId": "R_kgDOUAGx8g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/39939183ff436425d07280df4aa8702e025cc9d5825b6630e2ef1c716b65cbe8/syncended/deepseek-harness-automations",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/db3935acda47f7c1611b47cb80441459c344dab2967f8cafb0f670173d5890e9/syncended/deepseek-harness-automations",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/34624752?u=cfc052c81c7562e8560150be190f8df1b4431c22&v=4",
       "login": "syncended"
     },
-    "pushedAt": "2026-08-21T23:05:32Z",
+    "pushedAt": "2026-08-22T20:45:06Z",
     "slug": "syncended/deepseek-harness-automations",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-22T18:49:28Z",
+    "updatedAt": "2026-08-22T20:45:24Z",
     "url": "https://github.com/syncended/deepseek-harness-automations"
   },
   "id": "gh:1342288370",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@syncended/dsh-automations",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:syncended/deepseek-harness-automations#97d497653b403c8b5db7b65562dc2bd4d7a4c3a8",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "dist/index.js",
+    "name": "@syncended/dsh-automations",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/39939183ff436425d07280df4aa8702e025cc9d5825b6630e2ef1c716b65cbe8/syncended/deepseek-harness-automations",
-    "description": "Automations built on the DeepSeek Harness."
+    "coverUrl": "https://opengraph.githubassets.com/db3935acda47f7c1611b47cb80441459c344dab2967f8cafb0f670173d5890e9/syncended/deepseek-harness-automations",
+    "description": "A DeepSeek Harness plugin for durable, configurable cron jobs. Each occurrence starts a fresh persisted Harness Agent in a selected project with an explicit model route, agent preset, and permission preset."
   },
   "readme": {
     "available": true,
-    "excerpt": "Automations built on the DeepSeek Harness."
+    "excerpt": "A DeepSeek Harness plugin for durable, configurable cron jobs. Each occurrence starts a fresh persisted Harness Agent in a selected project with an explicit model route, agent preset, and permission preset."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
