@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-21T05:13:55.451Z",
+    "enrichedAt": "2026-08-22T02:09:07.457Z",
     "enrichmentStatus": "ok",
-    "headSha": "aa0a225932c26b3dcf06f477a07db5381133c0c5"
+    "headSha": "f95c73344bfb7c6c52ed311a2a7fa791d7ed7465"
   },
   "github": {
     "archived": false,
@@ -17,20 +17,20 @@
     "description": "DeepSeek Harness 凭证加密插件，通过设置密码使用AES-256-GCM+SHA3-256实现的全流程加密+校验，运行时临时解密，内存安全。",
     "fork": true,
     "forks": 0,
-    "headSha": "aa0a225932c26b3dcf06f477a07db5381133c0c5",
+    "headSha": "f95c73344bfb7c6c52ed311a2a7fa791d7ed7465",
     "homepageUrl": null,
-    "language": "JavaScript",
+    "language": "TypeScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT5_4fQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/305bf000617f7aaae15f0c91aaa328a67e871bebbc03c008443b4d2173ffeb0c/omdsh-dev/DSH-Encrypt",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e7c9fb0c1b4ce04a0c90d7a93658ed093bfdf902e77306f9f8c0d7f0170516f9/omdsh-dev/DSH-Encrypt",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/312905287?v=4",
       "login": "omdsh-dev"
     },
-    "pushedAt": "2026-08-20T17:08:47Z",
+    "pushedAt": "2026-08-22T01:56:04Z",
     "slug": "omdsh-dev/DSH-Encrypt",
     "stars": 0,
     "topics": [
@@ -38,18 +38,18 @@
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-08-18T03:58:30Z",
+    "updatedAt": "2026-08-22T01:56:10Z",
     "url": "https://github.com/omdsh-dev/DSH-Encrypt"
   },
   "id": "gh:1335883901",
   "install": {
-    "available": true,
-    "packageName": "dsh-encrypt",
-    "preferred": "github",
-    "reason": null,
+    "available": false,
+    "packageName": null,
+    "preferred": null,
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
-    "spec": "github:omdsh-dev/DSH-Encrypt#aa0a225932c26b3dcf06f477a07db5381133c0c5",
-    "version": "0.1.0-rc.10"
+    "spec": null,
+    "version": null
   },
   "npm": {
     "latestVersion": null,
@@ -58,30 +58,63 @@
   },
   "package": {
     "exports": {
-      ".": "./lib/fabric-entry.js",
-      "./client": "./lib/client.js",
-      "./compat": "./lib/compat.js",
+      ".": {
+        "import": "./lib/fabric-entry.js",
+        "types": "./lib/fabric-entry.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "import": "./lib/client.js",
+        "types": "./lib/client.d.ts"
+      },
+      "./compat": {
+        "import": "./lib/compat.js",
+        "types": "./lib/compat.d.ts"
+      },
       "./cordis.patch.yml": "./cordis.patch.yml",
-      "./migrate": "./lib/migrate.js",
+      "./fabric-entry": {
+        "import": "./lib/fabric-entry.js",
+        "types": "./lib/fabric-entry.d.ts"
+      },
+      "./index": {
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./migrate": {
+        "import": "./lib/migrate.js",
+        "types": "./lib/migrate.d.ts"
+      },
       "./package.json": "./package.json",
-      "./plain": "./lib/plain.js",
-      "./trust": "./lib/trust.js",
-      "./vault": "./lib/vault.js",
-      "./web": "./lib/web.js"
+      "./plain": {
+        "import": "./lib/plain.js",
+        "types": "./lib/plain.d.ts"
+      },
+      "./trust": {
+        "import": "./lib/trust.js",
+        "types": "./lib/trust.d.ts"
+      },
+      "./vault": {
+        "import": "./lib/vault.js",
+        "types": "./lib/vault.d.ts"
+      },
+      "./web": {
+        "import": "./lib/web.js",
+        "types": "./lib/web.d.ts"
+      }
     },
-    "main": "lib/fabric-entry.js",
+    "main": "./lib/fabric-entry.js",
     "name": "dsh-encrypt",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0-rc.10"
+    "version": "0.1.0-rc.12"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/305bf000617f7aaae15f0c91aaa328a67e871bebbc03c008443b4d2173ffeb0c/omdsh-dev/DSH-Encrypt",
+    "coverUrl": "https://opengraph.githubassets.com/e7c9fb0c1b4ce04a0c90d7a93658ed093bfdf902e77306f9f8c0d7f0170516f9/omdsh-dev/DSH-Encrypt",
     "description": "DeepSeek Harness 凭证加密插件，通过设置密码使用AES-256-GCM+SHA3-256实现的全流程加密+校验，运行时临时解密，内存安全。"
   },
   "readme": {
     "available": true,
-    "excerpt": "Fabric 版本不再禁用或复制官方 credentials-local row。官方 provider 继续负责 .credentials.yaml 的 YAML 解析、环境变量优先级、watcher、文件锁、明文写入和 credentials/updated 生命周期；本插件只挂载 EncryptController 并注册目标函数的 hook。"
+    "excerpt": "@node-rs/argon2 使用预编译 native binary；平台缺失时可执行 pnpm rebuild @node-rs/argon2。发布前 prepack 会重新生成 lib/integrity-manifest.json 并检查 patch drift。"
   },
   "schemaVersion": 1,
   "scripts": {

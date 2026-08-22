@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-21T13:32:40.674Z",
+    "enrichedAt": "2026-08-22T02:09:07.457Z",
     "enrichmentStatus": "ok",
-    "headSha": "61ed9e8dd1359d8ccc9c0deeaa4cabaa0e074808"
+    "headSha": "3d9315f41c17d32c445b71ffdda00cc362dfcbb8"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,17 @@
     "description": "微软跨平台沙盒支持",
     "fork": false,
     "forks": 1,
-    "headSha": "61ed9e8dd1359d8ccc9c0deeaa4cabaa0e074808",
+    "headSha": "3d9315f41c17d32c445b71ffdda00cc362dfcbb8",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOTt1uvA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/cb9ee6a65af6a6b8fc386666a90b5f72a415702f504605731775215ad2b94e3a/omdsh-dev/sandbox-mxc",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f47fde4e59da9666f032fcf547c41664a21509f1a6c2546ffec5fc29c02faabb/omdsh-dev/sandbox-mxc",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/312905287?v=4",
       "login": "omdsh-dev"
     },
-    "pushedAt": "2026-08-19T01:20:47Z",
+    "pushedAt": "2026-08-22T01:34:54Z",
     "slug": "omdsh-dev/sandbox-mxc",
     "stars": 2,
     "topics": [
@@ -35,7 +35,7 @@
       "dsh-plugin",
       "sandbox"
     ],
-    "updatedAt": "2026-08-14T16:17:44Z",
+    "updatedAt": "2026-08-22T01:34:59Z",
     "url": "https://github.com/omdsh-dev/sandbox-mxc"
   },
   "id": "gh:1323134652",
@@ -45,8 +45,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": true,
-    "spec": "github:omdsh-dev/sandbox-mxc#61ed9e8dd1359d8ccc9c0deeaa4cabaa0e074808",
-    "version": "0.0.2"
+    "spec": "github:omdsh-dev/sandbox-mxc#3d9315f41c17d32c445b71ffdda00cc362dfcbb8",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
@@ -56,33 +56,45 @@
   "package": {
     "exports": {
       ".": {
-        "default": "./lib/index.js",
-        "types": "./lib/types/index.d.ts"
+        "default": "./lib/stent-entry.js",
+        "types": "./lib/types/stent-entry.d.ts"
       },
       "./invariant": {
         "default": "./lib/invariant.js",
         "types": "./lib/types/invariant.d.ts"
       },
       "./package.json": "./package.json",
+      "./provider": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
       "./src/*": "./src/*",
+      "./stent-entry": {
+        "default": "./lib/stent-entry.js",
+        "types": "./lib/types/stent-entry.d.ts"
+      },
+      "./stent-handlers": {
+        "default": "./lib/stent-handlers.js",
+        "types": "./lib/types/stent-handlers.d.ts"
+      },
       "./windows-environment": {
         "default": "./lib/windows-environment.js",
         "types": "./lib/types/windows-environment.d.ts"
       }
     },
-    "main": "lib/index.js",
+    "main": "lib/stent-entry.js",
     "name": "@deepseek-ai/dsh-sandbox-mxc",
     "status": "valid",
     "type": "module",
-    "version": "0.0.2"
+    "version": "0.1.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/cb9ee6a65af6a6b8fc386666a90b5f72a415702f504605731775215ad2b94e3a/omdsh-dev/sandbox-mxc",
+    "coverUrl": "https://opengraph.githubassets.com/f47fde4e59da9666f032fcf547c41664a21509f1a6c2546ffec5fc29c02faabb/omdsh-dev/sandbox-mxc",
     "description": "微软跨平台沙盒支持"
   },
   "readme": {
     "available": true,
-    "excerpt": "The MXC sandbox provider extracted from the DSH feat-mxc implementation as one standalone external bundle. The repository keeps two delivery faces in one Git repository:"
+    "excerpt": "A Stent sidecar that runs the DSH bash, PowerShell, and persistent-terminal payloads through MXC without modifying DeepSeek Harness source files. The package is an explicit opt-in bundle: DSH keeps ownership of ctx.sandbox, subprocess I/O, deadlines, signals, terminal sessions, a"
   },
   "schemaVersion": 1,
   "scripts": {
