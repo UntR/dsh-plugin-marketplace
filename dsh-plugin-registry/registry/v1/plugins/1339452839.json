@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-21T13:32:40.674Z",
+    "enrichedAt": "2026-08-22T10:56:28.653Z",
     "enrichmentStatus": "ok",
-    "headSha": "e104a0b4afa03d6a05ca779b26e5de5b2159e242"
+    "headSha": "3d408bda0a78a6dd493202f4cbc3c7ae3d8eef7c"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "动态滚动窗口子代理任务池：一次调用跑完整批独立任务，内部滚动补位",
     "fork": false,
     "forks": 0,
-    "headSha": "e104a0b4afa03d6a05ca779b26e5de5b2159e242",
+    "headSha": "3d408bda0a78a6dd493202f4cbc3c7ae3d8eef7c",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,18 +25,18 @@
       "spdxId": "BSD-3-Clause"
     },
     "nodeId": "R_kgDOT9Ztpw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f5a9066c3bdb99e6a73a5fbba890f27db315cb52960749139a5d89bd63e4d33a/wyStars/dsh-parallel-pool",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/70fc5dceb4b2727e98596f55527ba4c4e0cee850cfef09c393649eae299c95d0/wyStars/dsh-parallel-pool",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/51255261?u=cfd929288e56576d2410333b50e4fc224a71f797&v=4",
       "login": "wyStars"
     },
-    "pushedAt": "2026-08-21T12:30:46Z",
+    "pushedAt": "2026-08-22T10:47:27Z",
     "slug": "wyStars/dsh-parallel-pool",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-21T12:34:40Z",
+    "updatedAt": "2026-08-22T10:44:44Z",
     "url": "https://github.com/wyStars/dsh-parallel-pool"
   },
   "id": "gh:1339452839",
@@ -46,8 +46,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:wyStars/dsh-parallel-pool#e104a0b4afa03d6a05ca779b26e5de5b2159e242",
-    "version": "0.5.0"
+    "spec": "github:wyStars/dsh-parallel-pool#3d408bda0a78a6dd493202f4cbc3c7ae3d8eef7c",
+    "version": "0.6.1"
   },
   "npm": {
     "latestVersion": null,
@@ -55,19 +55,24 @@
     "repositoryMatches": null
   },
   "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
     "main": "./lib/index.js",
     "name": "@dsh-external/dsh-parallel-pool",
     "status": "valid",
     "type": "module",
-    "version": "0.5.0"
+    "version": "0.6.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f5a9066c3bdb99e6a73a5fbba890f27db315cb52960749139a5d89bd63e4d33a/wyStars/dsh-parallel-pool",
+    "coverUrl": "https://opengraph.githubassets.com/70fc5dceb4b2727e98596f55527ba4c4e0cee850cfef09c393649eae299c95d0/wyStars/dsh-parallel-pool",
     "description": "动态滚动窗口子代理任务池：一次调用跑完整批独立任务，内部滚动补位"
   },
   "readme": {
     "available": true,
-    "excerpt": "把\"整批独立任务\"一次交给任务池，主对话不阻塞：后台运行时滚动窗口补位 （任何子代理一结束立刻派发下一任务，不等整轮），全批结算后完整结果与时间线 作为会话消息自动投递、唤醒主对话。"
+    "excerpt": "把\"整批独立任务\"一次交给任务池，主对话始终不阻塞：提交后立即返回 job id， 后台滚动窗口补位（任何子代理一结束立刻派发下一任务，不等整轮）；每个子任务 结算时立即把该任务结果投递给主对话，整批结束后再投递完整汇总与时间线。"
   },
   "schemaVersion": 1,
   "scripts": {
