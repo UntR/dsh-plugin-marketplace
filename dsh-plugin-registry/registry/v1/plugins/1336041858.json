@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-21T15:14:36.891Z",
+    "enrichedAt": "2026-08-23T14:59:01.573Z",
     "enrichmentStatus": "ok",
-    "headSha": "66cfe55e57e0e515b7a071749a3b6994115adcd4"
+    "headSha": "9bab2b1eae61490e770a51883df5b771b55e751c"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "MCP server settings components for DeepSeek Harness",
     "fork": false,
     "forks": 0,
-    "headSha": "66cfe55e57e0e515b7a071749a3b6994115adcd4",
+    "headSha": "9bab2b1eae61490e770a51883df5b771b55e751c",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,50 +25,81 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT6Jhgg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/034fc1b8ea8ce4f441d73bb287bce007e4582ec2ad1b060b9c10c3b30a96b3b0/zhuyan1085/mcp-deliverable",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/9538c09bffce25bc3ae5a2079985eb8e66427b801ea61407523547270970442c/zhuyan1085/mcp-deliverable",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/39340968?v=4",
       "login": "zhuyan1085"
     },
-    "pushedAt": "2026-08-21T13:36:52Z",
+    "pushedAt": "2026-08-23T14:04:05Z",
     "slug": "zhuyan1085/mcp-deliverable",
     "stars": 0,
     "topics": [
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-21T13:37:01Z",
+    "updatedAt": "2026-08-23T14:05:51Z",
     "url": "https://github.com/zhuyan1085/mcp-deliverable"
   },
   "id": "gh:1336041858",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@deepseek-ai/dsh-host-mcp-servers",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:zhuyan1085/mcp-deliverable#9bab2b1eae61490e770a51883df5b771b55e751c",
+    "version": "0.1.0-rc1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./packages/host/mcp-servers/src/index.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./packages/client/ui-settings-mcp/src/client/index.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./packages/host/mcp-servers/src/invariant.ts"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/remote.js",
+        "types": "./packages/host/mcp-servers/src/remote.ts"
+      },
+      "./typert": {
+        "default": "./lib/remote.js",
+        "types": "./packages/host/mcp-servers/src/remote.ts"
+      },
+      "./types": "./packages/host/mcp-servers/src/types.ts"
+    },
+    "main": "lib/index.js",
+    "name": "@deepseek-ai/dsh-host-mcp-servers",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-rc1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/034fc1b8ea8ce4f441d73bb287bce007e4582ec2ad1b060b9c10c3b30a96b3b0/zhuyan1085/mcp-deliverable",
+    "coverUrl": "https://opengraph.githubassets.com/9538c09bffce25bc3ae5a2079985eb8e66427b801ea61407523547270970442c/zhuyan1085/mcp-deliverable",
     "description": "MCP server settings components for DeepSeek Harness"
   },
   "readme": {
     "available": true,
-    "excerpt": "面向 DeepSeek Harness 的 MCP 服务器配置组件源码交付仓库。仓库包含 Host 配置服务与 Web 设置页两个包，保持 DeepSeek Harness 的插件布局和包名，可作为源码覆盖层复制到匹配版本的 Harness 工作区。"
+    "excerpt": "这是一个可直接安装到 DeepSeek Harness profile 的社区 Bundle，为 Web Settings → Plugins 增加 MCP 服务器管理页。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
