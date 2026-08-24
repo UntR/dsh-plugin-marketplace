@@ -113,6 +113,34 @@ describe('registry sync', () => {
     expect(summary.removed).toBe(1)
   })
 
+  it('refuses to replace a populated Registry with an empty discovery', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'dsh-registry-'))
+    const directory = join(root, 'v1')
+    await syncRegistry({ directory, graphql: graphql([node(1), node(2), node(3)]), enrichment })
+    const before = await readFile(join(directory, 'index.json'), 'utf8')
+
+    await expect(syncRegistry({ directory, graphql: graphql([]), enrichment }))
+      .rejects.toThrow('refusing destructive replacement')
+    expect(await readFile(join(directory, 'index.json'), 'utf8')).toBe(before)
+  })
+
+  it('requires an explicit override when discovery loses more than half of a large Registry', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'dsh-registry-'))
+    const directory = join(root, 'v1')
+    const full = Array.from({ length: 100 }, (_, index) => node(index + 1))
+    const reduced = full.slice(0, 49)
+    await syncRegistry({ directory, graphql: graphql(full), enrichment })
+
+    await expect(syncRegistry({ directory, graphql: graphql(reduced), enrichment }))
+      .rejects.toThrow('dropped from 100 to 49')
+    await expect(syncRegistry({
+      directory,
+      graphql: graphql(reduced),
+      enrichment,
+      allowLargeRemoval: true,
+    })).resolves.toMatchObject({ discovered: 49, removed: 51 })
+  })
+
   it('keeps the stable id and detail filename across a repository rename or transfer', async () => {
     const root = await mkdtemp(join(tmpdir(), 'dsh-registry-'))
     const directory = join(root, 'v1')

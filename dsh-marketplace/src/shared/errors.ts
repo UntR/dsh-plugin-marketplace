@@ -12,6 +12,7 @@ export type ApiErrorCode =
   | 'command-failed'
   | 'command-timeout'
   | 'unknown-installed-plugin'
+  | 'registry-source-mismatch'
   | 'cross-origin-request'
   | 'internal'
 
@@ -25,4 +26,3 @@ export class MarketplaceError extends Error {
     super(message)
   }
 }
-

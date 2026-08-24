@@ -60,9 +60,19 @@ export async function syncRegistry(options: {
   graphql: GraphqlRequest
   enrichment: RepositoryEnrichmentClient
   now?: () => Date
+  allowLargeRemoval?: boolean
 }): Promise<SyncSummary> {
   const previous = await loadRegistry(options.directory)
   const repositories = await discoverRepositories(options.graphql)
+  const previousCount = previous.details.size
+  const removalCount = previousCount - repositories.length
+  const destructiveRemoval = (previousCount > 0 && repositories.length === 0)
+    || (previousCount >= 100 && removalCount > previousCount / 2)
+  if (destructiveRemoval && options.allowLargeRemoval !== true) {
+    throw new Error(
+      `Registry discovery dropped from ${previousCount} to ${repositories.length} repositories; refusing destructive replacement.`,
+    )
+  }
   const generatedAt = (options.now ?? (() => new Date()))().toISOString()
   const details = await enrichRepositories({
     repositories,

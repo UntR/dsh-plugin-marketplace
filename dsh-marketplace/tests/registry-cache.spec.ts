@@ -52,6 +52,32 @@ describe('RegistryService', () => {
     expect(fetch).toHaveBeenCalledTimes(2)
   })
 
+  it('coalesces concurrent cold refreshes into one atomic cache update', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'marketplace-cache-'))
+    let release: (() => void) | undefined
+    const gate = new Promise<void>(resolve => { release = resolve })
+    const fetch = vi.fn(async (url: string | URL | Request) => {
+      await gate
+      return String(url).endsWith('meta.json') ? json(meta) : json(index)
+    })
+    const service = new RegistryService({
+      baseUrl: 'https://registry.example/v1',
+      cacheDir: join(root, 'v1'),
+      fetch,
+    })
+
+    const first = service.getCatalog(true)
+    const second = service.getCatalog(true)
+    release?.()
+
+    await expect(Promise.all([first, second])).resolves.toEqual([
+      expect.objectContaining({ registry: expect.objectContaining({ revision }) }),
+      expect.objectContaining({ registry: expect.objectContaining({ revision }) }),
+    ])
+    expect(fetch).toHaveBeenCalledTimes(2)
+    expect(await readdir(root)).toEqual(['v1'])
+  })
+
   it('revalidates after TTL expiry and manual refresh without replacing an unchanged revision', async () => {
     const root = await mkdtemp(join(tmpdir(), 'marketplace-cache-'))
     const fetch = vi.fn(async (url: string | URL | Request) => String(url).endsWith('meta.json') ? json(meta) : json(index))

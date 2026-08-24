@@ -119,6 +119,11 @@ describe('GitHub topic discovery', () => {
     }))).rejects.toThrow('without an end cursor')
   })
 
+  it('rejects a missing canonical topic instead of treating it as an empty Registry', async () => {
+    await expect(discoverRepositories(async () => ({ topic: null })))
+      .rejects.toThrow('canonical dsh-plugin topic')
+  })
+
   it('uses the canonical topic connection query', () => {
     expect(DISCOVERY_QUERY).toContain('repositories(')
     expect(DISCOVERY_QUERY).toContain('first: 50')

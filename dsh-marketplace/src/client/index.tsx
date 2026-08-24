@@ -23,7 +23,7 @@ declare module '@deepseek-ai/dsh-client-ui-slots' {
 const NS = 'settings.marketplace'
 export const inject = ['slots', 'locale', 'sessions', 'workspaces', 'conversation']
 
-function agentInstallPrompt(plugin: RegistryIndexEntry, t: (key: LocaleKey) => string): string {
+export function agentAssessmentPrompt(plugin: RegistryIndexEntry, t: (key: LocaleKey) => string): string {
   return t('agentInstallTask')
     .replace('{name}', plugin.name)
     .replace('{repositoryUrl}', plugin.repositoryUrl)
@@ -42,7 +42,7 @@ async function openAgentInstallSession(ctx: ClientContext, plugin: RegistryIndex
   const sessionContext = ctx.sessions.scope(sessionId)
   if (sessionContext === undefined) throw new Error(t('agentInstallSessionFailed'))
   const input = ctx.conversation.input.for(sessionContext)
-  input.setDraft(agentInstallPrompt(plugin, t))
+  input.setDraft(agentAssessmentPrompt(plugin, t))
   ctx.sessions.open(sessionId)
   input.submit()
 }

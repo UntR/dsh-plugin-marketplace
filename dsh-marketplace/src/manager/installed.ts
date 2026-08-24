@@ -81,8 +81,12 @@ function registryMatch(
   repositorySlug: string | null,
   plugins: readonly RegistryIndexEntry[],
 ): RegistryIndexEntry | null {
-  return plugins.find(plugin => plugin.install.packageName === packageName)
-    ?? (repositorySlug === null ? null : plugins.find(plugin => plugin.slug.toLowerCase() === repositorySlug) ?? null)
+  if (repositorySlug !== null) {
+    return plugins.find(plugin => plugin.install.packageName === packageName
+      && plugin.slug.toLowerCase() === repositorySlug) ?? null
+  }
+  const packageMatches = plugins.filter(plugin => plugin.install.packageName === packageName)
+  return packageMatches.length === 1 ? packageMatches[0] ?? null : null
 }
 
 function npmManaged(spec: string): boolean {
@@ -105,6 +109,10 @@ function githubTarget(spec: string): string | null {
     .replace(/^git:\/\/github\.com\//i, 'https://github.com/')
   const match = /^https:\/\/github\.com\/([^/#]+\/[^/#]+?)(?:\.git)?#(.+)$/i.exec(normalized)
   return match === null ? null : `${match[1]?.toLowerCase()}#${match[2]}`
+}
+
+export function githubRepositorySlug(spec: string): string | null {
+  return githubTarget(spec)?.split('#')[0] ?? null
 }
 
 function sameGitHubTarget(left: string, right: string): boolean {
@@ -205,15 +213,29 @@ export class InstalledService {
       if (typeof bundle?.patch !== 'string') continue
       const version = typeof manifest.version === 'string' ? manifest.version : null
       const repository = repositoryInfo(manifest.repository)
-      const match = registryMatch(packageName, repository.slug, catalog.plugins)
       const source = sourceKind(dependencyValue)
+      const sourceRepositorySlug = source === 'github'
+        ? githubRepositorySlug(dependencyValue) ?? repository.slug
+        : repository.slug
+      let match = registryMatch(packageName, sourceRepositorySlug, catalog.plugins)
       let currentGitHubSource = false
-      if (source === 'github' && match !== null) {
+      if ((source === 'npm' || source === 'github') && match !== null) {
         const detail = await this.registry.getPlugin(match.id).catch(() => null)
-        currentGitHubSource = detail?.install.available === true
-          && detail.install.preferred === 'github'
-          && detail.install.spec !== null
-          && sameGitHubTarget(dependencyValue, detail.install.spec)
+        const matchingDetail = detail?.install.available === true
+          && detail.install.packageName === packageName
+          && detail.github.slug.toLowerCase() === match.slug.toLowerCase()
+        if (source === 'npm') {
+          if (!matchingDetail || detail.install.preferred !== 'npm' || detail.npm.repositoryMatches !== true) {
+            match = null
+          }
+        } else if (!matchingDetail
+          || detail.install.preferred !== 'github'
+          || detail.install.spec === null
+          || githubRepositorySlug(detail.install.spec) !== sourceRepositorySlug) {
+          match = null
+        } else {
+          currentGitHubSource = sameGitHubTarget(dependencyValue, detail.install.spec)
+        }
       }
       const latestVersion = source === 'npm'
         ? match?.install.version ?? await this.latestNpmVersion(packageName)
@@ -244,7 +266,7 @@ export class InstalledService {
           status,
           available,
           latestVersion: comparable ? latestVersion : null,
-          canUpdate: available || (source === 'github' && !currentGitHubSource),
+          canUpdate: available || (source === 'github' && match !== null && !currentGitHubSource),
         },
         self: packageName === 'untr-dsh-marketplace',
       })

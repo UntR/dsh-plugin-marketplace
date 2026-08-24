@@ -10,12 +10,28 @@ import {
 
 describe('mutation HTTP security', () => {
   it('rejects cross-origin requests', () => {
-    expect(() => verifySameOrigin({ headers: { host: '127.0.0.1:3080', origin: 'https://evil.example' } }))
+    expect(() => verifySameOrigin({ headers: { host: '127.0.0.1:3080', origin: 'https://evil.example' } }, 3080))
       .toThrow('Cross-origin')
-    expect(() => verifySameOrigin({ headers: { host: '127.0.0.1:3080', origin: 'http://127.0.0.1:3080' } }))
+    expect(() => verifySameOrigin({ headers: { host: '127.0.0.1:3080', origin: 'http://127.0.0.1:3080' } }, 3080))
       .not.toThrow()
-    expect(() => verifySameOrigin({ headers: { host: '127.0.0.1:3080', origin: 'https://127.0.0.1:3080' } }))
+    expect(() => verifySameOrigin({ headers: { host: 'localhost:3080', origin: 'http://localhost:3080' } }, 3080))
+      .not.toThrow()
+    expect(() => verifySameOrigin({ headers: { host: '127.0.0.1:3080', origin: 'https://127.0.0.1:3080' } }, 3080))
       .toThrow('Cross-origin')
+  })
+
+  it('rejects missing origins, untrusted hosts and DNS rebinding hosts', () => {
+    expect(() => verifySameOrigin({ headers: { host: '127.0.0.1:3080' } }, 3080))
+      .toThrow('required')
+    expect(() => verifySameOrigin({
+      headers: { host: 'rebind.attacker.example', origin: 'http://rebind.attacker.example' },
+    }, 3080)).toThrow('Cross-origin')
+    expect(() => verifySameOrigin({
+      headers: { host: '192.168.1.5:3080', origin: 'http://192.168.1.5:3080' },
+    }, 3080)).toThrow('Cross-origin')
+    expect(() => verifySameOrigin({
+      headers: { host: '127.0.0.1:3081', origin: 'http://127.0.0.1:3081' },
+    }, 3080)).toThrow('Cross-origin')
   })
 
   it('strictly rejects raw command and install spec fields', () => {

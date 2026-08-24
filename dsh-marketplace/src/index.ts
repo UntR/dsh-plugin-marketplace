@@ -22,7 +22,7 @@ export function apply(ctx: Context): void {
   })
   const installed = new InstalledService(resolveCurrentProfile(ctx.baseUrl, dshHome), registry)
   const mutations = new MutationManager(registry, installed, new CommandRunner(), logger)
-  const handler = createRouter({ registry, installed, mutations })
+  const handler = createRouter({ registry, installed, mutations, serverPort: ctx.webServer.port })
   ctx.effect(
     () => ctx.webServer.register({ kind: 'prefix', path: '/dsh-marketplace', handler }),
     'dsh-marketplace: HTTP API',

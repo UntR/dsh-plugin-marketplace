@@ -1,4 +1,5 @@
 import { mkdir, mkdtemp, readFile, rename, rm, writeFile } from 'node:fs/promises'
+import { randomUUID } from 'node:crypto'
 import { dirname, join } from 'node:path'
 import { CACHE_TTL_MS, FETCH_TIMEOUT_MS } from '../shared/constants.js'
 import { MarketplaceError } from '../shared/errors.js'
@@ -57,7 +58,7 @@ async function replaceSnapshot(cacheDir: string, snapshot: Snapshot): Promise<vo
   const parent = dirname(cacheDir)
   await mkdir(parent, { recursive: true })
   const staging = await mkdtemp(join(parent, '.marketplace-cache-'))
-  const backup = `${cacheDir}.backup-${process.pid}`
+  const backup = `${cacheDir}.backup-${process.pid}-${randomUUID()}`
   try {
     await writeFile(join(staging, 'meta.json'), `${JSON.stringify(snapshot.meta, undefined, 2)}\n`, 'utf8')
     await writeFile(join(staging, 'index.json'), `${JSON.stringify(snapshot.index, undefined, 2)}\n`, 'utf8')
@@ -88,6 +89,8 @@ export class RegistryService {
   private memory: Snapshot | null = null
   private memoryStale = false
   private expiresAt = 0
+  private catalogRefresh: Promise<Catalog> | null = null
+  private readonly detailFetches = new Map<string, Promise<RegistryPluginDetail>>()
 
   constructor(private readonly options: RegistryServiceOptions) {
     this.fetchImpl = options.fetch ?? globalThis.fetch
@@ -124,6 +127,17 @@ export class RegistryService {
     if (!refresh && this.memory !== null && this.now() < this.expiresAt) {
       return this.catalog(this.memory, this.memoryStale)
     }
+    if (this.catalogRefresh !== null) return this.catalogRefresh
+    const operation = this.refreshCatalog()
+    this.catalogRefresh = operation
+    try {
+      return await operation
+    } finally {
+      if (this.catalogRefresh === operation) this.catalogRefresh = null
+    }
+  }
+
+  private async refreshCatalog(): Promise<Catalog> {
     const local = this.memory ?? await readSnapshot(this.options.cacheDir)
     this.logger.info('Refreshing plugin registry metadata.')
     try {
@@ -199,14 +213,30 @@ export class RegistryService {
     } catch {
       // A missing or invalid detail cache is fetched again below.
     }
-    const detailResult = registryPluginDetailSchema.safeParse(await this.fetchJson(entry.detailPath.replace(/^\.\//, '')))
+    const pending = this.detailFetches.get(id)
+    if (pending !== undefined) return pending
+    const operation = this.fetchPluginDetail(id, entry.detailPath, cachedPath)
+    this.detailFetches.set(id, operation)
+    try {
+      return await operation
+    } finally {
+      if (this.detailFetches.get(id) === operation) this.detailFetches.delete(id)
+    }
+  }
+
+  private async fetchPluginDetail(id: string, detailPath: string, cachedPath: string): Promise<RegistryPluginDetail> {
+    const detailResult = registryPluginDetailSchema.safeParse(await this.fetchJson(detailPath.replace(/^\.\//, '')))
     if (!detailResult.success || detailResult.data.id !== id) {
       throw new MarketplaceError('registry-invalid', 'Plugin registry detail is invalid.', 502)
     }
     await mkdir(dirname(cachedPath), { recursive: true })
-    const temporary = `${cachedPath}.tmp-${process.pid}`
-    await writeFile(temporary, `${JSON.stringify(detailResult.data, undefined, 2)}\n`, 'utf8')
-    await rename(temporary, cachedPath)
+    const temporary = `${cachedPath}.tmp-${process.pid}-${randomUUID()}`
+    try {
+      await writeFile(temporary, `${JSON.stringify(detailResult.data, undefined, 2)}\n`, 'utf8')
+      await rename(temporary, cachedPath)
+    } finally {
+      await rm(temporary, { force: true })
+    }
     return detailResult.data
   }
 }

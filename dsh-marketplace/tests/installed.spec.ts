@@ -42,6 +42,11 @@ describe('InstalledService', () => {
           install: { packageName: 'dsh-known', version: '1.1.0' },
         }],
       }),
+      getPlugin: async () => ({
+        github: { slug: 'owner/known' },
+        npm: { repositoryMatches: true },
+        install: { available: true, preferred: 'npm', packageName: 'dsh-known' },
+      }),
     } as unknown as RegistryService
     const state = await new InstalledService({ name: 'web', directory: profile }, registry).list()
     expect(state.plugins.map(plugin => plugin.packageName)).toEqual(['dsh-known', 'dsh-private'])
@@ -58,7 +63,7 @@ describe('InstalledService', () => {
       registryId: null,
       source: { kind: 'github' },
       display: { name: 'dsh-private' },
-      update: { status: 'source', available: false, latestVersion: null, canUpdate: true },
+      update: { status: 'source', available: false, latestVersion: null, canUpdate: false },
     })
   })
 
@@ -90,6 +95,107 @@ describe('InstalledService', () => {
     })
   })
 
+  it('matches an installed package to its repository instead of a colliding package name', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'dsh-installed-'))
+    const profile = join(root, 'profiles', 'web')
+    await mkdir(profile, { recursive: true })
+    await writeFile(join(profile, 'package.json'), JSON.stringify({ dependencies: { 'dsh-notify': '1.0.0' } }))
+    await installFixture(profile, 'dsh-notify', {
+      name: 'dsh-notify', version: '1.0.0', repository: 'https://github.com/official/dsh-notify.git',
+      dsh: { bundle: { patch: './cordis.patch.yml' } },
+    })
+    const entries = [
+      {
+        id: 'gh:1', slug: 'attacker/dsh-notify', name: 'Colliding source', description: '', coverUrl: null,
+        repositoryUrl: 'https://github.com/attacker/dsh-notify',
+        owner: { login: 'attacker', avatarUrl: 'https://example.com/attacker.png' },
+        install: { packageName: 'dsh-notify', version: '9.0.0' },
+      },
+      {
+        id: 'gh:2', slug: 'official/dsh-notify', name: 'Official source', description: '', coverUrl: null,
+        repositoryUrl: 'https://github.com/official/dsh-notify',
+        owner: { login: 'official', avatarUrl: 'https://example.com/official.png' },
+        install: { packageName: 'dsh-notify', version: '1.1.0' },
+      },
+    ]
+    const registry = {
+      getCatalog: async () => ({ registry: { revision: 'x' }, plugins: entries }),
+      getPlugin: async (id: string) => ({
+        github: { slug: id === 'gh:2' ? 'official/dsh-notify' : 'attacker/dsh-notify' },
+        npm: { repositoryMatches: true },
+        install: { available: true, preferred: 'npm', packageName: 'dsh-notify' },
+      }),
+    } as unknown as RegistryService
+
+    const state = await new InstalledService({ name: 'web', directory: profile }, registry).list()
+
+    expect(state.plugins[0]).toMatchObject({
+      registryId: 'gh:2',
+      display: { name: 'Official source', repositoryUrl: 'https://github.com/official/dsh-notify' },
+      update: { status: 'available', latestVersion: '1.1.0', canUpdate: true },
+    })
+  })
+
+  it('does not advertise a Registry update without a verified npm source', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'dsh-installed-'))
+    const profile = join(root, 'profiles', 'web')
+    await mkdir(profile, { recursive: true })
+    await writeFile(join(profile, 'package.json'), JSON.stringify({ dependencies: { 'dsh-known': '1.0.0' } }))
+    await installFixture(profile, 'dsh-known', {
+      name: 'dsh-known', version: '1.0.0', repository: 'https://github.com/owner/known.git',
+      dsh: { bundle: { patch: './cordis.patch.yml' } },
+    })
+    const registry = {
+      getCatalog: async () => ({
+        registry: { revision: 'x' },
+        plugins: [{
+          id: 'gh:1', slug: 'owner/known', name: 'Known', description: '', coverUrl: null,
+          repositoryUrl: 'https://github.com/owner/known',
+          owner: { login: 'owner', avatarUrl: 'https://example.com/owner.png' },
+          install: { packageName: 'dsh-known', version: '9.0.0' },
+        }],
+      }),
+      getPlugin: async () => ({
+        github: { slug: 'owner/known' },
+        npm: { repositoryMatches: false },
+        install: { available: true, preferred: 'github', packageName: 'dsh-known' },
+      }),
+    } as unknown as RegistryService
+
+    const state = await new InstalledService({ name: 'web', directory: profile }, registry, {
+      fetch: async () => new Response(JSON.stringify({ version: '1.0.0' }), { status: 200 }),
+    }).list()
+
+    expect(state.plugins[0]).toMatchObject({ registryId: null, update: { status: 'current', canUpdate: false } })
+  })
+
+  it('fails closed when duplicate package names have no repository identity', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'dsh-installed-'))
+    const profile = join(root, 'profiles', 'web')
+    await mkdir(profile, { recursive: true })
+    await writeFile(join(profile, 'package.json'), JSON.stringify({ dependencies: { 'dsh-ambiguous': '1.0.0' } }))
+    await installFixture(profile, 'dsh-ambiguous', {
+      name: 'dsh-ambiguous', version: '1.0.0', dsh: { bundle: { patch: './cordis.patch.yml' } },
+    })
+    const registry = {
+      getCatalog: async () => ({
+        registry: { revision: 'x' },
+        plugins: ['first', 'second'].map((name, index) => ({
+          id: `gh:${index + 1}`, slug: `${name}/plugin`, name, description: '', coverUrl: null,
+          repositoryUrl: `https://github.com/${name}/plugin`,
+          owner: { login: name, avatarUrl: `https://example.com/${name}.png` },
+          install: { packageName: 'dsh-ambiguous', version: '9.0.0' },
+        })),
+      }),
+    } as unknown as RegistryService
+
+    const state = await new InstalledService({ name: 'web', directory: profile }, registry, {
+      fetch: async () => new Response(JSON.stringify({ version: '1.0.0' }), { status: 200 }),
+    }).list()
+
+    expect(state.plugins[0]).toMatchObject({ registryId: null, update: { status: 'current', canUpdate: false } })
+  })
+
   it('does not infer a GitHub commit update from Registry timestamps or versions', async () => {
     const root = await mkdtemp(join(tmpdir(), 'dsh-installed-'))
     const profile = join(root, 'profiles', 'web')
@@ -112,7 +218,7 @@ describe('InstalledService', () => {
     } as unknown as RegistryService
     const state = await new InstalledService({ name: 'web', directory: profile }, registry).list()
     expect(state.plugins[0]?.update).toEqual({
-      status: 'source', available: false, latestVersion: null, canUpdate: true,
+      status: 'source', available: false, latestVersion: null, canUpdate: false,
     })
   })
 
@@ -137,7 +243,8 @@ describe('InstalledService', () => {
         }],
       }),
       getPlugin: async () => ({
-        install: { available: true, preferred: 'github', spec },
+        github: { slug: 'owner/known' },
+        install: { available: true, preferred: 'github', spec, packageName: 'dsh-known' },
       }),
     } as unknown as RegistryService
 

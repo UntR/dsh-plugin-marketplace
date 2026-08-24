@@ -30,9 +30,12 @@ export function catalogRefreshRequested(url: URL): boolean {
 
 export function verifySameOrigin(
   request: Pick<IncomingMessage, 'headers'> & Partial<Pick<IncomingMessage, 'socket'>>,
+  serverPort: number,
 ): void {
   const origin = request.headers.origin
-  if (origin === undefined) return
+  if (origin === undefined) {
+    throw new MarketplaceError('cross-origin-request', 'Mutation origin is required.', 403)
+  }
   const host = request.headers.host
   let originUrl: URL
   try {
@@ -41,7 +44,12 @@ export function verifySameOrigin(
     throw new MarketplaceError('cross-origin-request', 'Mutation origin is invalid.', 403)
   }
   const protocol = (request.socket as { encrypted?: boolean } | undefined)?.encrypted === true ? 'https:' : 'http:'
-  if (host === undefined || originUrl.host !== host || originUrl.protocol !== protocol) {
+  const allowedHosts = new Set([`127.0.0.1:${serverPort}`, `localhost:${serverPort}`])
+  if (host === undefined
+    || originUrl.origin !== origin
+    || originUrl.host !== host.toLowerCase()
+    || originUrl.protocol !== protocol
+    || !allowedHosts.has(originUrl.host.toLowerCase())) {
     throw new MarketplaceError('cross-origin-request', 'Cross-origin mutation was rejected.', 403)
   }
 }

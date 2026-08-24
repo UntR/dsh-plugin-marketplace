@@ -12,6 +12,6 @@ const summary = await syncRegistry({
   directory: resolve(import.meta.dirname, '../registry/v1'),
   graphql: client.graphql,
   enrichment: client,
+  allowLargeRemoval: process.env.REGISTRY_ALLOW_LARGE_REMOVAL === '1',
 })
 process.stdout.write(`${formatSyncSummary(summary)}\n`)
-

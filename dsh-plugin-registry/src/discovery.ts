@@ -188,7 +188,9 @@ export async function discoverRepositories(request: GraphqlRequest): Promise<Dis
   let cursor: string | null = null
   while (true) {
     const response = responseSchema.parse(await request(DISCOVERY_QUERY, { cursor }))
-    if (response.topic === null) return []
+    if (response.topic === null) {
+      throw new Error('GitHub discovery did not return the canonical dsh-plugin topic.')
+    }
     const connection = response.topic.repositories
     for (const node of connection.nodes) {
       if (node === null || node.visibility !== 'PUBLIC') continue

@@ -27,6 +27,8 @@ GH_TOKEN=... pnpm --filter dsh-plugin-registry sync
 
 Tokens are used only by the sync process and are never written to Registry output.
 
+To protect the last-good Registry, sync refuses to replace a populated Registry with an empty discovery, or to remove more than half of a Registry containing at least 100 repositories. After verifying an intentional mass removal, rerun once with `REGISTRY_ALLOW_LARGE_REMOVAL=1`.
+
 ## Output
 
 ```text

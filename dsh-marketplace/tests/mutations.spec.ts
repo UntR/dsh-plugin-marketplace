@@ -78,4 +78,60 @@ describe('MutationManager', () => {
     expect(result.plugin.version).toBe('1.2.0')
     expect(registry.getPlugin).not.toHaveBeenCalled()
   })
+
+  it('rejects an update when Registry detail changes to another repository source', async () => {
+    const registry = { getPlugin: vi.fn(async () => ({
+      github: { slug: 'attacker/dsh-notify' },
+      npm: { repositoryMatches: true },
+      install: {
+        available: true, preferred: 'npm', spec: 'dsh-notify@9.0.0', packageName: 'dsh-notify',
+        version: '9.0.0', requiresBuildApproval: false,
+      },
+    })) } as unknown as RegistryService
+    const runner = { run: vi.fn() } as unknown as CommandRunner
+    const installed = {
+      profileName: 'web', markRestartRequired: vi.fn(),
+      list: async () => ({
+        profile: 'web', restartRequired: false, plugins: [{
+          packageName: 'dsh-notify', version: '1.0.0', dependencySpec: '1.0.0', registryId: 'gh:1',
+          registryVersion: '9.0.0', registryEntry: { slug: 'official/dsh-notify' },
+          source: { kind: 'npm' }, display: {},
+          update: { status: 'available', available: true, latestVersion: '9.0.0', canUpdate: true }, self: false,
+        }],
+      }),
+    } as unknown as InstalledService
+
+    await expect(new MutationManager(registry, installed, runner).update('dsh-notify'))
+      .rejects.toMatchObject({ code: 'registry-source-mismatch', status: 409 })
+    expect(runner.run).not.toHaveBeenCalled()
+  })
+
+  it('updates from Registry when package and repository identities still match', async () => {
+    const registry = { getPlugin: vi.fn(async () => ({
+      github: { slug: 'official/dsh-notify' },
+      npm: { repositoryMatches: true },
+      install: {
+        available: true, preferred: 'npm', spec: 'dsh-notify@1.1.0', packageName: 'dsh-notify',
+        version: '1.1.0', requiresBuildApproval: false,
+      },
+    })) } as unknown as RegistryService
+    const runner = { run: vi.fn(async () => ({ output: 'updated' })) } as unknown as CommandRunner
+    const installed = {
+      profileName: 'web', markRestartRequired: vi.fn(),
+      list: async () => ({
+        profile: 'web', restartRequired: false, plugins: [{
+          packageName: 'dsh-notify', version: '1.0.0', dependencySpec: '1.0.0', registryId: 'gh:1',
+          registryVersion: '1.1.0', registryEntry: { slug: 'official/dsh-notify' },
+          source: { kind: 'npm' }, display: {},
+          update: { status: 'available', available: true, latestVersion: '1.1.0', canUpdate: true }, self: false,
+        }],
+      }),
+    } as unknown as InstalledService
+
+    await expect(new MutationManager(registry, installed, runner).update('dsh-notify'))
+      .resolves.toMatchObject({ plugin: { packageName: 'dsh-notify', version: '1.1.0' } })
+    expect(runner.run).toHaveBeenCalledWith([
+      'plugin', '--profile', 'web', 'add', 'dsh-notify@1.1.0',
+    ])
+  })
 })

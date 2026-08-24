@@ -2,7 +2,7 @@ import type { RegistryService } from '../registry/service.js'
 import { MarketplaceError } from '../shared/errors.js'
 import { silentLogger, type MarketplaceLogger } from '../shared/logging.js'
 import type { CommandRunner } from './command-runner.js'
-import type { InstalledService } from './installed.js'
+import { githubRepositorySlug, type InstalledService } from './installed.js'
 
 export interface MutationResult {
   ok: true
@@ -83,6 +83,22 @@ export class MutationManager {
       if (plugin.registryId !== null) {
         const detail = await this.registry.getPlugin(plugin.registryId)
         if (detail.install.available && detail.install.spec !== null) {
+          const expectedSlug = plugin.registryEntry?.slug.toLowerCase()
+          const sourceMatches = detail.install.packageName === packageName
+            && expectedSlug !== undefined
+            && detail.github.slug.toLowerCase() === expectedSlug
+            && (plugin.source.kind === 'npm'
+              ? detail.install.preferred === 'npm' && detail.npm.repositoryMatches === true
+              : plugin.source.kind === 'github'
+                && detail.install.preferred === 'github'
+                && githubRepositorySlug(plugin.dependencySpec) === expectedSlug)
+          if (!sourceMatches) {
+            throw new MarketplaceError(
+              'registry-source-mismatch',
+              'The Registry update source does not match the installed plugin.',
+              409,
+            )
+          }
           if (detail.install.requiresBuildApproval) {
             throw new MarketplaceError(
               'build-approval-required',
