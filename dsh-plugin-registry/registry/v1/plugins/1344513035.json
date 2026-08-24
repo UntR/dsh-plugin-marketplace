@@ -1,64 +1,80 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-24T07:42:35.458Z",
+    "enrichedAt": "2026-08-24T09:28:54.036Z",
     "enrichmentStatus": "ok",
-    "headSha": null
+    "headSha": "90a148a1219682c427070702e13c79f20489dd12"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-24T04:02:51Z",
     "databaseId": 1344513035,
-    "defaultBranch": null,
-    "description": null,
+    "defaultBranch": "main",
+    "description": "DeepSeek Harness (dsh) bundle: headless one-shot session resume. `dsh --profile headless --resume <session-id> \"task\"` continues a persisted session (history and turn numbering carry on), prints and exits. Overrides the official headless runner via ctx.agents.resume(); install with `dsh plugin add github:EvieHe/dsh-resume-headless#v0.1.1`.",
     "fork": false,
     "forks": 0,
-    "headSha": null,
+    "headSha": "90a148a1219682c427070702e13c79f20489dd12",
     "homepageUrl": null,
-    "language": null,
+    "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOUCOkCw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5ffab46646b5605aa56cfe5dd29777586607e20d9714fd1f1f1b5866cd5ef133/EvieHe/dsh-resume-headless",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/78981f5657c4fc925d2973064d43738fecc1f0d627c663196151b19423ad1e3d/EvieHe/dsh-resume-headless",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/258511479?v=4",
       "login": "EvieHe"
     },
-    "pushedAt": "2026-08-24T04:02:52Z",
+    "pushedAt": "2026-08-24T08:37:39Z",
     "slug": "EvieHe/dsh-resume-headless",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-24T05:21:44Z",
+    "updatedAt": "2026-08-24T08:43:19Z",
     "url": "https://github.com/EvieHe/dsh-resume-headless"
   },
   "id": "gh:1344513035",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-resume-headless",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:EvieHe/dsh-resume-headless#90a148a1219682c427070702e13c79f20489dd12",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./startup": {
+        "default": "./lib/startup.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-resume-headless",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5ffab46646b5605aa56cfe5dd29777586607e20d9714fd1f1f1b5866cd5ef133/EvieHe/dsh-resume-headless",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/78981f5657c4fc925d2973064d43738fecc1f0d627c663196151b19423ad1e3d/EvieHe/dsh-resume-headless",
+    "description": "DeepSeek Harness (dsh) bundle: headless one-shot session resume. `dsh --profile headless --resume <session-id> \"task\"` continues a persisted session (history and turn numbering carry on), prints and exits. Overrides the official headless runner via ctx.agents.resume(); install wi"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 官方 headless profile 加一次性会话恢复（one-shot resume）能力的 bundle："
   },
   "schemaVersion": 1,
   "scripts": {
