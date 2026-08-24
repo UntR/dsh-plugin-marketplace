@@ -5,43 +5,51 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-23T19:08:11.546Z",
+    "enrichedAt": "2026-08-24T07:42:35.458Z",
     "enrichmentStatus": "ok",
-    "headSha": "dd95f610692eadad6e695ef219a99cfe61f7bf9c"
+    "headSha": "2286e1f2521a788e347a974a609f62c6a837d32a"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-16T13:01:54Z",
     "databaseId": 1335938591,
     "defaultBranch": "main",
-    "description": "Windows workspace, immutable-path, Git-risk, approval, and audit guard for DeepSeek Harness.",
+    "description": "Prevent destructive PowerShell actions in DeepSeek Harness on Windows — workspace boundaries, protected paths, credentials, Git recovery, approvals, and audit logs.",
     "fork": false,
     "forks": 0,
-    "headSha": "dd95f610692eadad6e695ef219a99cfe61f7bf9c",
-    "homepageUrl": "https://github.com/deepseek-ai/deepseek-harness",
+    "headSha": "2286e1f2521a788e347a974a609f62c6a837d32a",
+    "homepageUrl": "https://github.com/deepseek-ai/deepseek-harness/discussions/2429",
     "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT6DOHw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/64f022d523c2c389270a9e5f6a1d5bf2a6cb2f132caa0c27ae111ac3427fb027/julescules/dsh-windows-workspace-guard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f20b16280234179e97c42c78436bc606a309797df159f51cb216cf48b189ce06/julescules/dsh-windows-workspace-guard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/131376318?u=c251f02b86bb89358ebb4be43848b166f944e186&v=4",
       "login": "julescules"
     },
-    "pushedAt": "2026-08-23T18:20:30Z",
+    "pushedAt": "2026-08-24T06:52:32Z",
     "slug": "julescules/dsh-windows-workspace-guard",
     "stars": 0,
     "topics": [
+      "agent-security",
       "audit-log",
+      "credential-protection",
+      "deepseek",
       "deepseek-harness",
+      "deepseek-plugin",
       "dsh-plugin",
+      "git-safety",
       "powershell",
+      "powershell-security",
       "security",
-      "windows"
+      "windows",
+      "windows-security",
+      "workspace-safety"
     ],
-    "updatedAt": "2026-08-23T18:20:12Z",
+    "updatedAt": "2026-08-24T06:54:00Z",
     "url": "https://github.com/julescules/dsh-windows-workspace-guard"
   },
   "id": "gh:1335938591",
@@ -51,8 +59,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:julescules/dsh-windows-workspace-guard#dd95f610692eadad6e695ef219a99cfe61f7bf9c",
-    "version": "0.6.0"
+    "spec": "github:julescules/dsh-windows-workspace-guard#2286e1f2521a788e347a974a609f62c6a837d32a",
+    "version": "0.7.0"
   },
   "npm": {
     "latestVersion": null,
@@ -66,23 +74,26 @@
       "./audit": "./audit.js",
       "./client": "./client.js",
       "./config-source": "./config-source.js",
+      "./doctor": "./doctor.js",
       "./package.json": "./package.json",
       "./path-guard": "./path-guard.js",
-      "./policy": "./policy.js"
+      "./policy": "./policy.js",
+      "./runtime-guard": "./runtime-guard.js",
+      "./sensitive": "./sensitive.js"
     },
     "main": "index.js",
     "name": "dsh-windows-workspace-guard",
     "status": "valid",
     "type": "module",
-    "version": "0.6.0"
+    "version": "0.7.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/64f022d523c2c389270a9e5f6a1d5bf2a6cb2f132caa0c27ae111ac3427fb027/julescules/dsh-windows-workspace-guard",
-    "description": "Windows workspace, immutable-path, Git-risk, approval, and audit guard for DeepSeek Harness."
+    "coverUrl": "https://opengraph.githubassets.com/f20b16280234179e97c42c78436bc606a309797df159f51cb216cf48b189ce06/julescules/dsh-windows-workspace-guard",
+    "description": "Prevent destructive PowerShell actions in DeepSeek Harness on Windows — workspace boundaries, protected paths, credentials, Git recovery, approvals, and audit logs."
   },
   "readme": {
     "available": true,
-    "excerpt": "Safety policy for DeepSeek Harness on Windows. It checks model-issued PowerShell calls before execution and protects workspaces, original files, persistent shell state, Windows system state, processes, and Git recovery paths."
+    "excerpt": "Stop a Windows agent before it deletes originals, escapes the workspace, destroys Git recovery paths, reads credentials, or changes system state. PowerShell calls receive a clear PASS, ASK, or HARD BLOCK before dispatch."
   },
   "schemaVersion": 1,
   "scripts": {
