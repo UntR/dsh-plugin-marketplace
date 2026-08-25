@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-24T02:17:52.033Z",
+    "enrichedAt": "2026-08-25T04:18:29.687Z",
     "enrichmentStatus": "ok",
-    "headSha": "a0fc104ecfdf209b3f010851c98ebcfd9d9633e0"
+    "headSha": "0cae2d933d2e24a8c51b0a44d5f998aedf0c2849"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "A version‑aware adapter registry that decouples third‑party Cordis plugins from dsh’s internal service names, paths, and RPC internals. 基于版本感知适配器注册表，为 dsh Cordis 插件提供运行时兼容层，使第三方插件与内部服务名、模块路径及 RPC 细节解耦。",
     "fork": false,
     "forks": 0,
-    "headSha": "a0fc104ecfdf209b3f010851c98ebcfd9d9633e0",
+    "headSha": "0cae2d933d2e24a8c51b0a44d5f998aedf0c2849",
     "homepageUrl": "https://dsh-plug.in/",
     "language": "TypeScript",
     "license": {
@@ -30,43 +30,51 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/317210547?v=4",
       "login": "dsh-plugins"
     },
-    "pushedAt": "2026-08-19T18:28:54Z",
+    "pushedAt": "2026-08-24T14:56:13Z",
     "slug": "dsh-plugins/dsh-loader",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-08-19T18:31:34Z",
+    "updatedAt": "2026-08-25T03:44:18Z",
     "url": "https://github.com/dsh-plugins/dsh-loader"
   },
   "id": "gh:1339419602",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose a ready package entry point.",
+    "available": true,
+    "packageName": "@dsh-plugin/dsh-loader",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@dsh-plugin/dsh-loader@1.2.0",
+    "version": "1.2.0"
   },
   "npm": {
-    "latestVersion": "1.0.0",
+    "latestVersion": "1.2.0",
     "published": true,
-    "repositoryMatches": false
+    "repositoryMatches": true
   },
   "package": {
     "exports": {
       ".": "./dist/index.js",
       "./agent": "./src/stable/agent.js",
-      "./client": "./lib/client.js",
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client-ui.d.ts"
+      },
+      "./compaction-basic": "./src/stable/compaction-basic.js",
       "./cordis.patch.yml": "./cordis.patch.yml",
+      "./credentials": "./src/stable/credentials.js",
       "./llm": "./src/stable/llm.js",
       "./package.json": "./package.json",
+      "./patch": "./dist/patch.js",
       "./registry": "./dist/registry.js",
       "./runtime": "./src/stable/runtime.js",
       "./schema-form": "./src/stable/schema-form.js",
       "./settings": "./src/stable/settings.js",
+      "./subagent": "./src/stable/subagent.js",
+      "./timeout": "./src/stable/timeout.js",
       "./tools": "./src/stable/tools.js",
       "./ui-primitives": "./src/stable/ui-primitives.js",
       "./ui-settings": "./src/stable/ui-settings.js",
@@ -77,7 +85,7 @@
     "name": "@dsh-plugin/dsh-loader",
     "status": "valid",
     "type": "module",
-    "version": "1.1.0"
+    "version": "1.2.0"
   },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1339419602/8d44cf5c-de49-47a9-9dd1-73049328c696",

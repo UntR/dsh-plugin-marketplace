@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-23T20:58:26.344Z",
+    "enrichedAt": "2026-08-25T04:18:29.687Z",
     "enrichmentStatus": "ok",
-    "headSha": "eafe92a61f2998fd0e3cc92a49dffffa14f7b4ef"
+    "headSha": "a31192297b1775e9b1eeb7cb53323ecc61bcfd92"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-18T02:01:32Z",
     "databaseId": 1337875927,
     "defaultBranch": "main",
-    "description": "在DeepSeek Harness网页中控制鸿蒙手机",
+    "description": "在DeepSeek Harness网页中控制鸿蒙手机并让AI识别内容",
     "fork": false,
     "forks": 0,
-    "headSha": "eafe92a61f2998fd0e3cc92a49dffffa14f7b4ef",
+    "headSha": "a31192297b1775e9b1eeb7cb53323ecc61bcfd92",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,48 +25,60 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT75d1w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/ef2a87ad206e82296fc37f16ddd91d7fb823ed9bf7eda5f0ab4761d57547e0dd/ns-zzj/dsh-hos-scrcpy",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ccc1728a28566a5ad61eed0f71eec7f42d33eeda5a32a9250301835192ed5011/ns-zzj/dsh-hos-scrcpy",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/267320903?v=4",
       "login": "ns-zzj"
     },
-    "pushedAt": "2026-08-23T20:35:20Z",
+    "pushedAt": "2026-08-25T00:49:38Z",
     "slug": "ns-zzj/dsh-hos-scrcpy",
     "stars": 1,
     "topics": [
       "deepseek-harness",
       "developer-tools",
       "dsh-plugin",
-      "dsh-plugins",
       "harmonyos",
-      "scrcpy"
+      "scrcpy",
+      "vision"
     ],
-    "updatedAt": "2026-08-23T20:35:38Z",
+    "updatedAt": "2026-08-25T00:46:24Z",
     "url": "https://github.com/ns-zzj/dsh-hos-scrcpy"
   },
   "id": "gh:1337875927",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-hos-scrcpy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ns-zzj/dsh-hos-scrcpy#a31192297b1775e9b1eeb7cb53323ecc61bcfd92",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-hos-scrcpy",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/ef2a87ad206e82296fc37f16ddd91d7fb823ed9bf7eda5f0ab4761d57547e0dd/ns-zzj/dsh-hos-scrcpy",
-    "description": "在DeepSeek Harness网页中控制鸿蒙手机"
+    "coverUrl": "https://opengraph.githubassets.com/ccc1728a28566a5ad61eed0f71eec7f42d33eeda5a32a9250301835192ed5011/ns-zzj/dsh-hos-scrcpy",
+    "description": "在DeepSeek Harness网页中控制鸿蒙手机并让AI识别内容"
   },
   "readme": {
     "available": true,
-    "excerpt": "开发手机软件的时候总是手机电脑来回操作，所以搞了个这玩意，在 Deepseek Harness 网页里就能控制。"
+    "excerpt": "以插件包（tgz）安装，重启 DSH 后插件常驻："
   },
   "schemaVersion": 1,
   "scripts": {
