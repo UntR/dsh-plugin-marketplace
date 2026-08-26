@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-25T04:18:29.687Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-26T04:23:05.421Z",
+    "enrichmentStatus": "ok",
     "headSha": "02ddba97739fe737f2b71b524392d1f265cf2684"
   },
   "github": {
@@ -41,27 +41,44 @@
   },
   "id": "gh:1341744634",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@deepseek-ai/dsh-a11y-announcer",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:slohmaier/dsh-a11y-announcer#02ddba97739fe737f2b71b524392d1f265cf2684",
+    "version": "0.1.0-rc.8"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@deepseek-ai/dsh-a11y-announcer",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-rc.8"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fe2f9d7169c22ff0335f943d71e355d5197a097ceefc7ddeaeba723ff5e6c4c8/slohmaier/dsh-a11y-announcer",
     "description": "Accessibility plugin for DeepSeek Harness web UI: announces tool calls and finished assistant messages via aria-live for screen readers"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Accessibility plugin for the DeepSeek Harness web UI. Announces tool calls as soon as they appear and finished assistant messages through an aria-live region. NVDA/JAWS/VoiceOver read the live region automatically, without moving the user's focus."
   },
   "schemaVersion": 1,
   "scripts": {

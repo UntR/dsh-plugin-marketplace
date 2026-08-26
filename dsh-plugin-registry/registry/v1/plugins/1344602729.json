@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-25T04:18:29.687Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-26T04:23:05.421Z",
+    "enrichmentStatus": "ok",
     "headSha": "2da1a5120c8a3159b2b1ddb2bf75424ce01886b6"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1344602729",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-inline-images",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Asher-2000/dsh-inline-images#2da1a5120c8a3159b2b1ddb2bf75424ce01886b6",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-inline-images",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/df1aa40b01bb0d0cd4d5c72151650eb1423c8597c720a3cb68af5970f5219734/Asher-2000/dsh-inline-images",
     "description": "对话内联图片/视频:LLM 回复中输出的本地图片路径在消息正文直接渲染,视频可点击播放。修复增强版(URL自动修正/刷新持久化/反向代理兼容)。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DeepSeek Harness 的对话直接显示本地图片和视频:LLM 回复中输出的本地图片路径(截图、生成图等)会在消息正文里自动渲染成图片 —— 不再只是一串看不到的路径文本。视频文件以可点击播放链接形式呈现(浏览器原生播放 MP4)。"
   },
   "schemaVersion": 1,
   "scripts": {

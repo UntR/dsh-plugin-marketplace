@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-25T04:18:29.687Z",
+    "enrichedAt": "2026-08-26T04:23:05.421Z",
     "enrichmentStatus": "ok",
-    "headSha": "b93d3eac93c0177faf046c47fe849b690b89d1c7"
+    "headSha": "00b72dac5b6d8a87d74fc5caed71bfa1d12dc8d0"
   },
   "github": {
     "archived": false,
@@ -17,27 +17,27 @@
     "description": "StateGraph orchestration engine as a DeepSeek Harness plugin: declarative directed state graphs with conditional routing, loopback, iteration guards.",
     "fork": false,
     "forks": 0,
-    "headSha": "b93d3eac93c0177faf046c47fe849b690b89d1c7",
+    "headSha": "00b72dac5b6d8a87d74fc5caed71bfa1d12dc8d0",
     "homepageUrl": null,
-    "language": "TypeScript",
+    "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT59IgQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/bac17cac70dbe81211a8fafc16a689126380f46d743bed2db76cad3201a61d3e/zerosloney/dsh-state-graph",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/123b9e624d3f2ac28c1b09f06a496ba68b531de0c8a3d0d82916f94e64e6c897/zerosloney/dsh-state-graph",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/7932428?v=4",
       "login": "zerosloney"
     },
-    "pushedAt": "2026-08-20T16:11:52Z",
+    "pushedAt": "2026-08-25T22:37:29Z",
     "slug": "zerosloney/dsh-state-graph",
     "stars": 0,
     "topics": [
       "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-20T16:13:27Z",
+    "updatedAt": "2026-08-25T22:40:12Z",
     "url": "https://github.com/zerosloney/dsh-state-graph"
   },
   "id": "gh:1335838849",
@@ -51,7 +51,7 @@
     "version": null
   },
   "npm": {
-    "latestVersion": "0.1.0",
+    "latestVersion": "0.2.0",
     "published": true,
     "repositoryMatches": false
   },
@@ -61,21 +61,22 @@
         "default": "./lib/index.js",
         "types": "./lib/index.d.ts"
       },
+      "./client": "./lib/client.js",
       "./package.json": "./package.json"
     },
     "main": "./lib/index.js",
     "name": "dsh-state-graph",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.3.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/bac17cac70dbe81211a8fafc16a689126380f46d743bed2db76cad3201a61d3e/zerosloney/dsh-state-graph",
+    "coverUrl": "https://opengraph.githubassets.com/123b9e624d3f2ac28c1b09f06a496ba68b531de0c8a3d0d82916f94e64e6c897/zerosloney/dsh-state-graph",
     "description": "StateGraph orchestration engine as a DeepSeek Harness plugin: declarative directed state graphs with conditional routing, loopback, iteration guards."
   },
   "readme": {
     "available": true,
-    "excerpt": "把 StateGraph 有向状态图编排引擎移植为 DeepSeek Harness (dsh) 插件：用声明式的节点 / 静态边 / 条件边把 Harness 单向线性的 ReAct 调度提升为支持多分支条件路由、循环重试与迭代熔断的图编排运行时（子图嵌套可经节点内调用 ctx.graph.create() 组合实现；并行汇聚暂未内置）。"
+    "excerpt": "把 StateGraph 有向状态图编排引擎移植为 DeepSeek Harness (dsh) 插件：用声明式的节点 / 静态边 / 条件边把 Harness 单向线性的 ReAct 调度提升为支持多分支条件路由、循环重试与迭代熔断的图编排运行时（子图嵌套可经 addSubgraph 或节点内调用 ctx.graph.create() 组合实现；并行分支 Fan-out / Fan-in 已内置）。"
   },
   "schemaVersion": 1,
   "scripts": {

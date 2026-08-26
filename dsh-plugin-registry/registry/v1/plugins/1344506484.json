@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-25T04:18:29.687Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-26T04:23:05.421Z",
+    "enrichmentStatus": "ok",
     "headSha": "f6da7b926dd49109af30e0f9b00bf14971e5d3ae"
   },
   "github": {
@@ -42,13 +42,13 @@
   },
   "id": "gh:1344506484",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-auto-maintenance",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dong3434/dsh-auto-maintenance#f6da7b926dd49109af30e0f9b00bf14971e5d3ae",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
@@ -56,11 +56,16 @@
     "repositoryMatches": null
   },
   "package": {
-    "main": "index.js",
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
     "name": "dsh-auto-maintenance",
     "status": "valid",
-    "type": null,
-    "version": "1.0.0"
+    "type": "module",
+    "version": "1.1.0"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8d67584229b86f126a282ab000421d8ecad56ee7c1e55c217f0f71f3203a153f/dong3434/dsh-auto-maintenance",

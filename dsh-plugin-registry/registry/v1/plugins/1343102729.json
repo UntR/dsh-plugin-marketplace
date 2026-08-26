@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-25T04:18:29.687Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-26T04:23:05.421Z",
+    "enrichmentStatus": "ok",
     "headSha": "a9a2b0cc8eefffded2bddf1ffe2c5d7707d74106"
   },
   "github": {
@@ -42,24 +42,41 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/885e1f9827e7b416297e99394f4f79573a4609a42f3e8d26e2929c1f42d5fcd0/czx1111/dsh-plugin-manager",
     "description": "dsh-plugin-manager"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH web plugin: unified manager for profile bundles and MCP integrations (Settings → Plugins → 管理)."
   },
   "schemaVersion": 1,
   "scripts": {

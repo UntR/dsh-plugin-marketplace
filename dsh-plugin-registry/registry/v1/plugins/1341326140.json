@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-25T04:18:29.687Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-26T04:23:05.421Z",
+    "enrichmentStatus": "ok",
     "headSha": "7f84c8fcbf4997a109eceba3912bdd4462aedd7d"
   },
   "github": {
@@ -22,13 +22,13 @@
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOT_MDPA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/49be3c6a2ec9e7a95efa86fe51f95eb8e291a63848074a38f9a49ce32f451a7c/lnyanhongyan/dsh-rule-manager",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/49be3c6a2ec9e7a95efa86fe51f95eb8e291a63848074a38f9a49ce32f451a7c/lansi-ai/dsh-rule-manager",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/18025178?v=4",
-      "login": "lnyanhongyan"
+      "login": "lansi-ai"
     },
     "pushedAt": "2026-08-24T05:27:28Z",
-    "slug": "lnyanhongyan/dsh-rule-manager",
+    "slug": "lansi-ai/dsh-rule-manager",
     "stars": 1,
     "topics": [
       "dsh-plugin",
@@ -36,31 +36,48 @@
       "web"
     ],
     "updatedAt": "2026-08-25T03:29:41Z",
-    "url": "https://github.com/lnyanhongyan/dsh-rule-manager"
+    "url": "https://github.com/lansi-ai/dsh-rule-manager"
   },
   "id": "gh:1341326140",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@deepseek-ai/dsh-rule-manager",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lansi-ai/dsh-rule-manager#7f84c8fcbf4997a109eceba3912bdd4462aedd7d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs",
+        "types": "./lib/index.d.mts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "@deepseek-ai/dsh-rule-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/49be3c6a2ec9e7a95efa86fe51f95eb8e291a63848074a38f9a49ce32f451a7c/lnyanhongyan/dsh-rule-manager",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/49be3c6a2ec9e7a95efa86fe51f95eb8e291a63848074a38f9a49ce32f451a7c/lansi-ai/dsh-rule-manager",
+    "description": "本插件在 DSH 设置页提供带 UI 的规则管理界面，支持全局和项目两个作用域，每条规则一个 .md 文件，保存后自动聚合到 AGENTS.md，由 DSH 原生 agent-instructions 机制自动注入模型 prompt。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "本插件在 DSH 设置页提供带 UI 的规则管理界面，支持全局和项目两个作用域，每条规则一个 .md 文件，保存后自动聚合到 AGENTS.md，由 DSH 原生 agent-instructions 机制自动注入模型 prompt。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-25T04:18:29.687Z",
-    "enrichmentStatus": "failed",
-    "headSha": "d3fae3a1f23d4abe96450bec509fcfa0fb59faf4"
+    "enrichedAt": "2026-08-26T04:23:05.421Z",
+    "enrichmentStatus": "ok",
+    "headSha": "293e75842dc08b5be352e227ae17f3d75be2cdab"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Evidence-gated completion and trusted code verification for DeepSeek Harness agents",
     "fork": false,
     "forks": 0,
-    "headSha": "d3fae3a1f23d4abe96450bec509fcfa0fb59faf4",
+    "headSha": "293e75842dc08b5be352e227ae17f3d75be2cdab",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUBFBfg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3ee0f483f1039462d9f5cc2d79766cf483aca4b1c7e4f50a7e8c18d2154315f1/chenjie1129/deepseek-harness-reliability-governor",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/09b14a3bde11cc2c05ff79cd9a24e7fe6f613eaf791a681d29a3916aaa8542e7/chenjie1129/deepseek-harness-reliability-governor",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/31786685?u=0dcf6b832bc411c57222bb1f07b18dc3fcc23053&v=4",
       "login": "chenjie1129"
     },
-    "pushedAt": "2026-08-24T14:32:39Z",
+    "pushedAt": "2026-08-26T01:05:04Z",
     "slug": "chenjie1129/deepseek-harness-reliability-governor",
     "stars": 2,
     "topics": [
@@ -39,11 +39,9 @@
       "deepseek-harness",
       "dsh-plugin",
       "llm-evaluation",
-      "reliability",
-      "typescript",
-      "verification"
+      "reliability"
     ],
-    "updatedAt": "2026-08-25T03:47:01Z",
+    "updatedAt": "2026-08-26T01:58:04Z",
     "url": "https://github.com/chenjie1129/deepseek-harness-reliability-governor"
   },
   "id": "gh:1343308158",
@@ -51,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,14 +59,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": "./dist/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "@chenjie1129/dsh-reliability-governor-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3ee0f483f1039462d9f5cc2d79766cf483aca4b1c7e4f50a7e8c18d2154315f1/chenjie1129/deepseek-harness-reliability-governor",
+    "coverUrl": "https://opengraph.githubassets.com/09b14a3bde11cc2c05ff79cd9a24e7fe6f613eaf791a681d29a3916aaa8542e7/chenjie1129/deepseek-harness-reliability-governor",
     "description": "Evidence-gated completion and trusted code verification for DeepSeek Harness agents"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An opt-in DeepSeek Harness bundle that lets a user review the proposed evidence contract, then changes completion from a model assertion into a deterministic evidence decision."
   },
   "schemaVersion": 1,
   "scripts": {

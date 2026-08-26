@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-25T04:18:29.687Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-26T04:23:05.421Z",
+    "enrichmentStatus": "ok",
     "headSha": "652b600577a641dc7f43610bcb996bfbe3c318ea"
   },
   "github": {
@@ -47,27 +47,48 @@
   },
   "id": "gh:1341509738",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-companion",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Wanbinyu/dsh-companion#652b600577a641dc7f43610bcb996bfbe3c318ea",
+    "version": "0.1.10"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./types": {
+        "default": "./lib/types.js",
+        "types": "./lib/types.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-companion",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.10"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d28802eb324ceea2afc25008999beaabc862abbc415a0d75128a8917680ea9c8/Wanbinyu/dsh-companion",
     "description": "Local state-aware desktop companion and task-status overlay for DeepSeek Harness Web"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "会读懂任务状态的 DeepSeek Harness Web 桌面伙伴 用角色动作、状态气泡和可选计费数据，让长任务的进展更直观。"
   },
   "schemaVersion": 1,
   "scripts": {
