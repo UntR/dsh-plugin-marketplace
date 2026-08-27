@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "c4ed193385e586c8fee4352440f935dae9c43cb7"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1345031956",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-high-fee-alert",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:GuoFengyu110429/dsh-high-fee-alert#c4ed193385e586c8fee4352440f935dae9c43cb7",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-high-fee-alert",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/785602d6852964726314990e029bf4dbe9e842a6946f5357349e747491ee6516/GuoFengyu110429/dsh-high-fee-alert",
     "description": "一个由DSH制作的插件，用于在峰谷中的峰时段进行提醒以节省费用。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 高峰资费提醒插件：每次启动 DSH 时从 DeepSeek API 定价文档 抓取最新定价，从 ntp.ntsc.ac.cn（中国科学院国家授时中心）获取北京时间 （精确到分，UTC+8），处于高峰时段（峰谷定价中的“峰”）时在页面中央弹出 710×430 的提醒窗口。"
   },
   "schemaVersion": 1,
   "scripts": {

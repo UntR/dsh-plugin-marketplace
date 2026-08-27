@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
-    "headSha": "6e1702d902c8820d0c7e037daac25ef320066631"
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
+    "headSha": "41c5eb749afff2f4dcc1d8e632fac53daa6d6259"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Desktop notifications for DeepSeek Harness sessions, only while you are away",
     "fork": false,
     "forks": 0,
-    "headSha": "6e1702d902c8820d0c7e037daac25ef320066631",
+    "headSha": "41c5eb749afff2f4dcc1d8e632fac53daa6d6259",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUELwiw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/98e96a5ceface72f5e66c694308679b0936f4e7fcc2b15139938fd9bcccb39b8/TARS-snail/dsh-notify",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c160f4501d62142fd7848c1d54b36b91e7476ca1b44484648f4e7322d252eb37/TARS-snail/dsh-notify",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/103440334?u=a9b7d098786538bc35a75e0687aa7da27ea4b5bd&v=4",
       "login": "TARS-snail"
     },
-    "pushedAt": "2026-08-25T19:55:20Z",
+    "pushedAt": "2026-08-26T06:27:35Z",
     "slug": "TARS-snail/dsh-notify",
     "stars": 0,
     "topics": [
@@ -38,38 +38,59 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-25T19:59:28Z",
+    "updatedAt": "2026-08-26T06:28:50Z",
     "url": "https://github.com/TARS-snail/dsh-notify"
   },
   "id": "gh:1346564235",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-notify",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:TARS-snail/dsh-notify#41c5eb749afff2f4dcc1d8e632fac53daa6d6259",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.5",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./rpc": {
+        "default": "./lib/rpc.js",
+        "types": "./lib/rpc.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/98e96a5ceface72f5e66c694308679b0936f4e7fcc2b15139938fd9bcccb39b8/TARS-snail/dsh-notify",
+    "coverUrl": "https://opengraph.githubassets.com/c160f4501d62142fd7848c1d54b36b91e7476ca1b44484648f4e7322d252eb37/TARS-snail/dsh-notify",
     "description": "Desktop notifications for DeepSeek Harness sessions, only while you are away"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness（DSH）插件（bundle）：当会话完成任务或向用户提问（需要选择/回答）、且用户不在会话中时，发送桌面通知并播放系统默认提示音，让你把 DSH 挂到后台跑长任务时不错过关键节点。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

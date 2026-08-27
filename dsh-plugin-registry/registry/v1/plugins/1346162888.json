@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "6136a1f3b3e2a03f2cfd9703953f9364705236f0"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1346162888",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-web-search-ark",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:of1102/dsh-web-search-ark#6136a1f3b3e2a03f2cfd9703953f9364705236f0",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-web-search-ark",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/01748adaf148435d3f36082ba5b2fddc5efbb3dd85ef79b85b4b969733e462e4/of1102/dsh-web-search-ark",
     "description": "Volcengine Ark web-search provider plugin for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A web-search provider plugin for DeepSeek Harness (DSH) that routes the built-in websearch capability through Volcengine Ark (火山方舟). It is designed for deployments whose chat model runs on Ark and that do not have a DeepSeek official-platform key."
   },
   "schemaVersion": 1,
   "scripts": {

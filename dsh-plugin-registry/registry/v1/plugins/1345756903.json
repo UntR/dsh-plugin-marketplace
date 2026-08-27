@@ -5,9 +5,9 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
-    "headSha": "8422462bd07f0d26a12f1105850a03f22e7e4394"
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
+    "headSha": "dfabf9be6a438237902cfde230afc5c3d44a96c8"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "面向 Zed 等编辑器的 DeepSeek Harness 交互式 ACP 插件。",
     "fork": false,
     "forks": 0,
-    "headSha": "8422462bd07f0d26a12f1105850a03f22e7e4394",
+    "headSha": "dfabf9be6a438237902cfde230afc5c3d44a96c8",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUDae5w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d51f30712b0e468141df3950f029727f511309ba21cd8bffaa274bab0ac27405/cking000bigdemon/dsh-acp-interactive",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8b73fd75f264fdf1f8fb504f44ed81a59b111db938629be19996b37c20b30654/cking000bigdemon/dsh-acp-interactive",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/145086097?v=4",
       "login": "cking000bigdemon"
     },
-    "pushedAt": "2026-08-26T03:17:32Z",
+    "pushedAt": "2026-08-27T09:55:18Z",
     "slug": "cking000bigdemon/dsh-acp-interactive",
     "stars": 1,
     "topics": [
@@ -39,7 +39,7 @@
       "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-26T03:18:41Z",
+    "updatedAt": "2026-08-27T09:59:50Z",
     "url": "https://github.com/cking000bigdemon/dsh-acp-interactive"
   },
   "id": "gh:1345756903",
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,20 +57,38 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./bin": "./lib/bin.js",
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/invariant.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-acp-interactive",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d51f30712b0e468141df3950f029727f511309ba21cd8bffaa274bab0ac27405/cking000bigdemon/dsh-acp-interactive",
+    "coverUrl": "https://opengraph.githubassets.com/8b73fd75f264fdf1f8fb504f44ed81a59b111db938629be19996b37c20b30654/cking000bigdemon/dsh-acp-interactive",
     "description": "面向 Zed 等编辑器的 DeepSeek Harness 交互式 ACP 插件。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "面向编辑器的 Agent Client Protocol JSON-RPC stdio 服务器。它按需创建 dsh agent，并把实时 session 事件投影为 ACP 消息、思考、工具、审批、计划、标题、用量和命令更新。首个兼容目标是 Zed。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

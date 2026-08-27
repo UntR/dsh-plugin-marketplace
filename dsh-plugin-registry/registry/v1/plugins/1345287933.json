@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "61c9b7dcda37e3c36c737979f710c6ebc56b2381"
   },
   "github": {
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,14 +51,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-password-generator",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/786fd6905d4be2df9b47bddc14be51f2b00d34ef2271f016f2ebc80ac414127c/rchen1207/dsh-password-generator",
     "description": "生成密码，只生不存"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "「密码生成器」插件 — 为 DeepSeek Harness Web GUI 侧边栏添加一个密码生成器入口：随机生成密码（低/中/高档），第四档「🎲 有意义」由 Agent/LLM 生成，不保存任何历史。"
   },
   "schemaVersion": 1,
   "scripts": {

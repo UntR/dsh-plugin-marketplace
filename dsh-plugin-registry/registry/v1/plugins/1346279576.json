@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "9624d446ab4d4371d6ffcb46030e81520d4dfbaa"
   },
   "github": {
@@ -50,24 +50,37 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-recall",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9e9b027e2d370ec1a5672e1147e7000e95bcbb2d6fb55d5185001cc8fe0148f8/kittimzhe/dsh-session-recall",
     "description": "Cross-session full-text recall for DeepSeek Harness: the model-facing recall tool searches past session transcripts via ctx.sessionQuery, with a persistent FTS index"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Cross-session full-text recall for DeepSeek Harness: the model-facing recall tool lets the agent search its own past session transcripts — \"that bug we fixed last week\", \"the font we chose for my resume\" — through the trusted ctx.sessionQuery seam."
   },
   "schemaVersion": 1,
   "scripts": {

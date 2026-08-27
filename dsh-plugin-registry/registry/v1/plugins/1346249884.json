@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "f3da5b4605a254f0aac9cfab7a5d462f9ab7b208"
   },
   "github": {
@@ -41,33 +41,51 @@
   },
   "id": "gh:1346249884",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@lemoncat7/dsh-web-search",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "@lemoncat7/dsh-web-search@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/invariant.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@lemoncat7/dsh-web-search",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/322f6b31c518eb7843011fd5f4da78663f6449dec8d062f937d458f19da81636/lemoncat7/dsh-web-search",
     "description": "Configurable and secure multi-provider web search for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Configurable web search for DeepSeek Harness. The plugin keeps DSH's native websearch tool stable while administrators select the actual backend in Settings."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

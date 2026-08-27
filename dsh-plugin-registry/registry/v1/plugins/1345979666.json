@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
-    "headSha": "133965556a53f1300d558871c4c357a9b91cdb62"
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
+    "headSha": "651f109a2ed4e672ef6b5989ff4db37436f6458e"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-25T10:22:36Z",
     "databaseId": 1345979666,
     "defaultBranch": "main",
-    "description": "deep seek harness插件，可以将高峰时段的工作延迟到空闲时段再工作",
+    "description": "DeepSeek Harness 峰谷计费插件：高峰时段发送前确认（可勾选本次高峰段内不再提示），支持将消息排队到空闲时段（半价）自动发送；可拖拽悬浮队列窗口、调整发送顺序与时间。",
     "fork": false,
     "forks": 0,
-    "headSha": "133965556a53f1300d558871c4c357a9b91cdb62",
+    "headSha": "651f109a2ed4e672ef6b5989ff4db37436f6458e",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUDoFEg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/bc68d2ad71cad14865818eb163f1754aec5b9e85d45f9f21274e931a3d54f726/f20880479-lab/dsh-peak-gate",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f0841f5852ba93fb35ec85e0514aab1e4beb042fced60738390e0df65607f8ed/f20880479-lab/dsh-peak-gate",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/278016271?v=4",
       "login": "f20880479-lab"
     },
-    "pushedAt": "2026-08-26T04:22:46Z",
+    "pushedAt": "2026-08-26T14:34:05Z",
     "slug": "f20880479-lab/dsh-peak-gate",
     "stars": 3,
     "topics": [
@@ -40,32 +40,49 @@
       "dsh-plugin",
       "peak-pricing"
     ],
-    "updatedAt": "2026-08-26T04:11:23Z",
+    "updatedAt": "2026-08-26T14:44:59Z",
     "url": "https://github.com/f20880479-lab/dsh-peak-gate"
   },
   "id": "gh:1345979666",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-peak-gate",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-peak-gate@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-peak-gate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/bc68d2ad71cad14865818eb163f1754aec5b9e85d45f9f21274e931a3d54f726/f20880479-lab/dsh-peak-gate",
-    "description": "deep seek harness插件，可以将高峰时段的工作延迟到空闲时段再工作"
+    "coverUrl": "https://opengraph.githubassets.com/f0841f5852ba93fb35ec85e0514aab1e4beb042fced60738390e0df65607f8ed/f20880479-lab/dsh-peak-gate",
+    "description": "DeepSeek Harness 峰谷计费插件：高峰时段发送前确认（可勾选本次高峰段内不再提示），支持将消息排队到空闲时段（半价）自动发送；可拖拽悬浮队列窗口、调整发送顺序与时间。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "基于 DeepSeek 官方峰谷定价政策（2026-08-17 生效）："
   },
   "schemaVersion": 1,
   "scripts": {

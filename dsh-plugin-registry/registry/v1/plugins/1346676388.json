@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "5c9ebd9d662b647c3e38ac3eb3f604dae9dcd832"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1346676388",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-voice",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Lorodn4x/dsh-voice#5c9ebd9d662b647c3e38ac3eb3f604dae9dcd832",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-voice",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0c95a3a261f66ae2e451073b635c30e1ec4902956730d6643e8b65fd235d4e82/Lorodn4x/dsh-voice",
     "description": "Voice messages for DeepSeek Harness web UI: Edge TTS playback button plus agent-sent voice notes"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Голосовые сообщения для веб-GUI DeepSeek Harness: кнопка прослушивания под ответами агента плюс инструмент voicesay, которым агент сам отправляет голосовые по собственному выбору. Синтез речи - Edge TTS (Microsoft), без API-ключей."
   },
   "schemaVersion": 1,
   "scripts": {

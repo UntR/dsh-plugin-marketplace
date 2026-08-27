@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "d50ecbcd68a59a05fb6da802f6d5c245e0224a61"
   },
   "github": {
@@ -53,7 +53,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -63,14 +63,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-constellation",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f0325b6bb76201cf1855c3a59dddb2a7408fae76c5d250d3af952bab1711c3d6/a805026135/dsh-constellation",
     "description": "A live, self-organizing constellation map of your DeepSeek Harness plugin universe — AI-balanced taxonomy, bilingual labels, instant search, health diagnostics, and one-click plugin operations."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A live, self-organizing constellation map of your DeepSeek Harness plugin universe."
   },
   "schemaVersion": 1,
   "scripts": {

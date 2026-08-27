@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "e8a1bef1ef5488dc7f79a5f1141af0d365b449f9"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1345620952",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-skill-curator",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:runfali/dsh-skill-curator#e8a1bef1ef5488dc7f79a5f1141af0d365b449f9",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-skill-curator",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0ebb034a1942f7c1c5fbeb13704ec680997947b81c062b4e57e78e73188cb672/runfali/dsh-skill-curator",
     "description": "为 dsh 打造的自动技能策展插件：每 N 轮真实对话，后台起一个评审子代理阅读会话摘要，主动把值得沉淀的经验提炼为 ~/.dsh/skills/<name>/SKILL.md - 把 Hermes 的「后台评审自我改进」闭环移植到 DSH，零侵入 bundle 插件，不改 dsh 源码。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Automatic skill curation for DeepSeek Harness (DSH). After every N real conversation turns (default 3), the plugin fires a background subagent that reads a digest of the session and creates or updates SKILL.md files under the user skills directory (/.dsh/skills//SKILL.md) — the s"
   },
   "schemaVersion": 1,
   "scripts": {

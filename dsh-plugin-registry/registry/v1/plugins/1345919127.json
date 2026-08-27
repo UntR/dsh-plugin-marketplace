@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "b6bc258005cd4540980797224c69b5cc34e611dd"
   },
   "github": {
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,14 +51,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-ui-session-fork",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0758cdb5f2e135ac6cdbd30875d79c0114fc61c614d546d4fff78d08ae189956/sandersyao/dsh-plugin-ui-session-fork",
     "description": "deepseek harness 插件 增加会话分组方式“树形”"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 dsh web 工作区侧栏新增一种「树形」（Tree）分组方式。"
   },
   "schemaVersion": 1,
   "scripts": {

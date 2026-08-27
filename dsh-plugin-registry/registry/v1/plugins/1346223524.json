@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
-    "headSha": "462efb92229003be867ebfec34e97b404c640299"
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
+    "headSha": "68a89fc34aa386550e37499d3b17f6a8f4aef418"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-25T14:18:34Z",
     "databaseId": 1346223524,
     "defaultBranch": "main",
-    "description": "在dsh-TUI提供/mcp-manager命令，可以热插拔、实时配置mcp",
+    "description": "  面向 dsh-TUI 的原生 MCP Server 管理插件：通过 /mcp-manager 浮窗完成 MCP CRUD、启停、Sets、复制、Inspector、Tool schema、Doctor Lite 和凭据引用管理，并将配   置原子写入当前 profile，支持 Cordis HMR 热重载。",
     "fork": false,
     "forks": 0,
-    "headSha": "462efb92229003be867ebfec34e97b404c640299",
+    "headSha": "68a89fc34aa386550e37499d3b17f6a8f4aef418",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUD29pA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/9507ed9a6ea529c0ed21ec7ab305ebd4197c4040959eac79720390413c8fcea1/0N3-0/dsh-tui-mcp-manager",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5799f3f3f995bca2314b15d27fbe2edf3a6e835c193ed40b9bfff20c67d88a74/0N3-0/dsh-tui-mcp-manager",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/223321006?v=4",
       "login": "0N3-0"
     },
-    "pushedAt": "2026-08-25T15:15:28Z",
+    "pushedAt": "2026-08-26T13:40:31Z",
     "slug": "0N3-0/dsh-tui-mcp-manager",
     "stars": 0,
     "topics": [
@@ -39,32 +39,51 @@
       "dsh-tui",
       "mcp"
     ],
-    "updatedAt": "2026-08-25T15:26:07Z",
+    "updatedAt": "2026-08-26T14:05:14Z",
     "url": "https://github.com/0N3-0/dsh-tui-mcp-manager"
   },
   "id": "gh:1346223524",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tui-mcp-manager",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:0N3-0/dsh-tui-mcp-manager#68a89fc34aa386550e37499d3b17f6a8f4aef418",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/types/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./dsh-plugin.json": "./dsh-plugin.json",
+      "./package.json": "./package.json",
+      "./server": {
+        "import": "./lib/types/server/index.js",
+        "types": "./lib/types/server/index.d.ts"
+      }
+    },
+    "main": "./lib/types/index.js",
+    "name": "dsh-tui-mcp-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/9507ed9a6ea529c0ed21ec7ab305ebd4197c4040959eac79720390413c8fcea1/0N3-0/dsh-tui-mcp-manager",
-    "description": "在dsh-TUI提供/mcp-manager命令，可以热插拔、实时配置mcp"
+    "coverUrl": "https://opengraph.githubassets.com/5799f3f3f995bca2314b15d27fbe2edf3a6e835c193ed40b9bfff20c67d88a74/0N3-0/dsh-tui-mcp-manager",
+    "description": "面向 dsh-TUI 的原生 MCP Server 管理插件：通过 /mcp-manager 浮窗完成 MCP CRUD、启停、Sets、复制、Inspector、Tool schema、Doctor Lite 和凭据引用管理，并将配 置原子写入当前 profile，支持 Cordis HMR 热重载。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "面向 dsh-TUI 的原生 MCP Server 管理插件。 在聊天界面输入 /mcp-manager，即可通过 managed dialog 完成 MCP CRUD、启停、Sets、服务器复制、 Inspector、Tool schema、Doctor Lite 与 DSH credential reference 管理。所有服务器变更直接写入 当前 profile 的 cordis.patch.yml，不引入额外配置数据库。"
   },
   "schemaVersion": 1,
   "scripts": {

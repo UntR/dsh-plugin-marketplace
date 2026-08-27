@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "d2f66675fae8a78c3e58152f46378d97b8ecbfc3"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1345139529",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-switch-cost",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xyzs996/dsh-switch-cost#d2f66675fae8a78c3e58152f46378d97b8ecbfc3",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json",
+      "./prices": "./lib/prices.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-switch-cost",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4441bae7443c9355bd35ee9e672593f84507b66a12eb93b41bee0ba7082870c9/xyzs996/dsh-switch-cost",
     "description": "DeepSeek Harness (dsh) plugin to compare LLM API cost across models and providers: prices the current session on the model that ran it, then reprices the same token counts against 15 routes on file. DeepSeek peak/off-peak resolved per UTC hour, cache read and write priced separat"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Prices the current session twice: once on the route that actually ran it, and once on every other route in the shipped price table. It answers \"what did this cost\" like the other usage plugins do, and then the question they don't — \"what would the same traffic have cost somewhere"
   },
   "schemaVersion": 1,
   "scripts": {

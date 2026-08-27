@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "816e6505b8dbef55654af47110a075e5922ba51e"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1345833817",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-codebase-memory-mcp",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:princeofdream/dsh-codebase-memory-mcp#816e6505b8dbef55654af47110a075e5922ba51e",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-codebase-memory-mcp",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e7bea2023b71c028f1e7a71911706d56a142a9a5635ed64c2fa92c293075e660/princeofdream/dsh-codebase-memory-mcp",
     "description": "dsh-codebase-memory-mcp"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that bridges the local codebase-memory-mcp knowledge-graph MCP server into DSH — reusing the built-in @deepseek-ai/dsh-mcp-client bridge, so you don't implement any MCP transport yourself."
   },
   "schemaVersion": 1,
   "scripts": {

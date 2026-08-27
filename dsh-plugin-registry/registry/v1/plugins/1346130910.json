@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "ffa13b529c22a3536b2d0fffe872df687aca6431"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1346130910",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-image-gen",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Anyway-one/dsh-image-gen#ffa13b529c22a3536b2d0fffe872df687aca6431",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-image-gen",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/accbc6de8ddab1f8fb5af72fa796e47c42f5af3ba65fdf8ddac50e971379dd12/Anyway-one/dsh-image-gen",
     "description": "DeepSeek Harness Image2 生图插件，通过第三方 OpenAI Images 兼容接口调用 gpt-image-2，只需配置 API Key 和 baseURL。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Adds gpt-image-2 generation to DeepSeek Harness by calling any third-party OpenAI Images compatible endpoint. Fill in baseURL and API Key and use text-to-image and image-to-image tools directly in conversation."
   },
   "schemaVersion": 1,
   "scripts": {

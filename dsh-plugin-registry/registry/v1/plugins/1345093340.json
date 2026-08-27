@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
-    "headSha": "f4fdcd1bd7e609ca0183b0079bd5a0a2bfcee3e9"
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
+    "headSha": "2238f1d32fbbd2141b9f9a9af89303f611d03ce5"
   },
   "github": {
     "archived": false,
@@ -16,8 +16,8 @@
     "defaultBranch": "main",
     "description": "Kiro provider for DeepSeek Harness with Builder ID login, live model discovery, and reasoning effort controls",
     "fork": false,
-    "forks": 0,
-    "headSha": "f4fdcd1bd7e609ca0183b0079bd5a0a2bfcee3e9",
+    "forks": 2,
+    "headSha": "2238f1d32fbbd2141b9f9a9af89303f611d03ce5",
     "homepageUrl": "https://github.com/dat-lequoc/dsh-kiro#readme",
     "language": "TypeScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUCx-3A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/2b9711b2e1175eb809375aa56d50a9f1e65299d3fb8b443fcccbd373b8053a1f/dat-lequoc/dsh-kiro",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/71d5b2805a96376ecb7ec74278aad0cb3a46f34214c8cef9dd36f2382362e59f/dat-lequoc/dsh-kiro",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/71183203?u=e9ff817f0a7c6c265f963b9da8ef8eb8dbfa9e5e&v=4",
       "login": "dat-lequoc"
     },
-    "pushedAt": "2026-08-25T20:13:21Z",
+    "pushedAt": "2026-08-27T09:03:26Z",
     "slug": "dat-lequoc/dsh-kiro",
-    "stars": 2,
+    "stars": 3,
     "topics": [
       "aws",
       "claude",
@@ -46,32 +46,51 @@
       "opus",
       "reasoning"
     ],
-    "updatedAt": "2026-08-25T20:18:55Z",
+    "updatedAt": "2026-08-27T09:08:34Z",
     "url": "https://github.com/dat-lequoc/dsh-kiro"
   },
   "id": "gh:1345093340",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-kiro",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dat-lequoc/dsh-kiro#2238f1d32fbbd2141b9f9a9af89303f611d03ce5",
+    "version": "0.1.19"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./client/index.cjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-kiro",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.19"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/2b9711b2e1175eb809375aa56d50a9f1e65299d3fb8b443fcccbd373b8053a1f/dat-lequoc/dsh-kiro",
+    "coverUrl": "https://opengraph.githubassets.com/71d5b2805a96376ecb7ec74278aad0cb3a46f34214c8cef9dd36f2382362e59f/dat-lequoc/dsh-kiro",
     "description": "Kiro provider for DeepSeek Harness with Builder ID login, live model discovery, and reasoning effort controls"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Kiro provider for DeepSeek Harness, with multi-method Kiro login, automatic token/profile refresh, live account model discovery, Claude/open-weight streaming, tool calls, and reasoning effort controls."
   },
   "schemaVersion": 1,
   "scripts": {

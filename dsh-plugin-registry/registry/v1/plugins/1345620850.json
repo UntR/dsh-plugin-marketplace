@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "20e8044aeb924487b65d267178434dc816331954"
   },
   "github": {
@@ -41,33 +41,51 @@
   },
   "id": "gh:1345620850",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@max1997/dsh-quick-prompts",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "@max1997/dsh-quick-prompts@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@max1997/dsh-quick-prompts",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/30c189dd9762edef876ceadaeeaa4652e015f1246e7941a92b8512107d3a569e/lcsdg/dsh-quick-prompts",
     "description": "Quick-prompts bar for DeepSeek Harness (dsh): per-category snippet chips above the composer, orange placeholder highlighting, two-column prompt/category management, and per-session category memory."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把常用指令做成输入框上方的一排胶囊，点一下就填好、就能发。 少打字，少重复复述需求。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

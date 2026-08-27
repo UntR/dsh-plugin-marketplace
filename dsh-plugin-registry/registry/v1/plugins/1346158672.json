@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "88e647da24f280f2a8c993e6a844f888eb2a50c1"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1346158672",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-command-code-review",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-command-code-review@0.1.8",
+    "version": "0.1.8"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.8",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-command-code-review",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.8"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5590eb4d65fd49eb5b7c50858142e23f336698c28f45656a03e068275893eddb/JasonFreeLab/dsh-command-code-review",
     "description": "/code-review slash command for DeepSeek Harness — five parallel review lenses, per-finding confidence scoring, then a gh reply back on the pull request."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "/code-review slash command for DeepSeek Harness (dsh) — a self-contained plugin bundle that runs a full code review, either on a pull request or on local code."
   },
   "schemaVersion": 1,
   "scripts": {

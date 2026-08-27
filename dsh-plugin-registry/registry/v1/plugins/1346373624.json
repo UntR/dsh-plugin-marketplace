@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
-    "headSha": "11d0d07af5bb2e5207703b923c2e5bf851f827a5"
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
+    "headSha": "5491ab0ad6039bbbe5e664fd60facae409366bcf"
   },
   "github": {
     "archived": false,
@@ -17,19 +17,19 @@
     "description": "Maestro Config — shared settings service for the dsh-maestro-* suite over the single namespaced store (~/.dsh/maestro/settings.json)",
     "fork": false,
     "forks": 0,
-    "headSha": "11d0d07af5bb2e5207703b923c2e5bf851f827a5",
+    "headSha": "5491ab0ad6039bbbe5e664fd60facae409366bcf",
     "homepageUrl": null,
-    "language": "TypeScript",
+    "language": "JavaScript",
     "license": null,
     "nodeId": "R_kgDOUEAH-A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f5d660a5e51166e7770277ba5556fc5eb5c11ecb23df6984037ba6b1b9b5515b/ddtcorex/dsh-maestro-config",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d25304dc7c0910b6d4fa7ffb55e807a4f87ef3c92bfbf720fdbe4e9f5102a5d2/ddtcorex/dsh-maestro-config",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/103315997?u=ad490aaef0b858ff4645437082eba607ea6fe7e2&v=4",
       "login": "ddtcorex"
     },
-    "pushedAt": "2026-08-26T04:07:43Z",
+    "pushedAt": "2026-08-27T06:03:56Z",
     "slug": "ddtcorex/dsh-maestro-config",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "configuration",
       "cordis",
@@ -40,7 +40,7 @@
       "settings-ui",
       "typescript"
     ],
-    "updatedAt": "2026-08-26T04:08:05Z",
+    "updatedAt": "2026-08-27T06:06:51Z",
     "url": "https://github.com/ddtcorex/dsh-maestro-config"
   },
   "id": "gh:1346373624",
@@ -48,24 +48,38 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@ddtcorex/dsh-maestro-config",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f5d660a5e51166e7770277ba5556fc5eb5c11ecb23df6984037ba6b1b9b5515b/ddtcorex/dsh-maestro-config",
+    "coverUrl": "https://opengraph.githubassets.com/d25304dc7c0910b6d4fa7ffb55e807a4f87ef3c92bfbf720fdbe4e9f5102a5d2/ddtcorex/dsh-maestro-config",
     "description": "Maestro Config — shared settings service for the dsh-maestro-* suite over the single namespaced store (~/.dsh/maestro/settings.json)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Shared settings service for the dsh-maestro- suite. One namespaced store at /.dsh/maestro/settings.json (chmod 600), owned per-domain by each plugin. Embeds @ddtcorex/dsh-maestro-config-lib."
   },
   "schemaVersion": 1,
   "scripts": {

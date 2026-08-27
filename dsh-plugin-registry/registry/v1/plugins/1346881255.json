@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "37c85c373eb2e6186a7354ff6b2a88107d6872fb"
   },
   "github": {
@@ -44,27 +44,33 @@
   },
   "id": "gh:1346881255",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-llm-extra-retry",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lim12137/dsh-llm-extra-retry#37c85c373eb2e6186a7354ff6b2a88107d6872fb",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": "lib/index.js",
+    "name": "dsh-llm-extra-retry",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/814feea5778d88a200d475f2255f36102a0feab4601ce47104ab4c26fe15baca/lim12137/dsh-llm-extra-retry",
     "description": "Extra model-request recovery for DeepSeek Harness: retries PI_AI_ERROR failures once after a fixed 20s delay; other error codes keep the built-in dsh-llm-retry exponential backoff."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 模型请求失败瀑布(agent/request-error)追加一条独立恢复策略: 当提供方把失败归类为 PIAIERROR(dsh-llm-pi-ai 对无法识别的上游错误 文本的兜底错误码,内建默认重试策略不覆盖)时,等待 20 秒后自动重试一次。"
   },
   "schemaVersion": 1,
   "scripts": {

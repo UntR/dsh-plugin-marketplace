@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "a03e12e8f6fc00ca163e41a72185d639a81f564c"
   },
   "github": {
@@ -41,27 +41,37 @@
   },
   "id": "gh:1345606946",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@aifred/dsh-task-ledger",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:qiaoji1990-alt/aifred-dsh-task-ledger#a03e12e8f6fc00ca163e41a72185d639a81f564c",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml"
+    },
+    "main": "index.js",
+    "name": "@aifred/dsh-task-ledger",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/76ea70e1efb2d5651bfcd65b4b11d025a9a9b462791e30bca7d3f04295e6a442/qiaoji1990-alt/aifred-dsh-task-ledger",
     "description": "Provider-neutral task lifecycle and idempotent event ledger plugin for DeepSeek Harness. Works standalone for any DSH project and optionally integrates with Aifred through a bridge."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Provider-neutral task lifecycle tools for DeepSeek Harness. The plugin can run independently with a local appendable JSON ledger, or connect to an Aifred-compatible bridge by setting AIFREDTASKLEDGERMODE=bridge and AIFREDBRIDGEURL."
   },
   "schemaVersion": 1,
   "scripts": {

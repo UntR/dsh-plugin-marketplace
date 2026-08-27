@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "7dbba1bd4e3149406f681d770ad9a7cb852b2068"
   },
   "github": {
@@ -41,27 +41,42 @@
   },
   "id": "gh:1345721794",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-disclosure-tweaks",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Cinnamobot/dsh-disclosure-tweaks#7dbba1bd4e3149406f681d770ad9a7cb852b2068",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-disclosure-tweaks",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a51b4cbccfc32611f05b3061c74d89491ed001f650465be6047007e33fb383dd/Cinnamobot/dsh-disclosure-tweaks",
     "description": "Auto-expand/collapse DSH conversation disclosure rows (Think, tool calls, context, todo, queue) with per-type Settings toggles. Manual toggles are never overridden."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness の会話 UI にある折りたたみ行 — 思考（Think）・ツールコール・Context injection・TODO・キュー — を、設定画面から種類ごとに ON/OFF できるプラグインです。"
   },
   "schemaVersion": 1,
   "scripts": {

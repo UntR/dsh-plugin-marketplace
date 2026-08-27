@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "8b9a1044658094595ee81ff25c34d2f72d105089"
   },
   "github": {
@@ -43,27 +43,42 @@
   },
   "id": "gh:1345625783",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-restart",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dujar/dsh-restart#8b9a1044658094595ee81ff25c34d2f72d105089",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-restart",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/614f245a25ae25c398039fde08e7b68755402bbdd2faeeb0cd739c19461df6ba/dujar/dsh-restart",
     "description": "DeepSeek Harness web-GUI plugin: restart dsh web in one click, toggle installed plugins, git panel for local checkouts"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness (DSH) web-GUI plugin that adds a Settings → Restart section: restart the dsh web process in one click, enable/disable installed plugins, and jump straight to the Community plugins tab to install more. Bilingual UI (English / Simplified Chinese) that follows the h"
   },
   "schemaVersion": 1,
   "scripts": {

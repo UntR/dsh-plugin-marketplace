@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "e5909073ee42b9e3be4c9713167ee016662aa8c6"
   },
   "github": {
@@ -43,33 +43,50 @@
   },
   "id": "gh:1346857688",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@tieveto666-code/dsh-memory-migration",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:tieveto666-code/dsh-memory-migration#e5909073ee42b9e3be4c9713167ee016662aa8c6",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@tieveto666-code/dsh-memory-migration",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8c400b2a1231add2266a7c426bc20d863469ed8945c69191ceb5636469e6f447/tieveto666-code/dsh-memory-migration",
     "description": "为原版 DeepSeek Harness 提供长期记忆：用键值对保存身份、偏好、方法论和约束，并在后续对话中按提问召回。可手动增删改查；也可选「记忆迁移」，从 ChatGPT / Claude / Gemini / DeepSeek 官方导出包提取少量核心记忆。独立插件，不修改 DSH 源码。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that gives stock DSH long-term memory: a key/value store of who you are and how you work, recalled into later chats when the question matches."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

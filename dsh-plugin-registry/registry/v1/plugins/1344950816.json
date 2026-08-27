@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "e19a5ec4f726901c0cb67813e0b4425885b7ee27"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1344950816",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-time-prefix",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:2522669008-zcy/dsh-time-prefix#e19a5ec4f726901c0cb67813e0b4425885b7ee27",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-time-prefix",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8a393004ff1c182fda75667ad3bf413649d4013c7d2c609f73da43d6d24db2f5/2522669008-zcy/dsh-time-prefix",
     "description": "在每条用户消息前自动插入 【2026/08/23，22:36】 这样的时间文本"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 dsh 中为每条用户消息自动添加当前时间前缀的小插件，可在设置页开关。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "8f608134afeb1a492369cd19ba747dc2f531b26a"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1345019751",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@robbin810130/dsh-rtk",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:robbin810130/dsh-rtk#8f608134afeb1a492369cd19ba747dc2f531b26a",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dsh-rtk/lib/index.js",
+        "import": "./dsh-rtk/lib/index.js"
+      }
+    },
+    "main": "./dsh-rtk/lib/index.js",
+    "name": "@robbin810130/dsh-rtk",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a50391ff0306eb5f4f05c6cb8cc419728386fd1fb9c7a0e24eaee3fe7cf04332/robbin810130/dsh-rtk",
     "description": "Community DSH plugin that applies explicit RTK command-output filtering to bash tools at boot."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-rtk 在 DSH 服务启动时将 RTK（Runtime Token Keeper）接入 bash 工具：可匹配的命令会先经 rtk rewrite 转换，使终端输出在进入 LLM 上下文前得到压缩，从而减少 token 消耗。"
   },
   "schemaVersion": 1,
   "scripts": {

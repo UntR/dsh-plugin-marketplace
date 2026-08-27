@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "1c29b58a0a74212ee964a1995f194903c8743569"
   },
   "github": {
@@ -43,33 +43,47 @@
   },
   "id": "gh:1345005121",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-minimax-usage",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-minimax-usage@0.1.3",
+    "version": "0.1.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": "./dist/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-minimax-usage",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ea8c5178889b2535b585f42fda7d6e266c434d5cf730919e2dd3db9b1503ff8b/pan17/dsh-minimax-usage",
     "description": "DSH plugin: floating MiniMax Token Plan usage bubble in the Web UI"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness (DSH) Web UI 中显示 MiniMax Token Plan 订阅用量。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

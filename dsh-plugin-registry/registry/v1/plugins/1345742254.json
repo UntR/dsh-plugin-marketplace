@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "63d2c71dd7c7962119b7ed2f0389bbda74e745fc"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1345742254",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mobile-ux",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wangyuanchuan2022/dsh-mobile-ux#63d2c71dd7c7962119b7ed2f0389bbda74e745fc",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-mobile-ux",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/074aafb2f6b0ba4593a36ecbab32c055460a9c689823ec099ad1e5ef1f2d5f8f/wangyuanchuan2022/dsh-mobile-ux",
     "description": "一个包、零配置：把 DeepSeek Harness 网页版在手机宽度下的体验从头打磨一遍——响应式抽屉布局、字号/间距适配、≥44px 触控目标、按钮/菜单/表格移动端交互、安全区适配。桌面宽度显示与使用完全不受影响。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 网页版默认按桌面三列布局设计，在手机宽度下会出现：侧栏挤压主内容、正文 16px 偏大、触控目标过小、宽表格/代码块把横向滚动条推给视口、设置页两列布局留大片死区等问题。"
   },
   "schemaVersion": 1,
   "scripts": {

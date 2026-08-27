@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "7003a94ad9a94dc77ef3316d2c2f7914dee8714d"
   },
   "github": {
@@ -49,33 +49,49 @@
   },
   "id": "gh:1346852281",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-llm-capabilities",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:bamboostrip/dsh-llm-capabilities#7003a94ad9a94dc77ef3316d2c2f7914dee8714d",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": {
+        "default": "./dist/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "dist/index.js",
+    "name": "dsh-llm-capabilities",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/da7320b316453e687794aa95749d53d7ba975048b3c2259a762be58bc6448fbb/bamboostrip/dsh-llm-capabilities",
     "description": "DSH plugin: auto-detect and configure model capabilities (reasoningEfforts + input modalities) for llm-pi-ai. Successor to dsh-reasoning-efforts."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "The official llm-pi-ai settings page for a custom provider only lets you edit contextWindow. Two capabilities that actually matter for routing stay hidden:"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

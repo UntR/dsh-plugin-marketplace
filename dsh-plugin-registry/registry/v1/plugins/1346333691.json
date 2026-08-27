@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
-    "headSha": "dc62964f9eed9d460a26a5bec8b169c8036db7b2"
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
+    "headSha": "ba15297dd5bf8bf5fbc054c84a1af4669844e545"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH plugin: control which tool schemas are injected into the DeepSeek Harness model context — settings UI + tools.restrict filter + persisted state",
     "fork": false,
     "forks": 0,
-    "headSha": "dc62964f9eed9d460a26a5bec8b169c8036db7b2",
+    "headSha": "ba15297dd5bf8bf5fbc054c84a1af4669844e545",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUD9r-w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/fa2ee74a239ea6535ea968cb7a65cf2fa399bde6c0e88b40d649779271fb464e/rayfalling/dsh-tool-visibility",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5e8f2a0f09987dfb408383f15f1e7f6932f27cd22580ada1bd81bf249bb72bae/rayfalling/dsh-tool-visibility",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/13343271?u=7975948882e05b5dfc64320a649eee6e7c3f3a83&v=4",
       "login": "rayfalling"
     },
-    "pushedAt": "2026-08-26T03:46:03Z",
+    "pushedAt": "2026-08-26T04:44:11Z",
     "slug": "rayfalling/dsh-tool-visibility",
     "stars": 0,
     "topics": [
@@ -40,32 +40,49 @@
       "dsh-plugin",
       "plugin"
     ],
-    "updatedAt": "2026-08-26T03:47:11Z",
+    "updatedAt": "2026-08-26T04:46:21Z",
     "url": "https://github.com/rayfalling/dsh-tool-visibility"
   },
   "id": "gh:1346333691",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@rayfalling/dsh-tool-visibility",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@rayfalling/dsh-tool-visibility@0.3.3",
+    "version": "0.3.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.js",
+        "types": "./src/index.d.ts"
+      },
+      "./client": {
+        "default": "./src/client.js",
+        "types": "./src/client.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "@rayfalling/dsh-tool-visibility",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/fa2ee74a239ea6535ea968cb7a65cf2fa399bde6c0e88b40d649779271fb464e/rayfalling/dsh-tool-visibility",
+    "coverUrl": "https://opengraph.githubassets.com/5e8f2a0f09987dfb408383f15f1e7f6932f27cd22580ada1bd81bf249bb72bae/rayfalling/dsh-tool-visibility",
     "description": "DSH plugin: control which tool schemas are injected into the DeepSeek Harness model context — settings UI + tools.restrict filter + persisted state"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "控制 DeepSeek Harness 中「注入模型上下文的工具清单」的静态插件：提供 设置页 UI（Settings → 工具注入控制）与模型侧管理工具 toolvisibility，可手动开关 每个 tool 定义是否注入模型上下文；隐藏集合持久化到 JSON 状态文件，重启自动恢复。 适合把纯工具类插件的几十个工具 schema 从每步模型请求里剔除，节省上下文。"
   },
   "schemaVersion": 1,
   "scripts": {

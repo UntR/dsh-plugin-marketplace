@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "c59a30345b27d5c078032a3bf59b44cf7ff7d20e"
   },
   "github": {
@@ -45,33 +45,47 @@
   },
   "id": "gh:1346483540",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-tav2",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:Drhushi/dsh-plugin-tav2#c59a30345b27d5c078032a3bf59b44cf7ff7d20e",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": "./dist/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "dist/index.js",
+    "name": "dsh-plugin-tav2",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3677be3902a8300e554943a84559e17aef9a6cd451b91a956e27bc8e260827ec/Drhushi/dsh-plugin-tav2",
-    "description": ""
+    "description": "一个装进 DeepSeek Harness 的插件， 帮你把一个 Ren'Py 视觉小说翻译成中文。翻译由 AI 模型完成，你只需要跟助手对话， 从初始化、翻译到打包部署，全程由标准工作流推进。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个装进 DeepSeek Harness 的插件， 帮你把一个 Ren'Py 视觉小说翻译成中文。翻译由 AI 模型完成，你只需要跟助手对话， 从初始化、翻译到打包部署，全程由标准工作流推进。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

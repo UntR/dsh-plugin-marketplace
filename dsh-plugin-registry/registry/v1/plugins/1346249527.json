@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "a55c81e2c13c87fba4b59f00c034d5faa06da8c8"
   },
   "github": {
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,14 +51,30 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/host/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-oh-my-agent",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3996f6cdb4df89529781dad59e74cdb969474eef14bb7b996348d26bdda5fabb/sskkde/dsh-oh-my-agent",
     "description": "oh-my-openagent (OmO) core capabilities ported as a DeepSeek Harness plugin: ultrawork, role delegation, rules engine, boulder memory, hooks, Sisyphus main-prompt discipline"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH（DeepSeek Harness，Cordis）上忠实复刻 oh-my-openagent（OmO，aka oh-my-opencode）核心能力的插件。"
   },
   "schemaVersion": 1,
   "scripts": {

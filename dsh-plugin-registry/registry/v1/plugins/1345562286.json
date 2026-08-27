@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "ef7142d270c06a4be9af317b13e62ef0ff4b1992"
   },
   "github": {
@@ -42,27 +42,42 @@
   },
   "id": "gh:1345562286",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh/remote-control",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hw-cola/dsh-remote-control#ef7142d270c06a4be9af317b13e62ef0ff4b1992",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@dsh/remote-control",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8075f15b7cf28d71e23aa8e2fb8067b5e1de25786760a6d627e866707e3aa928/hw-cola/dsh-remote-control",
     "description": "DSH插件，手机远程控制"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Web 远程控制插件：在设置面板新增「远程控制」页，开启后通过 Node 反向代理把本机 DSH WebUI 暴露给局域网，页面显示局域网 IP 列表与二维码，手机扫码即可访问；未授权设备一律拦截。"
   },
   "schemaVersion": 1,
   "scripts": {

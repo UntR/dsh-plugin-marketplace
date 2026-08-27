@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "e0fe71e6a724e66f8b5d93983fdb123042a19c65"
   },
   "github": {
@@ -46,27 +46,37 @@
   },
   "id": "gh:1346853510",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-build-hermeticity-proof",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dongsheng123132/dsh-build-hermeticity-proof#e0fe71e6a724e66f8b5d93983fdb123042a19c65",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./proof": "./lib/build-hermeticity-proof.mjs"
+    },
+    "main": "./index.js",
+    "name": "dsh-build-hermeticity-proof",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/805bacd385621f9c973c4f9fcab05822fd66872d57a1db749d7720d195036da7/dongsheng123132/dsh-build-hermeticity-proof",
     "description": "Offline hash-only proof that recorded build accesses stayed within a declared closure"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An offline, deterministic evidence layer for DeepSeek Harness supply chains. It verifies whether an explicit, hash-only build access receipt stayed inside its declared file, environment, network, clock, randomness and output closure."
   },
   "schemaVersion": 1,
   "scripts": {

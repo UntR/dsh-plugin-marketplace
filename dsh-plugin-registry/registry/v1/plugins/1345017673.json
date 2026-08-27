@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "38fbb4909d261a228595a37079a92c17bc2e1741"
   },
   "github": {
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,38 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/typert.host.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-missher-evolution",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4a84ee576bcb0eb6a8834f66f45174c0ad55d267af411affe51d204e0ed9d4ff/Missher12/dsh-missher-evolution",
     "description": "Privacy-bounded self-improvement plugin for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-missher-evolution is a prebuilt Cordis bundle for DeepSeek Harness Desktop >=0.1.8 <0.2.0. It learns only bounded workflow categories, fixed preferences, closed outcomes, counters, hashes, and verified Chinese instructions. It does not train model weights or rewrite Harness, "
   },
   "schemaVersion": 1,
   "scripts": {

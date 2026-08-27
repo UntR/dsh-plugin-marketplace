@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "36d071dbb3dec1954aee009dfc8dbb06a72a7a44"
   },
   "github": {
@@ -38,27 +38,42 @@
   },
   "id": "gh:1345583027",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-stt",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jackuh105/dsh-stt#36d071dbb3dec1954aee009dfc8dbb06a72a7a44",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-stt",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/49673a5b75bc1fa3242ec98be7d0d0d2dc61aa2fb23a607b6125c4f95d533013/jackuh105/dsh-stt",
-    "description": ""
+    "description": "DSH 語音轉文字外掛：在聊天輸入區提供麥克風錄音／音訊檔上傳，以 OpenAI 相容的 /v1/audio/transcriptions 端點轉錄後插入輸入框。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 語音轉文字外掛：在聊天輸入區提供麥克風錄音／音訊檔上傳，以 OpenAI 相容的 /v1/audio/transcriptions 端點轉錄後插入輸入框。"
   },
   "schemaVersion": 1,
   "scripts": {

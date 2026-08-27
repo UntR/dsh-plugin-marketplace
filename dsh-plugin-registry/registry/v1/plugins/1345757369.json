@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "5522b47c13cb8c5a1218c6198483543deecc2eea"
   },
   "github": {
@@ -43,27 +43,44 @@
   },
   "id": "gh:1345757369",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-vendor-login",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-vendor-login@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": {
+        "default": "./dist/client.js",
+        "types": "./dist/client.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "dist/index.js",
+    "name": "dsh-vendor-login",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/561129991c465c52936b488e4ba5bfd46e4a4fb86675aeca0927b25c3d6f0cb4/MochiNek0/dsh-vendor-login",
     "description": "Sign in to AI coding plans that have no API key — Claude Pro/Max/Team, ChatGPT Plus/Pro, Copilot, SuperGrok — from the dsh settings UI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Sign in to AI coding plans that have no API key at all — Claude Pro/Max/Team, ChatGPT Plus/Pro, GitHub Copilot, SuperGrok — with your own subscription account, straight from the dsh settings UI. Run each vendor's plan on its included quota instead of paying by token."
   },
   "schemaVersion": 1,
   "scripts": {

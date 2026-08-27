@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "25a0b4f35c635b285e811090b3bb5995670b2fb7"
   },
   "github": {
@@ -38,27 +38,37 @@
   },
   "id": "gh:1346356306",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-approval-first",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:joao-paulo-santos/dsh-approval-first#25a0b4f35c635b285e811090b3bb5995670b2fb7",
+    "version": "0.6.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-approval-first",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b938499e7e418b59df98a5414892aa79780ac03ea14872e7c1ad2685fb969575/joao-paulo-santos/dsh-approval-first",
     "description": "Approval-first edit/write for DeepSeek Harness: shadow tools ask the user BEFORE a mutation the standing sandbox policy would deny, so the model never has to repeat a tool call with sandbox_permissions. In-policy writes stay silent, out-of-policy targets get an approval card on t"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) plugin: install it into a profile alongside your own plugins."
   },
   "schemaVersion": 1,
   "scripts": {

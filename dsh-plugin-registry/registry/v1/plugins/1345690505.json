@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
-    "headSha": "dfebba902a0898adf51e59a6c6a3ab2c5ba8ec04"
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
+    "headSha": "471c1aadf79a9880dffc6410a114561de45f5fdd"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH plugin: resolve company names to stock symbols via SEC EDGAR and fetch live quotes via Yahoo Finance",
     "fork": false,
     "forks": 0,
-    "headSha": "dfebba902a0898adf51e59a6c6a3ab2c5ba8ec04",
+    "headSha": "471c1aadf79a9880dffc6410a114561de45f5fdd",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUDWbiQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a99f1d4cbb43820f1009c754f2b3d4f9f7e693c0d41c3b90b49a78dbf552e448/minyang-chen/dsh-stock-lookup",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5518b16028a706d4f335eb82d2a44d1b54cd1c34a4b0c71bfaa8fe36c4bc6428/minyang-chen/dsh-stock-lookup",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/3905747?u=5052704a01f47a88afac0d168ff624b18224249e&v=4",
       "login": "minyang-chen"
     },
-    "pushedAt": "2026-08-25T06:12:18Z",
+    "pushedAt": "2026-08-27T06:01:08Z",
     "slug": "minyang-chen/dsh-stock-lookup",
     "stars": 0,
     "topics": [
@@ -41,7 +41,7 @@
       "stocks",
       "yahoo-finance"
     ],
-    "updatedAt": "2026-08-25T06:13:49Z",
+    "updatedAt": "2026-08-27T06:01:42Z",
     "url": "https://github.com/minyang-chen/dsh-stock-lookup"
   },
   "id": "gh:1345690505",
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-stock-lookup",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a99f1d4cbb43820f1009c754f2b3d4f9f7e693c0d41c3b90b49a78dbf552e448/minyang-chen/dsh-stock-lookup",
+    "coverUrl": "https://opengraph.githubassets.com/5518b16028a706d4f335eb82d2a44d1b54cd1c34a4b0c71bfaa8fe36c4bc6428/minyang-chen/dsh-stock-lookup",
     "description": "DSH plugin: resolve company names to stock symbols via SEC EDGAR and fetch live quotes via Yahoo Finance"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that gives the agent two tools for stock research:"
   },
   "schemaVersion": 1,
   "scripts": {

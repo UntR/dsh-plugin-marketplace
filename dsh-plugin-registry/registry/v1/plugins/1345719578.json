@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "840fc565c0f4a1f5c852b350f7dac27f1627f0e3"
   },
   "github": {
@@ -41,27 +41,33 @@
   },
   "id": "gh:1345719578",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-qwen38-compaction-fix",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-qwen38-compaction-fix@1.0.2",
+    "version": "1.0.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "main": "./index.js",
+    "name": "dsh-qwen38-compaction-fix",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0914857a26053322f236c4a597625c0da3358857bf16e93b92e08ac0d427d822/zhubaohi/dsh-qwen38-compaction-fix",
     "description": "DSH plugin: stop qwen3.8-27b from burning its output budget on thinking during context compaction"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Fix for a local qwen3.8-27b gateway that fails to compact. The model thinks at xhigh, spends the entire output token budget on reasoning before reaching a conclusion, and the compaction checkpoint comes back truncated. This DeepSeek Harness (dsh) plugin disables thinking for comp"
   },
   "schemaVersion": 1,
   "scripts": {

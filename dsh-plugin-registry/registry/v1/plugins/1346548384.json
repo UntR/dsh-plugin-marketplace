@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "c0d33ea8ac00dcce6526661be69563ac74b757e0"
   },
   "github": {
@@ -42,33 +42,46 @@
   },
   "id": "gh:1346548384",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@momojie-s/dsh-subagent-cleanup",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:Momojie-S/dsh-subagent-cleanup#c0d33ea8ac00dcce6526661be69563ac74b757e0",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@momojie-s/dsh-subagent-cleanup",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/50b2c037139f3aa4641d1c1b310b394a676ef53a84ed9ae244591d5fca560f03/Momojie-S/dsh-subagent-cleanup",
     "description": "DSH 插件: 子agent会话清理 —— 会话自清 + 运维侧跨workspace大扫除(归档可逆/可彻底删除)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件:子 agent 会话清理——长期自主会话收尾时清掉自己攒下的子 agent 对话,或从运维侧跨 workspace 清理冷记录堆积。默认归档(可逆),可选彻底删除。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

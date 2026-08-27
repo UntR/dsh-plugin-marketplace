@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "4b22465226513550c8a02397d51b6c4b976287be"
   },
   "github": {
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./analyze": "./src/analyze.js"
+    },
+    "main": null,
+    "name": "dsh-codex-compat-canary",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7700203d7d7e47dd7aeb3a0c98bf4c6c0d1433db84148fd443b20b69cddcad8a/ArmyWas/dsh-codex-compat-canary",
     "description": "Detect Codex App Server protocol drift that DeepSeek Harness cannot safely interpret."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Detect Codex App Server protocol drift that DeepSeek Harness cannot safely interpret."
   },
   "schemaVersion": 1,
   "scripts": {

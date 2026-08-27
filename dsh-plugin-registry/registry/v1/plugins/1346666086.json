@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "7807f175d6f3e47e235e5852aefddb20990d1140"
   },
   "github": {
@@ -30,7 +30,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/289723040?u=e02d19dcb3ffd16658960667b75d12f9e0d42dc6&v=4",
       "login": "Jstn-1g"
     },
-    "pushedAt": "2026-08-26T02:51:47Z",
+    "pushedAt": "2026-08-27T13:02:40Z",
     "slug": "Jstn-1g/dsh-guarded-live-voice",
     "stars": 1,
     "topics": [
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-guarded-live-voice",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/60ef045136ebd09d83b6589ceda047d9be60f78418ee855ba9ae0e950a0ffc66/Jstn-1g/dsh-guarded-live-voice",
     "description": "Safety-first DSH realtime voice foundation: exact session binding, consent protocol, and proposal-only authority."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A guarded DeepSeek Harness voice foundation with an exact-session Host boundary and a lazy browser disclosure UI. Live microphone and audio remain disabled."
   },
   "schemaVersion": 1,
   "scripts": {

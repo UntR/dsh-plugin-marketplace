@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
-    "headSha": "cd47ab672c60383bde7030982a17aac7594bf029"
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
+    "headSha": "9a6d54024ec8b617447f5af4314c43d70ddf829e"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "可移植 DSH Client Details 栏基础设施，在 AppFrame 详情列承载活动 surface；DeepSeek Harness Desktop 内置。 / Portable DSH Client details-column infrastructure for one active AppFrame surface; built into DeepSeek Harness Desktop.",
     "fork": false,
     "forks": 0,
-    "headSha": "cd47ab672c60383bde7030982a17aac7594bf029",
+    "headSha": "9a6d54024ec8b617447f5af4314c43d70ddf829e",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUCymlQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3e3d2e3fdddf9545a4f05aad27a0ae0f52e253a8ad73b12f5d4d4627c61a1ae9/cherrchen/dsh-client-ui-details-host",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5994d200ceda4ba5d77f46bacb935c4704c18b517c6371a3241de5ff9a7f5604/cherrchen/dsh-client-ui-details-host",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/113243001?v=4",
       "login": "cherrchen"
     },
-    "pushedAt": "2026-08-25T14:46:09Z",
+    "pushedAt": "2026-08-26T12:49:55Z",
     "slug": "cherrchen/dsh-client-ui-details-host",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "deepseek",
       "deepseek-harness",
@@ -41,7 +41,7 @@
       "dsh-plugin-desktop",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-08-25T14:53:07Z",
+    "updatedAt": "2026-08-26T12:56:38Z",
     "url": "https://github.com/cherrchen/dsh-client-ui-details-host"
   },
   "id": "gh:1345103509",
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@dsh-electron/dsh-client-ui-details-host",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3e3d2e3fdddf9545a4f05aad27a0ae0f52e253a8ad73b12f5d4d4627c61a1ae9/cherrchen/dsh-client-ui-details-host",
+    "coverUrl": "https://opengraph.githubassets.com/5994d200ceda4ba5d77f46bacb935c4704c18b517c6371a3241de5ff9a7f5604/cherrchen/dsh-client-ui-details-host",
     "description": "可移植 DSH Client Details 栏基础设施，在 AppFrame 详情列承载活动 surface；DeepSeek Harness Desktop 内置。 / Portable DSH Client details-column infrastructure for one active AppFrame surface; built into DeepSeek Harness Desktop."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Portable DSH/Cordis Client plugin that hosts one active details surface in the AppFrame details column. The package is platform:web UI infrastructure with no Electron, Node, or Desktop dependency. The npm scope @dsh-electron/ identifies the publisher, not a runtime requirement."
   },
   "schemaVersion": 1,
   "scripts": {

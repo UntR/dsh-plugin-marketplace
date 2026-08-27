@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "18fcee3a1e1ca288a75e5652e16cc874b45f2892"
   },
   "github": {
@@ -41,33 +41,55 @@
   },
   "id": "gh:1345216134",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-ui-pricing",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-ui-pricing@0.1.3",
+    "version": "0.1.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-ui-pricing",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fd5a768585873ea23a899ab9a4a0fa3918b25dc069312f28bb04d7f84814bce2/ivvan3016/dsh-ui-pricing",
     "description": "user-configurable cost pricing for dsh"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "User-configurable cost pricing for dsh: the pricing settings section (per-model list prices and a per-day time policy with price multipliers) plus the cost session projection that prices provider-reported usage with the multiplier in force at each sample's own timestamp, and a co"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

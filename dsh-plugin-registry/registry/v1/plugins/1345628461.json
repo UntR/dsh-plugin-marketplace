@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "7a13c92507cce67df77d63cee5f37f669a67bbe6"
   },
   "github": {
@@ -41,27 +41,44 @@
   },
   "id": "gh:1345628461",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-messaging-gateway",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:aa2246740/dsh-gateway#7a13c92507cce67df77d63cee5f37f669a67bbe6",
+    "version": "0.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/dsh-messaging-gateway.js",
+        "types": "./lib/types/dsh-messaging-gateway.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/dsh-messaging-gateway.js",
+    "name": "dsh-messaging-gateway",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b0458246a396534acfccca5a2bd8fc4bfa6544a08acbe21523d8fca7b0f1a129/aa2246740/dsh-gateway",
     "description": "One DSH Host, one messaging Gateway. Bring your own Slack and Feishu apps."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "One DeepSeek Harness Host, one Gateway. You create your Slack app and your Feishu app, paste the tokens into this DSH, and talk to the same agent from your phone."
   },
   "schemaVersion": 1,
   "scripts": {

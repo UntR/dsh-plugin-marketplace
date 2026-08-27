@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "47f37d1e8eb66e053e0548a4fe1753c1b49ad6aa"
   },
   "github": {
@@ -42,27 +42,42 @@
   },
   "id": "gh:1345550391",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh/dynamic-agents",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hw-cola/dsh-dynamic-agents#47f37d1e8eb66e053e0548a4fe1753c1b49ad6aa",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@dsh/dynamic-agents",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/767c227211988c293681bc19211f2cd28e50fbe5a90526b010cb14bb160b3cd7/hw-cola/dsh-dynamic-agents",
     "description": "DSH插件，动态AGENTS.md"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Web 动态上下文插件：在聊天输入框上方 Dock 提供「动态AGENTS.md」下拉多选控件，按全局/工作区维护可勾选的上下文规则，注入会话系统提示。"
   },
   "schemaVersion": 1,
   "scripts": {

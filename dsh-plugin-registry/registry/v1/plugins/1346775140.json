@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "9a0dc2cc6dafd514aab4cf4bbc3d81b5e5b815f4"
   },
   "github": {
@@ -47,27 +47,37 @@
   },
   "id": "gh:1346775140",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-reproducible-build-proof",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dongsheng123132/dsh-reproducible-build-proof#9a0dc2cc6dafd514aab4cf4bbc3d81b5e5b815f4",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./proof": "./lib/reproducible-build-proof.mjs"
+    },
+    "main": "./index.js",
+    "name": "dsh-reproducible-build-proof",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f93c29a378b1ff475fc41f0303f5d8a156c5f88bdad875088a649ad82d1d0932/dongsheng123132/dsh-reproducible-build-proof",
     "description": "Offline content-addressed proof that independent build receipts reproduced byte-identical specified artifacts"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An offline, deterministic evidence layer for DeepSeek Harness supply chains. It checks whether two or more independently operated builders recorded the same source revision, recipe, build type, parameters, dependency set and relevant environment contract, then produced byte-ident"
   },
   "schemaVersion": 1,
   "scripts": {

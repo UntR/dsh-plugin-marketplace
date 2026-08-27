@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
-    "headSha": "9536f14b786282a96fd451d8ba4a56f314e47127"
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
+    "headSha": "43955adc0b4bc33ec742f488852edf4a6736e78b"
   },
   "github": {
     "archived": false,
@@ -17,19 +17,19 @@
     "description": "Maestro Notifier — pluggable notifier service for DeepSeek Harness (Telegram first; registry open to further providers)",
     "fork": false,
     "forks": 0,
-    "headSha": "9536f14b786282a96fd451d8ba4a56f314e47127",
+    "headSha": "43955adc0b4bc33ec742f488852edf4a6736e78b",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOUDi23w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b1be33d94a4fa0520c9a67b218e3a0474f7502b57cc6888543482fd242459d50/ddtcorex/dsh-maestro-notifier",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/bbb7e1649b7fb6272832a1d9d18a8f406a9ad73c144c027089d60943999d1bec/ddtcorex/dsh-maestro-notifier",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/103315997?u=ad490aaef0b858ff4645437082eba607ea6fe7e2&v=4",
       "login": "ddtcorex"
     },
-    "pushedAt": "2026-08-26T02:06:02Z",
+    "pushedAt": "2026-08-27T06:04:26Z",
     "slug": "ddtcorex/dsh-maestro-notifier",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "cordis",
       "deepseek-harness",
@@ -38,7 +38,7 @@
       "notifications",
       "telegram"
     ],
-    "updatedAt": "2026-08-26T03:07:12Z",
+    "updatedAt": "2026-08-27T06:05:16Z",
     "url": "https://github.com/ddtcorex/dsh-maestro-notifier"
   },
   "id": "gh:1345894111",
@@ -46,24 +46,34 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@ddtcorex/dsh-maestro-notifier",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b1be33d94a4fa0520c9a67b218e3a0474f7502b57cc6888543482fd242459d50/ddtcorex/dsh-maestro-notifier",
+    "coverUrl": "https://opengraph.githubassets.com/bbb7e1649b7fb6272832a1d9d18a8f406a9ad73c144c027089d60943999d1bec/ddtcorex/dsh-maestro-notifier",
     "description": "Maestro Notifier — pluggable notifier service for DeepSeek Harness (Telegram first; registry open to further providers)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Pluggable notifier service for the DeepSeek Harness: a tiny in-memory provider registry with Telegram as the first transport. Delivery is never-throw — callers can notify without error handling; unknown providers and missing targets resolve to { sent: false, reason }."
   },
   "schemaVersion": 1,
   "scripts": {

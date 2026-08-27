@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "1ae1c2f70223cd984cc980fea6c7c1da26988e46"
   },
   "github": {
@@ -47,27 +47,37 @@
   },
   "id": "gh:1346528711",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-windows-settlement-proof",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dongsheng123132/dsh-windows-settlement-proof#1ae1c2f70223cd984cc980fea6c7c1da26988e46",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./proof": "./lib/windows-settlement-proof.mjs"
+    },
+    "main": "./index.js",
+    "name": "dsh-windows-settlement-proof",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8b4c4d3c7ce1a5189e3817e4e2fae42bb7c443e99ed112bfc4a45fd3b71ea53f/dongsheng123132/dsh-windows-settlement-proof",
     "description": "Offline content-addressed proof that approved Windows control-plane changes settled across required surfaces"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Offline, content-addressed evidence that an approved Windows control-plane change actually settled across every required surface. It compares explicit redacted receipts for Service Control Manager, Task Scheduler, Event Log and policy projections against a fixed hash lock, chrono"
   },
   "schemaVersion": 1,
   "scripts": {

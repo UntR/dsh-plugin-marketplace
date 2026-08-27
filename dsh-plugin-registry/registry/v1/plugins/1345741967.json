@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "39961ce63ad2f66520b2dc3541f73672f18ff2f6"
   },
   "github": {
@@ -42,7 +42,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -52,14 +52,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@local/dsh-msg-nav-track",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d03b0fc4e88b0084beef9783357ff79f9c6b4b2ba2577b9d82ace0fecffe4807/Yaya716/dsh-msg-nav-track",
     "description": "Conversation message navigation rail for DeepSeek Harness Web: a track on the right side of the session scroll area with ▲/▼ endpoints and evenly spaced dots for user messages; click a dot to jump exactly to that message."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在会话滚动区右侧（shell.overlay 帧级浮动层）渲染一条消息节点轨道："
   },
   "schemaVersion": 1,
   "scripts": {

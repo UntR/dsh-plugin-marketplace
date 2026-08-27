@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "633b61ba73ec2ba2b8a66298eb1d0c4ef3eec85e"
   },
   "github": {
@@ -46,27 +46,37 @@
   },
   "id": "gh:1346050059",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-attestation-proof",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dongsheng123132/dsh-attestation-proof#633b61ba73ec2ba2b8a66298eb1d0c4ef3eec85e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./proof": "./lib/attestation-proof.mjs"
+    },
+    "main": "./index.js",
+    "name": "dsh-attestation-proof",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5a79c00c3daecab0c0c4fdae72c430f5ca5e14f1431fe52347cdb83cd47d7dd9/dongsheng123132/dsh-attestation-proof",
     "description": "Offline content-addressed DSSE/in-toto attestation proof for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Offline, deterministic release-attestation evidence for DeepSeek Harness. It verifies an explicit manifest against a workspace-local subject, pinned public keys, and DSSE-wrapped in-toto statements, then emits a content-addressed JSON verdict."
   },
   "schemaVersion": 1,
   "scripts": {

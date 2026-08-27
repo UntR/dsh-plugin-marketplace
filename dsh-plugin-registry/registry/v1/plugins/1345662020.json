@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "ea77fb01ad047b2d93e564570b0547afc66cd37b"
   },
   "github": {
@@ -38,27 +38,43 @@
   },
   "id": "gh:1345662020",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-guardrail",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jypjypjypjyp/dsh-guardrail#ea77fb01ad047b2d93e564570b0547afc66cd37b",
+    "version": "0.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-guardrail",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a756010600323d100d2f59dff96b4d16f51ee4c705697cd1c4b26825af0d999f/jypjypjypjyp/dsh-guardrail",
     "description": "DSH 插件：工具调用规范守卫（deny/warn 拦截 + 规则管理面板）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "工具调用规范守卫：对 agent 工具调用输入参数做字符串匹配，命中危险行为则拦截（deny）并注入原因给模型，或放行但注入警告（warn）。附规则管理面板（配置/启停/增删/试跑/审计全部可在 UI 完成）。"
   },
   "schemaVersion": 1,
   "scripts": {

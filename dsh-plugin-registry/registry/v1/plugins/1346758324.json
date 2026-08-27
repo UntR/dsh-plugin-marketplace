@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "d806899a9626c9814add2c5b9f8b61b92823271d"
   },
   "github": {
@@ -52,33 +52,63 @@
   },
   "id": "gh:1346758324",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@achasoft/dsh-usage-info",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:navid-kianfar/dsh-usage-info#d806899a9626c9814add2c5b9f8b61b92823271d",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./deepseek": {
+        "default": "./lib/deepseek.js"
+      },
+      "./host": {
+        "default": "./lib/host.js",
+        "types": "./types/host/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/remote.js"
+      },
+      "./typert": {
+        "default": "./lib/typert.host.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "@achasoft/dsh-usage-info",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/75e2d061ce34d4c88b635fed276e7ca339382164e8b8e2e7df85635d150fbede/navid-kianfar/dsh-usage-info",
     "description": "Context occupancy and account balance for the DeepSeek Harness Web Client — a session-header readout with a swappable balance provider."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Context usage and account balance for the DeepSeek Harness Web Client. A readout in the session header shows how full the model's context window is and what the account paying for it currently holds; clicking it opens a panel with the breakdown behind both numbers."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

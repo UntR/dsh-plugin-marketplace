@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
     "enrichmentStatus": "ok",
-    "headSha": "a96bea650628dc7db4a10ed3c9adc4dde4c75756"
+    "headSha": "3bca33acbdac39dff7a5e06321ec898ca10ca3d1"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH Web 的免费远程访问（Tailscale Funnel）：不买域名、手机免装 App，打开网址 + 密码就是 DSH。给家里人和普通人的那条路。",
     "fork": false,
     "forks": 0,
-    "headSha": "a96bea650628dc7db4a10ed3c9adc4dde4c75756",
+    "headSha": "3bca33acbdac39dff7a5e06321ec898ca10ca3d1",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT_ab0g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/768b4c9df5950f2985e6387fca79b0c3a5a1bfb14aa44726eef29f3098d395f3/iTrimut/dsh-Webroad",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/55d600db8c1e46a32c8e17a41209a92c1a6edf9b613970459f9813ad605f068e/iTrimut/dsh-Webroad",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/264167434?v=4",
       "login": "iTrimut"
     },
-    "pushedAt": "2026-08-21T08:45:05Z",
+    "pushedAt": "2026-08-27T10:12:58Z",
     "slug": "iTrimut/dsh-Webroad",
     "stars": 0,
     "topics": [
@@ -41,7 +41,7 @@
       "remote-access",
       "tailscale"
     ],
-    "updatedAt": "2026-08-21T08:45:46Z",
+    "updatedAt": "2026-08-27T10:22:45Z",
     "url": "https://github.com/iTrimut/dsh-Webroad"
   },
   "id": "gh:1341561810",
@@ -51,8 +51,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:iTrimut/dsh-Webroad#a96bea650628dc7db4a10ed3c9adc4dde4c75756",
-    "version": "1.0.1"
+    "spec": "github:iTrimut/dsh-Webroad#3bca33acbdac39dff7a5e06321ec898ca10ca3d1",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
@@ -60,19 +60,26 @@
     "repositoryMatches": null
   },
   "package": {
-    "main": "lib/host/index.js",
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
     "name": "dsh-webroad",
     "status": "valid",
     "type": "module",
-    "version": "1.0.1"
+    "version": "1.0.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/768b4c9df5950f2985e6387fca79b0c3a5a1bfb14aa44726eef29f3098d395f3/iTrimut/dsh-Webroad",
+    "coverUrl": "https://opengraph.githubassets.com/55d600db8c1e46a32c8e17a41209a92c1a6edf9b613970459f9813ad605f068e/iTrimut/dsh-Webroad",
     "description": "DSH Web 的免费远程访问（Tailscale Funnel）：不买域名、手机免装 App，打开网址 + 密码就是 DSH。给家里人和普通人的那条路。"
   },
   "readme": {
     "available": true,
-    "excerpt": "DSH（DeepSeek Harness）的网页版默认只跑在本机，出了家门就摸不到。想在外面用手机打开它，我试过好几条路：买域名挂 Cloudflare 隧道（要花钱、要配一整天的东西）、用内网穿透（地址乱跳、裸奔危险）、装 VPN 类 App（国内应用商店直接搜不到）。"
+    "excerpt": "把 dsh-pocket 式的一键自动化（改头代理免配 trustedHosts、8 位 PIN + 登录限速、WebSocket 心跳保活、gzip/brotli 压缩、局域网/公网二维码、cloudflared 隧道自动恢复）与自包含文档 + 手机端补丁（browse 目录选择器、polyfill、直达会话引导）结合在一起的 DSH 插件。DSH 设置页内嵌「📱 手机访问」入口，扫码即用；固定域名可复用已有 Cloudflare 命名隧道；并保留 Tailscale Funnel 手动教程（files/ 模板 + SKILL 备选方案节）。"
   },
   "schemaVersion": 1,
   "scripts": {

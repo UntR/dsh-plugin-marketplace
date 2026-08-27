@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "f3385f55b45046343f411fa21670228891e3a93c"
   },
   "github": {
@@ -45,27 +45,42 @@
   },
   "id": "gh:1345018609",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-gate-game",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:CochraneK/dsh-gate-game-plugin#f3385f55b45046343f411fa21670228891e3a93c",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-gate-game",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/db490d1097e4ae5d8096e84525a206c99ce0234e089b365adfa317754588b98a/CochraneK/dsh-gate-game-plugin",
     "description": "Logo-eating mini-game + one-click lock button for DeepSeek Harness web UI"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness 的标准 Cordis 客户端插件，给 Web UI 加上吃 logo 小游戏和一键锁屏按钮。"
   },
   "schemaVersion": 1,
   "scripts": {

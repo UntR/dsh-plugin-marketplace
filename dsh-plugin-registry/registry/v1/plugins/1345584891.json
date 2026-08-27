@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "13cbde6901d5e171a090fa9b6972ce56e7ec8971"
   },
   "github": {
@@ -46,33 +46,51 @@
   },
   "id": "gh:1345584891",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@shuaihaov/dsh-mcp-skill-control",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:shuaihaoV/dsh-mcp-skill-control#13cbde6901d5e171a090fa9b6972ce56e7ec8971",
+    "version": "0.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@shuaihaov/dsh-mcp-skill-control",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b262bb6d5c7708538f38876b0360ed3b3e418ee64cb33ac050d04736f2b6f735/shuaihaoV/dsh-mcp-skill-control",
     "description": "DSH（DeepSeek Harness）Web GUI 的 MCP 服务器管理面板：状态查看、启停/重启、新增/删除、JSON 导入，以及本地技能启停控制。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）第三方插件：在 Web GUI（dsh web）会话头部提供一个管理面板——MCP 服务器页签（查看连接状态，停用 / 启用 / 重启，新增 / 删除，JSON 导入）与 Skills 页签（启停本地技能）。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

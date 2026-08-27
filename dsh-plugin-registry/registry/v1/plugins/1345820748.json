@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "91eef5235cacbfa32fe81fffc472d202cb6913d9"
   },
   "github": {
@@ -61,7 +61,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -71,14 +71,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./src/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-mobile-remote-mode-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-dev.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fc126dc77b3c72904ed9ba9dd47806989a59e2b04e4a697a7b98c006704316fd/anonRTtty/DSH-mobile-remote-mode-plugin",
     "description": "DSH (DeepSeek Harness) mobile remote mode plugin - LAN discovery, QR pairing, Level-1 observer and Level-2 remote prompt from Android/iOS phones and any browser. Multi-platform, early development (Dev0.1)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让手机成为 DSH 的遥控器。 同一局域网内扫码配对，手机实时观察（Level 1）、远程向真实 Agent 发送提示词（Level 2）；后续方向：Level 3 受控操作、原生 App（Android / iOS）。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
-    "headSha": "bccc552b66ca4f1781fbba221ccb6553721b2045"
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
+    "headSha": "e49250dae3d49292b52f45d1fac03fea9c3a3608"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-24T14:47:29Z",
     "databaseId": 1345070926,
     "defaultBranch": "main",
-    "description": "为 DeepSeek Harness（DSH）提供 SSH 远程工作区能力：已核验的服务器身份、失败关闭的 Agent 执行路由、远端文件与命令操作；提供 Windows 离线一键安装包，无需 Node.js 或构建工具。",
+    "description": "DSH SSH Forge：为 DeepSeek Harness（DSH）提供 SSH 远程工作区能力：已核验的服务器身份、失败关闭的 Agent 执行路由、远端文件与命令操作；提供 Windows 离线一键安装包，无需 Node.js 或构建工具。",
     "fork": false,
     "forks": 0,
-    "headSha": "bccc552b66ca4f1781fbba221ccb6553721b2045",
+    "headSha": "e49250dae3d49292b52f45d1fac03fea9c3a3608",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,13 +25,13 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOUCwnTg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/95cde9491b4aba88f5786c904dc14f76dc76c74478e89a74a2d359a448236bd5/trrrrrryg/dsh-remote-workspace",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/3ff55613c70e8f457f6b60f43bd6e27366acbf3b370872f5bd569427dbbd2a0b/trrrrrryg/dsh-ssh-forge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/191602255?u=1be78c6ad89a6cbf3e7d003d25844cef35c521ac&v=4",
       "login": "trrrrrryg"
     },
-    "pushedAt": "2026-08-25T15:17:25Z",
-    "slug": "trrrrrryg/dsh-remote-workspace",
+    "pushedAt": "2026-08-26T07:37:51Z",
+    "slug": "trrrrrryg/dsh-ssh-forge",
     "stars": 1,
     "topics": [
       "deepseek-harness",
@@ -39,15 +39,15 @@
       "remote-workspace",
       "ssh"
     ],
-    "updatedAt": "2026-08-25T15:38:01Z",
-    "url": "https://github.com/trrrrrryg/dsh-remote-workspace"
+    "updatedAt": "2026-08-26T07:41:11Z",
+    "url": "https://github.com/trrrrrryg/dsh-ssh-forge"
   },
   "id": "gh:1345070926",
   "install": {
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/host/index.js",
+      "./client": "./dist/client/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "dist/host/index.js",
+    "name": "@dsh-remote/workspace-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/95cde9491b4aba88f5786c904dc14f76dc76c74478e89a74a2d359a448236bd5/trrrrrryg/dsh-remote-workspace",
-    "description": "为 DeepSeek Harness（DSH）提供 SSH 远程工作区能力：已核验的服务器身份、失败关闭的 Agent 执行路由、远端文件与命令操作；提供 Windows 离线一键安装包，无需 Node.js 或构建工具。"
+    "coverUrl": "https://opengraph.githubassets.com/3ff55613c70e8f457f6b60f43bd6e27366acbf3b370872f5bd569427dbbd2a0b/trrrrrryg/dsh-ssh-forge",
+    "description": "DSH SSH Forge：为 DeepSeek Harness（DSH）提供 SSH 远程工作区能力：已核验的服务器身份、失败关闭的 Agent 执行路由、远端文件与命令操作；提供 Windows 离线一键安装包，无需 Node.js 或构建工具。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把经过身份核验的服务器目录，变成 Agent 可以安全使用的工作区。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "fc1dca3e81c664c84e231492fc4cf7a5124386ac"
   },
   "github": {
@@ -49,27 +49,40 @@
   },
   "id": "gh:1345415645",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-telegram-channel",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:todayer/todayer-dsh-telegram-bridge#fc1dca3e81c664c84e231492fc4cf7a5124386ac",
+    "version": "0.3.5"
   },
   "npm": {
     "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-telegram-channel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3c31bdefb6c9fa8eecd980bd31281cfd46ff3734b188037991009355dcd8ab78/todayer/todayer-dsh-telegram-bridge",
-    "description": "DeepSeek Harness Telegram channel plugin (Hermes-style gateway): per-topic sessions, DM topics, group gating, media, commands. Fork/extension of hi-wenw/dsh-telegram-channel."
+    "description": "DeepSeek Harness Telegram bridge (bot) plugin, Hermes-style: per-topic sessions, DM topics, group gating, media, commands. Fork/extension of hi-wenw/dsh-telegram-channel."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Telegram bridge (bot) for DeepSeek Harness (dsh): manage local sessions, topics and media right from Telegram. Based on hi-wenw/dsh-telegram-channel and extended with mechanisms from the Telegram gateway of the Hermes agent."
   },
   "schemaVersion": 1,
   "scripts": {

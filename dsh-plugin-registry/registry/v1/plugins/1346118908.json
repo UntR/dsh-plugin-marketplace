@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "9592ed9e3b06b9492cf3b5063164744269262174"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@google-workspace/dsh-gmail",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2d390f5c6535f7f01a6d765a367cc6bf0eb1c6146ce9c77fb5080f313e478a5e/sakthiveltofficial/dsh-gmail-plugins",
     "description": "dsh-gmail: Gmail plugin suite for DeepSeek Harness — 61 model-facing tools + 2 polling triggers over the Gmail & People APIs (OAuth2)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A complete, production-ready Gmail plugin for DeepSeek Harness (DSH). It gives the agent typed, policy-aware access to Gmail over the official Gmail and People REST APIs — 63 model-facing tools (send, search, draft, label, filter, thread, settings, contacts) and 2 polling trigger"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
-    "headSha": "516fa2fce6cdc00f414957217152052111c408a2"
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
+    "headSha": "434843f6133ac51416bc1e7412373e84fc463b68"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-25T10:04:00Z",
     "databaseId": 1345962091,
     "defaultBranch": "main",
-    "description": "DeepSeek Harness（DSH）host 平面插件：**每个 turn 结束时，把上一轮产生的 `tool/result` 从模型上下文中清除**，并提供聊天命令开关：",
+    "description": "DSH 宿主插件：每轮对话结束后，把该轮的原始工具结果归档（tool result）到会话目录（tool-result-logs），并从上下文中清除，减少 Token 消耗；模型可用 read_tool_result_log 工具按轮次或时间自主读取归档数据。",
     "fork": false,
     "forks": 0,
-    "headSha": "516fa2fce6cdc00f414957217152052111c408a2",
+    "headSha": "434843f6133ac51416bc1e7412373e84fc463b68",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUDnAaw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/72690c7fb2f766adbcb0eb359242d02c7ceb4df5dea6a7aac461ec4d58526561/stultuss/dsh-clear-tool-results",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/dc9c6bc8d936fd1ecf9d9e6dd2e1c8641fe9d0c4f839b00845e5b82fe77807e2/stultuss/dsh-clear-tool-results",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/57216222?u=f5fc715e843c1e28ffef74a2625ea257f2c538e4&v=4",
       "login": "stultuss"
     },
-    "pushedAt": "2026-08-26T03:49:21Z",
+    "pushedAt": "2026-08-26T08:23:34Z",
     "slug": "stultuss/dsh-clear-tool-results",
     "stars": 0,
     "topics": [
@@ -38,32 +38,43 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-26T03:50:18Z",
+    "updatedAt": "2026-08-26T08:26:23Z",
     "url": "https://github.com/stultuss/dsh-clear-tool-results"
   },
   "id": "gh:1345962091",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-clear-tool-results",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-clear-tool-results@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.mjs",
+    "name": "dsh-clear-tool-results",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/72690c7fb2f766adbcb0eb359242d02c7ceb4df5dea6a7aac461ec4d58526561/stultuss/dsh-clear-tool-results",
-    "description": "DeepSeek Harness（DSH）host 平面插件：**每个 turn 结束时，把上一轮产生的 `tool/result` 从模型上下文中清除**，并提供聊天命令开关："
+    "coverUrl": "https://opengraph.githubassets.com/dc9c6bc8d936fd1ecf9d9e6dd2e1c8641fe9d0c4f839b00845e5b82fe77807e2/stultuss/dsh-clear-tool-results",
+    "description": "DSH 宿主插件：每轮对话结束后，把该轮的原始工具结果归档（tool result）到会话目录（tool-result-logs），并从上下文中清除，减少 Token 消耗；模型可用 read_tool_result_log 工具按轮次或时间自主读取归档数据。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 宿主插件：每轮对话结束后，把该轮的原始工具结果（tool result）归档到会话目录（tool-result-logs），并从上下文中清除，减少 Token 消耗；模型可用 readtoolresultlog 工具按轮次或时间自主读取归档数据。"
   },
   "schemaVersion": 1,
   "scripts": {

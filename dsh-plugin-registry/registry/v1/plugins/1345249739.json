@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
-    "headSha": "9ef953c64df2264c8304d0571051c4f1443b8107"
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
+    "headSha": "2e90fe59936e779326acd9306a1ef42a404b0cab"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,17 @@
     "description": "This plugin provides version management and rollback capabilities. When another plugin causes an error that prevents DSH from launching, forcing you to clear all plugins, this plugin can quickly restore every locally saved plugin configuration.",
     "fork": false,
     "forks": 0,
-    "headSha": "9ef953c64df2264c8304d0571051c4f1443b8107",
+    "headSha": "2e90fe59936e779326acd9306a1ef42a404b0cab",
     "homepageUrl": null,
-    "language": null,
+    "language": "JavaScript",
     "license": null,
     "nodeId": "R_kgDOUC7hyw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/9c9fbf1c86d7ae01ff9251c86876cf1feab40007a5df48863b0723276b857f54/lw-storm/dsh-plugin-version-management",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f7ca52cba94f3144d0b714df15df9842734b281219fd53f50028389ac18c3baa/lw-storm/dsh-plugin-version-management",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/312206322?u=dd397c8d5f00ee8dabf7e9e590b49553d207c4ac&v=4",
       "login": "lw-storm"
     },
-    "pushedAt": "2026-08-24T17:53:46Z",
+    "pushedAt": "2026-08-26T20:56:55Z",
     "slug": "lw-storm/dsh-plugin-version-management",
     "stars": 0,
     "topics": [
@@ -35,32 +35,46 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-24T18:14:02Z",
+    "updatedAt": "2026-08-26T21:10:24Z",
     "url": "https://github.com/lw-storm/dsh-plugin-version-management"
   },
   "id": "gh:1345249739",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-version-management",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lw-storm/dsh-plugin-version-management#2e90fe59936e779326acd9306a1ef42a404b0cab",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-version-management",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/9c9fbf1c86d7ae01ff9251c86876cf1feab40007a5df48863b0723276b857f54/lw-storm/dsh-plugin-version-management",
+    "coverUrl": "https://opengraph.githubassets.com/f7ca52cba94f3144d0b714df15df9842734b281219fd53f50028389ac18c3baa/lw-storm/dsh-plugin-version-management",
     "description": "This plugin provides version management and rollback capabilities. When another plugin causes an error that prevents DSH from launching, forcing you to clear all plugins, this plugin can quickly restore every locally saved plugin configuration."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件版本快照与快速回滚工具：一键快照所有已安装插件（JSON + 人读 TXT + 离线恢复脚本），上传快照即可恢复整个插件环境。"
   },
   "schemaVersion": 1,
   "scripts": {

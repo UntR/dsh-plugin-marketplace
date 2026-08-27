@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "f4a6b3526b4211af37c4ee424948ba34ea7c30fd"
   },
   "github": {
@@ -51,7 +51,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,14 +61,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./host.js"
+      },
+      "./client": {
+        "default": "./client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./host.js",
+    "name": "@deepseek-ai/dsh-web-restart",
+    "status": "valid",
+    "type": "module",
+    "version": "1.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a94515d35a43c048eb25d57c6fef0416bee2ae386755202742545318265b57e9/bigfurma-bot/dsh-web-restart",
     "description": "One-click restart for DeepSeek Harness Web UI — arm-to-confirm button pinned to the Settings › General corner, live status dot, detached Linux restarter. Linux port of 1123762794/dsh-web-restart"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "One-click restart for the DeepSeek Harness Web UI — a small Restart DSH control pinned to the bottom-right corner of Settings ▸ General, with an arm-to-confirm guard and a live liveness dot."
   },
   "schemaVersion": 1,
   "scripts": {

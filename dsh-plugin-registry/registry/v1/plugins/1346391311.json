@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "10e488368ff610568a6da84a7d3f102ee9d6dbff"
   },
   "github": {
@@ -51,7 +51,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,14 +61,30 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./core": {
+        "default": "./lib/core/index.js",
+        "types": "./lib/core/index.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-first-hop",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e6cd6e9b8c1c84e52d3bbdd380aa4b690a6c2aefcf3a2d9405335be40f07562c/bochen2029-pixel/dsh-first-hop",
     "description": "Your agent wakes on evidence, not on a clock. A community plugin for DeepSeek Harness: watches the streams your harness already carries and decides - hold, flag, counsel, or wake. Local judge, shadow by default, MIT."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Your agent wakes on evidence. Not on a clock."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "d418f04c0a5e6f45ca961fdec64273a46dd66ec6"
   },
   "github": {
@@ -47,27 +47,43 @@
   },
   "id": "gh:1345836010",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-compat-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Shizuku-keop/dsh-compat-guard#d418f04c0a5e6f45ca961fdec64273a46dd66ec6",
+    "version": "0.1.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./backup": "./lib/backup.js",
+      "./fingerprint": "./lib/fingerprint.js",
+      "./lockfile": "./lib/lockfile.js",
+      "./migrate": "./lib/migrate.js",
+      "./package.json": "./package.json",
+      "./preflight": "./lib/preflight.js",
+      "./registry": "./lib/registry.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-compat-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9933253723335df52ff23dbe53b56eac0c2b4330fb05035cd25d90439be2d197/Shizuku-keop/dsh-compat-guard",
     "description": "Compatibility governance for DeepSeek Harness: upgrade pre-flight gate, storage-format fingerprint, backup, session migration, per-profile lockfile, plugin x DSH compat matrix."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "兼容性治理插件包：升级前置闸门 + 存储格式指纹 + 自动备份 + 会话迁移 + profile 级锁文件 + 插件×DSH 兼容矩阵。一个 npm 包，六个能力，全部零运行时依赖（纯 Node ≥ 20）。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "d4e550119f467b9fc4b12ec4dec62d6df2b5f6d3"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1345772443",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-chat-log",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-chat-log@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-chat-log",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/85d27169f25a9043ce47dc31e8ed8bd1ef40235d57df7c034ff2e4a576bf88c3/YupegLV/dsh-chat-log",
     "description": "Fold DSH session logs into clean chat logs: stream fragments merged, nothing else dropped. /chat + browser download. 把 DSH 会话日志折叠成聊天记录：流式碎片合并，其余内容一行不丢。/chat 命令 + 浏览器下载。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Turn a DSH session log into a clean chat log: streaming chunk fragments are folded into normal messages, and everything else is kept verbatim. Download it with one click next to the official \"Session log\" ZIP button, or via the /chat command."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
-    "headSha": "6ba981bb2e85cd8c429ba7b32232f9782efb2097"
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
+    "headSha": "44e9de1fa277611102b569c80be5bdf1ee9a2769"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH plugin: expose rtk (Rust Token Killer) as wide-category Tools — save 60-90% tokens on shell output with softRewriteBash routing",
     "fork": false,
     "forks": 0,
-    "headSha": "6ba981bb2e85cd8c429ba7b32232f9782efb2097",
+    "headSha": "44e9de1fa277611102b569c80be5bdf1ee9a2769",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,49 +25,59 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOUDTfQw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/dbaf4a519a070a4fb3e83d4d95eddb4900fb34d5a2e09ff91f4a0e90c62e8d5d/pharaohnie/dsh-rtk-tools",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/fb4c2635992e75f0225d08870588393e286125f8e39bb3abdc97ecc9182d2147/pharaohnie/dsh-rtk-tools",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/880867?v=4",
       "login": "pharaohnie"
     },
-    "pushedAt": "2026-08-25T03:40:01Z",
+    "pushedAt": "2026-08-26T05:15:36Z",
     "slug": "pharaohnie/dsh-rtk-tools",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-25T07:21:54Z",
+    "updatedAt": "2026-08-26T05:16:03Z",
     "url": "https://github.com/pharaohnie/dsh-rtk-tools"
   },
   "id": "gh:1345642307",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-rtk-tools",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:pharaohnie/dsh-rtk-tools#44e9de1fa277611102b569c80be5bdf1ee9a2769",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-rtk-tools",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/dbaf4a519a070a4fb3e83d4d95eddb4900fb34d5a2e09ff91f4a0e90c62e8d5d/pharaohnie/dsh-rtk-tools",
+    "coverUrl": "https://opengraph.githubassets.com/fb4c2635992e75f0225d08870588393e286125f8e39bb3abdc97ecc9182d2147/pharaohnie/dsh-rtk-tools",
     "description": "DSH plugin: expose rtk (Rust Token Killer) as wide-category Tools — save 60-90% tokens on shell output with softRewriteBash routing"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：把 rtk (Rust Token Killer) 的 60+ 个 token 优化子命令暴露成模型可调用的 Tool，shell 输出节省 60-90% token（filter / grouping / truncation / dedup 四大策略，由 rtk 二进制实现）。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

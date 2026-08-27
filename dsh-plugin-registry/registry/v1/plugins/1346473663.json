@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "5fc1467adf4ceed36395eed0f0588d268b7da5a2"
   },
   "github": {
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-toggle",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/83a3b2f4506029ff804cbe5446c83e11abfbd484ecd58f470a668d736dba70dd/yogeek/dsh-plugin-toggle",
     "description": "Enable/disable DeepSeek Harness (dsh) plugins from Settings > Plugins, grouped into collapsible categories"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Enable or disable DeepSeek Harness (dsh) plugins directly from Settings > Plugins → Toggle, grouped into collapsible categories — no more hand-editing cordis.patch.yml and hunting for the right row."
   },
   "schemaVersion": 1,
   "scripts": {

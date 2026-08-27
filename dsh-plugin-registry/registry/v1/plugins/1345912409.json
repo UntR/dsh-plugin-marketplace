@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "c8da0244c6b2b1b19fa1ccea41b992f913189bea"
   },
   "github": {
@@ -45,27 +45,49 @@
   },
   "id": "gh:1345912409",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@deepseek-ai/dsh-web-search-tavily",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:junjiangao/dsh-web-search-tavily#c8da0244c6b2b1b19fa1ccea41b992f913189bea",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@deepseek-ai/dsh-web-search-tavily",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/06413fefd12e49151bab857c6bda8483d9dca9ea4df9e1635ab47c80333f4831/junjiangao/dsh-web-search-tavily",
-    "description": ""
+    "description": "A Tavily-backed WebSearchProvider for the DeepSeek Harness web capability seam (ctx.web), modeled on the packages/web/web-search- family. It registers a provider into ctx.web — it does not own ctx.web and does not register a model-facing tool (that is @deepseek-ai/dsh-tool-web)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A Tavily-backed WebSearchProvider for the DeepSeek Harness web capability seam (ctx.web), modeled on the packages/web/web-search- family. It registers a provider into ctx.web — it does not own ctx.web and does not register a model-facing tool (that is @deepseek-ai/dsh-tool-web)."
   },
   "schemaVersion": 1,
   "scripts": {

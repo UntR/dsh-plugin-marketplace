@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "cf815ad410c41f603845d39ff97666697dfc6e1f"
   },
   "github": {
@@ -47,27 +47,37 @@
   },
   "id": "gh:1346704404",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-policy-waiver-proof",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dongsheng123132/dsh-policy-waiver-proof#cf815ad410c41f603845d39ff97666697dfc6e1f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./proof": "./lib/policy-waiver-proof.mjs"
+    },
+    "main": "./index.js",
+    "name": "dsh-policy-waiver-proof",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/51467eb89324a96db6047746d4519670e6715d9f456be851fa9cdb79f07023c4/dongsheng123132/dsh-policy-waiver-proof",
     "description": "Offline content-addressed proof that temporary DSH policy waivers stayed within approved bounds"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An offline, deterministic evidence layer for temporary policy exceptions in DeepSeek Harness. It proves whether recorded uses stayed within an approved subject, revision, scope, action allowlist, time window, use limit, and compensating controls. It does not grant a waiver, chang"
   },
   "schemaVersion": 1,
   "scripts": {

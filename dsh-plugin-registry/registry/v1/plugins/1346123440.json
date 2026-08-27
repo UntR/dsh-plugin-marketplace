@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "443f842944a38625d885eb131d73c8e220086778"
   },
   "github": {
@@ -25,46 +25,68 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUDw2sA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/40df8d05a583b5f3a1ea38eb860ac9f74021ee5dafeeb7d98a32cc14d6f02678/Tangtang232/dsh-recovery",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d05eb79e940b76218de5e240a4ea457f3028c7cef17d1bf8d5950b06048c5feb/Tangtang232/dsh-recovery",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/249439763?v=4",
       "login": "Tangtang232"
     },
     "pushedAt": "2026-08-25T12:53:49Z",
     "slug": "Tangtang232/dsh-recovery",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "deepseek-harness",
       "dsh-plugin",
       "recovery",
       "web"
     ],
-    "updatedAt": "2026-08-25T13:05:24Z",
+    "updatedAt": "2026-08-26T08:25:14Z",
     "url": "https://github.com/Tangtang232/dsh-recovery"
   },
   "id": "gh:1346123440",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@tangtang232/dsh-recovery",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Tangtang232/dsh-recovery#443f842944a38625d885eb131d73c8e220086778",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@tangtang232/dsh-recovery",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/40df8d05a583b5f3a1ea38eb860ac9f74021ee5dafeeb7d98a32cc14d6f02678/Tangtang232/dsh-recovery",
+    "coverUrl": "https://opengraph.githubassets.com/d05eb79e940b76218de5e240a4ea457f3028c7cef17d1bf8d5950b06048c5feb/Tangtang232/dsh-recovery",
     "description": "Recovery: Web first aid for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Recovery keeps DSH Web available when an optional profile plugin is missing or fails during startup. It quarantines the failing entry for the current run and adds a Settings → Recovery page for diagnosis and deterministic repair."
   },
   "schemaVersion": 1,
   "scripts": {

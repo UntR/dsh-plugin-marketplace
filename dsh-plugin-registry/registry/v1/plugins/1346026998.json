@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
-    "headSha": "8fad1fa228d7b3e9593464b8a6e46d2051e547fe"
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
+    "headSha": "0b0c9ce69877a64f58f77ea0646205014c6f9186"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-25T11:09:07Z",
     "databaseId": 1346026998,
     "defaultBranch": "main",
-    "description": null,
+    "description": "DeepSeek Harness plugin: local and remote (SSH) workspaces in one place. Remote execution uses a single SSH connection (multi-hop jumps allowed); bash, files, PTY, and LSP share that link.",
     "fork": false,
     "forks": 0,
-    "headSha": "8fad1fa228d7b3e9593464b8a6e46d2051e547fe",
+    "headSha": "0b0c9ce69877a64f58f77ea0646205014c6f9186",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUDq99g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/670ea3320d1efcb4addd7d0fff6415542625824d7d74bf44468cadf7a7d56c8e/DobyChao/dsh-workspace-enhancement",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/99d78dda96c225ff999c606112e28fd3be1df1bd53b9804e8946a12e406f8e5c/DobyChao/dsh-workspace-enhancement",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/106363380?v=4",
       "login": "DobyChao"
     },
-    "pushedAt": "2026-08-26T02:35:01Z",
+    "pushedAt": "2026-08-27T07:48:34Z",
     "slug": "DobyChao/dsh-workspace-enhancement",
     "stars": 0,
     "topics": [
@@ -39,32 +39,69 @@
       "dsh-plugin",
       "ssh"
     ],
-    "updatedAt": "2026-08-26T02:35:07Z",
+    "updatedAt": "2026-08-27T07:52:27Z",
     "url": "https://github.com/DobyChao/dsh-workspace-enhancement"
   },
   "id": "gh:1346026998",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workspace-enhancement",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-workspace-enhancement@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./fs": {
+        "default": "./lib/filesystem.js",
+        "types": "./lib/filesystem.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./picker": {
+        "default": "./lib/picker.js",
+        "types": "./lib/picker.d.ts"
+      },
+      "./ssh": {
+        "default": "./lib/runtime.js",
+        "types": "./lib/runtime.d.ts"
+      },
+      "./subprocess": {
+        "default": "./lib/subprocess.js",
+        "types": "./lib/subprocess.d.ts"
+      },
+      "./web": {
+        "default": "./lib/web.js",
+        "types": "./lib/web.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workspace-enhancement",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/670ea3320d1efcb4addd7d0fff6415542625824d7d74bf44468cadf7a7d56c8e/DobyChao/dsh-workspace-enhancement",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/99d78dda96c225ff999c606112e28fd3be1df1bd53b9804e8946a12e406f8e5c/DobyChao/dsh-workspace-enhancement",
+    "description": "DeepSeek Harness plugin: local and remote (SSH) workspaces in one place. Remote execution uses a single SSH connection (multi-hop jumps allowed); bash, files, PTY, and LSP share that link."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness workspace-enhancement plugin — local and remote (SSH) workspaces managed in one place. A session can hold multiple workspaces (a main cwd plus side directories), each with its own permissions; machines, TOFU host keys and keychain passwords all live in your loc"
   },
   "schemaVersion": 1,
   "scripts": {

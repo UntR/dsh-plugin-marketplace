@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "aadb5fd6d0ac2075b31771a32e14d83d78fbe031"
   },
   "github": {
@@ -14,7 +14,7 @@
     "createdAt": "2026-08-25T05:35:14Z",
     "databaseId": 1345724219,
     "defaultBranch": "main",
-    "description": "Detect and self-heal LLM output degeneration loops inside a DeepSeek Harness agent session.",
+    "description": "Detect and self-heal LLM output degeneration loops inside a DeepSeek Harness agent session.（有死锁，别用）",
     "fork": false,
     "forks": 0,
     "headSha": "aadb5fd6d0ac2075b31771a32e14d83d78fbe031",
@@ -25,7 +25,7 @@
       "spdxId": "BSD-3-Clause"
     },
     "nodeId": "R_kgDOUDYfOw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/488785ca76c30423a48a4e08657b30337254efc2869186860bf4b85375846d90/KakaruHayate/dsh-degen-heal",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/6d3eee7dd7d4883e29048fd67600cf339fc0940369e6295bada92cb15e4ca023/KakaruHayate/dsh-degen-heal",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/97896816?u=7779e8e0ebae71bcaaf4cbc7fd89bd463ed72571&v=4",
       "login": "KakaruHayate"
@@ -38,7 +38,7 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-25T18:01:15Z",
+    "updatedAt": "2026-08-27T03:27:50Z",
     "url": "https://github.com/KakaruHayate/dsh-degen-heal"
   },
   "id": "gh:1345724219",
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/llm-degen-heal",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/488785ca76c30423a48a4e08657b30337254efc2869186860bf4b85375846d90/KakaruHayate/dsh-degen-heal",
-    "description": "Detect and self-heal LLM output degeneration loops inside a DeepSeek Harness agent session."
+    "coverUrl": "https://opengraph.githubassets.com/6d3eee7dd7d4883e29048fd67600cf339fc0940369e6295bada92cb15e4ca023/KakaruHayate/dsh-degen-heal",
+    "description": "Detect and self-heal LLM output degeneration loops inside a DeepSeek Harness agent session.（有死锁，别用）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Plugin-only implementation: hooks documented harness extension points, never edits core routing / session / serialize logic. Pure fail-open design — it cannot deadlock itself. 纯插件实现：挂接 Harness 文档化的扩展点，不修改任何核心 routing / session / serialize 逻辑。纯 fail-open 设计——自身不可能陷入死锁。"
   },
   "schemaVersion": 1,
   "scripts": {

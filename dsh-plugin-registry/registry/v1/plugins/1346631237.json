@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "2d49983c583b0d58584a07e22cd6f597d9b0ca73"
   },
   "github": {
@@ -47,27 +47,37 @@
   },
   "id": "gh:1346631237",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-principal-binding-proof",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dongsheng123132/dsh-principal-binding-proof#2d49983c583b0d58584a07e22cd6f597d9b0ca73",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./proof": "./lib/principal-binding-proof.mjs"
+    },
+    "main": "./index.js",
+    "name": "dsh-principal-binding-proof",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0cdfae59111c2ded674cc2248e0e78930d62f970528999ccc6edce87990b37ac/dongsheng123132/dsh-principal-binding-proof",
     "description": "Offline content-addressed proof of pseudonymous authority binding across DSH execution surfaces"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Offline, content-addressed evidence that one pseudonymous authority and tenant remain consistently bound across a DSH execution chain: principal → session → agent → tool call → runtime → artifact."
   },
   "schemaVersion": 1,
   "scripts": {

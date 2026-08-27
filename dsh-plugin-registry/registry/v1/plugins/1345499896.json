@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "b705dc30b7d867cf360059ce4c476b6f51e14457"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,32 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs",
+        "types": "./lib/index.d.mts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.mjs",
+        "types": "./lib/invariant.d.mts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.mjs",
+    "name": "@morewax/dsh-remote-exec",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b083019ed7384d64101c5942f183a1ca699988f6e50ab3b51de5544a0e6e612b/moreWax/dsh-remote-exec",
     "description": "SSH / MOSH / SAM remote execution providers for DeepSeek Harness — run the agent locally, execute on your servers"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Run DeepSeek Harness locally, execute on your server. One plugin; the agent's file tools and shell operate on a remote machine over SSH or mosh."
   },
   "schemaVersion": 1,
   "scripts": {

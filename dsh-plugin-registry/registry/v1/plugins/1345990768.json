@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "de3c329a28e8e611dcdbfc477a3599f258cea77a"
   },
   "github": {
@@ -42,27 +42,40 @@
   },
   "id": "gh:1345990768",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-global-prompt",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-global-prompt@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./lib/core": "./lib/core.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-global-prompt",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/aca8f06792e261335ebc92ada1310cd201362c7cd413ba8c72ec102f7fed238d/sryimnoob123/dsh-global-prompt",
     "description": "DSH settings plugin for global and project AGENTS.md, identity/persona injection, and result notifications."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的指令注入机制（dsh-agent-instructions）是读文件的：$DSHHOME/AGENTS.md 就是全局提示词，写进去就生效。但没有面板，你得自己去翻安装目录改文件。"
   },
   "schemaVersion": 1,
   "scripts": {

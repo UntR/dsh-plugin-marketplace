@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
     "enrichmentStatus": "ok",
-    "headSha": "4ad2b6773625f520833f3dfd63adf47eba4d93e3"
+    "headSha": "7e1aa685f2b04acbb5bcbc2a866bb44a66e67034"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": null,
     "fork": false,
     "forks": 0,
-    "headSha": "4ad2b6773625f520833f3dfd63adf47eba4d93e3",
+    "headSha": "7e1aa685f2b04acbb5bcbc2a866bb44a66e67034",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,18 +25,18 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT-wt8g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a922325bb060be2ef07979bc21517b95b6a9148638dab61633b35560cf09f9c9/bluelightgit/dsh-remote-access",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/dd783b4ea2a6a0876f5b027f6cb740f496420d8ed0e8adf2454c12876471b5f9/bluelightgit/dsh-remote-access",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/63573333?u=7ddbd780e43e5a08769d79fa2f67d2648f60dad7&v=4",
       "login": "bluelightgit"
     },
-    "pushedAt": "2026-08-20T17:03:23Z",
+    "pushedAt": "2026-08-26T14:34:18Z",
     "slug": "bluelightgit/dsh-remote-access",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-20T17:06:36Z",
+    "updatedAt": "2026-08-26T14:44:07Z",
     "url": "https://github.com/bluelightgit/dsh-remote-access"
   },
   "id": "gh:1340878322",
@@ -46,33 +46,41 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "@greenonion/dsh-remote-access@0.1.1",
-    "version": "0.1.1"
+    "spec": "@greenonion/dsh-remote-access@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": "0.1.1",
+    "latestVersion": "0.2.0",
     "published": true,
     "repositoryMatches": true
   },
   "package": {
     "exports": {
       ".": "./index.js",
+      "./basic-auth": "./basic-auth.js",
       "./client": "./client/client.js",
-      "./package.json": "./package.json"
+      "./cloudflare-access": "./cloudflare-access.js",
+      "./cloudflare-ingress": "./cloudflare-ingress.js",
+      "./edge-diagnostics": "./edge-diagnostics.js",
+      "./lan-ingress": "./lan-ingress.js",
+      "./package.json": "./package.json",
+      "./platform-permissions": "./platform-permissions.js",
+      "./principal": "./principal.js",
+      "./tailscale-ingress": "./tailscale-ingress.js"
     },
     "main": "index.js",
     "name": "@greenonion/dsh-remote-access",
     "status": "valid",
     "type": "module",
-    "version": "0.1.1"
+    "version": "0.2.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a922325bb060be2ef07979bc21517b95b6a9148638dab61633b35560cf09f9c9/bluelightgit/dsh-remote-access",
-    "description": "DSH Web 插件，为本地 DSH 提供局域网访问、Tailscale Serve 和 Funnel 入口。"
+    "coverUrl": "https://opengraph.githubassets.com/dd783b4ea2a6a0876f5b027f6cb740f496420d8ed0e8adf2454c12876471b5f9/bluelightgit/dsh-remote-access",
+    "description": "DSH Web 插件，为本地 DSH 提供局域网访问、Tailscale 私有远程入口和可选 Cloudflare Tunnel 公网入口。Tunnel-only 是匿名公网传输，不提供用户身份认证。"
   },
   "readme": {
     "available": true,
-    "excerpt": "DSH Web 插件，为本地 DSH 提供局域网访问、Tailscale Serve 和 Funnel 入口。"
+    "excerpt": "DSH Web 插件，为本地 DSH 提供局域网访问、Tailscale 私有远程入口和可选 Cloudflare Tunnel 公网入口。Tunnel-only 是匿名公网传输，不提供用户身份认证。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "4e0db70fd35bce0d5da41e65f127e49097dba586"
   },
   "github": {
@@ -38,33 +38,50 @@
   },
   "id": "gh:1345140781",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@dsh-external/dsh-xuegulin",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:chemmy-11/dsh-xuegulin#4e0db70fd35bce0d5da41e65f127e49097dba586",
+    "version": "0.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-xuegulin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/83bd7d17130112d49751df5ab07577db7facf26c639a1f3ed642c85c141bb7db/chemmy-11/dsh-xuegulin",
     "description": "Vault observation plugin for DeepSeek Harness: Obsidian vault metadata snapshot + edit stats + observation panel"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Vault 观测插件（@dsh-external/dsh-xuegulin）——为 DeepSeek Harness（dsh）提供 Obsidian vault 的元数据快照与编辑活动统计：文件清单（路径/修改时间/大小/字数）、编辑操作计数（fs.watch 实时感知 + 去抖合并）、观测面板（今日/本周/活跃 Top/最近编辑流）。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

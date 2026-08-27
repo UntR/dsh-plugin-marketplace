@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "b4dcd077e8c8d05588b443c69eee8882803f7724"
   },
   "github": {
@@ -41,27 +41,46 @@
   },
   "id": "gh:1345038616",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-continue",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:inmny/dsh-continue#b4dcd077e8c8d05588b443c69eee8882803f7724",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./runtime": {
+        "default": "./lib/runtime.js",
+        "types": "./lib/runtime.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-continue",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7c7719f57ed653e95fc586c884a687037453f8a3afd0bd882c9a2902c203f9eb/inmny/dsh-continue",
     "description": "为 DeepSeek Harness 增加一个直接续跑按钮。当会话异常结束时，可以从现有上下文继续执行，不会引入其他提示词。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness 增加一个直接续跑按钮。当会话异常结束时，可以从现有上下文继续执行，无需再次输入提示词。"
   },
   "schemaVersion": 1,
   "scripts": {

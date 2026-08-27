@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "fec91a4503e494e8a8fe683ef7df60e8960c260a"
   },
   "github": {
@@ -47,27 +47,44 @@
   },
   "id": "gh:1344862881",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-timeline",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:NONAME-2121237/dsh-timeline#fec91a4503e494e8a8fe683ef7df60e8960c260a",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-timeline",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1808638e03fe5db3c55b370b357cd5cc108de2a802a068600b26290c78daca0b/NONAME-2121237/dsh-timeline",
     "description": "DSH web plugin: interaction timeline rail for long conversations (fork-independent successor of dsh-history)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Web 插件：超长会话的交互时间线——消息区右缘一列细刻度线，每根线代表你发的一条消息（一个交互轮次），悬停预览、点击跳转、滚轮浏览，配合键盘 ↑/↓ 快速回忆自己说过的话。"
   },
   "schemaVersion": 1,
   "scripts": {

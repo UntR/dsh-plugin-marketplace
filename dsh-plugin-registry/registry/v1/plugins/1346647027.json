@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "75c6bfdec11516359f1e402846ad148c3449cbb6"
   },
   "github": {
@@ -48,27 +48,47 @@
   },
   "id": "gh:1346647027",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-visual-workbench",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Destined-at-Dawn/dsh-visual-workbench#75c6bfdec11516359f1e402846ad148c3449cbb6",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "import": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./dsh-plugin.json": "./dsh-plugin.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-visual-workbench",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d3b8cc0bf47a87622f38615cbc84c39af5139ae5db68bac33063eaf3188db183/Destined-at-Dawn/dsh-visual-workbench",
     "description": "A DSH visual workbench for Obsidian-style knowledge spaces and local Comfy MCP workflows."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个面向 DeepSeek Harness（DSH）的本地优先可视化工作台插件：把 Obsidian-style 知识空间、ComfyUI 工作流货架和执行前安全检查放到同一个 DSH conversation view 中。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "c310d1bf896216afc2b2af0f8453e163d511d2fa"
   },
   "github": {
@@ -45,33 +45,51 @@
   },
   "id": "gh:1345246488",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-skill-manager",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:mhdfy1988/dsh-skill-manager#c310d1bf896216afc2b2af0f8453e163d511d2fa",
+    "version": "0.1.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-skill-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/44d3b66bd7b0ed0c6706753d51538a920dfcbe415054811bd07f895f0980856e/mhdfy1988/dsh-skill-manager",
     "description": "Non-invasive Skill lifecycle manager for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Skill Manager 是 DeepSeek Harness 的独立技能管理器插件。它通过官方插件扩展点加入设置页，并管理官方文件系统 Skill 提供器已经支持的用户技能目录；不修改 Harness 源码，也不替代官方 Skill 注册、发现、加载和调用链路。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

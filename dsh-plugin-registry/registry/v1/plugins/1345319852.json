@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "c1e3a40f21cdb4eecb2935dec0bab6b0f45282c7"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1345319852",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@goodandready/dsh-usage-guard",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@goodandready/dsh-usage-guard@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@goodandready/dsh-usage-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/299b268248af7fadddff10a29d5f552472cec38d5604ce952c78a3d547a47f1e/GooDAnDReaDY/dsh-usage-guard",
     "description": "Keeps a malformed token-usage sample from taking a whole session history down with it: a missing counter is recovered or zeroed before the harness folds it, so replay never yields NaN."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A one-purpose patch for DeepSeek Harness (dsh): one malformed token-usage sample should not take a whole session history down with it."
   },
   "schemaVersion": 1,
   "scripts": {

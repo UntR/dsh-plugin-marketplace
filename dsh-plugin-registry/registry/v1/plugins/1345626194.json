@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "078107d1d637a2e1fb24dd0048772a657b6c44f3"
   },
   "github": {
@@ -43,27 +43,42 @@
   },
   "id": "gh:1345626194",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-community-plugins",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dujar/dsh-community-plugins#078107d1d637a2e1fb24dd0048772a657b6c44f3",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-community-plugins",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/33f6a996131b805f229e2410c17b8b4a6fd0ad8c1dc21b411ec47ad8afce23b1/dujar/dsh-community-plugins",
     "description": "DeepSeek Harness web-GUI plugin: discover and install community plugins from the dsh-plugin topic — searchable SQLite catalog, fork browser, local-plugin installs"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) web-GUI plugin that adds a Community plugins tab to Settings → Plugins. It discovers the plugins published under GitHub's dsh-plugin topic, keeps a local SQLite catalog of their metadata, refreshes it in the background, and lets you search, browse, aggreg"
   },
   "schemaVersion": 1,
   "scripts": {

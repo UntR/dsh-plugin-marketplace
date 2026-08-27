@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-26T04:23:05.421Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichmentStatus": "ok",
     "headSha": "3c93b233795186c422b006e5caab252cd3b6825a"
   },
   "github": {
@@ -51,7 +51,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,14 +61,39 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./scale": {
+        "default": "./lib/scale.js",
+        "types": "./lib/scale.d.ts"
+      },
+      "./tournament": {
+        "default": "./lib/tournament.js",
+        "types": "./lib/tournament.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-verify-reflux",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/47cf6b9dd1a2d74db6da10b15a702e9ac27843d8739722786ac4040a90b43158/zouyuanqing/dsh-verify-reflux",
     "description": "Three-plane probabilistic verifier for DeepSeek Harness: tiered logprob/sample/template judges, seeded tournament best-of-N, layered context reflux."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（dsh）的三平面概率验证器插件：让智能体在会话内对自己的候选方案做细粒度概率化验证，验证过程全程留痕但不污染上下文——结论以分层回流块进入对话，完整轨迹落盘可审计。"
   },
   "schemaVersion": 1,
   "scripts": {
