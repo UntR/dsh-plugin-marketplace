@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
-    "headSha": "8de42e528dac9d2ac3a0af484673c8a7b0082f56"
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
+    "headSha": "36957171e3f88da2afefc12dd57b2120d8cf2862"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "deepseek harness plugin browser runtime",
     "fork": false,
     "forks": 0,
-    "headSha": "8de42e528dac9d2ac3a0af484673c8a7b0082f56",
+    "headSha": "36957171e3f88da2afefc12dd57b2120d8cf2862",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,49 +25,70 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUFI4Fw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5922820ab24319d3daef638e222ac0843654bcb2bdbfa4d551a350ad491b349c/LHKong7/dsh-browser-runtime",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/6f63583156d65259741d32023658007771e3b1fc14860a261eb4f4a2c482149e/LHKong7/dsh-browser-runtime",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/70605154?u=f4a9a1bf1eef55d940565f85e75247cb9a005f16&v=4",
       "login": "LHKong7"
     },
-    "pushedAt": "2026-08-27T09:42:05Z",
+    "pushedAt": "2026-08-27T17:39:46Z",
     "slug": "LHKong7/dsh-browser-runtime",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-27T01:09:54Z",
+    "updatedAt": "2026-08-27T17:52:48Z",
     "url": "https://github.com/LHKong7/dsh-browser-runtime"
   },
   "id": "gh:1347565591",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-browser-runtime",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:LHKong7/dsh-browser-runtime#36957171e3f88da2afefc12dd57b2120d8cf2862",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./playwright": {
+        "default": "./lib/playwright.js",
+        "types": "./lib/playwright.d.ts"
+      },
+      "./tools": {
+        "default": "./lib/tools.js",
+        "types": "./lib/tools.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-browser-runtime",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5922820ab24319d3daef638e222ac0843654bcb2bdbfa4d551a350ad491b349c/LHKong7/dsh-browser-runtime",
+    "coverUrl": "https://opengraph.githubassets.com/6f63583156d65259741d32023658007771e3b1fc14860a261eb4f4a2c482149e/LHKong7/dsh-browser-runtime",
     "description": "deepseek harness plugin browser runtime"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-browser-runtime gives the Agent a real Chromium browser for interactive pages: it can navigate, observe, click, fill forms, wait for updates, extract structured content, and save screenshots. One DSH bundle installs the runtime, the Playwright Provider, the model tools, and t"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

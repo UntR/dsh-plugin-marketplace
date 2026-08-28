@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "5fb6709a6b746db8fee41a1bca790fb6e4d6a6d9"
   },
   "github": {
@@ -42,27 +42,41 @@
   },
   "id": "gh:1348064612",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-thinking-summary",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lyuwen/dsh-thinking-summary#5fb6709a6b746db8fee41a1bca790fb6e4d6a6d9",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./invariant": "./lib/invariant.js",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-thinking-summary",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fda0e07222404ad7e52170b2a21d1a1a6ea7471c16eecafaa5860d282d5689c4/lyuwen/dsh-thinking-summary",
     "description": "Readable thinking display for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Readable thinking display for DeepSeek Harness: while the model thinks, the reasoning stream is captured and summarized paragraph by paragraph, and the summary is shown inside the chat history where the built-in \"Think\" row used to be. The summary model is chosen in Settings → Ge"
   },
   "schemaVersion": 1,
   "scripts": {

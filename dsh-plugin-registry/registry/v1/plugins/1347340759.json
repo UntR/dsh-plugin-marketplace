@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "9e1c9589eefcd125e34c6e25f15e5c636e32cf26"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1347340759",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-soundscape",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:berserk0501/dsh-soundscape#9e1c9589eefcd125e34c6e25f15e5c636e32cf26",
+    "version": "0.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-soundscape",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/64daa19e6ccacb59395aee47b98e4dd82fff89e5a8a62f49c73225b7910fbb3a/berserk0501/dsh-soundscape",
     "description": "DSH 本机思考与工具音效插件，支持 MediaPlayer、WAV/MP3、自定义映射和设置面板"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 本机音效插件：监听 Agent 状态与工具生命周期，通过常驻 PowerShell 双 System.Windows.Media.MediaPlayer 守护进程 （$think 思考循环 + $fx 一次性音效）播放思考、工具、错误和情绪提示音。"
   },
   "schemaVersion": 1,
   "scripts": {

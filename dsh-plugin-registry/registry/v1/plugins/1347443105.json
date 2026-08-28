@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "d16a7d82d8477c4059404340b8eb4210cf43c752"
   },
   "github": {
@@ -41,27 +41,45 @@
   },
   "id": "gh:1347443105",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "queue-steer-button",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lyuwen/dsh-steer-button#d16a7d82d8477c4059404340b8eb4210cf43c752",
+    "version": "0.3.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "queue-steer-button",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8e69efee6751ea460603fe1cbb162034274183831292c06112cfb8b63dc50cde/lyuwen/dsh-steer-button",
     "description": "Queue, Steer, and Backlog for DSH. More diverse way to interact with the agent while it's running."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Queue / Steer / Backlog composer controls for DeepSeek Harness. While the agent is running in a session, the plugin overrides the composer's input behaviors with three delivery modes and shows every pending message in a queue strip above the text box."
   },
   "schemaVersion": 1,
   "scripts": {

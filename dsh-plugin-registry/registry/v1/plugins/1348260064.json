@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "e9d9b0f3ee2986b57916d4005476c0769931142e"
   },
   "github": {
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@deepseek-ai/dsh-llm-failover",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1-rc.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1b61ecb0ce83857a86dddcc3c796f27320f0a176c3344bc0d0635b2b51da8316/guangxiangwu6-cmd/dsh-llm-failover",
     "description": "DeepSeek Harness model auto-failover plugin: retry threshold -> mark unavailable -> seamless switch to next healthy model -> cooldown auto-recover. 18-model pool, 19/19 tests, boot-safe."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的社区模型自动故障切换插件。当 Provider 出现 429 / 5xx / 超时 / 网络错误 / SSE 中断时，自动切换到健康模型继续执行，而不是让整个任务失败。"
   },
   "schemaVersion": 1,
   "scripts": {

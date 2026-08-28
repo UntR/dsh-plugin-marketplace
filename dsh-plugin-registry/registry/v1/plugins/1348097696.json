@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "792013c42c4b6e5daba08badf2f23ef8005d358b"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1348097696",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cursor-passthrough",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:mingzhong15/dsh-cursor-passthrough#792013c42c4b6e5daba08badf2f23ef8005d358b",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-cursor-passthrough",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1318f8a9f3d67981103fe6980b6f63546ec8683401eea72d508f09598fde595e/mingzhong15/dsh-cursor-passthrough",
     "description": "Add a Cursor passthrough group to the DSH chat model picker."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A community plugin for DeepSeek Harness. It adds a Cursor 直通 group to the chat model picker. Select that group and the web UI sends the turn to the Cursor CLI already signed in on this machine. Pick Paratera, DeepSeek, or another DSH model and those APIs run as usual."
   },
   "schemaVersion": 1,
   "scripts": {

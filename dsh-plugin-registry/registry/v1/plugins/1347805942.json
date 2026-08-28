@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "8387526e5e9f361a01dfd59e6512ea817fe70841"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1347805942",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-llm-agent-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:daveycodez/dsh-llm-agent-bridge#8387526e5e9f361a01dfd59e6512ea817fe70841",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host-plugin.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./typert": "./lib/typert.host.js"
+    },
+    "main": "lib/host-plugin.js",
+    "name": "dsh-llm-agent-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3d993b035f34b1e51d1981809032254b4d553bcdcc4c661b2ecbfa3d4e8265fd/daveycodez/dsh-llm-agent-bridge",
     "description": "Claude as a selectable LLM provider in DeepSeek Harness, via Anthropic's official Claude Agent SDK. Works in any DSH mode."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Brings vendor agent SDKs into DeepSeek Harness as selectable LLM providers. Today that is Claude, served through Anthropic's official Claude Agent SDK."
   },
   "schemaVersion": 1,
   "scripts": {

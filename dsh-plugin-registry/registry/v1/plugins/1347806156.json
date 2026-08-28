@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "31b506be2bff1e181e72ad435023ec6c7716f5ae"
   },
   "github": {
@@ -47,27 +47,45 @@
   },
   "id": "gh:1347806156",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workspace-explorer-picker",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-workspace-explorer-picker@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workspace-explorer-picker",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1448a2895203f4e055893e2aeb3cf257020dd7c98081608876d3ffc9e456e248/liell/dsh-workspace-explorer-picker",
-    "description": ""
+    "description": "Clicking Add workspace in DeepSeek Harness Desktop normally opens a directory browser rendered inside the web GUI. This plugin skips that dialog entirely and opens the real Windows Explorer folder chooser immediately - the same native dialog the shell already uses for its \"Choose"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Clicking Add workspace in DeepSeek Harness Desktop normally opens a directory browser rendered inside the web GUI. This plugin skips that dialog entirely and opens the real Windows Explorer folder chooser immediately - the same native dialog the shell already uses for its \"Choose"
   },
   "schemaVersion": 1,
   "scripts": {

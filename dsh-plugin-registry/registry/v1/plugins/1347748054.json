@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "245a04e89384e1be9c4ba4fa614732c03c321bf8"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1347748054",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-gentle-engram",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:eehcx/dsh-gentle-engram#245a04e89384e1be9c4ba4fa614732c03c321bf8",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml"
+    },
+    "main": "dist/index.js",
+    "name": "dsh-gentle-engram",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/91b7eae5f11e400e96f726201143687da3edfebfac1f5184927e886d6dbacf5e/eehcx/dsh-gentle-engram",
     "description": "DSH adapter for Engram — persistent memory bridge built with Cordis."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Host Cordis plugin written in TypeScript that adds reliable Engram lifecycle behavior to DeepSeek Harness."
   },
   "schemaVersion": 1,
   "scripts": {

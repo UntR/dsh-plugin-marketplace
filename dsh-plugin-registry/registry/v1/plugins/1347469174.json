@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "aface4b0c8dc62c846e2acf93c6e6ca386489fd7"
   },
   "github": {
@@ -41,33 +41,48 @@
   },
   "id": "gh:1347469174",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "memoripo",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:Dayi-Z/memoripo#aface4b0c8dc62c846e2acf93c6e6ca386489fd7",
+    "version": "0.9.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "memoripo",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1255f130f34c60dc929882a2c9f879d81354f14afb68f0ddb380a2b0b7607179/Dayi-Z/memoripo",
-    "description": ""
+    "description": "A living workbench for the DeepSeek Harness Hindsight memory bank — grow, read, and use your agent's long-term memory from a persistent sidebar."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A living workbench for the DeepSeek Harness Hindsight memory bank — grow, read, and use your agent's long-term memory from a persistent sidebar."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

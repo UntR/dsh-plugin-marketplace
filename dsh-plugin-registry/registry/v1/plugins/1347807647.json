@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "8eedb0139b0515b3164faab46d400e2b8ca6a83f"
   },
   "github": {
@@ -46,27 +46,37 @@
   },
   "id": "gh:1347807647",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-duty-separation-proof",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dongsheng123132/dsh-duty-separation-proof#8eedb0139b0515b3164faab46d400e2b8ca6a83f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./proof": "./lib/duty-separation-proof.mjs"
+    },
+    "main": "./index.js",
+    "name": "dsh-duty-separation-proof",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/834ae72c44e9f8068b59ec79079c99b94ff9d98da4b41a44fe8d90e2ceb1cfa8/dongsheng123132/dsh-duty-separation-proof",
     "description": "Offline content-addressed duty-separation evidence for supplied DSH workflow receipts"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Offline, deterministic evidence that one supplied DSH workflow kept declared duties apart. It validates exact request/approval/execution/observation order, hash-bound object and workflow identity, receipt-chain continuity, disjoint principal sets, approval quorum, principal/obser"
   },
   "schemaVersion": 1,
   "scripts": {

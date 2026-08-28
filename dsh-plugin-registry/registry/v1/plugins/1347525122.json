@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "aa460a08f60fa7af5e8e1afeb449fbe40ed0099c"
   },
   "github": {
@@ -43,27 +43,37 @@
   },
   "id": "gh:1347525122",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "kling-ai-deepseek-harness",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Wlain/kling-ai-deepseek-plugin#aa460a08f60fa7af5e8e1afeb449fbe40ed0099c",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "kling-ai-deepseek-harness",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5a159ec022a1984409e890f9da7901a2e4867e0a3421722bc25b7e05581b52fa/Wlain/kling-ai-deepseek-plugin",
     "description": "Kling AI remote MCP plugin for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件通过 Harness 官方 MCP tools bridge 和固定版本 mcp-remote 的标准 OAuth 流程连接区域服务。安装包默认插入国内 cordis.patch.yml（https://klingai.com/mcp）；海外 cordis.global.patch.yml（https://kling.ai/mcp）是对同一个 kling-ai-remote 节点的替换 overlay，不会再插入第二个客户端。切区前先停止 旧 DSH 进程并断开旧 OAuth。"
   },
   "schemaVersion": 1,
   "scripts": {

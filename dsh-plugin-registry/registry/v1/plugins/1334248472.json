@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
     "enrichmentStatus": "ok",
-    "headSha": "053ff719311c8d36a744c5abdd852da5d53f9d57"
+    "headSha": "ab717cb2b5898876dd1c5485ec53501eb214d690"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-14T14:09:46Z",
     "databaseId": 1334248472,
     "defaultBranch": "master",
-    "description": "SSH Remote IDE for DeepSeek Harness: connect via SSH and the IDE goes remote — explorer browses the server, editor reads/writes over SFTP, terminal is a live SSH PTY. Dual-face DSH plugin.",
+    "description": "Server-development mode for DeepSeek Harness: SSH-backed ctx.ssh/ctx.fs/ctx.subprocess adapters + remote agent preset — the coding agent's environment IS a remote Linux server",
     "fork": false,
     "forks": 0,
-    "headSha": "053ff719311c8d36a744c5abdd852da5d53f9d57",
+    "headSha": "ab717cb2b5898876dd1c5485ec53501eb214d690",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOT4cEGA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/868e99c9284205f740642cedf3a067d3e0877417160b255031d5f59f267e8fa0/harryopo/dsh-remote-ide",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/519e049a86b39cf5a761be8e7ab8e99bd34de3982a6ff1992027bc17f61b7488/harryopo/dsh-remote-ide",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/284261604?u=9f34bb9ea8d0d5ea1efd35495f43f5c56950eabd&v=4",
       "login": "harryopo"
     },
-    "pushedAt": "2026-08-15T08:56:43Z",
+    "pushedAt": "2026-08-28T15:00:32Z",
     "slug": "harryopo/dsh-remote-ide",
     "stars": 3,
     "topics": [
@@ -42,7 +42,7 @@
       "ssh",
       "web-terminal"
     ],
-    "updatedAt": "2026-08-15T08:56:49Z",
+    "updatedAt": "2026-08-28T15:00:48Z",
     "url": "https://github.com/harryopo/dsh-remote-ide"
   },
   "id": "gh:1334248472",
@@ -66,6 +66,11 @@
         "default": "./lib/index.js",
         "types": "./lib/types/index.d.ts"
       },
+      "./client": "./client/index.js",
+      "./fs-ssh": {
+        "default": "./lib/fs-ssh.js",
+        "types": "./lib/types/fs-ssh.d.ts"
+      },
       "./invariant": {
         "default": "./lib/invariant.js",
         "types": "./lib/types/invariant.d.ts"
@@ -75,7 +80,15 @@
         "default": "./lib/tools.js",
         "types": "./lib/types/tools.d.ts"
       },
-      "./src/*": "./src/*"
+      "./src/*": "./src/*",
+      "./ssh-service": {
+        "default": "./lib/ssh-service.js",
+        "types": "./lib/types/ssh-service.d.ts"
+      },
+      "./subprocess-ssh": {
+        "default": "./lib/subprocess-ssh.js",
+        "types": "./lib/types/subprocess-ssh.d.ts"
+      }
     },
     "main": "lib/index.js",
     "name": "dsh-remote-ide",
@@ -84,8 +97,8 @@
     "version": "0.2.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/868e99c9284205f740642cedf3a067d3e0877417160b255031d5f59f267e8fa0/harryopo/dsh-remote-ide",
-    "description": "SSH Remote IDE for DeepSeek Harness: connect via SSH and the IDE goes remote — explorer browses the server, editor reads/writes over SFTP, terminal is a live SSH PTY. Dual-face DSH plugin."
+    "coverUrl": "https://opengraph.githubassets.com/519e049a86b39cf5a761be8e7ab8e99bd34de3982a6ff1992027bc17f61b7488/harryopo/dsh-remote-ide",
+    "description": "Server-development mode for DeepSeek Harness: SSH-backed ctx.ssh/ctx.fs/ctx.subprocess adapters + remote agent preset — the coding agent's environment IS a remote Linux server"
   },
   "readme": {
     "available": true,

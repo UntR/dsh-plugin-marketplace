@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "0a82cf23e0ab13234ce7ce7c71ef28525a0fe17d"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/cli.js",
+      "./convert": "./src/convert.js",
+      "./domains": "./src/domains.js",
+      "./dsh": "./src/dsh.js"
+    },
+    "main": "src/cli.js",
+    "name": "dsh-web-import",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5e22ea2c6d21218da36cbf9f47c7aac4c39864548ca73df27be6a72df6a8c0c5/Ranz-Feng/dsh-web-import",
     "description": "Import DeepSeek Web (chat.deepseek.com) chat history into DeepSeek Harness as resumable, workspace-grouped sessions with original titles preserved."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DeepSeek 网页版（chat.deepseek.com）的聊天记录导入 DeepSeek Harness，成为可继续对话的会话——自动保留网页版原标题、自动挂到所选工作区分组。"
   },
   "schemaVersion": 1,
   "scripts": {

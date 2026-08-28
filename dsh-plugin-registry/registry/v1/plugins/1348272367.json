@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
-    "headSha": "237917bc643a3f73da21e38bde21020e9f723674"
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
+    "headSha": "594de3664a102720ba1a981e7bd5a3acccf60a59"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "给 AI 编码 Agent 的仓库工作纪律插件（DeepSeek Harness bundle）：方法论提示段 + 工件脚手架（AGENTS.md/特性清单/验证门）+ 合规审计。",
     "fork": false,
     "forks": 0,
-    "headSha": "237917bc643a3f73da21e38bde21020e9f723674",
+    "headSha": "594de3664a102720ba1a981e7bd5a3acccf60a59",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUF0A7w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/de4d0385d251a35988121494a0cfa10d549368a59d3c382b8776c64de087db68/FranklinZaneDurant/agent-discipline",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a0dbae47e00f09798a92148ceb65475ef9ba9414928ebcef6e1eb47444b243e0/FranklinZaneDurant/agent-discipline",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/51692074?v=4",
       "login": "FranklinZaneDurant"
     },
-    "pushedAt": "2026-08-27T09:17:42Z",
+    "pushedAt": "2026-08-28T00:33:33Z",
     "slug": "FranklinZaneDurant/agent-discipline",
     "stars": 1,
     "topics": [
@@ -40,7 +40,7 @@
       "dsh-plugin",
       "harness-engineering"
     ],
-    "updatedAt": "2026-08-27T09:25:54Z",
+    "updatedAt": "2026-08-28T00:33:40Z",
     "url": "https://github.com/FranklinZaneDurant/agent-discipline"
   },
   "id": "gh:1348272367",
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./invariant": "./lib/invariant.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "agent-discipline",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/de4d0385d251a35988121494a0cfa10d549368a59d3c382b8776c64de087db68/FranklinZaneDurant/agent-discipline",
+    "coverUrl": "https://opengraph.githubassets.com/a0dbae47e00f09798a92148ceb65475ef9ba9414928ebcef6e1eb47444b243e0/FranklinZaneDurant/agent-discipline",
     "description": "给 AI 编码 Agent 的仓库工作纪律插件（DeepSeek Harness bundle）：方法论提示段 + 工件脚手架（AGENTS.md/特性清单/验证门）+ 合规审计。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把《Harness Engineering Methodology》（HARNESS-METHODOLOGY-SPEC v1.0，本仓库随附副本见根目录）实现为 DeepSeek Harness 的 out-of-tree bundle：方法论 persona 提示段 + 工件脚手架工具（agentdisciplineinit）+ 合规审计工具（agentdisciplineaudit）。本仓库自身也按该方法论约束开发（dogfooding：见 AGENTS.md / featurelist.json / PROGRESS.md）。"
   },
   "schemaVersion": 1,
   "scripts": {

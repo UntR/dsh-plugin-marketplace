@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "62279527de798aecf50d6ea5947efa98cfc4e74b"
   },
   "github": {
@@ -46,27 +46,37 @@
   },
   "id": "gh:1347238651",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-change-window-proof",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dongsheng123132/dsh-change-window-proof#62279527de798aecf50d6ea5947efa98cfc4e74b",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./proof": "./lib/change-window-proof.mjs"
+    },
+    "main": "./index.js",
+    "name": "dsh-change-window-proof",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/51b104b9d8c3b68885d6af6b9ba4451969fd5a2c56210bd76161739863a67ed1/dongsheng123132/dsh-change-window-proof",
     "description": "Offline content-addressed DSH proof for change-window settlement evidence"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Offline, deterministic evidence for one narrow question: does the supplied hash-linked change ledger settle inside one declared UTC maintenance window while staying bound to one change receipt, artifact, environment, policy and plan?"
   },
   "schemaVersion": 1,
   "scripts": {

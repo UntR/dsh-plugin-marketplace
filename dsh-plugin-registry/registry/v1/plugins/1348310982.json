@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
-    "headSha": "9629d2c07307fb2b1d70374bdcd23191ee5a8d24"
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
+    "headSha": "5f6992e5d1f0406abb371ecf6192b545567ca8c2"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "让 agent 直接干 Jira/GitLab 的活 · DSH 看板插件 | A dsh plugin that turns Jira + GitLab into an agent-workable kanban board",
     "fork": false,
     "forks": 0,
-    "headSha": "9629d2c07307fb2b1d70374bdcd23191ee5a8d24",
+    "headSha": "5f6992e5d1f0406abb371ecf6192b545567ca8c2",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUF2Xxg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d940f1305e985779a54f1733afe05fd18b6a8d81b8e2024cf625788200bf24fb/JianwuYang/dsh-ui-kanban",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/be9995e5e2f56aa1925f9f46de5e7ef13268150cf04685e5dad522a65ff0dd35/JianwuYang/dsh-ui-kanban",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/22748492?u=81abb8716c42fbd7c44a200f24d8278a8969cb2d&v=4",
       "login": "JianwuYang"
     },
-    "pushedAt": "2026-08-27T09:57:48Z",
+    "pushedAt": "2026-08-28T02:24:49Z",
     "slug": "JianwuYang/dsh-ui-kanban",
     "stars": 1,
     "topics": [
@@ -42,38 +42,53 @@
       "jira",
       "kanban"
     ],
-    "updatedAt": "2026-08-27T12:37:53Z",
+    "updatedAt": "2026-08-28T02:24:55Z",
     "url": "https://github.com/JianwuYang/dsh-ui-kanban"
   },
   "id": "gh:1348310982",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-kanban",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:JianwuYang/dsh-ui-kanban#5f6992e5d1f0406abb371ecf6192b545567ca8c2",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-kanban",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d940f1305e985779a54f1733afe05fd18b6a8d81b8e2024cf625788200bf24fb/JianwuYang/dsh-ui-kanban",
+    "coverUrl": "https://opengraph.githubassets.com/be9995e5e2f56aa1925f9f46de5e7ef13268150cf04685e5dad522a65ff0dd35/JianwuYang/dsh-ui-kanban",
     "description": "让 agent 直接干 Jira/GitLab 的活 · DSH 看板插件 | A dsh plugin that turns Jira + GitLab into an agent-workable kanban board"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (dsh) plugin that turns a Jira Server / Data Center + GitLab board into a kanban the agent can actually work — every DSH workspace is a board project, the model drives the board through tools, and a floating panel in the session header gives you the human view."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

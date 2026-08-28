@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "48a999090ccae018f75fdbfba3d2479983ea5bc6"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1348207658",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-conversation-strip",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:mldhao/dsh-conversation-strip#48a999090ccae018f75fdbfba3d2479983ea5bc6",
+    "version": "0.3.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-conversation-strip",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6d21fd1b2452b4a6d78135fcbabe6cc6c9bd0ef60743f5590c96caf7a76bbf2f/mldhao/dsh-conversation-strip",
     "description": "Codex-inspired vertical conversation-turn rail for the DeepSeek Harness web UI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个用于 DeepSeek Harness（DSH）Web 界面的 Codex 风格纵向对话回合导航插件。它会在主侧栏右侧、聊天内容左侧的空白区域显示一列短横线；每条短横线对应一个完整的“用户问题 + 助手回复”回合。"
   },
   "schemaVersion": 1,
   "scripts": {

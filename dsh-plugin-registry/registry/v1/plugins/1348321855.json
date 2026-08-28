@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
-    "headSha": "55b66a6a7f46b4025baa5d24c653701769ad820c"
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
+    "headSha": "f6f7d0117bf448c50b945afbf499e7bcac04ba9c"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Scoped project task discovery and execution receipts for DeepSeek Harness",
     "fork": false,
     "forks": 0,
-    "headSha": "55b66a6a7f46b4025baa5d24c653701769ad820c",
+    "headSha": "f6f7d0117bf448c50b945afbf499e7bcac04ba9c",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUF3CPw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/c1a70d7726b58434ca189e88801f2582a265d1462e290a607bb1cc7932160df2/Missher12/dsh-project-ops",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8cff56071af935524072a1fa0b50c6a9d661bf3a180060e3c9d39ef703133491/Missher12/dsh-project-ops",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/58495793?u=d559a964b4bd7a74ba943b8d00b7c9f157374abb&v=4",
       "login": "Missher12"
     },
-    "pushedAt": "2026-08-27T10:00:40Z",
+    "pushedAt": "2026-08-27T18:35:01Z",
     "slug": "Missher12/dsh-project-ops",
     "stars": 0,
     "topics": [
@@ -40,7 +40,7 @@
       "project-automation",
       "task-runner"
     ],
-    "updatedAt": "2026-08-27T10:01:43Z",
+    "updatedAt": "2026-08-27T18:41:03Z",
     "url": "https://github.com/Missher12/dsh-project-ops"
   },
   "id": "gh:1348321855",
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-project-ops",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/c1a70d7726b58434ca189e88801f2582a265d1462e290a607bb1cc7932160df2/Missher12/dsh-project-ops",
+    "coverUrl": "https://opengraph.githubassets.com/8cff56071af935524072a1fa0b50c6a9d661bf3a180060e3c9d39ef703133491/Missher12/dsh-project-ops",
     "description": "Scoped project task discovery and execution receipts for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-project-ops is an independently installable execution-autopilot Bundle for DeepSeek Harness. It gives an Agent a bounded map of declared project tasks, plans checks affected by changed files, hands long work to Harness's existing Jobs runtime, and evaluates output-free verifi"
   },
   "schemaVersion": 1,
   "scripts": {

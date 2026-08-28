@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "9c46bd3f46d31bd7916cd94916172d272b065331"
   },
   "github": {
@@ -38,27 +38,44 @@
   },
   "id": "gh:1339222296",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-super-injector",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jypjypjypjyp/dsh-super-injector#9c46bd3f46d31bd7916cd94916172d272b065331",
+    "version": "0.3.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-super-injector",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b0c7e1630e0e20d21874417e93f150bdb2619252943aee1efd6b492e473dceca/jypjypjypjyp/dsh-super-injector",
-    "description": ""
+    "description": "DSH 生态的 BepInEx 式模组注入入口：运行时把任意本地插件包注入运行中的 web， 不碰 patch / package.json / bundles 列表、不重启进程。注入即完整生效（host 工具 + client UI）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 生态的 BepInEx 式模组注入入口：运行时把任意本地插件包注入运行中的 web， 不碰 patch / package.json / bundles 列表、不重启进程。注入即完整生效（host 工具 + client UI）。"
   },
   "schemaVersion": 1,
   "scripts": {

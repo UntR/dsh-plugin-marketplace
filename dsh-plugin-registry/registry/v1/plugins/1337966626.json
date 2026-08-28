@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "09a2415ddde6bbb161980a6d75bd24f256fa2123"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1337966626",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-usage-blance",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zhou-yihang/dsh-usage-blance#09a2415ddde6bbb161980a6d75bd24f256fa2123",
+    "version": "1.6.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-usage-blance",
+    "status": "valid",
+    "type": "module",
+    "version": "1.6.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/758961c1811cd97fbf06754a19d43c67ebb6323965983c9df2a38ebb7e488307/zhou-yihang/dsh-usage-blance",
     "description": "DSH 插件：在对话框下方监控 DeepSeek API 用量与余额（本月/日均/昨日/今日消费 + 账户余额），点击账单行配置 userToken"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A plugin for the DeepSeek Harness (DSH) web GUI that monitors your DeepSeek API usage and balance in a billing strip pinned directly below the chat dialog (the conversation.input.dock slot, above the input box)."
   },
   "schemaVersion": 1,
   "scripts": {

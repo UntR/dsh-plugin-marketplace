@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "5a324f63a4a9c85fcfc73fc473e24c66daa927ee"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@libai168/dsh-tool-sentry",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/00e8f5d4b7b9df30d1f3ae18063060f9fddcc0ccce8aaa59d133c1fcc938e20d/LJH-snow/dsh-tool-sentry",
-    "description": ""
+    "description": "A Cordis tool plugin that gives DeepSeek Harness (dsh) focused Sentry workflows: project health, unresolved issues, event context, releases, teams, and organization members."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A Cordis tool plugin that gives DeepSeek Harness (dsh) focused Sentry workflows: project health, unresolved issues, event context, releases, teams, and organization members."
   },
   "schemaVersion": 1,
   "scripts": {

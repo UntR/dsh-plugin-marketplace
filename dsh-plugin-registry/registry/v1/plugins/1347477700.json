@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "171bca6ee6f3e72542ad554c50959e50688498ec"
   },
   "github": {
@@ -45,27 +45,62 @@
   },
   "id": "gh:1347477700",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-adaptive-effort",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-adaptive-effort@0.3.0",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./classifier": {
+        "default": "./lib/classifier.js",
+        "types": "./lib/classifier.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./effort": {
+        "default": "./lib/effort.js",
+        "types": "./lib/effort.d.ts"
+      },
+      "./ledger": {
+        "default": "./lib/ledger.js",
+        "types": "./lib/ledger.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./report": {
+        "default": "./lib/report.js"
+      },
+      "./scheduler": {
+        "default": "./lib/scheduler.js",
+        "types": "./lib/scheduler.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-adaptive-effort",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ab41547b466cbfa2533973cd28e74c480c79bd66e577497a59f90bf4fef6488f/imkingjh999/dsh-adaptive-effort",
     "description": "DSH plugin: auto reasoning_effort (low/high/max) per turn via MiniMax complexity scorer + token ledger + per-reply metadata label"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 宿主插件：用 MiniMax 给每条用户消息打复杂度分，自动选择 reasoningeffort（low / high / max），带 effort-router 风格的 token 记账（分档统计、降档节省估算、误路由标记），并在每条 AI 回复末尾挂元数据标签（模型 · 思考档位 · 输出 tokens · 步数，点击回到该回复开头）。GLM-5.3 安全：绝不自动选 off / medium，强制思考模型上的手动 off 会被钳制为 low。"
   },
   "schemaVersion": 1,
   "scripts": {

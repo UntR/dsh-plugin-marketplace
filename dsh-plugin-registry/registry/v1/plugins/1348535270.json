@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
-    "headSha": "9386777ec875ca96c017dfb194ec9b7b19393335"
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
+    "headSha": "79935886c0cb52fab9e86fd47bdf23d90ef0b9ca"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Route DeepSeek Harness's outbound network through Clash — LLM, web search/fetch and shell commands all use your local Clash proxy.",
     "fork": false,
     "forks": 0,
-    "headSha": "9386777ec875ca96c017dfb194ec9b7b19393335",
+    "headSha": "79935886c0cb52fab9e86fd47bdf23d90ef0b9ca",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUGED5g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7d5e38286b6fd9845f5f23d4d41249f0675314e98facb569d6557a5a3ffae596/Lunatic029/dsh-clash-proxy",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8f85e97fe341b0e27cc50dbdd2d8a569c4118285fef0973917475e5b41662c3e/Lunatic029/dsh-clash-proxy",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/151592833?v=4",
       "login": "Lunatic029"
     },
-    "pushedAt": "2026-08-27T14:05:08Z",
+    "pushedAt": "2026-08-27T14:40:33Z",
     "slug": "Lunatic029/dsh-clash-proxy",
     "stars": 0,
     "topics": [
@@ -41,38 +41,53 @@
       "dsh-plugin",
       "proxy"
     ],
-    "updatedAt": "2026-08-27T14:16:35Z",
+    "updatedAt": "2026-08-27T14:50:11Z",
     "url": "https://github.com/Lunatic029/dsh-clash-proxy"
   },
   "id": "gh:1348535270",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-clash-proxy",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:Lunatic029/dsh-clash-proxy#79935886c0cb52fab9e86fd47bdf23d90ef0b9ca",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-clash-proxy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7d5e38286b6fd9845f5f23d4d41249f0675314e98facb569d6557a5a3ffae596/Lunatic029/dsh-clash-proxy",
+    "coverUrl": "https://opengraph.githubassets.com/8f85e97fe341b0e27cc50dbdd2d8a569c4118285fef0973917475e5b41662c3e/Lunatic029/dsh-clash-proxy",
     "description": "Route DeepSeek Harness's outbound network through Clash — LLM, web search/fetch and shell commands all use your local Clash proxy."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Route DeepSeek Harness outbound HTTP through a local forward proxy (Clash, V2Ray, …), with automatic bypass of loopback and private networks."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

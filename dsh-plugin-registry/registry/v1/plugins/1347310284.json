@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "7b3b0c13b48ba0c613b8092e965e6160fab9459e"
   },
   "github": {
@@ -25,18 +25,18 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUE5SzA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7955d8b7a4b71dfc29e393c84d293529fde8d6902de5fe5692a55986d2cd9a95/Shyboy0499/dsh-git-tools",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/85e10a9727fd33ca68af3a306ad234ba1d6e76341cd264033538ef1b675d1997/Shyboy0499/dsh-git-tools",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/129135725?u=167f1d296adabdac68fbdcbacc1babdd9de3a008&v=4",
       "login": "Shyboy0499"
     },
     "pushedAt": "2026-08-27T01:25:01Z",
     "slug": "Shyboy0499/dsh-git-tools",
-    "stars": 1,
+    "stars": 2,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-27T07:38:04Z",
+    "updatedAt": "2026-08-28T11:01:29Z",
     "url": "https://github.com/Shyboy0499/dsh-git-tools"
   },
   "id": "gh:1347310284",
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-git-tools",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7955d8b7a4b71dfc29e393c84d293529fde8d6902de5fe5692a55986d2cd9a95/Shyboy0499/dsh-git-tools",
+    "coverUrl": "https://opengraph.githubassets.com/85e10a9727fd33ca68af3a306ad234ba1d6e76341cd264033538ef1b675d1997/Shyboy0499/dsh-git-tools",
     "description": "Local git tools for DeepSeek Harness (dsh): git_status, git_diff, git_log, git_commit"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-git-tools is a dependency-free DeepSeek Harness plugin that gives the coding agent four local git tools — gitstatus, gitdiff, gitlog, and gitcommit — so it can inspect the repo in the session workspace and create commits, all through the official tool API. No UI, Host-side on"
   },
   "schemaVersion": 1,
   "scripts": {

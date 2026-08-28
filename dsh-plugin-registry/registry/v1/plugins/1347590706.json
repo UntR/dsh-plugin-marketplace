@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
-    "headSha": "77bde5d44740d0fae60bf1600a19bd09fb1d7cf6"
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
+    "headSha": "f081c49b27ca8f4ffc7e04dd05018f27739e76f7"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-26T17:06:05Z",
     "databaseId": 1347590706,
     "defaultBranch": "master",
-    "description": null,
+    "description": "解析 DSH session 日志归因 AI 生成文件，叠加 c8 覆盖率，产出 AI vs 人工代码覆盖率对比、高危未测文件清单与信任分。",
     "fork": false,
     "forks": 0,
-    "headSha": "77bde5d44740d0fae60bf1600a19bd09fb1d7cf6",
+    "headSha": "f081c49b27ca8f4ffc7e04dd05018f27739e76f7",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,20 +25,20 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUFKaMg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/03f221b7619f86293f2a1d6427e29e6cb6e48e9f66d27033c337f6897f8f76e1/SleepEggTart/dsh-code-coverage",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8456ad2e414aa0a784a66466550dbd4c1d94719dfa10ae8b739a8ff31cf455e6/SleepEggTart/dsh-code-coverage",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/224373241?u=e56870540ccc9340aca01f9e0845fd5ab94fcbcd&v=4",
       "login": "SleepEggTart"
     },
-    "pushedAt": "2026-08-27T09:56:48Z",
+    "pushedAt": "2026-08-28T08:16:46Z",
     "slug": "SleepEggTart/dsh-code-coverage",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "code-coverage",
       "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-26T17:21:39Z",
+    "updatedAt": "2026-08-28T08:18:58Z",
     "url": "https://github.com/SleepEggTart/dsh-code-coverage"
   },
   "id": "gh:1347590706",
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,19 +56,35 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./plugin": {
+        "import": "./dist/plugin.js",
+        "types": "./dist/plugin.d.ts"
+      }
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-code-coverage",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/03f221b7619f86293f2a1d6427e29e6cb6e48e9f66d27033c337f6897f8f76e1/SleepEggTart/dsh-code-coverage",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/8456ad2e414aa0a784a66466550dbd4c1d94719dfa10ae8b739a8ff31cf455e6/SleepEggTart/dsh-code-coverage",
+    "description": "解析 DSH session 日志归因 AI 生成文件，叠加 c8 覆盖率，产出 AI vs 人工代码覆盖率对比、高危未测文件清单与信任分。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "解析 DeepSeek Harness（DSH）session 日志，归因 AI 写了哪些文件，再叠加 c8 覆盖率数据，产出 「AI 代码 vs 人工代码」覆盖率对比、未测 AI 文件风险清单与信任分。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
-    "postinstall": false,
+    "postinstall": true,
     "preinstall": false,
     "prepare": false
   }

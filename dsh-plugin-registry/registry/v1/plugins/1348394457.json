@@ -5,29 +5,29 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
-    "headSha": "1999ff444c917775962b55bb019a6f7563361b5b"
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
+    "headSha": "67c02e9a86175fa556a773dfdfd23f008ce71b9d"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-27T11:09:37Z",
     "databaseId": 1348394457,
     "defaultBranch": "master",
-    "description": null,
+    "description": "Fail-closed DeepSeek Harness guard enforcing ramen-ai Core IT policy before tool execution.",
     "fork": false,
     "forks": 0,
-    "headSha": "1999ff444c917775962b55bb019a6f7563361b5b",
-    "homepageUrl": null,
+    "headSha": "67c02e9a86175fa556a773dfdfd23f008ce71b9d",
+    "homepageUrl": "https://ramenai.dev/",
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOUF7d2Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/aa8577ec1353257fce541a189cf5f199b6bcf4ecfd8519f426446afe6f420e3a/ramen-ai-dev/dsh-ramen-guard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7d86b2ec2a29ea2002aac30be96b6ab0006c293b042317ab6a9a6837c39ab54f/ramen-ai-dev/dsh-ramen-guard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/276245796?v=4",
       "login": "ramen-ai-dev"
     },
-    "pushedAt": "2026-08-27T11:27:07Z",
+    "pushedAt": "2026-08-27T16:37:45Z",
     "slug": "ramen-ai-dev/dsh-ramen-guard",
     "stars": 0,
     "topics": [
@@ -35,7 +35,7 @@
       "deepseek-harness-plugin",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-27T11:31:48Z",
+    "updatedAt": "2026-08-27T17:03:33Z",
     "url": "https://github.com/ramen-ai-dev/dsh-ramen-guard"
   },
   "id": "gh:1348394457",
@@ -43,7 +43,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -53,14 +53,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      }
+    },
+    "main": "dist/index.js",
+    "name": "@ramen-ai/dsh-ramen-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/aa8577ec1353257fce541a189cf5f199b6bcf4ecfd8519f426446afe6f420e3a/ramen-ai-dev/dsh-ramen-guard",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/7d86b2ec2a29ea2002aac30be96b6ab0006c293b042317ab6a9a6837c39ab54f/ramen-ai-dev/dsh-ramen-guard",
+    "description": "Fail-closed DeepSeek Harness guard enforcing ramen-ai Core IT policy before tool execution."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-ramen-guard is a fail-closed Cordis plugin that evaluates DeepSeek Harness tool calls against the ramen-ai semantic firewall before execution. It intercepts the official tools/pre-execute waterfall, submits the resolved tool name and arguments through @ramen-ai/node-core, and"
   },
   "schemaVersion": 1,
   "scripts": {

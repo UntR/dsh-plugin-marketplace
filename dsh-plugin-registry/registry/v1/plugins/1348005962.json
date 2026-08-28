@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
-    "headSha": "2df9ad7ef484f0caf7392557e821b73da21446d0"
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
+    "headSha": "a98c30f0ade5bf5467d561940aed18be71f9f421"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH plugin for local OCR: handwritten Chinese + math → Markdown with LaTeX. GPU / CPU backends.",
     "fork": false,
     "forks": 0,
-    "headSha": "2df9ad7ef484f0caf7392557e821b73da21446d0",
+    "headSha": "a98c30f0ade5bf5467d561940aed18be71f9f421",
     "homepageUrl": null,
     "language": "Python",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUFjwSg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/81e50e88706f72ad0c21e7b82218a6c48c0f27e6b81dbf3451da4870b5383afa/KL3jd/handwritten-ocr",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e06ff84b8ee9022376836c2cf1324b2216a0bad408db30497ea8a2f96cce4455/KL3jd/handwritten-ocr",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/87428387?u=a98944d04e8e9e255c104ae74b450287f167d1d4&v=4",
       "login": "KL3jd"
     },
-    "pushedAt": "2026-08-27T08:03:52Z",
+    "pushedAt": "2026-08-28T06:22:37Z",
     "slug": "KL3jd/handwritten-ocr",
     "stars": 0,
     "topics": [
@@ -43,7 +43,7 @@
       "ocr",
       "python"
     ],
-    "updatedAt": "2026-08-27T08:07:45Z",
+    "updatedAt": "2026-08-28T06:23:23Z",
     "url": "https://github.com/KL3jd/handwritten-ocr"
   },
   "id": "gh:1348005962",
@@ -51,7 +51,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,14 +61,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./ocr_image.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "ocr_image.mjs",
+    "name": "dsh-handwritten-ocr",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/81e50e88706f72ad0c21e7b82218a6c48c0f27e6b81dbf3451da4870b5383afa/KL3jd/handwritten-ocr",
+    "coverUrl": "https://opengraph.githubassets.com/e06ff84b8ee9022376836c2cf1324b2216a0bad408db30497ea8a2f96cce4455/KL3jd/handwritten-ocr",
     "description": "DSH plugin for local OCR: handwritten Chinese + math → Markdown with LaTeX. GPU / CPU backends."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "本地 OCR 插件：识别手写中文笔记与数学公式图片，输出 Markdown（中文纯文本 + 公式 LaTeX）。 全程本地推理、不联网，图片与数据不出本机。可作为 DSH（或其他 LLM 工具框架）的插件调用。"
   },
   "schemaVersion": 1,
   "scripts": {

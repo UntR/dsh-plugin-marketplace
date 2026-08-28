@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
-    "headSha": "079bf9d6d99e94d8a6dca0641e108e7f500188c2"
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
+    "headSha": "cc9552cac1146cf330dbce7805a29f97d2132206"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,17 @@
     "description": "DeepSeek Harness BrowserSkill 桥接插件：把本机 bsk daemon 的 WebSocket 经浏览器信道暴露给远程 BrowserSkill 扩展。配套的修改版 BrowserSkill 扩展：https://github.com/kaixinguo360/BrowserSkill-DSH-Remote",
     "fork": false,
     "forks": 0,
-    "headSha": "079bf9d6d99e94d8a6dca0641e108e7f500188c2",
+    "headSha": "cc9552cac1146cf330dbce7805a29f97d2132206",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": null,
     "nodeId": "R_kgDOUEvM9w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/6703a110e7a52de489a02bb3cdd4d678a38121a070cd5222863d4543a70e6745/kaixinguo360/dsh-bsk-ws-bridge",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/92991f383e1cabeb96bed34871961b850c0ada13578f81a4db742fa2ccba3433/kaixinguo360/dsh-bsk-ws-bridge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/37512255?u=a0b65178dba37d1cf6cd4deeaab08058392b8848&v=4",
       "login": "kaixinguo360"
     },
-    "pushedAt": "2026-08-26T09:30:55Z",
+    "pushedAt": "2026-08-28T07:17:30Z",
     "slug": "kaixinguo360/dsh-bsk-ws-bridge",
     "stars": 0,
     "topics": [
@@ -37,32 +37,43 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-26T09:53:08Z",
+    "updatedAt": "2026-08-28T07:19:37Z",
     "url": "https://github.com/kaixinguo360/dsh-bsk-ws-bridge"
   },
   "id": "gh:1347144951",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-bsk-ws-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kaixinguo360/dsh-bsk-ws-bridge#cc9552cac1146cf330dbce7805a29f97d2132206",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.mjs"
+      }
+    },
+    "main": "src/index.mjs",
+    "name": "dsh-bsk-ws-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/6703a110e7a52de489a02bb3cdd4d678a38121a070cd5222863d4543a70e6745/kaixinguo360/dsh-bsk-ws-bridge",
+    "coverUrl": "https://opengraph.githubassets.com/92991f383e1cabeb96bed34871961b850c0ada13578f81a4db742fa2ccba3433/kaixinguo360/dsh-bsk-ws-bridge",
     "description": "DeepSeek Harness BrowserSkill 桥接插件：把本机 bsk daemon 的 WebSocket 经浏览器信道暴露给远程 BrowserSkill 扩展。配套的修改版 BrowserSkill 扩展：https://github.com/kaixinguo360/BrowserSkill-DSH-Remote"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：把本机 bsk daemon 的回环 WebSocket 暴露为 DSH web server 上的一个 WebSocket 端点（默认 /bsk），供配套的修改版 browser-skill 扩展接入——Agent 由此经 DSH 页面远程操控客户端浏览器。"
   },
   "schemaVersion": 1,
   "scripts": {

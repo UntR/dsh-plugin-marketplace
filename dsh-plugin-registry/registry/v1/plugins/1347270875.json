@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "2e7a64f0e5d1927913ece5cabb559d7deca53422"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1347270875",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@deepseek-ai/dsh-plugin-autoqueue",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:alin-ever/dsh-plugin-autoqueue#2e7a64f0e5d1927913ece5cabb559d7deca53422",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@deepseek-ai/dsh-plugin-autoqueue",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3b7ae926dcd208b495c0a90929b1e6e2b53a90c2c36d669b9274aadf596143d4/alin-ever/dsh-plugin-autoqueue",
     "description": "DeepSeek Harness 无人值守任务队列插件：丢 .md 进收件箱 → AI 自动执行 → 产出报告"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "丢一个 POST 或一个 .md 文件进去，AI 自动执行、遇到阻塞自己换方案、产出报告、结算归档。全程无人值守。"
   },
   "schemaVersion": 1,
   "scripts": {

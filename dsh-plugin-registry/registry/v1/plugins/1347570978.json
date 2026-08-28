@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "555bf77856919c49e8146f52bba530440197b7f3"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@libai168/dsh-tool-jira",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5466c7112c6ee5c62c6d373e1153cc38ce008306decfcd7d4505e4d320e59fca/LJH-snow/dsh-tool-jira",
-    "description": ""
+    "description": "A Cordis tool plugin that gives DeepSeek Harness (dsh) Jira issue management capabilities. Agents can search JQL queries, inspect projects, create and update tickets, add comments, and move issues through workflow transitions."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A Cordis tool plugin that gives DeepSeek Harness (dsh) Jira issue management capabilities. Agents can search JQL queries, inspect projects, create and update tickets, add comments, and move issues through workflow transitions."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "ac000398ea6547bff41636e98fde8d631f683dc2"
   },
   "github": {
@@ -41,27 +41,45 @@
   },
   "id": "gh:1339221507",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@nanmicoder/dsh-agent-teams",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jypjypjypjyp/dsh-agent-teams#ac000398ea6547bff41636e98fde8d631f683dc2",
+    "version": "0.1.13"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.14",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@nanmicoder/dsh-agent-teams",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.13"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d126ea81d910e0ac78ecb995e8f17215d3be3d65f0b49566e3af170ed15986d1/jypjypjypjyp/dsh-agent-teams",
     "description": "AgentTeams plugin for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-agent-teams turns the current DeepSeek Harness session into a captain that can assemble durable sub-agents, split a goal into dependency-aware tasks, and coordinate work through direct messages."
   },
   "schemaVersion": 1,
   "scripts": {

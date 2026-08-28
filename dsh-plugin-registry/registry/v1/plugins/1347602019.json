@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "6f3cf9287937ea5acee8e118ac02af5cde067928"
   },
   "github": {
@@ -46,27 +46,57 @@
   },
   "id": "gh:1347602019",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-context-tree",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wr-web/dsh-context-tree#6f3cf9287937ea5acee8e118ac02af5cde067928",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/host.js",
+        "types": "./src/types/index.d.ts"
+      },
+      "./client": "./src/client.bundle.js",
+      "./invariant": {
+        "default": "./src/invariant.js",
+        "types": "./src/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./src/typert.remote-client.js",
+        "types": "./src/typert.remote-client.d.ts"
+      },
+      "./typert": {
+        "default": "./src/typert.host.js",
+        "types": "./src/typert.host.d.ts"
+      },
+      "./types": {
+        "default": "./src/types/types.js",
+        "types": "./src/types/types.d.ts"
+      }
+    },
+    "main": "src/host.js",
+    "name": "dsh-context-tree",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/84fdaeb01d19b13e7c8a089c7a1ce7d4d249a34590a93988306b166367958d0e/wr-web/dsh-context-tree",
     "description": "Reusable trajectory-tree context, exact-turn forks, and bounded cross-session recall for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A reusable trajectory-tree context system for DeepSeek Harness: it turns completed agent work into forkable checkpoints, recalls relevant prior context into new sessions, and shows the real cross-session forest."
   },
   "schemaVersion": 1,
   "scripts": {

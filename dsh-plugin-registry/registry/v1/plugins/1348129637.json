@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
-    "headSha": "3b897ea91c31e2f4b236cbe70738d070d8512755"
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
+    "headSha": "bb10263b373f6415aab4c25ca629d469e64a58b0"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-27T06:03:39Z",
     "databaseId": 1348129637,
     "defaultBranch": "main",
-    "description": null,
+    "description": "dsh-usage-board 是专为 DSH (DeepSeek Harness) 设计的用量与成本可视化看板插件。  插件能实时捕获会话内的 Token 消耗、Step 耗时和异常指标，支持冷启动增量回溯历史全量会话，并按 Sub-agent DAG 调用关系进行树状归集与反向明细穿透。",
     "fork": false,
     "forks": 0,
-    "headSha": "3b897ea91c31e2f4b236cbe70738d070d8512755",
+    "headSha": "bb10263b373f6415aab4c25ca629d469e64a58b0",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,18 +25,19 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUFrTZQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/8705df939b490a381dac820582b9b15b23428ddb020490bbbf5ea73e5e2e4e96/zhm20001/dsh-usage-board",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c82e10f17648eedcd00259a9c0efc356226d777df5e7c7964ad1a2ed2001e1f9/zhm20001/dsh-usage-board",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/10476399?u=f0c9584fb655303bac05619950b9173b04fd3980&v=4",
       "login": "zhm20001"
     },
-    "pushedAt": "2026-08-27T06:04:32Z",
+    "pushedAt": "2026-08-28T14:00:26Z",
     "slug": "zhm20001/dsh-usage-board",
     "stars": 0,
     "topics": [
+      "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-27T06:23:21Z",
+    "updatedAt": "2026-08-28T14:09:24Z",
     "url": "https://github.com/zhm20001/dsh-usage-board"
   },
   "id": "gh:1348129637",
@@ -44,7 +45,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +55,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-usage-board",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/8705df939b490a381dac820582b9b15b23428ddb020490bbbf5ea73e5e2e4e96/zhm20001/dsh-usage-board",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/c82e10f17648eedcd00259a9c0efc356226d777df5e7c7964ad1a2ed2001e1f9/zhm20001/dsh-usage-board",
+    "description": "dsh-usage-board 是专为 DSH (DeepSeek Harness) 设计的用量与成本可视化看板插件。 插件能实时捕获会话内的 Token 消耗、Step 耗时和异常指标，支持冷启动增量回溯历史全量会话，并按 Sub-agent DAG 调用关系进行树状归集与反向明细穿透。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "---"
   },
   "schemaVersion": 1,
   "scripts": {

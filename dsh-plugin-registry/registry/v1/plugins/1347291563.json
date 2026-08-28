@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "ca19aaf3dabf2066d921e67881ef4ad69af6f2e3"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOUE4Jqw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/94ef7ce89d2756157efb4522501cb5c095ef9faaeba529949b3e59662d5ef700/PerryLink/dsh-plugin-kit",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/6c627849c3bf12a8933d885f3f264949a0df16e26983c4f4fab87a5eab81124f/PerryLink/dsh-plugin-kit",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/255665900?u=c45dcefbeb0005ad85d4a3d472d67eec6d962dae&v=4",
       "login": "PerryLink"
@@ -47,7 +47,7 @@
       "sanitize",
       "seam"
     ],
-    "updatedAt": "2026-08-27T14:03:57Z",
+    "updatedAt": "2026-08-27T14:37:02Z",
     "url": "https://github.com/PerryLink/dsh-plugin-kit"
   },
   "id": "gh:1347291563",
@@ -55,7 +55,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -65,14 +65,43 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./gates": {
+        "default": "./lib/gates/index.js",
+        "types": "./lib/gates/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./seam": {
+        "default": "./lib/seam/provider.js",
+        "types": "./lib/seam/provider.d.ts"
+      },
+      "./shared": {
+        "default": "./lib/shared/index.js",
+        "types": "./lib/shared/index.d.ts"
+      },
+      "./verify": {
+        "default": "./lib/verify/index.js",
+        "types": "./lib/verify/index.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "@perrylink/dsh-plugin-kit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/94ef7ce89d2756157efb4522501cb5c095ef9faaeba529949b3e59662d5ef700/PerryLink/dsh-plugin-kit",
+    "coverUrl": "https://opengraph.githubassets.com/6c627849c3bf12a8933d885f3f264949a0df16e26983c4f4fab87a5eab81124f/PerryLink/dsh-plugin-kit",
     "description": "Shared zero-runtime-dependency toolkit for PerryLink DSH plugins: a pluggable Provider registry seam, fail-closed approval and adaptive session-event gates, mechanical verify scripts, shared sanitize/pricing/judge modules, and a new-plugin skeleton."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Shared zero-runtime-dependency toolkit for the 33 PerryLink DSH plugin repositories. It extracts the cross-cutting infrastructure every plugin reimplements today — the pluggable Provider seam, the fail-closed and adaptive session-event gates, the mechanical verify scripts, and th"
   },
   "schemaVersion": 1,
   "scripts": {

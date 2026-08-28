@@ -1,36 +1,36 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
-    "headSha": "f83a3fef27d94c8a723cdec15ac78d61fbe6f296"
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
+    "headSha": "5b3fd6c8c494a0dfb083e4fb0f4dc0aa209c819c"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-27T11:20:10Z",
     "databaseId": 1348403364,
     "defaultBranch": "main",
-    "description": "GitHub 仓库 AI 自动管理通道插件 (DeepSeek Harness community bundle): 20 个工具 + Web 设置卡片 + dry-run 防护 + secret 令牌。",
+    "description": "GitHub 仓库 AI 自动管理通道插件 (DeepSeek Harness community bundle): 27 个工具（仓库/Issue/PR/分支/文件/标签/话题/Tags/Releases/搜索）+ Web 设置卡片 + dry-run 防护 + secret 令牌。",
     "fork": false,
     "forks": 0,
-    "headSha": "f83a3fef27d94c8a723cdec15ac78d61fbe6f296",
+    "headSha": "5b3fd6c8c494a0dfb083e4fb0f4dc0aa209c819c",
     "homepageUrl": null,
-    "language": "TypeScript",
+    "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUF8ApA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/01f732e223be0ac155b693eb739c475eed96a655824bd4e719bd60883555c58f/yuan-source-666/dsh-github-manager",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/bf1ced3e901136fb8853e16b78175f03a80e6421bdcd05a781a88bf97f122f84/yuan-source-666/dsh-github-manager",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/245648058?v=4",
       "login": "yuan-source-666"
     },
-    "pushedAt": "2026-08-27T11:38:10Z",
+    "pushedAt": "2026-08-28T01:14:12Z",
     "slug": "yuan-source-666/dsh-github-manager",
     "stars": 1,
     "topics": [
@@ -40,38 +40,53 @@
       "dsh-plugin",
       "github-automation"
     ],
-    "updatedAt": "2026-08-27T11:41:53Z",
+    "updatedAt": "2026-08-28T01:14:26Z",
     "url": "https://github.com/yuan-source-666/dsh-github-manager"
   },
   "id": "gh:1348403364",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-github-manager",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:yuan-source-666/dsh-github-manager#5b3fd6c8c494a0dfb083e4fb0f4dc0aa209c819c",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-github-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/01f732e223be0ac155b693eb739c475eed96a655824bd4e719bd60883555c58f/yuan-source-666/dsh-github-manager",
-    "description": "GitHub 仓库 AI 自动管理通道插件 (DeepSeek Harness community bundle): 20 个工具 + Web 设置卡片 + dry-run 防护 + secret 令牌。"
+    "coverUrl": "https://opengraph.githubassets.com/bf1ced3e901136fb8853e16b78175f03a80e6421bdcd05a781a88bf97f122f84/yuan-source-666/dsh-github-manager",
+    "description": "GitHub 仓库 AI 自动管理通道插件 (DeepSeek Harness community bundle): 27 个工具（仓库/Issue/PR/分支/文件/标签/话题/Tags/Releases/搜索）+ Web 设置卡片 + dry-run 防护 + secret 令牌。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness 插件，为 AI agent 提供 GitHub 仓库自动管理通道。它注册一组工具，让 agent 通过 GitHub REST API 自动管理仓库、Issue、Pull Request、分支、文件、标签、话题（topics）、Git 标签（tags）、发布（Releases）和搜索。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

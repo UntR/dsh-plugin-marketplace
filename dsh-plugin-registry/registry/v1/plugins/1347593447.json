@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "67def64a90365f1773d6596601be5794c445a812"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/stub.mjs",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/stub.mjs",
+    "name": "dsh-gacha-viz",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/18b2cfde038475cd682d329cc12d615e60f00597ebd555c943130bdc609432e8/FADE-4869/dsh-gacha-viz",
     "description": "Genshin Impact gacha history visualizer and pity probability calculator for DeepSeek Harness (DSH plugin)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 侧边栏「插件市场」中找到本插件（dsh-plugin topic 下），点击「部署」，当前会话的模型会按 README 自动完成安装。"
   },
   "schemaVersion": 1,
   "scripts": {

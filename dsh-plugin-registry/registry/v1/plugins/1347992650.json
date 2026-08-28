@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "2dcc8c86bb43b8512c8a41e8615eccb3b02a175c"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1347992650",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@alger-ai/dsh-image-preview",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:algerkong/dsh-image-preview#2dcc8c86bb43b8512c8a41e8615eccb3b02a175c",
+    "version": "0.3.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@alger-ai/dsh-image-preview",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d73286b053798b932a1a653f147e70963c2b29ca7d75c34bd00be65e9ca42ac4/algerkong/dsh-image-preview",
     "description": "Image preview for DSH (DeepSeek Harness) web sessions: read_image results render as a thumbnail, click for full size in the built-in lightbox."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Image preview for the dsh session interface. When the agent runs the readimage tool, the result is rendered as a small thumbnail by default instead of raw JSON — click the thumbnail to view the full-size original in a lightbox styled exactly like dsh's built-in ImageLightbox."
   },
   "schemaVersion": 1,
   "scripts": {

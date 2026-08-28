@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-27T14:36:35.941Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichmentStatus": "ok",
     "headSha": "b179925f8f712c17e111ab7064fffad93477bcf8"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUFvoiA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/bc6962dc60fbaa67d2cb3eba3f5781c911529c5e83aa16a2a9a2ef41d003b4f3/WooLeo1995/dsh-llm-ai",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/9f4dda77c6bf0f621bdcc4b85677c3d856792cc7417dde7ca5819097bdae2382/WooLeo1995/dsh-llm-ai",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/35443834?u=5bde1342c90b73695852fcb1f4f7e3f8ff8d779d&v=4",
       "login": "WooLeo1995"
@@ -38,7 +38,7 @@
       "dsh-plugin-desktop",
       "dsh-plugin-market"
     ],
-    "updatedAt": "2026-08-27T08:37:54Z",
+    "updatedAt": "2026-08-27T14:38:53Z",
     "url": "https://github.com/WooLeo1995/dsh-llm-ai"
   },
   "id": "gh:1348200584",
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/invariant.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-llm-ai",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/bc6962dc60fbaa67d2cb3eba3f5781c911529c5e83aa16a2a9a2ef41d003b4f3/WooLeo1995/dsh-llm-ai",
+    "coverUrl": "https://opengraph.githubassets.com/9f4dda77c6bf0f621bdcc4b85677c3d856792cc7417dde7ca5819097bdae2382/WooLeo1995/dsh-llm-ai",
     "description": "替换 llm-pi-ai 模型配置，主要处理 dsh-llm-pi-ai 厂商和模型更新不及时的问题"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A models.dev-cataloged multi-provider LLM adapter for the DeepSeek Harness: every provider and model fact comes from the community-maintained models.dev api.json registry, and the request runtime is a harness-owned openai-completions streaming implementation (direct fetch + SSE) "
   },
   "schemaVersion": 1,
   "scripts": {
