@@ -1,64 +1,98 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-28T15:46:48.874Z",
-    "enrichmentStatus": "failed",
-    "headSha": "684217823d9b984aebe6db59af240ab4f88cc308"
+    "enrichedAt": "2026-08-29T10:23:41.850Z",
+    "enrichmentStatus": "ok",
+    "headSha": "b357c6cbaadd6dc8441356a5d6606bf8c62769bd"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-21T02:56:51Z",
     "databaseId": 1341340109,
     "defaultBranch": "main",
-    "description": "管理当前第三方已安装插件的信息 比较简单的版本 可按照自己的需求修改 github地址安装正在开发",
+    "description": "管理当前第三方已安装插件的信息 比较简单的版本 可按照自己的需求修改",
     "fork": false,
     "forks": 0,
-    "headSha": "684217823d9b984aebe6db59af240ab4f88cc308",
+    "headSha": "b357c6cbaadd6dc8441356a5d6606bf8c62769bd",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOT_M5zQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/c6ae79e0e7a28b7ba24bb26c9420475be5a5e94ee3ce4cf0b9d742381fe5d300/XianmingLF/xmlf-plugin-manager",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/bc4bb00b6f7137360bb24e91f00eb366a2d9aeb1d2b7723b87d2a1382638a209/XianmingLF/xmlf-plugin-manager",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/128922585?u=ca68901e35c3bf7834a000a1277b2d3c17979ef7&v=4",
       "login": "XianmingLF"
     },
-    "pushedAt": "2026-08-28T12:50:55Z",
+    "pushedAt": "2026-08-28T17:46:11Z",
     "slug": "XianmingLF/xmlf-plugin-manager",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-28T12:52:17Z",
+    "updatedAt": "2026-08-28T17:47:24Z",
     "url": "https://github.com/XianmingLF/xmlf-plugin-manager"
   },
   "id": "gh:1341340109",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@xianminglf/plugin-manager",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@xianminglf/plugin-manager@0.3.1",
+    "version": "0.3.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
+      "./src/*": "./src/*",
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/typert.host.d.ts"
+      },
+      "./types": {
+        "default": "./lib/types/types.js",
+        "types": "./lib/types/types.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "@xianminglf/plugin-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/c6ae79e0e7a28b7ba24bb26c9420475be5a5e94ee3ce4cf0b9d742381fe5d300/XianmingLF/xmlf-plugin-manager",
-    "description": "管理当前第三方已安装插件的信息 比较简单的版本 可按照自己的需求修改 github地址安装正在开发"
+    "coverUrl": "https://opengraph.githubassets.com/bc4bb00b6f7137360bb24e91f00eb366a2d9aeb1d2b7723b87d2a1382638a209/XianmingLF/xmlf-plugin-manager",
+    "description": "管理当前第三方已安装插件的信息 比较简单的版本 可按照自己的需求修改"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "如果不小心把这个插件自己删除了（删除后 profile 里仍可能残留它的包引用），下次 dsh web 会报错，例如："
   },
   "schemaVersion": 1,
   "scripts": {

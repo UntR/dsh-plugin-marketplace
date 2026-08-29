@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-28T15:46:48.874Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-29T10:23:41.850Z",
+    "enrichmentStatus": "ok",
     "headSha": "6408a848b0c4f27cb6587733c186452fb9aa7886"
   },
   "github": {
@@ -70,14 +70,26 @@
         "import": "./dist/filesystem.js",
         "types": "./dist/filesystem.d.ts"
       },
+      "./filesystem-routing": {
+        "import": "./dist/filesystem-routing.js",
+        "types": "./dist/filesystem-routing.d.ts"
+      },
       "./package.json": "./package.json",
       "./runtime": {
         "import": "./dist/runtime.js",
         "types": "./dist/runtime.d.ts"
       },
+      "./session-runtime": {
+        "import": "./dist/session-runtime.js",
+        "types": "./dist/session-runtime.d.ts"
+      },
       "./subprocess": {
         "import": "./dist/subprocess.js",
         "types": "./dist/subprocess.d.ts"
+      },
+      "./subprocess-routing": {
+        "import": "./dist/subprocess-routing.js",
+        "types": "./dist/subprocess-routing.d.ts"
       },
       "./web": {
         "import": "./dist/web.js",
@@ -96,7 +108,7 @@
   },
   "readme": {
     "available": true,
-    "excerpt": "@blaxel/dsh-sandbox is a first-class Blaxel sandbox execution plugin for DeepSeek Harness (DSH). It moves filesystem, Bash, terminal, and LSP operations into one short-lived Blaxel microVM while the DSH interface, model requests, session state, and Blaxel credentials remain on th"
+    "excerpt": "@blaxel/dsh-sandbox adds Blaxel-backed sessions to DeepSeek Harness (DSH). The DSH interface, model requests, session state, and Blaxel credentials stay on the host. Filesystem, Bash, terminal, and LSP operations for a sandbox session run in one short-lived Blaxel microVM."
   },
   "schemaVersion": 1,
   "scripts": {
