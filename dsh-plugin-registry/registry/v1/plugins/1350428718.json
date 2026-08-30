@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "2208af272d6afdde6921af2d4640bd92d4882ef7"
   },
   "github": {
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "deepseek-balance",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3e33aaca837bdda839bb3acc5bd463551373a15644ad9822040bc34df5477cce/adoreQ/deepseek-balance",
     "description": "deepseek harness查看余额插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH (DeepSeek Harness) Web plugin — 实时查看 DeepSeek API 余额，以悬浮窗展示。"
   },
   "schemaVersion": 1,
   "scripts": {

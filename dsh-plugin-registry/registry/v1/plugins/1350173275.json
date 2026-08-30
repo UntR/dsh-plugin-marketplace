@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "2d25acd2b1512b4da5130ee1e45b1c53bd4b3244"
   },
   "github": {
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,32 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/host/index.js",
+        "types": "./lib/host/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client/index.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/host/index.js",
+    "name": "@lyaoliu/dsh-reasoning-effort-slider",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b88635165b44f9b93437481bbae723d8d34afb61a8097e1f42699a9f4e9463ef/lyaoliu/dsh-reasoning-effort-slider",
     "description": "DSH Desktop reasoning effort slider plugin - 7-level effort control with whale-mom skin"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 推理强度滑块插件，支持 7 档调节，带有鲸落妈妈皮肤和 chibi 小人动画。"
   },
   "schemaVersion": 1,
   "scripts": {

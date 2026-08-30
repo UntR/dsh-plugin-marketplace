@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "a9a80d0507126cba6ab31655325335aece4a6af2"
   },
   "github": {
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,30 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-model-switcher",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/17adc2ec8f9f5302dfe8e47d1ab83331821bd78cfb1229c9d45e372a2419f40f/taod8205-spec/model-switcher-dsh",
     "description": "DeepSeek Harness 模型与推理强度一键切换插件，支持胶囊滑杆、档位吸附和极高态视觉。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一键式模型 + 推理强度切换器,为 DeepSeek Harness 网页端设计。在输入框工具行(发送按钮左侧)的模型位上放置一个胶囊触发器:点开是玻璃态卡片,内含可拖动的强度滑杆;拖到最高档时整组切换为紫色「极高态」视觉。"
   },
   "schemaVersion": 1,
   "scripts": {

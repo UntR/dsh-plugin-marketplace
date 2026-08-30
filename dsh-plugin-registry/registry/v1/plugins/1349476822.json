@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "022941561ce43aa1dc360e69d48649ecaa38b63e"
   },
   "github": {
@@ -50,27 +50,40 @@
   },
   "id": "gh:1349476822",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-doc-impact",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-doc-impact@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": "./lib/client.js"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-doc-impact",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/100934fd5e89fe88016ba6f1f211e05b32699c7fc6ce922c3f34ebbc21753f3f/xarleyn/dsh-doc-impact",
     "description": "Documentation impact enforcement for DeepSeek Harness — keep docs in sync by linking code changes to affected documentation."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Deterministic documentation-impact enforcement for DeepSeek Harness."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "d6f76aa32107f68f9a32117445eecc241b402c34"
   },
   "github": {
@@ -42,33 +42,49 @@
   },
   "id": "gh:1350197622",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@momojie-s/dsh-archive-retention",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:Momojie-S/dsh-archive-retention#d6f76aa32107f68f9a32117445eecc241b402c34",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@momojie-s/dsh-archive-retention",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/59068e875c3777efeeb7a26ecd4fa90f26da4356174d504ab3784bf679cec2c8/Momojie-S/dsh-archive-retention",
     "description": "DSH 插件: 归档会话定期清理 —— 物理归档堆与页面归档会话超保留期(页面可配天/小时,cron 调度)自动物理删除"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件:归档会话定期清理——物理归档堆(sessions-archive/)和页面归档的会话记录,超过保留期(默认 7 天,页面可改,支持天/小时)自动物理删除。保留期即\"宽限期\":归档 ≠ 永久保存,到期即焚。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

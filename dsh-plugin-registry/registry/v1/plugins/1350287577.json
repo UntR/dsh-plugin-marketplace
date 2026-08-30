@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
-    "headSha": "a43693966a7f7bb3af0d693ea55525a25807c1e3"
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
+    "headSha": "4a07a4d7d05517303220e601d92f807e9437be3c"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "claude-context-milvus like plugin for Deepseek Harness (DSH) ",
     "fork": false,
     "forks": 0,
-    "headSha": "a43693966a7f7bb3af0d693ea55525a25807c1e3",
+    "headSha": "4a07a4d7d05517303220e601d92f807e9437be3c",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUHvA2Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/8c20b8d22edf4710cd8962d09f75637a8bcd27c22a3594be4b791d26f37ce3ac/bobjia/dsh-context-milvus",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/2d80b87f7a2defd24608423ae24e7d25a310843bff526d588a52b45c4cfa8a0f/bobjia/dsh-context-milvus",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/3940756?v=4",
       "login": "bobjia"
     },
-    "pushedAt": "2026-08-29T09:59:46Z",
+    "pushedAt": "2026-08-30T05:06:49Z",
     "slug": "bobjia/dsh-context-milvus",
     "stars": 1,
     "topics": [
@@ -39,38 +39,53 @@
       "dsh-context-milvus",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-29T10:04:26Z",
+    "updatedAt": "2026-08-30T05:06:57Z",
     "url": "https://github.com/bobjia/dsh-context-milvus"
   },
   "id": "gh:1350287577",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-context-milvus",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:bobjia/dsh-context-milvus#4a07a4d7d05517303220e601d92f807e9437be3c",
+    "version": "0.1.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.4",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/plugins/dsh-context-milvus/index.js",
+        "types": "./dist/plugins/dsh-context-milvus/index.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "dist/plugins/dsh-context-milvus/index.js",
+    "name": "dsh-context-milvus",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/8c20b8d22edf4710cd8962d09f75637a8bcd27c22a3594be4b791d26f37ce3ac/bobjia/dsh-context-milvus",
+    "coverUrl": "https://opengraph.githubassets.com/2d80b87f7a2defd24608423ae24e7d25a310843bff526d588a52b45c4cfa8a0f/bobjia/dsh-context-milvus",
     "description": "claude-context-milvus like plugin for Deepseek Harness (DSH)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：通过 Milvus 向量数据库实现语义代码搜索，支持完整的索引 ↔ 搜索闭环。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

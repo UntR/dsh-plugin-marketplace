@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "d7c5d2874b9d77796f0aec04d396fc4b0ef4ffbf"
   },
   "github": {
@@ -43,27 +43,61 @@
   },
   "id": "gh:1349422497",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@lovstudio/dsh-plugin-marketplace",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@lovstudio/dsh-plugin-marketplace@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.cjs",
+      "./host": {
+        "default": "./lib/host.js",
+        "types": "./lib/host.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/typert.host.d.ts"
+      },
+      "./types": {
+        "default": "./lib/types.js",
+        "types": "./lib/types.d.ts"
+      }
+    },
+    "main": "index.js",
+    "name": "@lovstudio/dsh-plugin-marketplace",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/98858949e13907a249b1f875d772e8c4d70b9c03a7fb1960131e4973ce6abfa3/lovstudio/dsh-plugin-marketplace",
     "description": "Local-first DeepSeek Harness plugin marketplace with GitHub and dshfind providers"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Local-first Plugin market for Web Settings and the sidebar. The selected provider synchronizes public repository metadata into a provider-specific IndexedDB snapshot; browsing, search, filters, sorting, paging, facets, suggestions, and detail lookup then read only that local snap"
   },
   "schemaVersion": 1,
   "scripts": {

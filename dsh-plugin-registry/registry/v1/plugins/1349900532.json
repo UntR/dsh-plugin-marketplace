@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "768737acab1704abc686c63da4eb487d5bb9dee8"
   },
   "github": {
@@ -30,7 +30,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/320356354?v=4",
       "login": "opdsh"
     },
-    "pushedAt": "2026-08-28T20:39:40Z",
+    "pushedAt": "2026-08-30T05:34:28Z",
     "slug": "opdsh/unity-plugin",
     "stars": 0,
     "topics": [
@@ -45,33 +45,49 @@
   },
   "id": "gh:1349900532",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@opdsh/unity-plugin",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "@opdsh/unity-plugin@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.mjs",
+        "types": "./lib/index.d.mts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "@opdsh/unity-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e6aec2ca887fba54308a52a3fd3338665e5645aaaa9da7699170cd07bca1d3ff/opdsh/unity-plugin",
     "description": "DeepSeek Harness plugin: control the Unity Editor through the unity CLI"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that lets the agent build Unity games by driving the Unity Editor through the official unity CLI: project creation, live-Editor scene commands, in-Editor C# eval, tests, and builds."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

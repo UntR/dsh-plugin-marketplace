@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "4a7ca322101befafee1ff4f27cb8dc03bf57ddd6"
   },
   "github": {
@@ -45,33 +45,44 @@
   },
   "id": "gh:1350363491",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-platform-account-manager-plugin",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:sycamorestr/dsh-platform-account-manager-plugin#4a7ca322101befafee1ff4f27cb8dc03bf57ddd6",
+    "version": "0.3.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-platform-account-manager-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9f30491de900b47c2a5b0867cb034789dc3599d47c443ba4ab0b755f0d90c8ef/sycamorestr/dsh-platform-account-manager-plugin",
     "description": "DSH platform account and persistent browser-session manager"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "这是一个面向 DeepSeek Harness（DSH）的本地优先平台账号与浏览器会话管理插件。它不是代替人登录的密码管理器，也不是负责点击和填写网页的自动化工具；它是 Agent 与真实业务后台之间的账号目录、会话容器和浏览器生命周期层。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

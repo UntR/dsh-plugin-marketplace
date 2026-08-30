@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "1d2b4aa0856e9acb31010262e50ad214f0e1d609"
   },
   "github": {
@@ -14,7 +14,7 @@
     "createdAt": "2026-08-28T08:35:04Z",
     "databaseId": 1349375312,
     "defaultBranch": "main",
-    "description": null,
+    "description": "DSH 跑任务时你通常只能盯着进度条。dsh-attention 把这段等待变成有产出的碎片时间",
     "fork": false,
     "forks": 0,
     "headSha": "1d2b4aa0856e9acb31010262e50ad214f0e1d609",
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUG3VUA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/32de1d2e02ada9b57a053ef6fd42398a2343b4e707e0c8601122f7407650bdaa/zhaozixi/dsh-attention",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/59b9c76f0e96f0895645b96dc6bf482ac7746b9f87f1b1e888db8434d29138ce/zhaozixi/dsh-attention",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/15272223?v=4",
       "login": "zhaozixi"
@@ -38,32 +38,55 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-29T04:43:44Z",
+    "updatedAt": "2026-08-30T08:27:56Z",
     "url": "https://github.com/zhaozixi/dsh-attention"
   },
   "id": "gh:1349375312",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@zhaozixi/dsh-attention",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@zhaozixi/dsh-attention@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@zhaozixi/dsh-attention",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/32de1d2e02ada9b57a053ef6fd42398a2343b4e707e0c8601122f7407650bdaa/zhaozixi/dsh-attention",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/59b9c76f0e96f0895645b96dc6bf482ac7746b9f87f1b1e888db8434d29138ce/zhaozixi/dsh-attention",
+    "description": "DSH 跑任务时你通常只能盯着进度条。dsh-attention 把这段等待变成有产出的碎片时间"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 执行长时间任务（目标循环、后台任务、Agent 推理、任务看板执行）期间，主动提醒你利用碎片时间进行微活动，解决「任务进行中只能干等」的低效问题。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "e98a92bac39831d07ddb53deb46b7a2786fbc6f9"
   },
   "github": {
@@ -58,27 +58,45 @@
   },
   "id": "gh:1350142968",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mnemosyne-memory",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Witchwarren2344/dsh-mnemosyne-memory#e98a92bac39831d07ddb53deb46b7a2786fbc6f9",
+    "version": "1.4.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client/client.js",
+      "./core": {
+        "default": "./src/mnemosyne/core.js"
+      },
+      "./tools": {
+        "default": "./src/mnemosyne/tools.js"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-mnemosyne-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "1.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6cd8eb1a24392b2ac5c95484e651364c6229a7ce31eb3980f6807c3147715dc3/Witchwarren2344/dsh-mnemosyne-memory",
     "description": "Provide long-term memory, vector semantic search, and LLM reflection for DeepSeek Harness (DSH) with this free, MIT-licensed plugin."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Mnemosyne 永久记忆插件 — 为 DeepSeek Harness (DSH) 提供长期记忆、向量语义搜索和 LLM 反思功能"
   },
   "schemaVersion": 1,
   "scripts": {

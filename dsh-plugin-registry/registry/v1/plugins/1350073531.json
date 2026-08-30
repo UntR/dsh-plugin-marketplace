@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "4df99d4e4baeda4118de8f69e64729cbd720ad68"
   },
   "github": {
@@ -49,27 +49,45 @@
   },
   "id": "gh:1350073531",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-session-recap",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:DDDFXYqiming/dsh-session-recap#4df99d4e4baeda4118de8f69e64729cbd720ad68",
+    "version": "0.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./types": {
+        "default": "./lib/types.js",
+        "types": "./lib/types.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-session-recap",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c0215df1b6fa321d28cf30826c8275daa814ed4fc3353f7173f976e014ffb567/DDDFXYqiming/dsh-session-recap",
     "description": "Session recap plugin for DeepSeek Harness (Claude Code-style away summaries)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）会话回顾插件 —— 在会话空闲后生成 Claude Code 风格的 Away Summary，概括当前会话已完成内容、当前状态和下一步。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "bdf756e876c96fa17d9807f176ed462ac4c1dbcd"
   },
   "github": {
@@ -49,11 +49,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": true,
-    "spec": "@czj-git/dsh-plugin-hub@0.1.0",
-    "version": "0.1.0"
+    "spec": "@czj-git/dsh-plugin-hub@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": "0.1.0",
+    "latestVersion": "0.2.0",
     "published": true,
     "repositoryMatches": true
   },
@@ -67,13 +67,25 @@
         "default": "./dist/api.js",
         "types": "./dist/api.d.ts"
       },
-      "./package.json": "./package.json"
+      "./client": {
+        "default": "./dist/client.js",
+        "types": "./dist/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./schemas": {
+        "default": "./dist/schemas.js",
+        "types": "./dist/schemas.d.ts"
+      },
+      "./shared": {
+        "default": "./dist/shared.js",
+        "types": "./dist/shared.d.ts"
+      }
     },
     "main": "dist/index.js",
     "name": "@czj-git/dsh-plugin-hub",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fa913e302f58a6a89eb43a7ec1a12e554f474cf8f0a280f5c70af16c7cf9c1b8/czj-git/dsh-plugin-hub",
@@ -81,7 +93,7 @@
   },
   "readme": {
     "available": true,
-    "excerpt": "把 DSH Plugin Hub 的公开、只读搜索 API 接入 DeepSeek Harness。Agent 可以在对话中搜索已发布且通过验证的插件，查看排行榜，并取得安装命令、兼容性、社区指标和来源链接。"
+    "excerpt": "在 DeepSeek Harness 里找插件：既可以打开「设置 → 插件中心」浏览市场和排行榜，也可以直接在对话中让 Agent 搜索。"
   },
   "schemaVersion": 1,
   "scripts": {

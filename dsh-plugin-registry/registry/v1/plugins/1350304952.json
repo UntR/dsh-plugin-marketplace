@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
-    "headSha": "6077321901aab9a2d06cbe42facb5906a300c53d"
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
+    "headSha": "a9456d3406aad0381a3e8b73955ae01c2ee32c67"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,20 @@
     "description": "dsh-llm-openai-completions",
     "fork": false,
     "forks": 0,
-    "headSha": "6077321901aab9a2d06cbe42facb5906a300c53d",
+    "headSha": "a9456d3406aad0381a3e8b73955ae01c2ee32c67",
     "homepageUrl": null,
     "language": "TypeScript",
-    "license": null,
+    "license": {
+      "name": "MIT License",
+      "spdxId": "MIT"
+    },
     "nodeId": "R_kgDOUHwEuA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/ae7e97e64ccc8f08cfb87f1fcaefdab32cbcf6f871e326ec51b23a28b93cf315/drscrewdriver/dsh-llm-openai-completions",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/cb8448297827e5fa78d36483f3620c0434b4b04d3cfe7d76cc02906ff9d68ac2/drscrewdriver/dsh-llm-openai-completions",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/19632018?u=2d7614545514d34083f753282e17aa16e1d3dd70&v=4",
       "login": "drscrewdriver"
     },
-    "pushedAt": "2026-08-29T09:41:25Z",
+    "pushedAt": "2026-08-30T06:30:20Z",
     "slug": "drscrewdriver/dsh-llm-openai-completions",
     "stars": 1,
     "topics": [
@@ -38,7 +41,7 @@
       "dsh-plugins",
       "typescript"
     ],
-    "updatedAt": "2026-08-29T09:49:42Z",
+    "updatedAt": "2026-08-30T06:31:05Z",
     "url": "https://github.com/drscrewdriver/dsh-llm-openai-completions"
   },
   "id": "gh:1350304952",
@@ -46,24 +49,37 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-llm-openai-completions",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/ae7e97e64ccc8f08cfb87f1fcaefdab32cbcf6f871e326ec51b23a28b93cf315/drscrewdriver/dsh-llm-openai-completions",
+    "coverUrl": "https://opengraph.githubassets.com/cb8448297827e5fa78d36483f3620c0434b4b04d3cfe7d76cc02906ff9d68ac2/drscrewdriver/dsh-llm-openai-completions",
     "description": "dsh-llm-openai-completions"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "OpenAI-completions-compatible adapter for custom gateways (vLLM / LM Studio / self-hosted OpenAI proxies) — a \"fourth adapter class\" next to llm-deepseek and llm-pi-ai, with behavior that never guesses:"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "f8091672ff9455ae2d3787257a620782c3d657db"
   },
   "github": {
@@ -42,27 +42,49 @@
   },
   "id": "gh:1349919010",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-skill-manager",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xiyunSacire/dsh-skill-manager#f8091672ff9455ae2d3787257a620782c3d657db",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./types/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*",
+      "./types": {
+        "default": "./lib/types.mjs",
+        "types": "./lib/types.d.ts"
+      }
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-skill-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7c613bb7c295b13d62036881b18157ca5eb99cadab06c5b2fb258ef2146ef222/xiyunSacire/dsh-skill-manager",
     "description": "The dsh-skill-manager is a deep-integration Web UI plugin designed to provide developers and advanced users with direct visibility and control over the true, persistent \"skill memory\" of DeepSeek Harness (DSH)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）Web UI 插件：在左侧边栏增加「记忆管理」（Memory Manager）入口，查看与删除本机真实长期记忆（技能）——这些技能位于 /.dsh/skills，DSH 会在每次会话中自动加载。"
   },
   "schemaVersion": 1,
   "scripts": {

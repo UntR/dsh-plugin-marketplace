@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "edce3923229317cbf32063a84634cee595133423"
   },
   "github": {
@@ -43,27 +43,60 @@
   },
   "id": "gh:1350373129",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "aiko-dsh-ontology-kernel",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:aiko-dsh-plugins/dsh-ontology-kernel#edce3923229317cbf32063a84634cee595133423",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./local": {
+        "default": "./lib/local.js",
+        "types": "./lib/local.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
+      "./runtime": {
+        "default": "./lib/runtime.js",
+        "types": "./lib/runtime.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/typert.host.d.ts"
+      },
+      "./types": {
+        "default": "./lib/runtime.js",
+        "types": "./lib/types.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "aiko-dsh-ontology-kernel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2062fc293c99201c71bcc43ba9e4596b363c7798f8cfe4cb4b64a321cd59686f/aiko-dsh-plugins/dsh-ontology-kernel",
     "description": "Installable Ontology Kernel bundle for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An installable DeepSeek Harness bundle that provides one ontology interface with two adapters:"
   },
   "schemaVersion": 1,
   "scripts": {

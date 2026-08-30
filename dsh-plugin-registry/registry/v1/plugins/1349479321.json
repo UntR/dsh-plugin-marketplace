@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "7b6582f95c86a1d5d96fc7aab37f7af8d1247324"
   },
   "github": {
@@ -51,27 +51,84 @@
   },
   "id": "gh:1349479321",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-scope",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-session-scope@0.5.0",
+    "version": "0.5.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "import": "./lib/client.js",
+        "types": "./lib/client.d.ts"
+      },
+      "./core": {
+        "import": "./lib/core.js",
+        "types": "./lib/core.d.ts"
+      },
+      "./host-api": {
+        "import": "./lib/host-api.js",
+        "types": "./lib/host-api.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./scope-context": {
+        "import": "./lib/scope-context.js",
+        "types": "./lib/scope-context.d.ts"
+      },
+      "./scope-delegation": {
+        "import": "./lib/scope-delegation.js",
+        "types": "./lib/scope-delegation.d.ts"
+      },
+      "./scope-fs": {
+        "import": "./lib/scope-fs.js",
+        "types": "./lib/scope-fs.d.ts"
+      },
+      "./scope-processes": {
+        "import": "./lib/scope-processes.js",
+        "types": "./lib/scope-processes.d.ts"
+      },
+      "./scope-sandbox-linux": {
+        "import": "./lib/scope-sandbox-linux.js",
+        "types": "./lib/scope-sandbox-linux.d.ts"
+      },
+      "./scope-visibility": {
+        "import": "./lib/scope-visibility.js",
+        "types": "./lib/scope-visibility.d.ts"
+      },
+      "./session-scope": {
+        "import": "./lib/session-scope.js",
+        "types": "./lib/session-scope.d.ts"
+      },
+      "./tool-guard": {
+        "import": "./lib/tool-guard.js",
+        "types": "./lib/tool-guard.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-scope",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f6393dd8c434a0e5708c55e810e19166dd1abb66c3e3ab50b723b4ff30a0067e/xarleyn/dsh-session-scope",
     "description": "Per-session workspace scoping for DeepSeek Harness — expose only selected directories to agents with focused and isolated enforcement."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An independent per-session workspace visibility layer for DeepSeek Harness. A session keeps its original workspace and cwd while exposing only explicitly selected workspace directories to the agent."
   },
   "schemaVersion": 1,
   "scripts": {

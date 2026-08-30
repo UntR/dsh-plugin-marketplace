@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "0b3b5cae4d7becc473f87317cf1310849179c7ad"
   },
   "github": {
@@ -30,7 +30,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/271412?v=4",
       "login": "NOirBRight"
     },
-    "pushedAt": "2026-08-29T08:57:20Z",
+    "pushedAt": "2026-08-30T01:15:55Z",
     "slug": "NOirBRight/dsh-llm-opencode-go",
     "stars": 2,
     "topics": [
@@ -41,27 +41,49 @@
   },
   "id": "gh:1347630516",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-llm-opencode-go",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:NOirBRight/dsh-llm-opencode-go#0b3b5cae4d7becc473f87317cf1310849179c7ad",
+    "version": "0.1.12"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-llm-opencode-go",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.12"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1b2ed7e12c338ea5ceecc8da0bf791e336f220ec778be6b3c92cbfacdf4ea64c/NOirBRight/dsh-llm-opencode-go",
     "description": "OpenCode Go LLM provider plugin for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "OpenCode Go integration for DeepSeek Harness. Chat uses the shared pi-ai adapter. Completions, Responses, or Anthropic Messages are selected per model from the official Go table. Model discovery and subscription usage stay on native Go endpoints because those capabilities are not"
   },
   "schemaVersion": 1,
   "scripts": {

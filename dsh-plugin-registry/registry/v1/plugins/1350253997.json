@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "7c8f2f69f383f3d207080e2711b6d53a194fdf85"
   },
   "github": {
@@ -47,27 +47,41 @@
   },
   "id": "gh:1350253997",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-capabilities",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lylarcher/dsh-model-capabilities#7c8f2f69f383f3d207080e2711b6d53a194fdf85",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-model-capabilities",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cf7b9203f25f0c0fd0f8dd638be1b0db3b8b6a0d370ee42dcefcbe8fda0c4c0c/lylarcher/dsh-model-capabilities",
     "description": "一个DSH插件，为自定义模型配置输入类型(input)、推理模式（reasoningEfforts）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that lets you edit each model's input modalities (input: [\"text\", \"image\"]) and per-model reasoningEfforts directly from the Settings UI — no hand-editing settings.yaml."
   },
   "schemaVersion": 1,
   "scripts": {

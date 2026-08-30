@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "04989c92f84f956bd5b32e056145656e26b05207"
   },
   "github": {
@@ -38,27 +38,37 @@
   },
   "id": "gh:1350230165",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-pdf-to-word",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dy395769511-star/dsh-pdf-to-word#04989c92f84f956bd5b32e056145656e26b05207",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-pdf-to-word",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8f478d8bc8878b65a3fe3d030a85e5b0de958e2ff38225a56d6b3d5a2317b6cf/dy395769511-star/dsh-pdf-to-word",
     "description": "PDF to Word conversion plugin for DeepSeek Harness (dsh): PyMuPDF/PaddleOCR pipeline + LLM visual style verification"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（dsh）工程化插件：把 PDF 转成 Word（.docx），尽量保真字体大小、段落样式、表格、图片、边框/背景；扫描件自动走 PaddleOCR；转换后可用多模态大模型逐页比对并输出样式一致性校验报告。"
   },
   "schemaVersion": 1,
   "scripts": {

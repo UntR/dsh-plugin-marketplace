@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "6393d4583a188128bedd7fbaaa9af31bd39505b4"
   },
   "github": {
@@ -30,7 +30,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/271412?v=4",
       "login": "NOirBRight"
     },
-    "pushedAt": "2026-08-29T08:57:18Z",
+    "pushedAt": "2026-08-30T01:15:49Z",
     "slug": "NOirBRight/dsh-llm-commandcode",
     "stars": 1,
     "topics": [
@@ -41,27 +41,48 @@
   },
   "id": "gh:1348185130",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-llm-commandcode",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:NOirBRight/dsh-llm-commandcode#6393d4583a188128bedd7fbaaa9af31bd39505b4",
+    "version": "0.1.12"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-llm-commandcode",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.12"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2598db2e2b90c34b274f5ba050624f5c9064c48c796475025708a3cdce051487/NOirBRight/dsh-llm-commandcode",
     "description": "Command Code Provider API LLM plugin for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Command Code Provider API chat for DeepSeek Harness. This plugin is a separate provider route (commandcode) and settings namespace (llm-commandcode). Chat uses the documented Provider API through DSH PiAiAdapter. Account quota is a Host-only, best-effort extra and never blocks ch"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "ecc1c29f46261e559535696ae96cc1fd3007d3b3"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1350179602",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-kit",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jwilson411/dsh-plugin-kit#ecc1c29f46261e559535696ae96cc1fd3007d3b3",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-plugin-kit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/abc2651142934b1a0efee857fec99b5028399f2cecefbb227f87f1478f14feba/jwilson411/dsh-plugin-kit",
     "description": "A minimal, tested template for DeepSeek Harness plugins."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A minimal, installable function-plugin template for the DeepSeek Harness. It is the smallest thing that is still a real plugin: one package that is both a profile bundle (it ships a patch layer) and the plugin that layer mounts, registering exactly one model-facing tool, kitping."
   },
   "schemaVersion": 1,
   "scripts": {

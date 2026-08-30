@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "7da2ef0923017223f0cf4c88822ca6d55b9c2e2f"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1350378909",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-provider-proxy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:stayhpjinng/dsh-provider-proxy#7da2ef0923017223f0cf4c88822ca6d55b9c2e2f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-provider-proxy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3e06e0929659261c4f88cc632dc52b3c898ce1a00c8cc575302fc15594fdb5cc/stayhpjinng/dsh-provider-proxy",
     "description": "Provider-scoped HTTP/HTTPS forward proxy plugin for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness LLM middleware that sends only selected provider routes through an HTTP or HTTPS forward proxy. Other providers keep using the normal network path, including when requests run concurrently."
   },
   "schemaVersion": 1,
   "scripts": {

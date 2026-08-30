@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
     "headSha": "904a68b55936c0e3ecf00f63c7e805f65a1f940f"
   },
   "github": {
@@ -47,27 +47,41 @@
   },
   "id": "gh:1349850058",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-plugin-local-ai-tts",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:abbccdd/dsh-localtts#904a68b55936c0e3ecf00f63c7e805f65a1f940f",
+    "version": "0.1.8"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "@dsh-external/dsh-plugin-local-ai-tts",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.8"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4db5d31eb53ea18b81ccf7c33f32e46b906b713fb4879b8611da5feea7c8740b/abbccdd/dsh-localtts",
     "description": "Local IndexTTS 2.5 and GPT-SoVITS speech synthesis and playback for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Read DeepSeek Harness assistant replies with IndexTTS 2.5 or GPT-SoVITS started by the plugin. The user supplies the existing Python/project/model configuration; the plugin starts a thin JSONL worker and sends one natural sentence per request. No WebUI page is required."
   },
   "schemaVersion": 1,
   "scripts": {

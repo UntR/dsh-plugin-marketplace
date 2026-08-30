@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
-    "headSha": "c3c97c3619456ba92c0bda7debf66b510571aa9c"
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
+    "headSha": "efdae1d1b2b922cb83b846fc0c5d90135c8ac6f8"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Triggers inside your DSH agent: wake a fresh DeepSeek Harness session when files, mail, webhooks, or git events happen. Native Cordis bundle, heartbeat-proved install.",
     "fork": false,
     "forks": 0,
-    "headSha": "c3c97c3619456ba92c0bda7debf66b510571aa9c",
+    "headSha": "efdae1d1b2b922cb83b846fc0c5d90135c8ac6f8",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,53 +25,74 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUHX8jA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/cdcbb115df4836f3c0c4f633936bf39f8743de6b87a522df06d899e97e5827a3/jarvis959/galvanize-dsh",
+    "openGraphImageUrl": "https://repository-images.githubusercontent.com/1349909644/4d765357-6261-4eab-afb7-33e530ffaf5e",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/19585005?u=12f94f7de2444734ba345d004d4916c795580642&v=4",
       "login": "jarvis959"
     },
-    "pushedAt": "2026-08-29T01:43:48Z",
+    "pushedAt": "2026-08-30T01:42:46Z",
     "slug": "jarvis959/galvanize-dsh",
-    "stars": 0,
+    "stars": 1,
     "topics": [
+      "agent",
+      "agentic-ai",
+      "agentic-workflow",
+      "agents",
+      "ai",
       "cordis",
       "deepseek-harness",
       "dsh-plugin",
       "galvanize",
+      "llm",
+      "self-hosted",
       "triggers"
     ],
-    "updatedAt": "2026-08-29T01:43:52Z",
+    "updatedAt": "2026-08-30T01:56:36Z",
     "url": "https://github.com/jarvis959/galvanize-dsh"
   },
   "id": "gh:1349909644",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "galvanize-dsh",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:jarvis959/galvanize-dsh#efdae1d1b2b922cb83b846fc0c5d90135c8ac6f8",
+    "version": "0.1.6"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "galvanize-dsh",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.6"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/cdcbb115df4836f3c0c4f633936bf39f8743de6b87a522df06d899e97e5827a3/jarvis959/galvanize-dsh",
+    "coverUrl": "https://repository-images.githubusercontent.com/1349909644/4d765357-6261-4eab-afb7-33e530ffaf5e",
     "description": "Triggers inside your DSH agent: wake a fresh DeepSeek Harness session when files, mail, webhooks, or git events happen. Native Cordis bundle, heartbeat-proved install."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Give your DeepSeek Harness agent a way to wake itself up. Once this bundle is installed, your DSH agent registers event triggers by itself: a file landing in a folder, an email arriving, a webhook firing, a git push. When one happens, the galvanize core spawns a fresh headless DS"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

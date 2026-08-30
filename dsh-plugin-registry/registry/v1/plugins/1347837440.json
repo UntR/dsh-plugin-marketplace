@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
-    "headSha": "9ee0701aa4475eb7796baa65704375305f2eae09"
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
+    "headSha": "120ce0a2f93428b6f4bb272d729b0b281c57bf22"
   },
   "github": {
     "archived": false,
@@ -17,58 +17,87 @@
     "description": "把本机已登录的 CodeBuddy / WorkBuddy（腾讯代码助手） 订阅作为 dsh（DeepSeek Harness） 的原生 provider 接入，启用后 CodeBuddy 模型会直接出现在 dsh 的模型选择器中，可像其它模型一样被 agent 调用。",
     "fork": false,
     "forks": 0,
-    "headSha": "9ee0701aa4475eb7796baa65704375305f2eae09",
+    "headSha": "120ce0a2f93428b6f4bb272d729b0b281c57bf22",
     "homepageUrl": null,
-    "language": "TypeScript",
+    "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUFZeAA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/79ca90b6f5c7faa47a3a6227ec406d91043f2d24f7e71a2aa608f371ffe079f6/evlon/dsh-codebuddy-models",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c5a5e1234d09f6ab9f0ace2a7af184e576433d7b2dd7ebadc41b316b05ed6f2d/evlon/dsh-codebuddy-models",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/5889160?v=4",
       "login": "evlon"
     },
-    "pushedAt": "2026-08-29T03:19:59Z",
+    "pushedAt": "2026-08-29T16:09:35Z",
     "slug": "evlon/dsh-codebuddy-models",
     "stars": 0,
     "topics": [
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-08-29T03:20:16Z",
+    "updatedAt": "2026-08-29T16:10:09Z",
     "url": "https://github.com/evlon/dsh-codebuddy-models"
   },
   "id": "gh:1347837440",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-codebuddy-models",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-codebuddy-models@0.1.5",
+    "version": "0.1.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.5",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./adapter": {
+        "default": "./lib/adapter.js",
+        "types": "./lib/adapter.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./credentials": {
+        "default": "./lib/credentials.js",
+        "types": "./lib/credentials.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./sse": {
+        "default": "./lib/sse.js",
+        "types": "./lib/sse.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-codebuddy-models",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.5"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/79ca90b6f5c7faa47a3a6227ec406d91043f2d24f7e71a2aa608f371ffe079f6/evlon/dsh-codebuddy-models",
+    "coverUrl": "https://opengraph.githubassets.com/c5a5e1234d09f6ab9f0ace2a7af184e576433d7b2dd7ebadc41b316b05ed6f2d/evlon/dsh-codebuddy-models",
     "description": "把本机已登录的 CodeBuddy / WorkBuddy（腾讯代码助手） 订阅作为 dsh（DeepSeek Harness） 的原生 provider 接入，启用后 CodeBuddy 模型会直接出现在 dsh 的模型选择器中，可像其它模型一样被 agent 调用。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把本机已登录的 CodeBuddy / WorkBuddy（腾讯代码助手） 订阅作为 dsh（DeepSeek Harness） 的原生 provider 接入，启用后 CodeBuddy 模型会直接出现在 dsh 的模型选择器中，可像其它模型一样被 agent 调用。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

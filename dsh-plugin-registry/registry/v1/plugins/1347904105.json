@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": false
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
-    "enrichmentStatus": "failed",
-    "headSha": "41c65af8bf62b26d590116be317eb5cb25537c8e"
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichmentStatus": "ok",
+    "headSha": "fbb71a1ee703c372ea89778f961fe8d9b3a53320"
   },
   "github": {
     "archived": false,
@@ -17,24 +17,24 @@
     "description": "DeepSeek Harness（dsh）的 Matrix agent 桥接插件：把 Matrix 房间桥接到 harness agent 会话，每个房间一个会话，支持在聊天里远程监控、审批和追加指令；多分身架构 + 媒体/富文本/回复/编辑信息完整处理。",
     "fork": false,
     "forks": 0,
-    "headSha": "41c65af8bf62b26d590116be317eb5cb25537c8e",
+    "headSha": "fbb71a1ee703c372ea89778f961fe8d9b3a53320",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOUFdiaQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/861fb58fad754a39a87e791d5bbad471f0c91c7aea9ea889adc39584dbcd7856/evlon/dsh-matrix-agent",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/59cb5331f624eeebad80fb52adb3c7e8cd74b2df3cb20d7ee5ad35842a4539cf/evlon/dsh-matrix-agent",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/5889160?v=4",
       "login": "evlon"
     },
-    "pushedAt": "2026-08-28T09:21:51Z",
+    "pushedAt": "2026-08-30T06:02:56Z",
     "slug": "evlon/dsh-matrix-agent",
     "stars": 0,
     "topics": [
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-08-29T02:43:42Z",
+    "updatedAt": "2026-08-30T06:03:27Z",
     "url": "https://github.com/evlon/dsh-matrix-agent"
   },
   "id": "gh:1347904105",
@@ -42,7 +42,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -52,20 +52,37 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-matrix-agent",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/861fb58fad754a39a87e791d5bbad471f0c91c7aea9ea889adc39584dbcd7856/evlon/dsh-matrix-agent",
+    "coverUrl": "https://opengraph.githubassets.com/59cb5331f624eeebad80fb52adb3c7e8cd74b2df3cb20d7ee5ad35842a4539cf/evlon/dsh-matrix-agent",
     "description": "DeepSeek Harness（dsh）的 Matrix agent 桥接插件：把 Matrix 房间桥接到 harness agent 会话，每个房间一个会话，支持在聊天里远程监控、审批和追加指令；多分身架构 + 媒体/富文本/回复/编辑信息完整处理。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（dsh）的 Matrix agent 桥接插件：把 Matrix 房间桥接到 harness agent 会话，每个房间一个会话，支持在聊天里远程监控、审批和追加指令；多分身架构 + 媒体/富文本/回复/编辑信息完整处理。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

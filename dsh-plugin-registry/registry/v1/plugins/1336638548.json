@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-28T15:46:48.874Z",
+    "enrichedAt": "2026-08-30T09:34:26.444Z",
     "enrichmentStatus": "ok",
-    "headSha": "9b3d7081f26754b2e5831bde09582f25e9812a54"
+    "headSha": "c72566cc6dd4f0b5537d1fc196c0c78e7ce95f58"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-17T03:55:09Z",
     "databaseId": 1336638548,
     "defaultBranch": "main",
-    "description": "0-LLM compaction for DeepSeek Harness (dsh): deterministic atomic reference-graph pruning of agent history — exact compression ratio, selective forgetting, recall instead of rewrite. 压缩阶段零 LLM 调用的确定性上下文压缩插件：原子引用图剪枝、选择性遗忘、压缩率精确兑现，即插即用 CompactionEngine。",
+    "description": "Guarded context compaction for DeepSeek Harness (dsh): the LLM proposes, deterministic guards dispose — eager per-atom shrink (extract/summary/false under verbatim guards) + lazy reference-graph eviction (0-LLM) + byte-exact recall from an append-only log. 守卫式上下文压缩：LLM 只提议、确定性守卫裁决——逐原子缩放 + 惰性引用图剪枝（0-LLM）+ 追加式日志逐字节召回；压缩率精确兑现，历史永不销毁。",
     "fork": false,
     "forks": 0,
-    "headSha": "9b3d7081f26754b2e5831bde09582f25e9812a54",
+    "headSha": "c72566cc6dd4f0b5537d1fc196c0c78e7ce95f58",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT6t8VA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/dffa7aae1dce9af9fe5ee8868bc806664360e94709dddf1359685176e2ed743c/yoza10635/dsh-argp",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d52b8bbe85e9c4c6d582352acc01bd92b7331ed9cb63867632bbd2e2470ed0ed/yoza10635/dsh-argp",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/289684848?v=4",
       "login": "yoza10635"
     },
-    "pushedAt": "2026-08-22T13:01:42Z",
+    "pushedAt": "2026-08-29T15:31:04Z",
     "slug": "yoza10635/dsh-argp",
     "stars": 4,
     "topics": [
@@ -43,7 +43,7 @@
       "dsh-plugin",
       "llm"
     ],
-    "updatedAt": "2026-08-25T03:45:42Z",
+    "updatedAt": "2026-08-29T15:45:38Z",
     "url": "https://github.com/yoza10635/dsh-argp"
   },
   "id": "gh:1336638548",
@@ -53,11 +53,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-argp@0.3.2",
-    "version": "0.3.2"
+    "spec": "dsh-argp@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": "0.3.2",
+    "latestVersion": "1.0.0",
     "published": true,
     "repositoryMatches": true
   },
@@ -71,15 +71,15 @@
     "name": "dsh-argp",
     "status": "valid",
     "type": "module",
-    "version": "0.3.2"
+    "version": "1.0.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/dffa7aae1dce9af9fe5ee8868bc806664360e94709dddf1359685176e2ed743c/yoza10635/dsh-argp",
-    "description": "0-LLM compaction for DeepSeek Harness (dsh): deterministic atomic reference-graph pruning of agent history — exact compression ratio, selective forgetting, recall instead of rewrite. 压缩阶段零 LLM 调用的确定性上下文压缩插件：原子引用图剪枝、选择性遗忘、压缩率精确兑现，即插即用 CompactionEngine。"
+    "coverUrl": "https://opengraph.githubassets.com/d52b8bbe85e9c4c6d582352acc01bd92b7331ed9cb63867632bbd2e2470ed0ed/yoza10635/dsh-argp",
+    "description": "Guarded context compaction for DeepSeek Harness (dsh): the LLM proposes, deterministic guards dispose — eager per-atom shrink (extract/summary/false under verbatim guards) + lazy reference-graph eviction (0-LLM) + byte-exact recall from an append-only log. 守卫式上下文压缩：LLM 只提议、确定性守卫裁"
   },
   "readme": {
     "available": true,
-    "excerpt": "dsh-argp（ARGP = Atomic Reference Graph Pruning，原子引用图剪枝）是 DeepSeek Harness（dsh）的第三方 CompactionEngine：基于逻辑链（引用依赖拓扑）的原子级选择性遗忘——历史中\"被依赖\"的内容按引用图保留，\"孤立\"内容按反向拓扑序摘除，压缩阶段零 LLM 调用，不把历史重写为摘要。"
+    "excerpt": "dsh-argp 是 DeepSeek Harness（dsh）的第三方上下文压缩引擎（1.0.0 候选，双引擎形态）："
   },
   "schemaVersion": 1,
   "scripts": {
