@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-30T09:34:26.444Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-08-31T10:09:19.846Z",
+    "enrichmentStatus": "ok",
     "headSha": "3da55bf10e723a468cc411411c425536d787e74c"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@onlyforchris/dsh-im",
+    "status": "valid",
+    "type": "module",
+    "version": "3.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/242e1bae44a1e2c420feb6355d1f61dd71d2507f4f6e6cf9c32178c72ce242e9/onlyforchris/dsh-im",
     "description": "通过扫码或机器人凭据把IM机器人接入DeepSeek Harness（支持飞书、微信、钉钉、企业微信、QQ、Slack、Telegram、Discord和WhatsApp）。 Connect IM bots to DeepSeek Harness via QR code or credentials (9 channels)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "&nbsp;&nbsp;"
   },
   "schemaVersion": 1,
   "scripts": {

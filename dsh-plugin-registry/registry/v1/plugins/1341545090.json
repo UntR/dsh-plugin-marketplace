@@ -5,32 +5,32 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-29T10:23:41.850Z",
+    "enrichedAt": "2026-08-31T10:09:19.846Z",
     "enrichmentStatus": "ok",
-    "headSha": "4892ffe68280f153915cd2401150f22754ea2713"
+    "headSha": "0427508702c3b366a1fd89cd585f134454c5aaf7"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-21T07:51:46Z",
     "databaseId": 1341545090,
     "defaultBranch": "main",
-    "description": "Optional DeepSeek Harness plugin for editing and resending the latest direct-human message",
+    "description": "DeepSeek Harness 最新用户消息编辑与重发插件（Host / Client 解耦）",
     "fork": false,
     "forks": 0,
-    "headSha": "4892ffe68280f153915cd2401150f22754ea2713",
+    "headSha": "0427508702c3b366a1fd89cd585f134454c5aaf7",
     "homepageUrl": null,
-    "language": "TypeScript",
+    "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT_Zagg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/498d3a9d9a6cc2a947f0a1b6859672ef5a63781d685d1d704caab806f456f7e4/xie-tj/dsh-easy-exit",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/dfa53e3069015590d43edceb2561592885aa00f2b6bf1cf661975d1d3f4d68e0/xie-tj/dsh-easy-exit",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/175099578?u=59d11b7ee3f39605c261c934f4200aaa80a61e1c&v=4",
       "login": "xie-tj"
     },
-    "pushedAt": "2026-08-23T05:58:37Z",
+    "pushedAt": "2026-08-31T04:09:23Z",
     "slug": "xie-tj/dsh-easy-exit",
     "stars": 2,
     "topics": [
@@ -38,7 +38,7 @@
       "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-26T16:04:16Z",
+    "updatedAt": "2026-08-31T04:09:14Z",
     "url": "https://github.com/xie-tj/dsh-easy-exit"
   },
   "id": "gh:1341545090",
@@ -48,8 +48,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:xie-tj/dsh-easy-exit#4892ffe68280f153915cd2401150f22754ea2713",
-    "version": "0.1.0"
+    "spec": "github:xie-tj/dsh-easy-exit#0427508702c3b366a1fd89cd585f134454c5aaf7",
+    "version": "0.1.1-rc.2"
   },
   "npm": {
     "latestVersion": null,
@@ -70,21 +70,34 @@
         "default": "./lib/invariant.js",
         "types": "./lib/types/invariant.d.ts"
       },
-      "./package.json": "./package.json"
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
+      "./src/*": "./src/*",
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/typert.host.d.ts"
+      },
+      "./types": {
+        "default": "./lib/types/types.js",
+        "types": "./lib/types/types.d.ts"
+      }
     },
     "main": "lib/index.js",
     "name": "@deepseek-ai/dsh-session-message-revision",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.1.1-rc.2"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/498d3a9d9a6cc2a947f0a1b6859672ef5a63781d685d1d704caab806f456f7e4/xie-tj/dsh-easy-exit",
-    "description": "Optional DeepSeek Harness plugin for editing and resending the latest direct-human message"
+    "coverUrl": "https://opengraph.githubassets.com/dfa53e3069015590d43edceb2561592885aa00f2b6bf1cf661975d1d3f4d68e0/xie-tj/dsh-easy-exit",
+    "description": "DeepSeek Harness 最新用户消息编辑与重发插件（Host / Client 解耦）"
   },
   "readme": {
     "available": true,
-    "excerpt": "Optional Web action for editing and resending the latest direct-human text message. The package contributes an additive action beside the built-in Copy control and keeps the conversation renderer owned by dsh-client-ui-conversation."
+    "excerpt": "An optional plugin with separate Host and browser entrypoints for editing and resending the latest direct-human text message. The Host entrypoint owns admission, queueing, audit, rollback, and the generated Remote; the browser entrypoint owns only the additive Edit action."
   },
   "schemaVersion": 1,
   "scripts": {

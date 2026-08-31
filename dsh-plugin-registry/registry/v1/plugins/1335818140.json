@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichedAt": "2026-08-31T10:09:19.846Z",
     "enrichmentStatus": "ok",
-    "headSha": "bd28621129036f88ab4ba122829aa4c2ae1fb772"
+    "headSha": "fec607a5d105af343debd27c0ac4dd3ef6b3e3a3"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-16T10:26:35Z",
     "databaseId": 1335818140,
     "defaultBranch": "main",
-    "description": "dsh插件",
+    "description": "DeepSeek Harness Token 用量统计面板：模型/渠道聚合、余额配额、精确归档与费用估算",
     "fork": false,
     "forks": 0,
-    "headSha": "bd28621129036f88ab4ba122829aa4c2ae1fb772",
+    "headSha": "fec607a5d105af343debd27c0ac4dd3ef6b3e3a3",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,33 +25,35 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOT573nA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f7d3bf26a6c0b3b501ddbbe3931e53669ddce824e6372ff98fd13fd25d75ab48/zhang-jiazhi/dsh-stats-panel",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/0aea9077080614cf9e156e749fd2f428cd92445e7907268ec5428ef8d5e152f3/zhang-jiazhi/dsh-stats-panel",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/275236383?v=4",
       "login": "zhang-jiazhi"
     },
-    "pushedAt": "2026-08-16T11:05:33Z",
+    "pushedAt": "2026-08-30T13:12:51Z",
     "slug": "zhang-jiazhi/dsh-stats-panel",
     "stars": 2,
     "topics": [
+      "dashboard",
       "deepseek-harness",
       "dsh",
       "dsh-plugin",
       "llm-usage",
-      "token-stats"
+      "token-stats",
+      "token-usage"
     ],
-    "updatedAt": "2026-08-25T03:47:12Z",
+    "updatedAt": "2026-08-30T13:14:39Z",
     "url": "https://github.com/zhang-jiazhi/dsh-stats-panel"
   },
   "id": "gh:1335818140",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose a ready package entry point.",
+    "available": true,
+    "packageName": "@linxin666/dsh-stats-panel",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zhang-jiazhi/dsh-stats-panel#fec607a5d105af343debd27c0ac4dd3ef6b3e3a3",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
@@ -61,10 +63,12 @@
   "package": {
     "exports": {
       ".": {
-        "default": "./lib/index.js"
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
       },
       "./client": {
-        "default": "./lib/client.js"
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
       },
       "./package.json": "./package.json"
     },
@@ -72,15 +76,15 @@
     "name": "@linxin666/dsh-stats-panel",
     "status": "valid",
     "type": "module",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f7d3bf26a6c0b3b501ddbbe3931e53669ddce824e6372ff98fd13fd25d75ab48/zhang-jiazhi/dsh-stats-panel",
-    "description": "dsh插件"
+    "coverUrl": "https://opengraph.githubassets.com/0aea9077080614cf9e156e749fd2f428cd92445e7907268ec5428ef8d5e152f3/zhang-jiazhi/dsh-stats-panel",
+    "description": "DeepSeek Harness Token 用量统计面板：模型/渠道聚合、余额配额、精确归档与费用估算"
   },
   "readme": {
     "available": true,
-    "excerpt": "DeepSeek Harness (DSH) 的 Token 用量统计面板：模型用量、Token 消耗、缓存命中率、按渠道统计、渠道余额/套餐余量、费用估算（人民币）。集成在设置页侧边菜单（「Token 使用统计」），类似 NewAPI 的统计界面。"
+    "excerpt": "DeepSeek Harness (DSH) 的 Token 用量统计面板：模型用量、Token 消耗、缓存命中率、按渠道统计、渠道余额/套餐余量、费用估算（人民币）。以会话顶部独立 Tab 页呈现（「Token 统计」，与 对话 / 轨迹 / 上下文 / 记忆 并列），按 NewAPI / Sub2API 统计看板风格设计的全宽仪表盘。"
   },
   "schemaVersion": 1,
   "scripts": {
