@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
     "enrichmentStatus": "ok",
-    "headSha": "933f1c19f3cea35251c11ab53b11094585cfe349"
+    "headSha": "b543888b0e7a1cb91b4bf85eb3c9f6371f1fe397"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,20 @@
     "description": "Bring ChatGPT’s reasoning to your local codebase. Work directly, or delegate larger tasks to DSH.",
     "fork": false,
     "forks": 4,
-    "headSha": "933f1c19f3cea35251c11ab53b11094585cfe349",
+    "headSha": "b543888b0e7a1cb91b4bf85eb3c9f6371f1fe397",
     "homepageUrl": "https://www.npmjs.com/package/@beforewave/dsh-with-chatgpt",
-    "language": null,
-    "license": null,
+    "language": "TypeScript",
+    "license": {
+      "name": "MIT License",
+      "spdxId": "MIT"
+    },
     "nodeId": "R_kgDOT_2rnQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/eb21570a9bb61fb9e1d6ff8b9d67e2bf6651e269ca3f3ca68194d5afaa6cbd24/BeforeWave/dsh-with-chatgpt",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ac9a2a624055c09d05550000cedb6937a57a5ed8c1245c55d87762959b4d3803/BeforeWave/dsh-with-chatgpt",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/290928491?v=4",
       "login": "BeforeWave"
     },
-    "pushedAt": "2026-08-28T09:03:19Z",
+    "pushedAt": "2026-09-01T08:26:25Z",
     "slug": "BeforeWave/dsh-with-chatgpt",
     "stars": 38,
     "topics": [
@@ -41,7 +44,7 @@
       "serena",
       "typescript"
     ],
-    "updatedAt": "2026-08-29T11:41:55Z",
+    "updatedAt": "2026-09-01T08:39:53Z",
     "url": "https://github.com/BeforeWave/dsh-with-chatgpt"
   },
   "id": "gh:1342024605",
@@ -49,24 +52,45 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./runtime": {
+        "default": "./lib/runtime/index.js",
+        "types": "./lib/runtime/index.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "@beforewave/dsh-with-chatgpt",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/eb21570a9bb61fb9e1d6ff8b9d67e2bf6651e269ca3f3ca68194d5afaa6cbd24/BeforeWave/dsh-with-chatgpt",
+    "coverUrl": "https://opengraph.githubassets.com/ac9a2a624055c09d05550000cedb6937a57a5ed8c1245c55d87762959b4d3803/BeforeWave/dsh-with-chatgpt",
     "description": "Bring ChatGPT’s reasoning to your local codebase. Work directly, or delegate larger tasks to DSH."
   },
   "readme": {
     "available": true,
-    "excerpt": "DSH with ChatGPT 将 ChatGPT 深度接入你的本地代码库与 DeepSeek Harness (DSH) 原生执行 Session。"
+    "excerpt": "DSH with ChatGPT 让 ChatGPT 不再只停留在聊天窗口里，而是真正参与到你的本地开发工作中。"
   },
   "schemaVersion": 1,
   "scripts": {

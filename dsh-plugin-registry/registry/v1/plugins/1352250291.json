@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "6cacdc9a7ebed6bc31a4f31ef13d0bef7e37689f"
   },
   "github": {
@@ -41,33 +41,51 @@
   },
   "id": "gh:1352250291",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-yeelight-smart-home",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:axdlee/dsh-yeelight-smart-home#6cacdc9a7ebed6bc31a4f31ef13d0bef7e37689f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-yeelight-smart-home",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e56311f1cb47efd5a67064dac20c2fa168be8ca92b4539697a583a412170123e/axdlee/dsh-yeelight-smart-home",
     "description": "DeepSeek Harness plugin: Yeelight smart home control via the local yeelight-home runtime (skill, tools, settings card)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness plugin — control, organize, diagnose, design, personalize, and answer product knowledge questions for a Yeelight smart home, powered by the local yeelight-home runtime."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

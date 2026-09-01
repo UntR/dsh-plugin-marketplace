@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
     "enrichmentStatus": "ok",
-    "headSha": "9961118802c5dd8627aeb794c812b1f42ea6fbf3"
+    "headSha": "da85bb833dd5a83a9b34fe60f584df9904faff96"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH 温暖极简模式：模仿官方 minimal 的首轮两工具形态引导 deepseek-v4-pro 进入 we need 思维链；bootstrap 后第二轮再放行其余工具。",
     "fork": false,
     "forks": 0,
-    "headSha": "9961118802c5dd8627aeb794c812b1f42ea6fbf3",
+    "headSha": "da85bb833dd5a83a9b34fe60f584df9904faff96",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUCOL0g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e9a3cb29d0bfdd5ed8f4cc84671647df7c837f217abe7fa86aed93ef6872d27e/sch246/dsh-warm-minimal",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/11afc5e5e03730a0798c1c75cb4f897b9fc0db8b4d5321fbea493d7067ce7d02/sch246/dsh-warm-minimal",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/58353582?u=f0a633066cd8a8611a05895b35adeaac5a965fa9&v=4",
       "login": "sch246"
     },
-    "pushedAt": "2026-08-28T10:14:32Z",
+    "pushedAt": "2026-09-01T00:50:19Z",
     "slug": "sch246/dsh-warm-minimal",
     "stars": 1,
     "topics": [
@@ -41,7 +41,7 @@
       "reasoning-style",
       "warm-start"
     ],
-    "updatedAt": "2026-08-28T10:17:10Z",
+    "updatedAt": "2026-09-01T00:51:01Z",
     "url": "https://github.com/sch246/dsh-warm-minimal"
   },
   "id": "gh:1344506834",
@@ -51,8 +51,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:sch246/dsh-warm-minimal#9961118802c5dd8627aeb794c812b1f42ea6fbf3",
-    "version": "0.1.0"
+    "spec": "github:sch246/dsh-warm-minimal#da85bb833dd5a83a9b34fe60f584df9904faff96",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
@@ -62,22 +62,45 @@
   "package": {
     "exports": {
       ".": "./index.mjs",
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./config": "./config.mjs",
       "./cordis.patch.yml": "./cordis.patch.yml",
-      "./package.json": "./package.json"
+      "./host": {
+        "default": "./lib/remote.js",
+        "types": "./lib/types/remote.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./projection": "./projection-host.mjs",
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
+      "./runtime": "./runtime.mjs",
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/typert.host.d.ts"
+      },
+      "./types": {
+        "default": "./lib/types/types.js",
+        "types": "./lib/types/types.d.ts"
+      }
     },
     "main": "index.mjs",
     "name": "dsh-warm-minimal",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e9a3cb29d0bfdd5ed8f4cc84671647df7c837f217abe7fa86aed93ef6872d27e/sch246/dsh-warm-minimal",
+    "coverUrl": "https://opengraph.githubassets.com/11afc5e5e03730a0798c1c75cb4f897b9fc0db8b4d5321fbea493d7067ce7d02/sch246/dsh-warm-minimal",
     "description": "DSH 温暖极简模式：模仿官方 minimal 的首轮两工具形态引导 deepseek-v4-pro 进入 we need 思维链；bootstrap 后第二轮再放行其余工具。"
   },
   "readme": {
     "available": true,
-    "excerpt": "温暖极简模式（warm-minimal） 是 DeepSeek Harness (dsh) 的实验性 agent preset。它在处理新会话的第一条真实请求前，先通过正常 agent loop 执行一轮工作目录确认，让第一条真实请求成为第二轮。"
+    "excerpt": "温暖极简模式（warm-minimal） 是 DeepSeek Harness 的实验性 agent preset。它保留 deepseek-v4-pro 敏感的极简初始界面，并在之后把主代理收窄为协调者，把更宽泛的发现与执行能力交给子代理。"
   },
   "schemaVersion": 1,
   "scripts": {

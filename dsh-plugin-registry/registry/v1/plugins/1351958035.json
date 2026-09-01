@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "06541fec6303f3ee6ca0136e6f929fb05317989f"
   },
   "github": {
@@ -45,27 +45,41 @@
   },
   "id": "gh:1351958035",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-rewind",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:JJXjustin/dsh-session-rewind#06541fec6303f3ee6ca0136e6f929fb05317989f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./core": "./lib/core.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-rewind",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/44e3203410edbade5e17b4da91e3d443b041fbd2cc730571b2422698b4997f91/JJXjustin/dsh-session-rewind",
     "description": "DSH session and file rewind plugin (shadow git repo)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 会话回退插件：给会话事件日志打「版本点」，可把会话回退到任意版本点（归档原日志 → 重建日志文件 → 刷新投影缓存），并可选 git 锚点实现文件级回退。"
   },
   "schemaVersion": 1,
   "scripts": {

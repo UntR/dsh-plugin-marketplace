@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "51d863358223b5a83630ed9c277a1049cd8951e0"
   },
   "github": {
@@ -42,27 +42,39 @@
   },
   "id": "gh:1351791683",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ssrf-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jwilson411/dsh-ssrf-guard#51d863358223b5a83630ed9c277a1049cd8951e0",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./ssrf": "./src/ssrf.js"
+    },
+    "main": "src/index.js",
+    "name": "dsh-ssrf-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c3d88c1522d0861be591f3b30175a3a796cbe984cd8a86c8dabdce249f32170b/jwilson411/dsh-ssrf-guard",
     "description": "DeepSeek Harness plugin: fail-closed URL host/scheme allowlist that runs before a request is opened"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness function plugin holding outbound URLs to a fail-closed host and scheme allowlist, checked before a request is opened. Hosts that are not on the list never leave the box, because nothing here opens anything: the check is a URL parse and a string match."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "e0070b97354ed488a5b2c5c7e41b5c4583a8493f"
   },
   "github": {
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,14 +51,23 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-privacy-gate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4a68dae927cae884abea8fcdee6d37f21472419fec47e01d190d78506c825683/nmsl1234/dsh-privacy-gate",
     "description": "dsh-plugin"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "云端主模型会话下，用户输入与工具结果在进入云端上下文之前被自动拦截：敏感内容替换为占位符，原文不上云。判断模型由用户自填（本机 Ollama 或任意 OpenAI 兼容 API）。主模型本地或未配置 judge 时插件自动跳过（零开销）。"
   },
   "schemaVersion": 1,
   "scripts": {

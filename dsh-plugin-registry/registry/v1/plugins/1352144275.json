@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "9ba508c103a21f1fa68264ec0a05d49be7b03935"
   },
   "github": {
@@ -41,33 +41,63 @@
   },
   "id": "gh:1352144275",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@hrhgit/dsh-skill-manager",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:hrhgit/dsh-skill-manager#9ba508c103a21f1fa68264ec0a05d49be7b03935",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/remote.js",
+        "types": "./lib/types/remote.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/remote.js",
+        "types": "./lib/types/remote.d.ts"
+      },
+      "./types": {
+        "default": "./lib/types/types.js",
+        "types": "./lib/types/types.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "@hrhgit/dsh-skill-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/783426f8f634bfa3b1bd23c3279b96ca3b8c10d940ed12e0ebdd686a13507160/hrhgit/dsh-skill-manager",
-    "description": ""
+    "description": "DeepSeek Harness settings plugin for editing, creating, and importing local skills. It reads the active catalog from the host ctx.skills registry instead of maintaining a second discovery, priority, or file-watching implementation."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness settings plugin for editing, creating, and importing local skills. It reads the active catalog from the host ctx.skills registry instead of maintaining a second discovery, priority, or file-watching implementation."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

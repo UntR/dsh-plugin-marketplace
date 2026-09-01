@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
     "enrichmentStatus": "ok",
-    "headSha": "64dfa964aac38754ca7a38da0ce2810a7603934c"
+    "headSha": "0e3d6a37bc836e2c77cf887ccedc001047b5bb66"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,20 @@
     "description": "Tabbit Browser plugins for Deepseek Harness",
     "fork": false,
     "forks": 10,
-    "headSha": "64dfa964aac38754ca7a38da0ce2810a7603934c",
+    "headSha": "0e3d6a37bc836e2c77cf887ccedc001047b5bb66",
     "homepageUrl": "https://www.tabbit.ai/",
-    "language": "JavaScript",
-    "license": null,
+    "language": "TypeScript",
+    "license": {
+      "name": "MIT License",
+      "spdxId": "MIT"
+    },
     "nodeId": "R_kgDOT4Rjkw",
-    "openGraphImageUrl": "https://repository-images.githubusercontent.com/1334076307/309d9c9f-0d59-43b8-b83f-93029da00270",
+    "openGraphImageUrl": "https://repository-images.githubusercontent.com/1334076307/0047c392-9b00-4a30-a678-7dd93d83f90e",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/265154593?v=4",
       "login": "Tabbit-Browser"
     },
-    "pushedAt": "2026-08-31T06:01:27Z",
+    "pushedAt": "2026-09-01T07:23:32Z",
     "slug": "Tabbit-Browser/dsh-tabbit",
     "stars": 98,
     "topics": [
@@ -44,7 +47,7 @@
       "playwright",
       "tabbit"
     ],
-    "updatedAt": "2026-08-30T03:19:57Z",
+    "updatedAt": "2026-09-01T07:34:46Z",
     "url": "https://github.com/Tabbit-Browser/dsh-tabbit"
   },
   "id": "gh:1334076307",
@@ -54,31 +57,41 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-tabbit@0.2.3",
-    "version": "0.2.3"
+    "spec": "dsh-tabbit@0.3.0",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": "0.2.3",
+    "latestVersion": "0.3.0",
     "published": true,
     "repositoryMatches": true
   },
   "package": {
     "exports": {
-      ".": "./index.js"
+      ".": "./lib/core/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./core": "./lib/core/index.js",
+      "./installer": "./lib/installer/index.js",
+      "./mentions": "./lib/mentions/index.js",
+      "./package.json": "./package.json",
+      "./permissions": "./lib/permissions/index.js",
+      "./runtime": "./lib/runtime/client.js",
+      "./tool-browser": "./lib/tool-browser/index.js",
+      "./web-fetch": "./lib/web-fetch/index.js"
     },
-    "main": "./index.js",
+    "main": "./lib/core/index.js",
     "name": "dsh-tabbit",
     "status": "valid",
     "type": "module",
-    "version": "0.2.3"
+    "version": "0.3.2"
   },
   "presentation": {
-    "coverUrl": "https://repository-images.githubusercontent.com/1334076307/309d9c9f-0d59-43b8-b83f-93029da00270",
+    "coverUrl": "https://repository-images.githubusercontent.com/1334076307/0047c392-9b00-4a30-a678-7dd93d83f90e",
     "description": "Tabbit Browser plugins for Deepseek Harness"
   },
   "readme": {
     "available": true,
-    "excerpt": "A plugin for DeepSeek Harness (DSH) that gives the agent control over your Tabbit Browser: real pages, real login state, and real interactions, driven through tabbit-cli — the task-isolated Playwright CLI owned by the browser itself. Use it for web automation, information extract"
+    "excerpt": "Tabbit Browser 的 DeepSeek Harness（dsh）插件包（bundle）。dsh 可以通过此插件调用 Tabbit 完成 Agent 任务：真实页面、真实登录态、真实交互，经原生 code-first 工具驱动（不走 shell 转发）。适用于网页自动化、信息提取、QA 与评测。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "70fde33d8effa541b80836202bca2ea8b19ee615"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1351843133",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-auto-approver",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:nicecx/dsh-auto-approver#70fde33d8effa541b80836202bca2ea8b19ee615",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-auto-approver",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/513dbd8f23120ebc747feb1044f33bc94b7a954dee1a832225d3f23b2a327542/nicecx/dsh-auto-approver",
     "description": "Configurable auto-approval for DeepSeek Harness: intercepts approval/request and answers allowed-once/rejected by policy (allow-all/allowlist/off + denyAlways), with a full audit log."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness asks for approval before privileged operations (file writes, command execution, danger-full-access, …). In a trusted, autonomous setup — or for a known-safe subset of tools — those prompts are pure noise. This host plugin intercepts every approval request before "
   },
   "schemaVersion": 1,
   "scripts": {

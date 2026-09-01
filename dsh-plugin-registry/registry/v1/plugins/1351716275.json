@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "3543bd4d87548a7bebd00c3eb5e778dd4ae6c04b"
   },
   "github": {
@@ -44,27 +44,40 @@
   },
   "id": "gh:1351716275",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-net-proxy-plugin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:minatoAI/dsh-net-proxy-plugin#3543bd4d87548a7bebd00c3eb5e778dd4ae6c04b",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-net-proxy-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b03f52ab4dd2f3612495ecd71bf33d184ba3ab94fb85d363225e6ff262702236/minatoAI/dsh-net-proxy-plugin",
     "description": "DeepSeek Harness fallback network proxy plugin: detects system proxies, probes overseas connectivity (Google/GitHub), routes dsh outbound HTTP through a working local proxy"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的本地网络代理兜底插件（bundle）：自动扫描系统里已有的网络代理（环境变量、Windows 系统代理、macOS/Linux 系统代理、常见本地代理端口），探测海外网站（默认 Google 204 与 GitHub）的连通性；当直连不通而某个本地代理可用时，把该代理接入正在运行的 dsh —— 进程内所有 fetch 走该代理，并同步设置 HTTPSPROXY/HTTPPROXY/NOPROXY 环境变量，让 agent 启动的 git、pnpm 等子进程同样可用代理。"
   },
   "schemaVersion": 1,
   "scripts": {

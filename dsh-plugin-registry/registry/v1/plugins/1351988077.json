@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "c2ecf91394487597fde448cec4d5c99dbf35f9dd"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./storage": {
+        "default": "./lib/storage.js",
+        "types": "./lib/storage.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "@shayexiangpaimeng/dsh-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d3563e662602b2b71a7cf7d0b09501e166f321d1e9a9e1a8f5e5a0f40cf82812/shayexiangpaimeng/dsh-memory",
     "description": "Append-only layered memory plugin for DeepSeek Harness: five-layer partitioning, write gate, keyword recall, claim-anchors verification"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Append-only layered memory for DeepSeek Harness agents."
   },
   "schemaVersion": 1,
   "scripts": {

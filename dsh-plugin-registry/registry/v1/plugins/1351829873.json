@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
-    "headSha": "3bce97dfdb03af9b5f6649c1298c42d7a8a1b80f"
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
+    "headSha": "60426f0d6239dc8cd5a9e1dd217971a79a9cb2eb"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "YesPlayMusic controls and now-playing status for dsh-TUI",
     "fork": false,
     "forks": 0,
-    "headSha": "3bce97dfdb03af9b5f6649c1298c42d7a8a1b80f",
+    "headSha": "60426f0d6239dc8cd5a9e1dd217971a79a9cb2eb",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUJNJcQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5540802ca55b2eb0c4dccfbbc35d2c3eb22d407b74e5181c62010810b7992fc8/Nagi-ovo/dsh-music-tui",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e3d12aa7f8626f243790c3ac10e5d18f14ba8b1caeacb2638852e61b0dbdf506/Nagi-ovo/dsh-music-tui",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/101612750?u=5757f982e0b4ee8e5298062bf4b88e072195978e&v=4",
       "login": "Nagi-ovo"
     },
-    "pushedAt": "2026-08-31T00:36:15Z",
+    "pushedAt": "2026-08-31T18:57:44Z",
     "slug": "Nagi-ovo/dsh-music-tui",
     "stars": 2,
     "topics": [
@@ -41,7 +41,7 @@
       "terminal",
       "yesplaymusic"
     ],
-    "updatedAt": "2026-08-31T01:38:13Z",
+    "updatedAt": "2026-08-31T19:00:45Z",
     "url": "https://github.com/Nagi-ovo/dsh-music-tui"
   },
   "id": "gh:1351829873",
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@dsh-tui-ecosystem/music",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5540802ca55b2eb0c4dccfbbc35d2c3eb22d407b74e5181c62010810b7992fc8/Nagi-ovo/dsh-music-tui",
+    "coverUrl": "https://opengraph.githubassets.com/e3d12aa7f8626f243790c3ac10e5d18f14ba8b1caeacb2638852e61b0dbdf506/Nagi-ovo/dsh-music-tui",
     "description": "YesPlayMusic controls and now-playing status for dsh-TUI"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 dsh-TUI 里查看并控制已经运行的 YesPlayMusic TUI。插件提供 /music 命令和提示框上方的紧凑音乐条，不修改 DeepSeek Harness、dsh-TUI 或 YesPlayMusic 本体，也不会自动启动播放器。"
   },
   "schemaVersion": 1,
   "scripts": {

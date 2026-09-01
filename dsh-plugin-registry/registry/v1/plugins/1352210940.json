@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
-    "headSha": "69fc3324ece5336fe7cec451d3768b4d0dde6b98"
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
+    "headSha": "fcc725aa82280072e19136f6fbed72385ad1b4c0"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "基于 DeepSeek Harness 的可复用 CSV 描述统计与可复现报告插件",
     "fork": false,
     "forks": 0,
-    "headSha": "69fc3324ece5336fe7cec451d3768b4d0dde6b98",
+    "headSha": "fcc725aa82280072e19136f6fbed72385ad1b4c0",
     "homepageUrl": null,
     "language": "Python",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUJkZ_A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f0939adb056d88832398d314a4c598bdb513fb2ea45fe265e577174bb8f8290a/SUFE-Chaoyi/dsh-plugin-csv-report",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/51cf7bd3749cb4f1fc32b94053b3f3d32d9115098a0894e8dd6578a8dfe19f0c/SUFE-Chaoyi/dsh-plugin-csv-report",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/98308138?u=0cb8d53e9e063fe99d946d3baf172d29e245a45c&v=4",
       "login": "SUFE-Chaoyi"
     },
-    "pushedAt": "2026-08-31T09:47:06Z",
+    "pushedAt": "2026-09-01T06:47:11Z",
     "slug": "SUFE-Chaoyi/dsh-plugin-csv-report",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "ai-agent",
       "deepseek-harness",
@@ -42,38 +42,50 @@
       "python",
       "reproducible-research"
     ],
-    "updatedAt": "2026-08-31T09:48:52Z",
+    "updatedAt": "2026-09-01T06:48:04Z",
     "url": "https://github.com/SUFE-Chaoyi/dsh-plugin-csv-report"
   },
   "id": "gh:1352210940",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-csv-report",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:SUFE-Chaoyi/dsh-plugin-csv-report#fcc725aa82280072e19136f6fbed72385ad1b4c0",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs",
+        "types": "./lib/index.d.mts"
+      }
+    },
+    "main": "./lib/index.mjs",
+    "name": "dsh-plugin-csv-report",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f0939adb056d88832398d314a4c598bdb513fb2ea45fe265e577174bb8f8290a/SUFE-Chaoyi/dsh-plugin-csv-report",
+    "coverUrl": "https://opengraph.githubassets.com/51cf7bd3749cb4f1fc32b94053b3f3d32d9115098a0894e8dd6578a8dfe19f0c/SUFE-Chaoyi/dsh-plugin-csv-report",
     "description": "基于 DeepSeek Harness 的可复用 CSV 描述统计与可复现报告插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个面向 CSV 描述统计与可复现报告的 DeepSeek Harness 插件。它把本地 CSV 的数据质量检查、连续变量描述统计、分类变量分布、二元特征占比与分组统计封装为 dsh 工具 tariffdescribe。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

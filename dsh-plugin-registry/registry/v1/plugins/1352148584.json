@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "724bc273b015c04ff36cb5c63b0330f64bb00d0e"
   },
   "github": {
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host/index.js",
+      "./manifest": "./public/manifest.webmanifest",
+      "./sw": "./src/sw.js"
+    },
+    "main": "src/host/index.js",
+    "name": "dsh-pwa-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e643db24d367568ab119f4b45ac369f8d2468c60ad603f36644ed6682d174c9b/RaulLazaro/dsh-pwa-plugin",
     "description": "PWA plugin for DeepSeek Harness — adds offline support and install-as-app capability with service worker, manifest, and official DeepSeek icons."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "PWA plugin for DeepSeek Harness that adds offline support and install-as-app capability."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
-    "headSha": "2a7f726637c38125a0629dda2da3ad7635bfaa4f"
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
+    "headSha": "4f02baa2af7f1aef3fc0dafa83c73065b0fca1d2"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-31T07:45:54Z",
     "databaseId": 1352139087,
     "defaultBranch": "main",
-    "description": "Execution-fidelity guard bundle for DeepSeek Harness",
+    "description": "Unofficial alpha execution-fidelity guard bundle for DeepSeek Harness.",
     "fork": false,
     "forks": 0,
-    "headSha": "2a7f726637c38125a0629dda2da3ad7635bfaa4f",
+    "headSha": "4f02baa2af7f1aef3fc0dafa83c73065b0fca1d2",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,47 +25,58 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOUJgBTw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/c645291ad748f954009a34ad395ff0dd2a3c12744805354e71fe29e3f0900e77/rrrrrredy/dsh-execution-fidelity-guard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/2e5c91fa9992084f996d371ab294bc6e48ca13612889ba54b6fd8f99e8996342/rrrrrredy/dsh-execution-fidelity-guard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/133665654?u=9fc4f31a7abc313dd7c507ea60672515ab567b4e&v=4",
       "login": "rrrrrredy"
     },
-    "pushedAt": "2026-08-31T08:37:25Z",
+    "pushedAt": "2026-08-31T10:45:45Z",
     "slug": "rrrrrredy/dsh-execution-fidelity-guard",
     "stars": 0,
     "topics": [
       "agent-safety",
-      "codex",
       "deepseek-harness",
       "dsh-plugin",
       "execution-fidelity"
     ],
-    "updatedAt": "2026-08-31T08:39:26Z",
+    "updatedAt": "2026-08-31T10:47:18Z",
     "url": "https://github.com/rrrrrredy/dsh-execution-fidelity-guard"
   },
   "id": "gh:1352139087",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-execution-fidelity-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:rrrrrredy/dsh-execution-fidelity-guard#4f02baa2af7f1aef3fc0dafa83c73065b0fca1d2",
+    "version": "0.1.0-alpha.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./contract": "./src/contract.mjs",
+      "./package.json": "./package.json",
+      "./policy": "./src/policy.mjs"
+    },
+    "main": "index.mjs",
+    "name": "dsh-execution-fidelity-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-alpha.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/c645291ad748f954009a34ad395ff0dd2a3c12744805354e71fe29e3f0900e77/rrrrrredy/dsh-execution-fidelity-guard",
-    "description": "Execution-fidelity guard bundle for DeepSeek Harness"
+    "coverUrl": "https://opengraph.githubassets.com/2e5c91fa9992084f996d371ab294bc6e48ca13612889ba54b6fd8f99e8996342/rrrrrredy/dsh-execution-fidelity-guard",
+    "description": "Unofficial alpha execution-fidelity guard bundle for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An unofficial, buildless DeepSeek Harness bundle that checks a pending tool call against a small task contract and checks completion claims against current tool evidence."
   },
   "schemaVersion": 1,
   "scripts": {

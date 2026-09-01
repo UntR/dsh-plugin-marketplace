@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "02246642068df431282cb5fc8c09d39985706983"
   },
   "github": {
@@ -43,27 +43,42 @@
   },
   "id": "gh:1351972125",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-table-attach",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yybukn/dsh-table-attach#02246642068df431282cb5fc8c09d39985706983",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-table-attach",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/afdda432ad8785e66a793e0872cd755fb568bece937bacb484747b9a78ad70ee/yybukn/dsh-table-attach",
     "description": "在dph中可以直接拖动.xlsx和.csv的表格文件到输入框中"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Paste or drag tables & documents (.xlsx, .csv, .pdf, .zip, …) into the DSH web composer. The file is saved into the current session's workspace and an @reference is inserted at the caret, so the agent reads the real file."
   },
   "schemaVersion": 1,
   "scripts": {

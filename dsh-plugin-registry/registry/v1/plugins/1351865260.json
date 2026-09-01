@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
-    "headSha": "422226eb0a9cb3d171cea0aa7aeb93c76493093c"
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
+    "headSha": "7236a332faa3efeafc642cbf1f386f349bacc030"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Web search provider for the DeepSeek Harness ctx.web seam via the LiteLLM proxy OpenAI Responses API (DeepSeek native server-side web_search)",
     "fork": false,
     "forks": 0,
-    "headSha": "422226eb0a9cb3d171cea0aa7aeb93c76493093c",
+    "headSha": "7236a332faa3efeafc642cbf1f386f349bacc030",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUJPTrA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f82cc1e9a5fa656e016029bc19bf41ff99f51417aaa65b788b928cf5e8ed263c/yunxiyang/dsh-web-search-litellm",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/19f3c264cc17a9010b19b3875c1056c0e0b48b0853764f64c234cfb6ff3b939e/yunxiyang/dsh-web-search-litellm",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/56627967?v=4",
       "login": "yunxiyang"
     },
-    "pushedAt": "2026-08-31T02:48:04Z",
+    "pushedAt": "2026-09-01T02:28:09Z",
     "slug": "yunxiyang/dsh-web-search-litellm",
     "stars": 0,
     "topics": [
@@ -39,32 +39,47 @@
       "litellm",
       "web-search"
     ],
-    "updatedAt": "2026-08-31T02:48:32Z",
+    "updatedAt": "2026-09-01T02:28:14Z",
     "url": "https://github.com/yunxiyang/dsh-web-search-litellm"
   },
   "id": "gh:1351865260",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-web-search-litellm",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-web-search-litellm@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json",
+      "./provider": {
+        "default": "./lib/provider.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-web-search-litellm",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f82cc1e9a5fa656e016029bc19bf41ff99f51417aaa65b788b928cf5e8ed263c/yunxiyang/dsh-web-search-litellm",
+    "coverUrl": "https://opengraph.githubassets.com/19f3c264cc17a9010b19b3875c1056c0e0b48b0853764f64c234cfb6ff3b939e/yunxiyang/dsh-web-search-litellm",
     "description": "Web search provider for the DeepSeek Harness ctx.web seam via the LiteLLM proxy OpenAI Responses API (DeepSeek native server-side web_search)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH websearch provider over the LiteLLM proxy using the OpenAI Responses protocol. The request carries the server-side websearch tool, executed natively by the DeepSeek Responses API; the grounded answer and the real URLs the model opened are returned to the harness web seam (ctx"
   },
   "schemaVersion": 1,
   "scripts": {

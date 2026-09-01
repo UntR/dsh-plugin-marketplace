@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "7f2e157a213f727bf4ff95b8c16f317bf42c8150"
   },
   "github": {
@@ -43,7 +43,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -53,14 +53,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "shangshi",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4984f35ea9df7d05451dd05e5dc55339c58cbf205b8d00ae1eebab1d78e4153d/MasterBenC/shangshi-dsh",
     "description": "Shangshi DeepSeek Harness plugin for local Qimen business timing."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "商时提供两个独立入口：apps/web 是独立网页，包根目录是可安装到 DeepSeek Harness 的自包含插件。它们共享确定性奇门排盘、商务评分、未来择时推荐和方位建议。"
   },
   "schemaVersion": 1,
   "scripts": {

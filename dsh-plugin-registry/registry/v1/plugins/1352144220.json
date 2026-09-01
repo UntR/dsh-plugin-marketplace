@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "2d0ee57041a0f380ba81433bc7bea30080154192"
   },
   "github": {
@@ -41,33 +41,63 @@
   },
   "id": "gh:1352144220",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@hrhgit/dsh-agent-manager",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:hrhgit/dsh-agent-manager#2d0ee57041a0f380ba81433bc7bea30080154192",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/remote.js",
+        "types": "./lib/types/remote.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/remote.js",
+        "types": "./lib/types/remote.d.ts"
+      },
+      "./types": {
+        "default": "./lib/types/types.js",
+        "types": "./lib/types/types.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "@hrhgit/dsh-agent-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c72f40802b2f54326638b7cfd0f0f967a4276d9fd1458c7cdd8eba7af7195adc/hrhgit/dsh-agent-manager",
-    "description": ""
+    "description": "DeepSeek Harness settings plugin for the tool policy of agent presets. It adds an Agent Manager settings section; it does not manage model providers or model metadata."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness settings plugin for the tool policy of agent presets. It adds an Agent Manager settings section; it does not manage model providers or model metadata."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

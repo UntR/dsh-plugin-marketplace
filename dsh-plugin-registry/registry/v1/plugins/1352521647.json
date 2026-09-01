@@ -1,0 +1,88 @@
+{
+  "bundle": {
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
+  },
+  "crawl": {
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
+    "headSha": "5d7a42ba3f7a93f7f8695b2ff7014994558ee2e3"
+  },
+  "github": {
+    "archived": false,
+    "createdAt": "2026-08-31T14:41:24Z",
+    "databaseId": 1352521647,
+    "defaultBranch": "main",
+    "description": "Connect AI agent sessions on one machine — a DeepSeek Harness plugin for session-to-session collaboration, with lifecycle support to wake finished sessions and loop-safe messaging budgets.",
+    "fork": false,
+    "forks": 0,
+    "headSha": "5d7a42ba3f7a93f7f8695b2ff7014994558ee2e3",
+    "homepageUrl": null,
+    "language": "TypeScript",
+    "license": {
+      "name": "MIT License",
+      "spdxId": "MIT"
+    },
+    "nodeId": "R_kgDOUJ3Xrw",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b1d55170c6bffe9e564ad1d9af3381fef13eb0f3243b4f7226bff140c8e2d949/ashuai/dsh-s2s",
+    "owner": {
+      "avatarUrl": "https://avatars.githubusercontent.com/u/76211?v=4",
+      "login": "ashuai"
+    },
+    "pushedAt": "2026-09-01T07:45:12Z",
+    "slug": "ashuai/dsh-s2s",
+    "stars": 0,
+    "topics": [
+      "dsh-plugin",
+      "dsh-plugins"
+    ],
+    "updatedAt": "2026-09-01T07:45:38Z",
+    "url": "https://github.com/ashuai/dsh-s2s"
+  },
+  "id": "gh:1352521647",
+  "install": {
+    "available": true,
+    "packageName": "dsh-s2s",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:ashuai/dsh-s2s#5d7a42ba3f7a93f7f8695b2ff7014994558ee2e3",
+    "version": "0.4.0-s2s.0"
+  },
+  "npm": {
+    "latestVersion": null,
+    "published": false,
+    "repositoryMatches": null
+  },
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-s2s",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0-s2s.0"
+  },
+  "presentation": {
+    "coverUrl": "https://opengraph.githubassets.com/b1d55170c6bffe9e564ad1d9af3381fef13eb0f3243b4f7226bff140c8e2d949/ashuai/dsh-s2s",
+    "description": "Connect AI agent sessions on one machine — a DeepSeek Harness plugin for session-to-session collaboration, with lifecycle support to wake finished sessions and loop-safe messaging budgets."
+  },
+  "readme": {
+    "available": true,
+    "excerpt": "实现思路受 a2a 启发,但并非其 fork:a2a 是跨主机 mesh(hub + WebSocket + presence);而 s2s 是同宿主单进程路径,因此不继承其 hub/网络层,只借鉴了它的注入习语(空闲→followup、忙碌→inject)。s2s 用一个进程内 broker 直接投递,零 TCP 端口、零 WS、零重连。原 a2a 版实现归档在本仓库历史与 legacy-a2a 分支,作参照。(跨进程/跨机 mesh 请直接用 a2a;非 DSH 标准 A2A agent 需网关类插件。)"
+  },
+  "schemaVersion": 1,
+  "scripts": {
+    "install": false,
+    "postinstall": false,
+    "preinstall": false,
+    "prepare": true
+  }
+}

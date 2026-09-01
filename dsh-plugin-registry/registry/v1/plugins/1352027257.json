@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
-    "headSha": "7c3d88f2b062b7feaeafd43f7ff0b33ba886f955"
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
+    "headSha": "6d854de76bc979e216c5fc13ba6f4f0146c6cd24"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness 工程任务编排与发布门禁插件，支持 /mission 指令、任务路由、计划执行、验证和状态跟踪。 | Engineering mission orchestration and release-gate plugin for DeepSeek Harness with /mission routing, planning, execution, verification, and status tracking.",
     "fork": false,
     "forks": 0,
-    "headSha": "7c3d88f2b062b7feaeafd43f7ff0b33ba886f955",
+    "headSha": "6d854de76bc979e216c5fc13ba6f4f0146c6cd24",
     "homepageUrl": null,
     "language": "HTML",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUJZMeQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3421344e1562325e65853ec091fffd998b7fb1c3360d0bc2ae0c5d0e0ca4828e/bailong-Hakuryu/dsh-engineering-control-plane",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/9f7f7edec1497c78ca50beb93a9b0d46766e394054886ada99fe8b186f7bbe78/bailong-Hakuryu/dsh-engineering-control-plane",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/129986544?u=b674e9f83f23f78f6432961700da663d519b127b&v=4",
       "login": "bailong-Hakuryu"
     },
-    "pushedAt": "2026-08-31T06:42:49Z",
+    "pushedAt": "2026-09-01T02:41:44Z",
     "slug": "bailong-Hakuryu/dsh-engineering-control-plane",
     "stars": 0,
     "topics": [
@@ -38,7 +38,7 @@
       "dsh-plugin",
       "typescript"
     ],
-    "updatedAt": "2026-08-31T06:44:15Z",
+    "updatedAt": "2026-09-01T02:42:09Z",
     "url": "https://github.com/bailong-Hakuryu/dsh-engineering-control-plane"
   },
   "id": "gh:1352027257",
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,43 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./assurance-provider": {
+        "default": "./lib/assurance-provider.js",
+        "types": "./lib/types/assurance-provider.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./tools": {
+        "default": "./lib/tools.js",
+        "types": "./lib/types/tools.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-engineering-control-plane",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.9"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3421344e1562325e65853ec091fffd998b7fb1c3360d0bc2ae0c5d0e0ca4828e/bailong-Hakuryu/dsh-engineering-control-plane",
+    "coverUrl": "https://opengraph.githubassets.com/9f7f7edec1497c78ca50beb93a9b0d46766e394054886ada99fe8b186f7bbe78/bailong-Hakuryu/dsh-engineering-control-plane",
     "description": "DeepSeek Harness 工程任务编排与发布门禁插件，支持 /mission 指令、任务路由、计划执行、验证和状态跟踪。 | Engineering mission orchestration and release-gate plugin for DeepSeek Harness with /mission routing, planning, execution, verification, and status tracking."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-engineering-control-plane 为 DeepSeek Harness 提供受治理的工程任务执行。它把一次实现、修复、重构或发布验证请求固定为一个可追踪的 Mission，并由宿主负责计划、执行、验证、证据和质量门禁。"
   },
   "schemaVersion": 1,
   "scripts": {

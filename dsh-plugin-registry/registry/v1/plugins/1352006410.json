@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "1028bc9933296dca3d8405901eaaa94f6acf6119"
   },
   "github": {
@@ -42,27 +42,39 @@
   },
   "id": "gh:1352006410",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-secret-scrub",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jwilson411/dsh-secret-scrub#1028bc9933296dca3d8405901eaaa94f6acf6119",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./scrub": "./src/scrub.js"
+    },
+    "main": "src/index.js",
+    "name": "dsh-secret-scrub",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4c92c98798e549402e6b8a8f636fa9d0526b2503756d85807352503b06b43563/jwilson411/dsh-secret-scrub",
     "description": "DeepSeek Harness plugin: redact known secret shapes before the model sees them; JSONL incidents never store the preimage"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness function plugin that redacts known secret shapes on the way in and out of tool execution, and writes an append-only JSONL incident line for each one — without the preimage."
   },
   "schemaVersion": 1,
   "scripts": {

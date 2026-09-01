@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "0e870aed6df9f584d2fcbb3ccfff447dab2d1714"
   },
   "github": {
@@ -41,33 +41,67 @@
   },
   "id": "gh:1352144094",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@hrhgit/dsh-codegraph",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:hrhgit/dsh-codegraph#0e870aed6df9f584d2fcbb3ccfff447dab2d1714",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./ports": {
+        "default": "./lib/ports.js",
+        "types": "./lib/types/ports.d.ts"
+      },
+      "./remote": {
+        "default": "./lib/remote.js",
+        "types": "./lib/types/remote.d.ts"
+      },
+      "./shared": {
+        "default": "./lib/shared/index.js",
+        "types": "./lib/types/shared/index.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/remote.js",
+        "types": "./lib/types/remote.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "@hrhgit/dsh-codegraph",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/df360cefc0a6ffe4f0c2fd5e5795cbcf1df9c9f2c3adad2bb98a9be08ce4d695/hrhgit/dsh-codegraph",
-    "description": ""
+    "description": "dsh-codegraph is a question-driven code explanation plugin for DeepSeek Harness. The main agent delegates read-only investigation to a continuable child and presents a focused, evidence-backed architecture scene in better-sidebar."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-codegraph is a question-driven code explanation plugin for DeepSeek Harness. The main agent delegates read-only investigation to a continuable child and presents a focused, evidence-backed architecture scene in better-sidebar."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

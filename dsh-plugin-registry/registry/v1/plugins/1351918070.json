@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "cf828f74dd25e920cfe7f25a93bf270c7f1c1489"
   },
   "github": {
@@ -43,27 +43,42 @@
   },
   "id": "gh:1351918070",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "ue-log-reader",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Reseezhang/ue-log-reader#cf828f74dd25e920cfe7f25a93bf270c7f1c1489",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "ue-log-reader",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9e7cbbe7fd892dd76e0ec28dc394a451e338ce69e7975ea6d6f0751578965637/Reseezhang/ue-log-reader",
     "description": "DeepSeek Harness 插件：UE 日志速读卡 — 模型调用 uelog 工具扫描 Saved/Logs，流式解析+聚合去重后渲染速读卡片，一键复制缺陷单摘要"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件：UE（Unreal Engine）日志速读卡。用户在对话中说「分析一下日志」「刚闪退了看看日志」，模型自动调用 uelog 工具扫描 UE 项目 Saved/Logs/ 下的日志（支持标准 UE 日志与 Android 真机 adb logcat 格式），流式解析 + 聚合去重后渲染成一张速读卡片，并提供一键复制的缺陷单摘要。"
   },
   "schemaVersion": 1,
   "scripts": {

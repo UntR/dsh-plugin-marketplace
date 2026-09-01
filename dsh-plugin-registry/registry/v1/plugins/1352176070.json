@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
-    "headSha": "80f9e0c17d73e712b2c03bc8cb42850d8cd8d536"
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
+    "headSha": "16aed8a16354261bf0f9b579d6962a21d4b9a3d4"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "A DeepSeek Harness Web plugin for inspecting redacted LLM HTTP request and response traces.",
     "fork": false,
     "forks": 0,
-    "headSha": "80f9e0c17d73e712b2c03bc8cb42850d8cd8d536",
+    "headSha": "16aed8a16354261bf0f9b579d6962a21d4b9a3d4",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUJiRxg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/43cdb12d5e2efcd2bc1452f7f76934de04fa17cd00fd09e8821522f4a0ee2479/weekitmo/dsh-trace",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f50b2abae04419cb75a595c0d2d741ca0eaf78fad1fd351b294725f47497e046/weekitmo/dsh-trace",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/21186859?u=c203fc24ffda4d3e2b1c170dbecc488124eaf93f&v=4",
       "login": "weekitmo"
     },
-    "pushedAt": "2026-08-31T09:05:55Z",
+    "pushedAt": "2026-09-01T04:01:13Z",
     "slug": "weekitmo/dsh-trace",
     "stars": 0,
     "topics": [
@@ -46,7 +46,7 @@
       "sse",
       "typescript"
     ],
-    "updatedAt": "2026-08-31T09:12:25Z",
+    "updatedAt": "2026-09-01T04:01:47Z",
     "url": "https://github.com/weekitmo/dsh-trace"
   },
   "id": "gh:1352176070",
@@ -54,7 +54,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -64,14 +64,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-trace",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/43cdb12d5e2efcd2bc1452f7f76934de04fa17cd00fd09e8821522f4a0ee2479/weekitmo/dsh-trace",
+    "coverUrl": "https://opengraph.githubassets.com/f50b2abae04419cb75a595c0d2d741ca0eaf78fad1fd351b294725f47497e046/weekitmo/dsh-trace",
     "description": "A DeepSeek Harness Web plugin for inspecting redacted LLM HTTP request and response traces."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-trace 是一个面向 DeepSeek Harness 的 Web 插件，为轨迹旁边增加 请求追踪 Tab，把大模型请求从“黑盒调用”变成可检查的完整 HTTP 交换记录。"
   },
   "schemaVersion": 1,
   "scripts": {

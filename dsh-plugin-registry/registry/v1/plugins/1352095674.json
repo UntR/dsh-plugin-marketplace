@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "18476c743b0711d25dfcd4b66478ea2bd1a0163f"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/dsh/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "src/dsh/index.js",
+    "name": "git-ai-tracker",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/74c34da1b93501b33a2f02918f5c1d2d67b10fff4e429476b5e494d572f698ed/wyb587285-dot/git-ai-tracker",
     "description": "GitHub AI repo tracker: star ratings, growth leaderboard, Markdown reports and web dashboard."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 零依赖（仅需 Node.js ≥ 18）的本地插件/工具：持续追踪 GitHub 上以下六大方向最火、效果最好的开源项目，按「热度 + 增速 + 活跃度 + 社区」计算 15 星评分，并提供增速榜、Markdown 报告和网页仪表盘。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "6e7c5da3a91601dd8f280c68fc375197f25fdcb5"
   },
   "github": {
@@ -50,27 +50,38 @@
   },
   "id": "gh:1352022385",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-agent-lang",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-agent-lang@0.4.1",
+    "version": "0.4.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./src/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-agent-lang",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6e4ffd077eb021b6a59bba927c179b5b6988f2ede1b717d494c2fea9b21e9b86/KannaKuron/dsh-agent-lang",
     "description": "Agent language control: DSH plugin — tool-call descriptions, model thinking, and replies each follow the GUI language, force a fixed language, or turn off; injected as one global runtime-context directive. | Agent 语言控制:DSH 插件——工具描述、模型思考、回复输出三通道各自跟随界面语言 / 强制指定 / 关闭,以全局 runtime-con"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 里每一次工具调用的 description 参数都是必填的,而且原样显示在 UI 的调用卡片上(PTC 模式下它就是 runcode 卡片的标题)。但工具 schema 里对这个字段的说明全是英文措辞加英文示例(\"5-10 words … Examples: 'Count TODO markers…'\"),所以模型默认永远写英文描述——界面是中文的用户,看每一步都在看英文。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
     "headSha": "50c47c014a96fcae0f2a12b57ec4d3e95de1a0ab"
   },
   "github": {
@@ -44,33 +44,46 @@
   },
   "id": "gh:1351986359",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-workspace-change-awareness",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:kingcheng12/dsh-workspace-change-awareness#50c47c014a96fcae0f2a12b57ec4d3e95de1a0ab",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workspace-change-awareness",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/06690c7efd1d7dc0864322663466a4b2433d9299ff3970c56a8e55c92a51102c/kingcheng12/dsh-workspace-change-awareness",
     "description": "DeepSeek Harness plugin that surfaces concurrent workspace changes before an agent continues."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An installable DeepSeek Harness bundle that tells an agent when its workspace changes while it is working. It is intended for repositories edited concurrently by a person, another agent, an IDE, or a command outside Harness filesystem tools."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

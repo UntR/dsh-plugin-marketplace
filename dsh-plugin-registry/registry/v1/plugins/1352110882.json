@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
-    "enrichmentStatus": "failed",
-    "headSha": "f562a7278c4d98a59f98e0030ad7a0c893cbf31d"
+    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichmentStatus": "ok",
+    "headSha": "ee78b1d401c1c34d87eb7719dbf861a3cf46b676"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": null,
     "fork": false,
     "forks": 0,
-    "headSha": "f562a7278c4d98a59f98e0030ad7a0c893cbf31d",
+    "headSha": "ee78b1d401c1c34d87eb7719dbf861a3cf46b676",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUJeTIg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/892a55f4d6471e80dd575df625d03c81f3e4720ab1f2c89a83bd7302cd33b5f9/JxaMe/dsh-echo-memory",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/555d29b84a696ba91fa83edc39148e39cd55bce7d4e89992b8fc0ec2b529633e/JxaMe/dsh-echo-memory",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/31996595?u=ad578ded0ddbbc8a218e74d62b2810dbb6273638&v=4",
       "login": "JxaMe"
     },
-    "pushedAt": "2026-08-31T08:36:21Z",
+    "pushedAt": "2026-09-01T04:57:11Z",
     "slug": "JxaMe/dsh-echo-memory",
     "stars": 0,
     "topics": [
@@ -44,38 +44,55 @@
       "plugin",
       "typescript"
     ],
-    "updatedAt": "2026-08-31T08:40:25Z",
+    "updatedAt": "2026-09-01T04:57:16Z",
     "url": "https://github.com/JxaMe/dsh-echo-memory"
   },
   "id": "gh:1352110882",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-echo-memory",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:JxaMe/dsh-echo-memory#ee78b1d401c1c34d87eb7719dbf861a3cf46b676",
+    "version": "0.2.8"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-echo-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.8"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/892a55f4d6471e80dd575df625d03c81f3e4720ab1f2c89a83bd7302cd33b5f9/JxaMe/dsh-echo-memory",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/555d29b84a696ba91fa83edc39148e39cd55bce7d4e89992b8fc0ec2b529633e/JxaMe/dsh-echo-memory",
+    "description": "记忆落盘在你本地的 memory.json，人类可读、原子写入、重启不丢。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "记忆落盘在你本地的 memory.json，人类可读、原子写入、重启不丢。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
