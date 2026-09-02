@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-31T10:09:19.846Z",
+    "enrichedAt": "2026-09-02T08:21:51.724Z",
     "enrichmentStatus": "ok",
-    "headSha": "6ac433e02e836f77218737a67747a8c32f376021"
+    "headSha": "e48fa62c93dc053a2f95d02cd96fdfa079f63b47"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Multimodal tool suite for DeepSeek Harness: ModLens vision, local ComfyUI, Unity, creative apps, CAD, and Ren'Py.",
     "fork": false,
     "forks": 0,
-    "headSha": "6ac433e02e836f77218737a67747a8c32f376021",
+    "headSha": "e48fa62c93dc053a2f95d02cd96fdfa079f63b47",
     "homepageUrl": null,
     "language": "Python",
     "license": {
@@ -25,29 +25,29 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4edSw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3e1aa0e97c32cae20756210fc6403aff30668a1fbb44fb802ce4d385da9b7223/pirate-608/dsh-multi-tools",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/0063b404d61832704ab9a72d90cd730fc4de1acc07bf7da8ed92e8d07ae91aab/pirate-608/dsh-multi-tools",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/243932800?u=bdb3f644ac751c9cd1b72b4ed67953d84e2c4f31&v=4",
       "login": "pirate-608"
     },
-    "pushedAt": "2026-08-31T08:56:09Z",
+    "pushedAt": "2026-09-02T02:37:40Z",
     "slug": "pirate-608/dsh-multi-tools",
     "stars": 2,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-31T09:20:15Z",
+    "updatedAt": "2026-09-02T02:23:45Z",
     "url": "https://github.com/pirate-608/dsh-multi-tools"
   },
   "id": "gh:1334287691",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@pirate-608/dsh-multi-tools",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:pirate-608/dsh-multi-tools#e48fa62c93dc053a2f95d02cd96fdfa079f63b47",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
@@ -55,25 +55,33 @@
     "repositoryMatches": null
   },
   "package": {
-    "main": null,
-    "name": "pirate-608-dsh-multi-tools",
+    "exports": {
+      ".": {
+        "default": "./lib/src/index.js",
+        "types": "./lib/src/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/src/index.js",
+    "name": "@pirate-608/dsh-multi-tools",
     "status": "valid",
     "type": "module",
-    "version": "0.0.0"
+    "version": "0.1.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3e1aa0e97c32cae20756210fc6403aff30668a1fbb44fb802ce4d385da9b7223/pirate-608/dsh-multi-tools",
+    "coverUrl": "https://opengraph.githubassets.com/0063b404d61832704ab9a72d90cd730fc4de1acc07bf7da8ed92e8d07ae91aab/pirate-608/dsh-multi-tools",
     "description": "Multimodal tool suite for DeepSeek Harness: ModLens vision, local ComfyUI, Unity, creative apps, CAD, and Ren'Py."
   },
   "readme": {
     "available": true,
-    "excerpt": "A curated multimodal tool suite for DeepSeek Harness. It combines visual understanding, local image generation, game-engine workflows, creative applications, and CAD automation while keeping every domain in an isolated Agent Preset."
+    "excerpt": "A private, install-once multimodal integration suite for DeepSeek Harness 0.1.2-alpha.3 or newer. One bundle adds the ModLens vision core, a Multi Tools settings page, dependency status, and independently managed Agent Presets for creative applications, game engines, and CAD tool"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -5,9 +5,9 @@
     "patchExists": false
   },
   "crawl": {
-    "enrichedAt": "2026-09-01T09:06:15.511Z",
+    "enrichedAt": "2026-09-02T08:21:51.724Z",
     "enrichmentStatus": "ok",
-    "headSha": "77c6e1574b5dfb12b00d405b61d0beb5dbb77916"
+    "headSha": "fcd06e12534667e4bea352462caeed220d52a099"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "OMK — Evidence-backed evaluation and observability for prompts, RAG, skills, agents, and workflows. Native Codex, Claude Code, and DeepSeek Harness support.",
     "fork": false,
     "forks": 2,
-    "headSha": "77c6e1574b5dfb12b00d405b61d0beb5dbb77916",
+    "headSha": "fcd06e12534667e4bea352462caeed220d52a099",
     "homepageUrl": "https://oh-my-knowledge.pages.dev/",
     "language": "TypeScript",
     "license": {
@@ -30,7 +30,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/8143023?u=5c4d80ff99ea67c299abd4c0627babd4e30c3ad8&v=4",
       "login": "lizhiyao"
     },
-    "pushedAt": "2026-09-01T08:06:52Z",
+    "pushedAt": "2026-09-02T07:50:35Z",
     "slug": "lizhiyao/oh-my-knowledge",
     "stars": 18,
     "topics": [
@@ -55,7 +55,7 @@
       "rag-evaluation",
       "skill-evaluation"
     ],
-    "updatedAt": "2026-09-01T08:13:00Z",
+    "updatedAt": "2026-09-02T06:21:07Z",
     "url": "https://github.com/lizhiyao/oh-my-knowledge"
   },
   "id": "gh:1190633989",
@@ -83,11 +83,29 @@
         "import": "./dist/dsh-plugin/index.js",
         "types": "./dist/dsh-plugin/index.d.ts"
       },
+      "./eval-samples": {
+        "import": "./dist/package-api/eval-samples.js",
+        "types": "./dist/package-api/eval-samples.d.ts"
+      },
+      "./eval-samples/schemas/v1/*": "./dist/inputs/contracts/schemas/v1/*",
+      "./evaluation-core": {
+        "import": "./dist/package-api/evaluation-core.js",
+        "types": "./dist/package-api/evaluation-core.d.ts"
+      },
+      "./evaluation-core/schemas/v1/*": "./dist/evaluation-core/contracts/schemas/v1/*",
       "./mcp": {
         "import": "./dist/mcp/index.js",
         "types": "./dist/mcp/index.d.ts"
       },
-      "./package.json": "./package.json"
+      "./package.json": "./package.json",
+      "./projections": {
+        "import": "./dist/eval-workflows/downstream-projections/index.js",
+        "types": "./dist/eval-workflows/downstream-projections/index.d.ts"
+      },
+      "./studio": {
+        "import": "./dist/studio/public.js",
+        "types": "./dist/studio/public.d.ts"
+      }
     },
     "main": null,
     "name": "oh-my-knowledge",
