@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-02T08:21:51.724Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-03T08:31:04.315Z",
+    "enrichmentStatus": "ok",
     "headSha": "11fccf56039325e7320e7ac1ddea57850b57b8a2"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1341472208",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-rembg",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:mengruoa/dsh-rembg#11fccf56039325e7320e7ac1ddea57850b57b8a2",
+    "version": "0.1.15"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.15",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-rembg",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.15"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/11844228e685f729797b20e9b09b77d2eeb2e6a2bb8021afee9c940483f19109/mengruoa/dsh-rembg",
     "description": "DSH plugin: auto-install rembg and expose a background-removal tool to the LLM"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 图像背景移除插件，支持选择 CPU 或本地 NVIDIA GPU 模式。"
   },
   "schemaVersion": 1,
   "scripts": {
