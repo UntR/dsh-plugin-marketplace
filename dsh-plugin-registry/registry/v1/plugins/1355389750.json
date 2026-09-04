@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
-    "headSha": "0e6d5e4cc2ec83a80f3d14f075e262db553c0674"
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
+    "headSha": "67ea9d86edf781d6fcce59b7cb0ccf116bf2421d"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "将命令提交为独立于 DSH 进程的后台任务，关闭 DSH 也不影响运行，并提供实时网页面板与离线 CLI/GUI 管理。Runs commands as background jobs that keep executing when DSH exits, with a live web panel and offline CLI/GUI management.",
     "fork": false,
     "forks": 0,
-    "headSha": "0e6d5e4cc2ec83a80f3d14f075e262db553c0674",
+    "headSha": "67ea9d86edf781d6fcce59b7cb0ccf116bf2421d",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,43 +25,54 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUMmbNg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b567a4b5df66db8182dcc4ec1cee0ebabdf90c4ad38eff821e70b8c68e4d90af/bitsmug/dsh-bgjobs",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/cb2441e9be8898121d60d728c764b3ce0b855997e23141f7a19b9dda099cb4ac/bitsmug/dsh-bgjobs",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/324276387?v=4",
       "login": "bitsmug"
     },
-    "pushedAt": "2026-09-03T07:44:49Z",
+    "pushedAt": "2026-09-04T07:54:13Z",
     "slug": "bitsmug/dsh-bgjobs",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-03T07:46:51Z",
+    "updatedAt": "2026-09-04T07:55:14Z",
     "url": "https://github.com/bitsmug/dsh-bgjobs"
   },
   "id": "gh:1355389750",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "bgjobs",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "bgjobs@0.1.50",
+    "version": "0.1.50"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.50",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "bgjobs",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.55"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b567a4b5df66db8182dcc4ec1cee0ebabdf90c4ad38eff821e70b8c68e4d90af/bitsmug/dsh-bgjobs",
+    "coverUrl": "https://opengraph.githubassets.com/cb2441e9be8898121d60d728c764b3ce0b855997e23141f7a19b9dda099cb4ac/bitsmug/dsh-bgjobs",
     "description": "将命令提交为独立于 DSH 进程的后台任务，关闭 DSH 也不影响运行，并提供实时网页面板与离线 CLI/GUI 管理。Runs commands as background jobs that keep executing when DSH exits, with a live web panel and offline CLI/GUI management."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DSH 提交的命令脱离 DSH 进程独立运行：任务交给 Windows 任务计划程序服务托管，关掉 DSH、关掉网页、甚至关掉终端窗口都不影响执行；网页弹 Toast 提醒完成，随时看实时输出；DSH 离线时还能用独立 CLI/GUI 管理。"
   },
   "schemaVersion": 1,
   "scripts": {

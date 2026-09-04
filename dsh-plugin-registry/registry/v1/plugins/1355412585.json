@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
     "headSha": "602e9bf2d796151fd074b9a5c7e9085246e9f819"
   },
   "github": {
@@ -38,27 +38,37 @@
   },
   "id": "gh:1355412585",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-vision-patch",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ryasrk/dsh-vision-patch#602e9bf2d796151fd074b9a5c7e9085246e9f819",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-vision-patch",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b64f2b4ad0d1324376ec343265481cd16dfc0836e9d6f6e48ccfc360ad50d992/ryasrk/dsh-vision-patch",
     "description": "Patch custom provider vision model"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A plugin with two halves on the llm-pi-ai settings namespace. The client card on the Models page declares which models accept image input, per model and per route, and picks a per-route vision fallback model. The host half uses that fallback to describe images so a turn never die"
   },
   "schemaVersion": 1,
   "scripts": {

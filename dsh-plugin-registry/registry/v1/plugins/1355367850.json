@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
     "headSha": "50379b891e121b03766cac3cdcf2ddf1cdc0f307"
   },
   "github": {
@@ -41,33 +41,50 @@
   },
   "id": "gh:1355367850",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-mcp-oauth-client",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-mcp-oauth-client@0.3.0",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-mcp-oauth-client",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4351b71b37353bbe8ef0bc056f6c43deb34755afa1de7ea52268a4ff9df7b629/fangzaozao/dsh-mcp-oauth-client",
     "description": "Universal MCP manager and client bridge for DeepSeek Harness (DSH)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个面向 DeepSeek Harness（DSH） 的通用 MCP 管理与客户端桥接插件。虽然包名保留了 oauth 历史名称，但它同时支持有认证和无认证的 MCP 服务。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
     "headSha": "5d9c53557ccf4354a4337c5dd449029514d028a3"
   },
   "github": {
@@ -43,27 +43,44 @@
   },
   "id": "gh:1355567739",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-pet",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ALKAERR/dsh-pet#5d9c53557ccf4354a4337c5dd449029514d028a3",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.5",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./client/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-pet",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1355567739/36575eab-2b44-486e-be74-5b2b7dbf4a26",
     "description": "一只常驻 DSH 界面的鲸鱼娘女仆长「会话监督挂件」。替主人监督 AI 助手的工作——读工具调用结果做证据，戳破\"口嗨式完成\"，用自然女仆口吻温柔纠偏，并一键给出可直接复制的修正 Prompt。标准 DSH bundle，代码+立绘自包含、开箱即用。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "常驻在 DeepSeek Harness（DSH）Web 界面右下角的一个小挂件。它会盯着当前会话里的 AI 助手，每隔几轮读一次会话转写和工具调用记录（diff、命令输出），看它有没有说\"改好了\"但没贴改动、承诺核实但没真跑、或者话没听完就替你脑补选项。发现问题就生成一段可以直接粘贴回对话的修正 Prompt。"
   },
   "schemaVersion": 1,
   "scripts": {

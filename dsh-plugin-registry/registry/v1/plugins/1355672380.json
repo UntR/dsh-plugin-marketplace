@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
-    "headSha": "bf3df901dda935f11b0f4a982f0375fa41550300"
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
+    "headSha": "70707482f4d894a342c42ef6774a47d3ab806c5e"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness 基于 MySQL 的后端存储插件 可通过 storage-domain 配置用于 workspace、session-projection-cache 和 message-feedback 数据的存储",
     "fork": false,
     "forks": 0,
-    "headSha": "bf3df901dda935f11b0f4a982f0375fa41550300",
+    "headSha": "70707482f4d894a342c42ef6774a47d3ab806c5e",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,43 +25,68 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUM3rPA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/0d704e9bcb47c882e75dca209e6b73590475062e3d21fa6445845b0e20056be4/sandersyao/dsh-storage-mysql",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7820f7a28dcb7f2bd9defb049b6ca2820425b6a130b62c754c46c698671f2ae3/sandersyao/dsh-storage-mysql",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/2403124?u=9699c2ff5c1cd6490c834ac4c16c263119501a56&v=4",
       "login": "sandersyao"
     },
-    "pushedAt": "2026-09-03T08:09:10Z",
+    "pushedAt": "2026-09-04T06:57:48Z",
     "slug": "sandersyao/dsh-storage-mysql",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-03T08:11:21Z",
+    "updatedAt": "2026-09-04T06:58:11Z",
     "url": "https://github.com/sandersyao/dsh-storage-mysql"
   },
   "id": "gh:1355672380",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@sandersyao/dsh-storage-mysql",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@sandersyao/dsh-storage-mysql@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./config": {
+        "default": "./lib/config.js",
+        "types": "./lib/config.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./schema": {
+        "default": "./lib/schema.js",
+        "types": "./lib/schema.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "@sandersyao/dsh-storage-mysql",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/0d704e9bcb47c882e75dca209e6b73590475062e3d21fa6445845b0e20056be4/sandersyao/dsh-storage-mysql",
+    "coverUrl": "https://opengraph.githubassets.com/7820f7a28dcb7f2bd9defb049b6ca2820425b6a130b62c754c46c698671f2ae3/sandersyao/dsh-storage-mysql",
     "description": "DeepSeek Harness 基于 MySQL 的后端存储插件 可通过 storage-domain 配置用于 workspace、session-projection-cache 和 message-feedback 数据的存储"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "The MySQL storage backend for the DeepSeek Harness storage hub (ctx.storage) — a drop-in, contract-equivalent alternative to the built-in @deepseek-ai/dsh-storage-json backend. Load it as a plugin; it registers the mysql backend on ctx.storage.backend, exposes the kv facet, and p"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
     "headSha": "12c19c079bb321e27b7154250791979b9b377263"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,38 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./config": {
+        "import": "./lib/config.js",
+        "types": "./lib/types/config.d.ts"
+      },
+      "./fold-grep": {
+        "import": "./lib/lib/fold-grep.js",
+        "types": "./lib/types/lib/fold-grep.d.ts"
+      },
+      "./truncate": {
+        "import": "./lib/lib/truncate.js",
+        "types": "./lib/types/lib/truncate.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-token-saver",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6ea6ff5e740bf2de9415cc58990fa6978ed86cae43240b0383435d5c0251af52/Shaw529/dsh-token-saver",
     "description": "DeepSeek Harness plugin: aggressive token savings, no task-quality loss"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-token-saver 通过挂载三个扩展点节约 token：tools/post-execute（无损头尾裁剪 / grep 折叠）、agent/pre-step（委托官方 ctx.compaction）、以及可选的 prompt-cache 段稳定排序。所有改写都走 dsh 的事件流，不会触发\"model-visible 与 logged 不一致\"不变式。"
   },
   "schemaVersion": 1,
   "scripts": {

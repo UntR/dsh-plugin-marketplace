@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
-    "headSha": "42e1ea33bd32c56054d54d0d72d70c0e767b21bf"
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
+    "headSha": "50b78baecb4431224e6a1085370d3df77d13e053"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-03T07:44:11Z",
     "databaseId": 1355669722,
     "defaultBranch": "main",
-    "description": "DeepSeek Harness (dsh) plugin: one local bridge for ChatGPT Codex / Claude / ZCode (GLM) / Qwen subscription plans — settings status card, one-click provisioning, zero core changes",
+    "description": "此插件支持在DeepSeek-Harness(DSH)接入多家订阅套餐，如Codex、Claude、Zcode、Qwen等。用量耗尽无缝切换其他套餐继续任务！DeepSeek Harness (dsh) plugin: one local bridge for subscription plans, ChatGPT Codex / Claude / ZCode (GLM) / Qwen — settings status card, one-click provisioning, zero core changes.",
     "fork": false,
     "forks": 0,
-    "headSha": "42e1ea33bd32c56054d54d0d72d70c0e767b21bf",
+    "headSha": "50b78baecb4431224e6a1085370d3df77d13e053",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,50 +25,66 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUM3g2g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b898c6fe650a43f367e60a02df3c5cefe64764e5bb797dfd9d48538c9c9640b8/TaylorSwitiger/dsh-plan-bridge",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/3ad08b00bcbc06915fe0b9ef6fd72c94fc3c9c050f613161e46035d6b27a839b/TaylorSwitiger/dsh-plan-bridge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/40756822?v=4",
       "login": "TaylorSwitiger"
     },
-    "pushedAt": "2026-09-03T08:17:47Z",
+    "pushedAt": "2026-09-04T05:46:55Z",
     "slug": "TaylorSwitiger/dsh-plan-bridge",
-    "stars": 0,
+    "stars": 1,
     "topics": [
-      "claude",
+      "chatgpt",
+      "claude-code",
       "codex",
+      "deepseek",
       "deepseek-harness",
       "dsh",
       "dsh-plugin",
       "glm",
+      "gpt",
       "llm-proxy",
-      "qwen"
+      "qwen",
+      "zai",
+      "zcode"
     ],
-    "updatedAt": "2026-09-03T08:19:10Z",
+    "updatedAt": "2026-09-04T06:23:32Z",
     "url": "https://github.com/TaylorSwitiger/dsh-plan-bridge"
   },
   "id": "gh:1355669722",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plan-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:TaylorSwitiger/dsh-plan-bridge#50b78baecb4431224e6a1085370d3df77d13e053",
+    "version": "0.3.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plan-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b898c6fe650a43f367e60a02df3c5cefe64764e5bb797dfd9d48538c9c9640b8/TaylorSwitiger/dsh-plan-bridge",
-    "description": "DeepSeek Harness (dsh) plugin: one local bridge for ChatGPT Codex / Claude / ZCode (GLM) / Qwen subscription plans — settings status card, one-click provisioning, zero core changes"
+    "coverUrl": "https://opengraph.githubassets.com/3ad08b00bcbc06915fe0b9ef6fd72c94fc3c9c050f613161e46035d6b27a839b/TaylorSwitiger/dsh-plan-bridge",
+    "description": "此插件支持在DeepSeek-Harness(DSH)接入多家订阅套餐，如Codex、Claude、Zcode、Qwen等。用量耗尽无缝切换其他套餐继续任务！DeepSeek Harness (dsh) plugin: one local bridge for subscription plans, ChatGPT Codex / Claude / ZCode (GLM) / Qwen — settings status card, one-click provisioning, zero core changes."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh 的多套餐桥接插件。一个本地进程监听 127.0.0.1:8417，按路径前缀分流，同时承载多家订阅套餐； 每家套餐在 dsh 里是独立的模型分组，是否接入由你在设置页决定。"
   },
   "schemaVersion": 1,
   "scripts": {

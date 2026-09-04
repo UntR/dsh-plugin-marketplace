@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
     "headSha": "e06123ba3fb50fa5877a9f4bbe1b99d557823ff8"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUME0Eg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/744c27f2f1e8c970779efea49b10fbd842741ec763dc783670d345a43ae19da4/CultOfLuna/dsh-vision-autoswitch",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/041f50893decc4aaa9ec6dae20535289db93deb469e4d7c5270b29a6550dde15/CultOfLuna/dsh-vision-autoswitch",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/3031077?u=559a3016562ec389ef526372efb0e089d6d851bf&v=4",
       "login": "CultOfLuna"
     },
     "pushedAt": "2026-09-02T14:11:19Z",
     "slug": "CultOfLuna/dsh-vision-autoswitch",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "dsh",
       "dsh-plugin",
@@ -40,32 +40,43 @@
       "dsh-plugins",
       "vision"
     ],
-    "updatedAt": "2026-09-02T15:24:19Z",
+    "updatedAt": "2026-09-03T12:30:13Z",
     "url": "https://github.com/CultOfLuna/dsh-vision-autoswitch"
   },
   "id": "gh:1354839058",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-vision-autoswitch",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-vision-autoswitch@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-vision-autoswitch",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/744c27f2f1e8c970779efea49b10fbd842741ec763dc783670d345a43ae19da4/CultOfLuna/dsh-vision-autoswitch",
+    "coverUrl": "https://opengraph.githubassets.com/041f50893decc4aaa9ec6dae20535289db93deb469e4d7c5270b29a6550dde15/CultOfLuna/dsh-vision-autoswitch",
     "description": "DeepSeek 的\"自动挡\"：有图切 Vision，无图回 Pro/Flash，一键都不用点。 DeepSeek's \"automatic transmission\": image in → Vision, image out → back to Pro/Flash — not a single click."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件：当输入包含图片时，临时把当前回合切换到视觉模型 deepseek-v4-flash-vision-exp 处理；该回合结束后自动回落到你原来的模型。 模型栏所见即所得（visibleSwitch 默认开启），当前实际模型与 UI 显示始终一致。"
   },
   "schemaVersion": 1,
   "scripts": {

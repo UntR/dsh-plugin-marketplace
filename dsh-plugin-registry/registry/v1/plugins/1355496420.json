@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
-    "headSha": "85d77376f6443e20630d4106fd5be8e1536fd713"
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
+    "headSha": "41c6fa32f6bb55ec40693d95ade25a10964bc470"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,17 @@
     "description": null,
     "fork": false,
     "forks": 0,
-    "headSha": "85d77376f6443e20630d4106fd5be8e1536fd713",
+    "headSha": "41c6fa32f6bb55ec40693d95ade25a10964bc470",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOUMs75A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f57f0b8f720a661496beaeb9230d09db52f9a0aa455a1892d167f3c3f298b5c0/xluomo/dsh-deliverables-accordion",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ceef1a2288330597195cfd50ec94cbf7d2b9210d4bd3c6259c5325131c68c6ce/xluomo/dsh-deliverables-accordion",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/64085292?v=4",
       "login": "xluomo"
     },
-    "pushedAt": "2026-09-03T04:12:44Z",
+    "pushedAt": "2026-09-03T13:37:03Z",
     "slug": "xluomo/dsh-deliverables-accordion",
     "stars": 0,
     "topics": [
@@ -35,38 +35,55 @@
       "dsh-plugin",
       "outputs"
     ],
-    "updatedAt": "2026-09-03T04:13:42Z",
+    "updatedAt": "2026-09-03T13:36:57Z",
     "url": "https://github.com/xluomo/dsh-deliverables-accordion"
   },
   "id": "gh:1355496420",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-deliverables-accordion",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:xluomo/dsh-deliverables-accordion#41c6fa32f6bb55ec40693d95ade25a10964bc470",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-deliverables-accordion",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f57f0b8f720a661496beaeb9230d09db52f9a0aa455a1892d167f3c3f298b5c0/xluomo/dsh-deliverables-accordion",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/ceef1a2288330597195cfd50ec94cbf7d2b9210d4bd3c6259c5325131c68c6ce/xluomo/dsh-deliverables-accordion",
+    "description": "DSH Web GUI「产物」行的手风琴插件（标准 Cordis 外部插件包）：顶替 shipped 产物行， 默认折叠、点击展开后逐文件一行（类型徽标 / filename / 相对路径 / +N/-M），每行有「审查 / 打开」。 审查弹出模态框，从宿主会话日志取该文件该轮每次变更的完整 old→new 片段做 git 风格行级 diff （无字符截断，历史轮同样完整）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Web GUI「产物」行的手风琴插件（标准 Cordis 外部插件包）：顶替 shipped 产物行， 默认折叠、点击展开后逐文件一行（类型徽标 / filename / 相对路径 / +N/-M），每行有「审查 / 打开」。 审查弹出模态框，从宿主会话日志取该文件该轮每次变更的完整 old→new 片段做 git 风格行级 diff （无字符截断，历史轮同样完整）。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

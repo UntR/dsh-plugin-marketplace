@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
     "headSha": "d72469218e7590499bbe401b97fd357db5faba47"
   },
   "github": {
@@ -41,27 +41,58 @@
   },
   "id": "gh:1354939612",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-port",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:seth-hg/dsh-session-port#d72469218e7590499bbe401b97fd357db5faba47",
+    "version": "0.1.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./manifest": {
+        "default": "./lib/manifest.js",
+        "types": "./lib/types/manifest.d.ts"
+      },
+      "./pack": {
+        "default": "./lib/pack.js",
+        "types": "./lib/types/pack.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./refs": {
+        "default": "./lib/refs.js",
+        "types": "./lib/types/refs.d.ts"
+      },
+      "./unpack": {
+        "default": "./lib/unpack.js",
+        "types": "./lib/types/unpack.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-port",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a0a93376d8dbfa1959b2f79cccf5cc6f2ed77440ecdb18810a921e4f68fa9cfd/seth-hg/dsh-session-port",
     "description": "dsh-session-port is a DeepSeek Harness plugin that bundles a session — its log, subagents, media, and referenced workspace files — into one portable ZIP and restores it on any DSH."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Port a session in and out of DeepSeek Harness — bundle one session into a single ZIP and restore it anywhere."
   },
   "schemaVersion": 1,
   "scripts": {

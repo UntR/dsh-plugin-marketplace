@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
     "headSha": "e767ddd3b13dfda79a4116c7f985758e73335ac1"
   },
   "github": {
@@ -38,27 +38,33 @@
   },
   "id": "gh:1354718431",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-claim-gate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:QWE13-ART/dsh-claim-gate#e767ddd3b13dfda79a4116c7f985758e73335ac1",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "main": "lib/index.js",
+    "name": "dsh-claim-gate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/106b4d1f397c9b9779ae7f9868bf89fcfce5cf8c9b3c34ee9c8de27669344892/QWE13-ART/dsh-claim-gate",
     "description": "Turn-boundary claim gate for DSH agents: 声称「已完成/已落地」但本轮无验证输出时机械拦截；有验证输出时软提示对照验证覆盖 + 任务收尾派独立审计。纯同步正则 host hook（agent/turn-stopping），零 LLM、零网络。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-claim-gate stops unfounded \"done\" claims the moment a coding agent signs off a turn. It mechanically checks the turn's tool evidence — zero LLM, pure regex, nothing for the agent to remember."
   },
   "schemaVersion": 1,
   "scripts": {

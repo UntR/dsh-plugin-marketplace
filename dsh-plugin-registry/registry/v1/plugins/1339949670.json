@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "stale",
-    "headSha": "8e83a779ea559623fe8ea44bfa810886defc83c6"
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
+    "headSha": "cd2aec01bbfa994534147504b3e639510558e82a"
   },
   "github": {
     "archived": false,
@@ -17,37 +17,34 @@
     "description": null,
     "fork": false,
     "forks": 0,
-    "headSha": "8e83a779ea559623fe8ea44bfa810886defc83c6",
+    "headSha": "cd2aec01bbfa994534147504b3e639510558e82a",
     "homepageUrl": null,
-    "language": "TypeScript",
-    "license": {
-      "name": "Apache License 2.0",
-      "spdxId": "Apache-2.0"
-    },
+    "language": "JavaScript",
+    "license": null,
     "nodeId": "R_kgDOT94CZg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/fc1881566456ac710875db4104967de75eac0738609555f7c8b72867527bcf7a/xiaoyuink/dsh-image-create",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ecae4e107806d2e357d18a23a9f550324bf08f9fb7a1a758729c7eb6ed5c0467/xiaoyuink/dsh-image-create",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/129390240?v=4",
       "login": "xiaoyuink"
     },
-    "pushedAt": "2026-08-22T17:16:28Z",
+    "pushedAt": "2026-09-04T08:06:03Z",
     "slug": "xiaoyuink/dsh-image-create",
     "stars": 2,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-28T11:00:33Z",
+    "updatedAt": "2026-09-04T08:07:27Z",
     "url": "https://github.com/xiaoyuink/dsh-image-create"
   },
   "id": "gh:1339949670",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose a ready package entry point.",
+    "available": true,
+    "packageName": "@xiaoyuink/dsh-image-vision",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xiaoyuink/dsh-image-create#cd2aec01bbfa994534147504b3e639510558e82a",
+    "version": "1.5.0"
   },
   "npm": {
     "latestVersion": null,
@@ -57,22 +54,23 @@
   "package": {
     "exports": {
       ".": "./lib/index.js",
-      "./client": "./lib/client/index.cjs",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
       "./package.json": "./package.json"
     },
-    "main": "lib/index.js",
-    "name": "@xiaoyuink/dsh-image-create",
+    "main": "./lib/index.js",
+    "name": "@xiaoyuink/dsh-image-vision",
     "status": "valid",
     "type": "module",
-    "version": "1.4.2"
+    "version": "1.5.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/fc1881566456ac710875db4104967de75eac0738609555f7c8b72867527bcf7a/xiaoyuink/dsh-image-create",
-    "description": "核心思想：在 DSH 里直接生图，不离开对话。插件通过宿主进程安全代理 OpenAI 兼容的图像生成接口（/images/generations 文生图、/images/edits 图生图），在侧边栏提供三栏生图工作台；同时把 generateimage 工具注册给 Agent——在对话框里让模型直接生图，结果自动进入面板历史。"
+    "coverUrl": "https://opengraph.githubassets.com/ecae4e107806d2e357d18a23a9f550324bf08f9fb7a1a758729c7eb6ed5c0467/xiaoyuink/dsh-image-create",
+    "description": "核心思想：让任意接入 DSH 的大模型都能识图——无论当前模型本身是否支持视觉。模型能识图就直接交给它（并按专业预设提示词分析），不能识图就自动转给插件配置的视觉模型，对使用者透明。"
   },
   "readme": {
     "available": true,
-    "excerpt": "核心思想：在 DSH 里直接生图，不离开对话。插件通过宿主进程安全代理 OpenAI 兼容的图像生成接口（/images/generations 文生图、/images/edits 图生图），在侧边栏提供三栏生图工作台；同时把 generateimage 工具注册给 Agent——在对话框里让模型直接生图，结果自动进入面板历史。"
+    "excerpt": "核心思想：让任意接入 DSH 的大模型都能识图——无论当前模型本身是否支持视觉。模型能识图就直接交给它（并按专业预设提示词分析），不能识图就自动转给插件配置的视觉模型，对使用者透明。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
     "headSha": "4351705fd5bfdddbeb3bc0e5628a1c277d7be855"
   },
   "github": {
@@ -50,27 +50,49 @@
   },
   "id": "gh:1355465541",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-subagent-pi-plus",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-subagent-pi-plus@0.8.0",
+    "version": "0.8.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.8.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-subagent-pi-plus",
+    "status": "valid",
+    "type": "module",
+    "version": "0.8.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7a9718c0440ef4fbf352efeb8c998e150f2a00a5efcfb2cb0dfe959bb8332944/february2015/dsh-subagent-pi-plus",
     "description": "Pi true-gateway plugin for DeepSeek Harness (DSH): /pi-lock direct connection to a durable Pi session — queued/steered conversation, live output, durable binding + auto-reattach. Personal fork of @deepseek-ai/dsh-subagent-codex."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "--- description: \"Forked from the official @deepseek-ai/dsh-subagent-codex: makes Pi a first-class citizen in DeepSeek Harness — true-gateway direct connection, queued/steered continuous conversation, live intermediate output, durable binding with auto-reattach, and image passthr"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
     "headSha": "568e0accaf9b697c3e62d2c1be6ec299e2698cba"
   },
   "github": {
@@ -32,7 +32,7 @@
     },
     "pushedAt": "2026-09-03T05:11:47Z",
     "slug": "pavangupta352/stalegreen",
-    "stars": 1,
+    "stars": 2,
     "topics": [
       "claude-code",
       "claude-code-plugin",
@@ -44,7 +44,7 @@
       "typescript",
       "verification"
     ],
-    "updatedAt": "2026-09-03T05:12:18Z",
+    "updatedAt": "2026-09-03T09:23:22Z",
     "url": "https://github.com/pavangupta352/stalegreen"
   },
   "id": "gh:1355344668",
@@ -52,7 +52,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -62,14 +62,33 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": {
+          "default": "./dist/index.js",
+          "types": "./dist/index.d.ts"
+        },
+        "require": {
+          "default": "./dist/index.cjs",
+          "types": "./dist/index.d.cts"
+        }
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.cjs",
+    "name": "stalegreen",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1355344668/0b199909-f81b-47b3-8819-9fc79ad2009f",
     "description": "Keeps a coding agent's green claims honest: verification runs are recorded unmasked, and done is blocked when the evidence is stale, failed or masked."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Hooks that keep a coding agent's green claims honest: every verification run is recorded unmasked, and \"done\" is blocked when the evidence is stale, failed or masked."
   },
   "schemaVersion": 1,
   "scripts": {

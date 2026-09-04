@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
     "headSha": "c8be2bfbfc1421d2f806ef047b96ec1246db9db2"
   },
   "github": {
@@ -45,27 +45,33 @@
   },
   "id": "gh:1354686402",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-media-serve",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-media-serve@0.2.4",
+    "version": "0.2.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.4",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "main": "lib/index.js",
+    "name": "dsh-media-serve",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8323e0f0ae546e34f39d8344e51ee0a47003948f4624374b972c81e5da8e91fd/qfwycn/dsh-media-serve",
     "description": "用于在deepseek harness上直接暴露工作区的文件，使大肥鱼能够直接显示他想给你显示的图片等信息，解决了大肥鱼老是说自己显示不了图片，要你去看本地文件的问题。在过验证码或截图的时候极为有用。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "本插件的作用是让 Agent 能把图片/文件“显示”给你（人类）看 —— 它把文件通过 /media 变成浏览器可加载的图片 URL 展示在对话里。它并不会（也不能）让大模型去“识别、读取、 理解”图片内容：模型是纯文本的，它自己看不到 /media 里的画面。请不要要求模型去 OCR / 描述 / 判断图片内容，也不要把“模型显示了图”当成“模型看懂了图”，以免它因没有真正 看到而理解错误、进而执行错误操作。需要模型真正看懂图片时，请另配支持 Vision 的模型。"
   },
   "schemaVersion": 1,
   "scripts": {

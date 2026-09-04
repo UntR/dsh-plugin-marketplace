@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
     "headSha": "44ec66db7aaa25c6cc59d8b2164ec452adefd69c"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1355522360",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-gemini-oauth-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hyqhyq3/dsh-gemini-oauth-bridge#44ec66db7aaa25c6cc59d8b2164ec452adefd69c",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-gemini-oauth-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2cb97068d7500218fba965af4937e54d3516e5e40c1f2f1360fc02748ae20683/hyqhyq3/dsh-gemini-oauth-bridge",
     "description": "Bridge Google AI subscription (Antigravity/Gemini OAuth) into DeepSeek Harness as an OpenAI-compatible endpoint"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Bridges a Google AI subscription (AI Pro / AI Ultra, via the Antigravity / Code Assist OAuth surface) into an OpenAI-compatible endpoint that DeepSeek Harness (DSH) can use directly as a model provider."
   },
   "schemaVersion": 1,
   "scripts": {

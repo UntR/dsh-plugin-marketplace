@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
     "headSha": "3789a515ebfdd32fa3ea98b8c581c23162c5ccf3"
   },
   "github": {
@@ -52,7 +52,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -62,14 +62,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      "./bin/browser-slotpool.mjs": "./bin/browser-slotpool.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@deepseek-ai/dsh-browser-slotpool",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4fdfd8651a7dbc9ed0d2542e45fa36aa180a9ae158ec914e25983c1306cc5904/bluechips-zhao/dsh-browser-slotpool",
     "description": "DSH bundle: slot-pool wrapper for concurrent browser sessions｜并发浏览器会话槽位池插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的 mcp-client 一个 并发、幂等、互不破坏、崩了能自愈 的浏览器 MCP。它只是一个 patch 层 bundle：往 profile 里加一条 @deepseek-ai/dsh-mcp-client 实例，command/args 指向本包自带的 bin/browser-slotpool.mjs（由该启动器管理槽位池）。浏览器工具以 mcpbrowser 出现在模型面前。"
   },
   "schemaVersion": 1,
   "scripts": {

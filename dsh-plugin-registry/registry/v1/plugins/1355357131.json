@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
-    "headSha": "ad7a59cbfb67855d8fb255b4f7e0e94c9a2b64b7"
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
+    "headSha": "81dcfa205165336246494898732eace76ca0c774"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Session manager for DeepSeek Harness (dsh-v0.1.2-alpha.5): permanently delete cold sessions and manage archived sessions via the official Profile Bundle / Cordis APIs. MIT.",
     "fork": false,
     "forks": 0,
-    "headSha": "ad7a59cbfb67855d8fb255b4f7e0e94c9a2b64b7",
+    "headSha": "81dcfa205165336246494898732eace76ca0c774",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUMkbyw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3c2724ef67c0ae31c3f0d02e5abfb11efc329336401626eaf235665c53305249/youridol/dsh-sess",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/1eb66b784180ccb8532f7387914171a92044e55ce0267b6dfe63511e457057be/youridol/dsh-sess",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/58552935?u=499cb64d445e15380e23456bfd6addaa5690032a&v=4",
       "login": "youridol"
     },
-    "pushedAt": "2026-09-03T00:26:05Z",
+    "pushedAt": "2026-09-04T05:41:07Z",
     "slug": "youridol/dsh-sess",
     "stars": 0,
     "topics": [
@@ -39,7 +39,7 @@
       "dsh-plugin",
       "session-management"
     ],
-    "updatedAt": "2026-09-03T00:26:15Z",
+    "updatedAt": "2026-09-04T05:41:32Z",
     "url": "https://github.com/youridol/dsh-sess"
   },
   "id": "gh:1355357131",
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-sess",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3c2724ef67c0ae31c3f0d02e5abfb11efc329336401626eaf235665c53305249/youridol/dsh-sess",
+    "coverUrl": "https://opengraph.githubassets.com/1eb66b784180ccb8532f7387914171a92044e55ce0267b6dfe63511e457057be/youridol/dsh-sess",
     "description": "Session manager for DeepSeek Harness (dsh-v0.1.2-alpha.5): permanently delete cold sessions and manage archived sessions via the official Profile Bundle / Cordis APIs. MIT."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Session Manager for DeepSeek Harness (DSH)."
   },
   "schemaVersion": 1,
   "scripts": {

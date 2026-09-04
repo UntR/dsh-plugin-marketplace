@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
     "headSha": "e540e8788ad5f77b8b1302fa7fcc97bd3fcaf352"
   },
   "github": {
@@ -45,24 +45,43 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0-rc.7",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./core": {
+        "default": "./lib/core.js",
+        "types": "./lib/core.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*",
+      "./web": {
+        "default": "./lib/web.js",
+        "types": "./lib/web.d.ts"
+      }
+    },
+    "main": "lib/core.js",
+    "name": "dsh-security-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b082a79f84004f37c3ad425847c8d527a4ff21d4ab210197c422b293a808a6f4/ruanhaodong-tt/dsh-security-guard",
     "description": "DSH runtime security guard plugin - loader import confinement, HTTP Host header validation (QVD-2026-52631/57410). AI-assisted."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A runtime security guard plugin for DeepSeek Harness (DSH) that applies defense-in-depth measures at the Cordis plugin layer. It does not modify the original source code — instead, it shadows runtime methods and intercepts HTTP requests to replicate the fixes from the DSH Securit"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
-    "enrichmentStatus": "failed",
-    "headSha": "5844b058079d40baa987bee78e70476e98f0f772"
+    "enrichedAt": "2026-09-04T08:26:11.996Z",
+    "enrichmentStatus": "ok",
+    "headSha": "31e31106d9482845665aca70c131a1419c3703ec"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh 插件：按可配置正则规则拦截 edit/write 的写入内容，默认拦全角括号，host 单半身经 cordis 配置注入。",
     "fork": false,
     "forks": 0,
-    "headSha": "5844b058079d40baa987bee78e70476e98f0f772",
+    "headSha": "31e31106d9482845665aca70c131a1419c3703ec",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUMAhzQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7b8c2dc900532979d958a1fd37d99606463e2838bdf3b99766bc501ed22dcdcc/better-er/dsh-write-rule-guard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b4050f1e60545246e21dd3ada4f73bcac1e3b3b2f9f7f4a299c4e1b573b06e8c/better-er/dsh-write-rule-guard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/54624517?u=1eb4b9e5f061cf78d02f809ed6c6d730e29dcd62&v=4",
       "login": "better-er"
     },
-    "pushedAt": "2026-09-02T12:58:48Z",
+    "pushedAt": "2026-09-03T17:04:57Z",
     "slug": "better-er/dsh-write-rule-guard",
     "stars": 1,
     "topics": [
@@ -42,38 +42,49 @@
       "regex",
       "write-guard"
     ],
-    "updatedAt": "2026-09-02T13:00:16Z",
+    "updatedAt": "2026-09-03T17:04:51Z",
     "url": "https://github.com/better-er/dsh-write-rule-guard"
   },
   "id": "gh:1354768845",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-write-rule-guard",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-write-rule-guard@0.2.2",
+    "version": "0.2.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-write-rule-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7b8c2dc900532979d958a1fd37d99606463e2838bdf3b99766bc501ed22dcdcc/better-er/dsh-write-rule-guard",
+    "coverUrl": "https://opengraph.githubassets.com/b4050f1e60545246e21dd3ada4f73bcac1e3b3b2f9f7f4a299c4e1b573b06e8c/better-er/dsh-write-rule-guard",
     "description": "dsh 插件：按可配置正则规则拦截 edit/write 的写入内容，默认拦全角括号，host 单半身经 cordis 配置注入。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "禁止在 edit / write 写入内容里出现匹配配置正则的字符。工具真正执行前直接拦截并报错；拒绝文案完全由各规则 message 决定，填完占位符后即单行结果，不再自动追加任何明细或堆栈。按 edit / write 的成败维护「禁 pwsh」状态机：本回合内某次 edit / write 失败，即内容命中规则被拦或真实执行报错，会把 pwsh 切到禁用态，防止改用 pwsh 绕过写文件；此后只要某次 edit / write 真实执行成功，pwsh 就解除禁用，回合结束仍回到允许。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
