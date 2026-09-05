@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
+    "enrichedAt": "2026-09-05T08:02:30.589Z",
     "enrichmentStatus": "ok",
-    "headSha": "3316dd7f40ab8609a321a6ac38761191a9240c6e"
+    "headSha": "4dd2d70858928f009fd8da11c770841f16f04c3a"
   },
   "github": {
     "archived": false,
@@ -17,23 +17,23 @@
     "description": "DeepSeek Harness plugin: injects alwaysApply-marked skill bodies into sessions before the first model request — no skill tool load needed.",
     "fork": false,
     "forks": 0,
-    "headSha": "3316dd7f40ab8609a321a6ac38761191a9240c6e",
+    "headSha": "4dd2d70858928f009fd8da11c770841f16f04c3a",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOT6p1AQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/39647a60077a95285b7705b47fc2c44f22d57f2cb51c545b5dd8ba18df98691e/oThTJx/dsh-always-apply",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/2cc9be173b2ee22b74a230ff6cbdf71bf9bc66488cd7d5124fb8839e87e39a86/oThTJx/dsh-always-apply",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/46552592?v=4",
       "login": "oThTJx"
     },
-    "pushedAt": "2026-08-27T12:35:47Z",
+    "pushedAt": "2026-09-05T01:33:18Z",
     "slug": "oThTJx/dsh-always-apply",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-27T12:43:10Z",
+    "updatedAt": "2026-09-05T01:33:22Z",
     "url": "https://github.com/oThTJx/dsh-always-apply"
   },
   "id": "gh:1336571137",
@@ -43,11 +43,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "@firefly0621/dsh-always-apply@0.1.0-rc.17",
-    "version": "0.1.0-rc.17"
+    "spec": "@firefly0621/dsh-always-apply@0.1.0-rc.18",
+    "version": "0.1.0-rc.18"
   },
   "npm": {
-    "latestVersion": "0.1.0-rc.17",
+    "latestVersion": "0.1.0-rc.18",
     "published": true,
     "repositoryMatches": true
   },
@@ -63,21 +63,33 @@
         "types": "./lib/types/invariant.d.ts"
       },
       "./package.json": "./package.json",
-      "./src/*": "./src/*"
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
+      "./src/*": "./src/*",
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/typert.host.d.ts"
+      },
+      "./types": {
+        "default": "./lib/types/types.js",
+        "types": "./lib/types/types.d.ts"
+      }
     },
     "main": "lib/index.js",
     "name": "@firefly0621/dsh-always-apply",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0-rc.11"
+    "version": "0.1.0-rc.18"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/39647a60077a95285b7705b47fc2c44f22d57f2cb51c545b5dd8ba18df98691e/oThTJx/dsh-always-apply",
+    "coverUrl": "https://opengraph.githubassets.com/2cc9be173b2ee22b74a230ff6cbdf71bf9bc66488cd7d5124fb8839e87e39a86/oThTJx/dsh-always-apply",
     "description": "DeepSeek Harness plugin: injects alwaysApply-marked skill bodies into sessions before the first model request — no skill tool load needed."
   },
   "readme": {
     "available": true,
-    "excerpt": "Opt-in Cordis consumer that contributes skill bodies marked alwaysApply: true (Cursor-aligned frontmatter) to the system prompt of every model request, without requiring a skill tool load."
+    "excerpt": "Opt-in Cordis consumer that loads Cursor-aligned project rules from .dsh/rules//.mdc and injects them into the system prompt. Cordis plugin name: rules. Prompt section: rules:project."
   },
   "schemaVersion": 1,
   "scripts": {

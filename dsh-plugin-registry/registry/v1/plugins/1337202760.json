@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-03T08:31:04.315Z",
+    "enrichedAt": "2026-09-05T08:02:30.589Z",
     "enrichmentStatus": "ok",
-    "headSha": "59050d216402049ff78b5af3bccccc5f932b4533"
+    "headSha": "a7d31a2fbd0b9979b1a52e1582e9face96744650"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-17T13:23:56Z",
     "databaseId": 1337202760,
     "defaultBranch": "main",
-    "description": "DSH 插件：LLM 自动重试设置卡片——调整重试次数与退避时间实时生效，可勾选额外可重试错误码（默认补入 INVALID_REQUEST：OpenAI thinking 模式 HTTP 400 自动重试）。npm: dsh-llm-retry-settings",
+    "description": "DSH 插件：LLM 自动重试设置卡片——重试次数/退避/抖动与 25 个错误码可勾选，回答被输出 token 上限截断时还能自动续写，改完实时生效。",
     "fork": false,
     "forks": 0,
-    "headSha": "59050d216402049ff78b5af3bccccc5f932b4533",
+    "headSha": "a7d31a2fbd0b9979b1a52e1582e9face96744650",
     "homepageUrl": "https://www.npmjs.com/package/dsh-llm-retry-settings",
     "language": "JavaScript",
     "license": {
@@ -25,21 +25,25 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT7QYSA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/ab800a33487b275b22a5d24cee59a500668c2f72297103174f71faedb8884101/zeng6125-rgb/dsh-llm-retry-settings",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5f4d6f61dd37ad74b87ae2703d652bd1f9c786f5575dd1b4ea88013f26d428cc/zeng6125-rgb/dsh-llm-retry-settings",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/227113030?u=dd090c0c7bf97e86b3a752772aae189ff8a95958&v=4",
       "login": "zeng6125-rgb"
     },
-    "pushedAt": "2026-09-02T06:36:44Z",
+    "pushedAt": "2026-09-04T20:56:36Z",
     "slug": "zeng6125-rgb/dsh-llm-retry-settings",
     "stars": 4,
     "topics": [
+      "auto-continue",
+      "auto-retry",
+      "cordis-plugin",
       "deepseek",
       "dsh",
       "dsh-plugin",
-      "llm-retry"
+      "llm-retry",
+      "max-tokens"
     ],
-    "updatedAt": "2026-09-04T02:58:39Z",
+    "updatedAt": "2026-09-04T20:56:36Z",
     "url": "https://github.com/zeng6125-rgb/dsh-llm-retry-settings"
   },
   "id": "gh:1337202760",
@@ -49,11 +53,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-llm-retry-settings@0.1.6",
-    "version": "0.1.6"
+    "spec": "dsh-llm-retry-settings@0.1.8",
+    "version": "0.1.8"
   },
   "npm": {
-    "latestVersion": "0.1.6",
+    "latestVersion": "0.1.8",
     "published": true,
     "repositoryMatches": true
   },
@@ -72,15 +76,15 @@
     "name": "dsh-llm-retry-settings",
     "status": "valid",
     "type": "module",
-    "version": "0.1.6"
+    "version": "0.1.8"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/ab800a33487b275b22a5d24cee59a500668c2f72297103174f71faedb8884101/zeng6125-rgb/dsh-llm-retry-settings",
-    "description": "DSH 插件：LLM 自动重试设置卡片——调整重试次数与退避时间实时生效，可勾选额外可重试错误码（默认补入 INVALID_REQUEST：OpenAI thinking 模式 HTTP 400 自动重试）。npm: dsh-llm-retry-settings"
+    "coverUrl": "https://opengraph.githubassets.com/5f4d6f61dd37ad74b87ae2703d652bd1f9c786f5575dd1b4ea88013f26d428cc/zeng6125-rgb/dsh-llm-retry-settings",
+    "description": "DSH 插件：LLM 自动重试设置卡片——重试次数/退避/抖动与 25 个错误码可勾选，回答被输出 token 上限截断时还能自动续写，改完实时生效。"
   },
   "readme": {
     "available": true,
-    "excerpt": "A settings card for the DSH LLM auto-retry engine (@deepseek-ai/dsh-llm-retry). Tune the retry count and backoff from Settings → General; changes take effect immediately."
+    "excerpt": "A settings card for the DSH LLM auto-retry engine (@deepseek-ai/dsh-llm-retry). Tune the retry count and backoff from Settings → General; changes take effect immediately. Since 0.1.7 it can also auto-continue a reply that was cut off by the output-token limit."
   },
   "schemaVersion": 1,
   "scripts": {

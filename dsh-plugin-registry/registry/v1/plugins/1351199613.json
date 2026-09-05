@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-04T08:26:11.996Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-05T08:02:30.589Z",
+    "enrichmentStatus": "ok",
     "headSha": "2b95b34e3948d83be7b8bca2c9e669953cf2e0f8"
   },
   "github": {
@@ -45,7 +45,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,6 +56,13 @@
     "repositoryMatches": null
   },
   "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./commands": "./dsh-an/lib/commands.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./tools": "./dsh-an/lib/tools.js"
+    },
     "main": null,
     "name": "@liangminhua/agent-notes-toolkit",
     "status": "valid",

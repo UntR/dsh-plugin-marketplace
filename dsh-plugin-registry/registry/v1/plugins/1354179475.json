@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-04T08:26:11.996Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-05T08:02:30.589Z",
+    "enrichmentStatus": "ok",
     "headSha": "137666d32ac2dba0ea86d93b14ba88537425d777"
   },
   "github": {
@@ -46,24 +46,50 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.11.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./fs": {
+        "default": "./lib/fs.js",
+        "types": "./lib/types/fs.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./runner": {
+        "default": "./lib/runner.js",
+        "types": "./lib/types/runner.d.ts"
+      },
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@luoxunhao/dsh-codex-project",
+    "status": "valid",
+    "type": "module",
+    "version": "0.11.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6f62e83b98ad95674aa2defb6f82dfcac98e44ecab4d6b99185f72d2c0e84711/luoxunhao/dsh-codex-project",
     "description": "codex风格的项目管理，可以给dsh项目增加附加目录，访问附加目录不需要full-access权限，方便多项目开发，可配合dsh-better-sidebar插件使用。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 工作区共享子目录插件 —— 源自 Codex 的项目处理思想：一个工作区可以挂载任意数量的共享子目录（可跨盘符），该工作区的 DSH 会话可以像对待自己的工作区一样读写这些目录——全程保持 workspace-write 权限，永远不需要 danger-full-access。"
   },
   "schemaVersion": 1,
   "scripts": {

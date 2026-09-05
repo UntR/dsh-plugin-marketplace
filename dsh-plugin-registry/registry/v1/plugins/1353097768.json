@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-04T08:26:11.996Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-05T08:02:30.589Z",
+    "enrichmentStatus": "ok",
     "headSha": "f66e5f06515343e18c782ace99aaf0f0b2df4fb8"
   },
   "github": {
@@ -49,27 +49,45 @@
   },
   "id": "gh:1353097768",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@vibeinging/dsh-session-teams",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@vibeinging/dsh-session-teams@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@vibeinging/dsh-session-teams",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/14f5a9a87e0c1ece4ea60dfabb63a883bb424c3a573c2be88ca348d79a9c4e5e/vibeinging/dsh-session-teams",
     "description": "DSH 对话窗口协作与窗口团队插件 · dsh-plugin · DSH 窗口间真实消息、任务协调与角色窗口团队，按链接精确寻址。Conversation-window messaging and window teams for DSH: real messages, task coordination, and role windows addressed by canonical links."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 对话窗口之间互发消息，并让当前窗口作为负责人，指挥一组带角色的窗口组成小团队。每条消息都是真实的 DSH 消息：在目标窗口可见、可持久保存，还能点击跳回它的来源。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-04T08:26:11.996Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-05T08:02:30.589Z",
+    "enrichmentStatus": "ok",
     "headSha": "616634bc5a217af5c840b625147d076e47589522"
   },
   "github": {
@@ -52,24 +52,39 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-tool-explorer",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0d2f1995cfc8b0ef7fa6223eef62f0080071de09cd6df4af2c9e46266a371f39/6pofx/dsh-tool-explorer",
     "description": "DSH（DeepSeek Harness）技能与 MCP 管理控制台插件：按来源分级浏览全部已加载技能，独立开关模型/用户调用，创建/编辑/删除技能（可恢复回收站），从 GitHub 多选批量安装；增删改 MCP 服务器、状态监控与连接测试。Management console for DeepSeek Harness (dsh): grouped skill browsing, model/user invocation toggles, GitHub batch install, recoverable trash, and MCP server m"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Management console for DeepSeek Harness (dsh): a Web settings page where you can browse, install, update, edit and toggle skills, and add, edit, enable/disable, test and monitor MCP servers."
   },
   "schemaVersion": 1,
   "scripts": {

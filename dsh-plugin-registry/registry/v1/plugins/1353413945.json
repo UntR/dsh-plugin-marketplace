@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-04T08:26:11.996Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-05T08:02:30.589Z",
+    "enrichmentStatus": "ok",
     "headSha": "b3e5dbdef8075e38e7672b87070c5191304e1463"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1353413945",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-versions",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-versions@0.5.1",
+    "version": "0.5.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-versions",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e2040e35cef5a8de67e08e81e4521787ce4eb56320a22c28db135ccb81925662/shangdi178/dsh-versions",
     "description": "dsh (DeepSeek Harness) 主程序版本管理插件：版本总览 + npm 更新检查 + 在线升级/降级/重装 + 升级前自动快照、任意历史版本秒级回滚"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（dsh）主程序版本管理插件：在 dsh web 的 设置 → 版本管理（与 General / Plugins / Models 同级的独立分区）里，查看 dsh 主程序版本，一键检查 npm 更新， 并支持在线升级 dsh 主程序（升级/降级/重装、备份回滚、升级历史、手动重启服务）。"
   },
   "schemaVersion": 1,
   "scripts": {

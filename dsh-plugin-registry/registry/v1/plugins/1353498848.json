@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-04T08:26:11.996Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-05T08:02:30.589Z",
+    "enrichmentStatus": "ok",
     "headSha": "70c98cad515c0d7c3ab5399659488176509b8156"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-provider-copilot",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2f7cdb8c1ded2711133779e9dad365ef1fa8df926d93f1e2c1a7b17522d51943/youngrock-labs/dsh-provider-copilot",
     "description": "use a GitHub Copilot subscription as a DSH LLM provider"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Bridge a GitHub Copilot subscription into DeepSeek Harness (dsh) as a plain LLM provider."
   },
   "schemaVersion": 1,
   "scripts": {

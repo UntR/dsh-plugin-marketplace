@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-04T08:26:11.996Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-05T08:02:30.589Z",
+    "enrichmentStatus": "ok",
     "headSha": "9a0195c5cd0fa9f8c59d116a16e1589a77c78ac2"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1346243183",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-reference-ux-patch",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:melt502/DSH-Session-Reference-UX-Patch#9a0195c5cd0fa9f8c59d116a16e1589a77c78ac2",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-session-reference-ux-patch",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0e31bbedecda69eaa1ace5df5c271319efb1497d15dfd8d664ce35d0bb72b5e5/melt502/DSH-Session-Reference-UX-Patch",
-    "description": ""
+    "description": "独立、可回滚的 DSH Desktop 安装态补丁插件。它保存经过验证的 5 个插件产物，并在 DSH Host 启动时检查/重新应用，防止 Desktop 或相关包更新静默覆盖修改。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "独立、可回滚的 DSH Desktop 安装态补丁插件。它保存经过验证的 5 个插件产物，并在 DSH Host 启动时检查/重新应用，防止 Desktop 或相关包更新静默覆盖修改。"
   },
   "schemaVersion": 1,
   "scripts": {

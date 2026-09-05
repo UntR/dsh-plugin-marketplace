@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-04T08:26:11.996Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-05T08:02:30.589Z",
+    "enrichmentStatus": "ok",
     "headSha": "229178fbf848a2d2a243a83b8b17eb051cfa9e67"
   },
   "github": {
@@ -48,27 +48,48 @@
   },
   "id": "gh:1354194106",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-secret-scrub",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-secret-scrub@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./rules": {
+        "default": "./lib/rules.js",
+        "types": "./lib/rules.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-secret-scrub",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8e0be454cf32de34752522689eb3bd75810148d4627a18d67bce2218943f16f2/jkt-check/dsh-secret-scrub",
     "description": "Irreversible secret-scrubbing guard plugin for DeepSeek Harness (dsh): regex redaction of secrets before session-log persistence and model requests"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Irreversible secret-scrubbing guard plugin, extracted from the user-sensitive-information protection strategy of the kaya-ai-terminal project and open-sourced standalone (Mainland China site: https://www.yunhouai.com; international site: https://www.yunhou.ai). It rewrites text o"
   },
   "schemaVersion": 1,
   "scripts": {

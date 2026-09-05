@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-04T08:26:11.996Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-05T08:02:30.589Z",
+    "enrichmentStatus": "ok",
     "headSha": "a3bcdc8cc056bc9da46b331acb50655f7111c7b8"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1354525766",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-llm-error-retry",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:liaoyuqing/dsh-llm-error-retry#a3bcdc8cc056bc9da46b331acb50655f7111c7b8",
+    "version": "0.6.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./host.v6.mjs",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./host.v6.mjs",
+    "name": "dsh-llm-error-retry",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0673c007c6cb6bd28fdf06ea999713e913541a7fda96cbc968529715ab744ee3/liaoyuqing/dsh-llm-error-retry",
     "description": "用于在deepseek-harnees中报错时重试大模型请求，支持配置http状态，字段-值命中。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "大模型请求错误「休眠后重试」——DSH（DeepSeek Harness）Profile Bundle 插件，带 GUI 配置界面。"
   },
   "schemaVersion": 1,
   "scripts": {

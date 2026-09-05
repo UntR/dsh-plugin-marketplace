@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./bundle.gui.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-04T08:26:11.996Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-05T08:02:30.589Z",
+    "enrichmentStatus": "ok",
     "headSha": "3ae73a0cba742a0a049059b09bf5ac7a13764916"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1354272641",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-remote-ssh",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:aijunjiang/dsh-remote-ssh#3ae73a0cba742a0a049059b09bf5ac7a13764916",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.4",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.ts",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/index.ts",
+    "name": "dsh-remote-ssh",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9f91ecdd40eb361eb817c26f8c218a49fc5da101032aa669ca764e148d57ab2d/aijunjiang/dsh-remote-ssh",
     "description": "Run your DSH workspace on a remote host over SSH - connection sidebar, remote directory browser, per-session routing, agent ssh_exec/route-status; files and commands execute on your target while sessions, GUI and $DSH_HOME stay local."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Move the workspace's file IO and command execution onto an SSH target — while sessions, the web GUI, and $DSHHOME stay on this machine. A DSH plugin set for remote development over SSH."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-04T08:26:11.996Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-05T08:02:30.589Z",
+    "enrichmentStatus": "ok",
     "headSha": "fa7cdd60a6aabc19d532d29af45b9a942f9db500"
   },
   "github": {
@@ -39,33 +39,48 @@
   },
   "id": "gh:1352597561",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-humanink",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:ElioChen240/dsh-humanink#fa7cdd60a6aabc19d532d29af45b9a942f9db500",
+    "version": "0.9.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/bundle/index.mjs"
+      },
+      "./client": {
+        "default": "./dist/bundle/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/bundle/index.mjs",
+    "name": "dsh-humanink",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d22224b41b3d5f3004b8b20886a13c102c040b989dccdc9a7743934cfe44973e/ElioChen240/dsh-humanink",
-    "description": ""
+    "description": "本仓库的可安装 Bundle 名称为 dsh-humanink，产品品牌仍为 HumanInk；用户命令继续使用 /humanink-，以保持命令入口简洁和兼容。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "本仓库的可安装 Bundle 名称为 dsh-humanink，产品品牌仍为 HumanInk；用户命令继续使用 /humanink-，以保持命令入口简洁和兼容。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

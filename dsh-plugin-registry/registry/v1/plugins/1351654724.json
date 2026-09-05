@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-04T08:26:11.996Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-05T08:02:30.589Z",
+    "enrichmentStatus": "ok",
     "headSha": "d06604186dcd7cf6ed07f46272222f1b7bcdc4b0"
   },
   "github": {
@@ -47,20 +47,31 @@
   },
   "id": "gh:1351654724",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-vision-toggle",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:123twtd/dsh-vision-toggle#d06604186dcd7cf6ed07f46272222f1b7bcdc4b0",
+    "version": "1.0.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-vision-toggle",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/057f5f6835e6abb07a5dccccdb1f949e79b4081d4dad81cfbc7a644bfea3bdc0/123twtd/dsh-vision-toggle",
     "description": "DeepSeek Harness (dsh) 模型视觉开关插件：为自定义模型声明图像输入能力（写入 llm-pi-ai 配置），适配 0.1.x"

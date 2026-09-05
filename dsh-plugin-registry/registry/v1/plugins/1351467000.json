@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-04T08:26:11.996Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-05T08:02:30.589Z",
+    "enrichmentStatus": "ok",
     "headSha": "06bc31f81034ce78746bb7a82f50d86d6e1c5b9e"
   },
   "github": {
@@ -50,27 +50,49 @@
   },
   "id": "gh:1351467000",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-subagent-codex-plus",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-subagent-codex-plus@0.8.0",
+    "version": "0.8.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.8.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-subagent-codex-plus",
+    "status": "valid",
+    "type": "module",
+    "version": "0.8.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5e8c9598d8382cde5443a2c452935ec7ee2a3a68c36a0e9db2922df18b049481/february2015/dsh-subagent-codex-plus",
     "description": "Codex true-gateway plugin for DeepSeek Harness (DSH): /codex-lock direct connection to a durable Codex session — queued/steered conversation, live output, durable binding + auto-reattach. Personal fork of @deepseek-ai/dsh-subagent-codex."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "--- description: \"Forked from the official @deepseek-ai/dsh-subagent-codex: keeps the official one-shot Codex delegation and adds a true-gateway direct connection, queued/steered continuous conversation, live intermediate output, and image passthrough (vision fallback owned by th"
   },
   "schemaVersion": 1,
   "scripts": {
