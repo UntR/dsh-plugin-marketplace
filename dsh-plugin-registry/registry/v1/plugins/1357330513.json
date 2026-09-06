@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "cc6aff67f5305b41f613f8a84674ea1815ba057b"
   },
   "github": {
@@ -43,27 +43,40 @@
   },
   "id": "gh:1357330513",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-quality-review",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:CAI-MH/dsh-quality-review#cc6aff67f5305b41f613f8a84674ea1815ba057b",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-quality-review",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/12c39fc1c91be2d959117f93e7c925b537b92dac3dff50775a253d0e0e2e2d3c/CAI-MH/dsh-quality-review",
     "description": "AI response quality review for DeepSeek Harness: audits each finished assistant turn with an independent reviewer model and steers the agent to fix unreasonable output (up to 2 review rounds)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "AI response quality review for DeepSeek Harness (DSH): audits each finished assistant turn with an independent reviewer model and steers the agent to fix unreasonable output (up to 2 review rounds)."
   },
   "schemaVersion": 1,
   "scripts": {

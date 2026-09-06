@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "10696f596a06a9e85e148918846d9842fedafb15"
   },
   "github": {
@@ -41,27 +41,51 @@
   },
   "id": "gh:1357222070",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-doctor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:luoxin10086/dsh-session-doctor#10696f596a06a9e85e148918846d9842fedafb15",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.js"
+      },
+      "./package.json": "./package.json",
+      "./plugin": {
+        "default": "./src/plugin.js"
+      },
+      "./repair": {
+        "default": "./src/repair.js"
+      },
+      "./scan": {
+        "default": "./src/scan.js"
+      },
+      "./watch": {
+        "default": "./src/watch.js"
+      }
+    },
+    "main": "src/index.js",
+    "name": "dsh-session-doctor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a5f7a743e29fe43fb7d157c90d82b96a5bba24558c90aeaf8cf3972c2f861b6b/luoxin10086/dsh-session-doctor",
     "description": "Session doctor for DeepSeek Harness: scan/repair/watch stored session logs against loader-mirror validation, plus render-contract audit. 会话体检与修复插件。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "会话体检与修复插件 for DeepSeek Harness：扫描存储的会话日志，找出会导致 历史加载失败的损坏记录（loader 同款校验），并无损修复已支持的那类形状漂移， 每次修复前自动备份。"
   },
   "schemaVersion": 1,
   "scripts": {

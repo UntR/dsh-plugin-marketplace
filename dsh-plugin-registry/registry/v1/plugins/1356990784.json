@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "a6736fbcddacc634a8851d0e334b0032724454ba"
   },
   "github": {
@@ -47,33 +47,48 @@
   },
   "id": "gh:1356990784",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-workspace-kit",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-workspace-kit@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workspace-kit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/20110d33dbc8e6da6bfdb56da6db70468f51c35f19c722c9907f0ba4bdba8acd/ice5kysl/dsh-workspace-kit",
     "description": "dsh (DeepSeek Harness) workspace kit: ⌘K Spotlight search, soft workspace archive/restore, per-workspace icons/colors, enhanced sidebar with drag reorder — Cordis bundle plugin (host tools + browser client)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A dsh (DeepSeek Harness) plugin written to official conventions, in the Cordis \"bundle\" form. It solves two pain points:"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

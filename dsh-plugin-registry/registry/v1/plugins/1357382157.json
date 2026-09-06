@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "aad532f1d8e8eb8364f23a2482a917bba30fb5e3"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-oil-account",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-demo.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/026f55e6976d633624012b2e87d632220f69c5c8e6ab7ec7e7e2c20308464660/Dongfang81/dsh-oil-account",
     "description": "A film-ready oil car vs EV ownership cost demo for DSH Better Sidebar."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个为录屏演示设计的 DSH Better Sidebar 插件 Demo。它用可调年限和年里程对比油车/电车持有成本，并配有卡通阿特讲解、简化嘴部动画、波形和一键重播演示。"
   },
   "schemaVersion": 1,
   "scripts": {

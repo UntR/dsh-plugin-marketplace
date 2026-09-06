@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "866c827461f7677fee18f013b075073a15bc28cd"
   },
   "github": {
@@ -48,27 +48,42 @@
   },
   "id": "gh:1356980126",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-guard",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-plugin-guard@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./protocol": {
+        "default": "./lib/protocol.js",
+        "import": "./lib/protocol.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9de86e92dfdc407f9874ad65a167efcb314f0442d2e0959fecd889c277042791/wuwei6666/dsh-pluginGuard",
     "description": "Plugin Guard for DeepSeek Harness (DSH): isolate broken plugins so the web UI never goes down, with one-click self-update from npm."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A safety-guard plugin for DeepSeek Harness (DSH) — a broken plugin can never take your web UI down."
   },
   "schemaVersion": 1,
   "scripts": {

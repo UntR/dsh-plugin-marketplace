@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "2ebda3e53138c1b2292c4182511ffa13d5ccbdcd"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@sandersyao/dsh-workspace-bootstrap",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/57aaeee01ac15c079bd3e486971db69bb96373473cbdfba12f8d31f4443d8c36/sandersyao/dsh-workspace-bootstrap",
     "description": "deepseek harness 插件 增加默认工作区"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Boot-time default-workspace plugin (Stage A) for DeepSeek Harness. Loads as a Cordis plugin and, on web-host startup, idempotently registers a configured directory as the default workspace — unblocking the first session in an empty, directory-picker-disabled distributed/container"
   },
   "schemaVersion": 1,
   "scripts": {

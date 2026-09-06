@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "8e079ab13bbc02fdc9b8518a370e29db356c199c"
   },
   "github": {
@@ -46,24 +46,47 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.7",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./tui": {
+        "default": "./lib/tui.js",
+        "types": "./lib/tui.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-codex",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.7-f0rbidden4o3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/123129c3f009196e4dfd83d0053fc6672936db29bad0a2bbb5892c380178fe0c/f0rbidden4o3/dsh-codex",
     "description": "Use your ChatGPT subscription in DeepSeek Harness through OpenAI's Codex sign-in flow"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Use a ChatGPT subscription in DeepSeek Harness through OpenAI's Codex sign-in flow—no OpenAI Platform API key required and no dsh source patch required."
   },
   "schemaVersion": 1,
   "scripts": {

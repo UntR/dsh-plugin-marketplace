@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "628d69f818463b2f8cc263d4a14a53618c592248"
   },
   "github": {
@@ -42,27 +42,40 @@
   },
   "id": "gh:1357779778",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-runtime-observability",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:tianjiqx/dsh-runtime-observability#628d69f818463b2f8cc263d4a14a53618c592248",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs",
+        "types": "./lib/index.d.mts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-runtime-observability",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/71ed7ebfcb0aa065a368ec297b62bac2f50f8b713f46fed7d72b1eac77c85ef5/tianjiqx/dsh-runtime-observability",
     "description": "DeepSeek Harness 运行时可观测性插件。基于 OpenTelemetry 采集事件循环、内存、CPU、工作负载与子代理生命周期指标；支持断路器、ELU 降级联动及可选 Pyroscope 连续 Profiling。 Runtime metrics, continuous profiling & telemetry resilience plugin for DSH. Collects event loop, memory, CPU, workload & subagent lifecycle metrics; circuit breaker"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的运行时性能指标插件。它补足 CPU、内存、event loop、活跃资源和观测导出质量；不替换 @loongsuite/dsh-plugin 的业务 Trace。"
   },
   "schemaVersion": 1,
   "scripts": {

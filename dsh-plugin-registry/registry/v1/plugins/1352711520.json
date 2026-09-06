@@ -5,37 +5,46 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
     "enrichmentStatus": "ok",
-    "headSha": "eb9944659a8f2d6db07702732bad907561723f67"
+    "headSha": "2e619106fa5dce9c9c07c0d0af6d17e3ba0cd19c"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-31T18:00:46Z",
     "databaseId": 1352711520,
     "defaultBranch": "master",
-    "description": "DSH 思考与工具调用聚合：回合级思考 chip（实时时长/实时文字滚动）+ 工具调用聚合 chip + 共享活动抽屉 + 对话流卡片（步骤卡/总结卡，回合结束后才出现）——自 dsh-webui 移植。零 DSH 源码改动。",
+    "description": "DSH 对话流增强插件（零 DSH 源码改动，纯插件注入）。回合呈现：思考 chip（实时走秒 + 实时文字滚动）· 工具调用聚合 chip · 对话流卡片（步骤卡/总结卡）· 共享活动抽屉。正文增强：proto-tabs 可交互卡片 · diagram 流程图围栏 · 本地 HTML 内嵌预览（识别正文里的 .html 路径，host 读文件 + 同目录资源，iframe 沙箱隔离，高度自适应，1:1/等比缩放，浏览器打开）。界面与工具：会话头部对话/轨迹标签上移 · 对话截图（常驻无头浏览器渲染 markdown/shiki/mermaid 真图，可内嵌本地 HTML）· download 下载工具（实时进度条/速度/ETA）。",
     "fork": false,
     "forks": 0,
-    "headSha": "eb9944659a8f2d6db07702732bad907561723f67",
+    "headSha": "2e619106fa5dce9c9c07c0d0af6d17e3ba0cd19c",
     "homepageUrl": null,
-    "language": "TypeScript",
+    "language": "JavaScript",
     "license": null,
     "nodeId": "R_kgDOUKC9YA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/02cfb5b1f604eef9dfe165be3bc8f44e40cedb9ec63829e254d9fc6243323302/statem-li/dsh-chat-flow",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/42630a974f1bfb8f25c034c976adb8869eda068a8b76a1f4e860764149facd84/statem-li/dsh-chat-flow",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/31526136?v=4",
       "login": "statem-li"
     },
-    "pushedAt": "2026-09-05T07:48:33Z",
+    "pushedAt": "2026-09-05T10:03:38Z",
     "slug": "statem-li/dsh-chat-flow",
-    "stars": 0,
+    "stars": 1,
     "topics": [
+      "activity-drawer",
+      "chat-flow",
       "deepseek-harness",
+      "download",
       "dsh",
-      "dsh-plugin"
+      "dsh-plugin",
+      "html-preview",
+      "progress",
+      "reasoning",
+      "screenshot",
+      "tool-calls",
+      "typescript"
     ],
-    "updatedAt": "2026-09-05T07:48:37Z",
+    "updatedAt": "2026-09-06T05:58:18Z",
     "url": "https://github.com/statem-li/dsh-chat-flow"
   },
   "id": "gh:1352711520",
@@ -64,15 +73,15 @@
     "name": "dsh-chat-flow",
     "status": "valid",
     "type": "module",
-    "version": "0.7.2"
+    "version": "0.8.2"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/02cfb5b1f604eef9dfe165be3bc8f44e40cedb9ec63829e254d9fc6243323302/statem-li/dsh-chat-flow",
-    "description": "DSH 思考与工具调用聚合：回合级思考 chip（实时时长/实时文字滚动）+ 工具调用聚合 chip + 共享活动抽屉 + 对话流卡片（步骤卡/总结卡，回合结束后才出现）——自 dsh-webui 移植。零 DSH 源码改动。"
+    "coverUrl": "https://opengraph.githubassets.com/42630a974f1bfb8f25c034c976adb8869eda068a8b76a1f4e860764149facd84/statem-li/dsh-chat-flow",
+    "description": "DSH 对话流增强插件（零 DSH 源码改动，纯插件注入）。回合呈现：思考 chip（实时走秒 + 实时文字滚动）· 工具调用聚合 chip · 对话流卡片（步骤卡/总结卡）· 共享活动抽屉。正文增强：proto-tabs 可交互卡片 · diagram 流程图围栏 · 本地 HTML 内嵌预览（识别正文里的 .html 路径，host 读文件 + 同目录资源，iframe 沙箱隔离，高度自适应，1:1/等比缩放，浏览器打开）。界面与工具：会话头部对话/轨迹标签上移 · 对话截图（常驻无头浏览器渲染 markdown/shiki/mermaid 真图，可"
   },
   "readme": {
     "available": true,
-    "excerpt": "把 dsh-webui 全家桶里的四块对话体验拆成独立插件（webui 卸载后补回）， 零 DSH 源码改动，纯插件注入："
+    "excerpt": "把 dsh-webui 全家桶里的对话体验拆成独立插件（webui 卸载后补回），零 DSH 源码改动、 纯插件注入。当前 10 项能力，分三组："
   },
   "schemaVersion": 1,
   "scripts": {

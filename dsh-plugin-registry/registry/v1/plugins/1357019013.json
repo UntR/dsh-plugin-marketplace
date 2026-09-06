@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "5b8f8b3373878920003e6434230aab69f8fc0655"
   },
   "github": {
@@ -46,33 +46,48 @@
   },
   "id": "gh:1357019013",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-file-explorer-kit",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-file-explorer-kit@0.3.2",
+    "version": "0.3.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-file-explorer-kit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f18614fa3942362a6b3e3db036f4611d26288ee31023cceb3fd6c429414201fb/ice5kysl/dsh-file-explorer-kit",
     "description": "dsh (DeepSeek Harness) file explorer: browse the active session's workspace and preview files (Markdown/image/PDF/text/binary) right inside the chat GUI — a standard Cordis bundle plugin (read-only /dsh-files host routes + a conversation.view file tab)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A dsh (DeepSeek Harness) plugin written to official conventions, in \"bundle\" form. It solves one pain point:"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

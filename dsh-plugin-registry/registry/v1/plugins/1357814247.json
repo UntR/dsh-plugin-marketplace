@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "c1e7b902f4999a4f93366acb288e104437c5239f"
   },
   "github": {
@@ -45,7 +45,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -55,14 +55,20 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": "index.mjs",
+    "name": "dsh-plugin-health",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/68567946822422a4d8be2bcb96638c272d5be8d6b9376fd2a19814efa2c6a8c1/ice5kysl/dsh-plugin-health",
     "description": "Zero-dependency health-check CLI for DeepSeek Harness (dsh) plugins: manifest/npm/repo/docs checks + read-only-surface security scan. 零依赖的 dsh 插件体检 CLI。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Runs a battery of checks against a dsh plugin and prints a scored report (✅/⚠️/❌ + A–D), as Markdown and/or JSON. It answers the questions a plugin user or list maintainer would ask before installing:"
   },
   "schemaVersion": 1,
   "scripts": {

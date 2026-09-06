@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "5a49420445a7ed333d969303f67c2b85bb5bb204"
   },
   "github": {
@@ -47,33 +47,55 @@
   },
   "id": "gh:1356964358",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-evolver",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:cofy-x/dsh-evolver#5a49420445a7ed333d969303f67c2b85bb5bb204",
+    "version": "0.1.0-alpha.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./domain": {
+        "default": "./lib/domain.js",
+        "types": "./lib/types/domain.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*",
+      "./store": {
+        "default": "./lib/store.js",
+        "types": "./lib/types/store.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-evolver",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-alpha.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/aef6ec2ad4335965ab767ccd53073663326991e8ca33b8b92ea9f09fd448d531/cofy-x/dsh-evolver",
     "description": "Auditable, verifier-gated self-evolution for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Auditable, verifier-gated self-evolution for DeepSeek Harness."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "82e6597fb768859e52dc314a237f87149146c831"
   },
   "github": {
@@ -47,27 +47,41 @@
   },
   "id": "gh:1357107192",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workbench-ecs",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-workbench-ecs@0.3.5",
+    "version": "0.3.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.5",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workbench-ecs",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/50196fecd5303694724ec02463bf588bbaf7f7d6ce238600f5412bbf97da04bc/nishuoyang/dsh-workbench-ecs",
     "description": "Alibaba Cloud Workbench CLI plugin — lets DeepSeek Harness's Agent directly control remote ECS instances."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "It drives the official Alibaba Cloud Workbench CLI locally, and ships 7 agent-native tools — ecslist / ecsexec / ecsupload / ecsdownload / ecsdiagnose / ecsdeploy / ecssession — covering the full list → diagnose → execute → upload → restart → verify loop, plus a visual settings p"
   },
   "schemaVersion": 1,
   "scripts": {

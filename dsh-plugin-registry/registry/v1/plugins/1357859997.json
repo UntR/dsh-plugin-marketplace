@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "15e5102f9070efcd05ac0050c6221c4b12fece6d"
   },
   "github": {
@@ -41,27 +41,43 @@
   },
   "id": "gh:1357859997",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-local-models",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Vmarcelo49/dsh-local-models#15e5102f9070efcd05ac0050c6221c4b12fece6d",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-local-models",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ed97e12686e9803a4d3b70e4b07e1d7fbaf83a24080c27947c852f30b7ae2651/Vmarcelo49/dsh-local-models",
     "description": "Use local models via Llama.cpp on your deepseek harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A dsh addon that adds a Local Models tab to the dsh Web GUI: pick a .gguf file, tune context and speculative decoding, watch a live VRAM estimate, and load it through llama-server — then register the running server as an LLM provider in dsh with one click."
   },
   "schemaVersion": 1,
   "scripts": {

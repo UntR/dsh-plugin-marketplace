@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "75075a6c4a0dce7ef99e8bf9ff1bb02a8f9edf2f"
   },
   "github": {
@@ -45,27 +45,44 @@
   },
   "id": "gh:1357608452",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@furayoshi/dsh-widechat",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@furayoshi/dsh-widechat@0.7.2",
+    "version": "0.7.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.7.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client/index.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@furayoshi/dsh-widechat",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1e82532206287df09aff4fcd5f78c10e542b3040f5cb74d4262084b2dde5f1fd/FraYoshi/dsh-widechat",
     "description": "Widens the chat view of Deepseek Harness, so the text can fill you the entire screen. It also reduces max height of the text box of the user, plus other perks."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that widens the conversation column past the shipped 748px cap, right-aligns the session stats strip, and caps the composer card so long inputs do not hide the conversation above. Adds a settings row to the General page so all of these can be tuned witho"
   },
   "schemaVersion": 1,
   "scripts": {

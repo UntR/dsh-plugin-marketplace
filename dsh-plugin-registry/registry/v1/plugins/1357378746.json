@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "1324e37941dc72c5ba4ad1cb962228db3a4951ec"
   },
   "github": {
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.mjs",
+      "./bin/dsh-eval": "./bin/dsh-eval.mjs",
+      "./bin/dsh-review": "./bin/dsh-review.mjs",
+      "./experimental": "./src/experimental.mjs",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.mjs",
+    "name": "@catheadowl/dsh-eval",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b674305e1aec1dba8aec792cdebe2f4242714d078bee40e06b42fe95a8505538/CatheadOwl/dsh-eval",
     "description": "Agent eval framework over dsh headless runs: case runner, session-trace assertions, and a scripted mock-LLM layer for plugin intent tests."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A dsh-native agent evaluation layer for plugin authors: behavior cases run against real headless dsh traces, while review experiments test whether fresh models understand plugin outputs."
   },
   "schemaVersion": 1,
   "scripts": {

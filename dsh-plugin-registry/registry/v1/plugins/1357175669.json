@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "b62c3a0eac6c8466e2f55ac133b4edebe032a981"
   },
   "github": {
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-x-profile-reader",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f6591e05c1f0a17a7a9052e0f3e9e18586da6965824f06cd948c8e41ded520d2/Dee3526/dsh-plugin-x-profile-reader",
-    "description": ""
+    "description": "A DeepSeek Harness (DSH) plugin that adds the xprofileread tool: read one X (Twitter) user's public profile and recent posts through the Apify third-party scraper, normalized into a factual, structured result."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) plugin that adds the xprofileread tool: read one X (Twitter) user's public profile and recent posts through the Apify third-party scraper, normalized into a factual, structured result."
   },
   "schemaVersion": 1,
   "scripts": {

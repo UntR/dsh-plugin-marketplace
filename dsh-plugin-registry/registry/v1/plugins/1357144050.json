@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "08dc1f7bb986970dbb968da3ff26fb4c3085022b"
   },
   "github": {
@@ -45,27 +45,45 @@
   },
   "id": "gh:1357144050",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@wenqi_bian/dsh-web-search-anysearch",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@wenqi_bian/dsh-web-search-anysearch@0.1.2-rc.1",
+    "version": "0.1.2-rc.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2-rc.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./client.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@wenqi_bian/dsh-web-search-anysearch",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2-rc.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/db4188f3d848eb4f5c55221667b5b2e0b0c6b5448da2ac032bb708d9fba11f17/VinciBeans/dsh-web-search-anysearch",
     "description": "AnySearch-backed WebSearchProvider for DeepSeek Harness (dsh): switch web_search between the official DeepSeek search endpoint and AnySearch from a Plugins settings card."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An AnySearch web search provider for DeepSeek Harness (dsh), with an explicit switch between the official DeepSeek search endpoint and AnySearch — editable from the Web GUI as a card on the Plugins settings page, exactly like dsh's built-in plugin cards."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
-    "headSha": "9fad161bd5d5fb24a2516eba11237367311b0309"
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
+    "headSha": "18a972eb50ed54429567fb216e9d1ccc1aa1617b"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Out-of-tree plugin suite for deepseek-harness (dsh): markdown tooling, relates tables, review-evals dispatch.",
     "fork": false,
     "forks": 0,
-    "headSha": "9fad161bd5d5fb24a2516eba11237367311b0309",
+    "headSha": "18a972eb50ed54429567fb216e9d1ccc1aa1617b",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUOf06A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b674305e1aec1dba8aec792cdebe2f4242714d078bee40e06b42fe95a8505538/CatheadOwl/dsh-extras",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a63f078ab32433ffc8b983cba1ac032176f90a359bf45c9e5b38ac3d16e12065/CatheadOwl/dsh-extras",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/49943143?u=2fcf8ed6aea39701e293fe7585eaa79c0d1e0f03&v=4",
       "login": "CatheadOwl"
     },
-    "pushedAt": "2026-09-04T17:22:04Z",
+    "pushedAt": "2026-09-05T11:21:00Z",
     "slug": "CatheadOwl/dsh-extras",
     "stars": 0,
     "topics": [
@@ -38,32 +38,69 @@
       "dsh-plugin",
       "markdown-tooling"
     ],
-    "updatedAt": "2026-09-04T17:22:14Z",
+    "updatedAt": "2026-09-05T11:21:04Z",
     "url": "https://github.com/CatheadOwl/dsh-extras"
   },
   "id": "gh:1357378792",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@catheadowl/dsh-extras",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@catheadowl/dsh-extras@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      "./gates": {
+        "default": "./modules/gates/lib/index.js",
+        "types": "./modules/gates/lib/index.d.ts"
+      },
+      "./gates/register": {
+        "default": "./modules/gates/lib/register.js",
+        "types": "./modules/gates/lib/register.d.ts"
+      },
+      "./markdown": {
+        "default": "./modules/markdown/lib/index.js",
+        "types": "./modules/markdown/lib/index.d.ts"
+      },
+      "./markdown/gate-check": {
+        "default": "./modules/markdown/lib/gate-check.js",
+        "types": "./modules/markdown/lib/gate-check.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./prompt": {
+        "default": "./modules/prompt/lib/index.js",
+        "types": "./modules/prompt/lib/index.d.ts"
+      },
+      "./prompt/register": {
+        "default": "./modules/prompt/lib/register.js",
+        "types": "./modules/prompt/lib/register.d.ts"
+      },
+      "./routes": {
+        "default": "./modules/routes/lib/index.js",
+        "types": "./modules/routes/lib/index.d.ts"
+      }
+    },
+    "main": null,
+    "name": "@catheadowl/dsh-extras",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b674305e1aec1dba8aec792cdebe2f4242714d078bee40e06b42fe95a8505538/CatheadOwl/dsh-extras",
+    "coverUrl": "https://opengraph.githubassets.com/a63f078ab32433ffc8b983cba1ac032176f90a359bf45c9e5b38ac3d16e12065/CatheadOwl/dsh-extras",
     "description": "Out-of-tree plugin suite for deepseek-harness (dsh): markdown tooling, relates tables, review-evals dispatch."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Doing harness work is doing docs work. @catheadowl/dsh-extras keeps the knowledge your dsh agent runs on healthy. It wraps dsh's turn-close hook into a composable quality-gate framework — one registration face (registerGate) instead of every plugin grabbing the hook — and ships t"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-05T08:02:30.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichmentStatus": "ok",
     "headSha": "58cc7ed52b961fcce346340e099f69b41e927691"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-tool-zg",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e2df2f7d9dc3f47375cf4d954bc80036c53f4e088b5cf59fefd7c2b3200ddf3d/gunduziba/dsh-tool-zg",
     "description": "DeepSeek Harness 原生 zvec-grep (zg) 代码语义搜索工具插件，支持按预设动态过滤"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness (DSH) 原生 zg (zvec-grep) 代码语义与架构搜索工具插件。"
   },
   "schemaVersion": 1,
   "scripts": {
