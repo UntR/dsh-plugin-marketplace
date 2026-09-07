@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-30T09:34:26.444Z",
+    "enrichedAt": "2026-09-07T08:43:53.574Z",
     "enrichmentStatus": "ok",
-    "headSha": "bff1ff0071bbeb3c66492b9e534d8ed58b01cb2c"
+    "headSha": "f4b4afc2fa547072638973621de85b13590d1bbd"
   },
   "github": {
     "archived": false,
@@ -17,20 +17,17 @@
     "description": "Open-source DeepSeek Harness plugin bundle with portable multi-computer synchronization",
     "fork": false,
     "forks": 0,
-    "headSha": "bff1ff0071bbeb3c66492b9e534d8ed58b01cb2c",
+    "headSha": "f4b4afc2fa547072638973621de85b13590d1bbd",
     "homepageUrl": null,
-    "language": null,
-    "license": {
-      "name": "MIT License",
-      "spdxId": "MIT"
-    },
+    "language": "JavaScript",
+    "license": null,
     "nodeId": "R_kgDOUF7yVQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/564db3211514981220b740fe98c22c0749f4f4071ed4287f09842b43092a7c89/vb2250158/dsh-plugins",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ca3f1741aa442abd92a5fba464b77ccb6bbbcc3d484830ff691a676741fa252c/vb2250158/dsh-plugins",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/32808497?u=5ff97c59e26eb7af269c7e056100f24cc7cbed5a&v=4",
       "login": "vb2250158"
     },
-    "pushedAt": "2026-08-28T19:15:36Z",
+    "pushedAt": "2026-09-07T08:31:52Z",
     "slug": "vb2250158/dsh-plugins",
     "stars": 0,
     "topics": [
@@ -38,32 +35,121 @@
       "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-28T19:17:03Z",
+    "updatedAt": "2026-09-07T08:32:14Z",
     "url": "https://github.com/vb2250158/dsh-plugins"
   },
   "id": "gh:1348399701",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-private-plugins",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vb2250158/dsh-plugins#f4b4afc2fa547072638973621de85b13590d1bbd",
+    "version": "0.1.33"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./gpt-tool-schema-compatibility": {
+        "default": "./plugins/gpt-tool-schema-compatibility/lib/index.js"
+      },
+      "./gpt-tool-schema-compatibility/package.json": "./plugins/gpt-tool-schema-compatibility/package.json",
+      "./gpt-web-search": {
+        "default": "./plugins/gpt-web-search/lib/index.js"
+      },
+      "./gpt-web-search/package.json": "./plugins/gpt-web-search/package.json",
+      "./invariant": {
+        "default": "./lib/invariant.js"
+      },
+      "./nas-workspace-support": {
+        "default": "./plugins/nas-workspace-support/lib/index.js"
+      },
+      "./nas-workspace-support/client": {
+        "default": "./plugins/nas-workspace-support/lib/client.js"
+      },
+      "./nas-workspace-support/package.json": "./plugins/nas-workspace-support/package.json",
+      "./opencode-go-usage": {
+        "default": "./plugins/dsh-opencode-go-usage/lib/index.js"
+      },
+      "./opencode-go-usage/client": {
+        "default": "./plugins/dsh-opencode-go-usage/lib/client.js"
+      },
+      "./opencode-go-usage/package.json": "./plugins/dsh-opencode-go-usage/package.json",
+      "./package.json": "./package.json",
+      "./provider-visibility": {
+        "default": "./plugins/client-ui-provider-visibility/lib/index.js"
+      },
+      "./provider-visibility/client": {
+        "default": "./plugins/client-ui-provider-visibility/lib/client.js"
+      },
+      "./provider-visibility/package.json": "./plugins/client-ui-provider-visibility/package.json",
+      "./rabi-default-persona": {
+        "default": "./plugins/rabi-default-persona/lib/index.mjs"
+      },
+      "./rabi-default-persona/client": {
+        "default": "./plugins/rabi-default-persona/lib/client.js"
+      },
+      "./rabi-default-persona/package.json": "./plugins/rabi-default-persona/package.json",
+      "./rabi-default-persona/typert": {
+        "default": "./plugins/rabi-default-persona/lib/typert.host.js"
+      },
+      "./rabiroute-agent": {
+        "default": "./plugins/rabiroute-agent/lib/index.js"
+      },
+      "./rabiroute-agent/package.json": "./plugins/rabiroute-agent/package.json",
+      "./source-preservation-guidance": {
+        "default": "./plugins/source-preservation-guidance/lib/index.js"
+      },
+      "./source-preservation-guidance/package.json": "./plugins/source-preservation-guidance/package.json",
+      "./subagent-output-sanitizer": {
+        "default": "./plugins/subagent-output-sanitizer/lib/index.js"
+      },
+      "./subagent-output-sanitizer/package.json": "./plugins/subagent-output-sanitizer/package.json",
+      "./theme-blue": {
+        "default": "./plugins/client-ui-theme-blue/lib/index.js"
+      },
+      "./theme-blue/client": {
+        "default": "./plugins/client-ui-theme-blue/lib/client.js"
+      },
+      "./theme-blue/package.json": "./plugins/client-ui-theme-blue/package.json",
+      "./turn-continuation": {
+        "default": "./plugins/client-ui-turn-continuation/lib/index.js"
+      },
+      "./turn-continuation/client": {
+        "default": "./plugins/client-ui-turn-continuation/lib/client.js"
+      },
+      "./turn-continuation/package.json": "./plugins/client-ui-turn-continuation/package.json",
+      "./turn-continuation/typert": {
+        "default": "./plugins/client-ui-turn-continuation/lib/typert.host.js"
+      },
+      "./typert": {
+        "default": "./lib/typert.host.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-private-plugins",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.33"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/564db3211514981220b740fe98c22c0749f4f4071ed4287f09842b43092a7c89/vb2250158/dsh-plugins",
+    "coverUrl": "https://opengraph.githubassets.com/ca3f1741aa442abd92a5fba464b77ccb6bbbcc3d484830ff691a676741fa252c/vb2250158/dsh-plugins",
     "description": "Open-source DeepSeek Harness plugin bundle with portable multi-computer synchronization"
   },
   "readme": {
     "available": true,
-    "excerpt": "本仓库只保留插件索引和迁移说明。每个本人插件使用独立公开仓库；私有配置、启停状态和加密凭据不在本仓库保存。"
+    "excerpt": "这个仓库只保存自定义插件、私有设置和可直接加载的 lib/ 产物。官方 DSH 源码、官方分支、官方插件和官方配置不在这里同步或修改。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-06T08:16:59.739Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-07T08:43:53.574Z",
+    "enrichmentStatus": "ok",
     "headSha": "f2f8921fc20d94d277294f29fbe22399412b8893"
   },
   "github": {
@@ -41,13 +41,13 @@
   },
   "id": "gh:1339949670",
   "install": {
-    "available": true,
-    "packageName": "@xiaoyuink/dsh-image-vision",
-    "preferred": "github",
-    "reason": null,
+    "available": false,
+    "packageName": null,
+    "preferred": null,
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
-    "spec": "github:xiaoyuink/dsh-image-create#cd2aec01bbfa994534147504b3e639510558e82a",
-    "version": "1.5.0"
+    "spec": null,
+    "version": null
   },
   "npm": {
     "latestVersion": null,
@@ -57,23 +57,22 @@
   "package": {
     "exports": {
       ".": "./lib/index.js",
-      "./client": "./lib/client.js",
-      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./client": "./lib/client/index.cjs",
       "./package.json": "./package.json"
     },
-    "main": "./lib/index.js",
-    "name": "@xiaoyuink/dsh-image-vision",
+    "main": "lib/index.js",
+    "name": "@xiaoyuink/dsh-image-create",
     "status": "valid",
     "type": "module",
     "version": "1.5.0"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fd3446a4654ebe3b92cbfe6e939c29c5ee2bfd2950b802cb182192e751b0153f/xiaoyuink/dsh-image-create",
-    "description": "核心思想：让任意接入 DSH 的大模型都能识图——无论当前模型本身是否支持视觉。模型能识图就直接交给它（并按专业预设提示词分析），不能识图就自动转给插件配置的视觉模型，对使用者透明。"
+    "description": "核心思想：在 DSH 里直接生图，不离开对话。插件通过宿主进程安全代理 OpenAI 兼容的图像生成接口（/images/generations 文生图、/images/edits 图生图），在侧边栏提供三栏生图工作台；同时把 generateimage 工具注册给 Agent——在对话框里让模型直接生图，结果自动进入面板历史。"
   },
   "readme": {
     "available": true,
-    "excerpt": "核心思想：让任意接入 DSH 的大模型都能识图——无论当前模型本身是否支持视觉。模型能识图就直接交给它（并按专业预设提示词分析），不能识图就自动转给插件配置的视觉模型，对使用者透明。"
+    "excerpt": "核心思想：在 DSH 里直接生图，不离开对话。插件通过宿主进程安全代理 OpenAI 兼容的图像生成接口（/images/generations 文生图、/images/edits 图生图），在侧边栏提供三栏生图工作台；同时把 generateimage 工具注册给 Agent——在对话框里让模型直接生图，结果自动进入面板历史。"
   },
   "schemaVersion": 1,
   "scripts": {

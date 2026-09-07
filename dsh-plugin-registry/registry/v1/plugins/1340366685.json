@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-06T08:16:59.739Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-07T08:43:53.574Z",
+    "enrichmentStatus": "ok",
     "headSha": "3db7af787114cc6db3fe82b1dd1e6e8721a705b6"
   },
   "github": {
@@ -43,27 +43,44 @@
   },
   "id": "gh:1340366685",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-taskboard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:MisRightW/dsh-taskboard#3db7af787114cc6db3fe82b1dd1e6e8721a705b6",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.6.4",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-taskboard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e3cbdc2d99fe5c5c4e3640c796c0cb553a24640b4705a378455119346e148a9e/MisRightW/dsh-taskboard",
     "description": "dsh-taskboard"
   },
   "readme": {
     "available": true,
-    "excerpt": "dsh-taskboard"
+    "excerpt": "Cross-project taskboard bundle for the DeepSeek Harness Web profile."
   },
   "schemaVersion": 1,
   "scripts": {

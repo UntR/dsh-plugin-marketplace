@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-06T08:16:59.739Z",
+    "enrichedAt": "2026-09-07T08:43:53.574Z",
     "enrichmentStatus": "ok",
-    "headSha": "77755f65c3e4ffa6825441fa459beece53f67c28"
+    "headSha": "88795a126f72efbf2feec0d35b9c9113bf89d582"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "把 DeepSeek Harness 的 Web GUI 安全地开放到局域网或公网，自带密码鉴权，支持可选的TLS。Securely expose DeepSeek Harness's Web GUI to your local network or the public internet, with built-in password authentication and TLS support.",
     "fork": false,
     "forks": 0,
-    "headSha": "77755f65c3e4ffa6825441fa459beece53f67c28",
+    "headSha": "88795a126f72efbf2feec0d35b9c9113bf89d582",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT5xbaw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/33d35e166accb6ea3c3c6e90496441b0275fb67763ea6b4444d69b660d4367f9/rice-awa/dsh-lan-gateway",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b7065aaa3686b89e360a44ec9300b3aadfbc2a5a807d6c1fc1e6991e1a095a03/rice-awa/dsh-lan-gateway",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/141110807?u=614baed06ab0bf8827960f533ffb402abf22f934&v=4",
       "login": "rice-awa"
     },
-    "pushedAt": "2026-08-28T09:37:53Z",
+    "pushedAt": "2026-09-06T09:45:45Z",
     "slug": "rice-awa/dsh-lan-gateway",
     "stars": 3,
     "topics": [
@@ -42,7 +42,7 @@
       "nodejs",
       "plugin-discovery"
     ],
-    "updatedAt": "2026-08-28T09:38:00Z",
+    "updatedAt": "2026-09-06T09:45:56Z",
     "url": "https://github.com/rice-awa/dsh-lan-gateway"
   },
   "id": "gh:1335647083",
@@ -76,15 +76,15 @@
     "name": "@riceawa/dsh-lan-gateway",
     "status": "valid",
     "type": "module",
-    "version": "0.4.0"
+    "version": "0.5.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/33d35e166accb6ea3c3c6e90496441b0275fb67763ea6b4444d69b660d4367f9/rice-awa/dsh-lan-gateway",
+    "coverUrl": "https://opengraph.githubassets.com/b7065aaa3686b89e360a44ec9300b3aadfbc2a5a807d6c1fc1e6991e1a095a03/rice-awa/dsh-lan-gateway",
     "description": "把 DeepSeek Harness 的 Web GUI 安全地开放到局域网或公网，自带密码鉴权，支持可选的TLS。Securely expose DeepSeek Harness's Web GUI to your local network or the public internet, with built-in password authentication and TLS support."
   },
   "readme": {
     "available": true,
-    "excerpt": "dsh 的 web CLI 会硬拒绝 --host 0.0.0.0（避免把远程代码执行暴露到网络），所以本插件 让 dsh 继续只绑 127.0.0.1，自己另起一个 0.0.0.0 反向代理网关转发到 loopback 端口， 改写 Host/Origin 以通过 /api 信任围栏。LAN 与 loopback 来源免密代理；非 LAN 来源 必须先完成登录页并出示 HMAC cookie。"
+    "excerpt": "dsh 的 web CLI 会硬拒绝 --host 0.0.0.0（避免把远程代码执行暴露到网络），所以本插件 让 dsh 继续只绑 127.0.0.1，自己另起一个 0.0.0.0 反向代理网关转发到 loopback 端口， 改写 Host/Origin。默认拒绝（fail-closed）：所有来源——loopback、LAN、公网——都必须 先通过网关的登录页并出示 HMAC 会话 cookie；“LAN 免密”改为显式 lanPasswordless opt-in 且默认关闭。对 dsh ≥ 0.1.2-rc.1（修复了 QVD-2026-574"
   },
   "schemaVersion": 1,
   "scripts": {

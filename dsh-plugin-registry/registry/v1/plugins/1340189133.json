@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-06T08:16:59.739Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-07T08:43:53.574Z",
+    "enrichmentStatus": "ok",
     "headSha": "be98d80084763fe34185ccc69f07789f3b1051e8"
   },
   "github": {
@@ -38,27 +38,46 @@
   },
   "id": "gh:1340189133",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-alpha",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-alpha@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/plugin.mjs",
+      "./client": "./src/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./introspect": "./scripts/introspect-tools.mjs",
+      "./orchestrator": "./src/plugin.mjs",
+      "./package.json": "./package.json",
+      "./preset/alpha.cordis.yml": "./preset/alpha/agent.cordis.yml",
+      "./preset/alpha.profile.patch.yml": "./preset/alpha/profile.patch.yml",
+      "./preset/alpha.yml": "./preset/alpha/preset.yml",
+      "./runner": "./src/runner.mjs",
+      "./tools": "./src/tools.mjs"
+    },
+    "main": "./src/plugin.mjs",
+    "name": "dsh-alpha",
+    "status": "valid",
+    "type": "commonjs",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6811ff54ac22792ebc584c3bbe85e363653b7d680a3f4ee8c98421328dae5dda/songofhawk/dsh-alpha",
-    "description": ""
+    "description": "The demo uses an isolated environment. Machine, workspace, and path information is redacted."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "The demo uses an isolated environment. Machine, workspace, and path information is redacted."
   },
   "schemaVersion": 1,
   "scripts": {
