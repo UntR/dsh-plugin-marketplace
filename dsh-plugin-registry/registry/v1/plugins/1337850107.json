@@ -5,9 +5,9 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-07T08:43:53.574Z",
+    "enrichedAt": "2026-09-08T08:32:51.639Z",
     "enrichmentStatus": "ok",
-    "headSha": "5ee32dd1fa79523d6e4ef4e88502278335e22f58"
+    "headSha": "0a02278cef3a966dd7435cf00430c68a8e484453"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH 宿主插件:轮末自动派发需求合规检查子智能体 (DeepSeek Harness)",
     "fork": false,
     "forks": 0,
-    "headSha": "5ee32dd1fa79523d6e4ef4e88502278335e22f58",
+    "headSha": "0a02278cef3a966dd7435cf00430c68a8e484453",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,18 +25,18 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT734-w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e96ee75806cdd5ef944913e30f131427831a1531b14cd7ee093122fd10a3941b/liuyun847/dsh-host-compliance-check",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ac18b6fb543913ccbb40f882e9548b4ee19870b40934c8adab4d1f3504749a60/liuyun847/dsh-host-compliance-check",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/94478373?v=4",
       "login": "liuyun847"
     },
-    "pushedAt": "2026-08-18T01:28:02Z",
+    "pushedAt": "2026-09-07T13:09:32Z",
     "slug": "liuyun847/dsh-host-compliance-check",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-18T01:28:06Z",
+    "updatedAt": "2026-09-07T13:10:07Z",
     "url": "https://github.com/liuyun847/dsh-host-compliance-check"
   },
   "id": "gh:1337850107",
@@ -65,15 +65,15 @@
     "name": "dsh-host-compliance-check",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.4.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e96ee75806cdd5ef944913e30f131427831a1531b14cd7ee093122fd10a3941b/liuyun847/dsh-host-compliance-check",
+    "coverUrl": "https://opengraph.githubassets.com/ac18b6fb543913ccbb40f882e9548b4ee19870b40934c8adab4d1f3504749a60/liuyun847/dsh-host-compliance-check",
     "description": "DSH 宿主插件:轮末自动派发需求合规检查子智能体 (DeepSeek Harness)"
   },
   "readme": {
     "available": true,
-    "excerpt": "DSH(DeepSeek Harness)宿主插件:每个用户输入轮次结束时,若本轮修改过文件,自动派发一个需求合规检查子智能体(阻塞执行),把检查报告注入主会话,防止\"改完就忘、需求没对齐就收尾\"(迁移自 Trae 的 PostToolUse + Stop hook)。"
+    "excerpt": "DSH(DeepSeek Harness)宿主插件:模仿 Trae 的 stop-hook 配置(hooks.json 的 PostToolUse + Stop → decision 移交),不自动派发检查子智能体;在主会话 轮次正常结束时,若本轮修改过文件,向主会话注入一段 notice 形态的合规提醒 提示词(source.form='notice' + 一句话 summary,正文带文件清单),由主模型 当场自行判断:直接收尾 / 简要自查 / 阻塞调用 subagent 深入检查。"
   },
   "schemaVersion": 1,
   "scripts": {
