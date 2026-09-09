@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-08T08:32:51.639Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-09T08:38:48.162Z",
+    "enrichmentStatus": "ok",
     "headSha": "8e8254d0d04ddc16c311c773ce36abf8d7f37d60"
   },
   "github": {
@@ -45,27 +45,43 @@
   },
   "id": "gh:1353617874",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-winagent",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:HarrisXiu/WinWIKIAgent-dsgplugin#8e8254d0d04ddc16c311c773ce36abf8d7f37d60",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./services": {
+        "default": "./lib/services.js",
+        "types": "./lib/services.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-winagent",
+    "status": "valid",
+    "type": null,
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/66f7fb97d9c080d0a21dadb72f1c0b4857a447eedf6ace7d189b698cefb4c598/HarrisXiu/WinWIKIAgent-dsgplugin",
     "description": "WINWIKI的dsh插件版"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "WinAgent 的 DSH Web 插件：把桌面版 WinAgent 的完整 Agent 能力（OpenAI 兼容 API / 本地 Ollama + 53+ 个 Windows 工具 + skills + MCP + LLM Wiki 个人知识库）装进 DSH，在 DSH Web 界面里直接使用。"
   },
   "schemaVersion": 1,
   "scripts": {

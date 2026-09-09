@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-08T08:32:51.639Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-09T08:38:48.162Z",
+    "enrichmentStatus": "ok",
     "headSha": "b5c5a20d094b67f3ebae80f241c4edb04510f3b5"
   },
   "github": {
@@ -43,7 +43,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -53,14 +53,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-search-pro",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9b564f6f4f15b3ab5dbc774bc5fb491b2cb69d50bc72fab57bec9b67992a5942/jonah791/dsh-search-pro",
     "description": "深度搜索插件：三层检索（表层多引擎/深网挖掘/Tor代理）+ 23 工具（搜索/抓取/OSINT/归档/分享检索）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 深度搜索插件：三层检索（表层多引擎/深网挖掘/Tor代理）+ 18 工具六组 inject: 'tools' tools: search runtime: host-only envDeps: 可选 API key（tavily 等，可配置） boundary: 无特殊授权边界 compat: cordis ^4.0.1 / dsh-tools ^0.1.0-rc.6 -->"
   },
   "schemaVersion": 1,
   "scripts": {

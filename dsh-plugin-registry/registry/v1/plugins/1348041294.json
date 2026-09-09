@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-08T08:32:51.639Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-09T08:38:48.162Z",
+    "enrichmentStatus": "ok",
     "headSha": "bd0c16a3cffdd3a4798345346f0aae031cd543f6"
   },
   "github": {
@@ -27,7 +27,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/148462372?v=4",
       "login": "Choi-Peng"
     },
-    "pushedAt": "2026-09-08T05:46:54Z",
+    "pushedAt": "2026-09-08T16:22:57Z",
     "slug": "Choi-Peng/dsh-tenancy",
     "stars": 0,
     "topics": [
@@ -39,27 +39,38 @@
   },
   "id": "gh:1348041294",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@choi-p/dsh-tenancy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Choi-Peng/dsh-tenancy#bd0c16a3cffdd3a4798345346f0aae031cd543f6",
+    "version": "0.1.0-alpha.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@choi-p/dsh-tenancy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-alpha.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/91e335dd665c0d87745633b56ec34a0e454b231bc3aed623fe706d8c50a2ec79/Choi-Peng/dsh-tenancy",
     "description": "为 DeepSeek Harness(DSH)打造的单实例多租户插件:借助 Caddy + Authelia 认证前置提取用户身份,通过会话级 owner/access ACL、影子路由门控与事件流过滤实现会话/工作区的可见性隔离,并以工作区围栏与共享、邀请码注册、公开站点发布等能力,让互信团队安全共用一个 dsh 实例。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 单实例多租户插件 —— 配套 Caddy + Authelia 认证前端使用。"
   },
   "schemaVersion": 1,
   "scripts": {

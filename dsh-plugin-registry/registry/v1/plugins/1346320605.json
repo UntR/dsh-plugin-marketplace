@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-08T08:32:51.639Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-09T08:38:48.162Z",
+    "enrichmentStatus": "ok",
     "headSha": "72387039e81513ccc2df6c0d46bc58ee8958e9a4"
   },
   "github": {
@@ -43,7 +43,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -53,14 +53,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-exploit-kit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3b62275777d5876a0f7ae6240a918ff6d50d90fd877688f2df4efddb99714177/jonah791/dsh-exploit-kit",
     "description": "漏洞利用原语库：把打靶场经验固化为可组合的利用原语（命令注入/弱类型/Web绕过/JWT/序列化/ECB块拼接），模型负责策略、工具负责生成"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 漏洞利用原语库：把打靶场经验固化为可组合的利用原语（命令注入/弱类型/Web绕过/JWT/序列化/ECB块拼接），模型负责策略、工具负责生成 inject: 'tools' tools: xp runtime: host-only envDeps: 无（纯逻辑/标准 Node） boundary: 仅限自有/授权/靶场环境；纯本地生成不触网 compat: cordis ^4.0.1 / dsh-tools ^"
   },
   "schemaVersion": 1,
   "scripts": {

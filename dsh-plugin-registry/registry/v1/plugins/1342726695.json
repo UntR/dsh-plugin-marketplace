@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-08T08:32:51.639Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-09T08:38:48.162Z",
+    "enrichmentStatus": "ok",
     "headSha": "fb294645deff97468845263b3211b553183d5d9c"
   },
   "github": {
@@ -48,33 +48,47 @@
   },
   "id": "gh:1342726695",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@edge-hh/dsh-grokbot-pet",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:Edge-HH/GrokBot_in_DeepseekHerness#fb294645deff97468845263b3211b553183d5d9c",
+    "version": "2.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./invariant": "./lib/invariant.js",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "./lib/index.js",
+    "name": "@edge-hh/dsh-grokbot-pet",
+    "status": "valid",
+    "type": "module",
+    "version": "2.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/76c7338ba422584da5c2b837edd5d8d759e7993449192e52d8c64cb29bc8ebb9/Edge-HH/GrokBot_in_DeepseekHerness",
     "description": "将GrokBot宠物代入DSH网页端并加入拖拽效果和通知功能"
   },
   "readme": {
     "available": true,
-    "excerpt": "---"
+    "excerpt": "本仓库同时是："
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-08T08:32:51.639Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-09T08:38:48.162Z",
+    "enrichmentStatus": "ok",
     "headSha": "e7b39c0a0a4227ee794e0d80b72f0da91fbda2e9"
   },
   "github": {
@@ -43,7 +43,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -53,14 +53,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-sec-tools",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/67f20fef5684a2ea64eac736815031001942c05bb3e1ae348ae9a61a7e41004a/jonah791/dsh-sec-tools",
     "description": "安全工具面封装：把 WSL 成熟渗透工具（nmap/sqlmap/hashcat 等）封装为结构化 DSH 工具，spawnWsl 模式，窄而深可组合"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 安全工具面封装：把 WSL 成熟渗透工具（nmap/sqlmap/hashcat 等）封装为结构化 DSH 工具，spawnWsl 模式，窄而深可组合 inject: 'tools' tools: sec runtime: host-only envDeps: WSL Ubuntu + 渗透工具（nmap/sqlmap/hashcat 等） boundary: 仅限自有/授权/靶场环境 compat: cord"
   },
   "schemaVersion": 1,
   "scripts": {
