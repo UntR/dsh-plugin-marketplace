@@ -1,73 +1,89 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-09T08:38:48.162Z",
+    "enrichedAt": "2026-09-10T08:35:35.589Z",
     "enrichmentStatus": "ok",
-    "headSha": "484ad86be5c2585610a828bc42aa8a52df016e09"
+    "headSha": "a4c263053c7cb18f062a7edbccd1743cea3c1e12"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-08T09:51:13Z",
     "databaseId": 1327614239,
     "defaultBranch": "main",
-    "description": null,
+    "description": "Automode for DeepSeek Harness: a fourth permission preset — full access with an LLM classifier as the only gate before every tool call.",
     "fork": false,
     "forks": 0,
-    "headSha": "484ad86be5c2585610a828bc42aa8a52df016e09",
+    "headSha": "a4c263053c7cb18f062a7edbccd1743cea3c1e12",
     "homepageUrl": null,
-    "language": "JavaScript",
-    "license": null,
+    "language": "TypeScript",
+    "license": {
+      "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+      "spdxId": "BSD-3-Clause"
+    },
     "nodeId": "R_kgDOTyHJHw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e7aa8e5965b544b6444db7c27f6069ecd83cb72557afde52c5dd5fc017246dd7/Andy8647/dsh-auto-approval",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b839b65ce454f3fa3187b95b4bdc72acfb0818e1bf27045d90fcbd50d97805c1/Andy8647/dsh-auto-approval",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/34826300?u=93d7b9fe30a00aa2cc94aa0b1e55dc258180b87f&v=4",
       "login": "Andy8647"
     },
-    "pushedAt": "2026-08-13T13:55:58Z",
+    "pushedAt": "2026-09-09T10:41:38Z",
     "slug": "Andy8647/dsh-auto-approval",
-    "stars": 4,
+    "stars": 3,
     "topics": [
+      "automode",
       "deepseek-harness",
       "dsh",
       "dsh-auto-approval",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-25T03:45:02Z",
+    "updatedAt": "2026-09-09T10:42:06Z",
     "url": "https://github.com/Andy8647/dsh-auto-approval"
   },
   "id": "gh:1327614239",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-auto-approval",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-auto-approval@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
   "package": {
-    "main": null,
-    "name": "dsh-auto-approval-workspace",
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-auto-approval",
     "status": "valid",
-    "type": null,
-    "version": null
+    "type": "module",
+    "version": "0.2.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e7aa8e5965b544b6444db7c27f6069ecd83cb72557afde52c5dd5fc017246dd7/Andy8647/dsh-auto-approval",
-    "description": "Automated tool-call approval for DeepSeek Harness: an auto tier for the approval policy that classifies every tool call as allow / deny (fully autonomous — no human in the loop, uncertain calls are denied)."
+    "coverUrl": "https://opengraph.githubassets.com/b839b65ce454f3fa3187b95b4bdc72acfb0818e1bf27045d90fcbd50d97805c1/Andy8647/dsh-auto-approval",
+    "description": "Automode for DeepSeek Harness: a fourth permission preset — full access with an LLM classifier as the only gate before every tool call."
   },
   "readme": {
     "available": true,
-    "excerpt": "Automated tool-call approval for DeepSeek Harness: an auto tier for the approval policy that classifies every tool call as allow / deny (fully autonomous — no human in the loop, uncertain calls are denied)."
+    "excerpt": "A fourth permission preset for DeepSeek Harness: pick Automode in the composer's permission dropdown and the session runs on full access with an LLM classifier as the only gate before every tool call. No approval prompts — the classifier answers for you."
   },
   "schemaVersion": 1,
   "scripts": {
