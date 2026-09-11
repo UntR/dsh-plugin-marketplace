@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "b173fb673d9022a787e06427de501287da1316b0"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1360457820",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-rescue",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Iliyasfiel/dsh-rescue#b173fb673d9022a787e06427de501287da1316b0",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./core": "./lib/rescue-core.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-rescue",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a3b43ebbb0b8b61beb482a8cc1771269885006afd364d075e0c4c97dc15f3616/Iliyasfiel/dsh-rescue",
-    "description": ""
+    "description": "Rescue mode for DeepSeek Harness (DSH). When a version upgrade leaves third-party plugins conflicting and the GUI will no longer start, dsh-rescue temporarily strips every third-party bundle from a profile's stack so dsh boots on a pure core and can repair itself — then restores "
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Rescue mode for DeepSeek Harness (DSH). When a version upgrade leaves third-party plugins conflicting and the GUI will no longer start, dsh-rescue temporarily strips every third-party bundle from a profile's stack so dsh boots on a pure core and can repair itself — then restores "
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "d0ec38d0893b442c68317b044fedefbcb5bb57b5"
   },
   "github": {
@@ -48,13 +48,13 @@
   },
   "id": "gh:1359336567",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-missing-stop-heal",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zzzyaar/dsh--API-message_stop-#d0ec38d0893b442c68317b044fedefbcb5bb57b5",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
@@ -62,11 +62,17 @@
     "repositoryMatches": null
   },
   "package": {
+    "exports": {
+      ".": "./heal.mjs",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
     "main": "heal.mjs",
     "name": "dsh-missing-stop-heal",
     "status": "valid",
     "type": "module",
-    "version": "1.0.0"
+    "version": "0.2.0"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fbc4c63a93d23edbf9fc9eed8cfab6529e72c58ab97422439b5b3d70b9d106d4/zzzyaar/dsh--API-message_stop-",
@@ -74,7 +80,7 @@
   },
   "readme": {
     "available": true,
-    "excerpt": "本仓库是一次完整的根因分析 + 最小修复：一个 Cordis 插件，在 dsh 的 llm/stream 瀑布上把\"内容已到、缺终止信号\"的流干净地结束，从而让回复正常提交、重试不再发生。"
+    "excerpt": "目录"
   },
   "schemaVersion": 1,
   "scripts": {

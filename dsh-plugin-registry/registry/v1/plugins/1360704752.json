@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
-    "headSha": "3ae64daf6c28864568c78b1b4fae5331a79cc64e"
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
+    "headSha": "81bacb1fd8677daf3dd56cd6d13e29bd89f6d2ad"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness 的上下文管家：替你记住“现在在干嘛”，自动整理送进模型的上下文——该留的留、该删的删、拿不准的不动，让 AI 编程长会话不跑偏，每个 token 都花在刀刃上。",
     "fork": false,
     "forks": 0,
-    "headSha": "3ae64daf6c28864568c78b1b4fae5331a79cc64e",
+    "headSha": "81bacb1fd8677daf3dd56cd6d13e29bd89f6d2ad",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOURq08A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/177a5d055c113196ebd932d2c8875c33e92a0403041da3df71d47a028aaa2d67/54shitaimzf/dsh-price-less",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c9ca23ffe5fd47901c576e93e5301203e73e530f9d85b054f8f03b3e73c8bd3f/54shitaimzf/dsh-price-less",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/57395273?u=83da8844527997d856348a998a2798a8f22b92cd&v=4",
       "login": "54shitaimzf"
     },
-    "pushedAt": "2026-09-09T03:22:20Z",
+    "pushedAt": "2026-09-10T21:37:44Z",
     "slug": "54shitaimzf/dsh-price-less",
     "stars": 1,
     "topics": [
@@ -45,7 +45,7 @@
       "prompt-engineering",
       "typescript"
     ],
-    "updatedAt": "2026-09-09T03:22:28Z",
+    "updatedAt": "2026-09-10T21:37:48Z",
     "url": "https://github.com/54shitaimzf/dsh-price-less"
   },
   "id": "gh:1360704752",
@@ -53,7 +53,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -63,14 +63,35 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./provider": {
+        "default": "./lib/platform/provider-entry.js",
+        "types": "./lib/types/platform/provider-entry.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-price-less",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/177a5d055c113196ebd932d2c8875c33e92a0403041da3df71d47a028aaa2d67/54shitaimzf/dsh-price-less",
+    "coverUrl": "https://opengraph.githubassets.com/c9ca23ffe5fd47901c576e93e5301203e73e530f9d85b054f8f03b3e73c8bd3f/54shitaimzf/dsh-price-less",
     "description": "DeepSeek Harness 的上下文管家：替你记住“现在在干嘛”，自动整理送进模型的上下文——该留的留、该删的删、拿不准的不动，让 AI 编程长会话不跑偏，每个 token 都花在刀刃上。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Context management plugin for DeepSeek Harness"
   },
   "schemaVersion": 1,
   "scripts": {

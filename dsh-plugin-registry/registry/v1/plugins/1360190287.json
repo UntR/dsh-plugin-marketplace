@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "9517c711b0648b39a226ca64220bc203009189c5"
   },
   "github": {
@@ -52,33 +52,48 @@
   },
   "id": "gh:1360190287",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@kober-basket/dsh-cachescope",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:fzfz/dsh-cachescope#9517c711b0648b39a226ca64220bc203009189c5",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@kober-basket/dsh-cachescope",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e9fcab8d587e2dc99aab44de22a72af9e3b33d03b062b809dba45751a29000f7/fzfz/dsh-cachescope",
     "description": "Prompt-cache observability and logical-input diagnostics for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "CacheScope supports DSH Desktop only. It adds a native sidebar entry, a diagnostic panel and a settings page to the desktop application. Standalone Harness CLI and browser deployments are not supported products."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

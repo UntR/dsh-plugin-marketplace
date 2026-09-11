@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "80298944cf28807530ff9a5cc3baf9101af135a4"
   },
   "github": {
@@ -48,27 +48,42 @@
   },
   "id": "gh:1355001810",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "kidai-hub",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:NokorinNishikino/Kidai-Hub#80298944cf28807530ff9a5cc3baf9101af135a4",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "kidai-hub",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8df98862a5f5bae7fe0193bc5b75b4b6e3f74fd0b871715248f5c03de184ddcc/NokorinNishikino/Kidai-Hub",
     "description": "Kidai Hub (纪代中枢) — 统一承载 Kidai 系列插件界面的容器：侧边栏入口 + 全屏 Hub 页,各插件面板注册进 kidai-hub.tabs。有 Hub 进 Hub,没有 Hub 独立出现。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个入口 · 贯穿所有 Kidai 插件 —— Kidai 系列插件的统一容器"
   },
   "schemaVersion": 1,
   "scripts": {

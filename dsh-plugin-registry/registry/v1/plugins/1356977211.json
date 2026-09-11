@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "ef21cfff1e6d72dca3bbd3122e42b3d3d0b4cf70"
   },
   "github": {
@@ -43,33 +43,46 @@
   },
   "id": "gh:1356977211",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-session-vault",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:nateyu/dsh-session-vault#ef21cfff1e6d72dca3bbd3122e42b3d3d0b4cf70",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-vault",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a261844102b78869f289828a100305a13124ecbe1ad091fc5c8d74eb73dd6960/nateyu/dsh-session-vault",
     "description": "A DeepSeek Harness settings plugin. It lists and deletes sessions the sidebar hides: archived sessions, or blank sessions whose log has no turn/start. A session whose log cannot be read is listed too, marked “Unreadable” — this page is the only surface left that can remove it. Su"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness settings plugin. It lists and deletes sessions the sidebar hides: archived sessions, or blank sessions whose log has no turn/start. A session whose log cannot be read is listed too, marked “Unreadable” — this page is the only surface left that can remove it. Su"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

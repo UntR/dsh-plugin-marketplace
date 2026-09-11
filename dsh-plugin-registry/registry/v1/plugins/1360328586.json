@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "6c4a46b04255ef1cadfc990ed2748acc1e13fbd1"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1360328586",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-stream-upload",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-stream-upload@0.4.0",
+    "version": "0.4.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/index.js",
+    "name": "dsh-stream-upload",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/013a4110efc03a6959d9e8d858ad59194d4304343db040383edf9fc2b69cd976/roojay/dsh-stream-upload",
     "description": "DeepSeek Harness hybrid attachment plugin: native images plus bounded-memory workspace uploads"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A dual-face DeepSeek Harness plugin for hybrid attachments from the Web composer. PNG/JPEG/WebP/GIF files are handed to the official durable image-attachment pipeline. Everything else — code, text, PDFs, DOCX/XLSX, archives — is streamed as raw bytes into the session workspace wh"
   },
   "schemaVersion": 1,
   "scripts": {

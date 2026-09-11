@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
-    "headSha": "4615c8e5fa0116c46455b99ee9a9f6a7b786eeaa"
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
+    "headSha": "14f5fd3d4276096479ae1add57baac290dfd7999"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH Web 暂停插件：agent 完成一轮工具交互、正要发出下一次模型请求之前在 agent/pre-step 处拉门暂停，保持 composer 输入框可用，人类在主输入框按回车放行，空草稿为无感继续、带字作为插话一并放行；此暂停不打断任何在途 API 调用，模型上下文完整、无感知。纯插件自包含，不改 DSH 源码。",
     "fork": false,
     "forks": 0,
-    "headSha": "4615c8e5fa0116c46455b99ee9a9f6a7b786eeaa",
+    "headSha": "14f5fd3d4276096479ae1add57baac290dfd7999",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOURmObg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/cf3e228d67f8bcb3a51e4d30d1f7c04aeffbadc5807d2a555b19005850a704ae/better-er/dsh-pause",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/1633d641596a29e24ef6885b9afeae054c94098bd0a68b4f3c3b59948fe318e8/better-er/dsh-pause",
     "owner": {
-      "avatarUrl": "https://avatars.githubusercontent.com/u/54624517?u=1eb4b9e5f061cf78d02f809ed6c6d730e29dcd62&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/54624517?u=7131f2c75633411fedb0512488934404f24e7b8c&v=4",
       "login": "better-er"
     },
-    "pushedAt": "2026-09-07T21:18:51Z",
+    "pushedAt": "2026-09-10T20:40:31Z",
     "slug": "better-er/dsh-pause",
-    "stars": 1,
+    "stars": 2,
     "topics": [
       "deepseek",
       "deepseek-harness",
@@ -43,38 +43,55 @@
       "pause",
       "steer"
     ],
-    "updatedAt": "2026-09-09T19:25:20Z",
+    "updatedAt": "2026-09-10T20:40:34Z",
     "url": "https://github.com/better-er/dsh-pause"
   },
   "id": "gh:1360629358",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-pause",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-pause@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-pause",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/cf3e228d67f8bcb3a51e4d30d1f7c04aeffbadc5807d2a555b19005850a704ae/better-er/dsh-pause",
+    "coverUrl": "https://opengraph.githubassets.com/1633d641596a29e24ef6885b9afeae054c94098bd0a68b4f3c3b59948fe318e8/better-er/dsh-pause",
     "description": "DSH Web 暂停插件：agent 完成一轮工具交互、正要发出下一次模型请求之前在 agent/pre-step 处拉门暂停，保持 composer 输入框可用，人类在主输入框按回车放行，空草稿为无感继续、带字作为插话一并放行；此暂停不打断任何在途 API 调用，模型上下文完整、无感知。纯插件自包含，不改 DSH 源码。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 会自动调用工具并连续作答，虽然可以使用插话发送在中途提示，但是 DeepSeek 输出太快了，拼尽全力也没有其百分之一的 tok/s，根本无法成功插话。而直接打断 DeepSeek 的输出会导致其变成胆小菇，甚至不愿继续执行命令，工作积极性大幅下降。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

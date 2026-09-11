@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
-    "headSha": "c41da43fe62c8492a9ad001568bcd12c1496dd4c"
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
+    "headSha": "d65dd429c4bb6403ac62b78d1b3391cfbd994ac1"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "将code-server（VSCode网页版）打包安装到dsh内的插件，快速实现专业的文件编辑。Package and install code-server (the web version of VSCode) as a plugin within dsh to quickly achieve professional file editing.",
     "fork": false,
     "forks": 0,
-    "headSha": "c41da43fe62c8492a9ad001568bcd12c1496dd4c",
+    "headSha": "d65dd429c4bb6403ac62b78d1b3391cfbd994ac1",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUEEXvg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/97c031703fda66dee4e7607a4a5626a6e1bdafd90576d15abf39c0a11a36b784/jinsiyu/dsh-code-server-app",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/45235700cfadccdcbb53dcc3c24362b11e7e81b46a505d2d906276c04f1228ba/jinsiyu/dsh-code-server-app",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/6449499?u=60e634b317724de1b9e0d9ea84a9e0c0abb4585c&v=4",
       "login": "jinsiyu"
     },
-    "pushedAt": "2026-09-10T07:27:39Z",
+    "pushedAt": "2026-09-10T08:40:59Z",
     "slug": "jinsiyu/dsh-code-server-app",
     "stars": 2,
     "topics": [
@@ -38,7 +38,7 @@
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-09-10T07:27:49Z",
+    "updatedAt": "2026-09-10T08:41:04Z",
     "url": "https://github.com/jinsiyu/dsh-code-server-app"
   },
   "id": "gh:1346443198",
@@ -47,12 +47,12 @@
     "packageName": "dsh-code-server-app",
     "preferred": "npm",
     "reason": null,
-    "requiresBuildApproval": true,
-    "spec": "dsh-code-server-app@0.1.27",
-    "version": "0.1.27"
+    "requiresBuildApproval": false,
+    "spec": "dsh-code-server-app@0.2.7",
+    "version": "0.2.7"
   },
   "npm": {
-    "latestVersion": "0.1.27",
+    "latestVersion": "0.2.7",
     "published": true,
     "repositoryMatches": true
   },
@@ -66,20 +66,20 @@
     "name": "dsh-code-server-app",
     "status": "valid",
     "type": "module",
-    "version": "0.1.27"
+    "version": "0.2.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/97c031703fda66dee4e7607a4a5626a6e1bdafd90576d15abf39c0a11a36b784/jinsiyu/dsh-code-server-app",
+    "coverUrl": "https://opengraph.githubassets.com/45235700cfadccdcbb53dcc3c24362b11e7e81b46a505d2d906276c04f1228ba/jinsiyu/dsh-code-server-app",
     "description": "将code-server（VSCode网页版）打包安装到dsh内的插件，快速实现专业的文件编辑。Package and install code-server (the web version of VSCode) as a plugin within dsh to quickly achieve professional file editing."
   },
   "readme": {
     "available": true,
-    "excerpt": "静态 profile 插件(npm 包形态,host + client bundle),把最新版 code-server 作为插件依赖随装(package.json dependencies),插件启动时自动发现并使用它, 无需全局 npm 安装、无需配置 bin。"
+    "excerpt": "静态 profile 插件(npm 包形态,host + client bundle),把 code-server 发行版里的 VS Code server 树 作为平台无关依赖随插件安装(打包期产物 vendor/vscode → @jinsiyu/dshcs-vscode-server, 无安装脚本、无 postinstall);code-server 的 Node 服务层已由插件自带的 lib/launcher.mjs 取代 (它直接驱动 /lib/vscode/out/server-main.js 的 loadCodeWithNls() / cr"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
-    "postinstall": true,
+    "postinstall": false,
     "preinstall": false,
     "prepare": false
   }

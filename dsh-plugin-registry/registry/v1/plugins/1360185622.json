@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "9ee73d1cbadf4b81ab894ac359c35832d2790f3c"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1360185622",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-subagent-model-policy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:chr003/dsh-subagent-model-picker#9ee73d1cbadf4b81ab894ac359c35832d2790f3c",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-subagent-model-policy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/082fa18806f9b8c81d8a89a2b2cb0bf7f4345840d96f19126b06fd8494f58468/chr003/dsh-subagent-model-picker",
     "description": "Separate per-session model and reasoning effort controls for DeepSeek Harness subagents."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Choose a different model and reasoning effort for new subagents without changing the main conversation's model."
   },
   "schemaVersion": 1,
   "scripts": {

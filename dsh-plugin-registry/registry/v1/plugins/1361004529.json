@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "fce8bf41ea867757f52e6108bdbca1b54db50cab"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1361004529",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-attention-chime",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:YuChuanhui3/dsh-plugin-attention-chime#fce8bf41ea867757f52e6108bdbca1b54db50cab",
+    "version": "0.2.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-attention-chime",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/60661abb42666918f2d0ae143b88108264167c0c9dd70d9cb0fbcc6fe696077f/YuChuanhui3/dsh-plugin-attention-chime",
     "description": "🔔 macOS sound + system notification whenever a DeepSeek Harness (dsh) agent needs your reply, answer, or approval — click the notification to jump to the session's browser tab. 后台任务守卫 / 升级递进提醒 / 设置页卡片配置。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Agent 需要人的时刻有三种：回合结束等你回复、askuserquestion 提问、危险操作等审批。你一旦切去干别的事，就会让它白等几分钟甚至几小时。这个插件把「它需要你」变成听得见、看得见、点得到的信号。"
   },
   "schemaVersion": 1,
   "scripts": {

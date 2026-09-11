@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "73286fc01bed88e389ace6f6c3a802859e3dee63"
   },
   "github": {
@@ -49,33 +49,45 @@
   },
   "id": "gh:1360331169",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-prompt-for-me",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:XXXXXQ-0206/dsh-prompt-for-me#73286fc01bed88e389ace6f6c3a802859e3dee63",
+    "version": "0.7.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.6.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.cjs",
+      "./client": "./lib/client.cjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.cjs",
+    "name": "dsh-prompt-for-me",
+    "status": "valid",
+    "type": "commonjs",
+    "version": "0.7.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bd190a63af0b280c035da963ed4f340ed20c68321590eb3c69c6749e77436458/XXXXXQ-0206/dsh-prompt-for-me",
     "description": "Prompt design companion for DeepSeek Harness. Designs next development prompts and optimizes current drafts with project context."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A prompt design companion for DeepSeek Harness."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

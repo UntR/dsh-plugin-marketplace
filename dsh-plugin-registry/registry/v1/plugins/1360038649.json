@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "e40f6bd143a059ffab9286289fd0d5069fdbf77a"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./count": "./lib/count.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-chapter-word-counter",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f980d5a41032f5f826e87fc5e4fdf62c196a4e3f2174b29bc02338c4d57132f6/Tinger-X/dsh-chapter-word-counter",
     "description": "DeepSeek Harness (DSH) tool plugin: count the body word count of novel chapter files — chapter_words_count(files) -> [counts]"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "注册一个模型可直接调用的工具 chapterwordscount：传入章节文件路径列表，返回与输入顺序一致的正文字数列表。"
   },
   "schemaVersion": 1,
   "scripts": {

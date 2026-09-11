@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "944c446bef268467267a04b81be5505bca90dbd4"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1360450924",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-drop-in",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zhanghuqqqq/dsh-drop-in#944c446bef268467267a04b81be5505bca90dbd4",
+    "version": "0.1.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-drop-in",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/69768abe0016049bdcde57823341e8d9a3bddf4a6fcabec1f63e5c3763fd07c9/zhanghuqqqq/dsh-drop-in",
     "description": "DSH plugin: drag & drop anything into the composer - local files upload with absolute-path references, web images/links download host-side, plain text inserts. Per-session .dropped/<sessionId>/ landing."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English TL;DR: A DeepSeek Harness (DSH) plugin that lets you drag & drop anything into the chat composer. Local files are uploaded to /.dropped// and a markdown link with the absolute path is appended to the message, so the agent can read them directly with fs tools. Web images &"
   },
   "schemaVersion": 1,
   "scripts": {

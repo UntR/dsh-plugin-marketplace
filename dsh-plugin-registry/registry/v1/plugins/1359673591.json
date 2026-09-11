@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
-    "headSha": "2c0e0af6074868a97934613cba36c5229c381d99"
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
+    "headSha": "a389eab0bf2f93d12c50d8f7bcfdc676b09bd9ca"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Claude Code-style terminal UI plugin for DeepSeek Harness",
     "fork": false,
     "forks": 0,
-    "headSha": "2c0e0af6074868a97934613cba36c5229c381d99",
+    "headSha": "a389eab0bf2f93d12c50d8f7bcfdc676b09bd9ca",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,18 +25,18 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUQr49w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b77317ef6020975b596c2dbb66049f84acff44c711042c85e748f7dbb23ba997/asymptotee/dsh-terminal",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/12033781b5d0805006d1f19409d18325e447ca4a10e0c9e548c4724058e00f82/asymptotee/dsh-terminal",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/296418828?v=4",
       "login": "asymptotee"
     },
-    "pushedAt": "2026-09-09T10:16:21Z",
+    "pushedAt": "2026-09-11T03:41:01Z",
     "slug": "asymptotee/dsh-terminal",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-09T10:16:28Z",
+    "updatedAt": "2026-09-11T03:41:04Z",
     "url": "https://github.com/asymptotee/dsh-terminal"
   },
   "id": "gh:1359673591",
@@ -44,24 +44,45 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./startup": {
+        "default": "./lib/startup.js",
+        "types": "./lib/startup.d.ts"
+      },
+      "./team": {
+        "default": "./lib/team/index.js",
+        "types": "./lib/team/index.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-terminal",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-dev.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b77317ef6020975b596c2dbb66049f84acff44c711042c85e748f7dbb23ba997/asymptotee/dsh-terminal",
+    "coverUrl": "https://opengraph.githubassets.com/12033781b5d0805006d1f19409d18325e447ca4a10e0c9e548c4724058e00f82/asymptotee/dsh-terminal",
     "description": "Claude Code-style terminal UI plugin for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的终端 UI 插件：经官方 dsh 的 profile 插件机制挂载在 dsh-base 之上，消费宿主提供的运行时，通过带版本契约的 adapter 边界与上游解耦。"
   },
   "schemaVersion": 1,
   "scripts": {

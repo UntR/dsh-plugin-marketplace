@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "6c2d8ab86b70b4c9964a3f8b3e58cb5f5dc2eabf"
   },
   "github": {
@@ -49,27 +49,41 @@
   },
   "id": "gh:1361377690",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@softspark/dsh-web-search-searxng",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@softspark/dsh-web-search-searxng@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@softspark/dsh-web-search-searxng",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0ab6ae744e266ed38c72f3688256033f82cbf5987019595bf8f2506f897ed893/softspark/dsh-web-search-searxng",
     "description": "Web-search provider for DeepSeek Harness backed by a SearXNG instance: metasearch with no vendor API key and no account tying the queries together."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "The harness ships one search provider and it is gated on DEEPSEEKAPIKEY. This registers a second one on the same seam and moves the selection onto it."
   },
   "schemaVersion": 1,
   "scripts": {

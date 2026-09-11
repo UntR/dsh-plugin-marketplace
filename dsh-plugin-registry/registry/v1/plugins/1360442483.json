@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "5d25f8d28632c9d80afd7ca7b39d6c6653dc0964"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1360442483",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-write-protect",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-write-protect@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/policy.mjs",
+      "./client": "./lib/client.js",
+      "./fs": "./lib/fs.mjs",
+      "./package.json": "./package.json",
+      "./provider": "./lib/provider.mjs"
+    },
+    "main": "./lib/policy.mjs",
+    "name": "dsh-write-protect",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6ecd6257f0dcdf9171c8bcd4a17e0dab394f6cad7855d4b3d0923b9ec8e6796f/azazo1/dsh-write-protect",
     "description": "防止模型改写工作区里的指定路径. 同时支持放开某些外部目录的写入而不必放开沙箱."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 沙箱补上工作区里某一段路径的只读保护, 典型用途是不让模型改 .git. 也可以在 workspace-write 下声明工作区外的额外可写根, 让 bash 与 write / edit 写到相邻目录, 而不必切到 danger-full-access."
   },
   "schemaVersion": 1,
   "scripts": {

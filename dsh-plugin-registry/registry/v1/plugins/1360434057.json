@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "8ad3eb416701fe6a3af3c936bb5e94c328184c99"
   },
   "github": {
@@ -41,27 +41,42 @@
   },
   "id": "gh:1360434057",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "request-frame-preview",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "request-frame-preview@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "request-frame-preview",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ca3ea8d6ead810023e66f54dea2350c451d5216750f925ad3d2148de70360ec5/zampie/request-frame-preview",
     "description": "Preview and download the exact request frame (system prompt + tools_list + wire messages) that DeepSeek Harness sends to the model"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Preview and download the exact request frame that DeepSeek Harness sends to the model for a session: the full system prompt, the tool declarations (tools), and the wire message array (system → user / assistant / tool-result in order), rebuilt from the session log."
   },
   "schemaVersion": 1,
   "scripts": {

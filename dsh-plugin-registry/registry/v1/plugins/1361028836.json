@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "03e14615c19cf88a731742af3f450d01e9061d79"
   },
   "github": {
@@ -55,24 +55,40 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./bridge": {
+        "import": "./dist/bridge.js",
+        "types": "./dist/bridge.d.ts"
+      }
+    },
+    "main": "dist/index.js",
+    "name": "dsh-context-management",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0c531de8e5231b81ea4d71f17a7f75968864063d307d2175e6d2620d89957694/PlxloYzb/dsh-context-management",
     "description": "Windowed, reversible context management for DeepSeek Harness (DSH): compression, historical retrieval, and native compaction integration."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English · 简体中文"
   },
   "schemaVersion": 1,
   "scripts": {

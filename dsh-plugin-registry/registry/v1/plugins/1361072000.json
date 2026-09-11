@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "982347aed038bd21dbf21302769a2ea059f894eb"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1361072000",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-header-injection",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ZhiGangCai/dsh-header-injection#982347aed038bd21dbf21302769a2ea059f894eb",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-header-injection",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/dd57162865d781adf72df5b0d7ce8bf7249915ca2b3166afcd69f0a49884793c/ZhiGangCai/dsh-header-injection",
     "description": "请求头注入插件：DSH 插件，按 host 规则注入 HTTP 请求头（多条规则各自独立头集合，同名头覆盖原值），默认对 agentrouter.org 注入 User-Agent: RooCode/0.15.0 绕过其客户端 WAF；其余请求零影响"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "请求头注入插件（DSH Plugin）：按 host 规则注入 HTTP 请求头，同名头覆盖原值（Headers.set 语义），多条规则各自独立头集合；未命中任何规则的请求原样透传，零影响。"
   },
   "schemaVersion": 1,
   "scripts": {

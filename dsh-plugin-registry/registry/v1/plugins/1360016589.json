@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "42f9b0bb83eedefcfa29a341fbd46652a19796a5"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1360016589",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-better-retry",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:leolee9086/dsh-better-retry#42f9b0bb83eedefcfa29a341fbd46652a19796a5",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.mjs",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-better-retry",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e8bc90d3c0b8feb403eec1f8985d683474cf41cfbe81d5986ab4b60ee085bd39/leolee9086/dsh-better-retry",
     "description": "Smarter exponential retry rules for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "面向 DeepSeek Harness Web 的错误分类与自动重试规则管理插件。它将匹配消息模式的 PIAIERROR 重新分类为 RATELIMIT，交给 DSH 自带的 @deepseek-ai/dsh-llm-retry 执行。请求原文和诊断信息保持不变，重试次数、指数退避、抖动和取消由服务商的 DSH 重试策略决定。"
   },
   "schemaVersion": 1,
   "scripts": {

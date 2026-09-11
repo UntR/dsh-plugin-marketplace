@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
-    "headSha": "bff163597b4aa0a29deeb8c6d1aba221b43ddb1d"
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
+    "headSha": "2c49cabdc5bb31014defd0d95d602baebcc9afbc"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "便签画布 / Noteboard canvas for DeepSeek Harness (DSH)：框选会话内容一键存为便签（可 AI 提炼），便签以结构化引用再次发回 AI；工作区级无限画布。",
     "fork": false,
     "forks": 0,
-    "headSha": "bff163597b4aa0a29deeb8c6d1aba221b43ddb1d",
+    "headSha": "2c49cabdc5bb31014defd0d95d602baebcc9afbc",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUSMaOg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f8049b9c0a891984fbf010202268548349887a4773578ba194b70b3ebaa387f6/boogoo619/dsh-noteboard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/69ff7f2011ae9794177a176e1f8e1db45698559c6115aabda27bdf82d189c10f/boogoo619/dsh-noteboard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/18395203?u=b609dc32c364b298e93a0882a81661b04756249d&v=4",
       "login": "boogoo619"
     },
-    "pushedAt": "2026-09-10T06:13:02Z",
+    "pushedAt": "2026-09-10T11:44:53Z",
     "slug": "boogoo619/dsh-noteboard",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "bundle-plugin",
       "canvas",
@@ -43,38 +43,52 @@
       "sticky-notes",
       "whiteboard"
     ],
-    "updatedAt": "2026-09-10T06:13:05Z",
+    "updatedAt": "2026-09-10T15:32:44Z",
     "url": "https://github.com/boogoo619/dsh-noteboard"
   },
   "id": "gh:1361254970",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-noteboard",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-noteboard@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-noteboard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f8049b9c0a891984fbf010202268548349887a4773578ba194b70b3ebaa387f6/boogoo619/dsh-noteboard",
+    "coverUrl": "https://opengraph.githubassets.com/69ff7f2011ae9794177a176e1f8e1db45698559c6115aabda27bdf82d189c10f/boogoo619/dsh-noteboard",
     "description": "便签画布 / Noteboard canvas for DeepSeek Harness (DSH)：框选会话内容一键存为便签（可 AI 提炼），便签以结构化引用再次发回 AI；工作区级无限画布。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）的便签画布插件：在会话视图中提供一块工作区级的无限画布。便签为 Markdown 文件，画布为 JSON Canvas 布局文件，内容与摆放分离，可由文本编辑器与 Git 直接管理。支持从对话中采集文字生成便签，以及将便签作为结构化引用发回输入框交给模型处理。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

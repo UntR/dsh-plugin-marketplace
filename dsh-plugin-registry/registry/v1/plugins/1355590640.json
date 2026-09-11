@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "96900a6f986c1ef5cc414c9da836dd1e87553a88"
   },
   "github": {
@@ -52,27 +52,38 @@
   },
   "id": "gh:1355590640",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-simple-auth",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lt9/dsh-simple-auth#96900a6f986c1ef5cc414c9da836dd1e87553a88",
+    "version": "0.2.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/index.js",
+    "name": "dsh-simple-auth",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8a2feca44269d3e3613b993bc6ab85f4f6bd809273222d485cb117f371f8c5cc/lt9/dsh-simple-auth",
     "description": "Ultra-light dsh login gate: shared key or master/guest keys, ACL-filtered session list, owner-only share/unshare FAB."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Ultra-light login gate for DeepSeek Harness web."
   },
   "schemaVersion": 1,
   "scripts": {

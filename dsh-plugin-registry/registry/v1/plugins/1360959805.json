@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "416df44a2f7d8baf5ac60c0af8473a1d5caa76a7"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1360959805",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-open-workspace",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Xingkong42/dsh-open-workspace#416df44a2f7d8baf5ac60c0af8473a1d5caa76a7",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-open-workspace",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8664b5ac9f5d2b2c1a9955b959d3030cb58091f2a84608a73149dd7638ffee75/Xingkong42/dsh-open-workspace",
     "description": "DSH (DeepSeek Harness) plugin: add \"打开工作区 / Open workspace\" entries to the workspace sidebar session-row menu and the session header actions slot; opens the session's workspace folder with the system file manager."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness Web GUI 提供两个「打开工作区」入口，点击后用系统文件管理器（Windows 资源管理器 / macOS 访达 / Linux 文件管理器）打开当前会话所属工作区的文件夹："
   },
   "schemaVersion": 1,
   "scripts": {

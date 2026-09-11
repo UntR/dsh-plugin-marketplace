@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "failed",
-    "headSha": "4467568ee747539de79e8e00c60994323945c3f5"
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
+    "headSha": "130912e7988705eae820c1fcd14cea5bc575ac78"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-07T15:19:17Z",
     "databaseId": 1360378414,
     "defaultBranch": "main",
-    "description": "Unofficial personal fork of Jesse-njx/dsh-chatnode-wechat (MIT). Chat with, monitor and approve your DSH agents from WeChat: two-way text/images/voice/files/video over the iLink gateway, OCR, STT/TTS, image generation, reminders, morning weather, approvals.",
+    "description": "Chat with, monitor and approve your DSH agents from WeChat: two-way text/images/voice/files/video over the iLink gateway, OCR, STT/TTS, image generation, reminders, morning weather, approvals.",
     "fork": false,
     "forks": 0,
-    "headSha": "4467568ee747539de79e8e00c60994323945c3f5",
+    "headSha": "130912e7988705eae820c1fcd14cea5bc575ac78",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,13 +25,13 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOURW6Lg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/4a1b39de105e1086431e83630c87c0966532dc306958d79d4b11bc819163170e/PRTS168/dsh-chatnode-wechat",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c77e93c09103e9af2eda655de33b875e2b7722863fe93fb2ef8ed23ca5165f1f/PRTS168/dsh-wechat-suite",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/308286219?u=8410a5625777190ee1ab8e28acf4832c2db8e987&v=4",
       "login": "PRTS168"
     },
-    "pushedAt": "2026-09-09T18:34:18Z",
-    "slug": "PRTS168/dsh-chatnode-wechat",
+    "pushedAt": "2026-09-10T16:51:49Z",
+    "slug": "PRTS168/dsh-wechat-suite",
     "stars": 0,
     "topics": [
       "chat-bot",
@@ -46,38 +46,57 @@
       "wechat",
       "weixin"
     ],
-    "updatedAt": "2026-09-09T18:38:29Z",
-    "url": "https://github.com/PRTS168/dsh-chatnode-wechat"
+    "updatedAt": "2026-09-10T16:51:53Z",
+    "url": "https://github.com/PRTS168/dsh-wechat-suite"
   },
   "id": "gh:1360378414",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@dsh-cowork/chatnode-wechat",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:PRTS168/dsh-wechat-suite#130912e7988705eae820c1fcd14cea5bc575ac78",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./config-api": {
+        "default": "./lib/node/config-api.js",
+        "types": "./lib/node/config-api.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-cowork/chatnode-wechat",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/4a1b39de105e1086431e83630c87c0966532dc306958d79d4b11bc819163170e/PRTS168/dsh-chatnode-wechat",
-    "description": "Unofficial personal fork of Jesse-njx/dsh-chatnode-wechat (MIT). Chat with, monitor and approve your DSH agents from WeChat: two-way text/images/voice/files/video over the iLink gateway, OCR, STT/TTS, image generation, reminders, morning weather, approvals."
+    "coverUrl": "https://opengraph.githubassets.com/c77e93c09103e9af2eda655de33b875e2b7722863fe93fb2ef8ed23ca5165f1f/PRTS168/dsh-wechat-suite",
+    "description": "Chat with, monitor and approve your DSH agents from WeChat: two-way text/images/voice/files/video over the iLink gateway, OCR, STT/TTS, image generation, reminders, morning weather, approvals."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把微信变成你 DSH agent 的遥控器。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

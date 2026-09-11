@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "c27d31a01361f418ec596f39b71b717d9b8e2100"
   },
   "github": {
@@ -49,8 +49,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:F1star/dsh-research#8ed86791486be88a5fb7bce3fa8a893c75fe597c",
-    "version": "0.3.0"
+    "spec": "github:F1star/dsh-research#c27d31a01361f418ec596f39b71b717d9b8e2100",
+    "version": "0.4.0"
   },
   "npm": {
     "latestVersion": null,
@@ -63,11 +63,27 @@
         "default": "./lib/index.js",
         "types": "./lib/index.d.ts"
       },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/browser.d.ts"
+      },
       "./cordis.patch.yml": "./cordis.patch.yml",
       "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
       "./research-document": {
         "default": "./lib/research-document/index.js",
         "types": "./lib/research-document/index.d.ts"
+      },
+      "./research-document-docling": {
+        "default": "./lib/research-document-docling/index.js",
+        "types": "./lib/research-document-docling/index.d.ts"
+      },
+      "./research-document-docling/invariant": {
+        "default": "./lib/research-document-docling/invariant.js",
+        "types": "./lib/research-document-docling/invariant.d.ts"
       },
       "./research-document-pdfjs": {
         "default": "./lib/research-document-pdfjs/index.js",
@@ -77,9 +93,21 @@
         "default": "./lib/research-document-pdfjs/invariant.js",
         "types": "./lib/research-document-pdfjs/invariant.d.ts"
       },
+      "./research-document-storage": {
+        "default": "./lib/research-document-storage/index.js",
+        "types": "./lib/research-document-storage/index.d.ts"
+      },
+      "./research-document-storage/invariant": {
+        "default": "./lib/research-document-storage/invariant.js",
+        "types": "./lib/research-document-storage/invariant.d.ts"
+      },
       "./research-document/invariant": {
         "default": "./lib/research-document/invariant.js",
         "types": "./lib/research-document/invariant.d.ts"
+      },
+      "./research-document/types": {
+        "default": "./lib/research-document/types.js",
+        "types": "./lib/research-document/types.d.ts"
       },
       "./research-information": {
         "default": "./lib/research-information/index.js",
@@ -89,6 +117,10 @@
         "default": "./lib/research-information/invariant.js",
         "types": "./lib/research-information/invariant.d.ts"
       },
+      "./research-information/types": {
+        "default": "./lib/research-information/types.js",
+        "types": "./lib/research-information/types.d.ts"
+      },
       "./research-library": {
         "default": "./lib/research-library/index.js",
         "types": "./lib/research-library/index.d.ts"
@@ -96,6 +128,58 @@
       "./research-library/invariant": {
         "default": "./lib/research-library/invariant.js",
         "types": "./lib/research-library/invariant.d.ts"
+      },
+      "./research-library/types": {
+        "default": "./lib/research-library/types.js",
+        "types": "./lib/research-library/types.d.ts"
+      },
+      "./research-report": {
+        "default": "./lib/research-report/index.js",
+        "types": "./lib/research-report/index.d.ts"
+      },
+      "./research-report/invariant": {
+        "default": "./lib/research-report/invariant.js",
+        "types": "./lib/research-report/invariant.d.ts"
+      },
+      "./research-report/types": {
+        "default": "./lib/research-report/types.js",
+        "types": "./lib/research-report/types.d.ts"
+      },
+      "./research-task": {
+        "default": "./lib/research-task/index.js",
+        "types": "./lib/research-task/index.d.ts"
+      },
+      "./research-task-runner": {
+        "default": "./lib/research-task-runner/index.js",
+        "types": "./lib/research-task-runner/index.d.ts"
+      },
+      "./research-task-runner/invariant": {
+        "default": "./lib/research-task-runner/invariant.js",
+        "types": "./lib/research-task-runner/invariant.d.ts"
+      },
+      "./research-task-runner/types": {
+        "default": "./lib/research-task-runner/types.js",
+        "types": "./lib/research-task-runner/types.d.ts"
+      },
+      "./research-task/invariant": {
+        "default": "./lib/research-task/invariant.js",
+        "types": "./lib/research-task/invariant.d.ts"
+      },
+      "./research-task/types": {
+        "default": "./lib/research-task/types.js",
+        "types": "./lib/research-task/types.d.ts"
+      },
+      "./research-workspace": {
+        "default": "./lib/research-workspace/index.js",
+        "types": "./lib/research-workspace/index.d.ts"
+      },
+      "./research-workspace/invariant": {
+        "default": "./lib/research-workspace/invariant.js",
+        "types": "./lib/research-workspace/invariant.d.ts"
+      },
+      "./research-workspace/types": {
+        "default": "./lib/research-workspace/types.js",
+        "types": "./lib/research-workspace/types.d.ts"
       },
       "./tool-research-document": {
         "default": "./lib/tool-research-document/index.js",
@@ -120,13 +204,26 @@
       "./tool-research-library/invariant": {
         "default": "./lib/tool-research-library/invariant.js",
         "types": "./lib/tool-research-library/invariant.d.ts"
+      },
+      "./tool-research-task": {
+        "default": "./lib/tool-research-task/index.js",
+        "types": "./lib/tool-research-task/index.d.ts"
+      },
+      "./tool-research-task/invariant": {
+        "default": "./lib/tool-research-task/invariant.js",
+        "types": "./lib/tool-research-task/invariant.d.ts"
+      },
+      "./typert": "./lib/typert.host.js",
+      "./types": {
+        "default": "./lib/research-workspace/types.js",
+        "types": "./lib/research-workspace/types.d.ts"
       }
     },
     "main": "lib/index.js",
     "name": "@f1star/dsh-research",
     "status": "valid",
     "type": "module",
-    "version": "0.3.0"
+    "version": "0.4.0"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/288201a48068d2cc4f265f81099667ac82704ba4a2f18065fad577c1f1e73a19/F1star/dsh-research",
@@ -134,7 +231,7 @@
   },
   "readme": {
     "available": true,
-    "excerpt": "@f1star/dsh-research is an installable DeepSeek Harness bundle for evidence-first paper work. It is a DSH bundle plugin, not a Codex plugin, and runs inside an existing DSH profile."
+    "excerpt": "First time here? Start with prerequisites and install and run. No global dsh command is required."
   },
   "schemaVersion": 1,
   "scripts": {

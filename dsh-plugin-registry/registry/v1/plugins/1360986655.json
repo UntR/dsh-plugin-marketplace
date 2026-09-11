@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "8eca47d41e32933228d99204389cc2a3f153f048"
   },
   "github": {
@@ -46,27 +46,41 @@
   },
   "id": "gh:1360986655",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-llm-chatgpt-web",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:twilightt1/dsh-llm-chatgpt-web#8eca47d41e32933228d99204389cc2a3f153f048",
+    "version": "0.6.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-llm-chatgpt-web",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/85f9009a078482e9e99875cc074757861813ccbab650f1e8693bb0c7cdd665d1/twilightt1/dsh-llm-chatgpt-web",
     "description": "ChatGPT Web as a DeepSeek Harness provider — owned Chromium daemon driving Temporary Chat, no API key"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "ChatGPT Web as a DeepSeek Harness (dsh) provider — standalone. The plugin owns its Chromium and signs in once. Text turns use a fresh Temporary Chat page; opt-in native MCP turns use a normal connector-enabled chat whose physical response can span several compatible DSH tool-resu"
   },
   "schemaVersion": 1,
   "scripts": {

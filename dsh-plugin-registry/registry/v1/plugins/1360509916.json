@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "f185afc0f06407de003e4d1a404b894ad9776f44"
   },
   "github": {
@@ -41,27 +41,42 @@
   },
   "id": "gh:1360509916",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "lean4-harness-plugin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Cosmicwanderer1/lean4-harness-plugin#f185afc0f06407de003e4d1a404b894ad9776f44",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./dsh": {
+        "import": "./dsh-plugin.js"
+      }
+    },
+    "main": "dist/index.js",
+    "name": "lean4-harness-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cf8b174e081b956c9d3b214f2680ee3786f69d479314ce4244ece41625e187da/Cosmicwanderer1/lean4-harness-plugin",
-    "description": ""
+    "description": "lean4-harness-plugin 不替模型“猜”证明是否正确。模型生成 Lean 4 源码后，插件会调用本地 Lean 验证器，并把真实结果、诊断位置、错误信息和导入缓存状态返回给模型。模型据此修改代码并再次检查，直至 Lean 明确通过。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "lean4-harness-plugin 不替模型“猜”证明是否正确。模型生成 Lean 4 源码后，插件会调用本地 Lean 验证器，并把真实结果、诊断位置、错误信息和导入缓存状态返回给模型。模型据此修改代码并再次检查，直至 Lean 明确通过。"
   },
   "schemaVersion": 1,
   "scripts": {

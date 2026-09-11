@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "584fb1609980aa9bfcc4392da3b3b6c7237e74fb"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,20 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": "./dist/cli.js",
+    "name": "dsh-plugin-litmus",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/66abf16480953a3bfab5ae58b046ebe5d0ccf8f44f98c42d183ac58049cd14eb/Flan246/dsh-plugin-litmus",
     "description": "Automated acceptance testing for DeepSeek Harness plugins: declarative scenarios, isolated headless runs, assertions and LLM judging."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件的自动化验收测试工具：用声明式场景（scenario.yaml）在隔离的 DSHHOME 中真实驱动 headless agent 跑一遍，再对会话日志做断言与 LLM 评分，输出报告。CLI 命令名为 dsh-litmus。"
   },
   "schemaVersion": 1,
   "scripts": {

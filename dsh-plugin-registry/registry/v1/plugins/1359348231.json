@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "failed",
-    "headSha": "d4ff3f1d4e0ccd790ff461bf55e4ec3b7eb09f65"
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
+    "headSha": "ee492bcb3bad7fa3460c78ad46d033f9df21d56a"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "TeamsX for DeepSeek Harness - durable multi-agent teams (captain, members, dependency-aware tasks, mailboxes) with an all-SVG activity panel",
     "fork": false,
     "forks": 0,
-    "headSha": "d4ff3f1d4e0ccd790ff461bf55e4ec3b7eb09f65",
+    "headSha": "ee492bcb3bad7fa3460c78ad46d033f9df21d56a",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUQYCBw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a31eed60e5f706d054a7c65b4cd4e0b4d326b151da04321127b84dc84743d33e/Mlte0907/dsh-teams-x",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8b1366496151edf386262b6b0e229ba850e87fd9e6b794bf1480a00ab9759d90/Mlte0907/dsh-teams-x",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/266925938?u=552a4f5f3375e64933452bdb18690d24fab2f380&v=4",
       "login": "Mlte0907"
     },
-    "pushedAt": "2026-09-10T07:35:16Z",
+    "pushedAt": "2026-09-10T18:46:04Z",
     "slug": "Mlte0907/dsh-teams-x",
     "stars": 0,
     "topics": [
@@ -43,7 +43,7 @@
       "plugin",
       "typescript"
     ],
-    "updatedAt": "2026-09-10T07:35:23Z",
+    "updatedAt": "2026-09-10T18:46:13Z",
     "url": "https://github.com/Mlte0907/dsh-teams-x"
   },
   "id": "gh:1359348231",
@@ -51,29 +51,47 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-teams-x",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a31eed60e5f706d054a7c65b4cd4e0b4d326b151da04321127b84dc84743d33e/Mlte0907/dsh-teams-x",
+    "coverUrl": "https://opengraph.githubassets.com/8b1366496151edf386262b6b0e229ba850e87fd9e6b794bf1480a00ab9759d90/Mlte0907/dsh-teams-x",
     "description": "TeamsX for DeepSeek Harness - durable multi-agent teams (captain, members, dependency-aware tasks, mailboxes) with an all-SVG activity panel"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "TeamsX for DeepSeek Harness — turn one session into a coordinated multi-agent team: a captain spawns durable member subagents, breaks a goal into a dependency-aware task DAG, and coordinates through direct mailbox messages, with a live all-SVG activity panel."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
-    "postinstall": false,
+    "postinstall": true,
     "preinstall": false,
     "prepare": false
   }

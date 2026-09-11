@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
     "headSha": "34f34287945392d2353193914b3878b657f5e6a9"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,44 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/compat/session-controller-client/client/index.d.ts"
+      },
+      "./compat/agent-presets": {
+        "default": "./lib/compat/agent-presets.js",
+        "types": "./lib/types/compat/agent-presets/index.d.ts"
+      },
+      "./compat/agent-registry": {
+        "default": "./lib/compat/agent-registry.js",
+        "types": "./lib/types/compat/agent-registry/index.d.ts"
+      },
+      "./compat/session-controller": {
+        "default": "./lib/compat/session-controller.js",
+        "types": "./lib/types/compat/session-controller/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-embedded-codex",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8ac30743bcdaeacf51dee3282593341f3adffc4936d48b69a5912c9aa9702d32/starstorm-ai/dsh-embedded-codex",
-    "description": ""
+    "description": "--- description: \"在 DeepSeek Harness 中使用官方 Codex App Server 的 Agent Runtime。\" kind: \"package-bundle\" ---"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "--- description: \"在 DeepSeek Harness 中使用官方 Codex App Server 的 Agent Runtime。\" kind: \"package-bundle\" ---"
   },
   "schemaVersion": 1,
   "scripts": {

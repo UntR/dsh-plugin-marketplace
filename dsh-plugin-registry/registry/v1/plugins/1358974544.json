@@ -5,9 +5,9 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-10T08:35:35.589Z",
-    "enrichmentStatus": "stale",
-    "headSha": "5100771fa24e3873546791722a589dbbfaffc0ee"
+    "enrichedAt": "2026-09-11T08:29:19.082Z",
+    "enrichmentStatus": "ok",
+    "headSha": "c32a428e3129dcd56c0fd1529f2afaa8114d1577"
   },
   "github": {
     "archived": false,
@@ -17,23 +17,23 @@
     "description": "deepseek harness 会话文件修改总览插件（by dsh deepseek v4 flash）",
     "fork": false,
     "forks": 0,
-    "headSha": "5100771fa24e3873546791722a589dbbfaffc0ee",
+    "headSha": "c32a428e3129dcd56c0fd1529f2afaa8114d1577",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": null,
     "nodeId": "R_kgDOUQBOUA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/22cc33446862ef55645a038b6dc901878f896b1b6e803d8b09192d4029681e7f/xiixii005-tech/dsh-file-diff",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/2a4cc794a03aadb83e15f8831b604b4b210aeba1a3e9f71a564bd2a017c5e30b/xiixii005-tech/dsh-file-diff",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/239714988?v=4",
       "login": "xiixii005-tech"
     },
-    "pushedAt": "2026-09-07T10:33:54Z",
+    "pushedAt": "2026-09-11T07:27:04Z",
     "slug": "xiixii005-tech/dsh-file-diff",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-07T11:09:07Z",
+    "updatedAt": "2026-09-11T07:27:09Z",
     "url": "https://github.com/xiixii005-tech/dsh-file-diff"
   },
   "id": "gh:1358974544",
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,14 +51,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-file-diff",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/22cc33446862ef55645a038b6dc901878f896b1b6e803d8b09192d4029681e7f/xiixii005-tech/dsh-file-diff",
+    "coverUrl": "https://opengraph.githubassets.com/2a4cc794a03aadb83e15f8831b604b4b210aeba1a3e9f71a564bd2a017c5e30b/xiixii005-tech/dsh-file-diff",
     "description": "deepseek harness 会话文件修改总览插件（by dsh deepseek v4 flash）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Web 的修改文件总览插件：在每轮会话末尾展示「修改 N 个文件」行（文件 chip 点击后在右侧边栏打开该文件的 diff），在会话头部提供「修改记录」按钮（会话级文件修改总览）。diff 视图作为右侧边栏的一个 tab（kind filediff）渲染，复用侧边栏的 dock 面板能力（缩放、全屏/push、浮动、关闭）。纯插件实现：不改 DSH 仓库；内置分词器支持 GDScript（.gd）、GDShader（.gdshader）、GDResource（.gdresource），并自注册这些文件的侧边栏高亮预览。"
   },
   "schemaVersion": 1,
   "scripts": {
