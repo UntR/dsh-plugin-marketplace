@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-11T08:29:19.082Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-12T08:18:20.232Z",
+    "enrichmentStatus": "ok",
     "headSha": "92f1ec4e6e57001a2139902d62679efc55c32234"
   },
   "github": {
@@ -45,27 +45,45 @@
   },
   "id": "gh:1365232379",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-desk",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Amouren7/dsh-plugin-desk#92f1ec4e6e57001a2139902d62679efc55c32234",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json",
+      "./skill-overrides": {
+        "default": "./lib/skill-overrides.js"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-desk",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2da9a04023bb80f0c81f5cb66537df9bde252ed8f124db73e944c470d0ad182d/Amouren7/dsh-plugin-desk",
     "description": "DeepSeek Harness 插件管家：用人话说明每个插件是做什么的，一键停用/启用（热生效），安全卸载。Settings → Plugins → 插件管家"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的「设置 → 插件」页是一份只读清单：它列出模块名，却不告诉你这个插件到底干什么用；想关掉一个插件，只能去手改 cordis.patch.yml。技能那边更糟 —— 装了 57 个技能，其中 14 个模型根本看不到，只能靠记住 /handoff 这类命令来用。"
   },
   "schemaVersion": 1,
   "scripts": {

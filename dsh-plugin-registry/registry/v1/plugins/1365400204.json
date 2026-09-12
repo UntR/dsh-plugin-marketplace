@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-11T08:29:19.082Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-12T08:18:20.232Z",
+    "enrichmentStatus": "ok",
     "headSha": "5e1b6fecf5fdba81f093a16cd56684f1938218a2"
   },
   "github": {
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,39 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./preset": {
+        "default": "./lib/preset.js",
+        "types": "./lib/types/preset.d.ts"
+      },
+      "./types": {
+        "default": "./lib/types.js",
+        "types": "./lib/types/types.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-skill-preferences",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/500ef6f66679e270288c74708d940c7c2addb9f1dffdbf0dd846031a3672f0a0/zc679087/dsh-skill-preferences",
     "description": "一个可以管理DSH上安装的skill的插件，可以动态开关skill来防止误触发"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Turn individual DSH skills on and off from user settings."
   },
   "schemaVersion": 1,
   "scripts": {

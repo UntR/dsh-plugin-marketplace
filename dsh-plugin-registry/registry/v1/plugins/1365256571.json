@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-11T08:29:19.082Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-12T08:18:20.232Z",
+    "enrichmentStatus": "ok",
     "headSha": "ba58f43b419747cce842a14a838984f7dc8917a2"
   },
   "github": {
@@ -51,7 +51,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,14 +61,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-llm-commandcode",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/44b6e7b8c3e31941c49294ed99b1c7a6669ea831ce43265ca30c84e4c7cfd66f/eibednejo/dsh-llm-commandcode",
     "description": "DeepSeek Harness (dsh) LLM adapter for Command Code — routes model calls through the generate endpoint a Go plan can reach, including image input."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (dsh) LLM adapter that routes model calls through Command Code, so a Command Code Go plan can serve DeepSeek — and Claude, GPT, Kimi, GLM, Qwen, MiniMax — to the harness, including image input."
   },
   "schemaVersion": 1,
   "scripts": {

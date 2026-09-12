@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-11T08:29:19.082Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-12T08:18:20.232Z",
+    "enrichmentStatus": "ok",
     "headSha": "5b06af7e04424ce364e7af381e156e4c38b8a216"
   },
   "github": {
@@ -44,27 +44,44 @@
   },
   "id": "gh:1365428459",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-chat-offscreen",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:publieople/dsh-chat-offscreen#5b06af7e04424ce364e7af381e156e4c38b8a216",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs",
+        "types": "./lib/index.d.mts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.mjs",
+    "name": "dsh-chat-offscreen",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b1041da5e7c3d5bb1e71686161bb01a032ee4b71f8e257a9f8eeeadf8be99082/publieople/dsh-chat-offscreen",
     "description": "DSH Web plugin: keep long chat sessions responsive by skipping layout/paint for off-screen transcript rows (content-visibility)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Keep long DeepSeek Harness (DSH) Web chat sessions responsive."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-11T08:29:19.082Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-12T08:18:20.232Z",
+    "enrichmentStatus": "ok",
     "headSha": "47e4c8e375e61eb23bc445b033ecae0515d175ab"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1365404317",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-branch-inbox-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xine2009cn/dsh-branch-inbox-guard#47e4c8e375e61eb23bc445b033ecae0515d175ab",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-branch-inbox-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bfc35a7201797584051365fc81a3b08a14282c1c7ccebbfd0a5291ab1b95e6db/xine2009cn/dsh-branch-inbox-guard",
     "description": "A DeepSeek Harness (DSH) plugin that removes the queued prompts a fork child inherits from its parent, so a new branch runs the prompt you type instead of the parent's next one. Host-side bundle, no core patching."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Keeps a DSH fork child from inheriting its parent's queued prompts. Branch a session, type a question, and the branch runs your question — not the prompt the parent had queued next."
   },
   "schemaVersion": 1,
   "scripts": {

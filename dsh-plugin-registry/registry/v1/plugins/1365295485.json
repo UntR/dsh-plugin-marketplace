@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-11T08:29:19.082Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-12T08:18:20.232Z",
+    "enrichmentStatus": "ok",
     "headSha": "74374c1a77d2a3f14369a415acc2f0c3ff5213b8"
   },
   "github": {
@@ -43,27 +43,42 @@
   },
   "id": "gh:1365295485",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-agent-team-model",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:XMeowchan/dsh-agent-team-model#74374c1a77d2a3f14369a415acc2f0c3ff5213b8",
+    "version": "0.3.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-agent-team-model",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/36b54dc20604657149088a003c77edcd6b8068486ef26e7423a481c6894c4bc2/XMeowchan/dsh-agent-team-model",
     "description": "Visual provider, model and reasoning-effort defaults for DeepSeek Harness Agent Teams."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness Agent Teams 提供可视化的队员模型配置：按默认规则或队员名选择 provider、model 和 reasoning effort，并在当前会话中查看团队状态与每个队员实际使用的路由。"
   },
   "schemaVersion": 1,
   "scripts": {

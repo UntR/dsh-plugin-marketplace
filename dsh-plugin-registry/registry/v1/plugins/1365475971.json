@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-11T08:29:19.082Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-12T08:18:20.232Z",
+    "enrichmentStatus": "ok",
     "headSha": "e2a2297b3bec629f6a18b31e2de69612b83ef4cd"
   },
   "github": {
@@ -46,27 +46,33 @@
   },
   "id": "gh:1365475971",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-drop-path",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kongbai-shike/dsh-drop-path#e2a2297b3bec629f6a18b31e2de69612b83ef4cd",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": "lib/index.js",
+    "name": "dsh-drop-path",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9d32a870fdd068be8d11abd7b941ff0894707f5aac2f8d0371f0fb42488e4310/kongbai-shike/dsh-drop-path",
     "description": "对于Deepseek-Harness，桌面版来说，只有图片才能直接接收，对于用惯了claudecode的人来说很不习惯，所以我依靠ai完成了一个可以直接在文件管理器页面，把需要上传的文件拖拽到对应的DSH桌面端界面，就能直接把对应的路径名完完整整的显示在输入框里。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的输入框只接受图片附件，拖其它文件（.txt / .pdf / .zip / 代码……）通常会被拒绝，什么也不会发生。 本插件接管这类被拒绝的拖放：提取文件在磁盘上的真实路径，写进输入框，顺手复制到剪贴板 —— 于是可以直接把路径发给模型去读。"
   },
   "schemaVersion": 1,
   "scripts": {

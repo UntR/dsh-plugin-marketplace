@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-11T08:29:19.082Z",
-    "enrichmentStatus": "failed",
-    "headSha": "6f75dcea600976f102d0be20762930cefc8ee186"
+    "enrichedAt": "2026-09-12T08:18:20.232Z",
+    "enrichmentStatus": "ok",
+    "headSha": "c2299977d2e488415bef0203483e29ce46147b44"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness advisor plugin: pair a fast executor with a stronger reviewer model",
     "fork": false,
     "forks": 0,
-    "headSha": "6f75dcea600976f102d0be20762930cefc8ee186",
+    "headSha": "c2299977d2e488415bef0203483e29ce46147b44",
     "homepageUrl": "https://www.npmjs.com/package/dsh-advisor-plugin",
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUWSMDQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5c797e00334b0f34d926d64b0d892e0d9160a86a2df54da6b10f18ec74a98a45/leeyoung1/dsh-advisor-plugin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/488079f8ab23161e792e7629d653cd2ad074977e30c73c9dfeaa42c61f3dc8f1/leeyoung1/dsh-advisor-plugin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/153156567?v=4",
       "login": "leeyoung1"
     },
-    "pushedAt": "2026-09-11T08:26:42Z",
+    "pushedAt": "2026-09-11T08:52:02Z",
     "slug": "leeyoung1/dsh-advisor-plugin",
     "stars": 0,
     "topics": [
@@ -40,38 +40,56 @@
       "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-11T08:26:43Z",
+    "updatedAt": "2026-09-11T08:52:04Z",
     "url": "https://github.com/leeyoung1/dsh-advisor-plugin"
   },
   "id": "gh:1365543949",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-advisor-plugin",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-advisor-plugin@0.2.6",
+    "version": "0.2.6"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.6",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client/index.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-advisor-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.6"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5c797e00334b0f34d926d64b0d892e0d9160a86a2df54da6b10f18ec74a98a45/leeyoung1/dsh-advisor-plugin",
+    "coverUrl": "https://opengraph.githubassets.com/488079f8ab23161e792e7629d653cd2ad074977e30c73c9dfeaa42c61f3dc8f1/leeyoung1/dsh-advisor-plugin",
     "description": "DeepSeek Harness advisor plugin: pair a fast executor with a stronger reviewer model"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-advisor-plugin 解决的是一个结构性问题：同一个模型既写代码又验代码，很容易“证明自己是对的”。长链路 Coding Agent 常见的三类失效——自验证盲区、长程漂移、过早宣告完成——都可以用“独立第二意见”来缓解。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

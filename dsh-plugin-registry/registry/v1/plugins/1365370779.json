@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-11T08:29:19.082Z",
-    "enrichmentStatus": "failed",
-    "headSha": "ce1b3f9a1867d5f5f86ce4ceeafeff90cc7f814c"
+    "enrichedAt": "2026-09-12T08:18:20.232Z",
+    "enrichmentStatus": "ok",
+    "headSha": "c8af40b1e07e527ac4de522e31a3fa2b471e2aa0"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "A dsh web GUI panel listing the plugins you installed into your dsh profiles — install spec, version, kind, and live loader phase.",
     "fork": false,
     "forks": 0,
-    "headSha": "ce1b3f9a1867d5f5f86ce4ceeafeff90cc7f814c",
+    "headSha": "c8af40b1e07e527ac4de522e31a3fa2b471e2aa0",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,44 +25,55 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUWHnmw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d7e368e8ab900f7178cb77b3bdc7fdd680e55879f32651f5fac00fa6020c3889/inxups/dsh-user-plugins",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/0fe47fbd6ab2a54073d47c915f25f1c3b4c9b919ceaab8fad0bbb63bae148876/inxups/dsh-user-plugins",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/273291481?u=2be42a97473f4194e7610b255b5be12675eb8cd2&v=4",
       "login": "inxups"
     },
-    "pushedAt": "2026-09-11T05:16:30Z",
+    "pushedAt": "2026-09-12T03:54:51Z",
     "slug": "inxups/dsh-user-plugins",
     "stars": 0,
     "topics": [
       "dsh-plugin",
       "dsh-plugin-bundle"
     ],
-    "updatedAt": "2026-09-11T05:33:09Z",
+    "updatedAt": "2026-09-12T03:54:54Z",
     "url": "https://github.com/inxups/dsh-user-plugins"
   },
   "id": "gh:1365370779",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-user-plugins",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:inxups/dsh-user-plugins#c8af40b1e07e527ac4de522e31a3fa2b471e2aa0",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-user-plugins",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d7e368e8ab900f7178cb77b3bdc7fdd680e55879f32651f5fac00fa6020c3889/inxups/dsh-user-plugins",
+    "coverUrl": "https://opengraph.githubassets.com/0fe47fbd6ab2a54073d47c915f25f1c3b4c9b919ceaab8fad0bbb63bae148876/inxups/dsh-user-plugins",
     "description": "A dsh web GUI panel listing the plugins you installed into your dsh profiles — install spec, version, kind, and live loader phase."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DSH 插件（host + 浏览器双面），在 Web GUI 的 设置 → 插件 里增加一个 「我安装的插件」 标签页，列出你通过 dsh plugin --profile add 装进各 profile 的插件：安装源（spec）、磁盘版本、贡献类型（插件包 / 前端 / 库）、以及该插件 在当前加载器里的实时状态。"
   },
   "schemaVersion": 1,
   "scripts": {
