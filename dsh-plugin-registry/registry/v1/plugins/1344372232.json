@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-12T08:18:20.232Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-13T08:42:03.950Z",
+    "enrichmentStatus": "ok",
     "headSha": "a50da505627ecf101ca32d2a7c21592dfdd946c3"
   },
   "github": {
@@ -46,33 +46,46 @@
   },
   "id": "gh:1344372232",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-user-question-nav",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-user-question-nav@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./client-registry": "./lib/client-registry.js",
+      "./invariant": "./lib/invariant.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-user-question-nav",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a08a96201f872e5f5e39f756f84867c5a5e1c69e47692625c9fb756e78d503ca/xiaomujiang/dsh-user-question-nav",
     "description": "在 DeepSeek Harness 对话界面中快速定位上一个/下一个用户问题。点击浮动按钮自动滚动到对应位置，告别手动滑动查找"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "ChatGPT 风格的问题导航插件：在 DeepSeek Harness 对话区域右侧显示一个胶囊轨道，包含双箭头（⏫⏬）和刻度尺（tick marks），悬停停留 1 秒后自动展开贴边抽屉目录，列出全部用户问题，点击即可跳转。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

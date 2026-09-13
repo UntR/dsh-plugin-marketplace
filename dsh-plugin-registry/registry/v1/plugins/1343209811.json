@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-12T08:18:20.232Z",
-    "enrichmentStatus": "failed",
-    "headSha": "05e8deb40e6d2620c51eb022621349457f3bf31b"
+    "enrichedAt": "2026-09-13T08:42:03.950Z",
+    "enrichmentStatus": "ok",
+    "headSha": "fa83c1e03327f744a02ec6e2386e11b33e7f514c"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-22T22:25:41Z",
     "databaseId": 1343209811,
     "defaultBranch": "main",
-    "description": "Project-level MCP manager for DSH: auto-mount MCP servers from each project's .dsh/mcp.yml, hot-reload config changes, and scope tools to the active session's project.",
+    "description": "基于原版 DSH 扩展，提供项目层、用户层更完整 MCP 管理 || Extended from the original DSH code, providing more complete MCP management at both project and user levels",
     "fork": false,
     "forks": 0,
-    "headSha": "05e8deb40e6d2620c51eb022621349457f3bf31b",
+    "headSha": "fa83c1e03327f744a02ec6e2386e11b33e7f514c",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,45 +25,55 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUA_BUw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/25e1cab8b5cee337eb8a360283603ac12e9e16d0e9dfa614ec6cbdcd31028486/wldxiaobai/dsh-project-mcp-manager",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b090546fa8397d4dcf70f2244ab9857805677d40f42c7b9acae21492cd6db3c7/wldxiaobai/dsh-project-mcp-manager",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/166034672?u=a8485040b9f962155166f539c5a65def15d240f4&v=4",
       "login": "wldxiaobai"
     },
-    "pushedAt": "2026-09-12T07:42:26Z",
+    "pushedAt": "2026-09-12T18:25:22Z",
     "slug": "wldxiaobai/dsh-project-mcp-manager",
-    "stars": 2,
+    "stars": 3,
     "topics": [
       "dsh",
       "dsh-plugin",
       "mcp-manager"
     ],
-    "updatedAt": "2026-09-11T15:47:36Z",
+    "updatedAt": "2026-09-12T20:52:48Z",
     "url": "https://github.com/wldxiaobai/dsh-project-mcp-manager"
   },
   "id": "gh:1343209811",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-project-mcp-manager",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-project-mcp-manager@0.6.0",
+    "version": "0.6.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.6.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-project-mcp-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/25e1cab8b5cee337eb8a360283603ac12e9e16d0e9dfa614ec6cbdcd31028486/wldxiaobai/dsh-project-mcp-manager",
-    "description": "Project-level MCP manager for DSH: auto-mount MCP servers from each project's .dsh/mcp.yml, hot-reload config changes, and scope tools to the active session's project."
+    "coverUrl": "https://opengraph.githubassets.com/b090546fa8397d4dcf70f2244ab9857805677d40f42c7b9acae21492cd6db3c7/wldxiaobai/dsh-project-mcp-manager",
+    "description": "基于原版 DSH 扩展，提供项目层、用户层更完整 MCP 管理 || Extended from the original DSH code, providing more complete MCP management at both project and user levels"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A project-level MCP auto-loading plugin for DSH: write MCP server configs in /.dsh/mcp.yml or .dsh/mcp.json and they are mounted automatically (via the official @deepseek-ai/dsh-mcp-client) whenever a dsh session opens in that project. Changes to the file hot-reload into the runn"
   },
   "schemaVersion": 1,
   "scripts": {

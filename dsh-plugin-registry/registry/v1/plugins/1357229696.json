@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-12T08:18:20.232Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-13T08:42:03.950Z",
+    "enrichmentStatus": "ok",
     "headSha": "e33bfa8eaba79d81ae6897a93804fb2fb998f603"
   },
   "github": {
@@ -54,27 +54,39 @@
   },
   "id": "gh:1357229696",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-omni-workstation",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:huashenglian/dsh-omni-workstation#e33bfa8eaba79d81ae6897a93804fb2fb998f603",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-omni-workstation",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1357229696/23045d7e-de37-4ce9-8af3-8164d4b2cf82",
     "description": "dsh全模态工作站插件，让模型支持视频、图片、语音的输入与输出，支持comfyui图像生成工具调用。Any-to-Any."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An omni-modal workstation plugin for DeepSeek Harness (dsh). It gives the AI eyes, a brush, a camera and a voice: image analysis backed by an ordered multi-card VLM failover chain, a 6-tool local vision toolkit, image generation (incl. ComfyUI workflows), multi-card async video g"
   },
   "schemaVersion": 1,
   "scripts": {

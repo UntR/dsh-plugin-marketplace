@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-12T08:18:20.232Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-13T08:42:03.950Z",
+    "enrichmentStatus": "ok",
     "headSha": "b4e834751e4c2db88600e681fb8c9b54d98de212"
   },
   "github": {
@@ -48,27 +48,39 @@
   },
   "id": "gh:1349079480",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-brain-compaction",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Lsc-91-69/dsh-brain-compaction#b4e834751e4c2db88600e681fb8c9b54d98de212",
+    "version": "0.1.5"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-brain-compaction",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/dcbcced111ffbb9c16e0aa6c0689ee72e489e14313b85d9945f3db815a6b4e7e/Lsc-91-69/dsh-brain-compaction",
     "description": "人脑式上下文压缩逻辑，大幅减少长任务上下文占用以及token消耗"
   },
   "readme": {
     "available": true,
-    "excerpt": "README.md"
+    "excerpt": "A DeepSeek Harness plug-in (Cordis bundle) that composes seven community context-compression plug-ins into one coordinated, verifiable system — not a dependency collector:"
   },
   "schemaVersion": 1,
   "scripts": {
