@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "e03a829cbd7a1b4d50db726120277b698daf8573"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-preset-default-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2c07b49cf547be2999574fd79af8dca25af1413ced909e06979240c611df3e1c/Robin1987China/dsh-plugin-preset-default-guard",
     "description": "Repairs a stale agent-presets.default so New Session stops failing silently after a preset rename (DeepSeek Harness plugin)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that repairs a stale default agent preset, so New Session stops failing silently after a preset rename."
   },
   "schemaVersion": 1,
   "scripts": {

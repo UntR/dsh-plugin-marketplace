@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "9ee2d4fbc47e1fb4df982524b86e704965c04ac3"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1362571379",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-context-budget",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zpis666/dsh-context-budget#9ee2d4fbc47e1fb4df982524b86e704965c04ac3",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-context-budget",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8532ced73e29d16a51f98ff53ad60e2342465af43d2b7cae0e769170207d7fd1/zpis666/dsh-context-budget",
     "description": "在 DSH 模型设置页为每个 pi-ai 路由配置上下文窗口、压缩阈值与保留预算，并在输入框右下角按厂商提供思考强度选择器。 · Per-route context window, compaction threshold, and vendor-aware thinking-effort controls for DSH models."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Adds a \"context window / compaction threshold / retain budget\" group to every pi-ai provider card on DSH Web's Settings → Models page. Type the numbers once; the window and the compaction trigger take effect without a restart."
   },
   "schemaVersion": 1,
   "scripts": {

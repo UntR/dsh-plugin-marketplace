@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "220791108a8c2d36e068447cae4913286a76606c"
   },
   "github": {
@@ -41,27 +41,45 @@
   },
   "id": "gh:1361641225",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@temsmie/dsh-tool-keymouse",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:msn233/dsh-keymouse-use#220791108a8c2d36e068447cae4913286a76606c",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./skill-content": {
+        "default": "./lib/skill-content.js",
+        "types": "./lib/skill-content.d.ts"
+      },
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@temsmie/dsh-tool-keymouse",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c2cebad808e80de3a02fba18fdc39287dba1bafb065ac717d6e2e53f4702c85c/msn233/dsh-keymouse-use",
     "description": "A project that allow dsh to control your Windows."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Windows 键鼠 + 截图 + 窗口自动化工具插件（DeepSeek Harness）。通过常驻 helper（bin/helper-x64.exe）走管道 + JSON 行协议调用 Win32 SendInput 模拟真实键盘/鼠标输入，用于桌面自动化：打开/唤起应用、登录、点击、输入、拖拽、滚动、截图观察、窗口定位/置顶。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "158d2448127f48ae9ab06fe9232e051847599139"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1362200173",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-apollo",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Menghuan1918/dsh-apollo#158d2448127f48ae9ab06fe9232e051847599139",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./src/client.js",
+      "./package.json": "./package.json",
+      "./presets/*": "./presets/*"
+    },
+    "main": "src/index.js",
+    "name": "dsh-apollo",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/024056c3c6adf1d2b54ab12273c31a5e1aeaaf68f373e7bc44b98fb4c9d23c96/Menghuan1918/dsh-apollo",
     "description": "把单一会话不可能的巨任务拆成无数可验证子系统，大规模并行有纪律执行"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一次会话做不完的大任务，拆成可独立实现、可独立验证的子任务：逐波并行执行 → 子代理只读审查 → 验证通过才合入。"
   },
   "schemaVersion": 1,
   "scripts": {

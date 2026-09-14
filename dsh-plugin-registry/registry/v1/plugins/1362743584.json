@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
-    "headSha": "026e48386c5b092ae17941e5a92858f5c406f154"
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
+    "headSha": "68e947f4cf7f99e065dca8692774bb28010afa3a"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "TRAE-style conversation rollback plugin for DeepSeek Harness",
     "fork": false,
     "forks": 0,
-    "headSha": "026e48386c5b092ae17941e5a92858f5c406f154",
+    "headSha": "68e947f4cf7f99e065dca8692774bb28010afa3a",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUTnRIA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e7f857e8d3d6f38d15e5bf7507a564f21a9ed68250294d72486bd8d4bcbdf1fb/domitor-syh/dsh-rollback",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/58499594f52451cdd301aa8a2393a3d9bef389ef11c9b76ca84e276fa334437b/domitor-syh/dsh-rollback",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/195294370?u=8fa924514350410b0706a8b1cc4e789fb1c57e3e&v=4",
       "login": "domitor-syh"
     },
-    "pushedAt": "2026-09-13T08:19:10Z",
+    "pushedAt": "2026-09-14T08:37:08Z",
     "slug": "domitor-syh/dsh-rollback",
     "stars": 1,
     "topics": [
@@ -42,38 +42,50 @@
       "dsh-rollback",
       "rollback"
     ],
-    "updatedAt": "2026-09-13T08:19:13Z",
+    "updatedAt": "2026-09-14T08:37:12Z",
     "url": "https://github.com/domitor-syh/dsh-rollback"
   },
   "id": "gh:1362743584",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@domitor-syh/dsh-rollback",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:domitor-syh/dsh-rollback#68e947f4cf7f99e065dca8692774bb28010afa3a",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./invariant": "./lib/invariant.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@domitor-syh/dsh-rollback",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e7f857e8d3d6f38d15e5bf7507a564f21a9ed68250294d72486bd8d4bcbdf1fb/domitor-syh/dsh-rollback",
+    "coverUrl": "https://opengraph.githubassets.com/58499594f52451cdd301aa8a2393a3d9bef389ef11c9b76ca84e276fa334437b/domitor-syh/dsh-rollback",
     "description": "TRAE-style conversation rollback plugin for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness（DSH）Web 端提供一个 TRAE 式「回退到本轮对话发起前」的插件：按轮次建立检查点，一键把【工作区文件】和【模型上下文】同时回退到某一轮发起之前，保持同一会话 id。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

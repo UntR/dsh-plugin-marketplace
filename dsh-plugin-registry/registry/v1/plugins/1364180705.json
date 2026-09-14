@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "c5b167c6677fcd33a19865daf083a01b4006d9ad"
   },
   "github": {
@@ -52,27 +52,44 @@
   },
   "id": "gh:1364180705",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-upgrade-015",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-plugin-upgrade-015@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./index.mjs",
+        "types": "./types.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./scan": {
+        "default": "./lib/scan.mjs",
+        "types": "./types.d.ts"
+      }
+    },
+    "main": "./index.mjs",
+    "name": "dsh-plugin-upgrade-015",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e0a30fcf3815035062556b21a0cb296778833bf18af9c2e64adc20128c50912f/PerryLink/dsh-plugin-upgrade-015",
-    "description": "Version-locked upgrade corridor for DSH plugins: dsh-v0.1.5-alpha.1 -> dsh-v0.1.5-rc.1 (card + skill + zero-dependency scanner)"
+    "description": "Merged DSH plugin upgrade corridor: dsh-v0.1.3-alpha.1 -> dsh-v0.1.5-rc.1. Two-leg evidence-bound version card plus a zero-dependency seam scanner (npx dsh-plugin-upgrade-015-scan)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Merged, version-locked plugin upgrade skill for DeepSeek Harness — 0.1.3-alpha.1 → 0.1.5-rc.1, carried as two closed legs."
   },
   "schemaVersion": 1,
   "scripts": {

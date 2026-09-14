@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "b7dc4064ecf22fe294d28909802d5931f655afa2"
   },
   "github": {
@@ -55,27 +55,38 @@
   },
   "id": "gh:1364432942",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-client-plugin-context-assembler",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:catsenior507/dsh-context-assembler#b7dc4064ecf22fe294d28909802d5931f655afa2",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@dsh-external/dsh-client-plugin-context-assembler",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/812999f746e4ff9582dc412af6fd859aa27d1c855c109dce8e6984723c78ef40/catsenior507/dsh-context-assembler",
     "description": "Assembled context for DeepSeek Harness: a context tree over the session surface with per-node assemble modes (full / key / off), agent-authored presets, and a panel that decides what the model actually sees."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Turn the context window from a length into a set of decisions."
   },
   "schemaVersion": 1,
   "scripts": {

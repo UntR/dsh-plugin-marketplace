@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "28f0ada367866249e1cb1e2035dd8c691688fa29"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1367175990",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@jaxzhou/dsh-file-explorer",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@jaxzhou/dsh-file-explorer@0.1.4",
+    "version": "0.1.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.4",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@jaxzhou/dsh-file-explorer",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/637b965ab0e619bf13a9367e225c21bce853b740c42f67a836ba11434d68cd37/jaxzhou/dsh-file-explorer",
     "description": "A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) plugin that adds a **Files** tab to the Conversation View strip — the same level as **Chat** and **Trajectory** — showing the session workspace as a tree with a basic text preview beside it."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A Files tab for DeepSeek Harness, beside Chat and Trajectory: the session workspace as a tree, and a preview that adapts to what the file is — rendered Markdown, a JSON tree, highlighted source, an image, or plain text. Read-only, no configuration, nothing stored."
   },
   "schemaVersion": 1,
   "scripts": {

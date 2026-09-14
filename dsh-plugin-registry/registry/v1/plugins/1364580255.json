@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "077a712b09f6a581966685a1da7f24374b0f924f"
   },
   "github": {
@@ -46,27 +46,54 @@
   },
   "id": "gh:1364580255",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-nushell-only",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:YMRwithNoworry/dsh-nushell-only#077a712b09f6a581966685a1da7f24374b0f924f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./executor": {
+        "default": "./lib/executor.js"
+      },
+      "./guard": {
+        "default": "./lib/guard.js"
+      },
+      "./guide": {
+        "default": "./lib/guide.js"
+      },
+      "./nu": {
+        "default": "./lib/nu.js"
+      },
+      "./package.json": "./package.json",
+      "./teaching": {
+        "default": "./lib/teaching.js"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-nushell-only",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4b7338198c02024fa51e0063d10676a2960085e610ff5eb9cac406082858587a/YMRwithNoworry/dsh-nushell-only",
     "description": "DeepSeek Harness (dsh) bundle: Nushell as the only shell executor + Nushell syntax teaching. Install with: dsh plugin --profile web add github:YMRwithNoworry/dsh-nushell-only"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DeepSeek Harness（dsh）的唯一 shell 换成 Nushell，并教会模型写 Nushell 语法的 Profile Bundle。"
   },
   "schemaVersion": 1,
   "scripts": {

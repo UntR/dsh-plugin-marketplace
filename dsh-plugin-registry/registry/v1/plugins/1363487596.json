@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "d994878eb43ada1e0ddcbf7bf771f7506928f28e"
   },
   "github": {
@@ -40,27 +40,39 @@
   },
   "id": "gh:1363487596",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-es",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Rosmeowtis/dsh-es#d994878eb43ada1e0ddcbf7bf771f7506928f28e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./core": "./lib/core.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-es",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ed3749d8463a550bfeb1a82065e95d8bcb239c79f7e69982c94e306fa2d9abdf/Rosmeowtis/dsh-es",
     "description": "DSH 使用 Everything(es.exe) 工具进行 NTFS 全盘搜索，使用 POSIX 风格路径进行交互，兼容 MSYS(git bash) 路径。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Whole-disk NTFS file discovery for DeepSeek Harness, backed by Everything's index through es.exe."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "fb2acab6c46c980af3cdfc54c4c76c6d1686fe30"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1362487440",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-accounts",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yangwuan55/dsh-accounts#fb2acab6c46c980af3cdfc54c4c76c6d1686fe30",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/settings-ui.js",
+      "./fill": "./lib/fill-plugin.js",
+      "./manage": "./lib/manage.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-accounts",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c604072a8b337375b57f0435bcf78f0825937baec1ff0dd82ed0a9a4672eccf2/yangwuan55/dsh-accounts",
     "description": "DSH 凭据桥接插件：AI 代填登录表单/注入 env 运行 CLI，值不进模型上下文；附网页管理界面"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）凭据桥接插件：让 DSH 里的 AI 从凭据存储（credentials-local）读取账号（用户名/密码/API key/TOTP），值只在插件进程内存中流转，用于："
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "13127b697546b310695b47a0e7e050f3af9b330f"
   },
   "github": {
@@ -49,33 +49,50 @@
   },
   "id": "gh:1362499358",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-log-forwarder",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-plugin-log-forwarder@1.0.4",
+    "version": "1.0.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.4",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-log-forwarder",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c9f7a7508c3b54b304ed2cecfe3afb3bca1f1afbb45271e7e65b051e5885afc0/zhaoxuejie/dsh-plugin-log-forwarder",
     "description": "DeepSeek Harness 实时日志转发插件：将 Agent 运行事件实时转发到 WebSocket / Loki / 本地文件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 实时日志转发插件：把 Agent 运行时的全部事件实时转发到外部日志系统（WebSocket / Loki / 本地文件），可用于外部页面实时监控 Agent 的每一步思考与工具执行，适合调试、监控、演示场景。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

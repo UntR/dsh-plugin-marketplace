@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "909ff8a8ceb8a9356e844a7447d13d328bf7342c"
   },
   "github": {
@@ -41,27 +41,41 @@
   },
   "id": "gh:1367164350",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-token-live",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:woodfood111/dsh-token-live#909ff8a8ceb8a9356e844a7447d13d328bf7342c",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-token-live",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fd349e0379f258a8b2c6608d312672dd1658dc4a5548d210d9bbc383b9fc294c/woodfood111/dsh-token-live",
     "description": "Composer readouts for the DeepSeek Harness: CJK-weighted draft token count, session spend at official peak/idle rates, context occupancy, and what the same usage would have cost on the costliest other model; client-only, with no host half and no credential access."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Live readings under the DeepSeek Harness composer: how big the draft is, what this session has cost, and how full the context is."
   },
   "schemaVersion": 1,
   "scripts": {

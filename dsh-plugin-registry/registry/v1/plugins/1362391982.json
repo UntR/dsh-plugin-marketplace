@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "069258cb0c5ef803080746cddea7a1b4ecf4a62f"
   },
   "github": {
@@ -45,27 +45,43 @@
   },
   "id": "gh:1362391982",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-copy-session-ref",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:azazo1/dsh-copy-session-ref#069258cb0c5ef803080746cddea7a1b4ecf4a62f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs",
+        "types": "./lib/index.d.mts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-copy-session-ref",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f81664d6798d1ed998068b078fb8f3d21ab7645a5a01a7ae0bafe12e33b7c28a/azazo1/dsh-copy-session-ref",
     "description": "在会话行菜单复制规范 @session mention, 粘贴到输入框即可召回该会话上下文"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 会话行菜单底部增加 \"复制引用\". 复制的是规范 mention @标题, 粘贴到另一个会话的输入框并发送, 即可召回该会话上下文."
   },
   "schemaVersion": 1,
   "scripts": {

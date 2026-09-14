@@ -1,58 +1,58 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
     "enrichmentStatus": "ok",
-    "headSha": "12a4dc0f13aa41282cbf3b44b90bae4e7a1466a9"
+    "headSha": "fee8e8796cb4a0fa8d82ef4a8b9f37f541cd101b"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-29T10:25:34Z",
     "databaseId": 1350488250,
     "defaultBranch": "main",
-    "description": "WSR integrations for DeepSeek Harness: Execution, Studio, and suite bundles.",
+    "description": "The single dsh-crystra plugin for DeepSeek Harness: workflow execution, analysis and deterministic initialization.",
     "fork": false,
     "forks": 0,
-    "headSha": "12a4dc0f13aa41282cbf3b44b90bae4e7a1466a9",
-    "homepageUrl": null,
+    "headSha": "fee8e8796cb4a0fa8d82ef4a8b9f37f541cd101b",
+    "homepageUrl": "https://github.com/firestige/crystra-dsh",
     "language": "JavaScript",
     "license": {
       "name": "Apache License 2.0",
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOUH7Qug",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d2eccc70e13d0bb04a4e41fa69ea1203d2a6731dd8097a5f5c0a1f49a45a1e8e/firestige/wsr-dsh",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a8a0a0b2d3da931790c96ea753d066a39c5a94cc57f1d8ad6d45554b6b147b7f/firestige/crystra-dsh",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/26112652?u=6c30b83de38bb5e60ecf33499334960b6a1d2458&v=4",
       "login": "firestige"
     },
-    "pushedAt": "2026-09-05T15:23:27Z",
-    "slug": "firestige/wsr-dsh",
+    "pushedAt": "2026-09-14T07:17:33Z",
+    "slug": "firestige/crystra-dsh",
     "stars": 0,
     "topics": [
       "agent",
+      "crystra",
       "deepseek-harness",
       "dsh",
       "dsh-plugin",
-      "workflow",
-      "wsr"
+      "workflow"
     ],
-    "updatedAt": "2026-09-05T15:04:35Z",
-    "url": "https://github.com/firestige/wsr-dsh"
+    "updatedAt": "2026-09-14T01:20:15Z",
+    "url": "https://github.com/firestige/crystra-dsh"
   },
   "id": "gh:1350488250",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-crystra",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:firestige/crystra-dsh#fee8e8796cb4a0fa8d82ef4a8b9f37f541cd101b",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
@@ -60,19 +60,24 @@
     "repositoryMatches": null
   },
   "package": {
-    "main": null,
-    "name": "wsr-dsh-monorepo",
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/index.js",
+    "name": "dsh-crystra",
     "status": "valid",
     "type": "module",
-    "version": "0.2.12"
+    "version": "0.1.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d2eccc70e13d0bb04a4e41fa69ea1203d2a6731dd8097a5f5c0a1f49a45a1e8e/firestige/wsr-dsh",
-    "description": "WSR integrations for DeepSeek Harness: Execution, Studio, and suite bundles."
+    "coverUrl": "https://opengraph.githubassets.com/a8a0a0b2d3da931790c96ea753d066a39c5a94cc57f1d8ad6d45554b6b147b7f/firestige/crystra-dsh",
+    "description": "The single dsh-crystra plugin for DeepSeek Harness: workflow execution, analysis and deterministic initialization."
   },
   "readme": {
     "available": true,
-    "excerpt": "This repository is the release authority for the WSR Execution, WSR Studio, and combined WSR suite integrations for DeepSeek Harness."
+    "excerpt": "Crystra turns repeatable workflow steps into deterministic execution, reducing unnecessary agent and LLM calls. This repository owns the single public DSH plugin dsh-crystra; its target registration repository is firestige/crystra-dsh."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "b13234abc6f3d5fcde66539f6c91a591f54f1e6b"
   },
   "github": {
@@ -41,27 +41,42 @@
   },
   "id": "gh:1364353299",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-image-studio",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wu81313-lab/dsh-image-studio#b13234abc6f3d5fcde66539f6c91a591f54f1e6b",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.7",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs"
+      },
+      "./client": {
+        "default": "./lib/client.cjs"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-image-studio",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e323091aab003a04b6222165605ff5882a11c424a28d0211a9dfbe2175c11a52/wu81313-lab/dsh-image-studio",
     "description": "Inline image card for DeepSeek Harness conversations: a bottom-left edit button that annotates, erases through a generated RGBA mask, and crops or resizes, then hands the edit back to the agent."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that shows a generated image inside the conversation, with an 编辑 (Edit) button pinned to the image's bottom-left corner. The button opens an editor with annotate / erase / resize; pressing 生成 writes the result back to disk as real PNG files and returns i"
   },
   "schemaVersion": 1,
   "scripts": {

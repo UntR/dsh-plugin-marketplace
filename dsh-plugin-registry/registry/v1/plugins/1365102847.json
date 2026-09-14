@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "88286547c4528c4cc88b0d5466269015b21cd49a"
   },
   "github": {
@@ -46,27 +46,44 @@
   },
   "id": "gh:1365102847",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-local-dba",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kichare/dsh-local-dba#88286547c4528c4cc88b0d5466269015b21cd49a",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-local-dba",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cedcc65b796cd3de5a9a5d57c14ecc0e1352f717b416d4284783f47424e0606e/kichare/dsh-local-dba",
     "description": "A local database-administration (DBA) plugin for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness). It ships as a Cordis plugin bundle that registers a set of `db_*` model-facing tools, letting the agent query, inspect schema, run DDL/DML, back up/restore and an"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A local database-administration (DBA) plugin for DeepSeek Harness. It ships as a Cordis plugin bundle that registers a set of db model-facing tools, letting the agent query, inspect schema, run DDL/DML, back up/restore and analyze slow queries against MySQL / MariaDB and PostgreS"
   },
   "schemaVersion": 1,
   "scripts": {

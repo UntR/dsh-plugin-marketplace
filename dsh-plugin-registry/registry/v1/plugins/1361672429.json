@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "eb4d97bdbb4279d264a1993af0bb07d47b6a6096"
   },
   "github": {
@@ -47,32 +47,46 @@
   },
   "id": "gh:1361672429",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@sunjuntao/dsh-qqbot",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:master1Sun/dsh-QQbot#eb4d97bdbb4279d264a1993af0bb07d47b6a6096",
+    "version": "0.1.7"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./types/host/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@sunjuntao/dsh-qqbot",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.7"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/03913b50cc19c2a5cb5010b17356b85b02d6b63179fd60c638815fa683ac6f1e/master1Sun/dsh-QQbot",
     "description": "dsh-QQbot"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 QQ 官方机器人（WebSocket 长连接模式）接入本机 DeepSeek Harness（dsh），让 AI 直接在 QQ 群聊 / 单聊里工作。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
-    "postinstall": false,
+    "postinstall": true,
     "preinstall": false,
     "prepare": false
   }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "06386c0bc81b696da4702fee32616c4759292eb2"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1363825500",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-fork-relink",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Enosensu/dsh-fork-relink#06386c0bc81b696da4702fee32616c4759292eb2",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-fork-relink",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/313b36aa1b7f3a1533242f3c16d54a630867b5550233131e232c3193877a21d0/Enosensu/dsh-fork-relink",
     "description": "DSH fork 伴随插件:fork 后自动重链子 agent 记录到新会话 / Auto-relink subagent records to a forked DSH session. Co-developed with AI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH(DeepSeek Harness)官方 fork 的伴随插件:fork(分支)发生后,自动为原会话的直接子 agent 创建完整副本挂到新会话下——fork 出的对话完整保留子 agent 面板、代理路由、descriptor、label 等信息;原会话的子 agent 记录原样保留(复制而非转移,两个分支互不干扰)。"
   },
   "schemaVersion": 1,
   "scripts": {

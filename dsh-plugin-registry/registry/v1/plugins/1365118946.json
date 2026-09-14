@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "1dc1cc76c3275059076aae85fd89358978daea79"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1365118946",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@reactor/dsh-voice",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:serpent213/dsh-voice#1dc1cc76c3275059076aae85fd89358978daea79",
+    "version": "0.8.0-reactor.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@reactor/dsh-voice",
+    "status": "valid",
+    "type": "module",
+    "version": "0.8.0-reactor.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/531944d21c2f79fc61c6fe1a9d9f17bf9af07d8db6e682ec6027139c8268b40c/serpent213/dsh-voice",
     "description": "Full-duplex German voice for DeepSeek Harness: local canary ASR → LLM → local piper TTS, with barge-in. Fork of haoku123/dsh-voice."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Full-duplex voice mode for DeepSeek Harness: streamed ASR → LLM → TTS with barge-in."
   },
   "schemaVersion": 1,
   "scripts": {

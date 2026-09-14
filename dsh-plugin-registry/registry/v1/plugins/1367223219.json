@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "c66e99d7dc79a44610db66bae592f790931c4049"
   },
   "github": {
@@ -44,27 +44,40 @@
   },
   "id": "gh:1367223219",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-image-router",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-image-router@0.4.4",
+    "version": "0.4.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.4",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-image-router",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2e9152e81d84beb303443df874844be8e9f3bec3238aaf2acc8308da51c8c356/zhiwuli0228/dsh-image-router",
     "description": "DeepSeek Harness plugin: digest prompt images through a vision model and expose a describe_image tool — without ever changing the session's model."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让纯文本模型也能「看图」 图片在进入会话之前，先由你指定的视觉模型转成文字 —— 你的会话模型自始至终不变，模型选择器也不会跳。"
   },
   "schemaVersion": 1,
   "scripts": {

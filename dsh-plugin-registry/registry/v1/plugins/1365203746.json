@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "cb20709d2f0059bc728e0722ae6a61c19ef23af1"
   },
   "github": {
@@ -44,27 +44,41 @@
   },
   "id": "gh:1365203746",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-find-plugin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vclike/dsh-find-plugin#cb20709d2f0059bc728e0722ae6a61c19ef23af1",
+    "version": "0.4.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.7",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-find-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c95262f28efeffe853a277f2e5b468a70aaa18f2543b68ed3ebbb7e83d2a9995/vclike/dsh-find-plugin",
     "description": "Find DSH plugins from inside the agent - live GitHub dsh-plugin topic search + the curated awesome-dsh-plugin list, with token auth, rate-limit resilience and offline fallback. Fork of awesome-dsh-plugin/dsh-find-plugin."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Find DeepSeek Harness (DSH) plugins from inside the agent — it searches the live GitHub dsh-plugin topic and the curated awesome-dsh-plugin list (3400 entries with bilingual descriptions), merges the results and returns ready-to-run dsh plugin add commands."
   },
   "schemaVersion": 1,
   "scripts": {

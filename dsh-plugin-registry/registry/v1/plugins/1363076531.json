@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "9d1822d61f93727cf53b5ad8edf1930a8d52863b"
   },
   "github": {
@@ -43,7 +43,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -53,14 +53,30 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-codex-reset-watch",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b9537c8d4996aa40324a0ce896ce9727b98f78b64ff13250cf6d40cffa1c7f56/xzs125/dsh-codex-reset-watch",
     "description": "DSH 插件：监控 X @thsottiaux 的 Codex reset 公告，左侧边栏底部 R 图标（常态灰 / 有重置时 #66ccff 点亮；hover 倒计时+北京时间；单击打开推文、双击立即检查并蓝色闪烁）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：在左侧边栏底部动作位（sidebar.footer.action）显示 R 图标，追踪 X @thsottiaux 的 Codex reset 公告。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "8ffc26686a64ce19d37f789e551568b470a18ad1"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1362497479",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-effort-slider",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:SmailPang/dsh-effort-slider#8ffc26686a64ce19d37f789e551568b470a18ad1",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-effort-slider",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2cf6e7d60d54fc627d2f43c59f8fe3b654eb0ed8f7921e5f9bc5793d2f0d2bb2/SmailPang/dsh-effort-slider",
     "description": "为 DeepSeek Harness 添加支持 Off、Low、High、Max 档位的可拖动推理强度滑块。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness Web 界面就地替换思考强度控件：DSH 原生在「模型座位 → 弹层 → 推理等级/Effort」面板里用一组单选行（Default / Off / Low / High / Max）选择思考强度； 本插件监视该面板，面板一打开就把原生单选行替换成参考 Claude Effort 卡片 / claude-range-slider 项目的美观滑块："
   },
   "schemaVersion": 1,
   "scripts": {

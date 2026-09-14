@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "cde5c71d7a08f7e60b668c7677924dd579829ea8"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1363850904",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-sync",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:chen1pengvincent/dsh-model-sync-plugin#cde5c71d7a08f7e60b668c7677924dd579829ea8",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.6",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-model-sync",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bcbf0679e2409084f3408b4632b386462cab76e0f228902193a5742a7e183b01/chen1pengvincent/dsh-model-sync-plugin",
     "description": "DSH 模型插件：监控并更新各服务商提供的最新模型（检查只读、勾选添加、不自动删除）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness (DSH) 监控各服务商上游 /models，列出新增模型；勾选后一键添加到 DSH。不自动删除、不自动改写、不覆盖你在原生「模型」模块的编辑。"
   },
   "schemaVersion": 1,
   "scripts": {

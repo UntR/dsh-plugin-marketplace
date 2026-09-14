@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "ec48e5137c702979c2e4d25e4b03e53bcde5a267"
   },
   "github": {
@@ -38,27 +38,47 @@
   },
   "id": "gh:1361450452",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-llm-capture",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:chengzhicao/llm-capture#ec48e5137c702979c2e4d25e4b03e53bcde5a267",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./remote": {
+        "default": "./lib/remote.js"
+      },
+      "./typert": {
+        "default": "./lib/typert.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-llm-capture",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/51b8fb95a663e78576337cc2d695f0adf279df7730bd8360c0292c262b15b628/chengzhicao/llm-capture",
-    "description": ""
+    "description": "LLM Capture 是 DeepSeek Harness Web 的调用日志插件。它在会话页面增加独立的 LLM Capture 标签页，用于查看模型请求、消息、返回内容、Token 用量、耗时和工具调用。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "LLM Capture 是 DeepSeek Harness Web 的调用日志插件。它在会话页面增加独立的 LLM Capture 标签页，用于查看模型请求、消息、返回内容、Token 用量、耗时和工具调用。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "c3ef25f6a8c8fb8ce68fd2e45f61cd5368f402d9"
   },
   "github": {
@@ -52,33 +52,45 @@
   },
   "id": "gh:1362950558",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-model-pricing",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-model-pricing@0.5.0",
+    "version": "0.5.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/host/index.js",
+    "name": "dsh-model-pricing",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ec85febb59ca52bfea4043999198f479b9de88e049ce0995ef1943b59df0c702/vitas/dsh-model-pricing",
-    "description": "Model pricing & capability board for DeepSeek Harness: per-1M-token prices for 7,100+ models across 213 providers (models.dev + harness catalog overlay), cheapest-route comparison, capability tags, and a community promotion feed."
+    "description": "Model pricing & capability board for DeepSeek Harness: ~7,250 models across 213 providers, honest lowest-listed comparison, session costs priced by the route you actually called, and cache-leak attribution. Local-first, no server."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Compare LLM API prices before you pick a model — and see what you actually paid after you used it. A plugin for DeepSeek Harness (DSH) that puts a model pricing and capability table directly into your DSH settings (7,250 priced models, 213 providers), and then reads your own sess"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

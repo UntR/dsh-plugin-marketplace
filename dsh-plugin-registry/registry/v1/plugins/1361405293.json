@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "3a07cb0460def4f01bff8a86103448130d2936da"
   },
   "github": {
@@ -41,27 +41,41 @@
   },
   "id": "gh:1361405293",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-safety",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:RedMaple96/dsh-plugin-safety#3a07cb0460def4f01bff8a86103448130d2936da",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-safety",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6ebf7d7ff029cbb638333642d9ae73195c8ceb24c4a6638474368842a4ae07d9/RedMaple96/dsh-plugin-safety",
     "description": "Install-time safety gate for the DSH plugin market: scans npm/GitHub plugins before install, passes safe ones silently, opens a review dialog for risky ones."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 里安装第三方插件（插件市场 dsh-market / Community Market）时自动执行安全检查："
   },
   "schemaVersion": 1,
   "scripts": {

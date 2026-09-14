@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "2e8d0d769c609c119fed61ff300a379314ca63e2"
   },
   "github": {
@@ -51,27 +51,39 @@
   },
   "id": "gh:1362503233",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-geolibre",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-geolibre@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-geolibre",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b7d6e82cb9d685b95b4912ed8f0b2b5dd3fe613de964b1df5a6bf0f7cfaee3f7/baddying/dsh-geolibre",
     "description": "DeepSeek Harness plugin: render GeoJSON/vector data into an interactive GeoLibre map and let agents operate the live map (layers, styles, view, GeoLibre algorithms and Whitebox WASM tools) through agent tools."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness (DSH) plugin — 把 GeoLibre 地图能力接入 Web GUI，并让 Agent 可以实时操作「地图」tab 里的交互地图：渲染 GeoJSON、管理图层/样式/视图、运行 GeoLibre 处理算法与 Whitebox 工具箱（浏览器内 WASM 执行）。"
   },
   "schemaVersion": 1,
   "scripts": {

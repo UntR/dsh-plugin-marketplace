@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "1a313755ed1cd8e8c0d678b3e6ff939ee2e3d1d3"
   },
   "github": {
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.mjs",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./remote": "./lib/remote.mjs",
+      "./typert": "./lib/remote.mjs"
+    },
+    "main": null,
+    "name": "@harzva/dsh-terminal",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-alpha.17"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/202b27265c66f9cf8246ad06c6986d4467925382c201a7aa00d811725e6c7efb/Harzva/dsh-superterminal",
     "description": "DSH SuperTerminal: native multipane terminals, a local agent library, and DSH-powered command advice."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "官网交互导览 · 安装 · 终端讨论组 · 使用指南 ·"
   },
   "schemaVersion": 1,
   "scripts": {

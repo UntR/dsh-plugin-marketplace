@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "64d28c8ee8c44be38b7033110431001c6ac06d42"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,20 +58,36 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.ts",
+      "./dsh": {
+        "default": "./dist/adapters/dsh.js",
+        "types": "./src/adapters/dsh.ts"
+      },
+      "./opencode": "./src/adapters/opencode.ts",
+      "./pi": "./src/adapters/pi.ts",
+      "./texts": "./src/texts.ts"
+    },
+    "main": null,
+    "name": "deep-horizon",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9201542fecd2ae741b271b89f8cd606f548f7f5716d90ba045b65eafe623d0c3/andrepontesmelo/deep-horizon",
     "description": "Deep Horizon is a set an AI plugin for injecting long term goals"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A deterministic, human-authored horizon — a short list of open gaps plus a session log — shared across AI agent harnesses, injected at the start of every new session."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

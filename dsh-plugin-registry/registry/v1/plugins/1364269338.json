@@ -1,87 +1,117 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
-    "headSha": "36e42157454dc2c5fbdc2c3e31aa4383a136cd74"
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
+    "headSha": "60913ed8f7ac5beba15cad5af81423f3e51628cb"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-10T13:54:49Z",
     "databaseId": 1364269338,
     "defaultBranch": "main",
-    "description": "Your skills, anywhere. Install an Agent Skill once, use it in every agent: live skill provider for DeepSeek Harness (dsh) + MCP server / Claude Code plugin for Claude Code, Cursor, Codex. Reads 60+ agents' skill dirs, Claude Code marketplaces, any GitHub skill repo. Zero copies, zero symlinks.",
+    "description": "Reuse Agent Skills across DeepSeek Harness and MCP. Check local SKILL.md files in the browser or CI, with parser diagnostics, file hashes and clear exit codes. Try the Hugging Face playground.",
     "fork": false,
     "forks": 0,
-    "headSha": "36e42157454dc2c5fbdc2c3e31aa4383a136cd74",
-    "homepageUrl": "https://github.com/noteflowai/dsh-skills-anywhere#readme",
+    "headSha": "60913ed8f7ac5beba15cad5af81423f3e51628cb",
+    "homepageUrl": "https://huggingface.co/spaces/glayguo/dsh-skills-anywhere",
     "language": "TypeScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUVEZGg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/13a0ceee10a826d7750bed1266cd59139f75605364550648801ae3dd2684f226/noteflowai/dsh-skills-anywhere",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/75fcfafa08a6484f03ecb7712a8c0ec5d7005d3e676cb4c5fc6659f66541c9af/noteflowai/dsh-skills-anywhere",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/175671696?u=d307195327ff3d6ac08855f47b3ff6372713d398&v=4",
       "login": "noteflowai"
     },
-    "pushedAt": "2026-09-13T06:57:49Z",
+    "pushedAt": "2026-09-14T07:58:24Z",
     "slug": "noteflowai/dsh-skills-anywhere",
-    "stars": 1,
+    "stars": 2,
     "topics": [
       "agent-skills",
       "ai-agents",
       "claude-code",
       "claude-code-plugin",
-      "claude-plugin",
       "codex",
+      "continuous-integration",
       "cordis",
       "cursor",
       "deepseek-harness",
+      "deepseek-harness-plugin",
       "dsh",
+      "dsh-bundle",
+      "dsh-client",
       "dsh-plugin",
+      "dsh-skill",
+      "gemini-cli",
       "mcp",
       "mcp-server",
       "model-context-protocol",
       "skills"
     ],
-    "updatedAt": "2026-09-13T06:57:46Z",
+    "updatedAt": "2026-09-14T07:58:27Z",
     "url": "https://github.com/noteflowai/dsh-skills-anywhere"
   },
   "id": "gh:1364269338",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-skills-anywhere",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-skills-anywhere@0.9.0",
+    "version": "0.9.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.9.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./types/client.d.ts"
+      },
+      "./mcp": {
+        "default": "./lib/mcp.js",
+        "types": "./lib/mcp.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./tools": {
+        "default": "./lib/tools.js",
+        "types": "./lib/tools.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-skills-anywhere",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/13a0ceee10a826d7750bed1266cd59139f75605364550648801ae3dd2684f226/noteflowai/dsh-skills-anywhere",
-    "description": "Your skills, anywhere. Install an Agent Skill once, use it in every agent: live skill provider for DeepSeek Harness (dsh) + MCP server / Claude Code plugin for Claude Code, Cursor, Codex. Reads 60+ agents' skill dirs, Claude Code marketplaces, any GitHub skill repo. Zero copies, "
+    "coverUrl": "https://opengraph.githubassets.com/75fcfafa08a6484f03ecb7712a8c0ec5d7005d3e676cb4c5fc6659f66541c9af/noteflowai/dsh-skills-anywhere",
+    "description": "Reuse Agent Skills across DeepSeek Harness and MCP. Check local SKILL.md files in the browser or CI, with parser diagnostics, file hashes and clear exit codes. Try the Hugging Face playground."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Your skills, anywhere. Install an Agent Skill once, use it in every agent: a live skill provider for DeepSeek Harness (dsh) and an MCP server for Claude Code, Cursor, Codex and friends."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

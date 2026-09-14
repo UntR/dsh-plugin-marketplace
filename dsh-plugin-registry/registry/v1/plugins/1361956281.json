@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "eaa316ec6bc962396397892bacf24391c1a528c5"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1361956281",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cordis",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-cordis@0.1.5",
+    "version": "0.1.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.5",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.mjs",
+      "./composition": "./src/composition.mjs",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/index.mjs",
+    "name": "dsh-cordis",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7b2a839bc038c96b96b1b385c853f8059f93dfa0295969d18c606dcbee41e6da/acryldev/dsh-cordis",
     "description": "dsh-cordis"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-cordis packages the DeepSeek Harness coding engine as a Cordis plugin. It mounts the DSH base composition into the caller's existing Loader tree: native agents, durable sessions, model adapters, tools, goals, plan mode, approvals, and packaged agent presets."
   },
   "schemaVersion": 1,
   "scripts": {

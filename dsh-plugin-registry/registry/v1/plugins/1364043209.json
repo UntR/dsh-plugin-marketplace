@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "e9bf6b53a8a8177dfbe302b2454abd347943da53"
   },
   "github": {
@@ -45,27 +45,44 @@
   },
   "id": "gh:1364043209",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "cordis-plugin-graph",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "cordis-plugin-graph@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "cordis-plugin-graph",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/81983a4feb6c08bc6177dbd3df0e09f3e6fdc3fbb37ef179eb93b8a15661d8c3/acryldev/cordis-plugin-graph",
     "description": "DSH/Cordis Web plugin: a zoomable relation graph of every loaded plugin (dependencies, resolved providers, Loader-tree nesting) as a Settings tab next to 'Plugin list'."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DSH / Cordis Web plugin that adds a Plugin graph tab to Settings → Plugins, next to Plugin list. It renders a live, zoomable Cytoscape graph of the running Cordis runtime — including what a static package graph can't show: which provider actually resolved each inject, what's di"
   },
   "schemaVersion": 1,
   "scripts": {

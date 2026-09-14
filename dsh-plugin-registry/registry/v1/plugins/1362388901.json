@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
-    "headSha": "2a5709d04f45eef8cc0e5107d70fe99d0cabc101"
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
+    "headSha": "4ee52397447f7d4a8dcc01a93183855d5c405c00"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Unit conversion plugin for DeepSeek Harness (DSH): one `convert` tool plus a locale-aware Web view, covering 10 categories (length, area, volume, time, angle, speed, temperature, pressure, energy/heat, power) with 80+ units. 单位换算 DSH 插件：十大类 80+ 单位，convert 工具与 Web 视图均支持中英文。",
     "fork": false,
     "forks": 0,
-    "headSha": "2a5709d04f45eef8cc0e5107d70fe99d0cabc101",
+    "headSha": "4ee52397447f7d4a8dcc01a93183855d5c405c00",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUTRnpQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/20e7974a7a18eb51f48674cb51106e0bfd362928414ef9964900078b36498fa6/runcat-tommy/dsh-unitverse",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/4ed9df4a6edd945ca88c79578195776f17b9b8162044b39ddd51036600d75f99/runcat-tommy/dsh-unitverse",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/321355890?u=64f7c788dc2e309776c8ce42d1090383fb0b1629&v=4",
       "login": "runcat-tommy"
     },
-    "pushedAt": "2026-09-10T08:55:36Z",
+    "pushedAt": "2026-09-14T02:14:15Z",
     "slug": "runcat-tommy/dsh-unitverse",
     "stars": 0,
     "topics": [
@@ -53,32 +53,55 @@
       "units-of-measurement",
       "web-ui"
     ],
-    "updatedAt": "2026-09-10T08:56:01Z",
+    "updatedAt": "2026-09-14T02:14:18Z",
     "url": "https://github.com/runcat-tommy/dsh-unitverse"
   },
   "id": "gh:1362388901",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-unitverse",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-unitverse@1.1.1",
+    "version": "1.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js",
+        "require": "./lib/index.cjs",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client.d.ts"
+      },
+      "./convert": {
+        "import": "./lib/convert.js",
+        "require": "./lib/convert.cjs",
+        "types": "./lib/convert.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-unitverse",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/20e7974a7a18eb51f48674cb51106e0bfd362928414ef9964900078b36498fa6/runcat-tommy/dsh-unitverse",
+    "coverUrl": "https://opengraph.githubassets.com/4ed9df4a6edd945ca88c79578195776f17b9b8162044b39ddd51036600d75f99/runcat-tommy/dsh-unitverse",
     "description": "Unit conversion plugin for DeepSeek Harness (DSH): one `convert` tool plus a locale-aware Web view, covering 10 categories (length, area, volume, time, angle, speed, temperature, pressure, energy/heat, power) with 80+ units. 单位换算 DSH 插件：十大类 80+ 单位，convert 工具与 Web 视图均支持中英文。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness (DSH) 单位换算插件：提供 convert 工具，在 长度、面积、体积、时间、角度、速度、温度、压力、热量/能量、功率 十大类单位之间换算，支持英文符号、英文全称与中文名称，大小写不敏感，内置温度温标与温差（Δ）双模式。"
   },
   "schemaVersion": 1,
   "scripts": {

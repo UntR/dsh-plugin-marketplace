@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "4b470117a6bcd73b17b5380ed2748ffb37360dbb"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1364452648",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-git-update-notifier",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-git-update-notifier@0.2.9",
+    "version": "0.2.9"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.9",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-git-update-notifier",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.9"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/42e523c93509461fcb0dc62e8d318d3d7581c157924eeb227b584b14dfd659e6/lmr233/dsh-git-update-notifier",
     "description": "每天首次启动 dsh 时用 git 检测上游提交并在 Web GUI 中询问是否更新（适配源码 checkout，不改 npm 依赖）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "每天本地时间 24 时检查一次 dsh 本体有没有更新（那时 dsh 没开着的话，下次启动时补检）；有的话在 Web GUI 右下角弹一张卡片，由你决定是立即更新、延期，还是稍后再说。更新本身支持断点续传（中断了就从断点接着下）、安装前校验（sha512 / sha1 / 包内身份三层）、安装失败后的重试与回退，以及失败诊断（完整现场落盘，可展开复制）。它也检测自己有没有新版 —— 见插件自身的更新。当前版本 0.2.8。"
   },
   "schemaVersion": 1,
   "scripts": {

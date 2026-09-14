@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "4c782efaa0790f668d932347e2375e094bebb90a"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1364108257",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-update-audit",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wcnm8888/dsh-plugin-update-audit#4c782efaa0790f668d932347e2375e094bebb90a",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./audit": "./src/audit.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-plugin-update-audit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/553cd6c86b9ef24d3890ae98b74e682937369c225bc469c4845ee2178cedecbb/wcnm8888/dsh-plugin-update-audit",
     "description": "Read-only update auditing for DeepSeek Harness profile plugins"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Read-only update auditing for direct plugin dependencies in a DeepSeek Harness Profile."
   },
   "schemaVersion": 1,
   "scripts": {

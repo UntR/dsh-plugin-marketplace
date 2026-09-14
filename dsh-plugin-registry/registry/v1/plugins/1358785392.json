@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
     "enrichmentStatus": "ok",
-    "headSha": "47311517bda8537798768947a7a70691d8aee471"
+    "headSha": "28d16782388a13b2fbcf919b9e5a1341458548b2"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Firecrawl search provider with multi-account settings for DeepSeek Harness 0.1.2-rc.1",
     "fork": false,
     "forks": 0,
-    "headSha": "47311517bda8537798768947a7a70691d8aee471",
+    "headSha": "28d16782388a13b2fbcf919b9e5a1341458548b2",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,29 +25,29 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUP1rcA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f7a4b6d39ae16c674990956b8c9125ffc395daaf325fb96c72c181713608e01a/aa2246740/dsh-firecrawl",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a1c3a56ae3c4d522067df529cce39b5c0bd92135e19543fbf4100425118cc506/aa2246740/dsh-firecrawl",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/10174279?v=4",
       "login": "aa2246740"
     },
-    "pushedAt": "2026-09-12T17:28:51Z",
+    "pushedAt": "2026-09-13T13:04:26Z",
     "slug": "aa2246740/dsh-firecrawl",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-07T06:52:19Z",
+    "updatedAt": "2026-09-13T13:04:30Z",
     "url": "https://github.com/aa2246740/dsh-firecrawl"
   },
   "id": "gh:1358785392",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-web-search-firecrawl",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:aa2246740/dsh-firecrawl#28d16782388a13b2fbcf919b9e5a1341458548b2",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
@@ -61,21 +61,22 @@
         "types": "./lib/types/dsh-web-search-firecrawl.d.ts"
       },
       "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
       "./package.json": "./package.json"
     },
     "main": "lib/dsh-web-search-firecrawl.js",
     "name": "dsh-web-search-firecrawl",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.1.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f7a4b6d39ae16c674990956b8c9125ffc395daaf325fb96c72c181713608e01a/aa2246740/dsh-firecrawl",
+    "coverUrl": "https://opengraph.githubassets.com/a1c3a56ae3c4d522067df529cce39b5c0bd92135e19543fbf4100425118cc506/aa2246740/dsh-firecrawl",
     "description": "Firecrawl search provider with multi-account settings for DeepSeek Harness 0.1.2-rc.1"
   },
   "readme": {
     "available": true,
-    "excerpt": "给 DeepSeek Harness 的 websearch 换 Firecrawl，并带多账号池。包名仍是 dsh-web-search-firecrawl。仓库是 dsh-firecrawl。"
+    "excerpt": "PATH 上要有官方 dsh（没有就用 npx @deepseek-ai/dsh）和 pnpm。dsh plugin add 会在 $DSHHOME/profiles/web 里跑 pnpm。仓库已提交编译好的 lib/，git 安装不用 prepare，也不用改 profile 的 allowBuilds。"
   },
   "schemaVersion": 1,
   "scripts": {

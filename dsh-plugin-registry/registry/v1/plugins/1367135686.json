@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "failed",
-    "headSha": "d42aff333cc2e421035f2db981fc14026f149868"
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
+    "headSha": "878c17bb930aed56dd1ec161f3c6e04ce25838e3"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH plugin: trims historical images to the provider image budget before sending, learns the image cap from HTTP 400 responses, and retries with fewer images. Reduces vision-token usage and prevents image-heavy sessions from failing.",
     "fork": false,
     "forks": 0,
-    "headSha": "d42aff333cc2e421035f2db981fc14026f149868",
+    "headSha": "878c17bb930aed56dd1ec161f3c6e04ce25838e3",
     "homepageUrl": "https://github.com/mafeis/dsh-image-guard#readme",
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUXzVxg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/1bcdb474576618fa82e322d98e1e21483abae9f09209cbeb4066bc352cda4e7a/mafeis/dsh-image-guard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/3fa51d4d209bad0bafdc23f34b551456f137763d6606201373baee11fd535d81/mafeis/dsh-image-guard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/9104706?u=56384577c1b1627f6bf635164b615ad7727aab21&v=4",
       "login": "mafeis"
     },
-    "pushedAt": "2026-09-12T11:13:21Z",
+    "pushedAt": "2026-09-14T03:49:39Z",
     "slug": "mafeis/dsh-image-guard",
     "stars": 0,
     "topics": [
@@ -41,32 +41,44 @@
       "vision",
       "vllm"
     ],
-    "updatedAt": "2026-09-12T11:13:07Z",
+    "updatedAt": "2026-09-14T03:49:43Z",
     "url": "https://github.com/mafeis/dsh-image-guard"
   },
   "id": "gh:1367135686",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-image-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:mafeis/dsh-image-guard#878c17bb930aed56dd1ec161f3c6e04ce25838e3",
+    "version": "0.8.17"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-image-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.8.17"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/1bcdb474576618fa82e322d98e1e21483abae9f09209cbeb4066bc352cda4e7a/mafeis/dsh-image-guard",
+    "coverUrl": "https://opengraph.githubassets.com/3fa51d4d209bad0bafdc23f34b551456f137763d6606201373baee11fd535d81/mafeis/dsh-image-guard",
     "description": "DSH plugin: trims historical images to the provider image budget before sending, learns the image cap from HTTP 400 responses, and retries with fewer images. Reduces vision-token usage and prevents image-heavy sessions from failing."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）插件，用于保证含图会话可继续使用：在请求发送前将历史图片裁剪至预算内；上游仍因图片数量返回 400 时，插件从该错误中解析上限，并按更少的图片降级重试。"
   },
   "schemaVersion": 1,
   "scripts": {

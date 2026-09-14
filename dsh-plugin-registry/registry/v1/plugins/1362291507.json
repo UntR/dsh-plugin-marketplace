@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "46b05d7b9efb5324520fbdfbde224cea81e7fe27"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1362291507",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-save-session",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-save-session@0.1.4",
+    "version": "0.1.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.4",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-save-session",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6687225ce945d0689d3fb33c9556d1d5c162fb96603236aa8e6fe4d91712e966/jh1016248/dsh-save-session",
-    "description": "DSH plugin: export the current session as filtered Markdown or rendered HTML (with TOC) via one-click buttons in the session header"
+    "description": "DSH（DeepSeek Harness）插件：会话标题栏一键导出当前会话 —— 「保存 MD」下载纯净 Markdown，「保存 HTML」下载带左侧目录、表格与代码块渲染的网页。自动过滤模型思考过程与工具调用记录，只保留用户与助手的正文，适合归档、分享与撰写报告。安装：dsh plugin --profile web add dsh-save-session"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness (DSH) 插件：在会话头部提供两个一键下载按钮，把当前会话导出为 Markdown 或渲染后的 HTML。"
   },
   "schemaVersion": 1,
   "scripts": {

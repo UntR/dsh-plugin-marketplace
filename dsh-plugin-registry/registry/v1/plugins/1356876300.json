@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
     "enrichmentStatus": "ok",
-    "headSha": "7aedabf3454130ff8f8c65918c82a5f565e1bfc3"
+    "headSha": "2037ab7da8ced852d675a29a8c4c910c8be2f429"
   },
   "github": {
     "archived": false,
@@ -17,34 +17,34 @@
     "description": "DSH live voice plugin",
     "fork": false,
     "forks": 0,
-    "headSha": "7aedabf3454130ff8f8c65918c82a5f565e1bfc3",
+    "headSha": "2037ab7da8ced852d675a29a8c4c910c8be2f429",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOUOBKDA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/2e48c2d66f1494b523c629cc014c3de92cd5b1e9853af0e73aeb76b65ad3dbf8/aa2246740/dsh-livevoice",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/3b75e1bc66e0d32a4ada8e946122066467290716f3fe1556faa0f9a26e3b5061/aa2246740/dsh-livevoice",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/10174279?v=4",
       "login": "aa2246740"
     },
-    "pushedAt": "2026-09-12T17:32:04Z",
+    "pushedAt": "2026-09-13T13:04:36Z",
     "slug": "aa2246740/dsh-livevoice",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-11T06:16:52Z",
+    "updatedAt": "2026-09-13T13:04:40Z",
     "url": "https://github.com/aa2246740/dsh-livevoice"
   },
   "id": "gh:1356876300",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-livevoice",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:aa2246740/dsh-livevoice#2037ab7da8ced852d675a29a8c4c910c8be2f429",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
@@ -54,6 +54,7 @@
   "package": {
     "exports": {
       ".": {
+        "default": "./lib/dsh-livevoice.js",
         "import": "./lib/dsh-livevoice.js",
         "types": "./lib/types/dsh-livevoice.d.ts"
       },
@@ -62,21 +63,22 @@
         "import": "./lib/client.js",
         "types": "./lib/types/client/index.d.ts"
       },
+      "./cordis.patch.yml": "./cordis.patch.yml",
       "./package.json": "./package.json"
     },
-    "main": null,
+    "main": "lib/dsh-livevoice.js",
     "name": "dsh-livevoice",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.1.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/2e48c2d66f1494b523c629cc014c3de92cd5b1e9853af0e73aeb76b65ad3dbf8/aa2246740/dsh-livevoice",
+    "coverUrl": "https://opengraph.githubassets.com/3b75e1bc66e0d32a4ada8e946122066467290716f3fe1556faa0f9a26e3b5061/aa2246740/dsh-livevoice",
     "description": "DSH live voice plugin"
   },
   "readme": {
     "available": true,
-    "excerpt": "Codex realtime voice (Ctrl+L / /live) for DeepSeek Harness."
+    "excerpt": "You need official dsh on PATH (or npx @deepseek-ai/dsh) and pnpm. dsh plugin add runs pnpm in $DSHHOME/profiles/web. This repo commits built lib/, so a git install does not need prepare or a profile allowBuilds change."
   },
   "schemaVersion": 1,
   "scripts": {

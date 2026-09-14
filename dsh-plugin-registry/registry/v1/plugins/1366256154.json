@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "e8760d15c5c41d85fcdc12ec1ffc98435dfbe66b"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOUW9qGg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d138d9850a2d0122bf131f89b3e7592cf8832c3db3a75c5bad1b3a1f10a1fdd9/PerryLink/dsh-team-rooms",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/60d93d62c91f0330a04d83d119a335660cd77b5d1e314db9217b09db363e99d4/PerryLink/dsh-team-rooms",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/255665900?u=c45dcefbeb0005ad85d4a3d472d67eec6d962dae&v=4",
       "login": "PerryLink"
     },
     "pushedAt": "2026-09-13T03:47:44Z",
     "slug": "PerryLink/dsh-team-rooms",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "collaboration",
       "cordis",
@@ -45,32 +45,50 @@
       "task-board",
       "team-rooms"
     ],
-    "updatedAt": "2026-09-13T04:58:34Z",
+    "updatedAt": "2026-09-13T20:12:06Z",
     "url": "https://github.com/PerryLink/dsh-team-rooms"
   },
   "id": "gh:1366256154",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-team-rooms",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-team-rooms@1.0.1",
+    "version": "1.0.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-team-rooms",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d138d9850a2d0122bf131f89b3e7592cf8832c3db3a75c5bad1b3a1f10a1fdd9/PerryLink/dsh-team-rooms",
+    "coverUrl": "https://opengraph.githubassets.com/60d93d62c91f0330a04d83d119a335660cd77b5d1e314db9217b09db363e99d4/PerryLink/dsh-team-rooms",
     "description": "Team rooms for DeepSeek Harness: persistent shared rooms across independent sessions - a message bus, a shared task board and a timeline. Extracted from dsh-background-agents, whose background-agent half is superseded by DSH's native continuable subagents."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Persistent, cross-session multi-agent team rooms for DeepSeek Harness — members, a message bus, a shared task board, and a shared timeline that survive restarts."
   },
   "schemaVersion": 1,
   "scripts": {

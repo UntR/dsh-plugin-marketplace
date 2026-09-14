@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "e0c1ed9493076ebb53c96c082320a48f755f97d9"
   },
   "github": {
@@ -52,7 +52,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -62,14 +62,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-tradewatcher",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/01dca9cb75584ff0c9874ae441afc9b346b9d300cbaa26d266bad9d7593e7bf4/tianyagk/dsh-tradewatcher",
     "description": "DeepSeek Harness (DSH) web plugin: 盯盘 market-dashboard sidebar tab — three quote strips with hover intraday charts, watchlist with industry alpha, ledger-driven portfolio P&L, A-share boards & detail drawer, host-side Eastmoney relay + read-only agent tools."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness Web 插件：在 betterSidebar（ctx.betterSidebar 服务）注册一个「盯盘」页签，提供 A股/国际/商品行情条 + 悬浮分时图、内嵌大盘云图（52etf.site）、分组自选、流水驱动的分组持仓账本（市值/浮动盈亏/当日盈亏/已实现），并把持仓记录以只读模型工具 + 明文 JSON 双通道开放给 dsh 会话分析。"
   },
   "schemaVersion": 1,
   "scripts": {

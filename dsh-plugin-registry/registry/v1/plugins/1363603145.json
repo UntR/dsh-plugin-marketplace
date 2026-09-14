@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "f49bb1d2ed10e1efdf89c094a83fff6a634cbd4d"
   },
   "github": {
@@ -41,33 +41,43 @@
   },
   "id": "gh:1363603145",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-stack",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:Grove-ovo/dsh-stack#f49bb1d2ed10e1efdf89c094a83fff6a634cbd4d",
+    "version": "0.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-stack",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/53ad81d36d0a82a4cf7e0c5d851922f8da121a85d9ee253d862d1f85b6059090/Grove-ovo/dsh-stack",
     "description": "Enforced safety rails for stacked PRs in DeepSeek Harness — every sync, land, and cleanup is guarded, and \"tests passed\" is proven per commit with SHA-bound validation records."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-stack is a Cordis plugin for DeepSeek Harness that enforces safety policies for multi-PR dependency workflows (Stacked PRs) within the dsh stack commands. Every sync, land, and cleanup goes through guards that are enforced by default and admit only explicit, narrowly-scoped e"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

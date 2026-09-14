@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "3673f12bbf2e9a53d19cccad0ebe62d26780c9c1"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1364880423",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-web-lifecycle",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:DDA-DIGITAL/dsh-web-lifecycle#3673f12bbf2e9a53d19cccad0ebe62d26780c9c1",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-web-lifecycle",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d248ece89b37a8f5c4f9c031d9eb06826b8d241010496bbf3967fb9bbb4981ff/DDA-DIGITAL/dsh-web-lifecycle",
     "description": "DSH web plugin: Restart and Shutdown buttons in the sidebar footer. Restart relaunches dsh web on the same host/port so the tab reconnects itself; Shutdown stops the server to free the terminal and closes the browser tab."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DSH web plugin that puts two buttons in the sidebar footer:"
   },
   "schemaVersion": 1,
   "scripts": {

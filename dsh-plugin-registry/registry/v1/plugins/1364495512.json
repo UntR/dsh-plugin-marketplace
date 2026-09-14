@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "d84d54552fa147e4308c6e339b6a0bbc26eb0ef4"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-cost-meter",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b0a07d1474aca5d1485f4d28f7765d38fc2c9dafa7a43c6298c1c08390a4b17c/Nanako660/dsh-cost-meter",
     "description": "Session spend for the DSH Web client: a stats-line pill that prices the durable tokenUsage projection with user-configured per-bucket unit prices."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "--- description: \"Shows the current session's spend to the right of the token-usage pill in the DSH Web composer stats line, priced from user-configured per-bucket unit prices.\" kind: \"package-reference\" ---"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "508c7d704a770bfc98b7032ee37723cbca70304b"
   },
   "github": {
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,37 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./protocol": {
+        "default": "./lib/protocol.js",
+        "types": "./lib/types/protocol.d.ts"
+      },
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@leolee9086/dsh-sketchup",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-alpha.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/24133b824aa6b3162f71a7109841650ebfb59211ed0e0469ca340d36f2fcbad2/leolee9086/dsh-sketchup",
     "description": "DeepSeek Harness 的 SketchUp 独立对接套装：Host 插件、Ruby 扩展、内嵌聊天与 CEF 兼容垫片。保留上游 fork 来源及 MIT 版权。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "独立的 DeepSeek Harness Host 插件 + SketchUp Ruby 扩展，提供 SketchUp 内嵌聊天窗口，并为 SketchUp 2024 自带的 Chromium 补充所需的兼容垫片。"
   },
   "schemaVersion": 1,
   "scripts": {

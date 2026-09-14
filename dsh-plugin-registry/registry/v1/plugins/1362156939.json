@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "fbe25961390a8e6b46a5d43a9b03de941d3158d6"
   },
   "github": {
@@ -45,27 +45,37 @@
   },
   "id": "gh:1362156939",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "pi-cordis",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "pi-cordis@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.mjs",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/index.mjs",
+    "name": "pi-cordis",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b743f14d402406fdcd1da793cc3a9b43db145b3ed8459b45e5add6cb3afbbc8f/acryldev/pi-cordis",
     "description": "pi-cordis"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "pi-cordis packages the Pi coding agent as a Cordis runtime plugin. It provides a Pi SDK session through the host's existing Cordis tree, so an ACRYL runtime can mount, remove, or replace Pi without making Pi the owner of application composition."
   },
   "schemaVersion": 1,
   "scripts": {

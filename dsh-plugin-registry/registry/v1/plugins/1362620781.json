@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "f4eab4b3da62cfbab7689c30a1a99aa14995022e"
   },
   "github": {
@@ -46,27 +46,41 @@
   },
   "id": "gh:1362620781",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-permission-matrix",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zhang8019/dsh-permission-matrix#f4eab4b3da62cfbab7689c30a1a99aa14995022e",
+    "version": "0.3.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.js"
+      },
+      "./client": {
+        "default": "./src/client/index.js"
+      }
+    },
+    "main": "./src/index.js",
+    "name": "dsh-permission-matrix",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b137d873df4df7ac0b428e00a34b409f6b32f074809b1a9a15eff8253cb2d31b/zhang8019/dsh-permission-matrix",
     "description": "Permission matrix for DeepSeek Harness: 3 sandbox modes x 4 approval strategies = 9 presets, with global and LLM-robot defaults, three-tier risk policies, audit log and git checkpoint."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DSH 的权限从「几个固定档位」拆成两个独立维度并重新组合:"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
-    "headSha": "32f73cf0d3ba2573c9562b60396b9dc8e72a0421"
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
+    "headSha": "c492d38da4ad0dbfdf8c2e548ad62ace611087f1"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Patient auto-retry for DeepSeek Harness — reads the retry delay out of an upstream 429 capacity-cooldown message and waits it out, instead of giving up after two fast retries.",
     "fork": false,
     "forks": 0,
-    "headSha": "32f73cf0d3ba2573c9562b60396b9dc8e72a0421",
+    "headSha": "c492d38da4ad0dbfdf8c2e548ad62ace611087f1",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,44 +25,55 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUUuyZQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d517bc88fda172aa54eb3461064745255586ba2d67f073264961e25cc44108d6/dboycht/dsh-cooldown-retry",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/1f98499df9dce43983e7fc04b0164f91c7a11136179c17c959cdd158d613327c/dboycht/dsh-cooldown-retry",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/69496137?u=61fcc87222f6227bbe6cb0debcc62c336084eaa3&v=4",
       "login": "dboycht"
     },
-    "pushedAt": "2026-09-11T07:25:02Z",
+    "pushedAt": "2026-09-14T05:08:15Z",
     "slug": "dboycht/dsh-cooldown-retry",
     "stars": 0,
     "topics": [
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-09-11T07:24:58Z",
+    "updatedAt": "2026-09-14T05:08:18Z",
     "url": "https://github.com/dboycht/dsh-cooldown-retry"
   },
   "id": "gh:1363915365",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cooldown-retry",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dboycht/dsh-cooldown-retry#c492d38da4ad0dbfdf8c2e548ad62ace611087f1",
+    "version": "1.0.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-cooldown-retry",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d517bc88fda172aa54eb3461064745255586ba2d67f073264961e25cc44108d6/dboycht/dsh-cooldown-retry",
+    "coverUrl": "https://opengraph.githubassets.com/1f98499df9dce43983e7fc04b0164f91c7a11136179c17c959cdd158d613327c/dboycht/dsh-cooldown-retry",
     "description": "Patient auto-retry for DeepSeek Harness — reads the retry delay out of an upstream 429 capacity-cooldown message and waits it out, instead of giving up after two fast retries."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Patient auto-retry for DeepSeek Harness. When an upstream model gateway answers with 429 Too Many Requests plus a retryafterseconds hint — \"All upstream providers are cooling down. Please retry after 28 seconds.\" — this plugin waits the delay the upstream actually asked for and r"
   },
   "schemaVersion": 1,
   "scripts": {

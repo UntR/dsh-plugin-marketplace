@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "3eaed47ce44cc967437e1ca960f0ecbb521683c3"
   },
   "github": {
@@ -39,27 +39,83 @@
   },
   "id": "gh:1362311327",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-security",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kiwings/dsh-security#3eaed47ce44cc967437e1ca960f0ecbb521683c3",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./command-threat-model": "./lib/command-threat-model/index.js",
+      "./command-threat-model/invariant": "./lib/command-threat-model/invariant.js",
+      "./command-triage": "./lib/command-triage/index.js",
+      "./command-triage/invariant": "./lib/command-triage/invariant.js",
+      "./command-vuln-scan": "./lib/command-vuln-scan/index.js",
+      "./command-vuln-scan/invariant": "./lib/command-vuln-scan/invariant.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./invariant": "./lib/invariant.js",
+      "./package.json": "./package.json",
+      "./preset-root": "./lib/preset-root.js",
+      "./threat-model": "./lib/threat-model/index.js",
+      "./threat-model-in-memory": "./lib/threat-model-in-memory/index.js",
+      "./threat-model-in-memory/invariant": "./lib/threat-model-in-memory/invariant.js",
+      "./threat-model-interview": "./lib/threat-model-interview/index.js",
+      "./threat-model-interview/invariant": "./lib/threat-model-interview/invariant.js",
+      "./threat-model-swarm": "./lib/threat-model-swarm/index.js",
+      "./threat-model-swarm/invariant": "./lib/threat-model-swarm/invariant.js",
+      "./threat-model/domain": "./lib/threat-model/types/domain.js",
+      "./threat-model/invariant": "./lib/threat-model/invariant.js",
+      "./threat-model/tree": "./lib/threat-model/types/tree.js",
+      "./threat-model/types": "./lib/threat-model/types/types.js",
+      "./triage": "./lib/triage/index.js",
+      "./triage-stub": "./lib/triage-stub/index.js",
+      "./triage-stub/invariant": "./lib/triage-stub/invariant.js",
+      "./triage-swarm": "./lib/triage-swarm/index.js",
+      "./triage-swarm/invariant": "./lib/triage-swarm/invariant.js",
+      "./triage/domain": "./lib/triage/types/domain.js",
+      "./triage/invariant": "./lib/triage/invariant.js",
+      "./triage/types": "./lib/triage/types/types.js",
+      "./ui-threat-model": "./lib/ui-threat-model/index.js",
+      "./ui-threat-model/client": "./lib/ui-threat-model/ui-threat-model.client.js",
+      "./ui-threat-model/invariant": "./lib/ui-threat-model/invariant.js",
+      "./ui-triage": "./lib/ui-triage/index.js",
+      "./ui-triage/client": "./lib/ui-triage/ui-triage.client.js",
+      "./ui-triage/invariant": "./lib/ui-triage/invariant.js",
+      "./ui-vuln-scan": "./lib/ui-vuln-scan/index.js",
+      "./ui-vuln-scan/client": "./lib/ui-vuln-scan/ui-vuln-scan.client.js",
+      "./ui-vuln-scan/invariant": "./lib/ui-vuln-scan/invariant.js",
+      "./vuln-scan": "./lib/vuln-scan/index.js",
+      "./vuln-scan-stub": "./lib/vuln-scan-stub/index.js",
+      "./vuln-scan-stub/invariant": "./lib/vuln-scan-stub/invariant.js",
+      "./vuln-scan-swarm": "./lib/vuln-scan-swarm/index.js",
+      "./vuln-scan-swarm/invariant": "./lib/vuln-scan-swarm/invariant.js",
+      "./vuln-scan/domain": "./lib/vuln-scan/types/domain.js",
+      "./vuln-scan/invariant": "./lib/vuln-scan/invariant.js",
+      "./vuln-scan/tree": "./lib/vuln-scan/types/tree.js",
+      "./vuln-scan/types": "./lib/vuln-scan/types/types.js"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-security",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a3a70e5d3c3b453d10da640de8f48e53bf177bffcaae4015ae9bb6ebea46124d/kiwings/dsh-security",
     "description": "Plugins for performing security audits using dsh"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 安全审计模式：威胁建模 → 漏洞扫描 → 分诊判定，在 Web 中可视化展示。"
   },
   "schemaVersion": 1,
   "scripts": {

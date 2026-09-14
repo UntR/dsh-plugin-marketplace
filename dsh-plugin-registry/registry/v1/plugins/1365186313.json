@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "03b770e1e2931781fe0b7d38c5811072d7cad9c1"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1365186313",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-provider-headers",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-provider-headers@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-provider-headers",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5b37d8ce7bdfb1d9ffc1b01e8296e83ef52a48aa208ffb90af5c0b7ae53e9416/duanyunlun/dsh-provider-headers",
     "description": "Per-provider request headers in the DeepSeek Harness Models settings page, with per-conversation ${sessionId} expansion."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（dsh）的模型设置页加上\"自定义请求头\"编辑器：在每一个 pi-ai 提供方的卡片里直接增删请求头，并把 ${sessionId} 按会话展开。"
   },
   "schemaVersion": 1,
   "scripts": {

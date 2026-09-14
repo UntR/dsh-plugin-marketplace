@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "2f3f78e58ff4eb981b4612714685c4ff5dee823f"
   },
   "github": {
@@ -44,27 +44,44 @@
   },
   "id": "gh:1363907854",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-price-monitor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:fishOfOUC/dsh-price-monitor#2f3f78e58ff4eb981b4612714685c4ff5dee823f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-price-monitor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ce4083a78ae8bcb2a9e89d79523f91b8034d4fba0447d5f2883ef06fd4a230da/fishOfOUC/dsh-price-monitor",
     "description": "Session cost monitor for DeepSeek Harness — a dsh-better-sidebar tab (that sidebar is required; this package ships no UI of its own) showing per-turn, per-attempt token cost priced by official or manual plans"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "--- description: \"dsh-price-monitor: a dsh-better-sidebar tab that prices a DeepSeek Harness session's provider-reported token usage.\" kind: \"user-guide\" ---"
   },
   "schemaVersion": 1,
   "scripts": {

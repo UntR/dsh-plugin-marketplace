@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "51fd883256a93bac557d03ec7250e1177ea106d2"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1365031565",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-aliyun-mcp",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-aliyun-mcp@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-aliyun-mcp",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4c0495d8ae3aafbbec95ec388dd4a3ff76fbb154b43a244935795cfff758d700/zhengjy01/dsh-aliyun-mcp",
     "description": "Alibaba Cloud OpenAPI MCP connection for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Connects the official Alibaba Cloud OpenAPI MCP Server to DeepSeek Harness: enter an AccessKey (RAM sub-account recommended), the plugin runs the official Alibaba Cloud MCP Proxy (uvx alibabacloud.mcp-proxy) locally to exchange the static credentials for a bearer token, and regis"
   },
   "schemaVersion": 1,
   "scripts": {

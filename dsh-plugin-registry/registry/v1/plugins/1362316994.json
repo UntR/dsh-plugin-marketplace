@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "127c4576d6ab0f864c1f0c9755fa7277e22d750e"
   },
   "github": {
@@ -25,18 +25,18 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUTNOwg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/c7dd370c19c725f1ddb47449a746e905625e01fbda7966f7b719965bf3e5d90a/ruisenbai/dsh-turn-fold",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/83fd62fb61130d7fc556289811f4baa7b58a7e710807cdaed47be355a4b2181c/ruisenbai/dsh-turn-fold",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/77267645?u=50eb51bb05b68c54249313ca8b6044643375e972&v=4",
       "login": "ruisenbai"
     },
     "pushedAt": "2026-09-09T08:37:43Z",
     "slug": "ruisenbai/dsh-turn-fold",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-09T08:38:10Z",
+    "updatedAt": "2026-09-13T16:36:51Z",
     "url": "https://github.com/ruisenbai/dsh-turn-fold"
   },
   "id": "gh:1362316994",
@@ -44,24 +44,41 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-turn-fold",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/c7dd370c19c725f1ddb47449a746e905625e01fbda7966f7b719965bf3e5d90a/ruisenbai/dsh-turn-fold",
+    "coverUrl": "https://opengraph.githubassets.com/83fd62fb61130d7fc556289811f4baa7b58a7e710807cdaed47be355a4b2181c/ruisenbai/dsh-turn-fold",
     "description": "Two-level folding for DeepSeek Harness reasoning and tool calls (targets DSH 0.1.5-alpha.1)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "--- description: \"Install and configure two-level reasoning and tool folding in a DeepSeek Harness Web profile.\" kind: \"package-bundle\" ---"
   },
   "schemaVersion": 1,
   "scripts": {

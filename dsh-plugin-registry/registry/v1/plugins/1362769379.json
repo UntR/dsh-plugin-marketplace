@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "3fd495751331288efe3f1c0a16df5797d3742c6e"
   },
   "github": {
@@ -54,27 +54,39 @@
   },
   "id": "gh:1362769379",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-koein",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Miyamiz39/dsh-koein#3fd495751331288efe3f1c0a16df5797d3742c6e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./src/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-koein",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/622f48de9b693974ba69ca255db59bc4a07bd91154b907be144464d361f8380a/Miyamiz39/dsh-koein",
     "description": "Wake-word voice input for DeepSeek Harness: an always-on local keyword spotter (KWS) wakes the agent, then local offline ASR turns what you say next into a submitted message. No API key, no cloud, no typing. 语音唤醒 + 本地语音识别插件。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "语音输入插件，为 DeepSeek Harness 而做：说唤醒词唤醒，或者点一下麦克风直接开口。收音、识别全在本机完成，识别结果填进输入框，你确认后再发。"
   },
   "schemaVersion": 1,
   "scripts": {

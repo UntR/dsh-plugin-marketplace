@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "c31eae726fe744871d97605a890c41b86d0dbcfc"
   },
   "github": {
@@ -49,27 +49,39 @@
   },
   "id": "gh:1364232907",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-resume-turn",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Harris-Logic/dsh-resume-turn#c31eae726fe744871d97605a890c41b86d0dbcfc",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-resume-turn",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1a0eafd95c6498f31a9af2bb43cee8b67fe8580cd5b163b602f031e61917db90/Harris-Logic/dsh-resume-turn",
     "description": "DSH 断点续接插件：模型回复因网络中断/超时半途失败时，自动把已生成的部分输出带进下一轮，让模型从中断处继续，而不是从零全量重跑。DSH plugin: on a mid-stream network failure, auto-resume the turn from its partial output instead of restarting from scratch."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH plugin: resume an interrupted reply from its partial output instead of restarting from scratch."
   },
   "schemaVersion": 1,
   "scripts": {

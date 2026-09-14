@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "1608c61c0f9c68d2dd652809b0e520df5ca9eb15"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1365206473",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-use-images",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:chuling-lingling/dsh-plugin-use-images#1608c61c0f9c68d2dd652809b0e520df5ca9eb15",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-use-images",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/426657457793ca959d3dab4bf868933d3f133f9120c666fa5c8ee0d39382743e/chuling-lingling/dsh-plugin-use-images",
     "description": "再dsh里面可以使用图片api"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把生成图片的 HTTP API 适配成 DeepSeek Harness (dsh) 可选模型。用户在聊天框选中图片模型后，最后一条用户文本会作为 prompt 发送给图片 API；响应会被转换为 DSH 原生图片块，持久化到会话附件存储中。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "ec05e362d86699ae9acf21ba02fe39a36cf476e6"
   },
   "github": {
@@ -42,27 +42,51 @@
   },
   "id": "gh:1363769272",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-chat-interaction",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kovey/dsh-chat-interaction#ec05e362d86699ae9acf21ba02fe39a36cf476e6",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./adapters/feishu": {
+        "import": "./dist/adapters/feishu.js",
+        "types": "./dist/adapters/feishu.d.ts"
+      },
+      "./adapters/wecom": {
+        "import": "./dist/adapters/wecom.js",
+        "types": "./dist/adapters/wecom.d.ts"
+      },
+      "./plugin": {
+        "import": "./dist/plugin-entry.js",
+        "types": "./dist/plugin-entry.d.ts"
+      }
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-chat-interaction",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/daed5c546c2a091cf15197a0eac2945eb3f28e7b5f312951b11003f1e673131e/kovey/dsh-chat-interaction",
     "description": "Abstract interaction layer between DeepSeek Harness (DSH) and IM platforms (Feishu, WeCom, ...). Channel-agnostic hub with proven interaction patterns (dedupe, instant ack, wait-reply, followup wakeup, scoring-based model routing, approval gate) plus pluggable adapters for Feishu"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个抽象的交互层：一边接入 DSH (DeepSeek Harness)，一边接入飞书、企业微信这类 IM 平台。它把 dsh-feishu 插件里经过验证的交互模式（去重、即时回执、wait-reply 阻塞问答、followup 唤醒、重试守卫、审批门）平台无关化：接飞书、接企业微信、接任何新平台，都只是\"实现一个适配器 + 一段配置\"，不再是为每个 IM 重写一遍插件。"
   },
   "schemaVersion": 1,
   "scripts": {

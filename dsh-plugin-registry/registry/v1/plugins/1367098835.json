@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "1e93205bbcd3ca2e6f025600457fca879ab4b845"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1367098835",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@lengduan/dsh-usage-stats",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@lengduan/dsh-usage-stats@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@lengduan/dsh-usage-stats",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/03d14f430b1eeb8509bb971b1b748b8cae0e05aa0d49aaf9acb5635d5b08e6e4/lengduan/dsh-usage-stats",
     "description": "DeepSeek Harness 用量统计插件：本地 SQLite 账本，按天 / 服务商 / 模型统计 token 用量"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的用量统计插件。每次模型调用的四类 token 落进本地 SQLite 账本，按 天 × 服务商 × 模型 分桶。只统计用量，不做费用计算。"
   },
   "schemaVersion": 1,
   "scripts": {

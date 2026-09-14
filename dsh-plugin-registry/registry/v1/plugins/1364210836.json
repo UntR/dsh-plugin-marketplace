@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "6a5de885e2622d3aafa0ea1fd216d34204da7163"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1364210836",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-autostart",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Mandarin715/dsh-autostart#6a5de885e2622d3aafa0ea1fd216d34204da7163",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-autostart",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a5b3ba1279bc2d5783ba32c0cacaafa01b36608da2f94422ebc68eaee773724e/Mandarin715/dsh-autostart",
-    "description": "Windows 专用 DSH 插件:一键开机自启 + 一键重启 DSH 服务,全程无控制台窗口 | Windows-only DSH plugin for boot autostart and one-click restart"
+    "description": "Windows 专用 DSH 插件:一键开机自启 + 一键重启,而且重启失败也不会把 DSH 关掉不回来;DSH 由常驻看护进程启动,全程无控制台窗口 | Windows-only DSH plugin: one-click boot autostart and a restart that cannot leave DSH down; a resident supervisor starts DSH with no console window ever"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Windows 专用的 DeepSeek Harness 插件:一键开机自启 + 一键重启,而且重启失败也不会把 DSH 关掉不回来 —— 全程没有控制台窗口。"
   },
   "schemaVersion": 1,
   "scripts": {

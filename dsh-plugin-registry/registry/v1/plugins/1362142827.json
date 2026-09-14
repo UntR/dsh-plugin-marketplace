@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "0f2cf761b6b4910d05bc8ec7c8c4479e62974d73"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-context-window",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f9ec0acad1aca20a28633eade90a86150191106cee2946a63fab47a6678fabe2/CooperZhuang/dsh-context-window",
     "description": "DSH 插件：复刻 Codex 最新上下文窗口管理 — token 预算提示 / 模型可调用的 new_context / 交接式换窗替代摘要压缩 | DSH plugin reimplementing Codex's context window management: token-budget notice, model-facing new_context, handoff window reset instead of summary compaction"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：复刻 Codex 最新的上下文窗口管理模型 —— token 预算提示、模型可调用的 newcontext、以及用换窗替代摘要压缩。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "failed",
-    "headSha": "3a6bc300553368ff492830b569f928126fd94994"
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
+    "headSha": "c79996e47ac5d3425d2476282ea6c495c39e455c"
   },
   "github": {
     "archived": false,
@@ -17,48 +17,67 @@
     "description": "自动管理 dsh 会话标题，统一成「日期｜类型｜主题」的格式：类型与主题由模型对整段对话总结。",
     "fork": false,
     "forks": 0,
-    "headSha": "3a6bc300553368ff492830b569f928126fd94994",
+    "headSha": "c79996e47ac5d3425d2476282ea6c495c39e455c",
     "homepageUrl": null,
     "language": "TypeScript",
-    "license": null,
+    "license": {
+      "name": "MIT License",
+      "spdxId": "MIT"
+    },
     "nodeId": "R_kgDOUXzY3Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b96e073682560b1bbe38c9bf33f8aa4f91c0ab7d240da3cd68022c40cee9f820/cq-guojia/dsh-session-title-pattern",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d54307d78ac1df902312a51b4d3c60b8579ca431bba4f9c7e82cbc4f2f6d98af/cq-guojia/dsh-session-title-pattern",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/15099946?v=4",
       "login": "cq-guojia"
     },
-    "pushedAt": "2026-09-13T08:41:00Z",
+    "pushedAt": "2026-09-14T04:12:17Z",
     "slug": "cq-guojia/dsh-session-title-pattern",
     "stars": 1,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-13T08:41:01Z",
+    "updatedAt": "2026-09-14T04:12:21Z",
     "url": "https://github.com/cq-guojia/dsh-session-title-pattern"
   },
   "id": "gh:1367136477",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-title-pattern",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-session-title-pattern@0.6.6",
+    "version": "0.6.6"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.6.6",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs",
+        "types": "./lib/index.d.mts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-session-title-pattern",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.6"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b96e073682560b1bbe38c9bf33f8aa4f91c0ab7d240da3cd68022c40cee9f820/cq-guojia/dsh-session-title-pattern",
+    "coverUrl": "https://opengraph.githubassets.com/d54307d78ac1df902312a51b4d3c60b8579ca431bba4f9c7e82cbc4f2f6d98af/cq-guojia/dsh-session-title-pattern",
     "description": "自动管理 dsh 会话标题，统一成「日期｜类型｜主题」的格式：类型与主题由模型对整段对话总结。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh 默认的标题是模型随手取的一句话（比如「确认当前模型身份及工具查询」）。它读起来像摘要， 但侧边栏一屏十几个会话时，认不出哪个是哪天的、哪个属于哪一类事。"
   },
   "schemaVersion": 1,
   "scripts": {

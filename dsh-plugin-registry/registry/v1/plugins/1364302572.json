@@ -5,9 +5,9 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
-    "headSha": "cfcd396b0835b6e12d3d2f7d2ca093630d2e69eb"
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
+    "headSha": "d61217a4b99a316a21fa4cd685ff852d60d66e1d"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,17 @@
     "description": "DSH 视频工作台插件：把视频工厂（TTS/配乐/混音/Remotion 渲染/多级质检/主题脚手架）封装为工具面，支撑创作任意视频",
     "fork": false,
     "forks": 0,
-    "headSha": "cfcd396b0835b6e12d3d2f7d2ca093630d2e69eb",
+    "headSha": "d61217a4b99a316a21fa4cd685ff852d60d66e1d",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOUVGa7A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/84c5b545a8634533b775bca9dbd56291ed2ad6d5d154b440d7cf0c53669f8dbf/jonah791/dsh-video-studio",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e810c87aa720344cb96642524a8da080630a1653195968bb00676260adb405fd/jonah791/dsh-video-studio",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/175467022?v=4",
       "login": "jonah791"
     },
-    "pushedAt": "2026-09-10T14:11:53Z",
+    "pushedAt": "2026-09-14T06:07:28Z",
     "slug": "jonah791/dsh-video-studio",
     "stars": 0,
     "topics": [
@@ -36,7 +36,7 @@
       "remotion",
       "video-generation"
     ],
-    "updatedAt": "2026-09-10T14:16:23Z",
+    "updatedAt": "2026-09-14T06:07:32Z",
     "url": "https://github.com/jonah791/dsh-video-studio"
   },
   "id": "gh:1364302572",
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-video-studio",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/84c5b545a8634533b775bca9dbd56291ed2ad6d5d154b440d7cf0c53669f8dbf/jonah791/dsh-video-studio",
+    "coverUrl": "https://opengraph.githubassets.com/e810c87aa720344cb96642524a8da080630a1653195968bb00676260adb405fd/jonah791/dsh-video-studio",
     "description": "DSH 视频工作台插件：把视频工厂（TTS/配乐/混音/Remotion 渲染/多级质检/主题脚手架）封装为工具面，支撑创作任意视频"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 视频工作台——把本机视频工厂（TTS / AI 配乐 / ducking 混音 / Remotion 渲染 / 9 类质检 / 主题脚手架 / 逃生舱）还原为 10 个通用原语工具，使模型能在会话内造任意视频而非复刻既有范式 inject: 'tools'（jobs 是可选服务，刻意不进 inject——inject 是激活门；改用 ctx.get('jobs')，缺则降级前台） tools: videoenv"
   },
   "schemaVersion": 1,
   "scripts": {

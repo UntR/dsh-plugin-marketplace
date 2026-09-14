@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "3cc86b64641a50fec4c617cb4563ebd943cf19d1"
   },
   "github": {
@@ -49,27 +49,38 @@
   },
   "id": "gh:1361522016",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-system-cleanup",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Paul090515/dsh-system-cleanup#3cc86b64641a50fec4c617cb4563ebd943cf19d1",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-system-cleanup",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a67e1876716ad47c9e4dc9098ba99bc9c92bb127588eee6d9623267a7cea4f8a/Paul090515/dsh-system-cleanup",
     "description": "DSH skill：保守地自动清理系统缓存与垃圾文件（macOS / Linux / Windows）。可恢复删除、白名单制、不影响用户工作。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个面向 DeepSeek Harness (DSH) 的可复用 skill，用于在 macOS / Linux / Windows 上保守地自动清理系统缓存与垃圾文件、释放磁盘空间，且不影响用户工作。"
   },
   "schemaVersion": 1,
   "scripts": {

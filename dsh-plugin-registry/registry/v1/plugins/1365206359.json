@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "cf8c1ab75e2081b818b7de32a7b1724732f6a0d6"
   },
   "github": {
@@ -44,27 +44,43 @@
   },
   "id": "gh:1365206359",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-session-delete",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:chuling-lingling/dsh-plugin-session-delete#cf8c1ab75e2081b818b7de32a7b1724732f6a0d6",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-session-delete",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9d17010d433a2ee3bc6106c0d831d0839bf5aed812be149a5902b1ee329079dc/chuling-lingling/dsh-plugin-session-delete",
     "description": "删除dsh的会话内容"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness (dsh) 补上删除会话能力 —— 入口只有一个:会话页面顶部 Session log 左边的「Trash」胶囊按钮(垃圾桶图标 + 文字,与 Session log 同款式同排设计),删除当前会话。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "dedbe0aa30d5d4b67143a2b2f731c4c996aaacab"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1365031431",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-feishu-mcp",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-feishu-mcp@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-feishu-mcp",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c63f9012ee081623556f94574c96e5927339f30eb66557cc5e3da8e8958ab58b/zhengjy01/dsh-feishu-mcp",
     "description": "Feishu (Lark) OpenAPI MCP connection for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Connect DeepSeek Harness (DSH) to Feishu / Lark through the official @larksuiteoapi/lark-mcp server: the plugin spawns the official MCP server as a subprocess with your Feishu app credentials, discovers its tools, and registers them on the agent as mcpfeishu — so the DSH agent ca"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "418c13de2b4d4f146edbed6d61d9b22b0436cf27"
   },
   "github": {
@@ -42,27 +42,42 @@
   },
   "id": "gh:1367188171",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-delete-session",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:NIGHT576/dsh-delete-session#418c13de2b4d4f146edbed6d61d9b22b0436cf27",
+    "version": "1.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.5",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-delete-session",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a25e9af1984d45a9deecd53ae503633b503475865ec1ce2016684addf7c18090/NIGHT576/dsh-delete-session",
     "description": "Real deletion for DSH Web conversations: a session-row menu action and a Workspaces-header batch dialog; removes each session's log directory and projection cache. 给 DSH Web 侧栏补上真正的会话删除：右键菜单删单条、区头批量删多条，删掉日志目录与投影缓存。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "--- description: \"Adds real conversation deletion to the DSH Web sidebar: a session-menu action for one conversation and a Workspaces-header batch dialog for several, each archiving the conversation and then removing its log directory and projection cache from disk.\" kind: \"packa"
   },
   "schemaVersion": 1,
   "scripts": {

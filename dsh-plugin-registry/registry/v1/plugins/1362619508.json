@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "d30f26feac073a919668291813a10bdecfb450b2"
   },
   "github": {
@@ -42,27 +42,37 @@
   },
   "id": "gh:1362619508",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-x-opencode-session",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:MX1syk/dsh-x-opencode-session#d30f26feac073a919668291813a10bdecfb450b2",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-x-opencode-session",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f109c849a6712690352a671cec65b79aa1e258b9805dc2957c957e3fab251792/MX1syk/dsh-x-opencode-session",
     "description": "一个 DeepSeek Harness（DSH）插件，为 LLM provider 请求注入动态/随机的 HTTP 请求头。DSH 的 pi-ai provider 只支持静态 headers 字符串，无法表达动态值；本插件通过包装 globalThis.fetch，按 urlPatterns 匹配请求并注入 ${uuid} 等模板值（每个 DSH 进程铸造唯一且在进程内稳定的会话 id），解决 opencode-go 网关对 x-opencode-session 头的要求（缺失会返回 400 Model is unavailable）。零默认、卸载安全"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-x-opencode-session is a DeepSeek Harness (DSH) plugin that injects dynamic / random HTTP request headers into LLM provider requests. DSH's pi-ai provider only accepts static headers strings — it can't express per-run dynamic values. This plugin fills that gap without touching"
   },
   "schemaVersion": 1,
   "scripts": {

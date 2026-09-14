@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "45216a582a96ba5eaf67cd5e2b741b199241ec9f"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1362418944",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-composer-collapse",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:483218131/dsh-composer-collapse#45216a582a96ba5eaf67cd5e2b741b199241ec9f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-composer-collapse",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/197ea8981801da5e7e3a2fe48618f1a3b2a3e5e15ca42c11deeee19a6a7322ea/483218131/dsh-composer-collapse",
     "description": "Three-mode height manager for the DSH Web composer: auto / pinned open / pinned collapsed. DSH Web 输入框高度三态管理插件。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Height manager for the DeepSeek Harness (DSH) Web composer — three modes for the input box height: Auto (collapsed while reading, expanded while editing), Pinned Open (official 336px), Pinned Collapsed (72px). Pure client-side patch plugin, zero host modification."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "2e55095c323167206a333e63f0d4ccef2ae3f895"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,19 +54,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": "dist/index.js",
+    "name": "@dsh-external/dsh-minitui",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8ed7cba13f757e1cbd40a9034770a9c07bc2b712de8071e9473aae47cc77502c/AncientMoon114/dsh-minitui",
     "description": "A light TUI plugin for Deepseek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "这是一个为 Deepseek Harness(dsh) 设计的 TUI 前端，和目前主流的 dsh-TUI 项目相比，这个项目会更加简陋。因为本人仅仅是个人开发者，没有团队，所以功能不是很复杂，界面也不是很华丽。这个项目是本人做的第一个 TypeScript 项目，整体框架由人工编写，有些功能实在写不出来，让 AI 帮忙实现。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
-    "postinstall": false,
+    "postinstall": true,
     "preinstall": false,
     "prepare": false
   }

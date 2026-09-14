@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-13T08:42:03.950Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichmentStatus": "ok",
     "headSha": "aea47ed0ee712e7bdd5b39000053fdd7acf9e98f"
   },
   "github": {
@@ -47,27 +47,42 @@
   },
   "id": "gh:1363765604",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-auto-continue",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Meowrium/dsh-auto-continue#aea47ed0ee712e7bdd5b39000053fdd7acf9e98f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-auto-continue",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d8b0724ca7bb3b641d388c28293c6cbbd3c053324bba1aa376474da202bbf589/Meowrium/dsh-auto-continue",
     "description": "dsh plugin: auto-continue after quota/rate-limit reset + peak/valley idle-task suspend/resume, with composer toggles and a status line."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A dual-face plugin for DeepSeek Harness (dsh) that adds two things to your chat composer:"
   },
   "schemaVersion": 1,
   "scripts": {
