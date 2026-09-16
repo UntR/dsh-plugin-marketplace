@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-14T09:22:30.951Z",
+    "enrichedAt": "2026-09-16T09:05:21.203Z",
     "enrichmentStatus": "ok",
-    "headSha": "31e31106d9482845665aca70c131a1419c3703ec"
+    "headSha": "5e58b22159d5f08f60f14328cfe31265a2503d59"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh 插件：按可配置正则规则拦截 edit/write 的写入内容，默认拦全角括号，host 单半身经 cordis 配置注入。",
     "fork": false,
     "forks": 0,
-    "headSha": "31e31106d9482845665aca70c131a1419c3703ec",
+    "headSha": "5e58b22159d5f08f60f14328cfe31265a2503d59",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUMAhzQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b4050f1e60545246e21dd3ada4f73bcac1e3b3b2f9f7f4a299c4e1b573b06e8c/better-er/dsh-write-rule-guard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/dfbf599a98c69e7b25929609150de730dbf523b9232b196fa1d7e9f2740536be/better-er/dsh-write-rule-guard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/54624517?u=7131f2c75633411fedb0512488934404f24e7b8c&v=4",
       "login": "better-er"
     },
-    "pushedAt": "2026-09-13T21:10:20Z",
+    "pushedAt": "2026-09-14T16:00:20Z",
     "slug": "better-er/dsh-write-rule-guard",
-    "stars": 1,
+    "stars": 3,
     "topics": [
       "content-guard",
       "deepseek-harness",
@@ -42,7 +42,7 @@
       "regex",
       "write-guard"
     ],
-    "updatedAt": "2026-09-03T17:04:51Z",
+    "updatedAt": "2026-09-16T06:40:22Z",
     "url": "https://github.com/better-er/dsh-write-rule-guard"
   },
   "id": "gh:1354768845",
@@ -52,11 +52,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": true,
-    "spec": "dsh-write-rule-guard@0.2.2",
-    "version": "0.2.2"
+    "spec": "dsh-write-rule-guard@0.3.0",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": "0.2.2",
+    "latestVersion": "0.3.0",
     "published": true,
     "repositoryMatches": true
   },
@@ -70,15 +70,15 @@
     "name": "dsh-write-rule-guard",
     "status": "valid",
     "type": "module",
-    "version": "0.2.2"
+    "version": "0.3.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b4050f1e60545246e21dd3ada4f73bcac1e3b3b2f9f7f4a299c4e1b573b06e8c/better-er/dsh-write-rule-guard",
+    "coverUrl": "https://opengraph.githubassets.com/dfbf599a98c69e7b25929609150de730dbf523b9232b196fa1d7e9f2740536be/better-er/dsh-write-rule-guard",
     "description": "dsh 插件：按可配置正则规则拦截 edit/write 的写入内容，默认拦全角括号，host 单半身经 cordis 配置注入。"
   },
   "readme": {
     "available": true,
-    "excerpt": "禁止在 edit / write 写入内容里出现匹配配置正则的字符。工具真正执行前直接拦截并报错；拒绝文案完全由各规则 message 决定，填完占位符后即单行结果，不再自动追加任何明细或堆栈。按 edit / write 的成败维护「禁 pwsh」状态机：本回合内某次 edit / write 失败，即内容命中规则被拦或真实执行报错，会把 pwsh 切到禁用态，防止改用 pwsh 绕过写文件；此后只要某次 edit / write 真实执行成功，pwsh 就解除禁用，回合结束仍回到允许。"
+    "excerpt": "在写入类工具执行前按配置的正则拦截写入内容，命中即拒绝并把 pwsh 切到禁用态，防止改用 pwsh 绕过；被拦截工具一旦成功执行，本回合内即解除禁用，回合结束恢复允许。"
   },
   "schemaVersion": 1,
   "scripts": {
