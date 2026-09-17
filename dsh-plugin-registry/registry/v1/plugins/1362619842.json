@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-16T09:05:21.203Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-17T09:10:05.340Z",
+    "enrichmentStatus": "ok",
     "headSha": "6c2dfa3ce6ff459e0b9a10fe57706dcfbfd00e71"
   },
   "github": {
@@ -44,24 +44,54 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/typert.host.d.ts"
+      },
+      "./types": {
+        "default": "./lib/types/types.js",
+        "types": "./lib/types/types.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-file-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f5a7297876f45db30465946d3165625a4b29f97869c53f54ee4e98a89f37ec9a/starstorm-ai/dsh-file-manager",
-    "description": ""
+    "description": "--- description: \"为 DeepSeek Harness Web 增加 Monaco 文件管理与编辑视图。\" kind: \"package-bundle\" ---"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "--- description: \"为 DeepSeek Harness Web 增加 Monaco 文件管理与编辑视图。\" kind: \"package-bundle\" ---"
   },
   "schemaVersion": 1,
   "scripts": {

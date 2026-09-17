@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-16T09:05:21.203Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-17T09:10:05.340Z",
+    "enrichmentStatus": "ok",
     "headSha": "aa4254a1b03a3d2a798ae14099f10f40fb8a1ad6"
   },
   "github": {
@@ -43,33 +43,53 @@
   },
   "id": "gh:1365654726",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@mcp-manager/mcp-manager",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:yixiuzhemu/MCP-Manager#aa4254a1b03a3d2a798ae14099f10f40fb8a1ad6",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*",
+      "./types": {
+        "default": "./lib/types.js",
+        "types": "./lib/types/types.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "@mcp-manager/mcp-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/504c01724376c20f3b677550839912ac815d7c4e173b0c992bcd1172bc1c3831/yixiuzhemu/MCP-Manager",
     "description": "MCP-Server管理"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "@mcp-manager/mcp-manager — a dual-face Model Context Protocol manager plugin for deepseek-harness (dsh, built on Cordis). Single package, two entry points, one composition row: the Host half supervises any number of MCP servers, while the browser half renders a service management"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

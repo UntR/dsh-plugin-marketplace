@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-16T09:05:21.203Z",
-    "enrichmentStatus": "failed",
-    "headSha": "412591398b6cdaab87a8f3c8125e6367d6c524a2"
+    "enrichedAt": "2026-09-17T09:10:05.340Z",
+    "enrichmentStatus": "ok",
+    "headSha": "58218254bf767df32dcc48fc0663b3aa3a99509e"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-11T10:42:22Z",
     "databaseId": 1365880534,
     "defaultBranch": "main",
-    "description": "DSH Web 输入框接管（v0.3.9-beta.1 · 优化策略回退到 0.1.1 · 针对 PTC 模式优化，建议在 PTC 模式下使用 · 适用于 dsh-0.1.6-alpha.1）：发送前用独立 AI（传话者）把提示词优化成可直接发给工作 AI 的命令",
+    "description": "DSH Web 插件 · 提示词优化器：把用户的一句话补全成完整具体的要求说明（面向 PTC 模式）。0.4 = 需求补全器——只补内容，不写流程/步骤/验收清单/验证纪律/禁令。",
     "fork": false,
     "forks": 7,
-    "headSha": "412591398b6cdaab87a8f3c8125e6367d6c524a2",
+    "headSha": "58218254bf767df32dcc48fc0663b3aa3a99509e",
     "homepageUrl": null,
     "language": "HTML",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "BSD-3-Clause"
     },
     "nodeId": "R_kgDOUWmu1g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/87656c23d80b29bf1963c31d726666d0f04140bf9e8f512ea9fef89eb026ba89/WestFox-AwA/dsh-prompt-optimizer",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ffbb9e99d9eeca1d2de54cc52d522bd5f68b9a3230a47e77e8d38f6bef4673b7/WestFox-AwA/dsh-prompt-optimizer",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/261606240?u=fb431df849b631f899277e33598a1bf7379460cc&v=4",
       "login": "WestFox-AwA"
     },
-    "pushedAt": "2026-09-16T08:12:13Z",
+    "pushedAt": "2026-09-17T07:20:19Z",
     "slug": "WestFox-AwA/dsh-prompt-optimizer",
-    "stars": 44,
+    "stars": 54,
     "topics": [
       "agent-workflow",
       "ai-agent",
@@ -45,32 +45,48 @@
       "prompt-optimizer",
       "web-plugin"
     ],
-    "updatedAt": "2026-09-16T05:03:53Z",
+    "updatedAt": "2026-09-17T08:12:54Z",
     "url": "https://github.com/WestFox-AwA/dsh-prompt-optimizer"
   },
   "id": "gh:1365880534",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-prompt-optimizer",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:WestFox-AwA/dsh-prompt-optimizer#58218254bf767df32dcc48fc0663b3aa3a99509e",
+    "version": "0.4.4-beta.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-prompt-optimizer",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.4-beta.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/87656c23d80b29bf1963c31d726666d0f04140bf9e8f512ea9fef89eb026ba89/WestFox-AwA/dsh-prompt-optimizer",
-    "description": "DSH Web 输入框接管（v0.3.9-beta.1 · 优化策略回退到 0.1.1 · 针对 PTC 模式优化，建议在 PTC 模式下使用 · 适用于 dsh-0.1.6-alpha.1）：发送前用独立 AI（传话者）把提示词优化成可直接发给工作 AI 的命令"
+    "coverUrl": "https://opengraph.githubassets.com/ffbb9e99d9eeca1d2de54cc52d522bd5f68b9a3230a47e77e8d38f6bef4673b7/WestFox-AwA/dsh-prompt-optimizer",
+    "description": "DSH Web 插件 · 提示词优化器：把用户的一句话补全成完整具体的要求说明（面向 PTC 模式）。0.4 = 需求补全器——只补内容，不写流程/步骤/验收清单/验证纪律/禁令。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "中文 ｜ English"
   },
   "schemaVersion": 1,
   "scripts": {

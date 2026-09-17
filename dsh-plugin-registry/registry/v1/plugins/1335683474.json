@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-16T09:05:21.203Z",
+    "enrichedAt": "2026-09-17T09:10:05.340Z",
     "enrichmentStatus": "ok",
-    "headSha": "c2656f88d5bfd673e60d9fdcb4a1f99742157aa6"
+    "headSha": "e6e8100e8e293951417e2a2a01d8cb5d54fc1471"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-16T06:41:45Z",
     "databaseId": 1335683474,
     "defaultBranch": "main",
-    "description": "DeepSeek Harness 的 APEX 实验插件：Minimal 锚定、Pro 主导、视觉版 Flash Max 有界协作与宿主级 Web 验收。",
+    "description": "DeepSeek Harness 的 APEX 实验插件",
     "fork": false,
     "forks": 0,
-    "headSha": "c2656f88d5bfd673e60d9fdcb4a1f99742157aa6",
+    "headSha": "e6e8100e8e293951417e2a2a01d8cb5d54fc1471",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOT5zpkg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/9b0e050f51680475a795f379e2f14e7145ec534a4828ac8a768bbeb9eb45cf09/GTC2080/dsh-APEX_Plugin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b0ef72cbf85a826c4debc39ca7d9239a5c0fb3f33713b372bdf274e111af6bca/GTC2080/dsh-APEX_Plugin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/140309575?u=d8d2f029458aced93ac8ec6c6358866532055c8c&v=4",
       "login": "GTC2080"
     },
-    "pushedAt": "2026-09-02T09:06:53Z",
+    "pushedAt": "2026-09-16T13:31:42Z",
     "slug": "GTC2080/dsh-APEX_Plugin",
     "stars": 2,
     "topics": [
@@ -42,18 +42,18 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-12T14:36:37Z",
+    "updatedAt": "2026-09-17T04:26:12Z",
     "url": "https://github.com/GTC2080/dsh-APEX_Plugin"
   },
   "id": "gh:1335683474",
   "install": {
     "available": true,
-    "packageName": "dsh-minimal-max",
+    "packageName": "dsh-apex",
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:GTC2080/dsh-APEX_Plugin#c2656f88d5bfd673e60d9fdcb4a1f99742157aa6",
-    "version": "0.6.3"
+    "spec": "github:GTC2080/dsh-APEX_Plugin#e6e8100e8e293951417e2a2a01d8cb5d54fc1471",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
@@ -62,21 +62,22 @@
   },
   "package": {
     "exports": {
-      ".": "./index.js"
+      ".": "./apex.js",
+      "./apex-v1/*": "./presets/apex-v1/*.mjs"
     },
-    "main": "index.js",
-    "name": "dsh-minimal-max",
+    "main": "apex.js",
+    "name": "dsh-apex",
     "status": "valid",
     "type": "module",
-    "version": "0.6.3"
+    "version": "1.0.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/9b0e050f51680475a795f379e2f14e7145ec534a4828ac8a768bbeb9eb45cf09/GTC2080/dsh-APEX_Plugin",
-    "description": "DeepSeek Harness 的 APEX 实验插件：Minimal 锚定、Pro 主导、视觉版 Flash Max 有界协作与宿主级 Web 验收。"
+    "coverUrl": "https://opengraph.githubassets.com/b0ef72cbf85a826c4debc39ca7d9239a5c0fb3f33713b372bdf274e111af6bca/GTC2080/dsh-APEX_Plugin",
+    "description": "DeepSeek Harness 的 APEX 实验插件"
   },
   "readme": {
     "available": true,
-    "excerpt": "APEX 是一个 DeepSeek Harness 实验 preset。它保留官方 Minimal persona 与双工具首请求， 并由宿主在模型第一次行动前给出正确 Workspace。成功完成一次 Minimal 工具动作后， 默认只增加一个带精简名称目录的按需能力入口，并给出一句不含能力名称的证据缺口提示，不展开可选工具 schema；研究、代码协作、Web 运行验收、显式交付复核、视觉复核和持久状态 是彼此独立的可选能力，只在出现具体证据缺口时解锁。"
+    "excerpt": "研究如何让同一个模型更可靠地完成复杂任务。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-16T09:05:21.203Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-17T09:10:05.340Z",
+    "enrichmentStatus": "ok",
     "headSha": "9d08949e59501349a95f3e8d8cd23686a0227400"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./config": "./lib/config.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-archive-sessions",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3a6ccda0b5b40dce1b5a21c0de94c9f958c57454d1c983de3c44c834d49cd051/kira905/dsh-butler-archive",
     "description": "Unofficial DSH plugin: archive, browse, restore and delete idle sessions from the sidebar — zero dependencies. 非官方 DSH 插件：把闲置会话归档、浏览、恢复、删除，零依赖。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English · 中文（默认）"
   },
   "schemaVersion": 1,
   "scripts": {

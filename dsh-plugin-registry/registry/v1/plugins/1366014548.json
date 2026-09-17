@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-16T09:05:21.203Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-17T09:10:05.340Z",
+    "enrichmentStatus": "ok",
     "headSha": "21abc27ba86bca501e5d5c8ca74145966cef4a6a"
   },
   "github": {
@@ -47,20 +47,24 @@
   "install": {
     "available": true,
     "packageName": "dsh-native-browser",
-    "preferred": "github",
+    "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:longmiaoo/dsh-native-browser#f8ed67685890024c722ed9853ae68b403e62a9c8",
-    "version": "0.1.0-alpha.0"
+    "spec": "dsh-native-browser@0.1.0-alpha.2",
+    "version": "0.1.0-alpha.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0-alpha.2",
+    "published": true,
+    "repositoryMatches": true
   },
   "package": {
     "exports": {
-      ".": "./index.js",
+      ".": {
+        "import": "./index.js",
+        "types": "./dist/packages/dsh-adapter/src/index.d.ts"
+      },
+      "./client": "./client.js",
       "./observations": {
         "import": "./dist/packages/contracts/src/observations.js",
         "types": "./dist/packages/contracts/src/observations.d.ts"
@@ -71,7 +75,7 @@
     "name": "dsh-native-browser",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0-alpha.0"
+    "version": "0.1.0-alpha.2"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c60879270b8faf98691fa10210347fe70d4b6bf1e1dd5a8f20a44c4638656c7a/longmiaoo/dsh-native-browser",
@@ -79,7 +83,7 @@
   },
   "readme": {
     "available": true,
-    "excerpt": "dsh-native-browser aims to let DSH agents operate the Chrome you already use: existing tabs, signed-in sessions and normal extensions, with low-latency semantic observation, reliable actions, visible handoff and safe interruption."
+    "excerpt": "dsh-native-browser lets DSH agents operate the Chrome you already use: existing tabs, signed-in sessions and normal extensions, with low-latency semantic observation, reliable actions, visible handoff and safe interruption."
   },
   "schemaVersion": 1,
   "scripts": {
