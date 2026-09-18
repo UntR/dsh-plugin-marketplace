@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-17T09:10:05.340Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-18T08:44:39.766Z",
+    "enrichmentStatus": "ok",
     "headSha": "a73b34e1a691b4aab6184fd4465c71f0d5783310"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT-pGJg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/92b5e71384200a5a052289ea226cd3ab2b2fee996c192c0757b7a7e183c1bc7f/bainianling/dsh-jailbreak-mode",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/2dc7bfa448f69b5f0f2a05e1b1171c7787e4c5dc5b9904ea7848f246dbdefa2f/bainianling/dsh-jailbreak-mode",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/316622674?v=4",
       "login": "bainianling"
     },
     "pushedAt": "2026-09-16T15:24:45Z",
     "slug": "bainianling/dsh-jailbreak-mode",
-    "stars": 8,
+    "stars": 9,
     "topics": [
       "aimy-skill",
       "dsh-plugin",
@@ -40,7 +40,7 @@
       "pentest",
       "security-research"
     ],
-    "updatedAt": "2026-09-16T15:24:56Z",
+    "updatedAt": "2026-09-17T09:11:20Z",
     "url": "https://github.com/bainianling/dsh-jailbreak-mode"
   },
   "id": "gh:1340753446",
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,40 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*",
+      "./types": {
+        "default": "./lib/types.js",
+        "types": "./lib/types.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "@bainianling/dsh-jailbreak-mode",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-rc.13"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/92b5e71384200a5a052289ea226cd3ab2b2fee996c192c0757b7a7e183c1bc7f/bainianling/dsh-jailbreak-mode",
+    "coverUrl": "https://opengraph.githubassets.com/2dc7bfa448f69b5f0f2a05e1b1171c7787e4c5dc5b9904ea7848f246dbdefa2f/bainianling/dsh-jailbreak-mode",
     "description": "DSH Jailbreak Mode standalone plugin — 破甲模式插件（仅学习交流与授权安全研究）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个独立、自研、可安装的 Cordis 插件：借鉴 DeepSeek Harness 的插件模式，把\"破甲模式\"（jailbreak mode）实现为对宿主 agent 会话的提示词改写。本仓库为学习交流与获得授权的安全研究提供源码与构建好的发布产物（tarball）。"
   },
   "schemaVersion": 1,
   "scripts": {

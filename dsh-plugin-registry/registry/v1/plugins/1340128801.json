@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-17T09:10:05.340Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-18T08:44:39.766Z",
+    "enrichmentStatus": "ok",
     "headSha": "f98828d38974fb33d167b93a70404dc94d9ab9b8"
   },
   "github": {
@@ -48,24 +48,78 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.6",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./automation": {
+        "default": "./lib/automation/index.js",
+        "types": "./lib/automation/index.d.ts"
+      },
+      "./cli": {
+        "default": "./lib/cli.js",
+        "types": "./lib/cli.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./domain": {
+        "default": "./lib/domain/index.js",
+        "types": "./lib/domain/index.d.ts"
+      },
+      "./execution": {
+        "default": "./lib/execution/index.js",
+        "types": "./lib/execution/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
+      "./sqlite": {
+        "default": "./lib/sqlite/index.js",
+        "types": "./lib/sqlite/index.d.ts"
+      },
+      "./tool": {
+        "default": "./lib/tool/index.js",
+        "types": "./lib/tool/index.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/typert.host.d.ts"
+      },
+      "./workflow": {
+        "default": "./lib/workflow/index.js",
+        "types": "./lib/workflow/index.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "@shengsheng/dsh-taskboard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4d706f72d7f95a56255aad5d7aced6234f0a22a0f33ac07fad48b9defc1a5844/drscrewdriver/DSH-taskboard",
     "description": "Native local Taskboard plugin for DeepSeek Harness. SQLite-backed projects, Agent claim/review, and a native Web UI — no iframe, no second chat runtime."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Native, local project task management for DeepSeek Harness. SQLite is the sole task authority. Harness Agent Sessions, Goals, Workspaces, tools, permissions, and the Web Client remain the execution and conversation owners."
   },
   "schemaVersion": 1,
   "scripts": {
