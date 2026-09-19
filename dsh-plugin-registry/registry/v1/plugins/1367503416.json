@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "13d1bb99c58a8d64086b3c3456b7500ed0d6022c"
   },
   "github": {
@@ -48,27 +48,46 @@
   },
   "id": "gh:1367503416",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@michengai/dsh-pua",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@michengai/dsh-pua@0.3.16",
+    "version": "0.3.16"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.16",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./remote": {
+        "default": "./lib/remote.js",
+        "types": "./lib/remote.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "@michengai/dsh-pua",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.16"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/50752c3f9023663bf6ba5ba1fe4ea8741064a9e2a31cecc6e1f3c87db7c743b4/MichengAI/dsh-pua",
-    "description": "PUA for DeepSeek Harness: task persistence, personas, and verification loops"
+    "description": "DSH PUA — 为 DeepSeek Harness 提供 PUA 任务推进、角色风味、验收循环和运行状态卡片 · PUA task persistence, personas, verification loops, and live status cards for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Help your agent try another approach and verify its work before calling it done."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "67de4be7f429aaaf29f88a60574ca0e58290d80b"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./diagnostics": {
+        "default": "./lib/diagnostics.js",
+        "types": "./lib/diagnostics.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-browser-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d39682a0f440cf3f6506fee7b904543d59d92ef19bbf1286c65efaccc5c69a22/dengpeihua/dsh-browser-use",
     "description": "Native DeepSeek Harness browser-agent plugin with session-isolated Chromium, CDP, and DOM tools"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "WebVoyager 109 tasks / 3 站点：成功率 88.1%（AllRecipes 88.6%、Apple 85.7%、Amazon 89.7%），平均 26.7 步、167.3s、$0.0968/任务。完整的 LLM-as-a-Judge、Trace、成本口径和恢复流程见评测指南。"
   },
   "schemaVersion": 1,
   "scripts": {

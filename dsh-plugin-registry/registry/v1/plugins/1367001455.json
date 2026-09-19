@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "e764a9ee6c46230ae47c0fac5ad315412450b2be"
   },
   "github": {
@@ -53,7 +53,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -63,14 +63,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-adversarial-roundtable",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e60930c11bd7a9e015e023d3f4cf892d2b381b3a5af5654bc72ca3bcb0d638c7/Nerdless-ship-it/dsh-adversarial-roundtable",
     "description": "多模型圆桌会议编排：四席协作 + 独立验收，开会前先向用户确认阵容（DeepSeek Harness 插件）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness 提供 roundtablemodels 与 roundtable 两个工具，让多个接入模型按席位协作： 先向用户确认阵容 → 规划者起草计划 → 独立审核者批判审核 → 讨论执行细节 → 执行者真实执行 → 独立验收者核对产物。"
   },
   "schemaVersion": 1,
   "scripts": {

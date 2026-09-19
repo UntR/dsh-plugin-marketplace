@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "69a6e33a08b73bce93088fbcdf6d8f4a5bfa24ca"
   },
   "github": {
@@ -43,27 +43,44 @@
   },
   "id": "gh:1367499008",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-unread-mark",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yangyizhu8/dsh-unread-mark#69a6e33a08b73bce93088fbcdf6d8f4a5bfa24ca",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-unread-mark",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b2303f1c916f97426daa875133afbc4d8c3faa2fc434bb12b74a40c1ba1dfa55/yangyizhu8/dsh-unread-mark",
     "description": "Session-row unread mark for DeepSeek Harness (dsh): Mark unread / Unmark in the session menu pins a red dot that survives reload until cleared."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 dsh Web 会话行的 \"...\" 菜单追加两项，用用户主动的红点钉住「还没处理完」的会话， 与系统绿点（跑完未点开）区分。需求对齐定稿：2026-09-12。"
   },
   "schemaVersion": 1,
   "scripts": {

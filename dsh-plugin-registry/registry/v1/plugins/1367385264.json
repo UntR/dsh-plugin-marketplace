@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "a69e004105d911cf13f1a2a42f3df0f4b38bed36"
   },
   "github": {
@@ -41,27 +41,42 @@
   },
   "id": "gh:1367385264",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-chat-git",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:NOOB-P/dsh-chat-git#a69e004105d911cf13f1a2a42f3df0f4b38bed36",
+    "version": "0.6.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-chat-git",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4c569813d60812a8c1e6bd10955b350880cb5da016a01184b67208de6c5fa1e7/NOOB-P/dsh-chat-git",
     "description": "deepseek harness仓库增强插件，主要用于管理对话，每轮对话的代码"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "每轮对话结束自动提交一次工作区，随时回到任意一轮的代码状态，或者只改对话不碰代码 —— 两条线互不干扰，而且每一步都能找回。"
   },
   "schemaVersion": 1,
   "scripts": {

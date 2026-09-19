@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "3a5f8f238cb9088519a919214112e2c5f6ea543f"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1367265752",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-image-format-converter",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:M0R1C/dsh-vision-fix-lmstudio#3a5f8f238cb9088519a919214112e2c5f6ea543f",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-image-format-converter",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c618270810613c76ef3c1de66ff9cd75aab829857f86539be3421a4f291607d1/M0R1C/dsh-vision-fix-lmstudio",
     "description": "Fixes the error “This turn failed400: 'url' field must be a base64 encoded image.” when using local vision‑enabled models from LM Studio."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Починка ошибки 400: 'url' field must be a base64 encoded image при работе с локальными vision-моделями в LM Studio из DeepSeek Harness Desktop."
   },
   "schemaVersion": 1,
   "scripts": {

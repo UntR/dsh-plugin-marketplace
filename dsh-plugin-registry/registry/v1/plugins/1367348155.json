@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "a1f9db0d1ce4436171eb054c52d4421a3b65062c"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1367348155",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-image-governor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:2432450223/dsh-image-governor#a1f9db0d1ce4436171eb054c52d4421a3b65062c",
+    "version": "0.6.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-image-governor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9b9290084a906b5fdc074d76d566a17b880592af477a3f6220763cc8697f40d9/2432450223/dsh-image-governor",
     "description": "Session image payload governor for DeepSeek Harness: audit which images a session still ships, pick the ones to keep, and move the rest out of the model context."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A session image payload governor for DeepSeek Harness: it audits the images a session still ships to the model, lets you pick which ones to keep, and moves the rest out of the model's context."
   },
   "schemaVersion": 1,
   "scripts": {

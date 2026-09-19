@@ -1,33 +1,33 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
-    "headSha": "ba7b34aecde5ef8b7b2b9ac6282148efb9cf6be7"
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
+    "headSha": "e0e5f0c3564049a9e3d137d14f8311d47a1c4f7a"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-12T12:31:43Z",
     "databaseId": 1367279431,
     "defaultBranch": "main",
-    "description": "面向 AI 伴侣的长期记忆：受治理的准入、提及闸门与结构化边界保护",
+    "description": "Native scoped Riko memory plugin for DeepSeek Harness",
     "fork": false,
     "forks": 0,
-    "headSha": "ba7b34aecde5ef8b7b2b9ac6282148efb9cf6be7",
+    "headSha": "e0e5f0c3564049a9e3d137d14f8311d47a1c4f7a",
     "homepageUrl": null,
-    "language": "Rust",
+    "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOUX8HRw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/70c6e6aef6145048ae3ac8366c1ed4deedbcd47cd39aa63f4b983648368f9e8a/AkinoHaruka/companion-memory",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/46422978f11bde2cf9af2cb659c27a0a0be52d3bd6107682714044d4a63a0268/AkinoHaruka/companion-memory",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/85355044?v=4",
       "login": "AkinoHaruka"
     },
-    "pushedAt": "2026-09-13T13:13:06Z",
+    "pushedAt": "2026-09-18T13:40:37Z",
     "slug": "AkinoHaruka/companion-memory",
     "stars": 0,
     "topics": [
@@ -35,7 +35,7 @@
       "dsh-plugin",
       "memory"
     ],
-    "updatedAt": "2026-09-13T13:13:10Z",
+    "updatedAt": "2026-09-18T13:40:41Z",
     "url": "https://github.com/AkinoHaruka/companion-memory"
   },
   "id": "gh:1367279431",
@@ -43,7 +43,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -53,14 +53,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@deepseek-ai/dsh-riko-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.6-alpha.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/70c6e6aef6145048ae3ac8366c1ed4deedbcd47cd39aa63f4b983648368f9e8a/AkinoHaruka/companion-memory",
-    "description": "面向 AI 伴侣的长期记忆：受治理的准入、提及闸门与结构化边界保护"
+    "coverUrl": "https://opengraph.githubassets.com/46422978f11bde2cf9af2cb659c27a0a0be52d3bd6107682714044d4a63a0268/AkinoHaruka/companion-memory",
+    "description": "Native scoped Riko memory plugin for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "--- description: \"Native scoped memory plugin for DeepSeek Harness.\" kind: \"package-bundle\" ---"
   },
   "schemaVersion": 1,
   "scripts": {

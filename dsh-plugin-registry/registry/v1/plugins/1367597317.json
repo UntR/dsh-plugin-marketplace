@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "bbf79d17e32a1dab94bffba20fa6b1fbd8cf700e"
   },
   "github": {
@@ -56,27 +56,39 @@
   },
   "id": "gh:1367597317",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-minimax-asr",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:moluyao/dsh-minimax-asr#bbf79d17e32a1dab94bffba20fa6b1fbd8cf700e",
+    "version": "0.2.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-minimax-asr",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c136895373df1f79593a20ea516fa9b872cad7009981dace7761bdcabdd714e3/moluyao/dsh-minimax-asr",
-    "description": "MiniMax 语音识别（asr-1.0）的 DeepSeek Harness 全局插件：transcribe_audio 工具 + 设置卡片 + 输入框语音输入"
+    "description": "MiniMax 语音识别（asr-1.0）+ 语音合成（speech-2.8-hd）的 DeepSeek Harness 全局插件：转写工具、任务结束后用喇叭念一句的播报、实时免手对话、303 个音色可选"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 MiniMax 语音识别（asr-1.0）与语音合成（speech-2.8-hd）接成 DeepSeek Harness 全局插件： 一个给模型用的 transcribeaudio 工具、一张设置卡片、输入框里的语音输入按钮， 以及任务结束后自动把结果念给你听的喇叭。"
   },
   "schemaVersion": 1,
   "scripts": {

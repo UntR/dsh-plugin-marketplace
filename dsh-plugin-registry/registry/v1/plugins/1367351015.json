@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "20ccf56f3bca29d48cbdb56444cbf86c0439e2f3"
   },
   "github": {
@@ -51,7 +51,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,14 +61,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-vst3-studio",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7edea238acb3b15bcb9c0056bd7315aa2f1f78347650485185b0424be15c6594/lwy0v0/dsh-miao-vst3",
     "description": "这是一个deepseek harness项目。可以让模型操作vst3插件，注意：暂时不支持vst2。作为一个让模型捏音色的尝试性项目。目前针对serum与nexus做了适配性优化，其他插件可能存在适配性不足的情况。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（dsh）的 VST3 音频工作室插件：让 AI 直接操作本机的 VST3 插件来捏音色、把 MIDI 渲染成音频、串效果链，并用客观指标自己验证结果。"
   },
   "schemaVersion": 1,
   "scripts": {

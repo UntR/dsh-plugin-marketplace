@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "7076d81715bb05f58b2206b578aef67dd912be9a"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1367584123",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-custom-css",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-custom-css@0.1.8",
+    "version": "0.1.8"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.8",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-custom-css",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.8"
+  },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1367584123/6a35e61d-8ddf-45ab-bf93-fb0861cd710c",
     "description": "DSH Web GUI 扩展：在 设置 → 通用 → 外观 下方增加一行自定义 CSS 编辑器（DevTools 风格编辑体验：补全 / 校验 / 规则面板）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- Hero：徽章与特性卡片的色号取自图标渐变的四个停靠点（绿 #257b56 / 青 #257083 / 蓝 #3156af / 紫 #6048bb）。 图标走 jsDelivr 镜像而不是仓库内相对路径 —— 本机网络把 raw.githubusercontent.com 解析到非公网地址，而 GitHub 渲染仓库内图片用的正是该域名，相对路径的图在本地打不开； 图标本体仍在 assets/ 下，两处内容一致。 下载量徽章暂缺：npm 的 downloads API 对刚发布的包要等约一天才有数据"
   },
   "schemaVersion": 1,
   "scripts": {

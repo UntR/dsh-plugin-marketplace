@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "c98218c36b6b621f04cd23b6951f3a9e3aaed034"
   },
   "github": {
@@ -48,13 +48,13 @@
   },
   "id": "gh:1366362421",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose a ready package entry point.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-remote-workspace",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:lengmoXXL/dsh-remote-workspace#c98218c36b6b621f04cd23b6951f3a9e3aaed034",
+    "version": "0.1.11"
   },
   "npm": {
     "latestVersion": null,
@@ -67,16 +67,14 @@
         "default": "./lib/index.js",
         "types": "./lib/index.d.ts"
       },
-      "./client": {
-        "default": "./lib/client.js"
-      },
+      "./client": "./lib/client.js",
       "./package.json": "./package.json"
     },
     "main": "lib/index.js",
     "name": "dsh-remote-workspace",
     "status": "valid",
     "type": "module",
-    "version": "0.0.1"
+    "version": "0.1.11"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9bf7b4535dd2c52f25e8c3cf21a223e0326b99b8905a31dc01cafe007f97d8ad/lengmoXXL/dsh-remote-workspace",
@@ -84,13 +82,13 @@
   },
   "readme": {
     "available": true,
-    "excerpt": "A DSH plugin that puts a directory on a remote machine in front of the harness: read, write, edit, bash, grep, and terminal tools run there — in a git worktree, or in the directory itself — while the model sees ordinary local paths."
+    "excerpt": "A DSH plugin for working on another machine. It manages that machine's repositories and worktrees, routes the harness's file, shell, and terminal tools to the directory you opened, and adds terminal tabs to the right Sidebar. The model sees ordinary local paths."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

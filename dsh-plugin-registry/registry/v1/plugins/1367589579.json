@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "43fa8500c713c6c78d51eb30fb946e3874687825"
   },
   "github": {
@@ -44,27 +44,37 @@
   },
   "id": "gh:1367589579",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tavily-provider",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:MirrMeur/dsh-tavily-provider#43fa8500c713c6c78d51eb30fb946e3874687825",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-tavily-provider",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b80957d10eb85d8119a40edb7c01fff0cc0349e6176643f633c58a78186ff75d/MirrMeur/dsh-tavily-provider",
     "description": "Tavily-backed web_search / web_fetch providers for DeepSeek Harness — replaces the built-in DeepSeek search backend (0.1.1-rc.x and 0.1.5 compatible)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的 Tavily 版 websearch / webfetch 后端：把内置的 DeepSeek 搜索换成 Tavily， 用你已有的 TAVILYAPIKEY（存在凭证里）作答。"
   },
   "schemaVersion": 1,
   "scripts": {

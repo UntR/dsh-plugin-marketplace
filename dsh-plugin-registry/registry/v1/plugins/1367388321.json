@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "0cec0219208fea4978a8f1141c060427b7bbba46"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1367388321",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-wechat-status",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:alk233/dsh-wechat-status#0cec0219208fea4978a8f1141c060427b7bbba46",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@dsh-external/dsh-wechat-status",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/57c4716c6423ce991025674df11355fca23f31fb0e847d8804733eb34669e451/alk233/dsh-wechat-status",
     "description": "WeChat login watchdog for DSH: surfaces dsh-wechat session loss as a Web UI banner instead of silently dropping queued messages. AI-generated, educational use only."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 dsh-wechat 补上缺失的掉线提醒：微信桥接 会话失效、需要重新扫码时，在 DSH Web 界面弹出醒目横幅——而不是让你自己翻设置页， 或者发现消息石沉大海才知道。"
   },
   "schemaVersion": 1,
   "scripts": {

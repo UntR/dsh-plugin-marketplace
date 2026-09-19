@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
-    "headSha": "9868c7f465c4cbe13962f23492eb3d6856b1d484"
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
+    "headSha": "597e583ab39fbd5c38a57d22099f0f04ccf21e9a"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness 客户端网页操作与调试插件：多会话、新窗口、多标签页调试和操作网页",
     "fork": false,
     "forks": 0,
-    "headSha": "9868c7f465c4cbe13962f23492eb3d6856b1d484",
+    "headSha": "597e583ab39fbd5c38a57d22099f0f04ccf21e9a",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUX91Fw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/095bab743931f4e9cfce0220879c735748ba88f1c96bb582e80030a667811dbf/sdegongzuo/dsh-webops-plugin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/db1430270bdca5b26e3dca03b8389af6bab048e87755f40cf579b57e82e61714/sdegongzuo/dsh-webops-plugin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/114134298?u=b82a0bcf595412031948c6411a8b4019f77fa51f&v=4",
       "login": "sdegongzuo"
     },
-    "pushedAt": "2026-09-18T06:10:35Z",
+    "pushedAt": "2026-09-19T00:05:17Z",
     "slug": "sdegongzuo/dsh-webops-plugin",
     "stars": 0,
     "topics": [
@@ -39,7 +39,7 @@
       "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-18T06:10:38Z",
+    "updatedAt": "2026-09-19T00:05:20Z",
     "url": "https://github.com/sdegongzuo/dsh-webops-plugin"
   },
   "id": "gh:1367307543",
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,45 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./browser": {
+        "default": "./lib/browser/index.js"
+      },
+      "./browser-cdp": {
+        "default": "./lib/browser-cdp/index.js"
+      },
+      "./browser-electron": {
+        "default": "./lib/browser-electron/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./fake-llm": {
+        "default": "./lib/fake-llm/index.js"
+      },
+      "./package.json": "./package.json",
+      "./tool-browser": {
+        "default": "./lib/tool-browser/index.js"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-webops-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.6"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/095bab743931f4e9cfce0220879c735748ba88f1c96bb582e80030a667811dbf/sdegongzuo/dsh-webops-plugin",
+    "coverUrl": "https://opengraph.githubassets.com/db1430270bdca5b26e3dca03b8389af6bab048e87755f40cf579b57e82e61714/sdegongzuo/dsh-webops-plugin",
     "description": "DeepSeek Harness 客户端网页操作与调试插件：多会话、新窗口、多标签页调试和操作网页"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 增加客户端网页操作与调试能力的插件： 多会话、新窗口、多标签页地调试和操作网页。能力形态对齐 Minke 的 Agent Browser： 模型可以打开页面、读取页面大纲、按 ref 定位并操作元素、采集控制台与网络活动，并支持人工接管。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "0542998f09421c2646bf82250e6643ed1b6ee2c5"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1367391172",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-delivery-cards",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vclike/dsh-delivery-cards#0542998f09421c2646bf82250e6643ed1b6ee2c5",
+    "version": "2.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-delivery-cards",
+    "status": "valid",
+    "type": "module",
+    "version": "2.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7b5c8edc1c9c018799b65faf2d89608af1ddc236c3f751443be49432ad09efd4/vclike/dsh-delivery-cards",
     "description": "DeepSeek Harness 插件的独立交付卡片行：绕开 conversation.chat.turnTail 链被抢占导致的交付卡片消失；11 类文件类型图标、亮暗双主题、零依赖零构建 — DSH plugin: standalone delivery-cards row that renders presented files as cards with file-type icons, dual themes, zero dependencies."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Web 的独立交付卡片行：在存在 present 声明的回合接替渲染，卡片交互按使用频次排序。"
   },
   "schemaVersion": 1,
   "scripts": {

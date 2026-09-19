@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
-    "headSha": "86c55467161aebb51abb8e73d4c248c00752f308"
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
+    "headSha": "65d093c8896f25c859cc9f5577264d5e6a740701"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-12T17:57:35Z",
     "databaseId": 1367560692,
     "defaultBranch": "main",
-    "description": "Machine-wide DeepSeek Harness (dsh) token usage statistics — trends, a custom date range, per-model bucket splits, call details, CSV/JSON export. 全机 DSH 用量统计：趋势 / 自定义区间 / 模型四桶 / 调用明细 / 导出，中英双语、浅深色。",
+    "description": "Machine-wide DeepSeek Harness (dsh) usage statistics: trends, a custom date range that governs every panel, one merged model panel (share + four-bucket split + calls + cost), a session ranking with call drill-down, CSV/JSON export and an optional local cost estimate. 全机 DSH 用量统计：趋势 / 自定义区间（贯穿所有面板）/ 合并模型面板 / 会话排行下钻 / 调用明细 / 导出 / 可选成本估算。",
     "fork": false,
     "forks": 0,
-    "headSha": "86c55467161aebb51abb8e73d4c248c00752f308",
+    "headSha": "65d093c8896f25c859cc9f5577264d5e6a740701",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUYNR9A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b5993d7fd0b8be4b30ca837d412ea9b8f748121634d26ec0ade474ac8ac50e2f/satan9394/dsh-usage-unified",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/578f43a4c4c13286727a7bb447b111de758ae43c430630b148dbd5364f2b68a8/satan9394/dsh-usage-unified",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/105955691?u=0a069f4e0d4ce47a20ef78d66c870cdfcabfd048&v=4",
       "login": "satan9394"
     },
-    "pushedAt": "2026-09-18T08:29:42Z",
+    "pushedAt": "2026-09-19T08:27:29Z",
     "slug": "satan9394/dsh-usage-unified",
     "stars": 0,
     "topics": [
@@ -45,32 +45,46 @@
       "typescript",
       "usage-statistics"
     ],
-    "updatedAt": "2026-09-18T08:29:31Z",
+    "updatedAt": "2026-09-19T08:27:13Z",
     "url": "https://github.com/satan9394/dsh-usage-unified"
   },
   "id": "gh:1367560692",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-usage-unified",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:satan9394/dsh-usage-unified#65d093c8896f25c859cc9f5577264d5e6a740701",
+    "version": "0.5.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-usage-unified",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b5993d7fd0b8be4b30ca837d412ea9b8f748121634d26ec0ade474ac8ac50e2f/satan9394/dsh-usage-unified",
-    "description": "Machine-wide DeepSeek Harness (dsh) token usage statistics — trends, a custom date range, per-model bucket splits, call details, CSV/JSON export. 全机 DSH 用量统计：趋势 / 自定义区间 / 模型四桶 / 调用明细 / 导出，中英双语、浅深色。"
+    "coverUrl": "https://opengraph.githubassets.com/578f43a4c4c13286727a7bb447b111de758ae43c430630b148dbd5364f2b68a8/satan9394/dsh-usage-unified",
+    "description": "Machine-wide DeepSeek Harness (dsh) usage statistics: trends, a custom date range that governs every panel, one merged model panel (share + four-bucket split + calls + cost), a session ranking with call drill-down, CSV/JSON export and an optional local cost estimate. 全机 DSH 用量统计："
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Machine-wide token accounting for DeepSeek Harness (dsh). One dashboard over every session log on the machine: trends, per-model breakdown, a session ranking, call details, exports, and an optional local cost estimate. Everything runs locally — the plugin never contacts the netwo"
   },
   "schemaVersion": 1,
   "scripts": {

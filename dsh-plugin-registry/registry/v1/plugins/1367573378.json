@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "2e30c39921206191f5f58ae6a10f2d8c9ae2a798"
   },
   "github": {
@@ -60,27 +60,42 @@
   },
   "id": "gh:1367573378",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-chat-cost",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-chat-cost@0.6.8",
+    "version": "0.6.8"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.6.8",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-chat-cost",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.8"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d68919db9d78a08a18a19c5abcd1aa85b6b062e67055525fb85398d33e6a7ed6/igormel81/dsh-chat-cost",
     "description": "DeepSeek Harness (dsh) plugin: live token cost of every chat, its subagents and the whole session tree — DeepSeek, OpenAI, Anthropic, Gemini, Kimi, Grok and Mistral prices from a bundled catalog, plus an append-only JSONL cost log in your project folder."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Live token cost for every chat in the DeepSeek Harness (dsh) Web UI: the chat itself, its subagents and the whole session tree, priced from a bundled multi-provider catalog, with an append-only JSONL cost log written into your project folder."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "f12ab85deecff4bf1b0c0e3ffe004468f35e9d71"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1367229071",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-vllm-ascend-profiler",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:nutsDad/dsh-plugin-vllm-ascend-profiler#f12ab85deecff4bf1b0c0e3ffe004468f35e9d71",
+    "version": "1.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-vllm-ascend-profiler",
+    "status": "valid",
+    "type": "module",
+    "version": "1.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7c85726484b8aa3cda678e8140e8417071b35f28c2a06f1ea9779eff14e311c9/nutsDad/dsh-plugin-vllm-ascend-profiler",
     "description": "DeepSeek Harness plugin: parse vLLM-Ascend / Ascend NPU profiling artifacts, visualize Host/Device swimlanes plus cost shares, and emit structured, phase-aware optimization advice with Markdown/PDF export."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness 插件（DSH plugin）：上传 vLLM-Ascend / 昇腾 NPU 的 profiling 产物，自动完成文件校验 → 流式解析 → 独立可视化页面（三大模块）→ 结构化性能优化建议 → Markdown/PDF 报告导出。"
   },
   "schemaVersion": 1,
   "scripts": {

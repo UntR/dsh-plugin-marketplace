@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-14T12:14:16.678Z",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
     "enrichmentStatus": "ok",
-    "headSha": "9f55d394ffd653be9efd475c32b6f087932820b8"
+    "headSha": "3f7bf87fce3613993472d772ba802f7f18ca9524"
   },
   "github": {
     "archived": false,
@@ -17,20 +17,20 @@
     "description": "DSH harness 客户端插件：同花顺行情终端风格皮肤 + 代码量 K 线行情面板（ui-skin-ths + ui-market）",
     "fork": false,
     "forks": 0,
-    "headSha": "9f55d394ffd653be9efd475c32b6f087932820b8",
+    "headSha": "3f7bf87fce3613993472d772ba802f7f18ca9524",
     "homepageUrl": null,
-    "language": "TypeScript",
+    "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT3XiYA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3eb01d25448481b7459bf74f1d13843d7e049fc33c8f4020b5ca212085181272/AdamPlatin123/dsh-tonghuashun",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/fb6a786c1c4c74cc8f1e1bcbf060e099c1676e23931101b28cf2d0c8acb51891/AdamPlatin123/dsh-tonghuashun",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/154926636?u=3e6367cdd41be0763d1afe3008f19a14b4101d5f&v=4",
       "login": "AdamPlatin123"
     },
-    "pushedAt": "2026-08-13T13:04:33Z",
+    "pushedAt": "2026-09-18T11:59:14Z",
     "slug": "AdamPlatin123/dsh-tonghuashun",
     "stars": 2,
     "topics": [
@@ -42,7 +42,7 @@
       "theme",
       "typescript"
     ],
-    "updatedAt": "2026-09-12T00:24:39Z",
+    "updatedAt": "2026-09-18T11:58:27Z",
     "url": "https://github.com/AdamPlatin123/dsh-tonghuashun"
   },
   "id": "gh:1333125728",
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/index.js",
+      "./client": "./dist/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-tonghuashun",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.4"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3eb01d25448481b7459bf74f1d13843d7e049fc33c8f4020b5ca212085181272/AdamPlatin123/dsh-tonghuashun",
+    "coverUrl": "https://opengraph.githubassets.com/fb6a786c1c4c74cc8f1e1bcbf060e099c1676e23931101b28cf2d0c8acb51891/AdamPlatin123/dsh-tonghuashun",
     "description": "DSH harness 客户端插件：同花顺行情终端风格皮肤 + 代码量 K 线行情面板（ui-skin-ths + ui-market）"
   },
   "readme": {
     "available": true,
-    "excerpt": "DeepSeek Harness（DSH）客户端插件：同花顺行情终端风格的皮肤 + 代码量 K 线行情面板。"
+    "excerpt": "标准 Harness 插件，包含主题、项目 K 线和持久统计。兼容目标为 DSH Desktop 2.0.5 内置的 Harness 0.1.2-rc.1，以及同版网页客户端。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "94831d3a67fdb236d752996f645bbd0de221eb5a"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUYLeDw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/9fde12d8202290fb7734e93f5bf68c38135cf2f5a246a56a4156770e523f9095/corrinehu/dsh-buddy-checkin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e1f0873a0c7af014a975ba7342757084e25653aad09e447538dbf1e99881dc05/corrinehu/dsh-buddy-checkin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/202069267?u=8d84e19a6d13a6e6151166e1316af59c07ace7a2&v=4",
       "login": "corrinehu"
@@ -39,32 +39,44 @@
       "dsh-plugin",
       "workbuddy"
     ],
-    "updatedAt": "2026-09-15T13:55:52Z",
+    "updatedAt": "2026-09-19T07:23:24Z",
     "url": "https://github.com/corrinehu/dsh-buddy-checkin"
   },
   "id": "gh:1367531023",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-buddy-checkin",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-buddy-checkin@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.mjs",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-buddy-checkin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/9fde12d8202290fb7734e93f5bf68c38135cf2f5a246a56a4156770e523f9095/corrinehu/dsh-buddy-checkin",
+    "coverUrl": "https://opengraph.githubassets.com/e1f0873a0c7af014a975ba7342757084e25653aad09e447538dbf1e99881dc05/corrinehu/dsh-buddy-checkin",
     "description": "DSH 启动时自动为 WorkBuddy 国内版账号完成每日签到。Automatic daily check-in for all WorkBuddy CN accounts on this machine, every time DSH starts."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 启动时自动为 WorkBuddy 国内版账号完成每日签到：扫描本机登录过的全部国内版账号，逐个领取每日积分并汇报结果；打开详情卡片时会重新查询余额，不用再记得打开 App 点签到。"
   },
   "schemaVersion": 1,
   "scripts": {

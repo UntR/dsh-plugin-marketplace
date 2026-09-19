@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "c6ccc6d6798911dab53f81ffc40b5e8f229be733"
   },
   "github": {
@@ -43,27 +43,41 @@
   },
   "id": "gh:1367491935",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-prompt-optimization",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:du-u-uck/DSH-Prompt-Optimization#c6ccc6d6798911dab53f81ffc40b5e8f229be733",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-prompt-optimization",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/26bfe12d8aa85f67c38d69aa7418c592e63afb83795a24543a722d495ab5a7c0/du-u-uck/DSH-Prompt-Optimization",
     "description": "DSH的提示词优化插件，帮助优化对话框中输入的提示词与项目要求"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness Web 端插件：在对话框输入框旁提供「优化提示词」按钮，一键把当前草稿静默优化后直接覆盖回输入框，支持一键撤回；可在「设置 → 提示词优化」里单独固定优化所用模型（模型列表与「设置 → 模型」同源）。"
   },
   "schemaVersion": 1,
   "scripts": {

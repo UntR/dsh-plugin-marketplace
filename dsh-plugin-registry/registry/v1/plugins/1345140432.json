@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-18T08:44:39.766Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-19T08:28:54.612Z",
+    "enrichmentStatus": "ok",
     "headSha": "ec22da265d88e9d88fda378d5ed8a5a89cdc0bb9"
   },
   "github": {
@@ -54,27 +54,44 @@
   },
   "id": "gh:1345140432",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@zseven-w/dsh-browser",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@zseven-w/dsh-browser@0.1.0-rc.1",
+    "version": "0.1.0-rc.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0-rc.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./driver": {
+        "default": "./lib/driver-contract.js",
+        "types": "./lib/driver-contract.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@zseven-w/dsh-browser",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-rc.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/02f6a1a225e9da3c1edf6af4bdacebb3a825caac8a0e0fbc29d05be72819d5f3/ZSeven-W/dsh-browser",
     "description": "DeepSeek Harness plugin for browser automation, headless first. Every agent gets its own throwaway Chrome/Edge/Chromium profile, short-lived semantic references instead of CSS selectors, scoped subtree observation, deterministic high-risk refusal, and bounded evidence."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Headless-first, isolated browser automation for DeepSeek Harness."
   },
   "schemaVersion": 1,
   "scripts": {
