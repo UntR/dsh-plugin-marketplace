@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "bcbe06d1bd5c9826b2dfcded7cc6652b7a226314"
   },
   "github": {
@@ -51,27 +51,42 @@
   },
   "id": "gh:1372687456",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-pdf-translate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:MARIOMLY/dsh-pdf-translate#bcbe06d1bd5c9826b2dfcded7cc6652b7a226314",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-pdf-translate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/764a2f0d94e8fbaa2eb7935c68f84213300821d84f0844b8d9f223c56ed42f3a/MARIOMLY/dsh-pdf-translate",
     "description": "新增DSH 侧栏「翻译」面板：丢入英文电子版 PDF，先量出原件的版式（页边距/字号/行距/强调色/页眉页脚位置）再照着重排，产出保版式的中文版 PDF + md；另提供 pdf_translate 模型工具。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 加一个侧栏「翻译」面板：丢一份英文电子版 PDF 进去，出来一份「按原件版式排的」中文版。"
   },
   "schemaVersion": 1,
   "scripts": {

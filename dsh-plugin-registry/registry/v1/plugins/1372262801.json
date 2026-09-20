@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "78fe538601fca82cbf166e554fe753f4b67df255"
   },
   "github": {
@@ -41,33 +41,47 @@
   },
   "id": "gh:1372262801",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-task-orchestrator",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:hasan-aghayev/dsh-task-orchestrator#78fe538601fca82cbf166e554fe753f4b67df255",
+    "version": "1.0.6"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-task-orchestrator",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/85bd6c223051fa03df6d388d02dc7c509313824b93f2e5059dccd512d75bdfdb/hasan-aghayev/dsh-task-orchestrator",
     "description": "Automatic plan-first role delegation for DeepSeek Harness with dependency-aware workers and final review"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Adaptive delegation for DeepSeek Harness. The parent model remains the only orchestrator: it creates or validates a small dependency graph, selects the minimum useful number of workers, packs them by context budget, and may assign review to one ordinary worker slot."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

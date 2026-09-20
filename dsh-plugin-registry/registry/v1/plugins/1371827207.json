@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
-    "headSha": "25a917f6a7c4a8cd3cabef67e8f51d9d5382d25d"
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
+    "headSha": "f7f63fab7d5f3f2cb270e5ca44f7ece9174bd508"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Agent 一天产出 20 篇文档，你找不到刚才那篇。Knit 把工作区已有的 Markdown 与图片/视频列进 DSH 侧边栏，按对话相关性排序、就地预览；同一份排序也作为 knit_docs 工具给 agent，它读一篇而不是翻五篇。零模型、零网络。 | Recent docs, images & video in the DSH sidebar, ranked by relevance, with inline preview — and the same ranking as a knit_docs tool, so your agent reads one doc instead of five. Zero model calls, zero network.",
     "fork": false,
     "forks": 0,
-    "headSha": "25a917f6a7c4a8cd3cabef67e8f51d9d5382d25d",
+    "headSha": "f7f63fab7d5f3f2cb270e5ca44f7ece9174bd508",
     "homepageUrl": "https://www.npmjs.com/package/dsh-knit",
     "language": "JavaScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUcRsBw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/c652ff1d14802e20617e6ef40d9b244390870db90ef7feace20219faa4741732/PolinniZhong/dsh-knit",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c1c6d1c988efcf159103a626a4c1a999684ed39bf7a4b896d5f7a1b04f3fae73/PolinniZhong/dsh-knit",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/260301152?u=0d29f486e4e1e4e8baed05047795368fc878e1e2&v=4",
       "login": "PolinniZhong"
     },
-    "pushedAt": "2026-09-19T01:33:24Z",
+    "pushedAt": "2026-09-19T10:26:43Z",
     "slug": "PolinniZhong/dsh-knit",
-    "stars": 1,
+    "stars": 2,
     "topics": [
       "agent-tools",
       "ai-agent",
@@ -55,32 +55,44 @@
       "sidebar",
       "zero-dependency"
     ],
-    "updatedAt": "2026-09-19T01:34:23Z",
+    "updatedAt": "2026-09-20T01:51:04Z",
     "url": "https://github.com/PolinniZhong/dsh-knit"
   },
   "id": "gh:1371827207",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-knit",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-knit@0.12.1",
+    "version": "0.12.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.12.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host/index.js",
+      "./client": "./src/client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/host/index.js",
+    "name": "dsh-knit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.12.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/c652ff1d14802e20617e6ef40d9b244390870db90ef7feace20219faa4741732/PolinniZhong/dsh-knit",
-    "description": "Agent 一天产出 20 篇文档，你找不到刚才那篇。 Knit 把它们放到对话旁边 —— 你正在聊什么，相关的那篇就在最上面。"
+    "coverUrl": "https://opengraph.githubassets.com/c1c6d1c988efcf159103a626a4c1a999684ed39bf7a4b896d5f7a1b04f3fae73/PolinniZhong/dsh-knit",
+    "description": "Agent 一天产出 20 篇文档，你找不到刚才那篇。Knit 把工作区已有的 Markdown 与图片/视频列进 DSH 侧边栏，按对话相关性排序、就地预览；同一份排序也作为 knit_docs 工具给 agent，它读一篇而不是翻五篇。零模型、零网络。 | Recent docs, images & video in the DSH sidebar, ranked by relevance, with inline preview — and the same ranking as a knit_docs tool, so your agent re"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "真机截图（不是原型）：一个含 34 篇文档的工作区 —— 列表 + 就地预览 + 引用条。 引用条是 v0.12 加的：展开就能看到「这篇被谁引用」，点一项直接跳过去。 顶行会跟着你正在聊什么变；对话内容还不足时它退回按时间排，并如实说明依据。"
   },
   "schemaVersion": 1,
   "scripts": {

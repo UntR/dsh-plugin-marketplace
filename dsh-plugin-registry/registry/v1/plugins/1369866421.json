@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "e0a4eeb54de562cf92f3eb47367a6e154a289009"
   },
   "github": {
@@ -44,27 +44,37 @@
   },
   "id": "gh:1369866421",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-auto-git",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zhitiaojun/dsh-auto-git#e0a4eeb54de562cf92f3eb47367a6e154a289009",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-auto-git",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2691071d0eb99524dda38938def814f344b230d5682a5a871694333a8b6260be/zhitiaojun/dsh-auto-git",
     "description": "dsh profile bundle: git init every newly registered DSH workspace, with one empty commit, so git-aware plugins have a repository to attach to."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为每个新注册的 DSH 工作区自动 git init，让 git 相关插件（如 @linxin666/dsh-client-ui-git-graph 的分支胶囊 / Git 图谱）在每个工作区都能出现。"
   },
   "schemaVersion": 1,
   "scripts": {

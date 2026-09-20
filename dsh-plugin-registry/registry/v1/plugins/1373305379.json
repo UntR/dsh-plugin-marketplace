@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "57bb129df74701d8e645b532a4d18a53b849f7c0"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-fluffy-yard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/17540784ef3d595fb69cc4eda4e600db0a2e84de9cf17a03ff9f3ca2b9060392/DaXYao/dsh-plugin-fluffy-yard",
-    "description": ""
+    "description": "调试：院角 🛠 调参台（宽度/高度精确调参、立即到访、时间快进、演示/冷场存档、状态快照、立绘画廊）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "调试：院角 🛠 调参台（宽度/高度精确调参、立即到访、时间快进、演示/冷场存档、状态快照、立绘画廊）。"
   },
   "schemaVersion": 1,
   "scripts": {

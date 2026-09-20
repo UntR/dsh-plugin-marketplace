@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "7a604c33594b03672adb396c954003160e98a650"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1372450840",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-voice-alert",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:loyalchiiina/dsh-voice-alert#7a604c33594b03672adb396c954003160e98a650",
+    "version": "0.4.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.6",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-voice-alert",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1d6cf4481b837267b1e59591937b1a8d164fa2feefce1e5867ee316f6652cfcf/loyalchiiina/dsh-voice-alert",
-    "description": "DSH 对话语音/音效播报插件：每个 turn 结束自动提醒，出错播失败提示；内置 20 个音效（提醒 10 + 大自然 10）零配置开箱即用，也可用火山「声音复刻」克隆自己的音色。"
+    "description": "DSH voice/SFX alert: plays 'done' on turn end and 'fail' on errors — per-turn dedup, error-first, three modes (cloned-voice TTS / 20 built-in SFX / off), voice library with clone & preset routing + trial synthesis, waveOut/MCI players never touching system volume, credential-free"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）对话语音播报插件：一轮对话结束自动播报「完成」语音， 出现错误 / 工具失败时播报「失败」语音。播放绝不改动系统音量或静音状态。"
   },
   "schemaVersion": 1,
   "scripts": {

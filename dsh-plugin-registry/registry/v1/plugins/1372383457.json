@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "6f011ee4d3568e1ef74e7784d6a8cc5aec9a0e24"
   },
   "github": {
@@ -41,27 +41,46 @@
   },
   "id": "gh:1372383457",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-trusted-page",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:liujuntao123/dsh-trusted-page#6f011ee4d3568e1ef74e7784d6a8cc5aec9a0e24",
+    "version": "1.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./authority": {
+        "default": "./lib/authority.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-trusted-page",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ea1239a958d1387986236a9d8f1eb9135bf1ff7863dde060eb4e5c6c9d91b9e4/liujuntao123/dsh-trusted-page",
     "description": "DSH (DeepSeek Harness) Web 远程受信访问插件：设置面板可视化配置受信域名，联动 /api 放行与页面受信判定，修复远程 Models/设置页 settings are unavailable in this browser"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）Web 远程受信访问插件：把「远程域名信任」做成 设置面板里的可视化配置，修复经反向隧道 / 自定义域名远程访问 DSH Web 时 Models / 设置页报错："
   },
   "schemaVersion": 1,
   "scripts": {

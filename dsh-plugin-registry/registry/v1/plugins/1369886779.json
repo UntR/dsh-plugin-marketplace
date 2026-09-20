@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "c51b964247ebbce5b7bcf87c2966fd8db728d320"
   },
   "github": {
@@ -50,33 +50,58 @@
   },
   "id": "gh:1369886779",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-diff-review-likecodex",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:new-Beginner/dsh-diff-review-likecodex#c51b964247ebbce5b7bcf87c2966fd8db728d320",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/remote.js",
+        "types": "./lib/types/remote.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/types/typert.host.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-diff-review-likecodex",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/55030dc3cc635b137fa0e0ac152dbe052a2c92bb5c20c2a6efcc239e4cda48fd/new-Beginner/dsh-diff-review-likecodex",
     "description": "Codex-like diff review plugin for DeepSeek Harness Web: interactive side-by-side diffs, compact floating dock, and turn-scoped deliverable change tracking."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Review every file an agent just changed—without leaving DeepSeek Harness Web."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

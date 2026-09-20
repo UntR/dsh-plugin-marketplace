@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "f5e992f6c206085e72094377d92e1720585790a2"
   },
   "github": {
@@ -50,27 +50,39 @@
   },
   "id": "gh:1371320112",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-attention-beep",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kiterunner1/dsh-attention-beep#f5e992f6c206085e72094377d92e1720585790a2",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-attention-beep",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7f2811e11b6842205c4b33d1d86c0bb48c842583d0e8e782194d3521467c700b/kiterunner1/dsh-attention-beep",
     "description": "DSH 插件：任务结束或命令卡死时用本机人声提醒，自动中断卡住的 pwsh 调用并把「怎么继续」写回工具结果，并在 spawn 之前拦掉已知的性能陷阱写法。仅 Windows。 / Beeps + stuck-command watchdog + command guard for DeepSeek Harness. Windows only."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "中文 ·"
   },
   "schemaVersion": 1,
   "scripts": {

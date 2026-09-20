@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "f41f6c6df3b78121106578f3f6d29ae83e8469ca"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1371916286",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-anthropic-membership",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:antonio-mastropaolo/dsh-anthropic-membership#f41f6c6df3b78121106578f3f6d29ae83e8469ca",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-anthropic-membership",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c95732563e7b91b39c5dc110f34d28e47446b4b605374efa7726b352a00bd338/antonio-mastropaolo/dsh-anthropic-membership",
     "description": "DeepSeek Harness plugin: Sign in with Claude Pro/Max (no API key). Caps Anthropic images at 2000px and slims /compact for 1M context."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness plugin: Sign in with Claude Pro/Max. Uses the same Anthropic membership OAuth grant Claude Code uses (isSubscription: true). No Anthropic API key."
   },
   "schemaVersion": 1,
   "scripts": {

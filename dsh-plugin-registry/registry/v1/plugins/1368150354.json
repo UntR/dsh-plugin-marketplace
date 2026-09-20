@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "86b3e0236b019f224346e14f646856c19065f829"
   },
   "github": {
@@ -52,27 +52,38 @@
   },
   "id": "gh:1368150354",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-lifecycle-inspector",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Rex16200513/dsh-lifecycle-inspector#86b3e0236b019f224346e14f646856c19065f829",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-lifecycle-inspector",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d32357b8a1e679151c10301239aff07cdc04a80c118d3923629a22b4f266ff8e/Rex16200513/dsh-lifecycle-inspector",
-    "description": "Diagnose DSH plugin Fiber lifecycles, live Cordis Effects, and teardown outcomes"
+    "description": "Visual lifecycle diagnostics for DeepSeek Harness plugins, Cordis Effects, and teardown cleanup"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Lifecycle diagnostics for DeepSeek Harness (DSH): see what each plugin owns, spot unhealthy Fiber states, and verify Cordis-managed cleanup without reading raw runtime output."
   },
   "schemaVersion": 1,
   "scripts": {

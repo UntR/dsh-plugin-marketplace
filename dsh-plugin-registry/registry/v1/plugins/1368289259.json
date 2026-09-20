@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "fa889f847353ccf732681dfbc640da8ec676b0c8"
   },
   "github": {
@@ -46,27 +46,46 @@
   },
   "id": "gh:1368289259",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-browser-annotate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:iimaguest/dsh-browser-annotate#fa889f847353ccf732681dfbc640da8ec676b0c8",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./host/index.js"
+      },
+      "./client": {
+        "default": "./client/index.js"
+      },
+      "./extension": {
+        "default": "./extension/manifest.json"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "host/index.js",
+    "name": "dsh-browser-annotate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/588c1c6bca729b947ab0d5ff203564fd02304f5cd9f1d24223d586bacd1c3229/iimaguest/dsh-browser-annotate",
     "description": "Browser tools, Chrome DevTools Protocol, and right-click annotation for the DeepSeek Harness agent — plus the desktop shell that owns the real Chromium beside your session"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Two pieces that meet on loopback:"
   },
   "schemaVersion": 1,
   "scripts": {

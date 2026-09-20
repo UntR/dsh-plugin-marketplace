@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "df09f13f6f73cfd0269ee764f986fef3650042bc"
   },
   "github": {
@@ -41,27 +41,43 @@
   },
   "id": "gh:1369189958",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@zhang-guo-wen/dsh-drawio",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zhang-guo-wen/dsh-drawio#df09f13f6f73cfd0269ee764f986fef3650042bc",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "@zhang-guo-wen/dsh-drawio",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2ec84f88f68b4ef2cf9f10131823edd6c807b7c63558b49d46217a5fd554f7c8/zhang-guo-wen/dsh-drawio",
-    "description": "Standalone DeepSeek Harness plugin: preview .drawio (mxGraph XML) diagrams in the Web Sidebar. Does not bundle @deepseek-ai/* and does not use the harness build scripts."
+    "description": "Standalone DeepSeek Harness plugin: preview .drawio (mxGraph XML) diagrams in the Web Sidebar.侧边栏预览流程图 .drawio文件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A plugin for DeepSeek Harness (DSH) that previews .drawio files as diagrams in the Web Sidebar: open one from the file tree and it renders as the diagram you drew, instead of opening as mxGraph XML source."
   },
   "schemaVersion": 1,
   "scripts": {

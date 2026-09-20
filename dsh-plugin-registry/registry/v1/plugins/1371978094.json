@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "df773eb980dbc36203046ec208082945cdaa43a2"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1371978094",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-loop-breaker",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:CHIP-PHILO-GH/dsh-loop-breaker#df773eb980dbc36203046ec208082945cdaa43a2",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./core": "./core/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-loop-breaker",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7cdf21d5368fe42aed18207f74729ddaa47e5821f2be995a855389d6cc21a440/CHIP-PHILO-GH/dsh-loop-breaker",
     "description": "DSH 插件：流式复读熔断 —— 在流式输出里边收边判，命中退化复读就地掐断并消毒正文，避免白烧 token。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "只想要“照着做一遍”的封装版本（含安装、配置与排错表），见同名技能包 llm-degeneration-loop-breaker；本仓库是代码本体。"
   },
   "schemaVersion": 1,
   "scripts": {

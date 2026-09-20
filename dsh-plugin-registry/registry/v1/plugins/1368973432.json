@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "08c09324a9959dfd95b22259a00b723dccfef6bd"
   },
   "github": {
@@ -43,27 +43,43 @@
   },
   "id": "gh:1368973432",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-hyper-tools",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:samuelrubiodev/dsh-hyper-tools#08c09324a9959dfd95b22259a00b723dccfef6bd",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cordis.patch.yml": {
+        "default": "./cordis.patch.yml"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-hyper-tools",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e640f07b6317aa164cecb5475d352a0c39274f7be6763642f1ffb2826ee6db39/samuelrubiodev/dsh-hyper-tools",
     "description": "DSH plugin: keeps Charm Hyper model requests under the gateway's 10 MiB body cap by replacing the oldest images (newest survive) and retrying when the gateway rejects the body."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Keeps Charm Hyper model requests under the gateway's strict 10 MiB request-body cap."
   },
   "schemaVersion": 1,
   "scripts": {

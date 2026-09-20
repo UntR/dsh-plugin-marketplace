@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "b7d2e18dbf612d647cfb032dcb1b5cde874b1827"
   },
   "github": {
@@ -43,27 +43,37 @@
   },
   "id": "gh:1369990346",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-steering",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ManoloRemiddi/dsh-steering#b7d2e18dbf612d647cfb032dcb1b5cde874b1827",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./steering": "./steering.mjs"
+    },
+    "main": "index.mjs",
+    "name": "dsh-steering",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2855bdb0118b9548ae81cbe460e5fa4bde9b3d3b6b6797341b1644f57f2b4fd9/ManoloRemiddi/dsh-steering",
     "description": "Responsive steering during model output in DeepSeek Harness; preserves queued follow-ups and running tools."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Make Steer respond during unfinished model output instead of waiting for the complete answer. Ordinary queued prompts still wait their turn. Running tools finish before steering is applied, so they are neither interrupted nor repeated."
   },
   "schemaVersion": 1,
   "scripts": {

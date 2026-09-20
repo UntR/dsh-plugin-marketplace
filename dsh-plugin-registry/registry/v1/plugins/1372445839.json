@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "4e496dfcb93964bf421670cd7b37fc3f36678529"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1372445839",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mcptoon",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:activeing123/dsh-mcptoon#4e496dfcb93964bf421670cd7b37fc3f36678529",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-mcptoon",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/21dd29ca788f85be3f38611db665f7e9259e0e4c6ed472189454a77dd19071a2/activeing123/dsh-mcptoon",
     "description": "DeepSeek Harness bundle: mount mcptoon as an MCP server in one command. Tool discovery 71,929 -> 581 tokens across 255 tools (-99.2%, measured); encoding is lossless."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin bundle that mounts mcptoon as an MCP server in one command, so the host agent discovers its MCP tools through mcptoon's compressed view instead of paying full JSON schemas on every turn."
   },
   "schemaVersion": 1,
   "scripts": {

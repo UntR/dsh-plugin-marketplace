@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "869d22b8186730670b100e4035704e9f1cfd8ce1"
   },
   "github": {
@@ -49,33 +49,44 @@
   },
   "id": "gh:1368466204",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@zhengjunyao/dsh-updater",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "@zhengjunyao/dsh-updater@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@zhengjunyao/dsh-updater",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4264804a7b96b3fb940f0c5a5c63155f31356c831ee3c82b53d9a0dc05d4e633/zhengjy01/dsh-updater",
     "description": "Track DeepSeek Harness's own releases and update in one click: npm dist-tags + GitHub changelog, risk-graded, with an atomic-rename backup and automatic rollback"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Track DeepSeek Harness's own releases and update it in one click. It follows the npm dist-tags (latest / next / alpha) and the GitHub releases (tag dsh-v, bilingual bodies), shows the changelog of every version between the running build and the target plus a graded risk report, t"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

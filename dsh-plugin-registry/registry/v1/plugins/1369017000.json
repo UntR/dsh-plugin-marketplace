@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "35f1ee937ef34d995e69d8ec2f1e4f891781bbd6"
   },
   "github": {
@@ -39,33 +39,43 @@
   },
   "id": "gh:1369017000",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-web-search-searxng",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:n0pe-sled/web-search-searxng#35f1ee937ef34d995e69d8ec2f1e4f891781bbd6",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-web-search-searxng",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c24c5d7f97be9cffe788ae76a49011883d4bc6f4dd74bd939c7720c3a4a5b070/n0pe-sled/web-search-searxng",
     "description": "dsh plugin: SEARXNG-backed web search provider for the dsh web_search tool (host-only, no Settings UI)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A host-only DeepSeek Harness plugin that registers a SEARXNG-backed search provider with the web capability seam (ctx.web). It sits beside the shipped web-search-deepseek, web-search-exa, and web-search-perplexity providers; the model-facing websearch tool stays owned by @deepsee"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

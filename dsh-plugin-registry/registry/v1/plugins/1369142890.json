@@ -5,9 +5,9 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
-    "headSha": "4d707a02cf555d73a9320d65eb16f884cd585ffe"
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
+    "headSha": "121af35bd982fc2db110c1e7c3c7326a6ee104e3"
   },
   "github": {
     "archived": false,
@@ -17,23 +17,23 @@
     "description": "DSH 启动自报账本：web 启动时落一行「本进程加载了哪些插件构建」，判据 lib mtime vs 进程起点，一条命令答全生态「构建是否生效 / 谁需重启」",
     "fork": false,
     "forks": 0,
-    "headSha": "4d707a02cf555d73a9320d65eb16f884cd585ffe",
+    "headSha": "121af35bd982fc2db110c1e7c3c7326a6ee104e3",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOUZt2ag",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b4e36ed510cb560f49a351b326d7c76a2ea42d547ec86be03c7d2c72fc136e87/jonah791/dsh-plugin-bootreport",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/fa3b3afa6bda2755642cd3a862e2b137e790f9cbdc85a80151c673cf368342ce/jonah791/dsh-plugin-bootreport",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/175467022?v=4",
       "login": "jonah791"
     },
-    "pushedAt": "2026-09-14T07:50:00Z",
+    "pushedAt": "2026-09-20T04:03:24Z",
     "slug": "jonah791/dsh-plugin-bootreport",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-14T07:50:03Z",
+    "updatedAt": "2026-09-20T04:03:28Z",
     "url": "https://github.com/jonah791/dsh-plugin-bootreport"
   },
   "id": "gh:1369142890",
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,14 +51,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-bootreport",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b4e36ed510cb560f49a351b326d7c76a2ea42d547ec86be03c7d2c72fc136e87/jonah791/dsh-plugin-bootreport",
+    "coverUrl": "https://opengraph.githubassets.com/fa3b3afa6bda2755642cd3a862e2b137e790f9cbdc85a80151c673cf368342ce/jonah791/dsh-plugin-bootreport",
     "description": "DSH 启动自报账本：web 启动时落一行「本进程加载了哪些插件构建」，判据 lib mtime vs 进程起点，一条命令答全生态「构建是否生效 / 谁需重启」"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 启动自报账本——web 启动时把「本进程加载了哪些插件构建」落一行到 /plugin-boot.jsonl，一条命令判全生态「构建是否生效」（rulebook §5.11 规则 6 的生态级仪器）；含第三方插件档（profile 依赖四形态 + dsh.profile.bundles，§5.23） inject: 'tools' tools: pluginbootstatus runtime: host-onl"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "f38bd9b31e7fc802f1dd149ee132b78847060c42"
   },
   "github": {
@@ -43,27 +43,45 @@
   },
   "id": "gh:1371622031",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-canvas-tsx-sidebar",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-canvas-tsx-sidebar@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-canvas-tsx-sidebar",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1f515e8ed4e7168e0e5183d1e2091a609f242d4d1aed0f0bd8cf33a1d9186699/drscrewdriver/dsh-canvas-tsx-sidebar",
     "description": "DSH 侧边栏插件：把 Qoder Canvas `*.canvas.tsx` 静态解析为结构化报告页，在 dsh-better-sidebar 右侧栏渲染（文件查看器接管 + 页签）。纯静态管线，不执行源码。附 writing-qoder-canvas skill。｜ Render Qoder Canvas `.canvas.tsx` reports in the DSH right sidebar. Static parse only — no code execution."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）Web 插件 —— dsh-better-sidebar 消费插件。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "8f4a3d029b635f66ab1f5a992e229fc810a816a7"
   },
   "github": {
@@ -44,27 +44,45 @@
   },
   "id": "gh:1368181071",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "yammory_system",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:KhalilYamber/yammory-system#8f4a3d029b635f66ab1f5a992e229fc810a816a7",
+    "version": "0.7.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./index.mjs",
+        "types": "./types.d.ts"
+      },
+      "./client": {
+        "default": "./client/client.js",
+        "types": "./client/client.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.mjs",
+    "name": "yammory_system",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/018fa90495604bb414ff69f67cabebe26c18896f2a0a43c2d2b94c1e9ba24e3a/KhalilYamber/yammory-system",
     "description": "Cross-session user-profile memory for DeepSeek Harness: remembers who you are and how much you know, so the agent speaks at your level. Approval-gated, auditable, local SQLite."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Your assistant stops asking you what it should already know."
   },
   "schemaVersion": 1,
   "scripts": {

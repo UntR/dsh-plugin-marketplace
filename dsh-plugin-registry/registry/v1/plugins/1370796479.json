@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "d22dd59ae6ab3ba51e9a3cba186981349485afeb"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1370796479",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "aios-plugin-forma",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:BioAIEvolu/aios-plugin-forma#d22dd59ae6ab3ba51e9a3cba186981349485afeb",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./host.mjs",
+      "./host.mjs": "./host.mjs",
+      "./package.json": "./package.json",
+      "./supervisor.mjs": "./supervisor.mjs",
+      "./worker.mjs": "./worker.mjs"
+    },
+    "main": "./host.mjs",
+    "name": "aios-plugin-forma",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c3c1d60426395cdffd72165428f5f34bb8821c01f257b565b4d752c1b8d4a799/BioAIEvolu/aios-plugin-forma",
     "description": "Self-contained Forma AI plugin for Deepseek harness: bring candidate Python/JS/Go tools from local repos into your AIOS session with auto validation, license review, and tamper protection. DSH 0.1.3+ compatible."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "aios-plugin-forma is the AIOS self-building DSH plugin (Bundle). Given a local source project, it scans the source, identifies reusable capabilities, generates candidate plugins from a reviewed selection, and exports a candidate plugin repository — all through versioned forma DTO"
   },
   "schemaVersion": 1,
   "scripts": {

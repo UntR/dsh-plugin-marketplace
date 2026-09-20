@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "eee1a336605319f4d0c6b5dbc8811f02b6aa0fad"
   },
   "github": {
@@ -45,7 +45,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -55,14 +55,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./model": "./src/model.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-rigor-4",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4e29e1d56372a420aba6566161cce651d5e954bb4002543cc1932f78191eb81c/lishize20040802-rgb/dsh-rigor-4",
     "description": "Rigor 4 community agent plugin for DeepSeek Harness, with portable install and uninstall workflows"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Rigor-4 helps agents turn a request into a reviewable delivery: clarify requirements, compare approaches, plan the work, collect evidence and obtain independent review. It is an independent community plugin for DeepSeek Harness; DSH runs the sessions, models, tools, approvals and"
   },
   "schemaVersion": 1,
   "scripts": {

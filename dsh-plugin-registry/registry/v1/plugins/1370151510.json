@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "fad5988a9371eb580a88f4ae7be2975eedcd9f51"
   },
   "github": {
@@ -45,7 +45,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -55,14 +55,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-tool-reading-map",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2e2ec24c45e82fbbc8051018b801e758056dc4948c01ec7aaf3e9126a5d4baeb/he-yufeng/dsh-tool-reading-map",
     "description": "Repo reading-map tool for DeepSeek Harness: a structured, priority-ranked map of any codebase before the agent edits it"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A readingmap tool plugin for DeepSeek Harness (dsh). Before the agent edits an unfamiliar codebase, give it a structured, priority-ranked map of the repo instead of letting it wander file by file."
   },
   "schemaVersion": 1,
   "scripts": {

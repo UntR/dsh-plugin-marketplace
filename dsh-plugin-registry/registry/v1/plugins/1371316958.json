@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "d239b4d9428ce7e762fca919aae8dafd9d5e5c93"
   },
   "github": {
@@ -50,27 +50,42 @@
   },
   "id": "gh:1371316958",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-colorful-unread-pin-jobs",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-session-colorful-unread-pin-jobs@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-session-colorful-unread-pin-jobs",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7b30cd3b85a90f85aa66782a96554f54c1a458c7aaeefec717fa91377a23153a/enterhalf/dsh-session-colorful-unread-pin-jobs",
     "description": "Colors every session title in the DSH sidebar by state — unread (blue running / green done), pinned (yellow), live background shell jobs (purple) — composed into one gradient; plus a \"Model updated\" sort mode and an unread settings section."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "用颜色一眼看清侧栏每个会话的状态。 会话标题按状态染色：未读（模型运行中＝蓝，已跑完＝绿）、置顶（黄）、有存活后台 shell 任务（紫）；多种状态并存时按「置顶 → 后台 → 未读」的语义顺序合成一条渐变，从左到右完整呈现。颜色由当前主题的品牌色推导，自动适配明暗主题与黑白主题。"
   },
   "schemaVersion": 1,
   "scripts": {

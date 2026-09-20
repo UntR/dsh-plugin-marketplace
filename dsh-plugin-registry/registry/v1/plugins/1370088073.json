@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "fc2fcb7974e60233b97a18c46ba610c0712ed798"
   },
   "github": {
@@ -46,27 +46,43 @@
   },
   "id": "gh:1370088073",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-limit-timeout",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:azazo1/dsh-limit-timeout#fc2fcb7974e60233b97a18c46ba610c0712ed798",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-limit-timeout",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0354092819c24f3fe54c361586a3d016e5863560b6c4ff31475ae5c2d968cf78/azazo1/dsh-limit-timeout",
     "description": "Cap how long one DSH tool call may wait: a global default wait limit in Settings, plus a per-session raise the model can request from the user."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "限制 DSH agent 单次工具调用可以让调用方等待多久: 全局默认上限放在设置界面, 模型需要更长等待时可以在会话中向你申请提升."
   },
   "schemaVersion": 1,
   "scripts": {

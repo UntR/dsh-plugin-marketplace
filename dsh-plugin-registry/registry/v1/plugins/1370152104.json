@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "c116c11fa3d2c7ba5b003a649c1e0803a46107c5"
   },
   "github": {
@@ -45,7 +45,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -55,14 +55,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-tool-radar",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e9e791ec44a5efdb574d11428d10b4c5a6385575c97a820430b44ebc9768d504/he-yufeng/dsh-tool-radar",
     "description": "Repo health radar for DeepSeek Harness: score a GitHub repo's contribution-friendliness from live evidence"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A reporadar tool plugin for DeepSeek Harness (dsh). Before the agent burns a session on an unfamiliar GitHub repo, score its contribution-friendliness from live evidence, not vibes."
   },
   "schemaVersion": 1,
   "scripts": {

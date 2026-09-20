@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "f17ce39fc5564265c53e93dcb44496a9d310f30d"
   },
   "github": {
@@ -51,27 +51,38 @@
   },
   "id": "gh:1368132243",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-image-annotate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:janewas/dsh-image-annotate#f17ce39fc5564265c53e93dcb44496a9d310f30d",
+    "version": "0.4.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-image-annotate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1c05613a4c33c67d8b3a8e8a4a18af759e1bda328a6dc40c7517859b95fb9935/janewas/dsh-image-annotate",
     "description": "Annotate a pending composer image in place (pen / box / arrow / typed text) and insert the PNG back next to the original. Minimal footprint: nothing in DSH UI is restyled, no host routes, no dependencies."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (dsh) web plugin: click a pending image in the composer to annotate it, then insert the annotated copy back as a second attachment. The original stays."
   },
   "schemaVersion": 1,
   "scripts": {

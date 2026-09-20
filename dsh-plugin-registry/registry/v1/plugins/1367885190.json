@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "cc055b30b5c8a9495a2ccfeefc29c2b7cbf68b98"
   },
   "github": {
@@ -42,27 +42,45 @@
   },
   "id": "gh:1367885190",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-restart-button",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:AllenLogo/dsh-restart-button#cc055b30b5c8a9495a2ccfeefc29c2b7cbf68b98",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-restart-button",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6b4eec84465309b2a30ae7ff0314d413b7d8b2c3599d99d9107100a0319171df/AllenLogo/dsh-restart-button",
     "description": "DSH 设置 → General 一键重启按钮:重启宿主进程并自动刷新页面。One-click restart row for the DeepSeek Harness Web GUI (DSH 0.1.5+)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A restart row in Settings → General for the DeepSeek Harness Web GUI: one click restarts the host process that serves the page, then the tab reloads itself once the replacement host answers. No terminal, no systemctl, no hunting for the window that started dsh web."
   },
   "schemaVersion": 1,
   "scripts": {

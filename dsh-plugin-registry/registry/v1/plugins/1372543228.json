@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "4ed01121c139c9a6c981b1cfb4a54d687cb98b49"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1372543228",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-budget-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:erya2000/dsh-session-budget-guard#4ed01121c139c9a6c981b1cfb4a54d687cb98b49",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json",
+      "./rules": {
+        "default": "./lib/rules.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-budget-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/aeeceb8628fc4eaabd129c1310c30201382257e896320ea6cc230acb4e67dd51/erya2000/dsh-session-budget-guard",
     "description": "dsh-session-budget-guard"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A per-session-tree budget and burn-rate circuit breaker for DeepSeek Harness."
   },
   "schemaVersion": 1,
   "scripts": {

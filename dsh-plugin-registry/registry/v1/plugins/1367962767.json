@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "905b02c4cc6cc987b7583be2070eed71d57aa998"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUYl0jw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f0a280260d3937f6ecaef60b95393c873affaea523f3826041de14d40e6b3e6f/minghuo/dsh-github-sync",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/1df7401bb8f0907d47d210e7cf62eb63258a1b2eff0f6a62d230d8319a4932f2/minghuo/dsh-github-sync",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/10399194?v=4",
       "login": "minghuo"
     },
     "pushedAt": "2026-09-13T10:08:13Z",
     "slug": "minghuo/dsh-github-sync",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "backup",
       "cordis",
@@ -43,32 +43,43 @@
       "session",
       "sync"
     ],
-    "updatedAt": "2026-09-13T10:08:15Z",
+    "updatedAt": "2026-09-20T02:23:43Z",
     "url": "https://github.com/minghuo/dsh-github-sync"
   },
   "id": "gh:1367962767",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-github-sync",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:minghuo/dsh-github-sync#905b02c4cc6cc987b7583be2070eed71d57aa998",
+    "version": "0.4.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./client/bundle.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-github-sync",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f0a280260d3937f6ecaef60b95393c873affaea523f3826041de14d40e6b3e6f/minghuo/dsh-github-sync",
+    "coverUrl": "https://opengraph.githubassets.com/1df7401bb8f0907d47d210e7cf62eb63258a1b2eff0f6a62d230d8319a4932f2/minghuo/dsh-github-sync",
     "description": "把 dsh 会话、插件清单与设置备份到私有 GitHub 仓库（纯 REST，无需 git 二进制），每台机器一个独立目录，可在另一台机器按整机 / 工作区 / 单会话恢复。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "用 GitHub 私有仓库在多台机器之间同步 dsh 会话、插件清单与设置。"
   },
   "schemaVersion": 1,
   "scripts": {

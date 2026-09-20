@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "abb49a15b823e2e4452302bb7a67b33f49464599"
   },
   "github": {
@@ -49,27 +49,38 @@
   },
   "id": "gh:1372496712",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-bitwarden",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Jindom/dsh-bitwarden#abb49a15b823e2e4452302bb7a67b33f49464599",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-bitwarden",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ec3aef1c3f62e71d160d7577e473b31ddefb53e5ee32a8f678375b3715341c05/Jindom/dsh-bitwarden",
     "description": "Bitwarden/Vaultwarden credentials in every DSH session: vault tools + proactive prompt guidance + a settings card for the master password."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把自建 Vaultwarden / Bitwarden 接入 DeepSeek Harness：任何新建会话（无论 workspace） 都会自动知道\"密码可以去 Bitwarden 里读\"，无需用户每次提醒；主密码等凭据在 DSH 设置里填一次即可。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "335993a979138a5e3bd1388a8dfbf31cb316ad36"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1369264838",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-schedule-panel",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:MARIOMLY/dsh-schedule-panel#335993a979138a5e3bd1388a8dfbf31cb316ad36",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-schedule-panel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3387bf6dd890d1463ecbfa0c14ec32088ed1de83f8354669d175f99620263ce8/MARIOMLY/dsh-schedule-panel",
     "description": "日程面板——一个可以提醒你的小插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness Web 界面加一个「日程」面板：左侧栏日历 + 主面板月/周/概览视图，并注册一个同名的 schedule 工具，面板与模型工具共用同一份数据。"
   },
   "schemaVersion": 1,
   "scripts": {

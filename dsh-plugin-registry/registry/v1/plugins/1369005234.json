@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "ed259cff61a1b8a3bbf64adb5836b1be7aa2c75f"
   },
   "github": {
@@ -39,33 +39,44 @@
   },
   "id": "gh:1369005234",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-herdr-themes",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:n0pe-sled/herdr-themes#ed259cff61a1b8a3bbf64adb5836b1be7aa2c75f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-herdr-themes",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0ee8476de0774bf7f219b88c9a669e41bb0f9f4730f8d1b8b78a24dfe0fe96a8/n0pe-sled/herdr-themes",
     "description": "dsh plugin: the 18 herdr themes as Settings > Themes with live swatch cards and persistent selection"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Settings → Themes. Adds every theme that ships with herdr (18 built-ins) to the DSH web GUI, and a Themes settings page where each theme shows its real color swatches, previews live on a click, then persists on Use theme. The saved choice re-applies on every reload."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "b648224a4a1bcc2dcc066320ac619b3c2382c5f3"
   },
   "github": {
@@ -44,27 +44,45 @@
   },
   "id": "gh:1370759256",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-qboson-ising-solver",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-qboson-ising-solver@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.js",
+        "types": "./types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./provider-kaiwu": "./src/provider-kaiwu.js",
+      "./runtime-manager": "./src/runtime-manager.js",
+      "./service": "./src/service.js",
+      "./tool": "./src/tool.js"
+    },
+    "main": "./src/index.js",
+    "name": "dsh-qboson-ising-solver",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9ef63a278f23f90eb780174b0c9af7c85b6ce9104c283fab624df6273bc273b0/DYF-zs/dsh-qboson-ising-solver",
     "description": "A DeepSeek Harness Agent Tool for solving Ising problems with QBoson Kaiwu/SPQC."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-qboson-ising-solver 为 DeepSeek Harness 提供 solveising Tool，使用 Kaiwu SDK 的 CIMOptimizer 将已完成建模的 Ising Matrix 提交到 QBoson SPQC，并返回 spin solutions、Hamiltonian、求解耗时与任务标识。"
   },
   "schemaVersion": 1,
   "scripts": {

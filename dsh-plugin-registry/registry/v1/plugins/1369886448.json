@@ -5,9 +5,9 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
-    "headSha": "45402e7bd6be530ecb5fe5731acad42020375743"
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
+    "headSha": "5b1167555464d504965afabeb9f3999c53662fd4"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,17 @@
     "description": "DSH 多实例通讯底座：文件总线 + 在线名册 + 点对点/广播 + 收件箱 + 会话注入（多智能体工作台的 L0 层）",
     "fork": false,
     "forks": 0,
-    "headSha": "45402e7bd6be530ecb5fe5731acad42020375743",
+    "headSha": "5b1167555464d504965afabeb9f3999c53662fd4",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOUabO8A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/dba47f1be0d2c1454f173cc628b0d274faa052dc81b263082f3a297fe9b232c1/jonah791/dsh-agent-cluster",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/78d64e08817f2a83f1579e9dcf2bc22e5fe2a077daf271f715f7365f2ae87f46/jonah791/dsh-agent-cluster",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/175467022?v=4",
       "login": "jonah791"
     },
-    "pushedAt": "2026-09-15T07:04:10Z",
+    "pushedAt": "2026-09-20T04:00:33Z",
     "slug": "jonah791/dsh-agent-cluster",
     "stars": 0,
     "topics": [
@@ -36,7 +36,7 @@
       "file-bus",
       "multi-agent"
     ],
-    "updatedAt": "2026-09-15T07:04:14Z",
+    "updatedAt": "2026-09-20T04:00:37Z",
     "url": "https://github.com/jonah791/dsh-agent-cluster"
   },
   "id": "gh:1369886448",
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-agent-cluster",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/dba47f1be0d2c1454f173cc628b0d274faa052dc81b263082f3a297fe9b232c1/jonah791/dsh-agent-cluster",
+    "coverUrl": "https://opengraph.githubassets.com/78d64e08817f2a83f1579e9dcf2bc22e5fe2a077daf271f715f7365f2ae87f46/jonah791/dsh-agent-cluster",
     "description": "DSH 多实例通讯底座：文件总线 + 在线名册 + 点对点/广播 + 收件箱 + 会话注入（多智能体工作台的 L0 层）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- purpose: 多 DSH 实例之间的文件总线通讯底座（身份 / 名册 / 点对点 / 广播 / 收件箱 / 会话注入） inject: 无（不依赖宿主 service，只用 fs 与 logger） tools: clusterstatus / clusternodes / clustersend / clusterbroadcast / clusterinbox runtime: DSH 插件（host 形态）；Node 20+ envDeps: 无（文件系统即传输层；无端口、无凭据、无中央进程） boundary: 总线不是安全边界（同"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
-    "headSha": "9b7aff73b2dde17e17e61c8f6669c3e15a613113"
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
+    "headSha": "8c9abd7c57097da2a126d0f4a4e78f9537cf57b5"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Session memory archive + prompt viewer for DeepSeek Harness: read back what compaction folded away, and inspect the prompt each turn actually sent.",
     "fork": false,
     "forks": 0,
-    "headSha": "9b7aff73b2dde17e17e61c8f6669c3e15a613113",
+    "headSha": "8c9abd7c57097da2a126d0f4a4e78f9537cf57b5",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,43 +25,54 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOUaeG3A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/696660ee65791aab3162a0ac81d190f7c07d81ab8d13868d1d1e7076fb1944f0/vv5v5/dsh-memory-archive",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7a0140cb4cde9a1128742aa3475a4c3328e4becc154dce80d8508dfcc2f107b1/vv5v5/dsh-memory-archive",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/328018074?v=4",
       "login": "vv5v5"
     },
-    "pushedAt": "2026-09-17T13:06:59Z",
+    "pushedAt": "2026-09-20T08:23:35Z",
     "slug": "vv5v5/dsh-memory-archive",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-17T13:07:02Z",
+    "updatedAt": "2026-09-20T08:23:39Z",
     "url": "https://github.com/vv5v5/dsh-memory-archive"
   },
   "id": "gh:1369933532",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-memory-archive",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vv5v5/dsh-memory-archive#8c9abd7c57097da2a126d0f4a4e78f9537cf57b5",
+    "version": "0.5.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-memory-archive",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/696660ee65791aab3162a0ac81d190f7c07d81ab8d13868d1d1e7076fb1944f0/vv5v5/dsh-memory-archive",
+    "coverUrl": "https://opengraph.githubassets.com/7a0140cb4cde9a1128742aa3475a4c3328e4becc154dce80d8508dfcc2f107b1/vv5v5/dsh-memory-archive",
     "description": "Session memory archive + prompt viewer for DeepSeek Harness: read back what compaction folded away, and inspect the prompt each turn actually sent."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的上下文压缩（compaction-basic）本来就在把旧内容折叠出模型可见面。 本插件不重写压缩、不重写摘要、不建第二份存储、不改 DSH 本体一行，只补三件事："
   },
   "schemaVersion": 1,
   "scripts": {

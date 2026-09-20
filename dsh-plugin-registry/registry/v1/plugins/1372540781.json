@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "9e9875b5836c1f68910bf9551a55f4cac7f418d8"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1372540781",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-global-context",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ZZJQ678/dsh-global-context#9e9875b5836c1f68910bf9551a55f4cac7f418d8",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-global-context",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4133b15868468b9ccd940eda87453eba1a89a37647084fa8d9cf75fa0e659c73/ZZJQ678/dsh-global-context",
-    "description": "Global context for DeepSeek Harness: injects a custom prompt at the very top of every session system prompt, with a Global Context tab in the conversation view to edit it live."
+    "description": "全局提示词配置：在对话视图新增一个标签页，写进去的内容会加在每个会话系统提示词的最前面，保存后下一条消息即生效。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "装上以后，对话视图里会多出一个「全局提示词配置」标签页。写进去的内容会加在每个会话系统提示词的最前面，保存后下一条消息就生效，不用重启。"
   },
   "schemaVersion": 1,
   "scripts": {

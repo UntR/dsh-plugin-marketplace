@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "44d12f42c29aff979e632905cbde9f925305d123"
   },
   "github": {
@@ -41,33 +41,46 @@
   },
   "id": "gh:1368475030",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@dsh-ops/dsh-sims-agent",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:cardclown/dsh-sims-agent#44d12f42c29aff979e632905cbde9f925305d123",
+    "version": "0.1.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host.mjs",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./settings-rpc": "./src/settings-rpc.mjs",
+      "./tool": "./src/tool.mjs"
+    },
+    "main": "./src/host.mjs",
+    "name": "@dsh-ops/dsh-sims-agent",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0907718aa905eb7d231b4d310cabc0480ed77e5f21cada01edfab5d4096cbdd2/cardclown/dsh-sims-agent",
     "description": "DSH SIMS 单工具助手：连接配置、凭据管理与用户模板（开发候选）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "@dsh-ops/dsh-sims-agent@0.1.3 开发候选：一个 DSH Bundle、一个 sims 模型工具。当前实现连接配置、凭据管理和真实账号检查；已接入用户模板显式管理；尚未完成市场交付，请勿作为正式市场版本发布。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

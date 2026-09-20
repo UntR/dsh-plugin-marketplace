@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "ebc6eaa2e7d9019ab568943f1d5d2f6c4a690429"
   },
   "github": {
@@ -43,33 +43,44 @@
   },
   "id": "gh:1372400521",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-jenkins-panel",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:developerdh/dsh-jenkins-panel#ebc6eaa2e7d9019ab568943f1d5d2f6c4a690429",
+    "version": "0.1.0-rc.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0-rc.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-jenkins-panel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-rc.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e32afbc56c1e5883d1bb166c472da76054a19e7441cfd29571adc41d611fba92/developerdh/dsh-jenkins-panel",
     "description": "向dsh中集成Jenkins相关工具和面板，支持在dsh直接触发构建任务、查询日志、通过面板查看jenkins任务构建状态、实时日志跟踪等相关操作。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Jenkins CI/CD integration plugin for DeepSeek Harness (dsh)：让 dsh 里的 AI 直接触发、跟踪、排查 Jenkins 构建，并提供一个官方右侧栏可视化面板。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "7d6c0013cb4538efad76769e77ee1d4c7ae1d35e"
   },
   "github": {
@@ -46,27 +46,43 @@
   },
   "id": "gh:1368738090",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cost-stats",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:thezavtrak-a11y/dsh-cost-stats#7d6c0013cb4538efad76769e77ee1d4c7ae1d35e",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-cost-stats",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2973d87152830182bb142d6502abdb8bc6371ec609cd947b88727a93b818ebc4/thezavtrak-a11y/dsh-cost-stats",
     "description": "Money on the screen for the DeepSeek Harness web GUI: per-turn USD cost in the chat, a Cost tab with charts, ratings and an interactive spend timeline, and a local price table you control."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Money on the screen for the DeepSeek Harness web GUI: a cost pill under every completed turn, and a Cost tab next to the chat and trajectory views with charts, ratings and an interactive timeline. DSH reports tokens and never a monetary amount, so this plugin does the arithmetic "
   },
   "schemaVersion": 1,
   "scripts": {

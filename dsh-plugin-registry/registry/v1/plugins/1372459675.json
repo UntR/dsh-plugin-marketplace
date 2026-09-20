@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "65fc19fb332606cc16b72258377a469d5942cfc2"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1372459675",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-ollama-usage",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:CJ-SH/dsh-plugin-ollama-usage#65fc19fb332606cc16b72258377a469d5942cfc2",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-ollama-usage",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/17492054c453b415ca92541641da805e3fd18670896ab21883755d9871685a03/CJ-SH/dsh-plugin-ollama-usage",
     "description": "Ollama Cloud account usage for the dsh web chat: composer dock panel, hero panel, and a Plugin configuration card."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 dsh 的 Web 对话页显示 Ollama Cloud 账户用量 （5 小时滚动窗口 / 每周），并在「设置 → 插件 → 插件配置」里提供一个完整的配置卡片。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "3e4433095da63f9f637a38aded84a861542b9f09"
   },
   "github": {
@@ -50,27 +50,38 @@
   },
   "id": "gh:1368712241",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-reattach",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-session-reattach@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-reattach",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0738381a7795b4dd29540697312e2eef98f66a5c7e372e550fbd3f9a2cabb614/cnkids/dsh-session-reattach",
     "description": "DSH 宿主插件：把游离（未分组）会话按 cwd 归位到匹配的工作区 —— 只改工作区归属记录，不碰会话文件；支持拖拽与 /reattach 命令（默认 dry-run）｜ DSH host plugin: re-attach ungrouped sessions to their matching workspace by cwd — ownership bookkeeping only, never rewriting session logs"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "🌏 English · 中文"
   },
   "schemaVersion": 1,
   "scripts": {

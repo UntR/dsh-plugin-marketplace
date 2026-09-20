@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "30e88053f418a34118e4d3ded95e5ff7567ca5d2"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1368380843",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-browser",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:TEGONG00/dsh-plugin-browser#30e88053f418a34118e4d3ded95e5ff7567ca5d2",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-browser",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/76f062c2b7001594202e4da8133523ddafa713a32012c7c8d287728a5cce9376/TEGONG00/dsh-plugin-browser",
     "description": "Built-in browser panel for the DeepSeek Harness web client: live screencast, element picker → composer attachments, Playwright-driven model tools"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness (dsh) Web 客户端加一个内置浏览器面板：右侧栏实时显示 Playwright Chromium 的画面，可以导航、点击、输入；开启「选择元素」后点击页面元素，元素截图 + 结构化信息会作为附件挂到输入框，补充需求后发送给模型。同时注册一组浏览器操作工具，让模型能自主打开页面、截图验收代码修改。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "8a879d39cb01be3a75c8ae1d8bf41952d258d83f"
   },
   "github": {
@@ -45,27 +45,41 @@
   },
   "id": "gh:1371746469",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tool-manager",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-tool-manager@1.2.7",
+    "version": "1.2.7"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.2.7",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": "./dist/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-tool-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.7"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6536d1ea6b961fc8d5b0433c0367e6378968a1151aee97df3dd292becc5bcfd4/pan17/dsh-tool-manager",
     "description": "DSH 工具管理插件：按 Agent Preset 开关和分组工具，像 Skill 一样按需加载工具，减少模型上下文占用。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个简单好用的 DeepSeek Harness（DSH）工具管理插件。"
   },
   "schemaVersion": 1,
   "scripts": {

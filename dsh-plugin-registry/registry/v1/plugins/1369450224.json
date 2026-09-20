@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "00a9a2875d83a1bde50f21ca76d30b1c42f63587"
   },
   "github": {
@@ -44,27 +44,56 @@
   },
   "id": "gh:1369450224",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-runninghub-api",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-runninghub-api@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/typert.host.d.ts"
+      },
+      "./types": {
+        "default": "./lib/types.js",
+        "types": "./lib/types.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-runninghub-api",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0f563b281624c31a9f7feea36f186bb85dbb942362ff7ba49c5cd3e0774124a0/lucyTrump/dsh-runninghub-api",
     "description": "A plugin that integrates runninghub cloud ComfyUI workflows: a settings card for your API key and workflow library, seven `runninghub_*` tools for agents, a sha256 media upload cache, a local concurrency gate with FIFO queueing and timeouts, background tasks with completion notif"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) plugin that integrates RunningHub cloud ComfyUI workflows: a settings card for your API key and workflow library, eight runninghub tools for agents, a sha256 media upload cache, a local concurrency gate with FIFO queueing and timeouts, background tasks wi"
   },
   "schemaVersion": 1,
   "scripts": {

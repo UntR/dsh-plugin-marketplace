@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "1fcf43ccbedd6e66370b7fb81df2b4dd0ef2604e"
   },
   "github": {
@@ -45,33 +45,63 @@
   },
   "id": "gh:1368560041",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-better-sidebar",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:drscrewdriver/DSH-better-sidebar#1fcf43ccbedd6e66370b7fb81df2b4dd0ef2604e",
+    "version": "0.19.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.19.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./client/api": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/service.d.ts"
+      },
+      "./client/service": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/service.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-better-sidebar",
+    "status": "valid",
+    "type": "module",
+    "version": "0.19.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9687c6c5ae17c905e244dddca52e603cdec73a9d921d76571ef1b1ffd17849c6/drscrewdriver/DSH-better-sidebar",
     "description": "开放的侧边栏底座，支持三方拓展注册新侧边栏页面。内置文件渲染编辑/终端/侧边对话/Git/子代理页面 ｜ Open sidebar foundation, supports third-party extensions to register new sidebar pages. Built-in file rendering/editing, terminal, side chat, Git, and sub-agent pages."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个服务化的侧边栏框架，一套开箱即用的完整工作台"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

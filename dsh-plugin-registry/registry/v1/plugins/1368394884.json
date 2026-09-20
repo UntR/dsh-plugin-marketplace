@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "0819b1529e49ec32bc3b0ff36453c31c2a0ae4cf"
   },
   "github": {
@@ -38,27 +38,41 @@
   },
   "id": "gh:1368394884",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-llm-config",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:EmotionG/dsh-llm-config#0819b1529e49ec32bc3b0ff36453c31c2a0ae4cf",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-llm-config",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b016feda433bb8ea3116a6d142de3109694605ec0dbe783e1c6f26973772f280/EmotionG/dsh-llm-config",
     "description": "为解决dsh导入订阅后配置模型的思考强度等问题而创建的插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的多供应商模型配置插件。每个供应商独立配置接口地址、密钥与模型参数，支持 OpenAI Chat、OpenAI Responses、Anthropic Messages 与 Google Gemini。"
   },
   "schemaVersion": 1,
   "scripts": {

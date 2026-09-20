@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "f03f5c46d0d62ea004b5aeeb4d5f9b2b4bf828c5"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1369829740",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-h3-hip",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:alexhegit/dsh-plugin-h3-hip#f03f5c46d0d62ea004b5aeeb4d5f9b2b4bf828c5",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-h3-hip",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e8fa7ad72a876b9ac4d640aba62742a883be293a38036c9451592789c7849859/alexhegit/dsh-plugin-h3-hip",
     "description": "DeepSeek Harness Host plugin for h3-hip.c (--serve, protocol v1alpha)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness Host bundle for h3-hip.c (h3 --serve, protocol v1alpha). Independent from the HIP tree so the plugin can track DSH preview breakage without an engine release."
   },
   "schemaVersion": 1,
   "scripts": {

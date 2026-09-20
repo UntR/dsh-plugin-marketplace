@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "5466b48c9b01b549fed3343ad451498cf09cf89d"
   },
   "github": {
@@ -47,27 +47,43 @@
   },
   "id": "gh:1371865069",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-brief",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dangxinxing090-svg/dsh-plugin-brief#5466b48c9b01b549fed3343ad451498cf09cf89d",
+    "version": "0.5.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-brief",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8d542c430eb0fd340d464d663dc3fccb608df80117359b4ceeeda09e8f07761e/dangxinxing090-svg/dsh-plugin-brief",
     "description": "A DeepSeek Harness plugin that turns each agent reply into a short slide deck in plain language — for people who use the harness but do not read code."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "The agent still writes whatever it writes. This plugin gives you a second way to read it: every reply is re-shown as a few slides — conclusion first, then a few steps, then any question the agent is waiting on you to answer. The original text is always one click away, and the pla"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "512538ebe904fdc3dd1b005f7b2cf226536a5a6b"
   },
   "github": {
@@ -46,27 +46,44 @@
   },
   "id": "gh:1369367319",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-improve-prompt",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-improve-prompt@0.7.1",
+    "version": "0.7.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.7.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-improve-prompt",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a2c3249442de290f4fa01fc49468f9399b1df729033ddb931d6ff71c998e4587/hoyyang/dsh-improve-prompt",
     "description": "输入框一键增强提示词：直接替换 + 一键撤回，带保真闸（硬事实零丢失）与长度闸（防膨胀）。DSH plugin."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "输入框里那颗 ✦ 按钮，点一下把你的草稿改写成 Agent 真能照着做的提示词——直接替换，可撤回，而且保证不丢东西。"
   },
   "schemaVersion": 1,
   "scripts": {

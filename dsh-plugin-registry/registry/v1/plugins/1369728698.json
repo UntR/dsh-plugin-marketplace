@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "aced092431213ab601c47948860c0766946151e0"
   },
   "github": {
@@ -46,33 +46,65 @@
   },
   "id": "gh:1369728698",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-tic80",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:NoodleStormno/dsh-plugin-tic80#aced092431213ab601c47948860c0766946151e0",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./core": {
+        "import": "./lib/core/index.js",
+        "types": "./lib/core/index.d.ts"
+      },
+      "./prompts": {
+        "import": "./lib/prompts/index.js",
+        "types": "./lib/prompts/index.d.ts"
+      },
+      "./runner": {
+        "import": "./lib/runner/index.js",
+        "types": "./lib/runner/index.d.ts"
+      },
+      "./templates": {
+        "import": "./lib/templates/index.js",
+        "types": "./lib/templates/index.d.ts"
+      },
+      "./tools": {
+        "import": "./lib/tools/index.js",
+        "types": "./lib/tools/index.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-tic80",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8e49742b737d04c773d45e38282c2062b2b03dbf25b32bd167bcdef3783efa1e/NoodleStormno/dsh-plugin-tic80",
     "description": "DeepSeek Harness (dsh) plugin for TIC-80 fantasy console: full console capabilities, conversational code, music, map, and sprite generation by LLM, with native & live web execution."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-plugin-tic80 is a full-featured TIC-80 fantasy computer plugin engineered specifically for DeepSeek Harness (dsh). Explore more ecosystem plugins under the dsh-plugin topic."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

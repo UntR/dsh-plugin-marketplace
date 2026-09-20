@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "303a819bbac4819ea13d2548c4c80f8484dd2512"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1371386329",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tool-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Tisitan/dsh-tool-guard#303a819bbac4819ea13d2548c4c80f8484dd2512",
+    "version": "0.1.0-tisitan.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./dist/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-tool-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-tisitan.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/65e1046f8819e5cd9f88e45bb5dac2b5856ab472b1cb9625522d55b1731f9f94/Tisitan/dsh-tool-guard",
     "description": "Preset-agnostic global tool masking for DeepSeek Harness — presentation-layer filtering, execution-layer guard veto, self-protection gate and a WebUI editor."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "preset 无关的宿主平面工具屏蔽插件：不绑定任何 preset，在统一的插件层按规则拦下不该被模型看见或调用的工具。"
   },
   "schemaVersion": 1,
   "scripts": {

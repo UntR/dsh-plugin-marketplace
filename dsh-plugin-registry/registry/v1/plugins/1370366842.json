@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "dd12b21309e691bdc7d07e13ad7081a8d0c276e5"
   },
   "github": {
@@ -42,27 +42,42 @@
   },
   "id": "gh:1370366842",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "git-for-dsh",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "git-for-dsh@0.0.6",
+    "version": "0.0.6"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.6",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "git-for-dsh",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c74070156ae53c29743dc106744985069dea810e752ee943ff99b8bf1f844b3a/theRMM714/git-for-dsh",
     "description": "deepseek harness的git工具"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness 插件：让 AI 能在文件沙箱之外执行 git 命令，同时由用户自己勾选「允许哪些 git 子命令」。"
   },
   "schemaVersion": 1,
   "scripts": {

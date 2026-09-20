@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "236ce0a03e1a41420ce6ee4deb4988d366f87170"
   },
   "github": {
@@ -44,33 +44,44 @@
   },
   "id": "gh:1370993477",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-left-panel",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-left-panel@0.2.5",
+    "version": "0.2.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.5",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-left-panel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/af13932ad6858df26c98d6957dbac0e323cf0cc40782f6edbd6cc15798ba1894/trynewthin/dsh-left-panel",
     "description": "Git worktree-aware workspace browser for the DeepSeek Harness Web sidebar: repositories group their worktrees, and worktree workspaces are registered and unregistered automatically."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）Web 侧边栏的 git 多工作树（worktree）增强：把左侧边栏的工作区列表重组为项目（git 仓库，仅分组）→ worktree（真实工作区，可开会话）的两层结构，并自动跟随 git worktree 的增删注册/注销工作区。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

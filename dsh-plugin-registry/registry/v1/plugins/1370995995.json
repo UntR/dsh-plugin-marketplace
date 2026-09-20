@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "73abe2c05422694b81beee2f282aab647459b812"
   },
   "github": {
@@ -16,7 +16,7 @@
     "defaultBranch": "main",
     "description": "Use a WorkBuddy subscription as a model provider in DSH: supervises the local OpenAI-compatible gateway and manages it from the settings page.",
     "fork": false,
-    "forks": 0,
+    "forks": 1,
     "headSha": "73abe2c05422694b81beee2f282aab647459b812",
     "homepageUrl": "https://github.com/Acoder416/dsh-plugin-workbuddy-gateway#readme",
     "language": "JavaScript",
@@ -45,27 +45,38 @@
   },
   "id": "gh:1370995995",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-workbuddy-gateway",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Acoder416/dsh-plugin-workbuddy-gateway#73abe2c05422694b81beee2f282aab647459b812",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./src/client/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/index.js",
+    "name": "dsh-plugin-workbuddy-gateway",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/56e4ddf07b54df2ed05212ac39ef9ab537586ae7ae4fcfabd9536838084cde9d/Acoder416/dsh-plugin-workbuddy-gateway",
     "description": "Use a WorkBuddy subscription as a model provider in DSH: supervises the local OpenAI-compatible gateway and manages it from the settings page."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 的设置页管理 WorkBuddy 账号、本地网关和模型路由。网关将 WorkBuddy 国际版或国内版的订阅接口转换为 OpenAI 兼容接口，供 DSH 使用。"
   },
   "schemaVersion": 1,
   "scripts": {

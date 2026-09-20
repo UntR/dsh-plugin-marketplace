@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "5d1d14b28110a3731eca48b68ecc7ff008a03b7d"
   },
   "github": {
@@ -45,33 +45,44 @@
   },
   "id": "gh:1370121067",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-cmdk",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:ivanearisty/dsh-plugin-cmdk#5d1d14b28110a3731eca48b68ecc7ff008a03b7d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-cmdk",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9b80a2ae2e0c3236dcad4ccb7b07ef90065296ecd6e41885235bd26a87146084/ivanearisty/dsh-plugin-cmdk",
     "description": "Command palette for DeepSeek Harness (Cmd+K) — new chat, jump to session, switch model, permissions, slash commands, settings, all from one fuzzy bar"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A command palette for DeepSeek Harness. Press ⌘K (Ctrl+K), type a few letters, hit enter — new chat, jump to a session, switch model, change permissions, run a slash command, flip the theme, open any settings page."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

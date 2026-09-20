@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "c197898b8bf913c346bfa02dc3820c87e938978e"
   },
   "github": {
@@ -45,27 +45,44 @@
   },
   "id": "gh:1368967980",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-better-display",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:daha1216/dsh-better-display#c197898b8bf913c346bfa02dc3820c87e938978e",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/dsh-better-display.js",
+        "types": "./lib/types/dsh-better-display.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/dsh-better-display.js",
+    "name": "dsh-better-display",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/32ae417a22ff4908f1b441d255697226b86d1ac52e00cc96eb24367c0e318865/daha1216/dsh-better-display",
     "description": "DeepSeek Harness 沉浸式阅读视图（fork）：执行步骤自动折叠 + MCP-App 交互沙箱，深度适配 dsh-retrace 撤回/重发节点展示"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "执行时展示过程，完成后自动收起繁杂步骤，仅保留清晰的最终回答；原生支持生成式 MCP-App 交互沙箱卡片，并深度适配 dsh-retrace 会话回溯节点展示。"
   },
   "schemaVersion": 1,
   "scripts": {

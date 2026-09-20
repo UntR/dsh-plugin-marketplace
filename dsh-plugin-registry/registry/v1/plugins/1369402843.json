@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "be6ed35e64789e3126b9ee1076c6ac5217060c6e"
   },
   "github": {
@@ -44,27 +44,40 @@
   },
   "id": "gh:1369402843",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-prellm-router",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:sra-research/self-evolving-router-dsh#be6ed35e64789e3126b9ee1076c6ac5217060c6e",
+    "version": "0.1.0-alpha.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./core": "./lib/runtime.js",
+      "./package.json": "./package.json",
+      "./v2": "./lib/v2/core.js"
+    },
+    "main": "./index.js",
+    "name": "dsh-prellm-router",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-alpha.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/51021951132844735bd992c0f905994b94c8e5bad9a4336e4654e1b40f6bf2df/sra-research/self-evolving-router-dsh",
     "description": "Self-evolving deterministic rule objects before DeepSeek Harness model calls"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Run deterministic programs before DeepSeek Harness calls a model. Unsupported, ambiguous or failed requests fall back to the base agent. The agent can use permitted work trajectories to edit, test and persistently publish these programs."
   },
   "schemaVersion": 1,
   "scripts": {

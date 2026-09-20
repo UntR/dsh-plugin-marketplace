@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "c377f72f2fec61e70f92036b7013a70b7b7dd6ca"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1372801409",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-llm-motomoto",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:HandsYe/dsh-llm-motomoto#c377f72f2fec61e70f92036b7013a70b7b7dd6ca",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-llm-motomoto",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/32056797f01d4286258039c105026bd608d0367550bec351acb8df5d5a10bb83/HandsYe/dsh-llm-motomoto",
     "description": "DeepSeek Harness bundle for MotoMoto's OpenAI-compatible endpoint: pi-ai provider route + Settings status card"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness bundle that adds MotoMoto to the model selector through the built-in llm-pi-ai adapter, plus a status card in Settings - Plugins modelled on the AgentRouter bundle."
   },
   "schemaVersion": 1,
   "scripts": {

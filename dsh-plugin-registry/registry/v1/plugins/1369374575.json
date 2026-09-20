@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "5259038cb03394d47b3e7dc25ec039c17789f568"
   },
   "github": {
@@ -43,27 +43,42 @@
   },
   "id": "gh:1369374575",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-optimize",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:aoripus/dsh-optimize#5259038cb03394d47b3e7dc25ec039c17789f568",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-optimize",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0d19c6c380a59cd76782793068fc4db52f4dd8b17e1625a6273198a6351d3d68/aoripus/dsh-optimize",
     "description": "Long-session resource control for DeepSeek Harness: measures the context every request carries, warns at configurable thresholds, can run the harness compaction engine over budget, and contains offscreen chat rows behind a toggle."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Long-session resource governor for DeepSeek Harness."
   },
   "schemaVersion": 1,
   "scripts": {

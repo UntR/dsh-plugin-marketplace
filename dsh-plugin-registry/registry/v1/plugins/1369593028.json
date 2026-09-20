@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "b5570650d0f103b5a65cb878f9a7c9936c86e0a4"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,47 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./maintenance": {
+        "default": "./lib/maintenance.js",
+        "types": "./lib/types/maintenance/consumer.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/typert.host.d.ts"
+      },
+      "./types": {
+        "default": "./lib/types/types.js",
+        "types": "./lib/types/types.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-missher-enhance",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-rc.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c0d11f84752ce1186b8f5ac9365eb0d8d94cbfebc0a2d189f6f6b127a57e7791/Missher12/dsh-missher-enhance",
     "description": "Independent enhancement bundle for DeepSeek Harness: usage, sessions, model helpers, documents and piano navigation."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Enhance adds usage statistics, a highlighted two-line footer, piano navigation, projectless sessions, model helpers, personalization, document workflows and cross-session messaging to official DeepSeek Harness. It remains an independent plugin even when supplied with Desktop."
   },
   "schemaVersion": 1,
   "scripts": {

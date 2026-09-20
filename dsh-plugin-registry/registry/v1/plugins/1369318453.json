@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "7d50f26be6728280794059e92cb8dc981c1d39e7"
   },
   "github": {
@@ -41,27 +41,42 @@
   },
   "id": "gh:1369318453",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-farm-dispatch",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:sangning-h/dsh-farm-dispatch#7d50f26be6728280794059e92cb8dc981c1d39e7",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./instructions/*": "./instructions/*",
+      "./package.json": "./package.json",
+      "./presets/*": "./presets/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-farm-dispatch",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ffb3be63c6c8571f009fe3c87966d8b46da499ab3fda8c9e1f1f97b642da07d0/sangning-h/dsh-farm-dispatch",
     "description": "子代理派发规范（吝啬农场主模式）全局化插件 for DeepSeek Harness — syncs cordis-async preset + AGENTS.md dispatch rules. dsh plugin add ready."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把「子代理派发规范」做成 DSH 官方插件生态的标准分发包：装完插件，所有带 agent-instructions 的预设（标准/PTC/创造/创造·异步派发等）自动遵守全局派发规范， 并且提供 cordis-async（创造模式·异步派发）预设随包同步到 roster。"
   },
   "schemaVersion": 1,
   "scripts": {

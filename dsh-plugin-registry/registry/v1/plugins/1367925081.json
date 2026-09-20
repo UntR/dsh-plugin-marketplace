@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "52747b792b6602ccdd3d95a0b951ca3a21a3b70d"
   },
   "github": {
@@ -45,33 +45,45 @@
   },
   "id": "gh:1367925081",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-wemedia-workbench",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:Harzva/dsh-wemedia-workbench#52747b792b6602ccdd3d95a0b951ca3a21a3b70d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./typert": "./lib/typert.host.js"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-wemedia-workbench",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f555729d5f77c68d4781c390e90bc7fdf19a9fabc0b6647ef64ee6df21b27af4/Harzva/dsh-wemedia-workbench",
     "description": "Local-first media workbench for DeepSeek Harness: AI-assisted workflows, revision-bound reviews, native approvals and persistent jobs."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "面向 DeepSeek Harness 的本地优先自媒体工作台：AI 整理内容，工作台管理修订、审阅证据、审批与渠道任务。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

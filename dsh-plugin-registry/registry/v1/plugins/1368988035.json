@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "550fe19e564c52184664d2ce44c30653ed3cf430"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1368988035",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-orchestrator",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Meaple-SFKY/dsh-model-orchestrator#550fe19e564c52184664d2ce44c30653ed3cf430",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./compatibility.json": "./compatibility.json",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-model-orchestrator",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7c0b039b08e0300bcfbf414a4400056145f29c64c2b7445300007f00e763ebc5/Meaple-SFKY/dsh-model-orchestrator",
     "description": "Model routing for DeepSeek Harness, with a standing capability-to-model assignment table, per-route reasoning levels, and a user-triggered sync that researches public model prices. 为 DeepSeek Harness 提供模型路由：可持久化的「能力→模型」分工表、按路由的推理档位，以及手动触发、由模型联网核对公开价格的同步。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A generic Model Orchestrator for the DeepSeek Harness. It discovers the models the running harness actually has, works out what each one is evidenced to be good at, and routes each unit of work to the best available one — so you never have to decide which task goes to which model"
   },
   "schemaVersion": 1,
   "scripts": {

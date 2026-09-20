@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "0b17d11b161f230bd786c530d6b80543c4a174b0"
   },
   "github": {
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-imgnav",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/954fa66398e38bab879c0acd991559009fb72ad8b34ffd9134912dce597083a5/fuguier001/dsh-imgnav",
     "description": "Click-to-zoom lightbox with arrow-key paging for DSH conversation images: ← prev / → next / Esc close, edge hints"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "对话内图片的点击放大 + 键盘翻页 lightbox（DSH web 插件）。"
   },
   "schemaVersion": 1,
   "scripts": {

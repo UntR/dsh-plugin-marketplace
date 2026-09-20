@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "a2be1f119c96e7b9bde4d982671396e77ef84299"
   },
   "github": {
@@ -44,27 +44,43 @@
   },
   "id": "gh:1373100380",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-prompt-toolkit",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Ethereal-ljq/dsh-prompt-toolkit#a2be1f119c96e7b9bde4d982671396e77ef84299",
+    "version": "0.4.0-beta.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/host/plugin.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/host/plugin.js",
+    "name": "@dsh-external/dsh-prompt-toolkit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0-beta.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/28a5beec2d93be9fc8b9ec7cb99c4d904218157f4c9c191e2570ef77094a0310/Ethereal-ljq/dsh-prompt-toolkit",
     "description": "DSH Web 提示词工作台：把输入框里的草稿优化成一条可直接执行的命令（引擎 fork 自 WestFox-AwA/dsh-prompt-optimizer，BSD-3-Clause，署名保留）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Web 的提示词工作台：把输入框里的草稿按所选档位整理成一条可直接执行的命令。"
   },
   "schemaVersion": 1,
   "scripts": {

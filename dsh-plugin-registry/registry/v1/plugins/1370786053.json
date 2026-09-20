@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "f006ab0f82563cf215d29135029eb9c53e0d7c39"
   },
   "github": {
@@ -43,27 +43,41 @@
   },
   "id": "gh:1370786053",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-cascade",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Xstone1129/dsh-model-search#f006ab0f82563cf215d29135029eb9c53e0d7c39",
+    "version": "1.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-model-cascade",
+    "status": "valid",
+    "type": "module",
+    "version": "1.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1e4606fa3fc44881c2b9d8e641331f8c921fee54579003e2010a3d8d19ae8d1a/Xstone1129/dsh-model-search",
     "description": "dsh-plugin"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DSH 的模型选择改成「先选线路、再选模型」，还带一条 Codex 式推理强度能量条"
   },
   "schemaVersion": 1,
   "scripts": {

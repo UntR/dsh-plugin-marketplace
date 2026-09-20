@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "9de4f0277377f3a3e02798467052c9ffebfaca48"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,23 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js"
+    },
+    "main": "index.js",
+    "name": "dsh-llm-antigravity",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2ca8a16e2c4e23506f31fb9d441e1ddfad76770d912363754cacb81439da2965/zhangzhangco/dsh-llm-antigravity",
     "description": "Antigravity route for DeepSeek Harness: local Antigravity CLI (agy) as an LLM provider"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An Antigravity route for DeepSeek Harness: it registers one LLM provider (antigravity-local by default) whose requests go to the Antigravity CLI (agy) installed and signed in on this machine."
   },
   "schemaVersion": 1,
   "scripts": {

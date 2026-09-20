@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "71cb7a77adf0f2aeb0b522ef81692681b9e36f9e"
   },
   "github": {
@@ -45,33 +45,50 @@
   },
   "id": "gh:1368714333",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-notebook",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:wyzh0117/dsh-notebook#71cb7a77adf0f2aeb0b522ef81692681b9e36f9e",
+    "version": "0.2.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-notebook",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5f714cd1b3e7e196e2cd6fcd8b84f62f2a2ad595c611d606ac0038f98667e07f/wyzh0117/dsh-notebook",
     "description": "DSH sidebar notebook: titles + bodies, inline images (videos rejected), click a title to copy its body, @-reference notes from the composer, and a per-session auto-open sidebar."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A notebook in DSH's sidebar."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

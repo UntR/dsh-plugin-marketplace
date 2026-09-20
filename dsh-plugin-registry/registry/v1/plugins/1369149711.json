@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "a339a61de312545cc86aadf42ccfd400999ed631"
   },
   "github": {
@@ -45,27 +45,43 @@
   },
   "id": "gh:1369149711",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-btw",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jasonjiang9527/dsh-plugins#a339a61de312545cc86aadf42ccfd400999ed631",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-btw",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/18f78f42827e4efc27526c19f7ab19d94bbfaca8a29e6dca0ca756334be93f58/jasonjiang9527/dsh-plugins",
     "description": "自研 dsh 插件合集 · dsh-btw: 划选引用 / btw 临时会话 / 新上下文 / Provider 高级配置"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh 临时会话插件：在会话历史里划选任意内容时浮现操作条——引用到当前输入框，或开一个一次性的 btw 临时会话（离开即自动归档）。顺手一问，问完即走，不污染当前会话，不弄乱侧边栏。另有新上下文：就地切分本会话的模型上下文，历史保留但不再发送。"
   },
   "schemaVersion": 1,
   "scripts": {

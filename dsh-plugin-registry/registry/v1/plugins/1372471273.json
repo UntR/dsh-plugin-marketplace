@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "0d01650904d9ebb2e5bbb7a1b04a228d3d8d9716"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1372471273",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-retitle",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:BPTumbleweed/dsh-session-retitle#0d01650904d9ebb2e5bbb7a1b04a228d3d8d9716",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-retitle",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5a00127cad05d610b16885b51efeeaacdb79074817c2eb02b3791672dafafa77/BPTumbleweed/dsh-session-retitle",
     "description": "DSH 会话重命名插件：会话头部一个「重命名」按钮，手动触发时读取本会话内容、用当前模型起中文短标题并写回会话名。零运行时依赖，改名走官方 session-title 服务，含候选路由回退与同会话并发保护。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）插件：在会话头部加一个「重命名」按钮，手动触发时读取本会话内容、用当前模型起一个中文短标题，并写回会话名。"
   },
   "schemaVersion": 1,
   "scripts": {

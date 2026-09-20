@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "f9073486f5f220250d3ec9cf09b2606a4c60b8cc"
   },
   "github": {
@@ -48,27 +48,40 @@
   },
   "id": "gh:1372473815",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-pin-session",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:BPTumbleweed/dsh-pin-session#f9073486f5f220250d3ec9cf09b2606a4c60b8cc",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./routes": "./lib/routes.js",
+      "./store": "./lib/store.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-pin-session",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b983e8da69a19e30a39a7b202303cc37351894fa589930089fddf81715496413/BPTumbleweed/dsh-pin-session",
     "description": "DSH「置顶对话」插件：会话头部与会话行内一键 📌，把重要对话钉在侧栏分组顶部。宿主端只存事实（原子写 JSON + 信任栅栏内的 HTTP 接口 + 配套 CLI），排序由客户端在 DOM 层完成——因为侧栏顺序由浏览器本地排序表优先决定，宿主端挪顺序在界面上无效。零运行时依赖、能力探测与熔断，面向跨版本升级设计。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把重要的对话钉在 DSH 侧栏的最上面。会话头部一个 📌，侧栏会话行 hover 也一个 📌，点一下就行。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "a50352f3ca78d8bf93e776f7507db46277a4ee5d"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1368593278",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "tabilet-skills",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:tabilet/tabilet-skills#a50352f3ca78d8bf93e776f7507db46277a4ee5d",
+    "version": "2.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/host.js",
+        "types": "./dist/host.d.ts"
+      },
+      "./client": "./dist/client.js"
+    },
+    "main": "./dist/host.js",
+    "name": "tabilet-skills",
+    "status": "valid",
+    "type": "module",
+    "version": "2.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1b1a5f30306c6148ca944dc288095709cb41e65844ef572d1f28ee042aec7696/tabilet/tabilet-skills",
     "description": "Agentic Engineering Harness for Small to Large Projects"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Seven shared engineering skills and a Memory Bank sidebar for DeepSeek Harness. The same project Markdown remains usable from DSH, Codex, and Claude Code. The canonical skills and project format live in tabilet/skills."
   },
   "schemaVersion": 1,
   "scripts": {

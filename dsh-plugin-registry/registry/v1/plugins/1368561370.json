@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "4d4aa66f5df746c4647a3012a513004dc32bb446"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUZKW2g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/ac2c73868899bea89457e733717bc61ffd8e662c02e9d4a3099993127e995613/webkubor/dsh-llm-hub",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/14e7698c5563259c6f277a5b4780235c4cd8f9689a91f583fa015c7c75282953/webkubor/dsh-llm-hub",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/29485642?u=fce7113b4ebdad3cadc69f91ce92efe7c0d23d68&v=4",
       "login": "webkubor"
     },
     "pushedAt": "2026-09-18T14:35:59Z",
     "slug": "webkubor/dsh-llm-hub",
-    "stars": 8,
+    "stars": 11,
     "topics": [
       "anthropic-api",
       "deepseek",
@@ -45,32 +45,47 @@
       "model-catalog",
       "openai-api"
     ],
-    "updatedAt": "2026-09-18T18:16:22Z",
+    "updatedAt": "2026-09-19T18:21:40Z",
     "url": "https://github.com/webkubor/dsh-llm-hub"
   },
   "id": "gh:1368561370",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-plugins/dsh-llm-hub",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@dsh-plugins/dsh-llm-hub@0.7.3",
+    "version": "0.7.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.7.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@dsh-plugins/dsh-llm-hub",
+    "status": "valid",
+    "type": "module",
+    "version": "1.3.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/ac2c73868899bea89457e733717bc61ffd8e662c02e9d4a3099993127e995613/webkubor/dsh-llm-hub",
-    "description": "DSH 官方直连的 LLM 配置补强：模型发现（Models 页「获取可用模型」对 deepseek-official 生效）+ provider 卡片上的 DeepSeek 余额与可用性。零依赖，不改动 DSH 安装。"
+    "coverUrl": "https://opengraph.githubassets.com/14e7698c5563259c6f277a5b4780235c4cd8f9689a91f583fa015c7c75282953/webkubor/dsh-llm-hub",
+    "description": "给 DSH 模型页补上官方适配器缺的那半：网关可达性探测、模型目录拉取并勾选写回、余额/配额常驻、协议与接入地址可见。零运行时依赖，不改动 DSH 安装。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "&nbsp;·&nbsp; English · 更新日志"
   },
   "schemaVersion": 1,
   "scripts": {

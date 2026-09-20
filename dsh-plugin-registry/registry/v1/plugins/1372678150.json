@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "cdb3dd3dca43fbdbe0f4d216e0b669dcbd24577f"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1372678150",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-composition-doctor",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-composition-doctor@0.2.2",
+    "version": "0.2.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/plugin/index.js",
+      "./cli": "./dist/cli/main.js",
+      "./client": "./dist/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/plugin/index.js",
+    "name": "dsh-composition-doctor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/dacc7daee0ae78498a5a427ddb655b973e267fb9ae90d3c1de5f8132abf9820a/lemonxiny55/dsh-composition-doctor",
-    "description": ""
+    "description": "Read-only DSH and Cordis composition diagnostics, snapshots, diffs, and upgrade preflight."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Composition and upgrade preflight doctor for DeepSeek Harness (dsh). It reads an explicitly selected profile and explains observable Cordis/plugin composition risks with concrete evidence. It never edits a real profile or silently changes permissions."
   },
   "schemaVersion": 1,
   "scripts": {

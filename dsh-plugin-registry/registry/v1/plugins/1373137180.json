@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "461bf8eb864b0866387e760e4817c8ee96b02cb5"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-basket",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5eccbed7d3d211c30da310b92ddae4c6e7da695afa94f2d3c05c8c4ddee54446/wqy-cell/dsh-plugin-basket",
     "description": "插件收纳篮：DSH 最右侧的可收起抽屉，零改造收纳各席位上的第三方插件按钮（分组 / 来源 / 搜索 / 置顶 / 排序） · A DeepSeek Harness plugin: a collapsible drawer that gathers third-party plugin buttons."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English · MIT"
   },
   "schemaVersion": 1,
   "scripts": {

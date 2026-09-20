@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "4c16f1e3f39af7e43a426a5f5ded91475c8aba68"
   },
   "github": {
@@ -45,27 +45,43 @@
   },
   "id": "gh:1370111534",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "meow-file-view",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:meimiaoji-creator/meow-file-view#4c16f1e3f39af7e43a426a5f5ded91475c8aba68",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "meow-file-view",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4b3b24bbdf58d956689eefde11474f01b1bd020e317d98607a7a14877f70a348/meimiaoji-creator/meow-file-view",
     "description": "meow-file-view 解决「AI 改完文件，我却要切到 VS Code 才能看它到底改了什么」的问题。它把一个轻量文件查看器直接嵌进 DSH 对话窗：左侧目录树懒加载浏览工作区，右侧预览 Markdown（含 TOC / mermaid / 图片）、源码高亮、甚至直接编辑保存；模型每回合产出/修改的文件会以 chips 行挂在回合尾部，点一下直达该文件，命中 git 变更还能一键看 diff。 零 DSH 源码改动——独立 bundle，经 dsh 插件 --profile web add 装进 web profile，与官方插件平级共存。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "meow-file-view 解决「AI 改完文件，我却要切到 VS Code 才能看它到底改了什么」的问题。它把一个轻量文件查看器直接嵌进 DSH 对话窗：左侧目录树懒加载浏览工作区，右侧预览 Markdown（含 TOC / mermaid / 图片）、源码高亮、甚至直接编辑保存；模型每回合产出/修改的文件会以 chips 行挂在回合尾部，点一下直达该文件，命中 git 变更还能一键看 diff。"
   },
   "schemaVersion": 1,
   "scripts": {

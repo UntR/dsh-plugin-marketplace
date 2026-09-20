@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "9a4381658e754515dac50611da461970462032ec"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1368192539",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "zcode-usage-stats",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Amer-CN/zcode-usage-stats#9a4381658e754515dac50611da461970462032ec",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.mjs",
+    "name": "zcode-usage-stats",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b04667b9b9114933694bbb0f3036d2b455e4441085e3cf2040eb8ffbdc0b3c37/Amer-CN/zcode-usage-stats",
     "description": "非官方 DSH 插件：在 DeepSeek Harness 设置页渲染全量会话的 Token 用量统计——日历点阵热力图、多模型趋势折线、刻度环仪表盘，支持深浅主题与自定义时间范围。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "覆盖：全历史会话扫描 × 用量趋势 × 模型仪表盘 × 活跃热力图 × 深浅双主题"
   },
   "schemaVersion": 1,
   "scripts": {

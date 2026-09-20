@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "dsh-proxy/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "6f751885dd49b806d7f0bfcd8aedee49a45dd1b6"
   },
   "github": {
@@ -40,27 +40,44 @@
   },
   "id": "gh:1368264340",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@wenxingyu/dsh-proxy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wenxingyu/dsh-proxy#6f751885dd49b806d7f0bfcd8aedee49a45dd1b6",
+    "version": "0.1.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dsh-proxy/lib/index.cjs",
+        "types": "./dsh-proxy/lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./dsh-proxy/lib/client.js",
+        "types": "./dsh-proxy/lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "dsh-proxy/lib/index.cjs",
+    "name": "@wenxingyu/dsh-proxy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a5d0112df261ef176defcfb8a4aea41aa7f34d2119b1fa98c43d0a63aa6b8934/wenxingyu/dsh-proxy",
     "description": "HTTP + WebSocket 反向代理：把局域网端口转发到本地 DSH 服务"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）插件：把 Web 界面（默认 127.0.0.1:3080）转发到另一个带认证的端口，让同一局域网内的其他设备也能安全访问。"
   },
   "schemaVersion": 1,
   "scripts": {

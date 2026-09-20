@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "1e0401cbb31e6ab28ad3a262611712c6ddc82884"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1372804974",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-voice-input-plugin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zRa1ny/dsh-voice-input-plugin#1e0401cbb31e6ab28ad3a262611712c6ddc82884",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-voice-input-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/440b36f6f127847abb91566a6ada1e3bc2e98665d2946986d3de387d7f5ea3b2/zRa1ny/dsh-voice-input-plugin",
     "description": "dsh-voice-input-plugin"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness Web GUI 加一个语音输入按钮：输入框工具行里、发送按钮一侧出现一个麦克风按钮，点一下开始录音，识别结果实时逐字写入当前会话的待发送框；再点一下（图标变成停止方块）结束录音。发送仍然用原来的发送按钮。"
   },
   "schemaVersion": 1,
   "scripts": {

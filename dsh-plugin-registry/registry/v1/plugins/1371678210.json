@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "f989affe37d83fe84f2cb345fa4304c6848ba460"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1371678210",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-screen-eye",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:davidekingsss/dsh-screen-eye#f989affe37d83fe84f2cb345fa4304c6848ba460",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.mjs",
+    "name": "dsh-screen-eye",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/916327fdd1d5270047fa444973947519d9e26a98776baf466e9a401a151f7afe/davidekingsss/dsh-screen-eye",
     "description": "Autonomous screen vision for DeepSeek Harness on macOS and Windows: the agent captures the screen and receives the image itself in one call."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An autonomous eye for DeepSeek Harness on macOS and Windows: the agent captures the screen and receives the picture in the same tool call, so it can look at a running app, a dialog, an error or its own UI work without asking you for a screenshot."
   },
   "schemaVersion": 1,
   "scripts": {

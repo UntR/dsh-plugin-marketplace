@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
-    "headSha": "2d0f2af5ce802f5c2f70efefa85c02521e8642f3"
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
+    "headSha": "b0ad1eb745f8b8e71b880dea3805f648f5393495"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-16T08:38:11Z",
     "databaseId": 1372754091,
     "defaultBranch": "main",
-    "description": "DSH 审批提示音插件：宿主申请权限时响一声，音色、音量、开关在「设置 → 通知提醒」里调。",
+    "description": "DSH 审批提示音插件：申请权限时响一声，音色、音量、开关在「设置 → 通知提醒」里调。",
     "fork": false,
     "forks": 0,
-    "headSha": "2d0f2af5ce802f5c2f70efefa85c02521e8642f3",
+    "headSha": "b0ad1eb745f8b8e71b880dea3805f648f5393495",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUdKQqw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/aedd028abaac46ea160ee6306bc34b9d5814a2accc39262af31d30c5be616570/Cloudto1/dsh-approval-chime",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d4d3d9daf3a167971ef1ba7a1a02abe1c3c314fc806cffb8351500dc3ca1a567/Cloudto1/dsh-approval-chime",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/328312637?u=972fe20c3eae9ca024f88492c0385d5b31a5914f&v=4",
       "login": "Cloudto1"
     },
-    "pushedAt": "2026-09-16T18:36:13Z",
+    "pushedAt": "2026-09-19T16:38:12Z",
     "slug": "Cloudto1/dsh-approval-chime",
     "stars": 0,
     "topics": [
@@ -44,32 +44,46 @@
       "plugin",
       "web-audio"
     ],
-    "updatedAt": "2026-09-16T18:36:20Z",
+    "updatedAt": "2026-09-19T16:38:18Z",
     "url": "https://github.com/Cloudto1/dsh-approval-chime"
   },
   "id": "gh:1372754091",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-approval-chime",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Cloudto1/dsh-approval-chime#b0ad1eb745f8b8e71b880dea3805f648f5393495",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-approval-chime",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/aedd028abaac46ea160ee6306bc34b9d5814a2accc39262af31d30c5be616570/Cloudto1/dsh-approval-chime",
-    "description": "DSH 审批提示音插件：宿主向你申请权限的那一刻响一声，音量、音色、开关都在「设置 → 通知提醒」里调。内置风铃、铃铛、蜂鸣三种合成音色，支持试听与恢复默认，还能导入本地音频（≤5MB、最多 50 个）当音色；WebAudio 现场合成、不加载音频文件，配置持久化到宿主设置文档，另附已触发次数与上次触发时间，静音环境下也能自证是否生效。"
+    "coverUrl": "https://opengraph.githubassets.com/d4d3d9daf3a167971ef1ba7a1a02abe1c3c314fc806cffb8351500dc3ca1a567/Cloudto1/dsh-approval-chime",
+    "description": "DSH 审批提示音插件：申请权限时响一声，音色、音量、开关在「设置 → 通知提醒」里调。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 审批提示音插件：DSH 向你申请权限的那一刻响一声，音量、音色、开关都在「设置 → 通知提醒」里调。 内置风铃 / 铃铛 / 蜂鸣三种现场合成音色，可导入本地音频当音色，还能按会话独立设置。"
   },
   "schemaVersion": 1,
   "scripts": {

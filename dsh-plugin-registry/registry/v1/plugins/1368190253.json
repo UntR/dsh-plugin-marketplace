@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "c8beeb20a48e5f2c76bffbac4777d1a0a6039a5a"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1368190253",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@vlln/dsh-autofork",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vlln/dsh-autofork#c8beeb20a48e5f2c76bffbac4777d1a0a6039a5a",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./index.mjs"
+      },
+      "./client": "./client/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "index.mjs",
+    "name": "@vlln/dsh-autofork",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f49df74503f332895bb4532c7254156493a62a1d99883be6189d061e8bcfc35c/vlln/dsh-autofork",
     "description": "Agent 忙时自动分叉会话：你新发的指令立刻在新会话里得到响应，旧会话留在后台跑完并把结果回注（DeepSeek Harness 插件）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：agent 忙的时候你提交的新指令会立刻在新会话里得到响应，原来那条会话留在后台把活干完、再把结果回注过来。 Automatically forks the session when you type while the agent is busy — you keep talking, the old turn keeps working."
   },
   "schemaVersion": 1,
   "scripts": {

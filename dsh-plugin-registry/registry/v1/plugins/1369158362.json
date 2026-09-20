@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "5167001b642d98277e684144d7800f86bb87ec79"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1369158362",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-weixin-channel",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:sxylvlv/dsh-weixin-channel#5167001b642d98277e684144d7800f86bb87ec79",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.mjs",
+    "name": "dsh-weixin-channel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9c5292803ff575296605401ff0d7ce9af6db4343ae8d2e379bd61d1e2727b575/sxylvlv/dsh-weixin-channel",
     "description": "微信通道插件 for DSH：把微信消息接成 DSH 会话（文本/图片/文件/语音/视频双向，出站可推文档）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把微信接成 DeepSeek Harness 的一个入口：在微信里发消息 = 在一个真实的 DSH 会话里下指令。"
   },
   "schemaVersion": 1,
   "scripts": {

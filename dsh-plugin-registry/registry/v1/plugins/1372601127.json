@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "529a3891aa3e0b32a9b82c76a79f3e51ea248246"
   },
   "github": {
@@ -50,27 +50,38 @@
   },
   "id": "gh:1372601127",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-away-notify",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:s11phere/dsh-away-notify#529a3891aa3e0b32a9b82c76a79f3e51ea248246",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/host.js",
+    "name": "dsh-away-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c86970b0d0c936ad0324662e9721de5624bf69f00ecf78520558140a3d610b45/s11phere/dsh-away-notify",
     "description": "dsh 插件：离开 dsh 页面时可收到桌面通知，点击回到对应会话。Windows / WSL 原生 Toast，零依赖。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "像 Codex 那样提醒你：只有当你没在看 dsh 页面时，任务完成 / 出错 / 等待审批 / agent 提问 / goal 完成才弹桌面通知，点击通知能回到对应会话。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "d9a3e51f08dff360378f3a9bf321fdd8124344a1"
   },
   "github": {
@@ -45,27 +45,44 @@
   },
   "id": "gh:1371471638",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-plan-board",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hoyyang/dsh-plan-board#d9a3e51f08dff360378f3a9bf321fdd8124344a1",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-plan-board",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a3fcab080e8006b4dc048c2dbb8e6e565aba322db4b8f7378ee7d060ad5a1628/hoyyang/dsh-plan-board",
     "description": "思维导图式项目规划可视 + 最强防跑偏：计划→模块→任务树/DAG、执行序号、Agent GPS 站位、改图人审门、git 交叉核对、阻断级漂移防护（DeepSeek Harness 插件）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把整个项目画成一张会自己动的「任务思维导图」，并且让 Agent 真的照着它走——跑偏当场拦下。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-19T08:28:54.612Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichmentStatus": "ok",
     "headSha": "e40a792b7cb0f1eda3ac08966c0bb013490dfd0f"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1368180634",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-subagent-roles",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-plugin-subagent-roles@0.3.0",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-subagent-roles",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/728f4c84a373f7407bffcd2dfef631100dfb2ff94e1ba20808efb91d354caaec/troytse/dsh-plugin-subagent-roles",
     "description": "DeepSeek Harness - Subagent Roles Plugin"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-plugin-subagent-roles defines subagent roles as files. A role is one Markdown file: YAML frontmatter carries a display name, a routing description, an optional LLM route, and a tool policy; the body is the persona the child runs with. Project roles live in /.dsh/roles/, globa"
   },
   "schemaVersion": 1,
   "scripts": {
