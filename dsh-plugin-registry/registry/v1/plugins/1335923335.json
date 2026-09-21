@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-16T13:09:36.692Z",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
     "enrichmentStatus": "ok",
-    "headSha": "1639df38e0f2cf84cb2529408c5a38b4034e4eef"
+    "headSha": "f9d9d24077551652f4fbd088e8c4b69c1eac8a48"
   },
   "github": {
     "archived": false,
@@ -17,49 +17,72 @@
     "description": "一个适用于deepseek-harness的明日方舟背景插件",
     "fork": false,
     "forks": 0,
-    "headSha": "1639df38e0f2cf84cb2529408c5a38b4034e4eef",
+    "headSha": "f9d9d24077551652f4fbd088e8c4b69c1eac8a48",
     "homepageUrl": null,
-    "language": "CSS",
+    "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOT6CShw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/bacb61c3e4baafb17226a23e1eed07e0f70c3cf6eba7e382f854c3820d20cc68/xxxxxs-ssdd/arknits-background-plugin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/4fb2112762baa0ee6c18881ec4abb49078c3bcdc6221958103c9de66d89ebbee/xxxxxs-ssdd/arknits-background-plugin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/101030525?u=1aceca88b1e7a1785c477aab57bc61f06639e914&v=4",
       "login": "xxxxxs-ssdd"
     },
-    "pushedAt": "2026-08-16T13:00:14Z",
+    "pushedAt": "2026-09-20T13:42:50Z",
     "slug": "xxxxxs-ssdd/arknits-background-plugin",
     "stars": 1,
     "topics": [
       "ai-agent",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-09T10:29:12Z",
+    "updatedAt": "2026-09-20T13:42:54Z",
     "url": "https://github.com/xxxxxs-ssdd/arknits-background-plugin"
   },
   "id": "gh:1335923335",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "@deepseek-ai/dsh-client-ui-arknights-background",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xxxxxs-ssdd/arknits-background-plugin#f9d9d24077551652f4fbd088e8c4b69c1eac8a48",
+    "version": "0.1.0-rc.6"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@deepseek-ai/dsh-client-ui-arknights-background",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-rc.6"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/bacb61c3e4baafb17226a23e1eed07e0f70c3cf6eba7e382f854c3820d20cc68/xxxxxs-ssdd/arknits-background-plugin",
+    "coverUrl": "https://opengraph.githubassets.com/4fb2112762baa0ee6c18881ec4abb49078c3bcdc6221958103c9de66d89ebbee/xxxxxs-ssdd/arknits-background-plugin",
     "description": "一个适用于deepseek-harness的明日方舟背景插件"
   },
   "readme": {
     "available": true,
-    "excerpt": "Browser-only background plugin: paints the Arknights wallpaper (apps/web/public/arknights-wallpaper.webp, served from the built frontend at /arknights-wallpaper.webp) over the web shell. The client bundle's entire effect is one stylesheet (src/client/arknights.module.css), inject"
+    "excerpt": "Web background plugin: paints the Arknights wallpaper over the web shell. The client bundle's entire effect is one stylesheet (src/client/arknights.module.css), injected as a tag when the bundle materializes; the node half owns the art itself, registering one exact /arknights-wal"
   },
   "schemaVersion": 1,
   "scripts": {

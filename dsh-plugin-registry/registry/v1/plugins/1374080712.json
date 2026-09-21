@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "cd5945a5c0aab3a13c0171b928f826e506121b1f"
   },
   "github": {
@@ -53,27 +53,39 @@
   },
   "id": "gh:1374080712",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-memory-lite",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:MiHjy12138/dsh-memory-lite#cd5945a5c0aab3a13c0171b928f826e506121b1f",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cli": "./src/mem.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-memory-lite",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9a31d7a143475daa4d7047ce6d9e525a4d6a4135166e1e1342a59a376a978ac7/MiHjy12138/dsh-memory-lite",
     "description": "给 agent 的按需记忆库：会话日志提炼成分层 markdown 记忆，mem_query 只回命中片段（约 700 字符，而不是上万字符）。零依赖、不每轮注入、条条可溯源。既是 DSH 插件，也是独立 CLI。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "你的 agent 不是记性差，是记忆太贵：每轮注入记忆，就是每轮重发计费；读一次索引，就是上万字符全程占位。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "90b40c90f13f78b607f942e6c41568f0dd2cffa6"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1377561006",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-interviewer",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ufiredong/dsh-interviewer#90b40c90f13f78b607f942e6c41568f0dd2cffa6",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./skills/*": "./skills/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-interviewer",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/84faf242e8a99aae6471613bc203e63b88d67e9858047fda3583d9be705c09ac/ufiredong/dsh-interviewer",
     "description": "DSH 模拟面试面板 + 技能：真实模型当面试官，读简历层层追问、按证据打分并推导薪资区间。面试官是考官，不是助教。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 里跑一场真的模拟技术面试 —— 真实模型当面试官，读你的简历一层层往下追问， 按证据打分并推导薪资区间。面试官是考官，不是助教：不讲解、不纠正、不鼓励， 只负责在有限时间里测出你的真实能力边界 —— 这一点决定了它的所有行为。"
   },
   "schemaVersion": 1,
   "scripts": {

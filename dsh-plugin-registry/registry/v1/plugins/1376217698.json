@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "2bdff64f436fcb7a66a4089f98b260cb2522b911"
   },
   "github": {
@@ -45,33 +45,44 @@
   },
   "id": "gh:1376217698",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-c2c",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:Alyosha28/dsh-plugin-c2c#2bdff64f436fcb7a66a4089f98b260cb2522b911",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-c2c",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/71591cde50458c66c2a4371c6ab32f8382e4e80f1543429346ee9967210a1892/Alyosha28/dsh-plugin-c2c",
     "description": "Cache-to-Cache (C2C) for DeepSeek Harness: two local LLMs that share a KV-cache instead of exchanging text, exposed as c2c_* agent tools"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Cache-to-Cache for DeepSeek Harness. Two local LLMs that share a KV-cache instead of exchanging text."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

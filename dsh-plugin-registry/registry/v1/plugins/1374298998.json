@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "af7448231df027ebe5e5ee939eaaffcce4416775"
   },
   "github": {
@@ -47,27 +47,44 @@
   },
   "id": "gh:1374298998",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-advanced-provider-settings",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:misswell/dsh-advanced-provider-settings#af7448231df027ebe5e5ee939eaaffcce4416775",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-advanced-provider-settings",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/13474e6f6f5a15125d6f224ee7ce09a05502ba90482da8eeb12b881b3927959e/misswell/dsh-advanced-provider-settings",
     "description": "Advanced provider configuration UI for DeepSeek Harness (DSH): headers, User-Agent, retry policy, timeouts, vision, reasoning and compatibility — without editing settings.yaml by hand."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Advanced Provider Settings is a WebUI plugin for DeepSeek Harness (DSH) that turns the hidden half of an OpenAI-compatible provider into something you can see and edit. Instead of hand-editing /.dsh/settings.yaml, you get a real control panel on every provider card for Provider S"
   },
   "schemaVersion": 1,
   "scripts": {

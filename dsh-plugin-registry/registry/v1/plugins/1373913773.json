@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "89655d320fbb929225fb215e109751ebfe8eaddb"
   },
   "github": {
@@ -46,27 +46,43 @@
   },
   "id": "gh:1373913773",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-subscription-overlay",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ajceee/dsh-subscription-overlay#89655d320fbb929225fb215e109751ebfe8eaddb",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-subscription-overlay",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3ce9e9864c38bcb5ecd0e11ac8ef3afeca49b89d66fba254e5db77dc407073ba/ajceee/dsh-subscription-overlay",
-    "description": ""
+    "description": "Toggleable DSH web-overlay that aggregates subscription quota for Claude, Codex, and opencode-go (fresh OAuth/session fetches), plus a commandcode availability probe and a local monthly burn ledger."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Toggleable DSH web-overlay that aggregates subscription quota for Claude, Codex, and opencode-go (fresh OAuth/session fetches), plus a commandcode availability probe and a local monthly burn ledger."
   },
   "schemaVersion": 1,
   "scripts": {

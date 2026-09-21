@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "616a829d1c0fd1e2c81050629c5b97c2481d0345"
   },
   "github": {
@@ -52,7 +52,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -62,14 +62,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.ts",
+      "./client": "./src/client.js",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "src/index.ts",
+    "name": "dsh-balance-bar",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e0aaab6e256feb94c02cea2428932aa16cd50dc273a81b5e799988aff927a297/hfdsdfgr/dsh-balance-bar",
     "description": "DeepSeek Harness Web plugin: live account balance as a colour-banded vertical progress bar on the right edge of the GUI, with an animated wave above the threshold."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness Web plugin that shows your model-provider account balance as a vertical progress bar pinned to the right edge of the GUI, with colour bands that tell you how much runway you have left — and a persistent animated wave for whatever you hold above the healthy thre"
   },
   "schemaVersion": 1,
   "scripts": {

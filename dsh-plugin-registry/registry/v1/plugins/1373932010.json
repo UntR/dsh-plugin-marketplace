@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "d86a7ce57c8ebff1e14524e896cec29ce3dab384"
   },
   "github": {
@@ -44,27 +44,41 @@
   },
   "id": "gh:1373932010",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-desktop-upgrade",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Liu-fu-gui/dsh-desktop-upgrade#d86a7ce57c8ebff1e14524e896cec29ce3dab384",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./bridge": "./bridge.js",
+      "./client": {
+        "default": "./client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-desktop-upgrade",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b3c79c55deb6f579d29e5a3c1050eb4c0abb7ebf194dc5af1d60c9860fa01253/Liu-fu-gui/dsh-desktop-upgrade",
     "description": "DeepSeek Harness (DSH) Desktop plugin: adds the missing 「升级 DSH」 entry — tray command + dsh_upgrade model tool, driving the official version service and installer channel via desktopRuntime.updates. 不改内核文件。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH Desktop 补上一个它自己缺的「升级 DSH」入口。不改任何内核文件。"
   },
   "schemaVersion": 1,
   "scripts": {

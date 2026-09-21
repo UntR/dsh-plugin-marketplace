@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "3791d83346afef5a47c3008a7c9196748a2ca53f"
   },
   "github": {
@@ -44,27 +44,45 @@
   },
   "id": "gh:1377093029",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cli-mode",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Shadoso-w/dsh-cli-mode#3791d83346afef5a47c3008a7c9196748a2ca53f",
+    "version": "1.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json",
+      "./suggest": {
+        "default": "./lib/suggest.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-cli-mode",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a95c67c98197bce6535a965f2d9443593daa9ed585892a730ca4270f9279ce05/Shadoso-w/dsh-cli-mode",
     "description": "Command-line mode for the DeepSeek Harness web GUI: a composer line starting with ！ or ! runs as a real command in the session workspace instead of being sent to the model."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "命令历史按会话持久化在 ${DSHHOME:-/.dsh}/cli-mode/history/.json（最多 200 条）。"
   },
   "schemaVersion": 1,
   "scripts": {

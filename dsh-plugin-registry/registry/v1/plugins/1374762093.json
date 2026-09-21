@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "failed",
-    "headSha": "5a85a9d06e7cf54976f3b09b67e9fce011cbd514"
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
+    "headSha": "b0892df4ff9856cf0f8b6f3d38bb645794454b77"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "让 dsh 在 Windows 上使用用户自安装的 Git Bash，并绕过其沙箱限制 | Enable dsh to use a user-installed Git Bash on Windows by bypassing its sandbox restrictions.",
     "fork": false,
     "forks": 0,
-    "headSha": "5a85a9d06e7cf54976f3b09b67e9fce011cbd514",
+    "headSha": "b0892df4ff9856cf0f8b6f3d38bb645794454b77",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUfE0bQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/fe7068b3860d67573cf0d62c0809348c240a3f6c8db79dea19479785a8849fa4/xswt442-cmd/dsh-unsandboxed-winbash",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7a21a7e915541cdd0843ef2d9a3941ae78611073553b7f701b939e5f5b36cada/xswt442-cmd/dsh-unsandboxed-winbash",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/239951239?u=96a244c254162003e27cd956089ce51d71501411&v=4",
       "login": "xswt442-cmd"
     },
-    "pushedAt": "2026-09-17T18:41:12Z",
+    "pushedAt": "2026-09-20T12:24:07Z",
     "slug": "xswt442-cmd/dsh-unsandboxed-winbash",
     "stars": 0,
     "topics": [
@@ -42,32 +42,44 @@
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-09-19T10:34:50Z",
+    "updatedAt": "2026-09-20T12:24:05Z",
     "url": "https://github.com/xswt442-cmd/dsh-unsandboxed-winbash"
   },
   "id": "gh:1374762093",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-unsandboxed-winbash",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-unsandboxed-winbash@0.1.3",
+    "version": "0.1.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./tool": "./lib/tool/index.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-unsandboxed-winbash",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/fe7068b3860d67573cf0d62c0809348c240a3f6c8db79dea19479785a8849fa4/xswt442-cmd/dsh-unsandboxed-winbash",
+    "coverUrl": "https://opengraph.githubassets.com/7a21a7e915541cdd0843ef2d9a3941ae78611073553b7f701b939e5f5b36cada/xswt442-cmd/dsh-unsandboxed-winbash",
     "description": "让 dsh 在 Windows 上使用用户自安装的 Git Bash，并绕过其沙箱限制 | Enable dsh to use a user-installed Git Bash on Windows by bypassing its sandbox restrictions."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Windows 上的 Git Bash（MSYS2）工具插件。它向会话新增一个 winbash 工具，直接以 Git for Windows 的 bash 执行命令并修好 MSYS 的 PATH；命令在文件沙箱之外执行，工具描述也写明了这一点。"
   },
   "schemaVersion": 1,
   "scripts": {

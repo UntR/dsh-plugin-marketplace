@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "3d6e3e598b0707da3eb6756264fca9cf6eb5d90b"
   },
   "github": {
@@ -41,33 +41,42 @@
   },
   "id": "gh:1376719970",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-dream-rsi",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:CharlesXu-HQ/dsh-dream-rsi#3d6e3e598b0707da3eb6756264fca9cf6eb5d90b",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/plugin.js"
+    },
+    "main": "./lib/plugin.js",
+    "name": "dsh-dream-rsi",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cb1b502533d7861374e2f624baa2eda0ad86d778536d0f49d59937a5bab44baf/CharlesXu-HQ/dsh-dream-rsi",
     "description": "Experimental replay-based exploration-policy plugin for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "这是一个独立的 TypeScript / Cordis 插件，通过 DeepSeek Harness 的 ctx.agents 创建固定的 coding agent 和策略修订 agent，通过 ctx.tools 暴露 dreamrsicycle。不依赖 Pi，也不要求 DGX Spark；这里的“独立”仅指不以这两个项目/硬件为运行前提，仍依赖 DeepSeek Harness。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

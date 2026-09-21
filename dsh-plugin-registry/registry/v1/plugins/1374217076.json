@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./editor/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "a050093b081cdc804445624e7c4c0bea9b714279"
   },
   "github": {
@@ -14,7 +14,7 @@
     "createdAt": "2026-09-17T09:37:17Z",
     "databaseId": 1374217076,
     "defaultBranch": "main",
-    "description": "Custom modes and custom prompts for DeepSeek Harness (dsh): edit a mode's system prompt in the settings page, choose its base mode, switch plugins row by row, and keep several assistants (multi-mode) side by side.",
+    "description": "Custom modes and custom prompts for DeepSeek Harness (dsh): edit a mode's system prompt in the settings page, pick its base mode, switch plugin rows one by one, and keep several assistants side by side — coding, chat or roleplay (RP) personas (multi-mode / multi-agent).",
     "fork": false,
     "forks": 0,
     "headSha": "a050093b081cdc804445624e7c4c0bea9b714279",
@@ -38,46 +38,60 @@
       "agent-preset",
       "ai-agent",
       "assistant-manager",
+      "chat",
       "cordis",
       "custom-mode",
       "custom-prompt",
       "deepseek",
       "deepseek-harness",
-      "developer-tools",
       "dsh",
       "dsh-plugin",
+      "multi-agent",
       "multi-mode",
+      "persona",
       "plugin",
       "prompt-editor",
       "prompt-engineering",
+      "roleplay",
       "system-prompt"
     ],
-    "updatedAt": "2026-09-20T05:16:12Z",
+    "updatedAt": "2026-09-21T03:10:43Z",
     "url": "https://github.com/BOWLUNA/dsh-custom-mode"
   },
   "id": "gh:1374217076",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-custom-mode",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-custom-mode@1.9.6",
+    "version": "1.9.6"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.9.6",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./editor/index.mjs",
+      "./client": "./editor/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./editor/index.mjs",
+    "name": "dsh-custom-mode",
+    "status": "valid",
+    "type": "module",
+    "version": "1.9.6"
+  },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1374217076/70f7a1eb-74f7-4f61-8d7f-9d5a0c387b2b",
-    "description": "Custom agent modes for DeepSeek Harness (dsh): manage many assistants from one settings page, each with its own editable system prompt, base mode and per-row plugin switches."
+    "description": "Custom modes and custom prompts for DeepSeek Harness (dsh): edit a mode's system prompt in the settings page, pick its base mode, switch plugin rows one by one, and keep several assistants side by side — coding, chat or roleplay (RP) personas (multi-mode / multi-agent)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A custom mode for DeepSeek Harness (dsh). Its system prompt is a plain file you can edit on the Web settings page, and an edit takes effect on the next model step — no restart, no new session."
   },
   "schemaVersion": 1,
   "scripts": {

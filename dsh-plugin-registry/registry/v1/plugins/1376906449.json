@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "9e09d6a679f215a42e0ff1d68617536a87534352"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1376906449",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-fish-sound-notify",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:YUsaltyfish/dsh-fish-sound-notify#9e09d6a679f215a42e0ff1d68617536a87534352",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-fish-sound-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d3c8c4904aee4a05f5c55eb64221d55ebe53e23c65cc406591aef8f633c2fe7c/YUsaltyfish/dsh-fish-sound-notify",
     "description": "DSH bundle: a Windows system sound when the agent asks a question /a turn ends/a permission request"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Windows only. Everything is configurable: questionSound / approvalSound / endSound / cooldownMs / rootAgentsOnly / notifyOnQuestion / notifyOnApproval / notifyOnTurnEnd / enabled."
   },
   "schemaVersion": 1,
   "scripts": {

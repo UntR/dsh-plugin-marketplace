@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "bd1b2902e6d3d88a20dddddc671135659f147914"
   },
   "github": {
@@ -44,33 +44,51 @@
   },
   "id": "gh:1376989893",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-better-summary",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:yaodongH/dsh-better-summary#bd1b2902e6d3d88a20dddddc671135659f147914",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-better-summary",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/742e6bd103774f96e860299fa9d1cec19d3a5ff0585376ad624adf045b5478c6/yaodongH/dsh-better-summary",
     "description": "DSH Web 插件：Codex 风格的改动汇总卡片，替换对话末尾的产出 chip 行。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "状态：v1 已实现并通过全部验证（typecheck / 143 项单元与组件测试 / 5 条 E2E lane）。 兼容性：当前版本 0.2.0 要求 DSH ≥ 0.1.6-alpha.2 —— 装到更早的宿主上，客户端半边会在装载期直接报错，卡片不出现（详见兼容性，不是静默降级）。 设计与决策记录见 docs/design.md。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

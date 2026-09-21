@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "05bbe9b9d46332689ebeaaa487beb5ed35c8072a"
   },
   "github": {
@@ -47,27 +47,44 @@
   },
   "id": "gh:1375997530",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cost-track",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-cost-track@0.5.1",
+    "version": "0.5.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/cost.web.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-cost-track",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3f07979d92530561adb3798aba2bd64bfe4303d38164e4c5bfd03f552b2a492f/hj01857655/dsh-cost-track",
-    "description": ""
+    "description": "Track token spend and enforce budgets for every model call your dsh agent makes."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Track token spend and enforce budgets for every model call your dsh agent makes."
   },
   "schemaVersion": 1,
   "scripts": {

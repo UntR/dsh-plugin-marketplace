@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
-    "headSha": "89ea01b673287200a4f6eb6510d21a1c4d8f3390"
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
+    "headSha": "07054bbeec6c29ec0e0566030b243297aa1ffae0"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-18T12:08:27Z",
     "databaseId": 1375813556,
     "defaultBranch": "main",
-    "description": "DeepSeek Harness plugin: a web-UI button that creates a git worktree and moves the conversation into it (session fork with the worktree as cwd)",
+    "description": "DeepSeek Harness plugin: a New-Conversation trigger that creates a git worktree — or starts inside an existing one — and moves the conversation into it (session fork with the worktree as cwd).",
     "fork": false,
     "forks": 0,
-    "headSha": "89ea01b673287200a4f6eb6510d21a1c4d8f3390",
+    "headSha": "07054bbeec6c29ec0e0566030b243297aa1ffae0",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUgE_tA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/4369f34893c8ec1f45849b31fa25c530f1b994a6eb0fc3b96e83fc80654c470b/frederico-kluser/dsh-worktree-jump",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f50837311caa0f06aed84821e12685e941b42d9ea377aa33969b8c931a037580/frederico-kluser/dsh-worktree-jump",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/13138187?u=c2cc7b8c490a510c1028f4a6a24216338772dd45&v=4",
       "login": "frederico-kluser"
     },
-    "pushedAt": "2026-09-19T02:29:01Z",
+    "pushedAt": "2026-09-20T16:18:36Z",
     "slug": "frederico-kluser/dsh-worktree-jump",
     "stars": 1,
     "topics": [
@@ -41,32 +41,49 @@
       "git",
       "worktree"
     ],
-    "updatedAt": "2026-09-19T02:29:04Z",
+    "updatedAt": "2026-09-20T16:18:49Z",
     "url": "https://github.com/frederico-kluser/dsh-worktree-jump"
   },
   "id": "gh:1375813556",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-worktree-jump",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:frederico-kluser/dsh-worktree-jump#07054bbeec6c29ec0e0566030b243297aa1ffae0",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.cjs",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-worktree-jump",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/4369f34893c8ec1f45849b31fa25c530f1b994a6eb0fc3b96e83fc80654c470b/frederico-kluser/dsh-worktree-jump",
-    "description": "DeepSeek Harness plugin: a web-UI button that creates a git worktree and moves the conversation into it (session fork with the worktree as cwd)"
+    "coverUrl": "https://opengraph.githubassets.com/f50837311caa0f06aed84821e12685e941b42d9ea377aa33969b8c931a037580/frederico-kluser/dsh-worktree-jump",
+    "description": "DeepSeek Harness plugin: a New-Conversation trigger that creates a git worktree — or starts inside an existing one — and moves the conversation into it (session fork with the worktree as cwd)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) plugin: one trigger in the New-Conversation screen that creates a git worktree from the picked folder and starts the conversation inside it."
   },
   "schemaVersion": 1,
   "scripts": {

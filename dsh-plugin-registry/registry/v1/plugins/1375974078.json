@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
-    "headSha": "578a445b67e404bd78a6d116fda67f15601db469"
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
+    "headSha": "943ea1bc4e6e7d35754e1a44b959d40507ee0c11"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH plugin: drive a real Chrome from your dsh agent via the browser-use Browser Harness (local, no API key).",
     "fork": false,
     "forks": 0,
-    "headSha": "578a445b67e404bd78a6d116fda67f15601db469",
+    "headSha": "943ea1bc4e6e7d35754e1a44b959d40507ee0c11",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUgOyvg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7b4f4fe9f4412b7aa43adeb462053a9764074ce020c7a85ffa0beff420e80484/chaserchan/dsh-browser-harness",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/dca7b16159e671d8de07eeacf70dbc922c5b62f21e41c67b82d818fa2cfbb5e8/chaserchan/dsh-browser-harness",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/38077109?u=af8281355b519e8a0f387f7d5d51649a43eeaa3a&v=4",
       "login": "chaserchan"
     },
-    "pushedAt": "2026-09-19T13:46:04Z",
+    "pushedAt": "2026-09-20T15:39:09Z",
     "slug": "chaserchan/dsh-browser-harness",
     "stars": 0,
     "topics": [
@@ -40,32 +40,45 @@
       "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-19T13:46:08Z",
+    "updatedAt": "2026-09-20T15:39:13Z",
     "url": "https://github.com/chaserchan/dsh-browser-harness"
   },
   "id": "gh:1375974078",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-browser-harness",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-browser-harness@0.4.0",
+    "version": "0.4.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-browser-harness",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7b4f4fe9f4412b7aa43adeb462053a9764074ce020c7a85ffa0beff420e80484/chaserchan/dsh-browser-harness",
+    "coverUrl": "https://opengraph.githubassets.com/dca7b16159e671d8de07eeacf70dbc922c5b62f21e41c67b82d818fa2cfbb5e8/chaserchan/dsh-browser-harness",
     "description": "DSH plugin: drive a real Chrome from your dsh agent via the browser-use Browser Harness (local, no API key)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）插件：把 browser-use 的 Browser Harness 注册为会话工具，让 DSH 的 agent 直接写 Python 驱动一个真实 Chrome —— 导航、点击、填表、取无障碍树、执行 JS/CDP、截图。"
   },
   "schemaVersion": 1,
   "scripts": {

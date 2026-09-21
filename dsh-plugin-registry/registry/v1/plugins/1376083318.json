@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "f4629c1aeae7d5be51f4b324560e7ab702e68e7b"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1376083318",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-loop-breaker",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ikta2010/dsh-loop-breaker#f4629c1aeae7d5be51f4b324560e7ab702e68e7b",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-loop-breaker",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/92f475f74bed1a9c6c894b4088a4113b0775ab5b7d33595b0582872b0c9b2dd6/ikta2010/dsh-loop-breaker",
-    "description": ""
+    "description": "硬止损插件：同一工具 + 同一参数反复调用时，直接中断本轮。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "硬止损插件：同一工具 + 同一参数反复调用时，直接中断本轮。"
   },
   "schemaVersion": 1,
   "scripts": {

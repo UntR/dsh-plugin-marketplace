@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "f16040f2a78eb777321c5130d20336cbb82e33d8"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1374445604",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-roles-zeta",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-roles-zeta@0.4.1",
+    "version": "0.4.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-roles-zeta",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/14a1845f7c0e729c60b6cf3014416148751db693e7714be16f7d707a711dafb4/zeta987/dsh-roles-zeta",
     "description": "Role-based subagent delegation for DeepSeek Harness: one delegate tool over a folder of role files"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-roles-zeta gives a dsh agent one delegate tool and a folder of role files. A call names a role; the role file supplies the child's persona, model route, reasoning effort, and tool surface. It sits on the same ctx.subagents service the built-in subagent tool uses, so providers"
   },
   "schemaVersion": 1,
   "scripts": {

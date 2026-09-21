@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "7251919b5d7494db178dc1083fd8665259801466"
   },
   "github": {
@@ -49,27 +49,39 @@
   },
   "id": "gh:1376871478",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "loci-dsh",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:IvenKooLab/loci-dsh#7251919b5d7494db178dc1083fd8665259801466",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "loci-dsh",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/31bf65810dca0b12509883f53174edd586c11a7807e69ed1a9633e680a284b13/IvenKooLab/loci-dsh",
     "description": "🧠 loci second brain as a DeepSeek Harness (dsh) web plugin — search / ask / remember your local knowledge base from the sidebar"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "loci-dsh is a UI-layer plugin for dsh (\"everything is a plugin\"): it mounts a 🧠 loci memory tab in the web sidebar where you can search, ask questions, jot down memories, and inspect your loci knowledge base — without leaving the conversation."
   },
   "schemaVersion": 1,
   "scripts": {

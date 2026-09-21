@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "a0736c74dfdb77eb61c9edf56e15163ca9ded42e"
   },
   "github": {
@@ -45,27 +45,43 @@
   },
   "id": "gh:1374070082",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-memory-delta",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lpf20200901/dsh-memory-delta#a0736c74dfdb77eb61c9edf56e15163ca9ded42e",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/plugin.mjs",
+      "./cli": "./bin/mem.mjs",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./hook": "./src/hook.mjs",
+      "./package.json": "./package.json",
+      "./panel": "./src/panel.mjs",
+      "./planner": "./src/planner.mjs"
+    },
+    "main": "./src/plugin.mjs",
+    "name": "dsh-memory-delta",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f835e9976c5a73ac1e262b67656a3456c6af116a44bbac2b4961826525333ccd/lpf20200901/dsh-memory-delta",
     "description": "给 AI 编码助手的跨会话长期记忆：自动注入、只推变化。DSH 插件 + 零依赖 CLI。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Layered, auto-injected cross-session memory for AI coding agents. A DSH (DeepSeek Harness) plugin, plus a zero-dependency standalone CLI. It borrows the spec / change / archive discipline from OpenSpec — but pushes instead of pulls."
   },
   "schemaVersion": 1,
   "scripts": {

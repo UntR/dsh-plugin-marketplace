@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "c0ddddff306aa49aef43b487ca156b687fea9571"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1377871890",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-sync",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:mpetruc/dsh-model-sync#c0ddddff306aa49aef43b487ca156b687fea9571",
+    "version": "0.7.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.6",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-model-sync",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5a6b3e1c9242ba8c75c3d312e3af86d4c17736f5664cddddd4730231a6a600a9/mpetruc/dsh-model-sync",
     "description": "Auto-populate and auto-update the list of llm-pi-ai providers' models. No more hand-typing and manually keeping up-to-date with your inference server."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Mirror each configured llm-pi-ai provider's advertised model list into the Settings → Models section, so the model dropdown shows the provider's full model list without hand-entry. Discovery goes through the llm service's discoverModels('llm-pi-ai', …) — GET {baseURL}/models for "
   },
   "schemaVersion": 1,
   "scripts": {

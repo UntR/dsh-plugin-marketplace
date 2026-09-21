@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "c9d990f442dfb98fbec9ffe4ebf4e12ec75af657"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1375773025",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-healthcheck",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:neufagents/dsh-healthcheck#c9d990f442dfb98fbec9ffe4ebf4e12ec75af657",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      }
+    },
+    "main": "dist/index.js",
+    "name": "dsh-healthcheck",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f9a702962599491d04d0e784de39bc539db19756a93aaedd9f8ffc6b0d788af2/neufagents/dsh-healthcheck",
     "description": "Runtime health check for DeepSeek Harness: session-library scan + crash-tail inspection. Read-only."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Runtime health check for DeepSeek Harness (dsh). Read-only. Zero config."
   },
   "schemaVersion": 1,
   "scripts": {

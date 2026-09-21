@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "da1f88ca682412b1e29d53449642f61fef5fd134"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1376952839",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-process-control",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:HFUT-zhengjiahao/dsh-process-control#da1f88ca682412b1e29d53449642f61fef5fd134",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-process-control",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fa5b96df9ebca8f26e30430a61555d3dfff48aab921011197b6644aa4334227a/HFUT-zhengjiahao/dsh-process-control",
     "description": "Local-only stop and restart controls for DeepSeek Harness (DSH) — a sidebar plugin with loopback-only process routes"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个独立的 DeepSeek Harness Web 插件，在左侧栏底部提供“重启服务”和“终止服务”。它通过官方的 sidebar.footer.action 插槽挂载 UI，通过官方 webServer 注册 loopback-only HTTP 路由控制当前 Harness 进程。"
   },
   "schemaVersion": 1,
   "scripts": {

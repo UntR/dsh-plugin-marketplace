@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "d922b7f2c39f6101e644e58b43258ab3435ffd5a"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1373669965",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-git-status-pill",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:luigiinred/dsh-git-status-pill#d922b7f2c39f6101e644e58b43258ab3435ffd5a",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-git-status-pill",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f3497ef5f6441854d16740664d54639cb53636ef25f6ae4bc58e0a7d4248dfa7/luigiinred/dsh-git-status-pill",
     "description": "Floating git status pill for DeepSeek Harness: live branch, +/- line changes and a Create PR prompt."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A floating git status pill for DeepSeek Harness. It shows, live, for the session's repository:"
   },
   "schemaVersion": 1,
   "scripts": {

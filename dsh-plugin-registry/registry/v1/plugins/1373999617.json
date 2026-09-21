@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
-    "headSha": "75a1f845a8b6dd057d9c9d2b37b5c8bfbe8ca6b1"
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
+    "headSha": "ee1290fb4c6f70d54f49eef9401b1e793b25eefa"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Claude Code-style @path imports for DeepSeek Harness: expands @imports in AGENTS.md/CLAUDE.md and injects referenced files into context at session start",
     "fork": false,
     "forks": 0,
-    "headSha": "75a1f845a8b6dd057d9c9d2b37b5c8bfbe8ca6b1",
+    "headSha": "ee1290fb4c6f70d54f49eef9401b1e793b25eefa",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUeWSAQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a6999a8b42c46c9fd50ce93b3585628862d47c293deb42205dd98399ab94fd9d/ciskonc/dsh-context-imports",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7a3b8550c401de2b08e13bff210f360e9a1b51851393185b94662494d06314cc/ciskonc/dsh-context-imports",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/18440981?u=6a0681a80b4ba8cfd87dbd1f730e09da9f3ab5f3&v=4",
       "login": "ciskonc"
     },
-    "pushedAt": "2026-09-18T12:47:03Z",
+    "pushedAt": "2026-09-21T07:26:30Z",
     "slug": "ciskonc/dsh-context-imports",
     "stars": 6,
     "topics": [
@@ -41,32 +41,48 @@
       "dsh-plugin",
       "llm-memory"
     ],
-    "updatedAt": "2026-09-20T02:25:56Z",
+    "updatedAt": "2026-09-21T07:26:01Z",
     "url": "https://github.com/ciskonc/dsh-context-imports"
   },
   "id": "gh:1373999617",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-context-imports",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-context-imports@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-context-imports",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a6999a8b42c46c9fd50ce93b3585628862d47c293deb42205dd98399ab94fd9d/ciskonc/dsh-context-imports",
+    "coverUrl": "https://opengraph.githubassets.com/7a3b8550c401de2b08e13bff210f360e9a1b51851393185b94662494d06314cc/ciskonc/dsh-context-imports",
     "description": "Claude Code-style @path imports for DeepSeek Harness: expands @imports in AGENTS.md/CLAUDE.md and injects referenced files into context at session start"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Inject the files referenced from AGENTS.md into model context at session start."
   },
   "schemaVersion": 1,
   "scripts": {

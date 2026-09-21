@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "621e5035f9bc486df461b6177ff29a3bd6fcd8e4"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1374187223",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-offpeak-job",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ganningniang/dsh-offpeak-job#621e5035f9bc486df461b6177ff29a3bd6fcd8e4",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-offpeak-job",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/92ba12dab21b099e1f4105faeb610e9ad83ee73f397f5fad0ab96d951b5d41cf/ganningniang/dsh-offpeak-job",
     "description": "DeepSeek Harness 的谷时调度插件——把任务留到谷时再运行。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Off-peak scheduling for DeepSeek Harness — park chats until cheaper hours, pause at peak if you want, and keep an eye on waiting work from the sidebar."
   },
   "schemaVersion": 1,
   "scripts": {

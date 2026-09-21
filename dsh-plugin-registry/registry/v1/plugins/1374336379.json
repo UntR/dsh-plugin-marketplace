@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "f41d9524d871c0054e7bb06afd61313785096ce3"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1374336379",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-run",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:albertgranados/dsh-run#f41d9524d871c0054e7bb06afd61313785096ce3",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-run",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f39f271757af4c9862af0547a6b24d59e03246c531275931a077996cf109e20c/albertgranados/dsh-run",
     "description": "DeepSeek Harness web plugin: a Session-header split button that runs npm scripts from the workspace's package.json (default: dev, else start, else the first declared)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Plugin del DeepSeek Harness que añade, arriba a la derecha de la cabecera de sesión (junto al botón Open in…), un botón compuesto para los scripts de npm del proyecto abierto."
   },
   "schemaVersion": 1,
   "scripts": {

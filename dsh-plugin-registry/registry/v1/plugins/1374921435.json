@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "e56b72caf2875c341f7a7396f58593ddde3e2407"
   },
   "github": {
@@ -46,27 +46,43 @@
   },
   "id": "gh:1374921435",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-agent-graph",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-agent-graph@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": {
+        "default": "./dist/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-agent-graph",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bd771da01218666decc3a8513133b8a120df1bae7c1801a9a04a7922dfbec817/wrc093/dsh-agent-graph",
     "description": "Graph orchestration for DeepSeek Harness: scoped agent nodes, structured handoffs, bounded rework, and a layered global ledger."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A task such as “deliver this feature” can be split into nodes that each own one scope: research, spec, implementation, test plan, tests. dsh-agent-graph runs that graph. Every node is a fresh DSH subagent; an upstream node hands its delivery downstream as a structured contract; a"
   },
   "schemaVersion": 1,
   "scripts": {

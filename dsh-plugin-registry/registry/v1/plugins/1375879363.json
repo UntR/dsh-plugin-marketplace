@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "a7071ad32e65a167b89218663a68d98c6eab5a8e"
   },
   "github": {
@@ -52,27 +52,45 @@
   },
   "id": "gh:1375879363",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-time-machine",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:GeoSyntax/dsh-plugin-time-machine#a7071ad32e65a167b89218663a68d98c6eab5a8e",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "require": "./dist/index.cjs",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": {
+        "import": "./dist/client.js",
+        "require": "./dist/client.cjs",
+        "types": "./dist/client.d.ts"
+      }
+    },
+    "main": "dist/index.cjs",
+    "name": "dsh-plugin-time-machine",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b7bdf4445b5030234596a6eeaeda2d8f85c8e1b1668a0b596f639bfb98b2e192/GeoSyntax/dsh-plugin-time-machine",
     "description": "Community DSH plugin for coordinated session/workspace checkpoints, safe rewind, DAG forks, and failure reflection."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness 补上工作区回滚、会话分叉和失败反思。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "failed",
-    "headSha": "da00daa063f022d7ccf61d2148bb7cc15ccb9d17"
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
+    "headSha": "82e58c020d1b03e8e547daed082b862fd67fc73a"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Zero-token contract check for DSH plugins — verifies output.render() / session-event vocabulary, warn-only. 无耗检查：DSH 插件契约体检，零 token 成本，只告警不拦截。",
     "fork": false,
     "forks": 0,
-    "headSha": "da00daa063f022d7ccf61d2148bb7cc15ccb9d17",
+    "headSha": "82e58c020d1b03e8e547daed082b862fd67fc73a",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUhhLow",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/18bd97a0467c666796ddcafe859428cb6f773a088cda5bfca556f792606908cc/imtokenxinluo/dsh-contract-check",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c86f8d493bd228c70ce494a01efacd9a98df6c55b6c781092731c67b1bba068c/imtokenxinluo/dsh-contract-check",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/331249215?v=4",
       "login": "imtokenxinluo"
     },
-    "pushedAt": "2026-09-19T16:30:07Z",
+    "pushedAt": "2026-09-20T14:39:46Z",
     "slug": "imtokenxinluo/dsh-contract-check",
     "stars": 0,
     "topics": [
@@ -40,32 +40,56 @@
       "dsh-plugin",
       "plugin-audit"
     ],
-    "updatedAt": "2026-09-19T16:54:12Z",
+    "updatedAt": "2026-09-20T14:39:49Z",
     "url": "https://github.com/imtokenxinluo/dsh-contract-check"
   },
   "id": "gh:1377323939",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-contract-check",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-contract-check@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./event-vocab": {
+        "default": "./src/event-vocab.js"
+      },
+      "./package.json": "./package.json",
+      "./plugin": {
+        "default": "./src/plugin.js"
+      },
+      "./scan-source": {
+        "default": "./src/scan-source.js"
+      }
+    },
+    "main": "src/index.js",
+    "name": "dsh-contract-check",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/18bd97a0467c666796ddcafe859428cb6f773a088cda5bfca556f792606908cc/imtokenxinluo/dsh-contract-check",
+    "coverUrl": "https://opengraph.githubassets.com/c86f8d493bd228c70ce494a01efacd9a98df6c55b6c781092731c67b1bba068c/imtokenxinluo/dsh-contract-check",
     "description": "Zero-token contract check for DSH plugins — verifies output.render() / session-event vocabulary, warn-only. 无耗检查：DSH 插件契约体检，零 token 成本，只告警不拦截。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "它检查「契约合规」，不检测恶意，也不拦截执行。"
   },
   "schemaVersion": 1,
   "scripts": {

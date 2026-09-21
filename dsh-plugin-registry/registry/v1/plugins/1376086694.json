@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "bbafcc2fe9ec56042746119e1b7882dee9ffae70"
   },
   "github": {
@@ -48,27 +48,42 @@
   },
   "id": "gh:1376086694",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-commandcode-goat",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Plocr/dsh-commandcode-goat#bbafcc2fe9ec56042746119e1b7882dee9ffae70",
+    "version": "0.4.8"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-commandcode-goat",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.8"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2ce149b1d527bf9a263c292e2a6bf86a491642a81971850251820321deecface/Plocr/dsh-commandcode-goat",
     "description": "DeepSeek Harness (dsh) plugin: publishes a Command Code subscription (GOAT / Pro / Max) as llm-pi-ai provider routes, with account usage and web search on the same credential."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：把 Command Code 订阅（GOAT / Pro / Max） 接成 DeepSeek Harness 的模型供应商，并附带账户用量与联网搜索——全部走同一把账户密钥。"
   },
   "schemaVersion": 1,
   "scripts": {

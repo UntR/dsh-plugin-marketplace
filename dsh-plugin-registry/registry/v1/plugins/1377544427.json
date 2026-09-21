@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "fc86c1cf16bbb635ba236f33c92f60b214f990c2"
   },
   "github": {
@@ -50,27 +50,38 @@
   },
   "id": "gh:1377544427",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mail",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lucagiftzek/dsh-mail#fc86c1cf16bbb635ba236f33c92f60b214f990c2",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-mail",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3379f899fa306cab6f29fa17ff05f0f3e4a5dd38c8fa141f43bdb985d0cebc34/lucagiftzek/dsh-mail",
     "description": "DSH plugin for agent email tools: send, mass send (CSV-personalised), scheduled queue, inbox read, domains. Multi-provider: Lettermint, AgentMail, Resend, OVH SMTP, manual SMTP, local self-host."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Agent email tools for the DeepSeek Harness. Send, mass-send (CSV-personalised), schedule, read inbox, list domains, and queue emails for manual review — all from the sidebar Mail tab, with 6 provider backends."
   },
   "schemaVersion": 1,
   "scripts": {

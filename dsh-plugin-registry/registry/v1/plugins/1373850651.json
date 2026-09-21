@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "4741dfeb4fe3bf07301cd6aff8d7519c1471501a"
   },
   "github": {
@@ -44,27 +44,41 @@
   },
   "id": "gh:1373850651",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-browser-use",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:mugnimaestra/dsh-browser-use#4741dfeb4fe3bf07301cd6aff8d7519c1471501a",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./index.js",
+        "types": "./index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-browser-use",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2efeba7a7adab1292eca14736e47f1bbcc034be314fff11c3ffdd702f42e1197/mugnimaestra/dsh-browser-use",
     "description": "DeepSeek Harness Agent Preset bridge for Open Browser Use WebMCP"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-browser-use is an opt-in browser-use plugin for DeepSeek Harness (dsh). It connects the existing Open Browser Use stdio MCP server to an Agent Preset through @deepseek-ai/dsh-mcp-client."
   },
   "schemaVersion": 1,
   "scripts": {

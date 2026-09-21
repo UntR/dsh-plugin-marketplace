@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "de04c3d88c1de7b640870f0f6d755810a722eca3"
   },
   "github": {
@@ -48,27 +48,37 @@
   },
   "id": "gh:1377810430",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-trusted-proxy-auth",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lukepoo101/dsh-trusted-proxy-auth#de04c3d88c1de7b640870f0f6d755810a722eca3",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-trusted-proxy-auth",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1a7727091a408c832d24c7a437891cd4e484f006dac519031c47fcf25c09bbec/lukepoo101/dsh-trusted-proxy-auth",
     "description": "DeepSeek Harness plugin that trusts authentication already performed by a reverse proxy (Traefik + Keycloak OIDC) while keeping native DSH browser authentication as a fallback."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A small, host-only DeepSeek Harness (DSH) plugin that adds a second, independent authentication path for deployments fronted by a trusted reverse proxy — for example Traefik → Keycloak OIDC → DSH."
   },
   "schemaVersion": 1,
   "scripts": {

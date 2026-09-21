@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "31f0be4bedb1776c16ed97cb2655b64533b42fac"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1374109976",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-console-tap-ui",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:akvi0921/dsh-console-tap#31f0be4bedb1776c16ed97cb2655b64533b42fac",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/host.js",
+    "name": "@local/dsh-console-tap-ui",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/53441624f146823695f5b1084c1ae437ac97324e1297a880ef41dc3a6fcadb69/akvi0921/dsh-console-tap",
-    "description": "DSH 控制台显形插件:把助手执行的命令与完整控制台输出实时推给前端(官方 WebUI 悬浮控制台)"
+    "description": "【已停止维护/归档】旧版控制台显形插件 → 新插件见 akvi0921/dsh-build-progress"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "本仓库(dsh-console-tap)是\"控制台显形\"插件(推送命令 + 完整 stdout/stderr + 悬浮控制台)的旧版本, 已不再维护,其功能已按下述收敛:"
   },
   "schemaVersion": 1,
   "scripts": {

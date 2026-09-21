@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "0f87e7ecf13fe8e5f090c05cff71e648cf332111"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1374412690",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-brake",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Mlte0907/dsh-brake#0f87e7ecf13fe8e5f090c05cff71e648cf332111",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-brake",
+    "status": "valid",
+    "type": "commonjs",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5f493549dfaefb8a26fd7895122b9553bb70236f4516adc70f4881a17c194fa0/Mlte0907/dsh-brake",
     "description": "DSH 死循环刹车器：检测 agent 会话中的方法循环（同类工具高频调用），注入警告或拒绝执行"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-brake is a DSH plugin that keeps agent sessions from spinning: it watches executed tool calls and newly injected context, and warns the model when the same work repeats without progress. It detects repeated identical calls, repeating call sequences, and duplicated text blocks"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "5e9b25cdfb33e3c4025bd1d51bbaaad04a986f99"
   },
   "github": {
@@ -38,27 +38,38 @@
   },
   "id": "gh:1374936727",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-turn-hard-delete",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-turn-hard-delete@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-turn-hard-delete",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/92a5e47cb6f72951562f537841f77ea6c068e9dc7bed72165488b6dbe19e0f87/shuanzhe/dsh-turn-hard-delete",
     "description": "Delete a complete turn (question + answer + tool calls) from a DeepSeek Harness session, without deleting the session."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Delete one complete closed turn (question + answer + tool calls) from a DeepSeek Harness session, without deleting the session. The deletion is recorded in the session log, so the turn stays gone after reloading."
   },
   "schemaVersion": 1,
   "scripts": {

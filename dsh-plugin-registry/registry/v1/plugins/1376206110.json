@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "93850a4bf761bbb1879dfecf0c7387800b8a265f"
   },
   "github": {
@@ -47,33 +47,46 @@
   },
   "id": "gh:1376206110",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-hunyuan-3d",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:JJTovo/dsh-hunyuan-3d#93850a4bf761bbb1879dfecf0c7387800b8a265f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./settings": "./src/settings.js",
+      "./tc3": "./src/tc3.js"
+    },
+    "main": "src/index.js",
+    "name": "dsh-hunyuan-3d",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5fb5dd89a555453de4c7908a710db0fdaa56648f1eb9b45f71093796a1218e10/JJTovo/dsh-hunyuan-3d",
     "description": "Tencent Cloud Hunyuan 3D (ai3d / HunyuanTo3D) modeling tools for dsh: text-to-3D and image-to-3D job submission, result polling, and on-disk asset download so other tools can consume a real file path."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Tencent Cloud Hunyuan 3D (混元生3D, the ai3d OpenAPI) as dsh agent tools: text-to-3D and image-to-3D job submission, result polling, and on-disk asset download so later turns and other tools (Blender, format converters) can consume a real file path."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

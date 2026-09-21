@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
     "enrichmentStatus": "ok",
-    "headSha": "73ba7da034590f39d96bd755fcb4cc5ef407cedb"
+    "headSha": "7b80320e417cc985bab42f0c903f42f78fbd1697"
   },
   "github": {
     "archived": false,
@@ -17,34 +17,34 @@
     "description": "Vault observation plugin for DeepSeek Harness: Obsidian vault metadata snapshot + edit stats + observation panel",
     "fork": false,
     "forks": 0,
-    "headSha": "73ba7da034590f39d96bd755fcb4cc5ef407cedb",
+    "headSha": "7b80320e417cc985bab42f0c903f42f78fbd1697",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOUC04LQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/6f828a513b06370b1e9cc8b1b3e1e000496c4f4ac49b3b442d85c9bf4377a990/chemmy-11/dsh-nexus",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/3c3432062577594b3dfb3c9cc326c63d12b686ad5b3faa80ee3332bee93ad2b5/chemmy-11/dsh-nautilus",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/176859491?u=b15438048f152b539949bac0812e5e490e8fc1b6&v=4",
       "login": "chemmy-11"
     },
-    "pushedAt": "2026-09-13T03:42:16Z",
-    "slug": "chemmy-11/dsh-nexus",
+    "pushedAt": "2026-09-21T04:35:04Z",
+    "slug": "chemmy-11/dsh-nautilus",
     "stars": 1,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-12T17:00:31Z",
-    "url": "https://github.com/chemmy-11/dsh-nexus"
+    "updatedAt": "2026-09-20T11:54:26Z",
+    "url": "https://github.com/chemmy-11/dsh-nautilus"
   },
   "id": "gh:1345140781",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose a ready package entry point.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@dsh-external/dsh-nautilus",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:chemmy-11/dsh-nautilus#7b80320e417cc985bab42f0c903f42f78fbd1697",
+    "version": "0.0.1"
   },
   "npm": {
     "latestVersion": null,
@@ -61,27 +61,31 @@
         "default": "./lib/client.js",
         "types": "./lib/types/client/index.d.ts"
       },
-      "./package.json": "./package.json"
+      "./package.json": "./package.json",
+      "./pulse": {
+        "default": "./lib/pulse/index.js",
+        "types": "./lib/types/pulse/index.d.ts"
+      }
     },
     "main": "./lib/index.js",
-    "name": "@dsh-external/dsh-nexus",
+    "name": "@dsh-external/dsh-nautilus",
     "status": "valid",
     "type": "module",
     "version": "0.0.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/6f828a513b06370b1e9cc8b1b3e1e000496c4f4ac49b3b442d85c9bf4377a990/chemmy-11/dsh-nexus",
+    "coverUrl": "https://opengraph.githubassets.com/3c3432062577594b3dfb3c9cc326c63d12b686ad5b3faa80ee3332bee93ad2b5/chemmy-11/dsh-nautilus",
     "description": "Vault observation plugin for DeepSeek Harness: Obsidian vault metadata snapshot + edit stats + observation panel"
   },
   "readme": {
     "available": true,
-    "excerpt": "DeepSeek Harness（dsh）的观测插件（@dsh-external/dsh-nexus）：为 Obsidian vault 与 AI 会话提供双面板量化观测——vault 侧元数据快照与编辑统计，会话侧逐轮遥测与形态分析。对 vault 只读，观测数据全部私有化存储（/.dsh/nexus/），重启/重载不丢不重。"
+    "excerpt": "DeepSeek Harness（dsh）的观测插件（@dsh-external/dsh-nautilus）：会话级量化观测——逐轮遥测（token/缓存/耗时/tps + 自评）与形态分析，外加 OS/GPU 采集层（pulse）。观测数据全部私有化存储（/.dsh/nautilus/），重启/重载不丢不重。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

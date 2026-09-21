@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "18542a27d7d49ba42d979e215c7fb79cc37a056b"
   },
   "github": {
@@ -53,27 +53,39 @@
   },
   "id": "gh:1377887977",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-helper-plugin-command-ask",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:x102201/dsh-helper-plugin-command-ask#18542a27d7d49ba42d979e215c7fb79cc37a056b",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./lib/*": "./lib/*",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-helper-plugin-command-ask",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1377887977/2af8639c-9088-4b17-ad1d-bb88aa868fa7",
     "description": "dsh-helper plugin: a Cursor-style /ask mode for DeepSeek Harness — /ask <question> answers read-only for one turn (cited, no edits, enforced by a tool guard), then the next message is ordinary work again. ｜ 中文：dsh-helper 插件——为 DeepSeek Harness 提供 /ask 只读问答模式，一轮即释放，内置工具守卫强制只读。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An /ask mode for DeepSeek Harness (dsh), modeled on the shipped /plan mode and on Cursor's Ask mode: a read-only Q&A answer for the turn the question belongs to."
   },
   "schemaVersion": 1,
   "scripts": {

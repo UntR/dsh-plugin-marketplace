@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "9f65ad2b03c2554425cbcfdfc9c3bd1eb3e0ee4c"
   },
   "github": {
@@ -49,27 +49,50 @@
   },
   "id": "gh:1376256933",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-locale-ru",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:solodov123123-blip/dsh-locale-ru#9f65ad2b03c2554425cbcfdfc9c3bd1eb3e0ee4c",
+    "version": "0.1.0-rc.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-locale-ru",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-rc.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c6ede1d5863e27a3beabd0ac78d68cb2da9fd6f0c65bdd4a913c6d31b8ecf31a/solodov123123-blip/dsh-locale-ru",
     "description": "Russian localization for DeepSeek Harness (34 UI dictionaries, Cordis runtime, dynamic DOM translator)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Комплексный плагин русской локализации для DeepSeek Harness (DSH) и десктопного клиента DSH Desktop."
   },
   "schemaVersion": 1,
   "scripts": {

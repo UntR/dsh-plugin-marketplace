@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "8c8d7f31fe7ee0c03b4f28c93f99b21df64fffc9"
   },
   "github": {
@@ -47,27 +47,44 @@
   },
   "id": "gh:1376167500",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-context-memory",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-context-memory@0.6.1",
+    "version": "0.6.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.6.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/memory.web.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-context-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b07193dd5fbe2fcb611e0683494fde156193fc56d314bb2c940dda51dcd9a29d/hj01857655/dsh-context-memory",
-    "description": ""
+    "description": "Cross-session memory for your dsh agent — remembered, recalled, and re-verified instead of assumed."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Cross-session memory for your dsh agent — remembered, recalled, and re-verified instead of assumed."
   },
   "schemaVersion": 1,
   "scripts": {

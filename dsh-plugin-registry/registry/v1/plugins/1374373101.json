@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "494f5d4926acb4d0c9aa3256d1c19b9e30c9cccf"
   },
   "github": {
@@ -45,27 +45,42 @@
   },
   "id": "gh:1374373101",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-run-environment",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:albertgranados/dsh-run-environment#494f5d4926acb4d0c9aa3256d1c19b9e30c9cccf",
+    "version": "0.8.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-run-environment",
+    "status": "valid",
+    "type": "module",
+    "version": "0.8.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cf9078092aa2e0d457f3319504e4389e74254b5fa888bcd283fe2f7a7e02b586/albertgranados/dsh-run-environment",
     "description": "DeepSeek Harness plugin: run the project you have open, from the harness you are already in. Detects how a workspace is meant to be run (Node.js today, adapters for more) and runs it from the Session header."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Run the project you have open, from the harness you are already in."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "60d98aee104ebbc8fdcb2b2f1aa5e3a4b91573d0"
   },
   "github": {
@@ -45,20 +45,32 @@
   },
   "id": "gh:1375422118",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "repo-autopilot-plugin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:AristotleAsborg/repo-autopilot-plugin#60d98aee104ebbc8fdcb2b2f1aa5e3a4b91573d0",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./host.js": "./host.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "repo-autopilot-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/87bc20eb7addecc952172f38b9bb8f8b05feaf3f776898d838cba88dc8aa6dd9/AristotleAsborg/repo-autopilot-plugin",
     "description": "把 repo-autopilot 的只读检查注册成 DeepSeek Harness 工具｜doctor / drill / acceptance / compare｜只读、零凭证、零写入"

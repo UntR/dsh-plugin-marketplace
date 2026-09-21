@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "dce1e76f2dff222626e160b4132fdcb67a88f4fb"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1375817282",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-voice-dictation",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dytom18/dsh-plugin-voice-dictation#dce1e76f2dff222626e160b4132fdcb67a88f4fb",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-voice-dictation",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/46c5b4a5dcd25ffb70b99486a9f82768c943411087d22117a1142b01f3b539e0/dytom18/dsh-plugin-voice-dictation",
     "description": "说话即任务：给 DSH Web GUI 加语音听写，说完自动发送给 Agent（纯前端，无需 API Key）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "纯浏览器端实现：使用浏览器内建的 Web Speech API（Chrome / Edge 自带在线语音识别，无需任何 API Key、无需联网配置密钥、无需构建）。"
   },
   "schemaVersion": 1,
   "scripts": {

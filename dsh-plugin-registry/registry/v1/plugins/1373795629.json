@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "2cddce07cdab0a47b7a092f28b65d7e6f9d31771"
   },
   "github": {
@@ -41,27 +41,45 @@
   },
   "id": "gh:1373795629",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-prompt-optimizer",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:EmotionG/dsh-prompt-optimizer#2cddce07cdab0a47b7a092f28b65d7e6f9d31771",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "2.0.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-prompt-optimizer",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9ac39e486043f9224c898be01c9ad04b307fb49885fa24b9997cd761247dae09/EmotionG/dsh-prompt-optimizer",
     "description": "优化提示词"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 常驻插件（非动态沙箱包）：在聊天输入框右上角（conversation.input.right）注册「普通模式 / ✨ 优化模式」切换。优化模式下基于当前会话上下文、复用当前会话选择的模型优化输入框草稿，结果回填后仍可继续编辑。"
   },
   "schemaVersion": 1,
   "scripts": {

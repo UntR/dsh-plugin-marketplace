@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "5ca3518892007aabf96cbd9448563276aff85785"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1377995490",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-find-all",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Ryuu-64/dsh-find-all#5ca3518892007aabf96cbd9448563276aff85785",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-find-all",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a9da8ed265e036ec37237ae0126ed24b804b17df7856e244c75d3818fa622dc4/Ryuu-64/dsh-find-all",
     "description": "DSH web plugin: a Cmd/Ctrl+F find bar for the DeepSeek Harness desktop shell that searches the WHOLE conversation, not just the rendered tail."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH web 插件：给桌面 App（Electron 壳）补上 ⌘F / Ctrl+F 页内查找，并且搜的是整段会话，不只是屏幕上已经渲染出来的那一截。"
   },
   "schemaVersion": 1,
   "scripts": {

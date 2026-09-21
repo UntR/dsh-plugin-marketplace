@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-20T09:00:45.156Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-21T09:26:52.244Z",
+    "enrichmentStatus": "ok",
     "headSha": "7d381c69ee88ff5bab3c8a4988c109e8e4219c84"
   },
   "github": {
@@ -48,27 +48,43 @@
   },
   "id": "gh:1378012028",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-manager",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wjackiedev/dsh-session-manager#7d381c69ee88ff5bab3c8a4988c109e8e4219c84",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-session-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e1fea26a5f7a5c0a9c31968f4f6235b6bdcfc0ce551df72936d710f3d99531f4/wjackiedev/dsh-session-manager",
     "description": "Archived-session manager for the DeepSeek Harness Web GUI — restore and permanently delete session logs."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness Web GUI 的会话管理插件：在 设置 → 会话管理 里列出全部会话（含已归档），支持筛选、归档/恢复，以及把会话的本地日志目录物理删除。"
   },
   "schemaVersion": 1,
   "scripts": {
