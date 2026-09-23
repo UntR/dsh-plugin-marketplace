@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-22T09:02:44.797Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-23T09:05:39.182Z",
+    "enrichmentStatus": "ok",
     "headSha": "bc2270fabd29da0d5683f95079c458f7a6cb56d7"
   },
   "github": {
@@ -44,17 +44,17 @@
   "id": "gh:1367482095",
   "install": {
     "available": true,
-    "packageName": "dsh-super-agent",
-    "preferred": "github",
+    "packageName": "dsh-super-code",
+    "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:ArtlexYoung/dsh-super-code#1e2887e5a8959333916cafcbf01cc25d8d49d014",
-    "version": "0.0.6"
+    "spec": "dsh-super-code@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": "0.0.5",
+    "latestVersion": "0.1.2",
     "published": true,
-    "repositoryMatches": false
+    "repositoryMatches": true
   },
   "package": {
     "exports": {
@@ -63,30 +63,38 @@
         "types": "./lib/index.d.ts"
       },
       "./client": "./client/index.js",
-      "./core/*": {
-        "default": "./lib/core/*.js",
-        "types": "./lib/core/*.d.ts"
-      },
       "./dsh": {
         "default": "./lib/dsh/index.js",
         "types": "./lib/dsh/index.d.ts"
       },
+      "./evaluation": {
+        "default": "./lib/core/evaluation.js",
+        "types": "./lib/core/evaluation.d.ts"
+      },
+      "./experiments": {
+        "default": "./lib/experiments.js",
+        "types": "./lib/experiments.d.ts"
+      },
       "./package.json": "./package.json",
-      "./presets/*": "./presets/*"
+      "./presets/*": "./presets/*",
+      "./super-code": {
+        "default": "./lib/dsh/super-code.js",
+        "types": "./lib/dsh/super-code.d.ts"
+      }
     },
     "main": "lib/index.js",
-    "name": "dsh-super-agent",
+    "name": "dsh-super-code",
     "status": "valid",
     "type": "module",
-    "version": "0.0.6"
+    "version": "0.1.0"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/02077cd246d6a40272404bf539323377cf87f76164e7611090999ac3f08103e2/ArtlexYoung/dsh-super-code",
-    "description": "面向 DeepSeek Harness 的场景化 Agent 预设，覆盖单人交付、团队委派、方案调研和优化实验。Scenario-focused DeepSeek Harness agent presets for solo delivery, team delegation, evidence-based research, and optimization experiments."
+    "description": "一个更快、更节省、更准确的 DeepSeek Harness 插编码件。在 SWE-bench Pro 最难的 100 道题中，回答耗时减少 36%，每题token减少 17%，正确率甚至增加了 5%。A faster, more accurate, and more cost-effective DeepSeek Harness plug-in component. Among the 100 most difficult questions in SWE-bench Pro, the response time -36%, tokens per qu"
   },
   "readme": {
     "available": true,
-    "excerpt": "dsh-super-agent 是 DeepSeek Harness 的场景化 preset 和任务协议插件。 一个包提供“执行方式 × 工作场景”的组合：执行方式决定由一个 Agent 还是任务团队完成，工作场景决定交付、研究或优化时使用的验收纪律。"
+    "excerpt": "一个更快、更节省、更准确的 DeepSeek Harness 编码插件。"
   },
   "schemaVersion": 1,
   "scripts": {

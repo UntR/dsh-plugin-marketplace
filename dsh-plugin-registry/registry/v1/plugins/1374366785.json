@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-22T09:02:44.797Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-23T09:05:39.182Z",
+    "enrichmentStatus": "ok",
     "headSha": "1792f184fab80a26a400ad6bb30e1651d12a8d81"
   },
   "github": {
@@ -46,27 +46,57 @@
   },
   "id": "gh:1374366785",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-niubash-only",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-niubash-only@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./dialect": {
+        "default": "./lib/dialect.js"
+      },
+      "./executor": {
+        "default": "./lib/executor.js"
+      },
+      "./guard": {
+        "default": "./lib/guard.js"
+      },
+      "./guide": {
+        "default": "./lib/guide.js"
+      },
+      "./niubash": {
+        "default": "./lib/niubash.js"
+      },
+      "./package.json": "./package.json",
+      "./teaching": {
+        "default": "./lib/teaching.js"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-niubash-only",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/88142135e0ff244f9e0e6ac63db7f2ebd6c72b668ee926b340cdadeba9b08cf6/YMRwithNoworry/dsh-niubash-only",
     "description": "DeepSeek Harness (dsh) bundle: Niubash as the only shell executor + Bash-on-Windows teaching. Install with: dsh plugin --profile web add github:YMRwithNoworry/dsh-niubash-only"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DeepSeek Harness（dsh）的唯一 shell 换成 Niubash，并教会模型写 Niubash 支持的 Bash 的 Profile Bundle。"
   },
   "schemaVersion": 1,
   "scripts": {

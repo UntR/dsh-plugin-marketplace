@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-22T09:02:44.797Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-23T09:05:39.182Z",
+    "enrichmentStatus": "ok",
     "headSha": "7a525af919c424d13256170abb12ffb7ab835b54"
   },
   "github": {
@@ -41,13 +41,13 @@
   },
   "id": "gh:1363623855",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-conversation",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:huangfuren/dsh-conversation#7a525af919c424d13256170abb12ffb7ab835b54",
+    "version": "1.3.1"
   },
   "npm": {
     "latestVersion": null,
@@ -56,27 +56,23 @@
   },
   "package": {
     "exports": {
-      ".": {
-        "default": "./lib/index.js"
-      },
-      "./client": {
-        "default": "./lib/client.js"
-      },
+      ".": "./index.js",
+      "./client": "./client.js",
       "./package.json": "./package.json"
     },
-    "main": "lib/index.js",
+    "main": "index.js",
     "name": "dsh-conversation",
     "status": "valid",
     "type": "module",
-    "version": "1.1.0"
+    "version": "1.3.1"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fbe635683b8842c53a414cea79ddda5ce4c4dfea0398f60267f1e665078b9e06/huangfuren/dsh-conversation",
-    "description": "DSH web plugin: conversation outline panel - history questions (index + time) plus the assistant reply Markdown heading tree, with level slider, search, bookmarks, copy and click-to-jump."
+    "description": "DSH web plugin: conversation outline panel - user questions (index, time, per-turn stats) as root nodes with the assistant reply's Markdown headings beneath; three width tiers, density rail, search scope, bookmarks, Markdown export, section jump, keyboard nav, reading-position me"
   },
   "readme": {
     "available": true,
-    "excerpt": "Web 端「会话大纲」插件：在页面右上角贡献一个浮动面板，把当前会话组织成一棵大纲树 —— 用户提问是根节点（带序号与提问时间），助手回复里的 Markdown 标题按其层级挂到最近的提问下。点击任意一行跳到正文并短暂高亮。纯 UI 插件，不接触任何提示词、消息、工具结果，也不向提供方发起请求。"
+    "excerpt": "简体中文"
   },
   "schemaVersion": 1,
   "scripts": {

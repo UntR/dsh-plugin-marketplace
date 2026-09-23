@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-22T09:02:44.797Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-23T09:05:39.182Z",
+    "enrichmentStatus": "ok",
     "headSha": "887da1a90b4a48632d87ca4f858b7773c2b5c471"
   },
   "github": {
@@ -44,27 +44,43 @@
   },
   "id": "gh:1362269568",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-plugin/disk-sentinel",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wee-b/disk-sentinel#887da1a90b4a48632d87ca4f858b7773c2b5c471",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@dsh-plugin/disk-sentinel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f97b38271c31170a77aa1510d1f5c932ecca9e19b5f4c7d0be46b35e70c4c8c5/wee-b/disk-sentinel",
     "description": "DeepSeek Harness disk analysis and safe cleanup plugin for Windows."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的 Windows 磁盘分析与安全清理插件。安装后会在 DSH Web UI 中增加 “磁盘哨兵”入口，提供可视化磁盘扫描、软件占用排名、历史差量、AI 清理建议与开发环境迁移。"
   },
   "schemaVersion": 1,
   "scripts": {

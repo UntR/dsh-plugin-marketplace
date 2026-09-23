@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-22T09:02:44.797Z",
-    "enrichmentStatus": "stale",
-    "headSha": "066caa72679d6cf5ef83924d392b3825ded955d9"
+    "enrichedAt": "2026-09-23T09:05:39.182Z",
+    "enrichmentStatus": "ok",
+    "headSha": "b4d9820cc60035bf92f5f62b972208e3ba49fc95"
   },
   "github": {
     "archived": false,
@@ -17,20 +17,20 @@
     "description": "Multi-instance ComfyUI orchestration for DeepSeek Harness: give the agent a live view of every GPU in the farm and dispatch each generation job to the idlest instance instead of always hitting the busiest endpoint.",
     "fork": false,
     "forks": 0,
-    "headSha": "066caa72679d6cf5ef83924d392b3825ded955d9",
-    "homepageUrl": null,
+    "headSha": "b4d9820cc60035bf92f5f62b972208e3ba49fc95",
+    "homepageUrl": "https://github.com/BOWLUNA/dsh-zcode-farm/blob/main/docs/ARCHITECTURE.md",
     "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUexqiA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/319b41d58e3e37863ecde3156ad15e68b430fa568a77c03b320adc76a11c21a8/BOWLUNA/dsh-zcode-farm",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d2963a7d1ff96d04a331e675b54c812c9922615465241b556e432e478eb0c1f1/BOWLUNA/dsh-zcode-farm",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/295634528?u=92c60907c005b2911fc773e992e7bdfcc4303dd8&v=4",
       "login": "BOWLUNA"
     },
-    "pushedAt": "2026-09-22T01:25:54Z",
+    "pushedAt": "2026-09-22T16:37:00Z",
     "slug": "BOWLUNA/dsh-zcode-farm",
     "stars": 0,
     "topics": [
@@ -46,32 +46,44 @@
       "workflow",
       "zcode"
     ],
-    "updatedAt": "2026-09-22T01:25:58Z",
+    "updatedAt": "2026-09-22T16:37:05Z",
     "url": "https://github.com/BOWLUNA/dsh-zcode-farm"
   },
   "id": "gh:1374448264",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-zcode-farm",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:BOWLUNA/dsh-zcode-farm#b4d9820cc60035bf92f5f62b972208e3ba49fc95",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json",
+      "./src/farm.js": "./src/farm.js",
+      "./src/workflow.js": "./src/workflow.js"
+    },
+    "main": "./index.js",
+    "name": "dsh-zcode-farm",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/319b41d58e3e37863ecde3156ad15e68b430fa568a77c03b320adc76a11c21a8/BOWLUNA/dsh-zcode-farm",
-    "description": "DSH 的 ComfyUI 面板：在会话里驱动工作流、浏览与迭代生成结果｜ComfyUI panel for DeepSeek Harness"
+    "coverUrl": "https://opengraph.githubassets.com/d2963a7d1ff96d04a331e675b54c812c9922615465241b556e432e478eb0c1f1/BOWLUNA/dsh-zcode-farm",
+    "description": "Multi-instance ComfyUI orchestration for DeepSeek Harness: give the agent a live view of every GPU in the farm and dispatch each generation job to the idlest instance instead of always hitting the busiest endpoint."
   },
   "readme": {
     "available": true,
-    "excerpt": "状态：规划中（先做调研）· Status: planned, pending a scope decision. 尚无可用版本。"
+    "excerpt": "Zero runtime dependencies · Node ≥ 22 · MIT"
   },
   "schemaVersion": 1,
   "scripts": {

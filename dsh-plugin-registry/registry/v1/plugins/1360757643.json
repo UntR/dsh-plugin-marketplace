@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-22T09:02:44.797Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-23T09:05:39.182Z",
+    "enrichmentStatus": "ok",
     "headSha": "575f6583632aa54406501090ac8e6995dab1f53b"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1360757643",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-antigravity-bridge",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-antigravity-bridge@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-antigravity-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c7a1a826552091a9ab6d3d47dad3c9ff6f5289185e98e4f5e46008a81f385dd0/qvsix/dsh-antigravity-bridge",
     "description": "Google Antigravity conversations for DeepSeek Harness — list, read and import local Antigravity SQLite sessions as DSH sidebar sessions."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A Cordis plugin that opens Google Antigravity conversations inside DeepSeek Harness. Antigravity stores each conversation as SQLite + protobuf blobs under /.gemini/antigravity/conversations/.db; this plugin reads them and exposes them as native DSH tools and slash commands."
   },
   "schemaVersion": 1,
   "scripts": {

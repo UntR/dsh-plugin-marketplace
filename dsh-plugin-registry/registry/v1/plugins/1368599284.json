@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-22T09:02:44.797Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-23T09:05:39.182Z",
+    "enrichmentStatus": "ok",
     "headSha": "2223d107ae7cb0b2663c202393fee5bc44b27959"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1368599284",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-git-statusline",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:pinzza/dsh-git-statusline#2223d107ae7cb0b2663c202393fee5bc44b27959",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./git": "./lib/git.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-git-statusline",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/43973657ada5f9be5f392452210c1b27d8dd2c264117071cee2b015f6e0ff1ee/pinzza/dsh-git-statusline",
     "description": "DSH Web 侧边栏底部的紧凑 Git 状态插件，参考 ccstatusline-zh 的 Git widgets"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Web 的紧凑 Git 状态插件，参考 ccstatusline-zh 的 Git widgets。显示位置可在设置页切换：侧边栏底部（默认）、会话顶部标题后方、对话框上方、对话框下方，或关闭。"
   },
   "schemaVersion": 1,
   "scripts": {

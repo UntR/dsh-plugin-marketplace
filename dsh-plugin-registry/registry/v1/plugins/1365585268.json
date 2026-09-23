@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./packages/dsh-media-workbench/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-22T09:02:44.797Z",
-    "enrichmentStatus": "failed",
-    "headSha": "2b5b1dba04a8d2c42195b3f7e05b7bfd8b7e1d7e"
+    "enrichedAt": "2026-09-23T09:05:39.182Z",
+    "enrichmentStatus": "ok",
+    "headSha": "ac5cb4b8a457834eb6c5c47610d83eea9e926441"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH Desktop 内容运营工作台：选题、达人、排期与数据分析",
     "fork": false,
     "forks": 1,
-    "headSha": "2b5b1dba04a8d2c42195b3f7e05b7bfd8b7e1d7e",
+    "headSha": "ac5cb4b8a457834eb6c5c47610d83eea9e926441",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,44 +25,55 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUWUtdA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/25201bcfb2614fb8080dc85ce6a3f72b74867a597553b02b5b1d865561c3bbf1/cinderzhan/dsh-media-workbench",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c6999fc0d16406e39fec9c14284bbb5a52871a7b687874961d1dd834ef7959ca/cinderzhan/dsh-media-workbench",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/216988363?u=edcc4b132a056c570484921da12464f86f7fae8f&v=4",
       "login": "cinderzhan"
     },
-    "pushedAt": "2026-09-22T05:43:41Z",
+    "pushedAt": "2026-09-23T07:28:16Z",
     "slug": "cinderzhan/dsh-media-workbench",
     "stars": 1,
     "topics": [
       "dsh-plugin",
       "dsh-workbench"
     ],
-    "updatedAt": "2026-09-22T05:47:52Z",
+    "updatedAt": "2026-09-23T07:22:44Z",
     "url": "https://github.com/cinderzhan/dsh-media-workbench"
   },
   "id": "gh:1365585268",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-media-workbench",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:cinderzhan/dsh-media-workbench#ac5cb4b8a457834eb6c5c47610d83eea9e926441",
+    "version": "0.12.5"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./packages/dsh-media-workbench/index.mjs",
+      "./client": "./packages/dsh-media-workbench/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./packages/dsh-media-workbench/index.mjs",
+    "name": "dsh-media-workbench",
+    "status": "valid",
+    "type": "module",
+    "version": "0.12.5"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/25201bcfb2614fb8080dc85ce6a3f72b74867a597553b02b5b1d865561c3bbf1/cinderzhan/dsh-media-workbench",
+    "coverUrl": "https://opengraph.githubassets.com/c6999fc0d16406e39fec9c14284bbb5a52871a7b687874961d1dd834ef7959ca/cinderzhan/dsh-media-workbench",
     "description": "DSH Desktop 内容运营工作台：选题、达人、排期与数据分析"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "v0.12.2 兼容新旧 Desktop：提供 desktopWorkbenches 的宿主使用市场 customFrame 接口，旧宿主使用独立侧栏入口，不再因缺少市场服务阻塞启动。旧宿主未提供原生会话嵌入接口时，业务面板仍可用。详见 规范适配说明。 v0.10.0：图表支持即时悬停、点击和键盘数值提示；新发布链接必须关联官号选题，或达人与 Campaign。历史未关联链接可在数据采集的“待绑定”中补齐。见 UI/UX 检查报告。"
   },
   "schemaVersion": 1,
   "scripts": {
