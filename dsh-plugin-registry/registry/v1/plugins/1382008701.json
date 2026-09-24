@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./dsh.bundle.patch",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "99e4627e6c02666cef24ed3cf0cebb01702e1401"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1382008701",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-wx-preview",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zhxnix/dsh-wx-preview#99e4627e6c02666cef24ed3cf0cebb01702e1401",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./engine": "./lib/engine.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-wx-preview",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1a7580f72b679db01aa2a9fba2745405c6e90f4d3877e2d45e059779df575c7b/zhxnix/dsh-wx-preview",
     "description": "Portable DSH plugin for native WeChat Mini Program discovery, local preview, debugging, source mapping, and sidebar inspection."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-wx-preview 是一个可移植的 DSH 插件，用于发现、预编译、打开和调试原生微信小程序项目。它读取用户指定目录中的 project.config.json 与 app.json，在本机启动浏览器兼容预览运行时，并把预览页放进 DSH 右侧栏。"
   },
   "schemaVersion": 1,
   "scripts": {

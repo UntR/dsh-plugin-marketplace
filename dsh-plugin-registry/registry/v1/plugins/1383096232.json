@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "60b7a9624ad0bfa96e50f1092985a272c5b2a7e4"
   },
   "github": {
@@ -51,27 +51,49 @@
   },
   "id": "gh:1383096232",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-meeting-coordinator",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:liaowenqi123/dsh-meeting-coordinator#60b7a9624ad0bfa96e50f1092985a272c5b2a7e4",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": "./client.js",
+      "./dist/host.js": "./dist/host.js",
+      "./facet": {
+        "default": "./dist/facet.js",
+        "types": "./dist/facet.d.ts"
+      },
+      "./host": {
+        "default": "./dist/host.js",
+        "types": "./dist/host.d.ts"
+      }
+    },
+    "main": "dist/index.js",
+    "name": "dsh-meeting-coordinator",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6aac1f7a4cd30c10cdd0bacefbaed5497fbba46b848ec7ccfd52ea4fe9167d54/liaowenqi123/dsh-meeting-coordinator",
     "description": "DSH 多 Agent「会议室」插件：会议室会籍 + fork 上下文入场 + 主持人控场多轮讨论 + 会后各自压缩纪要并回到工作区继续干活。基于 dsh-std 元协议（Community v0.15）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "⚠️ 早期阶段 / Early stage. 核心机制已经跑通并有 215 个测试覆盖，但还没在真实生产场景里长期跑过。 遇到问题请开 Issue —— 非常欢迎反馈、提 bug、发 PR，见欢迎贡献。"
   },
   "schemaVersion": 1,
   "scripts": {

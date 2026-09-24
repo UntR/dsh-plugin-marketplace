@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
-    "headSha": "04943407c5fc4f57b6356f44ddea35654e806f6f"
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
+    "headSha": "aaceff2bf92955a09230a8780fa12aa12eba9788"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "⚡ Millisecond System-1 judgement for every tool call in DeepSeek Harness — Jev-powered risk classification & evidence-gated auto-approval. Fail-closed by construction. dsh 生态第一个 System-1 决策插件",
     "fork": false,
     "forks": 0,
-    "headSha": "04943407c5fc4f57b6356f44ddea35654e806f6f",
+    "headSha": "aaceff2bf92955a09230a8780fa12aa12eba9788",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUmQcNw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/bba7c6bb1c4fcb9b6d178da98879c24132a92c150907f3140e498f523ba4b9a9/AskTheWay/dsh-jev-interceptor",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c94847d579468549efb9bc9f2a9b9a0de89a4625de4b5e44f6a65c7c1e32261e/AskTheWay/dsh-jev-interceptor",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/87240969?u=4c5062ecee703ebab01adb79d14bf68307b93a25&v=4",
       "login": "AskTheWay"
     },
-    "pushedAt": "2026-09-22T20:06:32Z",
+    "pushedAt": "2026-09-23T17:27:30Z",
     "slug": "AskTheWay/dsh-jev-interceptor",
     "stars": 1,
     "topics": [
@@ -55,38 +55,56 @@
       "typesafe",
       "typesafe-ai"
     ],
-    "updatedAt": "2026-09-22T20:07:09Z",
+    "updatedAt": "2026-09-23T17:27:34Z",
     "url": "https://github.com/AskTheWay/dsh-jev-interceptor"
   },
   "id": "gh:1382292535",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-jev-interceptor",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:AskTheWay/dsh-jev-interceptor#aaceff2bf92955a09230a8780fa12aa12eba9788",
+    "version": "0.2.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./session-reference": {
+        "default": "./lib/session-reference.js",
+        "types": "./lib/session-reference.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-jev-interceptor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.4"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/bba7c6bb1c4fcb9b6d178da98879c24132a92c150907f3140e498f523ba4b9a9/AskTheWay/dsh-jev-interceptor",
+    "coverUrl": "https://opengraph.githubassets.com/c94847d579468549efb9bc9f2a9b9a0de89a4625de4b5e44f6a65c7c1e32261e/AskTheWay/dsh-jev-interceptor",
     "description": "⚡ Millisecond System-1 judgement for every tool call in DeepSeek Harness — Jev-powered risk classification & evidence-gated auto-approval. Fail-closed by construction. dsh 生态第一个 System-1 决策插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "What it does, in one breath: before a tool call runs, Jev classifies its risk, irreversibility, task-fit, and injection-suspicion in one $0.00002 request — confident high-risk calls get denied, medium ones escalate to a human, and clearly-granted reversible ones stop wasting your"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

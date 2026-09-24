@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
-    "headSha": "29b118cc330e7fcb17a8b2fb58387dc2e13ae896"
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
+    "headSha": "ed3e23f1f41a0932485c616fe694b3ac292cf88c"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,17 @@
     "description": "Paste-time data masking plugin for DeepSeek Harness: sensitive values are masked before they reach the composer",
     "fork": false,
     "forks": 0,
-    "headSha": "29b118cc330e7fcb17a8b2fb58387dc2e13ae896",
+    "headSha": "ed3e23f1f41a0932485c616fe694b3ac292cf88c",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": null,
     "nodeId": "R_kgDOUmmlRw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3415d2bed55723b9396c224c70f09711d984a1e26cd8b34132ae4b4ec93e3f1b/virzs/dsh-plugin-data-mask",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/510aefe4c0e05865348bc74fe315754661b6ca8b1cc71c982852eb4ca91c0418/virzs/dsh-plugin-data-mask",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/44538687?u=b2e9ab490eb370896bbe14f033f160135004cccd&v=4",
       "login": "virzs"
     },
-    "pushedAt": "2026-09-23T05:46:51Z",
+    "pushedAt": "2026-09-24T06:40:25Z",
     "slug": "virzs/dsh-plugin-data-mask",
     "stars": 0,
     "topics": [
@@ -38,32 +38,45 @@
       "dsh-plugin",
       "privacy"
     ],
-    "updatedAt": "2026-09-23T05:46:54Z",
+    "updatedAt": "2026-09-24T06:40:29Z",
     "url": "https://github.com/virzs/dsh-plugin-data-mask"
   },
   "id": "gh:1382655303",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-plugin-data-mask",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:virzs/dsh-plugin-data-mask#ed3e23f1f41a0932485c616fe694b3ac292cf88c",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./engine": "./engine.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@local/dsh-plugin-data-mask",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3415d2bed55723b9396c224c70f09711d984a1e26cd8b34132ae4b4ec93e3f1b/virzs/dsh-plugin-data-mask",
+    "coverUrl": "https://opengraph.githubassets.com/510aefe4c0e05865348bc74fe315754661b6ca8b1cc71c982852eb4ca91c0418/virzs/dsh-plugin-data-mask",
     "description": "Paste-time data masking plugin for DeepSeek Harness: sensitive values are masked before they reach the composer"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "粘贴到 DeepSeek Harness 对话框时自动剔除敏感信息的插件：手机号、身份证号、银行卡号、邮箱、API 密钥、数据库连接串、内网 IP 等在进入输入框之前就被替换掉，原文不会被发送给模型，也不会写进会话记录。"
   },
   "schemaVersion": 1,
   "scripts": {

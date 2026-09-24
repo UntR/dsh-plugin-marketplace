@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "33da6136e7d0879ee24a70a43c6c3893d4194cff"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1382652766",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-isolation",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:sweet-boby/dsh-session-isolation#33da6136e7d0879ee24a70a43c6c3893d4194cff",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-session-isolation",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fb1f47e9c4bd7943c843c43243e807a2efa94567156fba69b25667b3feca2a23/sweet-boby/dsh-session-isolation",
     "description": "DSH plugin for per-session working directories: keep parallel agent sessions from overwriting each other."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Per-session working directories for DSH — the Codex-style behavior, as an opt-in per project, switched from a page in the Web GUI, from a conversation, or from a marker file."
   },
   "schemaVersion": 1,
   "scripts": {

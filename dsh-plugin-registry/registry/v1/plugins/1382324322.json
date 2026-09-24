@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "97d0c6d4e3b6ce0a46a7e6b922f197dc935666d7"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1382324322",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-message-hub",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:FuLuTang/dsh-message-hub#97d0c6d4e3b6ce0a46a7e6b922f197dc935666d7",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-message-hub",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/054b338180eb36f63050289f6032f5fb0f331c00e943a75ddd0d23747d5f6de0/FuLuTang/dsh-message-hub",
     "description": "Transport-neutral communication hub plugin for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-message-hub 是 DSH 的通信渠道注册与路由插件。当前设计把渠道（channel）作为统一目录：传输实现向 Hub 注册入站或出站实现，Agent 和 Web UI 只使用稳定的渠道 ID。Hub 不实现 QQ、Telegram、邮件或串口协议；这些由宿主插件或用户代码实现。"
   },
   "schemaVersion": 1,
   "scripts": {

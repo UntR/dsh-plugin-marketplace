@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "b929294054977c835c299e2f9e19b8c7ed9db7d3"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1382149940",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-openrouter-live",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-openrouter-live@0.2.2",
+    "version": "0.2.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./types/index.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-openrouter-live",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6b207b9db526673d16b7db136b1328cca424f61b48ec01648a718307d537b67b/Boomerangz/dsh-openrouter-live",
     "description": "OpenRouter provider for DeepSeek Harness with a live model list, prices and spend tracking"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An OpenRouter provider for DeepSeek Harness (dsh) that reads OpenRouter's live model list, so a model shows up in the picker as soon as OpenRouter serves it."
   },
   "schemaVersion": 1,
   "scripts": {

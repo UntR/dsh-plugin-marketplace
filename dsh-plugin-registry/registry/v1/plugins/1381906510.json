@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "2b84835dce5e0a811e65740feb7392df204dda55"
   },
   "github": {
@@ -50,27 +50,48 @@
   },
   "id": "gh:1381906510",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@wowyuarm/dsh-channel-gateway",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@wowyuarm/dsh-channel-gateway@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./telegram": {
+        "default": "./lib/adapters/telegram.js",
+        "types": "./lib/adapters/telegram.d.ts"
+      },
+      "./weixin": {
+        "default": "./lib/adapters/weixin.js",
+        "types": "./lib/adapters/weixin.d.ts"
+      }
+    },
+    "main": null,
+    "name": "@wowyuarm/dsh-channel-gateway",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ec560f53e878cc08ffea589d077b5d6bd14e2df2e0faca4c0a8d74a9607af0b5/wowyuarm/dsh-channel-gateway",
     "description": "A channel gateway for DeepSeek Harness: Telegram and WeChat adapters normalize provider traffic into one message contract, the gateway authorizes it at the transport boundary, and any consumer answers through the route the message carried."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A channel gateway plugin for DeepSeek Harness. A channel adapter normalizes provider traffic into one message contract, the gateway authorizes it and announces a single channel/inbound event, and a consumer answers through ctx.channels.send with the route the inbound message carr"
   },
   "schemaVersion": 1,
   "scripts": {

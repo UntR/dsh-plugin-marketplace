@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "0622ce09d7634c185b938987b5439a4ef42d4d0d"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1382864524",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-trans-md",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:passerby325799/dsh-trans-md#0622ce09d7634c185b938987b5439a4ef42d4d0d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-trans-md",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ed6c870bd5585a7a58aafdadf66bfdaa82520129628cda1385cb8d5683796e3c/passerby325799/dsh-trans-md",
     "description": "Keeps DSH chat replies short: final replies over 15 lines are written to a Markdown file in the workspace, leaving a digest and file path in chat."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Long replies become Markdown files — for DeepSeek Harness (dsh)."
   },
   "schemaVersion": 1,
   "scripts": {

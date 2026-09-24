@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "5fb27886596159cf95c2ca7bedb7cfbb9d089623"
   },
   "github": {
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,20 +56,36 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./core": {
+        "import": "./lib/core.js",
+        "types": "./lib/core.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-redis-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7c541b08d7872452a2aa15ad182780db49ce94cf83790be352217ce6d34d8bac/yixiuzhemu/dsh-redis-plugin",
     "description": "dsh连接redis插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-redis-plugin is a foundational Cordis-style dsh plugin that gives every other plugin (and the model itself) safe, governed access to a Redis instance. It is built on ioredis, exposes a flat, promise‑based ctx.redis service, and registers everything as reversible effects so HM"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

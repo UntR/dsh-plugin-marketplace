@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "102034f94ef9a8dcc4c516abb51872874b0d591c"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1382494110",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-desktop-notify",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:AFAP/dsh-desktop-notify#102034f94ef9a8dcc4c516abb51872874b0d591c",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.4.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-desktop-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ed53d0ad747fc231c91f1c79b065929c0f058b267d65b4bd614e45e6725d01bb/AFAP/dsh-desktop-notify",
     "description": "Desktop notifications for the DeepSeek Harness web GUI: a system toast when a tool needs authorization, a question or plan review is waiting, or a turn finishes."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 在三种时刻必须等你动手：工具越权需要授权确认、模型向你提问或提交计划待确认、以及一轮任务跑完。你不在界面跟前时，对话就一直挂着；靠\"盯着页面\"既不现实，也违背了把活交给 Agent 的初衷。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "0af940e2e04afcc9492f71354e646b0685be86ab"
   },
   "github": {
@@ -48,27 +48,42 @@
   },
   "id": "gh:1382365589",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-system-monitor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:GNX001/dsh-system-monitor#0af940e2e04afcc9492f71354e646b0685be86ab",
+    "version": "0.3.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-system-monitor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d972ba0ba33c84efa0ebdf34b19684045c78478324d9bd21c5257261e23124ca/GNX001/dsh-system-monitor",
     "description": "DeepSeek Harness 的悬浮状态条：一行纯文字显示 CPU、内存、多 GPU 的温度与占用率，以及实时网速。零运行时依赖，数据仅在本机回环地址读取。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "作者：DeepSeek + DeepSeek-Harness"
   },
   "schemaVersion": 1,
   "scripts": {

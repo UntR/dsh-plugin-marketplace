@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "b59364ff0739f212a6b0667abb6713529ed81bca"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1382231125",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-code-review",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:SeanTolstoyevski/dsh-code-review#b59364ff0739f212a6b0667abb6713529ed81bca",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@local/dsh-code-review",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4fea578a46da89152c66b24a44b0aa416e5263b8973e688906d0971527db04f3/SeanTolstoyevski/dsh-code-review",
     "description": "On-demand code review for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "On-demand code review for DeepSeek Harness. /review audits the uncommitted changes in the workspace with a reviewer model and renders the report as a card in the conversation."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "7e10d039e3e45c36725fdeedf69f8138f73a5e7c"
   },
   "github": {
@@ -41,27 +41,43 @@
   },
   "id": "gh:1383089002",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@guowenzhang/dsh-memory",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@guowenzhang/dsh-memory@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "@guowenzhang/dsh-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/987d1ded7d06fbb622668a563d180aee8e96c8962cdf36551c5587bd9cdbdcc8/zhang-guo-wen/dsh-memory",
     "description": "Claude-compatible memory for DeepSeek Harness: a user-chosen memory directory with MEMORY.md index and topic files, the memory tool, and a settings page"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A standalone plugin for DeepSeek Harness (DSH) that gives a session a memory directory in Claude's own shape — index format, tool protocol, and directory layout — with the directory chosen by you, including Claude Code's own /.claude/projects//memory."
   },
   "schemaVersion": 1,
   "scripts": {

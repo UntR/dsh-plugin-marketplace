@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "9833f1da3cb1a53377544307cb835606b829ea1e"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1381982466",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-menu-search",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:LovelyDazai/dsh-model-menu-search#9833f1da3cb1a53377544307cb835606b829ea1e",
+    "version": "1.0.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-model-menu-search",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1e69f2745743eee60d2ebe923cab7e431b86ac1a86e2f6f4fde3e00a0aafa0ac/LovelyDazai/dsh-model-menu-search",
     "description": "Allow user search model in the deepseekharness model list."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness WebUI 的模型下拉菜单加一个实时搜索框。点开输入框右下角的模型胶囊后，菜单顶部会出现一个输入框，直接打字就能过滤模型，不用再用鼠标滚。"
   },
   "schemaVersion": 1,
   "scripts": {

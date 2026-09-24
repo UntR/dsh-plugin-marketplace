@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "ccd73438f6b416bdd816c94cd2e53882dc6881f4"
   },
   "github": {
@@ -52,33 +52,56 @@
   },
   "id": "gh:1381896598",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-tvision",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:hongxin/dsh-tvision#ccd73438f6b416bdd816c94cd2e53882dc6881f4",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./prompt": {
+        "default": "./lib/prompt.js",
+        "types": "./lib/types/prompt.d.ts"
+      },
+      "./src/*": "./src/*",
+      "./startup": {
+        "default": "./lib/startup.js",
+        "types": "./lib/types/startup.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-tvision",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c7420cb8a0024eee6fdcf8428edfb41f7b6369fec9bd3476c202dc5e70d3c26c/hongxin/dsh-tvision",
     "description": "Turbo Vision-style character-cell window manager for DeepSeek Harness agents"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A character-cell window manager for DeepSeek Harness agents. Overlapping framed windows on a textured desktop, a Borland menu bar, a function-key strip, mouse dragging, and five skins — installed as an ordinary dsh profile bundle, not a fork."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

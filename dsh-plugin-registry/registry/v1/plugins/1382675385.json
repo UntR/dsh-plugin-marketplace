@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "be80659d0195d859691e140d095bcf2e3b0f715c"
   },
   "github": {
@@ -44,27 +44,41 @@
   },
   "id": "gh:1382675385",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-permission-gate",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-permission-gate@1.2.0",
+    "version": "1.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-permission-gate",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/96b1d230cf56cde35fcf7eef0998f3ae13a8015e4474cb0ffe832656211a76c1/Juntiantan/dsh-permission-gate",
     "description": "UI-level access gate + process-wide agent tool brake for DeepSeek Harness (dsh). Shared 60-min idle lock. NOT authentication — pair it with a real boundary."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A UI-level access gate and process-wide agent tool brake for DeepSeek Harness (dsh)."
   },
   "schemaVersion": 1,
   "scripts": {

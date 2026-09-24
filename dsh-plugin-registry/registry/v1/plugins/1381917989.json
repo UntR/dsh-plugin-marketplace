@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "fe554d2aec9d843688f9333b906577bfba2f16b1"
   },
   "github": {
@@ -45,27 +45,42 @@
   },
   "id": "gh:1381917989",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-upstream-model-audit",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:QuanhuZeYu/dsh-upstream-model-audit#fe554d2aec9d843688f9333b906577bfba2f16b1",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-upstream-model-audit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9b24cee2c6261c0ece31a5a69b8dd517ee4c0dcaeb1b91f3234d67d42981a7b0/QuanhuZeYu/dsh-upstream-model-audit",
     "description": "DSH web plugin: show the model name the upstream actually returned, under every assistant step"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把「上游实际返回的模型名」显式化：每一条助手消息下方列出这次调用真正发出去的模型名、 上游响应里声明的模型名，以及两者差异的客观形态。"
   },
   "schemaVersion": 1,
   "scripts": {

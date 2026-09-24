@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "84547714c772143f1c7bac326bf1d6cbd702fbe0"
   },
   "github": {
@@ -42,27 +42,44 @@
   },
   "id": "gh:1381806472",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-token-ledger",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wakeup595626-cmyk/dsh-token-ledger#84547714c772143f1c7bac326bf1d6cbd702fbe0",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-token-ledger",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bcc3db4a44bca01e1fe52dc9c29383e53201aadf2dc42528fa66fababbf7cf96/wakeup595626-cmyk/dsh-token-ledger",
     "description": "Cumulative token usage ledger for DeepSeek Harness: live capture plus historical backfill, draggable web panel and HTTP API. | 中文：DSH 全局累积 token 用量账本：实时捕获 + 历史回填，悬浮面板与 HTTP API。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的累积 token 账本：读取兼容的 usage 事件与历史日志，提供统计工具、Web 面板和 HTTP API。需要 DSH；没有第三方运行时依赖，不等于独立运行或兼容所有 DSH 版本。"
   },
   "schemaVersion": 1,
   "scripts": {

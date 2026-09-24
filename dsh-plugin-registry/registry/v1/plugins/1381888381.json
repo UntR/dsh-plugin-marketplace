@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichmentStatus": "ok",
     "headSha": "301c88954031ec7c809570704b940a2b87128702"
   },
   "github": {
@@ -53,27 +53,41 @@
   },
   "id": "gh:1381888381",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-opencode-free",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-opencode-free@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-opencode-free",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/91120c457559613cdd93b06d02d0bf2e7e383a85721a9878e90b2b3fe5f435e2/x5427876/dsh-opencode-free",
     "description": "Use OpenCode Zen free models in DeepSeek Harness with anonymous access or an optional API key"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "讓 DeepSeek Harness 直接使用 OpenCode Zen 的免費模型，不需要安裝 OpenCode。插件預設使用匿名免費額度，也可從 OPENCODEAPIKEY 讀取 Zen API key。"
   },
   "schemaVersion": 1,
   "scripts": {
