@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "6589a6018ef1112957de7fa3f7e275e02e46d9cf"
   },
   "github": {
@@ -46,33 +46,48 @@
   },
   "id": "gh:1381495787",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-jev-plugin",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:jackie-cqz/dsh-jev-plugin#6589a6018ef1112957de7fa3f7e275e02e46d9cf",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      }
+    },
+    "main": "dist/index.js",
+    "name": "dsh-jev-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f95ce68c34e716682fe67a4fafb423dc94640249a2ced0927eede1fd0d066d30/jackie-cqz/dsh-jev-plugin",
     "description": "DeepSeek Harness plugin for TypeSafe Jev: typed decisions, configurable guardrails, and Web UI result cards."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A plugin that lets DeepSeek Harness (DSH) agents use TypeSafe Jev (System One) for typed decisions."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

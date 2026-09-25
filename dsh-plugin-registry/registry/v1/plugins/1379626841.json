@@ -1,73 +1,86 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
-    "headSha": "1214e05e2483d9f891c7f61e451a02565cec942d"
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
+    "headSha": "35e628d4f05397806356e2dd0a582e9bc50118b7"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-21T11:45:49Z",
     "databaseId": 1379626841,
     "defaultBranch": "main",
-    "description": "DeepSeek Harness plugin: declares the OpenCode Go route wire protocol, auto-adds DeepSeek V4.1 models, and attaches the x-opencode-session header",
+    "description": "DeepSeek Harness plugin for gateway routes: declares the OpenCode Go and Command Code route protocol + endpoint (so the API address never has to be typed) and completes their model lists. The OpenCode Go half puts DeepSeek V4.1 first; the Command Code half syncs all 81 models from its public catalog. Also adds the x-opencode-session header.",
     "fork": false,
     "forks": 0,
-    "headSha": "1214e05e2483d9f891c7f61e451a02565cec942d",
-    "homepageUrl": null,
+    "headSha": "35e628d4f05397806356e2dd0a582e9bc50118b7",
+    "homepageUrl": "https://github.com/itchenshi/dsh-ready-gui",
     "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUjtvWQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/c3a7e9c8f240916f7fec48898b168dfe29bac2fa1586528745430cb3fdeb02c6/itchenshi/dsh-opencode-go-path",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/cbc63eab4c96b58576c7c408b16ad078eecb9dcb0f49b8b9476843cfe4209dcc/itchenshi/dsh-gateway-models",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/74160272?u=367898a786ff7c4707fda91acbfba4c811748309&v=4",
       "login": "itchenshi"
     },
-    "pushedAt": "2026-09-24T07:07:46Z",
-    "slug": "itchenshi/dsh-opencode-go-path",
+    "pushedAt": "2026-09-25T06:23:38Z",
+    "slug": "itchenshi/dsh-gateway-models",
     "stars": 0,
     "topics": [
+      "command-code",
+      "commandcode",
       "cordis",
       "deepseek-harness",
       "dsh",
       "dsh-plugin",
+      "gateway",
       "llm-pi-ai",
+      "model-catalog",
       "opencode",
       "opencode-go"
     ],
-    "updatedAt": "2026-09-24T07:07:49Z",
-    "url": "https://github.com/itchenshi/dsh-opencode-go-path"
+    "updatedAt": "2026-09-25T06:23:41Z",
+    "url": "https://github.com/itchenshi/dsh-gateway-models"
   },
   "id": "gh:1379626841",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-gateway-models",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:itchenshi/dsh-gateway-models#35e628d4f05397806356e2dd0a582e9bc50118b7",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-gateway-models",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/c3a7e9c8f240916f7fec48898b168dfe29bac2fa1586528745430cb3fdeb02c6/itchenshi/dsh-opencode-go-path",
-    "description": "DeepSeek Harness plugin: declares the OpenCode Go route wire protocol, auto-adds DeepSeek V4.1 models, and attaches the x-opencode-session header"
+    "coverUrl": "https://opengraph.githubassets.com/cbc63eab4c96b58576c7c408b16ad078eecb9dcb0f49b8b9476843cfe4209dcc/itchenshi/dsh-gateway-models",
+    "description": "DeepSeek Harness plugin for gateway routes: declares the OpenCode Go and Command Code route protocol + endpoint (so the API address never has to be typed) and completes their model lists. The OpenCode Go half puts DeepSeek V4.1 first; the Command Code half syncs all 81 models fro"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "网关路由的一站式插件（OpenCode Go + Command Code）：装上、勾上、就能用 —— 不用手改配置， 不用命令行，也不用每次填 API 地址。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "fd5461b7fca10e329c40560afa20262ef97e0ce2"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1378217870",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-token-ledger",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:doremifaso12345/dsh-token-ledger#fd5461b7fca10e329c40560afa20262ef97e0ce2",
+    "version": "1.0.5"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-token-ledger",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/91bbf37edd3ba42165378b8dcf7f7ebebcbe1cabf77e423ee186a6ed7a5cfd97/doremifaso12345/dsh-token-ledger",
     "description": "a dsh plugin for token surveillance"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "监控 DeepSeek Harness 的每日 token 消耗。数据来自会话日志里 provider 真实上报的 用量，按本地日期聚合，提供一个设置页卡片、一个输入框徽标、一条聊天命令和一个模型工具。"
   },
   "schemaVersion": 1,
   "scripts": {

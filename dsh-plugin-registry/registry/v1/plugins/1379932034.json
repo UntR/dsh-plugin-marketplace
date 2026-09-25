@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "9f2a053fdf2afef89552b9d27893b4d797b40abc"
   },
   "github": {
@@ -46,27 +46,41 @@
   },
   "id": "gh:1379932034",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-assistant",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vianvio/dsh-assistant#9f2a053fdf2afef89552b9d27893b4d797b40abc",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.js"
+      },
+      "./client": "./src/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-assistant",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c3b78e689af454b4aab2f471a5255806a9584b814b2efffe1fb11c6e8340e76f/vianvio/dsh-assistant",
     "description": "DSH小助手：原生 Swift 悬浮窗 + DSH 会话状态驱动，含素材管线与日报"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "住在桌面上、由 DeepSeek Harness 真实工作状态驱动的 Agent 伴侣。"
   },
   "schemaVersion": 1,
   "scripts": {

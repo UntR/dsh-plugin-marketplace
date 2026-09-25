@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
-    "headSha": "d580551fcb50173c1ce683e663b29110a76b1f1a"
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
+    "headSha": "704ff7046e3036f678f72288e324abc817e75994"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-20T03:34:25Z",
     "databaseId": 1377865270,
     "defaultBranch": "main",
-    "description": "OpenViking 的管理工具，可以配置 OV in DSH，也可以实时控制 OV 插件的启停。",
+    "description": "OpenViking 的 DSH 配置管理 UI：连接与用户 Key 配置、本机诊断、会话级记忆开关，以及记忆隔离与召回调优（分数阈值 / 注入条数 / 查询扩写 / 排除 URI）。 | DSH config UI for OpenViking: connection and user-key setup, local diagnostics, a per-session memory toggle, plus memory isolation and recall tuning (score threshold, item limit, query expansion, excluded URIs).",
     "fork": false,
     "forks": 0,
-    "headSha": "d580551fcb50173c1ce683e663b29110a76b1f1a",
+    "headSha": "704ff7046e3036f678f72288e324abc817e75994",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUiCONg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/cd0d1e09a509aa73303f127eb2e19419d6098503fcfc1a67c4d2548f98286c58/xbzbing/dsh-openviking-manager",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d9c42899a5dcc09faf62557f9a096f4b0b3b566e2f880f784745a48b6af8036a/xbzbing/dsh-openviking-manager",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/1829426?v=4",
       "login": "xbzbing"
     },
-    "pushedAt": "2026-09-23T16:01:29Z",
+    "pushedAt": "2026-09-25T09:05:16Z",
     "slug": "xbzbing/dsh-openviking-manager",
     "stars": 1,
     "topics": [
@@ -38,23 +38,23 @@
       "dsh-plugin",
       "openviking"
     ],
-    "updatedAt": "2026-09-24T04:46:46Z",
+    "updatedAt": "2026-09-25T09:05:20Z",
     "url": "https://github.com/xbzbing/dsh-openviking-manager"
   },
   "id": "gh:1377865270",
   "install": {
     "available": true,
     "packageName": "dsh-openviking-manager",
-    "preferred": "github",
+    "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:xbzbing/dsh-openviking-manager#716001834e98ea2da625a0476672b2af0b76cf6e",
-    "version": "0.1.4"
+    "spec": "dsh-openviking-manager@0.3.4",
+    "version": "0.3.4"
   },
   "npm": {
-    "latestVersion": "0.1.4",
+    "latestVersion": "0.3.4",
     "published": true,
-    "repositoryMatches": false
+    "repositoryMatches": true
   },
   "package": {
     "exports": {
@@ -66,21 +66,22 @@
         "default": "./lib/client.js",
         "types": "./lib/client/index.d.ts"
       },
+      "./locale/*.json": "./locale/*.json",
       "./package.json": "./package.json"
     },
     "main": "lib/index.js",
     "name": "dsh-openviking-manager",
     "status": "valid",
     "type": "module",
-    "version": "0.1.4"
+    "version": "0.3.4"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/cd0d1e09a509aa73303f127eb2e19419d6098503fcfc1a67c4d2548f98286c58/xbzbing/dsh-openviking-manager",
-    "description": "OpenViking 的配置工具"
+    "coverUrl": "https://opengraph.githubassets.com/d9c42899a5dcc09faf62557f9a096f4b0b3b566e2f880f784745a48b6af8036a/xbzbing/dsh-openviking-manager",
+    "description": "OpenViking 的 DSH 配置管理 UI：连接与用户 Key 配置、本机诊断、会话级记忆开关，以及记忆隔离与召回调优（分数阈值 / 注入条数 / 查询扩写 / 排除 URI）。 | DSH config UI for OpenViking: connection and user-key setup, local diagnostics, a per-session memory toggle, plus memory isolation and recall tuning (score threshold, item limit, query "
   },
   "readme": {
     "available": true,
-    "excerpt": "dsh-openviking-manager 是一个 DSH Web UI 插件，用于管理已有 OpenViking 服务的客户端连接、用户 Key 和本机配置诊断。它只管理客户端配置；记忆同步、提交和召回仍由官方 @openviking/dsh-memory-plugin 负责。"
+    "excerpt": "dsh-openviking-manager 是一个 DSH Web UI 插件，用于管理已有 OpenViking 服务的客户端连接、用户 Key 和本机配置诊断，并提供会话级的 OpenViking 记忆开关。它只管理客户端配置与启停；记忆同步、提交和召回本身仍由官方 @openviking/dsh-memory-plugin 负责。"
   },
   "schemaVersion": 1,
   "scripts": {

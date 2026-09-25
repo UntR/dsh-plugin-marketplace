@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "4abc7c6408445e7cf1d8efcaf53947c4b14fe2f7"
   },
   "github": {
@@ -46,27 +46,44 @@
   },
   "id": "gh:1378518852",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "whale-persona",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "whale-persona@0.16.1",
+    "version": "0.16.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.16.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./adapters/dsh/index.js"
+      },
+      "./global": {
+        "default": "./adapters/dsh/global.js"
+      },
+      "./package.json": {
+        "default": "./package.json"
+      }
+    },
+    "main": "./adapters/dsh/index.js",
+    "name": "whale-persona",
+    "status": "valid",
+    "type": "module",
+    "version": "0.16.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/130e5af7fd132c22a04d24742e63cc24e1f77952b90643a1ecc6e9d3f4699c49/shenA2024/whale-persona",
-    "description": "多宿主人设引擎：一份 config.json 让 DeepSeek Harness 与 ZCode 共用同一套人设、工作契约、思维链语言与长期记忆；记忆由 AI 提议、人工确认后才生效（代码强制）。A persona engine for AI coding harnesses (DeepSeek Harness + ZCode)."
+    "description": "人设引擎 / DeepSeek Harness 插件：一份 config.json 管住 AI 的自称、称呼、立场、工作契约、思维链语言与长期记忆；出厂空白、装上不改变任何行为；记忆由 AI 提议、人工确认才生效（代码强制）。装：npx -y whale-persona。A blank-by-default persona engine for DSH. ZCode adapter retired."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 AI 编码助手的人设变成一份可开关、可编辑、可记忆的配置：自称（按模型分档）、对用户的称呼、 关系立场、性格正文、逐条可勾选的工作契约、思维链语言，以及带代码级确认闸门的长期记忆。 一份 config.json + 一个收件箱文件，DSH 与 ZCode 两个宿主共用同一个人设。 0.12.0 起还带一层条件反射：自己写规则，命中时由插件在代码层注入一步指令（匹配不花 token）， 可选把这一步的请求瘦身、把工具裁到白名单 —— 规则是个人资产，默认零规则。"
   },
   "schemaVersion": 1,
   "scripts": {

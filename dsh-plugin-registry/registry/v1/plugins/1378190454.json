@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "703c3e91efd853fc8e2d3671c51a06fb43f03d2b"
   },
   "github": {
@@ -48,27 +48,41 @@
   },
   "id": "gh:1378190454",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-pdf-sign",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:JuntaoXiao/PDF-electronic-signature#703c3e91efd853fc8e2d3671c51a06fb43f03d2b",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-pdf-sign",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f98c27877ef2299517b172aeda2e2a165cc612c04bbf554de27ac7073430aab7/JuntaoXiao/PDF-electronic-signature",
     "description": "生成签名图 + 盖章 + 可选数字证书签名"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "PDF electronic signing for DeepSeek Harness (DSH) — generate a handwritten-style signature image, stamp it on a PDF, and apply a real PKCS#7 digital signature."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "025aed20047240f8f8111446e0c97fb85032b6ed"
   },
   "github": {
@@ -49,27 +49,39 @@
   },
   "id": "gh:1378745271",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tailscale-access",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-tailscale-access@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client/client.js",
+      "./package.json": "./package.json",
+      "./proxy": "./lib/proxy.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-tailscale-access",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c3f362779ac7766ba2acbdc912851b2c6f7d17b31a340bbbc63606d296ebdef1/why-did/dsh-tailscale-access",
     "description": "Remote access for the DeepSeek Harness Web GUI via Tailscale or cloudflared — early-stage, read the notice first."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) plugin that puts the Web GUI running on this machine on your phone or another computer through a browser — without a public IP, without port forwarding, and without changing where DSH listens. DSH keeps listening on 127.0.0.1 the whole time."
   },
   "schemaVersion": 1,
   "scripts": {

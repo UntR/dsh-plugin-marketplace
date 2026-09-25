@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
     "enrichmentStatus": "ok",
-    "headSha": "5b2854fe4d71e30827fa95e6611aa3acc8b2eb55"
+    "headSha": "550d15ac804d56c0b739a38fe0eb4e6fbfc90acd"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness (DSH) plugin: replaces the stats row under the composer with provider and model, balance or subscription quota, peak/off-peak pricing, and session spend.",
     "fork": false,
     "forks": 4,
-    "headSha": "5b2854fe4d71e30827fa95e6611aa3acc8b2eb55",
+    "headSha": "550d15ac804d56c0b739a38fe0eb4e6fbfc90acd",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT42j1g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/558076be714637daf72ad76758515c776ed2372718991adaba6e3d79aae25b1f/songoao25/dsh-bottom-info-bar",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7cdb1f1ad4fb263907e808c81b6f4e41d32f168cd041f3f2566a0d52519811ab/songoao25/dsh-bottom-info-bar",
     "owner": {
-      "avatarUrl": "https://avatars.githubusercontent.com/u/269614376?u=72b81447485bdf971131d8f8e7cef4ea506c1103&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/269614376?u=849980ba73b358d7b39098e4727be085ebf75420&v=4",
       "login": "songoao25"
     },
-    "pushedAt": "2026-09-23T16:03:44Z",
+    "pushedAt": "2026-09-25T08:46:35Z",
     "slug": "songoao25/dsh-bottom-info-bar",
     "stars": 39,
     "topics": [
@@ -45,32 +45,45 @@
       "usage-tracking",
       "web"
     ],
-    "updatedAt": "2026-09-23T16:03:58Z",
+    "updatedAt": "2026-09-25T08:46:38Z",
     "url": "https://github.com/songoao25/dsh-bottom-info-bar"
   },
   "id": "gh:1334682582",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-bottom-info-bar",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-bottom-info-bar@1.19.2",
+    "version": "1.19.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.19.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-bottom-info-bar",
+    "status": "valid",
+    "type": "module",
+    "version": "1.19.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/558076be714637daf72ad76758515c776ed2372718991adaba6e3d79aae25b1f/songoao25/dsh-bottom-info-bar",
+    "coverUrl": "https://opengraph.githubassets.com/7cdb1f1ad4fb263907e808c81b6f4e41d32f168cd041f3f2566a0d52519811ab/songoao25/dsh-bottom-info-bar",
     "description": "DeepSeek Harness (DSH) plugin: replaces the stats row under the composer with provider and model, balance or subscription quota, peak/off-peak pricing, and session spend."
   },
   "readme": {
     "available": true,
-    "excerpt": "A drop-in replacement for the stats row under the DeepSeek Harness composer. Everything that row showed stays — turns and steps, LLM and tool time, cache hit rate, input/output tokens — and it adds the provider and exact model, your real balance (or subscription quota, or this mo"
+    "excerpt": "A DeepSeek Harness plugin that replaces the stats row under the composer with one line: provider and model, real balance or subscription quota, peak/off-peak pricing, and what this session has cost."
   },
   "schemaVersion": 1,
   "scripts": {

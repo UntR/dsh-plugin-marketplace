@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
-    "headSha": "6c11471f22234edd903d867f03e5c54f9f10cdfb"
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
+    "headSha": "68939fe28f2a07e4e5ac4c7981b401ef0121b360"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "把 DSH 的工具目录收成 find_tools + call_tool 两个元工具；其余工具仍可调用，只是入口变成这两个",
     "fork": false,
     "forks": 0,
-    "headSha": "6c11471f22234edd903d867f03e5c54f9f10cdfb",
+    "headSha": "68939fe28f2a07e4e5ac4c7981b401ef0121b360",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUkzaQw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/1fd79fd63f87342fe42aa66df77d345073201f7528a99068d1914dbdb0529cf4/leolee9086/dsh-tool-gateway",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/eb2777f598a3b45a2c8726ec39928de718aed6f0e38a2cfb5fecc34a62916e75/leolee9086/dsh-tool-gateway",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/19915077?v=4",
       "login": "leolee9086"
     },
-    "pushedAt": "2026-09-22T02:47:47Z",
+    "pushedAt": "2026-09-25T06:35:56Z",
     "slug": "leolee9086/dsh-tool-gateway",
     "stars": 0,
     "topics": [
@@ -42,32 +42,43 @@
       "plugin",
       "tool-calling"
     ],
-    "updatedAt": "2026-09-22T02:47:48Z",
+    "updatedAt": "2026-09-25T06:35:57Z",
     "url": "https://github.com/leolee9086/dsh-tool-gateway"
   },
   "id": "gh:1380768323",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tool-gateway",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:leolee9086/dsh-tool-gateway#68939fe28f2a07e4e5ac4c7981b401ef0121b360",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/host.js",
+    "name": "dsh-tool-gateway",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/1fd79fd63f87342fe42aa66df77d345073201f7528a99068d1914dbdb0529cf4/leolee9086/dsh-tool-gateway",
+    "coverUrl": "https://opengraph.githubassets.com/eb2777f598a3b45a2c8726ec39928de718aed6f0e38a2cfb5fecc34a62916e75/leolee9086/dsh-tool-gateway",
     "description": "把 DSH 的工具目录收成 find_tools + call_tool 两个元工具；其余工具仍可调用，只是入口变成这两个"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DSH 的工具目录收成三个元工具：findtools 查、calltool 调、calltools 批量调。 其余工具不出现在模型可见的工具表里，但仍然可以被调用 —— 只是入口变成了这几个。"
   },
   "schemaVersion": 1,
   "scripts": {

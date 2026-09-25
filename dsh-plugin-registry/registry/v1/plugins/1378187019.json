@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "8ad3d49108cb610fa04f0f9cdfb4aa99a74e0605"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1378187019",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-file-download",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lanyunshijian/dsh-file-download#8ad3d49108cb610fa04f0f9cdfb4aa99a74e0605",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-file-download",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e80c044e64b505b864409e9cbc251b146804b85452876e490a03ad103a2b2639/lanyunshijian/dsh-file-download",
     "description": "插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH's Web GUI can already open a delivered file on the Host desktop. That is exactly the wrong affordance when the Host is a cloud server: there is no local folder to open. dsh-file-download adds the missing transport — the browser downloads the file instead."
   },
   "schemaVersion": 1,
   "scripts": {

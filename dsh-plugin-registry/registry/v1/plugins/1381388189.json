@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "36cc6596aaaa58240cbbba989eaada76b0c2bc69"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUlZPnQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/1b669afabd80fd174f83bab4478a915fbe1948ac0a11645a4dabfd577969c83b/justhalfbit/dsh-plugin-jev-effort-selector",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5f32e056949e52436c1e8af1c64a249f92c3de1d841a134eec9a1448d80f74c5/justhalfbit/dsh-plugin-jev-effort-selector",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/70122754?u=fb5bcc50190f292d46fd2b8a9f301840aab0d173&v=4",
       "login": "justhalfbit"
     },
     "pushedAt": "2026-09-24T08:08:33Z",
     "slug": "justhalfbit/dsh-plugin-jev-effort-selector",
-    "stars": 2,
+    "stars": 5,
     "topics": [
       "ai-agent",
       "deepseek-harness",
@@ -44,32 +44,43 @@
       "plugin",
       "reasoning-effort"
     ],
-    "updatedAt": "2026-09-24T08:08:36Z",
+    "updatedAt": "2026-09-25T04:54:04Z",
     "url": "https://github.com/justhalfbit/dsh-plugin-jev-effort-selector"
   },
   "id": "gh:1381388189",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-jev-effort-selector",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:justhalfbit/dsh-plugin-jev-effort-selector#36cc6596aaaa58240cbbba989eaada76b0c2bc69",
+    "version": "0.3.18"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-jev-effort-selector",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.18"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/1b669afabd80fd174f83bab4478a915fbe1948ac0a11645a4dabfd577969c83b/justhalfbit/dsh-plugin-jev-effort-selector",
+    "coverUrl": "https://opengraph.githubassets.com/5f32e056949e52436c1e8af1c64a249f92c3de1d841a134eec9a1448d80f74c5/justhalfbit/dsh-plugin-jev-effort-selector",
     "description": "DeepSeek Harness (DSH) 推理等级自动选择插件：由 Jev System One 模型判断每条消息值多少思考量，按模型声明的等级自动推导档位，上下文信封让「继续」这类追问继承话题深度，低置信度向上取，任何失败都静默沿用原等级。 | Jev-driven reasoning effort per message: per-model ladders derived from what each model advertises, a fixed-size context envelope so follow-ups inherit to"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 Jev System One 模型替你决定每条消息该用多深的推理。"
   },
   "schemaVersion": 1,
   "scripts": {

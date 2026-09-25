@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "6e9698899a52e5564e9cc4455ed3d8e16589ab29"
   },
   "github": {
@@ -41,33 +41,54 @@
   },
   "id": "gh:1379072518",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-noema",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-plugin-noema@0.1.0-alpha.0",
+    "version": "0.1.0-alpha.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0-alpha.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/rpc.js",
+        "types": "./lib/rpc.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-noema",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-alpha.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/54741b09588db6ea497af621ab068cf4e8fb463d2902e15aa1601a4271a1d853/wjw99830/dsh-plugin-noema",
     "description": "Focus code review on complexity changes after each coding task."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Keep your standards in AI-assisted development"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

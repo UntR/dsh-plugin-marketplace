@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-23T09:05:39.182Z",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
     "enrichmentStatus": "ok",
-    "headSha": "d2c3e6a81a448180e474b017329ffe78f91949ed"
+    "headSha": "3f11c46bcd7f01fb7c93e7a6bfb3aeaf97020b86"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh manger 远程工具对应使用的 dsh 插件，直接完成 dsh 远程访问",
     "fork": false,
     "forks": 0,
-    "headSha": "d2c3e6a81a448180e474b017329ffe78f91949ed",
+    "headSha": "3f11c46bcd7f01fb7c93e7a6bfb3aeaf97020b86",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOUBre3Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/c06360f4f5bf64547daa3503958aecc140abf97702df32bc0b2201434ee3d942/NevermindZZT/dsh-manager-plugin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/9b40ca33c7700b3b67f29357b757532a4e34cbe19258f092dce700f5ed3f600f/NevermindZZT/dsh-manager-plugin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/20631342?u=a24eb2cb0733a1881764eaff9eef6bbef12f2cc2&v=4",
       "login": "NevermindZZT"
     },
-    "pushedAt": "2026-09-08T04:20:39Z",
+    "pushedAt": "2026-09-25T05:21:31Z",
     "slug": "NevermindZZT/dsh-manager-plugin",
     "stars": 2,
     "topics": [
@@ -38,7 +38,7 @@
       "dsh-bundle",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-12T17:01:57Z",
+    "updatedAt": "2026-09-25T05:21:35Z",
     "url": "https://github.com/NevermindZZT/dsh-manager-plugin"
   },
   "id": "gh:1343938269",
@@ -48,11 +48,11 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:NevermindZZT/dsh-manager-plugin#d2c3e6a81a448180e474b017329ffe78f91949ed",
-    "version": "0.2.3"
+    "spec": "github:NevermindZZT/dsh-manager-plugin#3f11c46bcd7f01fb7c93e7a6bfb3aeaf97020b86",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": "0.2.3",
+    "latestVersion": "0.3.0",
     "published": true,
     "repositoryMatches": false
   },
@@ -60,6 +60,7 @@
     "exports": {
       ".": "./src/index.js",
       "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
       "./package.json": "./package.json",
       "./protocol": "./src/protocol.js"
     },
@@ -67,15 +68,15 @@
     "name": "@nevermindzzt/dsh-manager-plugin",
     "status": "valid",
     "type": "module",
-    "version": "0.2.3"
+    "version": "0.3.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/c06360f4f5bf64547daa3503958aecc140abf97702df32bc0b2201434ee3d942/NevermindZZT/dsh-manager-plugin",
+    "coverUrl": "https://opengraph.githubassets.com/9b40ca33c7700b3b67f29357b757532a4e34cbe19258f092dce700f5ed3f600f/NevermindZZT/dsh-manager-plugin",
     "description": "dsh manger 远程工具对应使用的 dsh 插件，直接完成 dsh 远程访问"
   },
   "readme": {
     "available": true,
-    "excerpt": "本版本使用 DSH 0.1.2-rc.1 提供的 ctx.settings.installSection() API，不再导入已移除的 settingsNamespace 或 installSettingsSection 顶层导出。"
+    "excerpt": "本版本适配 DSH 0.1.7-rc.2：插件以命名导出 name、Config、inject、apply，使 DSH loader 的 module namespace 保留 Config schema；client 端通过 configForms.get/whileServed 和 plugins.bundle.config slot 渲染 RC2 设置卡片。未被 DSH user layer 覆盖的 Manager URL、Agent 名称和实例 ID 会显示当前 environment/local-state 有效值；显式 DSH user ov"
   },
   "schemaVersion": 1,
   "scripts": {

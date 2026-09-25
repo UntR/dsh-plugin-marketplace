@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "e4a9431a57673aca13724f2f0c04af0fc314ab81"
   },
   "github": {
@@ -43,27 +43,42 @@
   },
   "id": "gh:1378170216",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workspace-lock",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:HyperForce/dsh-workspace-lock#e4a9431a57673aca13724f2f0c04af0fc314ab81",
+    "version": "0.3.6"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workspace-lock",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c34c6caffd56dda97d6f1280dcf1663bfc7e4356fb88809ad0ad713445141d60/HyperForce/dsh-workspace-lock",
     "description": "Per-workspace password locks for the DeepSeek Harness (DSH) web UI: right-click to lock, lock screen, admin master password. UI-level lock."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A single-purpose workspace password lock for the DeepSeek Harness (DSH) web UI. Right-click a workspace in the sidebar → lock it: its sessions hide and the chat area becomes a lock screen until unlocked. Nothing else."
   },
   "schemaVersion": 1,
   "scripts": {

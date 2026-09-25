@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "406c6f6478ea678212789a189a03b089a4c62310"
   },
   "github": {
@@ -51,7 +51,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,20 +61,38 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./channels": {
+        "default": "./lib/channels.js",
+        "types": "./lib/types/channels.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-jev-kit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.17.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/84cb0ede0062bc5075b5312965ff80ad7454e78aa224f520ea97cc56994fef04/jackchen13755/dsh-jev-kit",
     "description": "Jev decision toolkit for DeepSeek Harness: 22 named typed judgments (privacy scan, change-scope, memory triage, batch triage) on one hardened, budgeted, ledger-backed transport. Advisory only."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Jev 决策工具箱 —— 把 TypeSafe Jev（不生成文本、只做类型化判断的 System One 模型）变成 23 个可以随时调用的具名判断，挂在 DeepSeek Harness 上。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

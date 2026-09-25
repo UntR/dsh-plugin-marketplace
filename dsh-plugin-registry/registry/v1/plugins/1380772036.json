@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "277382dbda258964c5356ca1fd1558c14ba194ee"
   },
   "github": {
@@ -49,33 +49,45 @@
   },
   "id": "gh:1380772036",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@linbin-mk/dsh-notify",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "@linbin-mk/dsh-notify@0.3.0",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "@linbin-mk/dsh-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7ceeb46f7ab9d922d1ad4a70cb0ebe46c670dd68790913fe0dfcf415c6729891/linbin-mk/dsh-notify",
     "description": "deepseek-harness macos 通知插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-notify 是一个适用于 macOS 的纯第三方 DeepSeek Harness 插件。它在系统菜单栏中添加一个状态项：Harness 鲸鱼标志及当前状态为 running 的 Agent 数量。计数为零时，菜单栏只显示鲸鱼。当已订阅事件等待用户处理时，数字改为这些事件的总数，字母用于标识事件类型：Q 表示提问，S 表示审批；因此 2-QS 表示各有一个提问和审批等待处理。两类订阅及扫光强化提示默认开启。点击状态项会切换到此 Harness 进程已打开的 Google Chrome 标签页，绝不会新建标签页。它的 Web Client 端会在"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

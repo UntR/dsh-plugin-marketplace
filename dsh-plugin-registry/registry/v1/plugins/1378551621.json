@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "6ba178f3ca7e273764dff0cab1bb9d8c8f99f755"
   },
   "github": {
@@ -43,27 +43,42 @@
   },
   "id": "gh:1378551621",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-work-buddy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:AMC-tp/dsh-work-buddy#6ba178f3ca7e273764dff0cab1bb9d8c8f99f755",
+    "version": "1.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-work-buddy",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cafc1c310a15d33a2677eab156bda128a46f8743dba3a7ca78c24f89b244e24c/AMC-tp/dsh-work-buddy",
     "description": "Pixel desk buddy for the DSH Web GUI: slacks off when idle, thinks and types while a turn runs, throws confetti when it finishes, and tallies completed turns."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Web GUI 右下角的高密度像素机器人 —— 同时是一本产出账本。 一个原创的方脑袋履带机器人：闲时摸鱼、干活时思考／敲代码、等你做选择时举手提问、回合结束撒花，并把完成数、Token 消耗、估算费用记成账，按今日 / 本周 / 本月 / 年度汇总。"
   },
   "schemaVersion": 1,
   "scripts": {

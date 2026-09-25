@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "9cdae7589df314aacb7b70df1860fab745a8a586"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1381092524",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-chat-export",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-chat-export@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./src/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-chat-export",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e89bc40918f50ea9f825f492c10acaf3973e65bd4103689bb1a1a8367b9c701a/DDDMUC/dsh-chat-export",
     "description": "DSH 会话可读导出：把 DeepSeek Harness 会话导出成可读的 Markdown / HTML / 纯文本 / ZIP 文字稿（思考块、工具调用与结果、代码块、图片、时间戳、标题与用量）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 会话可读导出 —— 把任意会话导出成可读的 Markdown / HTML / ZIP 文字稿。 官方 @deepseek-ai/dsh-session-log-export 只给你一份原始日志（session.v3.jsonl.zstd，二进制、多帧 zstd、events v3），人读不了；这个插件补上缺的那一半：会话头部菜单「导出文字稿」+ /export-md 命令，产出带标题、模型、用量、时间戳、思考块、工具调用与结果、代码块和图片的文字稿，HTML 还能直接打印成 PDF。"
   },
   "schemaVersion": 1,
   "scripts": {

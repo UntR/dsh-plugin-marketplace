@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "88196a573e71629e08c00156178e7974d5a3f051"
   },
   "github": {
@@ -42,27 +42,40 @@
   },
   "id": "gh:1380678303",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-zcode-project-memory",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-zcode-project-memory@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./package.json": "./package.json",
+      "./src/subsystems/extraction.js": "./src/subsystems/extraction.js",
+      "./src/subsystems/manifest.js": "./src/subsystems/manifest.js",
+      "./src/subsystems/summarization.js": "./src/subsystems/summarization.js"
+    },
+    "main": "src/index.js",
+    "name": "dsh-zcode-project-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/92bfde96d5f5cc0652b3eb66ec4321a89484e238d69bb227f45433a8c0c08038/ffyfox/dsh-zcode-project-memory",
     "description": "ZCode 项目记忆的 DeepSeek Harness 非官方社区移植：项目级长效记忆插件。Unofficial community port of ZCode's project memory to DeepSeek Harness: project-scoped long-term memory plugin"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的项目级长效记忆插件。模型在一次会话里沉淀下的项目教训，会在之后的新会话里被自动读回。"
   },
   "schemaVersion": 1,
   "scripts": {

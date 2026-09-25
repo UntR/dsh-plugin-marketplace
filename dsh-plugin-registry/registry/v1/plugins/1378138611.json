@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
-    "headSha": "595591606d44d525a36cfe4f74eb5f38973de84f"
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
+    "headSha": "9cf50141062dcf277e6f53ee365c285351a25349"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness (DSH) 执行前安全阀门:bash/pwsh 真正执行前先经静态规则 + TypeSafe Jev 语义判定,破坏性操作按 允许/修正/拦截/上报人工 四态处置,含额度降级与审计日志。",
     "fork": false,
     "forks": 0,
-    "headSha": "595591606d44d525a36cfe4f74eb5f38973de84f",
+    "headSha": "9cf50141062dcf277e6f53ee365c285351a25349",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUiS58w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/fb7ea8268bdc5d40a6040bdcb235c645701ca15f286b3f038142e3b53957061c/7starsseeker/dsh-jev-guard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/9b5059876acc68a4acc31e368f00c5994dd1f20e91a35c64172e233d36e5e8eb/7starsseeker/dsh-jev-guard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/18816083?u=2426792d2f8bf02878f89b570367a3736fdbb407&v=4",
       "login": "7starsseeker"
     },
-    "pushedAt": "2026-09-23T04:00:08Z",
+    "pushedAt": "2026-09-24T17:47:23Z",
     "slug": "7starsseeker/dsh-jev-guard",
     "stars": 0,
     "topics": [
@@ -45,32 +45,51 @@
       "safety",
       "typesafe"
     ],
-    "updatedAt": "2026-09-23T04:00:12Z",
+    "updatedAt": "2026-09-24T17:47:26Z",
     "url": "https://github.com/7starsseeker/dsh-jev-guard"
   },
   "id": "gh:1378138611",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-jev-guard",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-jev-guard@0.5.3",
+    "version": "0.5.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./adapters/dsh/index.js",
+      "./adapters/dsh": "./adapters/dsh/index.js",
+      "./audit": "./lib/audit.js",
+      "./cli": "./bin/guard.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./gate": "./lib/gate.js",
+      "./package.json": "./package.json",
+      "./quota": "./lib/quota.js",
+      "./rules": "./lib/rules.js",
+      "./token": "./lib/token.js",
+      "./verdict": "./lib/verdict.js"
+    },
+    "main": "adapters/dsh/index.js",
+    "name": "dsh-jev-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/fb7ea8268bdc5d40a6040bdcb235c645701ca15f286b3f038142e3b53957061c/7starsseeker/dsh-jev-guard",
+    "coverUrl": "https://opengraph.githubassets.com/9b5059876acc68a4acc31e368f00c5994dd1f20e91a35c64172e233d36e5e8eb/7starsseeker/dsh-jev-guard",
     "description": "DeepSeek Harness (DSH) 执行前安全阀门:bash/pwsh 真正执行前先经静态规则 + TypeSafe Jev 语义判定,破坏性操作按 允许/修正/拦截/上报人工 四态处置,含额度降级与审计日志。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A pre-execution safety valve for DeepSeek Harness (DSH): before a command actually runs, it asks one question — \"will this irreversibly delete or overwrite your real data?\""
   },
   "schemaVersion": 1,
   "scripts": {

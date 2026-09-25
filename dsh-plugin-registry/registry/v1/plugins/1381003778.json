@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "85559ceb2836bb5a6b6f16bcd820136ae3bb946e"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1381003778",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-resource-bar",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lsl1931/dsh-resource-bar#85559ceb2836bb5a6b6f16bcd820136ae3bb946e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-resource-bar",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4f99aff4caa6f9c688f2755aee283963af2f2c874e48b033e0ede4e7aff62db5/lsl1931/dsh-resource-bar",
     "description": "DSH Web 插件：在左侧边栏底部（设置按钮上方）常驻一枚 CPU / 内存占用药丸，点击展开逐核占用、时间片构成、内存细分、交换分区、系统负载与进程 Top5 详情。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness（dsh）Web 版左侧边栏「设置」按钮上方常驻显示本机 CPU 与内存使用率的药丸，点击展开完整详情。"
   },
   "schemaVersion": 1,
   "scripts": {

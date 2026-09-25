@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "4246ed8f3faebe9a933cc15299f79aa314693fa4"
   },
   "github": {
@@ -52,7 +52,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -62,14 +62,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@wowyuarm/dsh-context-continuity",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d76a83513fa58f21ebc0dee605ba208225e6be478f92366cbd084e706162557d/wowyuarm/dsh-context-continuity",
     "description": "The context-continuity engine for DeepSeek Harness: a subject's context lived as one continuous timeline across many physical Sessions — rollover, checkpoints, and lineage."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Let a DeepSeek Harness agent manage its own context, and turn its past Sessions into context it can draw on."
   },
   "schemaVersion": 1,
   "scripts": {

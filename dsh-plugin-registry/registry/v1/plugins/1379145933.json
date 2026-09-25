@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "3dab1862b5bda9d52dc048c88f9ad66bb8b20cad"
   },
   "github": {
@@ -46,33 +46,43 @@
   },
   "id": "gh:1379145933",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@bojansandhaus/jev-lcm-dsh-compaction",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:bojansandhaus/jev-lcm-dsh-compaction#3dab1862b5bda9d52dc048c88f9ad66bb8b20cad",
+    "version": "1.0.0-rc.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./core": "./lib/prepass.js"
+    },
+    "main": "lib/index.js",
+    "name": "@bojansandhaus/jev-lcm-dsh-compaction",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0-rc.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2df4992c71b3e33c52e0678e3f4f3989fc3bed0887e6a8faf9dfb56bfb9a2f56/bojansandhaus/jev-lcm-dsh-compaction",
     "description": "Calibrated Jev ranking before lossless context condensation"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Jev-LCM Compaction Plugin for DeepSeek Harness is an experimental dsh-plugin bundle that puts Jev scoring before a DSH compaction pass and keeps a local SQLite evidence surface beside it. It exists in response to the failure modes reported in hermes-agent PR #116246: Jev-only com"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

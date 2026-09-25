@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "662d2751b7d22faaba222b56bb9d705018bff966"
   },
   "github": {
@@ -44,27 +44,41 @@
   },
   "id": "gh:1379301398",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-codex-plus",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:mia-wong1016/dsh-codex-plus#662d2751b7d22faaba222b56bb9d705018bff966",
+    "version": "0.1.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-codex-plus",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b915d30d55c71f1e1616f28a041b8e49dc66e9f136cd2637a5ebd554afe9b2b4/mia-wong1016/dsh-codex-plus",
     "description": "Codex（ChatGPT Plus/Pro）订阅接入 DSH：展示 5 小时与一周额度、重置时间与重置券并支持一键重置；读取额度时自动把订阅模型接进模型选择器；access token 到期前自动续期。无需填写 API key。Codex (ChatGPT Plus/Pro) subscription for DSH: quota panel with one-click reset, subscription model routing, and token upkeep."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "用途：把你本机已经登录的 Codex（ChatGPT Plus/Pro）订阅接入 DeepSeek Harness。 它显示 5 小时窗口与一周窗口的剩余额度、重置时间与剩余重置券数量，支持一键消耗一张重置券重置额度； 读取额度时自动把订阅线路注册进 DSH，使 Codex 模型出现在模型选择器中；并在 access token 到期前 自动续期。无需填写任何 API key，使用的是你本机 Codex 登录已有的凭证。"
   },
   "schemaVersion": 1,
   "scripts": {

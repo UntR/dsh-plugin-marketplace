@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "56e17d8dcc13c1dcf41a07bb40e53fce77980832"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1379699292",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "spire-ctl",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:enderzcx/spire-ctl#56e17d8dcc13c1dcf41a07bb40e53fce77980832",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./adapters/dsh.mjs",
+      "./controller": "./src/controller.mjs",
+      "./package.json": "./package.json"
+    },
+    "main": "adapters/dsh.mjs",
+    "name": "spire-ctl",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b8f1178b01318b6f4d918363e343f2094677605ff452b318d2649c59bcf391cd/enderzcx/spire-ctl",
     "description": "Verified control surface for Slay the Spire 2: a JSON state contract, legal actions, and no-replay execution for any agent harness. Zero npm dependencies."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 agent 用的《杀戮尖塔 2》控制面。 一个 JSON 状态契约、一份合法动作清单、一套不会重放的执行层——任何能跑命令、读 JSON 的 harness 都能驱动游戏。零 npm 依赖。"
   },
   "schemaVersion": 1,
   "scripts": {

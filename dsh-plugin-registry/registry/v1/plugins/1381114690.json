@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "9745cede054d2c5a9c478d8e1c70a568e07a2875"
   },
   "github": {
@@ -41,27 +41,42 @@
   },
   "id": "gh:1381114690",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "mdl-latency-test",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Mo3ter/dsh-model-latency-test#9745cede054d2c5a9c478d8e1c70a568e07a2875",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "mdl-latency-test",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ba38a5b140e53673b2987e54de7ed78989f0a8dd04359a33d64cf5ec3e329c44/Mo3ter/dsh-model-latency-test",
     "description": "DSH plugin: adds a 模型测试 (Model Test) settings page that measures first-token latency (TTFT) for every configured model. Works in the DSH Web GUI and DSH Desktop."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "模型测试：一键测出每个模型的首 token 延迟（TTFT）。 Model Test: measure first-token latency (TTFT) for every model you have configured."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "c35749ac87cd552fc866fec70ab0762108bbd724"
   },
   "github": {
@@ -49,27 +49,41 @@
   },
   "id": "gh:1379773210",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-research-check",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:mikasa-servent/dsh-research-check#c35749ac87cd552fc866fec70ab0762108bbd724",
+    "version": "1.5.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.5.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json",
+      "./python/*": "./python/*",
+      "./skill": "./skill/"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-research-check",
+    "status": "valid",
+    "type": "module",
+    "version": "1.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e3ef869c517aa5d6be789354152a2eb83a64d8245ee3b262aed0ea3d72c02742/mikasa-servent/dsh-research-check",
     "description": "Deliverable evidence-chain & conformance checks for DSH — turn requirements into an executable spec, trace every number to a provenance ledger, audit PDF/OOXML metadata and archive manifests. MCP-ready."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在交论文、交文档、交数据之前，先让它替你检查一遍。"
   },
   "schemaVersion": 1,
   "scripts": {

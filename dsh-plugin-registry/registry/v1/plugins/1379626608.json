@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "d67b3715a2392169110ace58f68ca2909085ea5f"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1379626608",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-gui-last-session",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:itchenshi/dsh-gui-last-session#d67b3715a2392169110ace58f68ca2909085ea5f",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-gui-last-session",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/65a130fb1d0bef549243ce257b066ee064c6d7f6d47dc228c0e79a90994652e6/itchenshi/dsh-gui-last-session",
     "description": "DeepSeek Harness plugin: reopen the conversation you were last in after a restart, without patching engine files"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "重启 DeepSeek Harness（DSH）之后，自动回到你 上一次待着的那个会话 —— 不用再一层层翻历史。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "74809e1802065c2578476e4d8aed22136b2bc71c"
   },
   "github": {
@@ -41,27 +41,66 @@
   },
   "id": "gh:1381705863",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-xcodebuild",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-xcodebuild@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./classify": {
+        "default": "./lib/classify.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./legacy-applog": {
+        "default": "./lib/legacy-applog.js"
+      },
+      "./legacy-launch": {
+        "default": "./lib/legacy-launch.js"
+      },
+      "./listing": "./lib/listing.js",
+      "./lock-state": "./lib/lock-state.js",
+      "./log-tap": "./lib/log-tap.js",
+      "./modern-launch": "./lib/modern-launch.js",
+      "./package.json": "./package.json",
+      "./parse-destinations": {
+        "default": "./lib/parse-destinations.js"
+      },
+      "./projects": {
+        "default": "./lib/projects.js"
+      },
+      "./ring": {
+        "default": "./lib/ring.js"
+      },
+      "./session-files": "./lib/session-files.js",
+      "./syslog": "./lib/syslog.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-xcodebuild",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/324e1a9506530a247902bc4df3ce64cc7e5b035714e8f855429c0423986f9a3a/harde1/dsh-xcodebuild",
     "description": "Xcode build, test, archive, run and log streaming for DeepSeek Harness: build/test/clean/archive/run an iOS or macOS project, with a live filterable build log and simulator and USB device log channels. macOS only."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An Xcode build and development loop for DeepSeek Harness: build, test, clean, archive and run an iOS/macOS project, with a live build log you can filter — driven either by the agent through six tools, or by hand from a panel inside the conversation."
   },
   "schemaVersion": 1,
   "scripts": {

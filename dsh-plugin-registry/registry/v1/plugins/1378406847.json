@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "1a4ff1b338f30ecf3094666d6d3ff2cc19dc72ec"
   },
   "github": {
@@ -42,27 +42,45 @@
   },
   "id": "gh:1378406847",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-usage-state",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-usage-state@0.3.1",
+    "version": "0.3.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json",
+      "./typert": {
+        "default": "./lib/typert.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-usage-state",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5b8f92deeb2041d4a2d7269b9ccb0c6a287952709e7a1af774f87097451895fe/takboo/dsh-usage-state",
     "description": "DSH plugin: show account balance (API mode) or coding-plan quota usage (5h/7d) for the model in use"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH（DeepSeek Harness） 里一眼看到你的账户余额或套餐额度——就在输入框统计行的正下方。"
   },
   "schemaVersion": 1,
   "scripts": {

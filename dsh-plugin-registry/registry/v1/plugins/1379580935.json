@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "cf4cef40f0fd9862c69392313983e1a2074cc43e"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1379580935",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-global-rules",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kingzhz/dsh-global-rules#cf4cef40f0fd9862c69392313983e1a2074cc43e",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client/rules-panel.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-global-rules",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/58029d600ecc06a588b2368a1eeb07f2f09e6d86144e6c983e8ccd2adcf7a802/kingzhz/dsh-global-rules",
     "description": "Global AGENTS-style rules as many independent markdown files, with a settings GUI — fills the gap left by DeepSeek Harness's single hard-coded global AGENTS.md."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的原生 AGENTS.md 机制补上它缺的那一块:全局规则拆成多个独立文件,并配一个设置页 GUI。"
   },
   "schemaVersion": 1,
   "scripts": {

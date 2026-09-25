@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "fc2d5ea34453e654544f082752b67cffabd4fdf2"
   },
   "github": {
@@ -46,27 +46,43 @@
   },
   "id": "gh:1379697838",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-wsl-windows-folder-picker",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:VoidPrim/dsh-wsl-windows-folder-picker#fc2d5ea34453e654544f082752b67cffabd4fdf2",
+    "version": "0.1.7-rc.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-wsl-windows-folder-picker",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.7-rc.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/782022cacfe5b58fd87725b989bc973b735ab10f49edf3f86e745349a7c364af/VoidPrim/dsh-wsl-windows-folder-picker",
     "description": "Windows folder picker for dsh on WSL"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Use the Windows folder dialog when using dsh under WSL."
   },
   "schemaVersion": 1,
   "scripts": {

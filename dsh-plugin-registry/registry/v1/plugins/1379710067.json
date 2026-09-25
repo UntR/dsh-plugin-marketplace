@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "2cbc8a2b37950e9e67d6a4b18ec6517c6e307b73"
   },
   "github": {
@@ -27,7 +27,7 @@
     "nodeId": "R_kgDOUjy0cw",
     "openGraphImageUrl": "https://opengraph.githubassets.com/fa0a33b0d0e793bd4368e8415333f1de5d9d6588aec3490e168edd52b1fd2fca/songoao25/dsh-opencode-session",
     "owner": {
-      "avatarUrl": "https://avatars.githubusercontent.com/u/269614376?u=72b81447485bdf971131d8f8e7cef4ea506c1103&v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/269614376?u=849980ba73b358d7b39098e4727be085ebf75420&v=4",
       "login": "songoao25"
     },
     "pushedAt": "2026-09-21T12:48:08Z",
@@ -46,27 +46,36 @@
   },
   "id": "gh:1379710067",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-opencode-session",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:songoao25/dsh-opencode-session#2cbc8a2b37950e9e67d6a4b18ec6517c6e307b73",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-opencode-session",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fa0a33b0d0e793bd4368e8415333f1de5d9d6588aec3490e168edd52b1fd2fca/songoao25/dsh-opencode-session",
     "description": "DSH OpenCode session-header repair: fixes MissingSessionID while preserving per-conversation affinity."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) plugin that automatically sends the x-opencode-session request header on model calls routed to OpenCode / OpenCode Go providers — one stable session id per DSH conversation."
   },
   "schemaVersion": 1,
   "scripts": {

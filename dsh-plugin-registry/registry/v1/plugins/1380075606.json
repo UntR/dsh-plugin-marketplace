@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
-    "headSha": "654a2fc634feb86c22a4335e97c3c4f45c4d3f88"
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
+    "headSha": "00e612c2b69208d14868774a198e35e180df00b5"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "🔔 Smart session notifications for DeepSeek Harness (DSH): 4 event types (completed/failed/question/permission), ⭐ main-line/side-line alerts, Web Audio sounds, browser notifications",
     "fork": false,
     "forks": 0,
-    "headSha": "654a2fc634feb86c22a4335e97c3c4f45c4d3f88",
+    "headSha": "00e612c2b69208d14868774a198e35e180df00b5",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUkJIVg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/9578cbfaa78bf3711e9155d3e5530e1b53d77255815ea700c608aac1f5184304/zjbc2000/attention-plugins",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e0a8de31cc10d1462043a6fc37a1d0446d8edc3447efe4142c7037b3b1f8a7a9/zjbc2000/attention-plugins",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/136916849?u=c2b72d6c5c11e5f1c42b92c335ee5e3a2dae5465&v=4",
       "login": "zjbc2000"
     },
-    "pushedAt": "2026-09-21T16:01:43Z",
+    "pushedAt": "2026-09-24T16:30:34Z",
     "slug": "zjbc2000/attention-plugins",
     "stars": 0,
     "topics": [
@@ -42,7 +42,7 @@
       "productivity",
       "sound-notification"
     ],
-    "updatedAt": "2026-09-21T16:01:52Z",
+    "updatedAt": "2026-09-24T16:30:39Z",
     "url": "https://github.com/zjbc2000/attention-plugins"
   },
   "id": "gh:1380075606",
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,32 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "attention-plugins",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/9578cbfaa78bf3711e9155d3e5530e1b53d77255815ea700c608aac1f5184304/zjbc2000/attention-plugins",
+    "coverUrl": "https://opengraph.githubassets.com/e0a8de31cc10d1462043a6fc37a1d0446d8edc3447efe4142c7037b3b1f8a7a9/zjbc2000/attention-plugins",
     "description": "🔔 Smart session notifications for DeepSeek Harness (DSH): 4 event types (completed/failed/question/permission), ⭐ main-line/side-line alerts, Web Audio sounds, browser notifications"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "attention-plugins · 轻量级 DSH Web 插件：智能任务通知，主线/支线管理"
   },
   "schemaVersion": 1,
   "scripts": {

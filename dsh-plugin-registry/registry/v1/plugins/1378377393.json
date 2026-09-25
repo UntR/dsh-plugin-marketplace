@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "41ffbff3f1e93355216e79fd72aab32fb20a2fa5"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1378377393",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-job-progress",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Rice00/dsh-job-progress#41ffbff3f1e93355216e79fd72aab32fb20a2fa5",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./progress": "./lib/dsh-progress.mjs"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-job-progress",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8282ba08fc3d4f7b31a82cb40cf4b7c17e29c8b68bde57e3d30c7024705869a6/Rice00/dsh-job-progress",
     "description": "Live progress for long-running background jobs in DeepSeek Harness — a draggable floating ball with a per-session task panel showing done/total, speed and ETA."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "How far along is it? — a floating ball in the session that owns the job answers that."
   },
   "schemaVersion": 1,
   "scripts": {

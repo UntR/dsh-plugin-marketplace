@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "fa72e63eeeda397043747b0676bb71c7e2bceb1a"
   },
   "github": {
@@ -46,33 +46,50 @@
   },
   "id": "gh:1379019683",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-price-aware",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:121212165/dsh-plugin-price-aware#fa72e63eeeda397043747b0676bb71c7e2bceb1a",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./pricing": {
+        "default": "./lib/pricing/index.js",
+        "types": "./lib/types/pricing/index.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-price-aware",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ff30b04b00436c470ff13975a6f0b726be86fa801bd5d99a8e0daa3facae7648/121212165/dsh-plugin-price-aware",
     "description": "Make your coding agent know what it costs: live credits, per-model price, task pre-estimates, budget gate"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Let your coding agent know what it costs."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

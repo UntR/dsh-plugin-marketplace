@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "a0c0e53b0461bd07f91947202d86fcbf3d00a800"
   },
   "github": {
@@ -41,33 +41,43 @@
   },
   "id": "gh:1380027453",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-trading-agent",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:johnny-ggao/trading-agent#a0c0e53b0461bd07f91947202d86fcbf3d00a800",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-trading-agent",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4c4aa86975860b6bdccc81c4272f1b80cfbc6400266b9a1ead3df629335709dd/johnny-ggao/trading-agent",
     "description": "trading agent for dsh"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 的右侧栏原生自定义 tab 里渲染加密行情技术分析图表的双半边插件（宿主 + 客户端），并提供机械候选（枢轴 / 支撑阻力 / 斐波那契 / 均线排列）、规则信号、市场状态与多周期共振；可选接入 TypeSafe Jev 校准方向性结论的置信度。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

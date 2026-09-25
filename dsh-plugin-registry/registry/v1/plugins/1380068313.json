@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "2aea70e26cf56fc027383df34bed7f379df7d8fe"
   },
   "github": {
@@ -50,27 +50,52 @@
   },
   "id": "gh:1380068313",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-global-system-prompt",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-global-system-prompt@0.3.1",
+    "version": "0.3.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./config": {
+        "default": "./lib/config.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./prompt": {
+        "default": "./lib/prompt.js"
+      },
+      "./route": {
+        "default": "./lib/route.js"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-global-system-prompt",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/88e1fc759418da911ad9082386514ba6db27f05a5a7169c8cb1a6b1dcc9fd226/YMRwithNoworry/dsh-global-system-prompt",
     "description": "Global prompt for DeepSeek Harness (dsh): one user-editable block injected into every conversation's system prompt, mirrored into each session project's AGENTS.md, and edited from the web settings panel."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-global-system-prompt 给 DeepSeek Harness 补上 cc-switch 那个「全局提示词」：一段你自己写的文字，每一次对话都会带上，在 Web 设置面板里直接编辑，保存后下一轮对话即生效。"
   },
   "schemaVersion": 1,
   "scripts": {

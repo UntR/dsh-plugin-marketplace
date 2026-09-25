@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "failed",
-    "headSha": "8918fae91b1e1fb18623930bde4aef20ae2ae28b"
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
+    "headSha": "67de87a776afbc98f969f01eb7655817a672f613"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-20T11:53:38Z",
     "databaseId": 1378282474,
     "defaultBranch": "main",
-    "description": "DeepSeek Harness 的 Linux 原生桌面集成：XDG 桌面入口、无边框独立窗口、关窗自动停服务。",
+    "description": "DeepSeek Harness 的 Linux 原生桌面集成：XDG 桌面入口、无边框独立窗口、关窗自动停服务。Linux native desktop integration for DeepSeek Harness: XDG desktop entry, borderless standalone window, and automatic service shutdown on window close.",
     "fork": false,
     "forks": 0,
-    "headSha": "8918fae91b1e1fb18623930bde4aef20ae2ae28b",
+    "headSha": "67de87a776afbc98f969f01eb7655817a672f613",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,16 +25,17 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUibr6g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/18a0e81f5ad7839f947b28245c17b40d114238282d903329e5554a94851cbe0d/ffyfox/dsh-linux-desktop",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/4bb1972b8e41ce2eecdbfc513de392ead80c6f7ce0b0a3b8e0d0d1a05cbb9004/ffyfox/dsh-linux-desktop",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/299493445?u=0127f7885d18fd62fcb672b159b97b0ff9410610&v=4",
       "login": "ffyfox"
     },
-    "pushedAt": "2026-09-23T14:16:14Z",
+    "pushedAt": "2026-09-24T21:54:07Z",
     "slug": "ffyfox/dsh-linux-desktop",
     "stars": 1,
     "topics": [
       "deepseek-harness",
+      "desktop",
       "dsh-plugin",
       "gnome",
       "hyprland",
@@ -43,32 +44,44 @@
       "pwa",
       "xdg"
     ],
-    "updatedAt": "2026-09-23T15:04:15Z",
+    "updatedAt": "2026-09-25T02:07:18Z",
     "url": "https://github.com/ffyfox/dsh-linux-desktop"
   },
   "id": "gh:1378282474",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-linux-desktop",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-linux-desktop@0.5.0",
+    "version": "0.5.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./cli": "./src/cli.js",
+      "./client": "./src/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-linux-desktop",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/18a0e81f5ad7839f947b28245c17b40d114238282d903329e5554a94851cbe0d/ffyfox/dsh-linux-desktop",
-    "description": "DeepSeek Harness 的 Linux 原生桌面集成：XDG 桌面入口、无边框独立窗口、关窗自动停服务。"
+    "coverUrl": "https://opengraph.githubassets.com/4bb1972b8e41ce2eecdbfc513de392ead80c6f7ce0b0a3b8e0d0d1a05cbb9004/ffyfox/dsh-linux-desktop",
+    "description": "DeepSeek Harness 的 Linux 原生桌面集成：XDG 桌面入口、无边框独立窗口、关窗自动停服务。Linux native desktop integration for DeepSeek Harness: XDG desktop entry, borderless standalone window, and automatic service shutdown on window close."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "这是一个 DSH bundle。它复用系统已有的 Chromium 系浏览器，用标准 XDG 桌面入口把 dsh web 接入桌面环境，并且不修改 dsh web 自身的行为。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "fd83351a22c32c5255bb331515d9ee71dc4cbc80"
   },
   "github": {
@@ -44,27 +44,40 @@
   },
   "id": "gh:1381627110",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-carrot-on-a-stick",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Leawind/dsh-carrot-on-a-stick#fd83351a22c32c5255bb331515d9ee71dc4cbc80",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./client/client.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-carrot-on-a-stick",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/da1e2e158b9184ca9d216ba1c67c815d748222a83b118a4fc91087a3873a7172/Leawind/dsh-carrot-on-a-stick",
     "description": "Operate DeepSeek Harness (dsh) over MCP: expose sessions, task execution, and workspace management to any MCP client."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh ships a complete agent runtime — model routing, tool sandbox, presets, persistent sessions — but it is a Cordis application that external programs cannot call directly. dsh-carrot-on-a-stick turns it inside out: the plugin starts an MCP server (StreamableHTTP) inside the dsh "
   },
   "schemaVersion": 1,
   "scripts": {

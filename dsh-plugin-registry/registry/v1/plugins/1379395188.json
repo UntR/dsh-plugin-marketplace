@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "c7821b50439edf210bca640867d1654c55fc7b94"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1379395188",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-deepseek-balance-badge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:chenjingchun/dsh-deepseek-balance-badge#c7821b50439edf210bca640867d1654c55fc7b94",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host/index.js",
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/host/index.js",
+    "name": "dsh-deepseek-balance-badge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/193568272f2ef06e12cee207e1b53b9682dd2386f7d4fc932b0a38a2f6994246/chenjingchun/dsh-deepseek-balance-badge",
     "description": "DeepSeek account balance badge for the DSH sidebar footer, with a settings card for the refresh period. The API key never reaches the browser."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：在 Web GUI 侧边栏底部常驻一个 DeepSeek 账户余额徽标，点击展开明细浮层，内含手动刷新按钮，并按固定周期自动刷新；刷新周期与宿主缓存窗口可在 设置 → 插件 → 插件配置 里改。"
   },
   "schemaVersion": 1,
   "scripts": {

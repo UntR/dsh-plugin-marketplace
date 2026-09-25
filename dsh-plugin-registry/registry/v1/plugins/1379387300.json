@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "f092ed8968f63b69f6ca3b099f908780759cbfbb"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1379387300",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "lgtm-dsh",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "lgtm-dsh@0.2.7",
+    "version": "0.2.7"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.7",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "lgtm-dsh",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.7"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b6baba1a45ac8027b3df0f31df0cc875f7be9efa5aa285e6c1fed4cc265c4116/dymzz/lgtm-dsh",
     "description": "lgtm-dsh is a DSH plugin that automatically installs lgtm, reuses the Jev already configured in DSH, and lets the agent automatically call lgtm during the testing phase."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "lgtm-dsh 是个 DSH 插件，负责自动装好 lgtm、复用 DSH 里已配好的 Jev，并让 agent 在测试阶段自动调用。 当前只支持web方式"
   },
   "schemaVersion": 1,
   "scripts": {

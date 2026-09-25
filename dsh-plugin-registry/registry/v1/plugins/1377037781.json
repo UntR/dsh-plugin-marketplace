@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "50de23073496f8b2e4b91b926a012c5b11da1f8a"
   },
   "github": {
@@ -45,27 +45,46 @@
   },
   "id": "gh:1377037781",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-git-flow",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hunan36/dsh-git-flow#50de23073496f8b2e4b91b926a012c5b11da1f8a",
+    "version": "0.3.0-rc.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-git-flow",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0-rc.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fa6fa013116b5cb5bd4ba380b1ce4314cb8440fe61ebdd06d62a72addc34b545/hunan36/dsh-git-flow",
     "description": "Workspace git branch switcher, commit composer with AI-written messages, and push for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness workspace git plugin: a branch chip in the composer tool row. Open it to browse branches, switch branches, create one, and commit a checked subset of files — the commit message is written by the session's own model from the diff."
   },
   "schemaVersion": 1,
   "scripts": {

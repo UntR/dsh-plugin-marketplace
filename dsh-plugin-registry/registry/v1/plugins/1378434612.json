@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "322dc84518c3ea541c22182f954e42b93f1bec88"
   },
   "github": {
@@ -47,27 +47,41 @@
   },
   "id": "gh:1378434612",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "fast-compaction-dsh",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kolawong/fast-compaction-dsh#322dc84518c3ea541c22182f954e42b93f1bec88",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./web/server.js",
+      "./client": "./web/client.js",
+      "./engine": "./src/index.ts",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*",
+      "./web": "./web/server.js"
+    },
+    "main": "web/server.js",
+    "name": "fast-compaction-dsh",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6291478b076e7bfeb8cdaa87ff9ac87ce6ee0e09b1d42eaacf2cff93f8b540b4/kolawong/fast-compaction-dsh",
     "description": "Verdict-based context compaction for DeepSeek Harness — replaces lossy LLM summaries with fast keep/truncate/drop decisions from jev-latest; everything kept stays verbatim. Port of tamaratran/fast-jev-compaction."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Verdict-based context compaction for DeepSeek Harness (DSH). Replaces the lossy compaction summary with fast per-call keep/truncate/drop decisions from jev-latest — everything kept stays verbatim, nothing is ever rewritten."
   },
   "schemaVersion": 1,
   "scripts": {

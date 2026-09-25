@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "96891e9496fa8cf41276800b59b46ebad1a27c4d"
   },
   "github": {
@@ -44,27 +44,43 @@
   },
   "id": "gh:1381468957",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@linbin-mk/dsh-brand-deepseek",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@linbin-mk/dsh-brand-deepseek@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@linbin-mk/dsh-brand-deepseek",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/63593b030e9a206e9e8e711b1c40476278a17f2dbf22961d93916957844e6609/linbin-mk/dsh-brand-deepseek",
     "description": "deepseek-harness 皮肤"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-brand-deepseek 是一个纯第三方、自包含的 DeepSeek Harness 客户端插件。它把 Web 客户端侧边栏的品牌替换成 DeepSeek 官方样式——鲸鱼标志加 deepseek 字标；开启后还会把空白会话页聊天框上方的标题行替换成官方标题（鲸鱼标志 + 想从哪里开始?）。它全部通过 Harness 已公开的插槽系统覆盖外壳的 DSH 本地构建 回退品牌，不需要改动 Harness 源码。"
   },
   "schemaVersion": 1,
   "scripts": {

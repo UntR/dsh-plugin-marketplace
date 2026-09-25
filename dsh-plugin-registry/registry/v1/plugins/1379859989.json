@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "f243be388d71eeca41311fc3c4c2705863f6b431"
   },
   "github": {
@@ -42,27 +42,39 @@
   },
   "id": "gh:1379859989",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-site-selection",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:cinderzhan/dsh-site-selection#f243be388d71eeca41311fc3c4c2705863f6b431",
+    "version": "1.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./lib/client.js",
+      "./model": "./src/model.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/index.js",
+    "name": "dsh-site-selection",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4627115da54895d59bedca6855de41117c4a37c89df84472b30cca31e046c56d/cinderzhan/dsh-site-selection",
     "description": "门店选址工作台 — DSH 插件。真实三维城市地图上点选即分析，DSH 按口头要求批量找点位。地理数据来自 OpenStreetMap (ODbL)。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH (DeepSeek Harness) 插件。在真实三维城市地图上点任意位置，立刻得到这个点的选址分析—— 把要求用大白话说给 DSH，它按同一套模型批量找位置、写进名单；看中哪个位置，再把那里在租的铺收进来；踩点后回填，右侧对话全程读得懂你选中的是哪个点。"
   },
   "schemaVersion": 1,
   "scripts": {

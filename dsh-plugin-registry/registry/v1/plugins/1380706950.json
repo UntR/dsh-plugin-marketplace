@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "788a7740ccc7610f91dfa298847cfdd13377358b"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1380706950",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-work-done-bell",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:FunctionHookTJU/dsh-work-done-bell#788a7740ccc7610f91dfa298847cfdd13377358b",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-work-done-bell",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/42fc56155d59771346c94f18b512c08fd8bda1e705889239526981e850fcbad3/FunctionHookTJU/dsh-work-done-bell",
     "description": "DSH plugin: ring a Windows system sound when a DeepSeek Harness session is truly done"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that rings a Windows system sound when a session has actually finished, and shows a bottom-right toast naming the session that finished. A persistent bottom-right switch turns both off, and that preference is stored in a real settings namespace, so it su"
   },
   "schemaVersion": 1,
   "scripts": {

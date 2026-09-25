@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "ce5eceffbbc8c561baf9b7df56354673500f7b0b"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1378155702",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-input-history",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:HandsYe/dsh-input-history#ce5eceffbbc8c561baf9b7df56354673500f7b0b",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-input-history",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/788cee438a3841e43bad3ea48602051e6abd49dacb376201fb1c6e322dc0f366/HandsYe/dsh-input-history",
     "description": "为 DSH 提供持久化输入历史，支持使用键盘上下方向键切换历史记录并恢复未发送草稿。Persistent input history for DSH with Arrow Up and Arrow Down navigation, draft recovery, deduplication, and local storage."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness 的对话框提供持久化输入历史：发送过的内容会保存下来，用 ↑ / ↓ 随时回溯，重启应用也不丢。"
   },
   "schemaVersion": 1,
   "scripts": {

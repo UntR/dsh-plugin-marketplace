@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "e1c6d6d5195b4111d2fa679ff663475eff66f3d5"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1379852676",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "ming-life",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:cinderzhan/dsh-ming-life#e1c6d6d5195b4111d2fa679ff663475eff66f3d5",
+    "version": "1.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dsh/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./dsh/index.js",
+    "name": "ming-life",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/88b77a5b1b6966a6a5611442e81632c3e51475f42c2f77f0b2350a24ba48bfa0/cinderzhan/dsh-ming-life",
     "description": "东方玄学人生工作台 — DSH (DeepSeek Harness) 插件：排盘算事实，规则标信号，DSH 写解读"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "此版本基于原版 3666033 最小适配，业务页面、表单、排盘及自动解读不变。通过 Desktop 本地市场打开业务面板；创建或选择档案立即展示资料，同时通过 desktopWorkbenches.ensureSession 自动用档案目录创建/恢复工作区和会话、校验归属、保存原有 profile.sessionId 并填入原版开场白草稿。已有会话仍按原关联恢复，用户无需先手动选工作区。"
   },
   "schemaVersion": 1,
   "scripts": {

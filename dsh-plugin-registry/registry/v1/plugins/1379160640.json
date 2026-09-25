@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "46b77961848b26c468e35a01c01edcaead7e0a64"
   },
   "github": {
@@ -51,27 +51,40 @@
   },
   "id": "gh:1379160640",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-peak-usage",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Mirfakk/dsh-plugin-usage#46b77961848b26c468e35a01c01edcaead7e0a64",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./peak": "./lib/peak.js",
+      "./pricing": "./lib/pricing.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-peak-usage",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/18fac05b8e36942a55b14b85d17211992a3b938467134a127ed8a42b8023eaeb/Mirfakk/dsh-plugin-usage",
     "description": "DSH 额度面板：输入框下方实时显示本会话消费金额（官方峰谷分时计价）、token 用量与 DeepSeek 账户余额。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的额度面板插件。装上之后，输入框下面会多出一行实时读数："
   },
   "schemaVersion": 1,
   "scripts": {

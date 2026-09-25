@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "270ef0990e8d5988f69e7cd90f805343754e2a0b"
   },
   "github": {
@@ -46,27 +46,41 @@
   },
   "id": "gh:1380930471",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-wb-cron",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:miseryrua/dsh-wb-cron#270ef0990e8d5988f69e7cd90f805343754e2a0b",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-wb-cron",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d9ca83a2ea806704b11753bbf3899783a5ccdf5f8dd00f8a308709bc9e049869/miseryrua/dsh-wb-cron",
     "description": "DeepSeek Harness 无人值守定时任务调度器：cron/固定间隔/一次性三种调度，到点在 web profile 进程内拉起全新 root agent 执行任务指令，每任务可钉模型与 Agent 预设（预设被删/损坏时三级降级跑完并留痕）。零 npm 运行时依赖、零遥测。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的无人值守定时任务插件。 到点自动在 web profile 进程内拉起一个全新的 root agent，在指定工作区自主执行你的任务指令；会话正常落盘，可回 Web 侧边栏续聊。不需要子进程，不需要单独凭据，零 npm 运行时依赖，也不向任何外部地址发送统计或心跳——唯一的网络行为是你在任务指令里让 agent 做的事。"
   },
   "schemaVersion": 1,
   "scripts": {

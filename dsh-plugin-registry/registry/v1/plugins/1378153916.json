@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "ac9fd2583dff57beb9e8b6f2cba64781fc9f3751"
   },
   "github": {
@@ -45,27 +45,42 @@
   },
   "id": "gh:1378153916",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-agent-instructions",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Bay-Zeddie/dsh-agent-instructions#ac9fd2583dff57beb9e8b6f2cba64781fc9f3751",
+    "version": "0.4.13"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-agent-instructions",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.13"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/081de52e6bd847cf295b6f86b6162c47d530c817805498d21c8a5b2374806a74/Bay-Zeddie/dsh-agent-instructions",
     "description": "在 dsh Web 设置页里编辑原生 AGENTS.md 的面板：链上每层可点选编辑，三种生效范围，并可视化官方指令预算。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 dsh 原生的 AGENTS.md 加一个 Web UI 编辑器，并把官方的指令加载语义如实反映到界面上。"
   },
   "schemaVersion": 1,
   "scripts": {

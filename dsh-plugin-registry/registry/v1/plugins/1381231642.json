@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-24T09:00:08.807Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichmentStatus": "ok",
     "headSha": "863cfda634487cb8b2539c3c29367e3e94be4bd0"
   },
   "github": {
@@ -45,27 +45,45 @@
   },
   "id": "gh:1381231642",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@linbin-mk/dsh-workspace-prompt",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@linbin-mk/dsh-workspace-prompt@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@linbin-mk/dsh-workspace-prompt",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/61fd810f4a7d567fe7f7074db94ed428ae722bae0ec1e960b59c4aa1e2db0e71/linbin-mk/dsh-workspace-prompt",
     "description": "deepseek-harness 工作区自定义提示词"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-workspace-prompt 是一个纯第三方 DeepSeek Harness 插件：为每个工作区配置一段专属提示词。你只需在某个工作区写一次，之后该工作区内每次会话启动时，它都会自动注入到模型上下文；重启 Harness 后依然保留。"
   },
   "schemaVersion": 1,
   "scripts": {
