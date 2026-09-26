@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-25T09:22:13.789Z",
+    "enrichedAt": "2026-09-26T09:03:21.895Z",
     "enrichmentStatus": "ok",
-    "headSha": "386157b34ba49ac343ccff54682e18612154f2dc"
+    "headSha": "9fce78d5b6bb9a0cbe8bd60edcc4df5183b69849"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "一个 dsh-plugin：后台监听文件或命令输出，输出到达时唤醒所属会话，并在 Web 会话头部提供实时监听的列表与输出查看面板。MIT License。",
     "fork": false,
     "forks": 0,
-    "headSha": "386157b34ba49ac343ccff54682e18612154f2dc",
+    "headSha": "9fce78d5b6bb9a0cbe8bd60edcc4df5183b69849",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,54 +25,55 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUGwTNg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d53c442d8febc29ce43cee6a235e55f78e4298ad013dfa0b1d5656b20811520d/substitute525/dsh-tool-monitor",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b5b6a0a15ee2a2bcb54f22b36fa49c753ea55fd23d1ee1f5c975f86623d7c2aa/substitute525/dsh-tool-monitor",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/142138255?v=4",
       "login": "substitute525"
     },
-    "pushedAt": "2026-09-25T02:30:17Z",
+    "pushedAt": "2026-09-26T00:36:36Z",
     "slug": "substitute525/dsh-tool-monitor",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-25T02:30:21Z",
+    "updatedAt": "2026-09-26T00:35:14Z",
     "url": "https://github.com/substitute525/dsh-tool-monitor"
   },
   "id": "gh:1349260086",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "@caizhiyuan/dsh-tool-monitor",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@caizhiyuan/dsh-tool-monitor@0.3.0",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.0",
+    "published": true,
+    "repositoryMatches": true
   },
   "package": {
     "exports": {
       ".": "./lib/index.js",
       "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
       "./package.json": "./package.json"
     },
     "main": "lib/index.js",
     "name": "@caizhiyuan/dsh-tool-monitor",
     "status": "valid",
     "type": "module",
-    "version": "0.3.1"
+    "version": "0.4.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d53c442d8febc29ce43cee6a235e55f78e4298ad013dfa0b1d5656b20811520d/substitute525/dsh-tool-monitor",
+    "coverUrl": "https://opengraph.githubassets.com/b5b6a0a15ee2a2bcb54f22b36fa49c753ea55fd23d1ee1f5c975f86623d7c2aa/substitute525/dsh-tool-monitor",
     "description": "一个 dsh-plugin：后台监听文件或命令输出，输出到达时唤醒所属会话，并在 Web 会话头部提供实时监听的列表与输出查看面板。MIT License。"
   },
   "readme": {
     "available": true,
-    "excerpt": "用 dsh 自己的插件命令把包装进目标 profile。"
+    "excerpt": "本包声明了 dsh.bundle.patch（./cordis.patch.yml），因此它是完整的组合包（bundle）：装进 profile 后会自动成为一层 profile layer 并插入自己，不需要再手工改 profile 的 cordis.patch.yml。"
   },
   "schemaVersion": 1,
   "scripts": {

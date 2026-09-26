@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-25T09:22:13.789Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-26T09:03:21.895Z",
+    "enrichmentStatus": "ok",
     "headSha": "201a6757011746e8709338115762aa6eb8740932"
   },
   "github": {
@@ -45,24 +45,41 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0-rc.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/host/index.js",
+        "types": "./dist/types/host/index.d.ts"
+      },
+      "./client": "./dist/client/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./resources": "./dist/host/resources.js",
+      "./typert": "./dist/host/typert.js"
+    },
+    "main": "dist/host/index.js",
+    "name": "@songyanglin/dsh-apb",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0-rc.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3dfdf9376afef9cb82608a2b55d9262545abe4a1312d4fe170465c81e9b8a205/Songyanglin-curious/dsh-apb",
     "description": "基于标准编码 Agent 的渐进式开发助手。ask/plan/build 三模式由宿主权限预设强制（ask/plan→只读、build→可写工作区），可 Alt+M 或 /apb 切换并随会话持久；遵循先讨论定方向、入口与文件规划、todo 占位、逐模块实现调试、走通后再分步重构的人类式小步开发纪律。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "面向 DeepSeek Harness（DSH）的 Ask / Plan / Build 渐进编码扩展。项目由一个标准 profile bundle @songyanglin/dsh-apb 和一个独立 apb-coding agent preset 组成， 适配 DSH 0.1.5-rc.2。"
   },
   "schemaVersion": 1,
   "scripts": {

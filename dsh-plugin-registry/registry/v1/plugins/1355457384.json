@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-25T09:22:13.789Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-26T09:03:21.895Z",
+    "enrichmentStatus": "ok",
     "headSha": "f1d0fdc13daf7e28d2c2fe3f07ad43ce571eb6fd"
   },
   "github": {
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,20 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-web-service",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.11"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/54ba805072f48c123b3a0bf860edfadc74d5b3a87f9457c3aef682dcb672bd28/toddpan/dsh-webapi",
     "description": "DSH plugin — drive DeepSeek Harness over HTTP: 47 REST + SSE routes (workspaces, sessions, streaming, stats, todos, models, settings, skills, files) + OpenAI-compatible /chat/completions. / DSH 插件：把 DSH 开放成 47 条 REST + SSE 接口与 OpenAI 兼容端点，供三方客户端与 Agent 集成。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DSH plugin that exposes DeepSeek Harness over HTTP: the workspaces, sessions, models, settings, skills and files already inside DSH become plain REST endpoints and SSE streams, plus an OpenAI-compatible /chat/completions so an existing OpenAI client can talk to DSH unchanged."
   },
   "schemaVersion": 1,
   "scripts": {
