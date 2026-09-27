@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-26T09:03:21.895Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-27T09:43:30.044Z",
+    "enrichmentStatus": "ok",
     "headSha": "789eb6eada74e27e11008d44c716d43f67145642"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1372478386",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-reclaim",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:gankudadiz/dsh-reclaim#789eb6eada74e27e11008d44c716d43f67145642",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-reclaim",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/871f396f2b85d58f80fd910cb70a4745d249ccf336750ceb16cb11db75559e86/gankudadiz/dsh-reclaim",
     "description": "审计并安全回收 DSH 占用的空间：看清会话、附件与缓存各占多少、还被谁引用，清理一律进可恢复的隔离区（DeepSeek Harness 插件）"
   },
   "readme": {
     "available": true,
-    "excerpt": "DSH 插件。尚未发布，还不可安装。"
+    "excerpt": "DSH 插件。功能已完成，尚未发布到 npm——安装方式见下方「安装」。"
   },
   "schemaVersion": 1,
   "scripts": {

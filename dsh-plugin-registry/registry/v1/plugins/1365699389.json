@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-26T09:03:21.895Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-27T09:43:30.044Z",
+    "enrichmentStatus": "ok",
     "headSha": "bdb10611a75d98774d4a1114bc618d1162517093"
   },
   "github": {
@@ -41,27 +41,43 @@
   },
   "id": "gh:1365699389",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-multi-tenant",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:skyjilygao/dsh-multi-tenant#bdb10611a75d98774d4a1114bc618d1162517093",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.9.0-alpha.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-multi-tenant",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/11598ce817b38ba71be633d9ce973302715e4b7c316db35804c2ddd860f38c13/skyjilygao/dsh-multi-tenant",
-    "description": ""
+    "description": "DeepSeek Harness（DSH）多租户管理插件 —— 项目与用户多对多，默认管理员 admin / admin，管理员在 Web 控制台新增用户并分配 1n 个项目；每个用户 只能看到自己的会话（即使与其他用户同属一个项目）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）多租户管理插件 —— 项目与用户多对多，默认管理员 admin / admin，管理员在 Web 控制台新增用户并分配 1n 个项目；每个用户 只能看到自己的会话（即使与其他用户同属一个项目）。"
   },
   "schemaVersion": 1,
   "scripts": {
