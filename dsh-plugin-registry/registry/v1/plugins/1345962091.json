@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-28T10:20:40.308Z",
+    "enrichedAt": "2026-09-29T10:24:30.835Z",
     "enrichmentStatus": "ok",
-    "headSha": "65c2feed6b2e779b2d239078e0d8b5825bdb9d48"
+    "headSha": "675e1c5a8377bc802038a9f0fec82248fd293040"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-25T10:04:00Z",
     "databaseId": 1345962091,
     "defaultBranch": "main",
-    "description": "DSH 宿主插件：每轮对话结束后，把该轮的原始工具结果归档（tool result）到会话目录（tool-result-logs），并从上下文中清除，减少 Token 消耗；模型可用 read_tool_result_log 工具按轮次或时间自主读取归档数据。",
+    "description": "在工具结果进入上下文之前做准入过滤。超过阈值的纯文本结果全文落盘到会话目录，模型只收到「收据 + 有界预览 + 绝对路径」；需要原文时 read 归档路径（分页）或 grep 检索取回，也可用插件提供的 read_tool_result_log 按轮/步/时间取回。",
     "fork": false,
     "forks": 0,
-    "headSha": "65c2feed6b2e779b2d239078e0d8b5825bdb9d48",
+    "headSha": "675e1c5a8377bc802038a9f0fec82248fd293040",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUDnAaw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f9ffa5dfef1d30efa65e5290d50a5e75774c27470a0e734b3bc7e2af7b6f377a/stultuss/dsh-clear-tool-results",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c3cb4bb496127e7bbf963f8a239604e9d944f9fc4333be4dc246860730e0db3f/stultuss/dsh-clear-tool-results",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/57216222?u=f5fc715e843c1e28ffef74a2625ea257f2c538e4&v=4",
       "login": "stultuss"
     },
-    "pushedAt": "2026-09-17T03:53:33Z",
+    "pushedAt": "2026-09-29T08:51:03Z",
     "slug": "stultuss/dsh-clear-tool-results",
     "stars": 1,
     "topics": [
@@ -38,7 +38,7 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-17T03:53:37Z",
+    "updatedAt": "2026-09-29T08:51:07Z",
     "url": "https://github.com/stultuss/dsh-clear-tool-results"
   },
   "id": "gh:1345962091",
@@ -48,11 +48,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-clear-tool-results@0.7.0",
-    "version": "0.7.0"
+    "spec": "dsh-clear-tool-results@0.8.6",
+    "version": "0.8.6"
   },
   "npm": {
-    "latestVersion": "0.7.0",
+    "latestVersion": "0.8.6",
     "published": true,
     "repositoryMatches": true
   },
@@ -66,15 +66,15 @@
     "name": "dsh-clear-tool-results",
     "status": "valid",
     "type": "module",
-    "version": "0.7.0"
+    "version": "0.8.6"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f9ffa5dfef1d30efa65e5290d50a5e75774c27470a0e734b3bc7e2af7b6f377a/stultuss/dsh-clear-tool-results",
-    "description": "DSH 宿主插件：每轮对话结束后，把该轮的原始工具结果归档（tool result）到会话目录（tool-result-logs），并从上下文中清除，减少 Token 消耗；模型可用 read_tool_result_log 工具按轮次或时间自主读取归档数据。"
+    "coverUrl": "https://opengraph.githubassets.com/c3cb4bb496127e7bbf963f8a239604e9d944f9fc4333be4dc246860730e0db3f/stultuss/dsh-clear-tool-results",
+    "description": "在工具结果进入上下文之前做准入过滤。超过阈值的纯文本结果全文落盘到会话目录，模型只收到「收据 + 有界预览 + 绝对路径」；需要原文时 read 归档路径（分页）或 grep 检索取回，也可用插件提供的 read_tool_result_log 按轮/步/时间取回。"
   },
   "readme": {
     "available": true,
-    "excerpt": "DSH 宿主插件：把工具结果按轮归档并从对话上下文中清除以减少 Token 消耗；模型可用 readtoolresultlog 按轮次或时间自主取回原文。"
+    "excerpt": "DSH 宿主插件：在工具结果进入上下文之前做准入过滤。超过阈值的纯文本结果全文落盘到会话目录，模型只收到「收据 + 有界预览 + 绝对路径」；需要原文时 read 归档路径（分页）或 grep 检索取回，也可用插件提供的 readtoolresultlog 按轮/步/时间取回。"
   },
   "schemaVersion": 1,
   "scripts": {
