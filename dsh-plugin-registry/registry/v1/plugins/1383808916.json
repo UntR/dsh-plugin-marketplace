@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
-    "headSha": "e028fedb37eec11ce8ed673532732be59a8e10fe"
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
+    "headSha": "ec935a69971889854ad6024248c26f3c85a71fdb"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,17 @@
     "description": "Browse Git worktrees and their commit ancestry in a graph — shipped as a DSH right-sidebar tab plugin.",
     "fork": false,
     "forks": 0,
-    "headSha": "e028fedb37eec11ce8ed673532732be59a8e10fe",
+    "headSha": "ec935a69971889854ad6024248c26f3c85a71fdb",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOUns_lA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a1763f77b3af5edd7cf49ad076df130c06aa974bdd301f01a851a78a625c2a23/JinzhaoTian/git-worktree-graph",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ba802e8cfdff907a93f7fe12df12c55310080a9dc2228fd896cbb9cad6b8987d/JinzhaoTian/git-worktree-graph",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/28722419?u=f75458279284a282b53157dd93dd91d32050c6f9&v=4",
       "login": "JinzhaoTian"
     },
-    "pushedAt": "2026-09-28T14:03:18Z",
+    "pushedAt": "2026-09-29T13:41:45Z",
     "slug": "JinzhaoTian/git-worktree-graph",
     "stars": 0,
     "topics": [
@@ -36,18 +36,18 @@
       "git-graph",
       "git-worktree"
     ],
-    "updatedAt": "2026-09-28T14:03:37Z",
+    "updatedAt": "2026-09-29T13:42:12Z",
     "url": "https://github.com/JinzhaoTian/git-worktree-graph"
   },
   "id": "gh:1383808916",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "@JinzhaoTian/git-worktree-graph",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:JinzhaoTian/git-worktree-graph#ec935a69971889854ad6024248c26f3c85a71fdb",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
@@ -55,19 +55,24 @@
     "repositoryMatches": null
   },
   "package": {
-    "main": null,
-    "name": "git-worktree-graph-plugin",
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@JinzhaoTian/git-worktree-graph",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.3.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a1763f77b3af5edd7cf49ad076df130c06aa974bdd301f01a851a78a625c2a23/JinzhaoTian/git-worktree-graph",
-    "description": "Browse Git worktrees and their commit ancestry in a graph — shipped as a DSH right-sidebar tab plugin (dsh-plugin) and as a Codex MCP App."
+    "coverUrl": "https://opengraph.githubassets.com/ba802e8cfdff907a93f7fe12df12c55310080a9dc2228fd896cbb9cad6b8987d/JinzhaoTian/git-worktree-graph",
+    "description": "Browse Git worktrees and their commit ancestry in a graph — shipped as a DSH right-sidebar tab plugin."
   },
   "readme": {
     "available": true,
-    "excerpt": "Local MCP plugin for browsing Git worktrees and their commit ancestry. The graph UI is a React MCP App rendered through the host's JSON-RPC postMessage bridge. Right-click a commit to preview rebase or cherry-pick, then confirm an expiring one-use plan."
+    "excerpt": "A native DSH plugin. It puts a Git worktree browser in a right-sidebar tab of the Harness Web UI: the current workspace's worktrees, branches, a paged commit graph, commit and uncommitted details, and guarded worktree/rebase/cherry-pick actions. The tab follows the calling Sessio"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "aa5db546728cba6b1f75e76b514801e2a8bbc406"
   },
   "github": {
@@ -45,27 +45,41 @@
   },
   "id": "gh:1389151275",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@mreate/dsh-llm-qoder",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Mreate/dsh-llm-qodersdk-new#aa5db546728cba6b1f75e76b514801e2a8bbc406",
+    "version": "0.1.22"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@mreate/dsh-llm-qoder",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.22"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5e69d4a30beea3a206d60e4476dd0a90b2df9197726ed1e2f018e680e29f5859/Mreate/dsh-llm-qodersdk-new",
     "description": "DSH插件，将DSH的LLM请求路由到本机Qoder CLI，可使用Qoder Credits与模型。此Fork修复了此插件在较新的DSH Desktop版本中出现的问题。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "将 DeepSeek Harness 的 LLM 接缝（ctx.llm）路由到本机 Qoder CLI 的适配器插件（@mreate/dsh-llm-qoder），基于 @qoder-ai/qoder-agent-sdk。"
   },
   "schemaVersion": 1,
   "scripts": {

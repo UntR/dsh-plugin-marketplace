@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "04fdf73f5dfb366997d87efdb5770a7c40645844"
   },
   "github": {
@@ -49,27 +49,49 @@
   },
   "id": "gh:1394570136",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@railgun52/dsh-user-rules",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@railgun52/dsh-user-rules@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@railgun52/dsh-user-rules",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c85b2508d7e442698daa58ea14a85a23f06939c7b6cb485ac0a3381531f177eb/railgun52/dsh-user-rules",
     "description": "User rules settings page for the dsh web GUI: a list editor over a profile-config namespace whose rules are injected as a systemPrompt section"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Rules you add here are concatenated into a user-rules systemPrompt section, so the model obeys them on the next turn — edit and it takes effect without a restart. The page is a list editor over the user-rules profile-config namespace; the Host half owns the schema and the systemP"
   },
   "schemaVersion": 1,
   "scripts": {

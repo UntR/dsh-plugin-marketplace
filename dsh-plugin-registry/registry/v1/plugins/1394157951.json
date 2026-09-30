@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "3ef663eb1c6d128fa901186b817b24fb9944d1b6"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-xiangqi",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5567fd32d1db395713ea5e41f331322dac0313d8696a4902fdbed4b295073b5a/9527ccccccc/dsh-xiangqi",
     "description": "中国象棋：棋规引擎 + DSH 插件（右栏棋盘 + 会话可直接调用的工具）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把一盘中国象棋放进 DSH 的右栏： 你在棋盘上点，会话用工具接招。 不用切窗口，也不用把局面念给它听。"
   },
   "schemaVersion": 1,
   "scripts": {

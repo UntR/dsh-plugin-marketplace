@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "cfc42c28d5e670ba1e5732fab38d1407ff5ddb6b"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1392460408",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "harness-accountant",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:its0din-ai/harness-accountant#cfc42c28d5e670ba1e5732fab38d1407ff5ddb6b",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "harness-accountant",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d12e3676373a0505ec2030c2f7d413796e2f4fd4b630eb7a193f4065be3a3efc/its0din-ai/harness-accountant",
     "description": "DSH (DeepSeek Harness) Simple Balance Monitor Plugin | DSH（DeepSeek Harness）简易余额监视插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "harness-accountant is a simple plugin that monitors your live DeepSeek token balance and usage, and tells you whether the current hour is billed at the peak or the off-peak rate."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "a2c1046397b9fadb4b4a9aa34c73592863916261"
   },
   "github": {
@@ -50,33 +50,49 @@
   },
   "id": "gh:1388764313",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-pinme",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:bruceyork00-a11y/PinMe#a2c1046397b9fadb4b4a9aa34c73592863916261",
+    "version": "0.1.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-pinme",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c5edf748161794dc179b3ed4999214124efd10a157579b7e25442e76c91a766e/bruceyork00-a11y/PinMe",
     "description": "Just Pin a model to Favorites, so you dont need to choose it from menu. (Dsh plugin)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一键收藏常用的「模型 + 思考强度」组合（如 Gemini 3.8 Flash High、Claude Sonnet Thinking Medium），并将它们直接展示在输入栏下方作为快捷药丸标签（Pills），实现单次点击瞬间直达，彻底告别繁琐的多级菜单操作！"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "dsh-continue-on-limit.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "a4e2fea17b1022e04b8469cc7f15975dd2ebd6b0"
   },
   "github": {
@@ -43,27 +43,42 @@
   },
   "id": "gh:1391406791",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-continue-on-limit-host",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Soulize/dsh-continue-on-limit-host#a4e2fea17b1022e04b8469cc7f15975dd2ebd6b0",
+    "version": "0.4.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-continue-on-limit-host",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/707bbf32c36fe10471048de07096bb4d0eebc2c6094d63583013c1aa3a18e389/Soulize/dsh-continue-on-limit-host",
     "description": "Auto-continue for DeepSeek Harness: when a local model hits its output-token cap, automatically send \"continue\" so the reply keeps flowing"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness / DSH 的 Host 侧全局 max-tokens 自动续写插件。"
   },
   "schemaVersion": 1,
   "scripts": {

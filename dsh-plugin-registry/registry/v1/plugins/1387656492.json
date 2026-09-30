@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "a3f59896a4a3dfb0beb00ae181d559fef574cedf"
   },
   "github": {
@@ -45,7 +45,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -55,14 +55,34 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/src/index.js",
+        "types": "./lib/src/index.d.ts"
+      },
+      "./client": {
+        "default": "./client/client.js"
+      },
+      "./core": {
+        "default": "./lib/src/core/index.js",
+        "types": "./lib/src/core/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/src/index.js",
+    "name": "dsh-git-commit-agent",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b420420aee884d2c90df7e950cfa43d61cd0596b12a4a482a311737e7144aef5/havoc-rao/dsh-git-commit-agent",
     "description": "DSH plugin: a dedicated agent that plans exact Git commits from real repo state, binds approval to an immutable plan revision, and commits via a restricted, verified git executor."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A dedicated Git commit planning and execution agent for DSH."
   },
   "schemaVersion": 1,
   "scripts": {

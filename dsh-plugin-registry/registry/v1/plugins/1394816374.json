@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
-    "headSha": "f439436cbaa749b0171a3e38021b88adbd63611f"
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
+    "headSha": "12f08130226478be46758c08122fac6a96a684da"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "macOS menu bar activity indicator for DeepSeek Harness (community fork of dsh-notify; supports DSH 0.1.7-rc.2 and 0.2.0-rc.1)",
     "fork": false,
     "forks": 0,
-    "headSha": "f439436cbaa749b0171a3e38021b88adbd63611f",
+    "headSha": "12f08130226478be46758c08122fac6a96a684da",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUyM1dg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/40f30ce0643be9cd5e02763f13de26967a85b162c75a03a019c610acdc5a66bb/haotian-lu-prog/dsh-notifications",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/da319475816066fe01816e8a73e1f5bc96d68bde5fc9b2c9d3a2a440e06b1c65/haotian-lu-prog/dsh-notifications",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/49531320?u=d6059157ecbea1b89857bcbff2d4f8ac255bb41f&v=4",
       "login": "haotian-lu-prog"
     },
-    "pushedAt": "2026-09-29T09:48:26Z",
+    "pushedAt": "2026-09-30T09:40:47Z",
     "slug": "haotian-lu-prog/dsh-notifications",
     "stars": 0,
     "topics": [
@@ -39,38 +39,50 @@
       "macos",
       "menu-bar"
     ],
-    "updatedAt": "2026-09-29T09:48:30Z",
+    "updatedAt": "2026-09-30T09:40:51Z",
     "url": "https://github.com/haotian-lu-prog/dsh-notifications"
   },
   "id": "gh:1394816374",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-notifications",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-notifications@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-notifications",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/40f30ce0643be9cd5e02763f13de26967a85b162c75a03a019c610acdc5a66bb/haotian-lu-prog/dsh-notifications",
+    "coverUrl": "https://opengraph.githubassets.com/da319475816066fe01816e8a73e1f5bc96d68bde5fc9b2c9d3a2a440e06b1c65/haotian-lu-prog/dsh-notifications",
     "description": "macOS menu bar activity indicator for DeepSeek Harness (community fork of dsh-notify; supports DSH 0.1.7-rc.2 and 0.2.0-rc.1)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-notifications 是一个适用于 macOS 的纯第三方 DeepSeek Harness 插件。它在系统菜单栏中添加一个状态项：Harness 鲸鱼标志及当前状态为 running 的 Agent 数量。计数为零时，菜单栏只显示鲸鱼。当已订阅事件等待用户处理时，数字改为这些事件的总数，字母用于标识事件类型：Q 表示提问，S 表示审批；因此 2-QS 表示各有一个提问和审批等待处理。两类订阅及扫光强化提示默认开启。点击状态项会切换到此 Harness 进程已打开的 Google Chrome 标签页，绝不会新建标签页。它的 Web Cli"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

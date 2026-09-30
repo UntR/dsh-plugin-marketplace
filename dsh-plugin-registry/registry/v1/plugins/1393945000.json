@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "84390c05dd728e59bd823509eb7f5df90eafc1d4"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1393945000",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-priceflow",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-priceflow@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": {
+        "default": "./client/client.js"
+      },
+      "./host": "./src/host/service.mjs"
+    },
+    "main": "index.js",
+    "name": "dsh-priceflow",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/82f3dec0585b8f0979e0f3b91e754454e0f37b93ea3196e2fbcf8ae36c61d356/williamzhangww/dsh-priceflow",
     "description": "Official DeepSeek peak/off-peak pricing, countdown and off-peak message scheduling for DSH."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek pricing and off-peak scheduling for DeepSeek Harness."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "2605fe84da23c770937b8a4a566b102477fd0339"
   },
   "github": {
@@ -48,27 +48,41 @@
   },
   "id": "gh:1387287486",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-planner",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:qcsjjjjj/dsh-planner#2605fe84da23c770937b8a4a566b102477fd0339",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-planner",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c22397ccf2dcbff7369d47b35834d6c4e960e425f9e71f3d4f9d7c9aead4994f/qcsjjjjj/dsh-planner",
     "description": "Calendar + per-day plan cards for the DeepSeek Harness Web GUI, with recurring plans and model-facing tools for the agent. No build step, no runtime dependencies."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给你的 DSH 加一个\"计划\"标签页：日历 + 按天排的计划卡片，就在 对话、轨迹 右边。 你也可以直接对 AI 说\"帮我看看下周三有什么\"，或者\"每周一早上加个周会\"——它能读也能改你的计划。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "d32a9513827bfefb1296d92d1fb35e8a7fe51ae4"
   },
   "github": {
@@ -48,27 +48,41 @@
   },
   "id": "gh:1391743702",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-allcrash",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:YV3507/dsh-plugin-allcrash#d32a9513827bfefb1296d92d1fb35e8a7fe51ae4",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-allcrash",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/15b98f35f1146d4197f83ea1c9e7eb31b43daec983609b1a0134a8f1a471493e/YV3507/dsh-plugin-allcrash",
     "description": "DSH (DeepSeek Harness) Host plugin: a configured forbidden plugin - loaded, enabled, or about to be installed - crashes the Host process on the spot, with a crash report. Inspired by the Minecraft Forge mod allcrash."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的「禁止插件」守卫：名单里的插件一旦被加载、被启用，或被尝试安装， DSH Host 进程立刻崩溃，并留下崩溃报告。"
   },
   "schemaVersion": 1,
   "scripts": {

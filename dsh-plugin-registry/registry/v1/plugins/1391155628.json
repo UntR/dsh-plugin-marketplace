@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "1eb772e1363327e12978e050d43fae93648cfb94"
   },
   "github": {
@@ -45,33 +45,45 @@
   },
   "id": "gh:1391155628",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-notion-oauth-ui",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-notion-oauth-ui@1.0.3",
+    "version": "1.0.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-notion-oauth-ui",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b3f6c61ec707944cf68bac3ed89cbad2fc6bbf74a4f813debe2f42ed983607f8/MerkurevSergei/dsh-notion-oauth-ui",
-    "description": "Notion integration for DeepSeek Harness via the official Notion MCP (OAuth 2.0 + PKCE) with a GUI login page and a CLI `dsh notion login` fallback."
+    "description": "Connect Notion from the GUI with OAuth 2.0 + PKCE — official Notion MCP. No token, no terminal — just the Login button."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Connect Notion from the DeepSeek Harness GUI with OAuth 2.0 (authorization code + PKCE) — no Integration Token to copy, and no terminal required. Pages, databases and comments are reached through the official Notion MCP server."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

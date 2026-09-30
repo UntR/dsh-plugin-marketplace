@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "96cbb30cbd958c841291dc1efabd7c60adb5087f"
   },
   "github": {
@@ -48,27 +48,39 @@
   },
   "id": "gh:1394050404",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-resume",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:W-SING-HUNG/dsh-resume#96cbb30cbd958c841291dc1efabd7c60adb5087f",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./core": "./src/core.js",
+      "./package.json": "./package.json",
+      "./prompt": "./src/prompt.js"
+    },
+    "main": "src/index.js",
+    "name": "dsh-resume",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/134facc698318b8f302705bb4db51ed3eb8bf9ee8017880e94cc0a840b69722d/W-SING-HUNG/dsh-resume",
     "description": "求职简历工坊：粘贴 JD，AI 按岗位重写简历，只基于真实内容，不编造 — DeepSeek Harness 插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness (DSH) 插件。 在会话里粘贴岗位描述与简历原文，模型会调用 rewriteresume 工具，按岗位定制简历。"
   },
   "schemaVersion": 1,
   "scripts": {

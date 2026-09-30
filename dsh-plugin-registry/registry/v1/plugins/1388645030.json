@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "ccaf1b67be88c6fa009f80510ce4489c596526cb"
   },
   "github": {
@@ -45,27 +45,41 @@
   },
   "id": "gh:1388645030",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-work-progress",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ardesp0630/dsh-work-progress#ccaf1b67be88c6fa009f80510ce4489c596526cb",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-work-progress",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/959d11babb7c74cfab9a57888e129a20515fd8d827747ee5b895e09852c25b9a/ardesp0630/dsh-work-progress",
     "description": "Persistent work-progress row for DeepSeek Harness: task completion, a progress bar, and what the agent is doing right now."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在输入框上方常驻一行工作进度的 DSH 插件：折叠态显示任务完成度、进度条与当前进行中的任务；展开态显示完整任务清单，以及轮次、步骤、模型/工具耗时与上下文占用。"
   },
   "schemaVersion": 1,
   "scripts": {

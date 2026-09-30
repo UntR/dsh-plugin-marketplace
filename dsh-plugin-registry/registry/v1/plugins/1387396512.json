@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "586cb5a3fff5045f6de3a3842712611affa01c8a"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1387396512",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tingxue",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:oranskyx/dsh-tingxue#586cb5a3fff5045f6de3a3842712611affa01c8a",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/plugin-entry.mjs",
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/plugin-entry.mjs",
+    "name": "dsh-tingxue",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4f95d256b46de7ba8bf2bd6f9d60e38a88cbc5a06867e370e4a633da876729ee/oranskyx/dsh-tingxue",
     "description": "DeepSeek Harness 双模式插件：人格化 QQ 对话（LanceDB 长期记忆 + 自建关系图谱）+ 用完即焚的隔离文件处理会话"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "听雪是一个跑在 DeepSeek Harness 上的自建插件。它的记忆不依赖任何托管服务——LanceDB 本地文件即库，关系图谱自己实现，语义推理走可插拔的小 LLM。"
   },
   "schemaVersion": 1,
   "scripts": {

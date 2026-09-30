@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "bfc57c709d7fe7c442cd8224269162fffe5ebf4e"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1392337314",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/workspace-group-manager",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:shinelon/dsh-workspace-group-plugin#bfc57c709d7fe7c442cd8224269162fffe5ebf4e",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@local/workspace-group-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c68ac922ffb8aa0b43a8f1e0704880e58905a284db3e377c11b9e7343c4b09cd/shinelon/dsh-workspace-group-plugin",
     "description": "Custom workspace groups for the DSH sidebar: group directories, drag to regroup/reorder, inline search and sessions, one-click official-view fallback."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）Web 客户端插件：在侧边栏工作区位置以自定义分组展示工作目录（原地遮蔽官方浏览区，一键切回官方视图）。"
   },
   "schemaVersion": 1,
   "scripts": {

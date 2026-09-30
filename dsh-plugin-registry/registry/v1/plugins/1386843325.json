@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "2568856b8fcc8e489e228f0216ba738111f2a9d7"
   },
   "github": {
@@ -47,27 +47,40 @@
   },
   "id": "gh:1386843325",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-helper-plugin-workspace-browser",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:x102201/dsh-helper-plugin-workspace-browser#2568856b8fcc8e489e228f0216ba738111f2a9d7",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./lib/*": "./lib/*",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-helper-plugin-workspace-browser",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a245a3fd818143488eeaf2edf51fc4e980edaada39d5f9061863b88d8c534ae7/x102201/dsh-helper-plugin-workspace-browser",
     "description": "DSH 插件：为当前工作区单独启动一个 Chrome，在右侧栏看画面，并用 workspace_browser_* 让模型阅读和操作页面。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件。给当前工作区单独开一个带调试端口的 Chrome：你在右侧栏看画面，模型用 workspacebrowser 阅读和操作页面。"
   },
   "schemaVersion": 1,
   "scripts": {

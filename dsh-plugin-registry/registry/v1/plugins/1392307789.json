@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "752fef1ec097897442a414c5f756dcae12de9e61"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1392307789",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-llm-model-tuning",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xurunxin/dsh-llm-model-tuning#752fef1ec097897442a414c5f756dcae12de9e61",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-llm-model-tuning",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/55a6a4a208c1d4730ed99a6deef9356d7aaf28102c3bdd776b79e7c9b7d7c7bb/xurunxin/dsh-llm-model-tuning",
     "description": "Per-model reasoning-effort levels and multimodal input settings for custom providers in the DeepSeek Harness Models settings page."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Adds a per-model reasoning-effort and multimodal input editor to every custom provider card on the DeepSeek Harness Settings → Models page."
   },
   "schemaVersion": 1,
   "scripts": {

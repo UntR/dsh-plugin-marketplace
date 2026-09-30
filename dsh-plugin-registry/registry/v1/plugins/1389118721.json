@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "84026c60ed86965c88bb7c83756d4cdadaa26a39"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1389118721",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-github-workflows",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Planckbaka/dsh-plugin-github-workflows#84026c60ed86965c88bb7c83756d4cdadaa26a39",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-github-workflows",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5453dab3451e16cb0974c43d93086140332a3e1c5c25616df3a4e5b562f627e5/Planckbaka/dsh-plugin-github-workflows",
-    "description": "GitHub workflows for DeepSeek Harness (DSH): repos, PRs, issues, commits, releases, Actions, Codespaces, search & raw gh api - one plugin on the GitHub CLI"
+    "description": "Zero-dependency GitHub workflows for DeepSeek Harness (DSH), built on the GitHub CLI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Complete GitHub workflows for DeepSeek Harness (DSH), built on the GitHub CLI — commits, pull requests, issues, releases, Actions, repositories, Codespaces and search, in one zero-dependency plugin with 11 typed tools and 80+ actions."
   },
   "schemaVersion": 1,
   "scripts": {

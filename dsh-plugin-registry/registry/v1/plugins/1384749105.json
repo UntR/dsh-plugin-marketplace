@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "60f2572e1154efe8876d3e59eb5e9f63ce748ec9"
   },
   "github": {
@@ -42,27 +42,39 @@
   },
   "id": "gh:1384749105",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-billing",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-session-billing@1.0.1",
+    "version": "1.0.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-session-billing",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a5fbf60ec83cfda0eafde1a2a8867ec96cdfab508aa0fa8e4bb6da2b0c5eb0a1/moesnow/dsh-session-billing",
-    "description": ""
+    "description": "DeepSeek Harness Web UI 的会话级 LLM 费用估算插件：把模型上报的用量按「未缓存输入 / 缓存读取 / 缓存写入 / 输出」四桶累计，套官方价目表估算费用——输入框下方看会话合计，每条回复旁看本轮花费，点开都有按模型明细。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness Web UI 的会话级 LLM 费用估算插件：把模型上报的用量按「未缓存输入 / 缓存读取 / 缓存写入 / 输出」四桶累计，套官方价目表估算费用——输入框下方看会话合计，每条回复旁看本轮花费，点开都有按模型明细。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "37b8325b98f93f80169b7b518e3312ae47d34a0c"
   },
   "github": {
@@ -44,27 +44,41 @@
   },
   "id": "gh:1383595778",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-subpages",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:SJTUMalPan/dsh-subpages#37b8325b98f93f80169b7b518e3312ae47d34a0c",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./assets": "./lib/assets.mjs",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./proxy": "./lib/proxy.mjs",
+      "./registry": "./lib/registry.mjs"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-subpages",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0f5c7f95d4feb1af40e0d47e5e7ca9d9feacae7f4a74e55f8cc130890dbd9773/SJTUMalPan/dsh-subpages",
     "description": "DSH 子页面宿主插件：复用 DSH 端口提供 /subpages 网关与统一门户，把独立开发的下级页面一键挂载"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 看板宿主：把一个个独立开发的小网页应用，变成 DSH 里的「看板」——挂在 DSH 自己的 端口下、共用 DSH 的登录态、用一个门户统一进入。不必为新页面单独开端口、单独配域名、 单独做一套鉴权。"
   },
   "schemaVersion": 1,
   "scripts": {

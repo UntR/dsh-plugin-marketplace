@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "8ff2ae6d46f9e4d83a587711a70aa7122f9e63e2"
   },
   "github": {
@@ -50,11 +50,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-edit-turn@0.2.1",
-    "version": "0.2.1"
+    "spec": "dsh-edit-turn@0.2.9",
+    "version": "0.2.9"
   },
   "npm": {
-    "latestVersion": "0.2.1",
+    "latestVersion": "0.2.9",
     "published": true,
     "repositoryMatches": true
   },
@@ -68,7 +68,7 @@
     "name": "dsh-edit-turn",
     "status": "valid",
     "type": "module",
-    "version": "0.2.1"
+    "version": "0.2.9"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/166ef7ab01e1c170fa2e32cde17c49d08230cbf3ed2a567319a3ea4f080c21ef/DDDMUC/dsh-edit-turn",
@@ -76,7 +76,7 @@
   },
   "readme": {
     "available": true,
-    "excerpt": "DeepSeek Harness 的「编辑某一轮」插件 —— 点用户消息旁的编辑按钮，就地改写，确认后把会话回退到这条消息之前，用新内容重新跑这一轮。 回退走官方 surface-replace 契约（追加一条替换事件，被丢弃的内容从模型上下文里消失），重跑走官方 sessionController.prompt()。会话日志是 append-only 的，原始字节一个都不改写。"
+    "excerpt": "DeepSeek Harness 的「编辑某一轮」插件 —— 点用户消息旁的编辑按钮，就地改写那一句。保存即生效：改后的内容成为模型后续读到的版本，这一条消息下面的对话原样不动。 改写走官方 surface-replace 契约（一条替换事件同时完成\"删旧 + 立新\"，被替换的内容从模型上下文里消失），默认不重跑模型。会话日志是 append-only 的，原始字节一个都不改写。"
   },
   "schemaVersion": 1,
   "scripts": {

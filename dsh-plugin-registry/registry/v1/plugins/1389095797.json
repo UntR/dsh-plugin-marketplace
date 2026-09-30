@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "c2302a7a3ffcb6af503d9c07157dacdf9b90a3e9"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1389095797",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-feishu-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:superSizzzz/dsh-feishu-bridge#c2302a7a3ffcb6af503d9c07157dacdf9b90a3e9",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.4",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.ts",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.ts",
+    "name": "dsh-feishu-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/deffbc57adaf331aa5835e5ae141296d6434ae8d6e7720a3a51c493c6d46bc1d/superSizzzz/dsh-feishu-bridge",
     "description": "Two-way bridge between DeepSeek Harness (dsh) and a Feishu / Lark bot: stage conclusions out, messages in, work summary at the end."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的双向飞书桥：dsh 干活时把阶段结论推到飞书，你在飞书直接对话就能指挥 dsh，收尾时自动推一份含改动清单的工作汇报。"
   },
   "schemaVersion": 1,
   "scripts": {

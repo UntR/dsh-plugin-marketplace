@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "31369a6dad43b3c7d16b1197d6fbe651b39d48a1"
   },
   "github": {
@@ -41,33 +41,45 @@
   },
   "id": "gh:1389062566",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@nianchu/dsh-rollback",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "@nianchu/dsh-rollback@0.4.1",
+    "version": "0.4.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./invariant": "./lib/invariant.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@nianchu/dsh-rollback",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9671d8f943aeedbf27490a1d84faade8071af2d36670d38ec204b4a7de76d6ae/ZhaoZeW/dsh-rollback",
     "description": "TRAE-style conversation rollback for DeepSeek Harness: per-turn checkpoints, in-place context truncation, and an affected-file diff preview."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness（DSH）Web 端提供「回退到本轮对话发起前」：按轮次建立检查点，一次性把工作区文件与模型上下文同时回退到某一轮发起之前，并保持同一 session id。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "05361891d3cfa7b6218bfb7da9bc81222fd56459"
   },
   "github": {
@@ -49,27 +49,42 @@
   },
   "id": "gh:1389653868",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-429-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:suufon/dsh-429-guard#05361891d3cfa7b6218bfb7da9bc81222fd56459",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-429-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a677371b2e872d552a4e3e2a87ba3288f10432fac8190edf02aaa389f3188238/suufon/dsh-429-guard",
     "description": "DeepSeek Harness 429 守卫：Web UI 右上角精美弹窗 + 开关，开启后遇到 429 / 配额不足(insufficient_quota) 错误无限次自动重试，避免任务中断。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）插件 —— 429 / 配额不足错误自动无限重试守卫。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "89325c09c03345fc417224c148406e5b34ce39e9"
   },
   "github": {
@@ -42,27 +42,39 @@
   },
   "id": "gh:1391354989",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-nai-artist",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xianshu-virtuous/dsh-nai-artist#89325c09c03345fc417224c148406e5b34ce39e9",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./invariant": "./lib/invariant.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@dsh-external/dsh-nai-artist",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3ef413ec3622fd447a954c16fd575f1b44dff14e88a7fbc38bf5b809e82d0783/xianshu-virtuous/dsh-nai-artist",
     "description": "NAI Artist for DeepSeek Harness: a paint tool with in-conversation image cards, translate-to-tags, and a full WebUI workbench"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 绘画插件：paint 工具 + 同源 WebUI 工作台。自然语言描述 →（翻译成 NAI tags）→ NovelAI 系模型生图 → 图片直接渲染进对话（sticker 同款机制）。"
   },
   "schemaVersion": 1,
   "scripts": {

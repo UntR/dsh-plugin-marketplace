@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "a774779de6d06017ec606b82dde1e51f26e4e3fe"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1388739737",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-glm-web",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Lequait/dsh-glm-web#a774779de6d06017ec606b82dde1e51f26e4e3fe",
+    "version": "0.1.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./adapter": "./lib/adapter.js",
+      "./chatglm": "./lib/chatglm.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-glm-web",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ab3702b6005296fa97da6baab719b77f8f376969d390a8e0caf5ad88fc044228/Lequait/dsh-glm-web",
     "description": "非官方的智谱清言（chatglm.cn）网页版 provider for DeepSeek Harness —— 用网页版登录态与积分驱动 agent。Unofficial Zhipu Qingyan web provider for dsh."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把智谱清言（chatglm.cn）网页版登录态接成 DeepSeek Harness（dsh）的原生模型 provider： 在模型选择器里直接选「清言网页 · 通用」，用网页版积分跑 agent（含工具调用），不消耗开放平台 API 额度。"
   },
   "schemaVersion": 1,
   "scripts": {

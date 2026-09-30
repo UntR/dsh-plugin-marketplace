@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "64bccdb1baa6af671635474562c18557d4d0bd65"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1391888226",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-agent-dispatch",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Napstablooky233/dsh-agent-dispatch#64bccdb1baa6af671635474562c18557d4d0bd65",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-agent-dispatch",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/70b02447d80bd69e28089b36b4fa24fa289ad18ea548dc61172b060f9ea2ae97/Napstablooky233/dsh-agent-dispatch",
     "description": "Visible dispatch panel for DeepSeek Harness — decide whether other agents help, pick free-lane helpers, and inject the division-of-labour policy."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "The main agent resends the full context (system prompt + history) every step, billed by cacheMiss — the biggest line on the token bill. Independent helpers each have their own context, and the free lane has zero cost for input and output. So the key to saving money isn't \"talk le"
   },
   "schemaVersion": 1,
   "scripts": {

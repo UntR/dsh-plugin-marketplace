@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "e59f029745293495b3b0d0ac85b07187d6cedd1f"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1388370382",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-bundle-session-delete",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:PanChengN/dsh-plugin-session-delete#e59f029745293495b3b0d0ac85b07187d6cedd1f",
+    "version": "1.0.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@local/dsh-bundle-session-delete",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/447981db3f84de8fc788ecd239058d032bd2dfdb56c66b83706e40ea04bd106d/PanChengN/dsh-plugin-session-delete",
     "description": "给 DeepSeek Harness 侧栏会话菜单加一行「删除会话」：真正从磁盘删除会话记录、派生缓存与子智能体会话（非官方插件）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的 Web UI 侧栏会话右键菜单加一行 「删除会话」，并真正从磁盘上删除会话。"
   },
   "schemaVersion": 1,
   "scripts": {

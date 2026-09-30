@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
-    "headSha": "d8650003f50f66a1d1cdf36c76e3d8c782f7cd91"
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
+    "headSha": "a37797b5c2c88c841acf8c95b11a27bf17ce124d"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "把长对话的重复计费砍掉一半，并给模型配一名只读调查员：先核实，后动手。面向 DeepSeek Harness 的上下文压缩与外置推理插件（MIT）。",
     "fork": false,
     "forks": 0,
-    "headSha": "d8650003f50f66a1d1cdf36c76e3d8c782f7cd91",
+    "headSha": "a37797b5c2c88c841acf8c95b11a27bf17ce124d",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUngRUg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/c081a087d4ccc6819fba6d17e566ccce9695c7e5e7008dcc46f77f3595c864b2/ScreamingMaggot/rcs-context",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/707953aa9cad4a63165776b577921bc93f5f5017383c74ad2065a27f7ab95313/ScreamingMaggot/rcs-context",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/245904609?u=7d0f34545a0ad513ee8552f4b6a02d4c81638bf4&v=4",
       "login": "ScreamingMaggot"
     },
-    "pushedAt": "2026-09-29T06:23:36Z",
+    "pushedAt": "2026-09-30T08:00:50Z",
     "slug": "ScreamingMaggot/rcs-context",
     "stars": 1,
     "topics": [
@@ -40,32 +40,46 @@
       "dsh-plugin",
       "llm-agent"
     ],
-    "updatedAt": "2026-09-29T06:23:40Z",
+    "updatedAt": "2026-09-30T08:01:00Z",
     "url": "https://github.com/ScreamingMaggot/rcs-context"
   },
   "id": "gh:1383600466",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "rcs-context",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ScreamingMaggot/rcs-context#a37797b5c2c88c841acf8c95b11a27bf17ce124d",
+    "version": "0.1.27"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./web/contextinjector.mjs",
+      "./condense/*": "./condense/*",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./toolfold/*": "./toolfold/*",
+      "./web/*": "./web/*"
+    },
+    "main": null,
+    "name": "rcs-context",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.27"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/c081a087d4ccc6819fba6d17e566ccce9695c7e5e7008dcc46f77f3595c864b2/ScreamingMaggot/rcs-context",
+    "coverUrl": "https://opengraph.githubassets.com/707953aa9cad4a63165776b577921bc93f5f5017383c74ad2065a27f7ab95313/ScreamingMaggot/rcs-context",
     "description": "把长对话的重复计费砍掉一半，并给模型配一名只读调查员：先核实，后动手。面向 DeepSeek Harness 的上下文压缩与外置推理插件（MIT）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 EXTREASON（reasoning 外置）+ CONTEXTinjector（注入折叠）+ LOGcompiler（转录日志）+ contextinjector-webui（「注入」面板） 一起直装进 DeepSeek Harness（DSH）的 web profile。 装好后在会话侧边找到「注入」tab 使用。"
   },
   "schemaVersion": 1,
   "scripts": {

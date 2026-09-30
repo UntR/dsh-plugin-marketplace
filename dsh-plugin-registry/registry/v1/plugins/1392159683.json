@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "bc28cbd1607d49f4ac903e59b615342f0db1fc85"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1392159683",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-health-readout",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:laa1991/dsh-health#bc28cbd1607d49f4ac903e59b615342f0db1fc85",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./criteria": "./src/criteria.js",
+      "./package.json": "./package.json",
+      "./sources": "./src/sources.js"
+    },
+    "main": "./src/index.js",
+    "name": "dsh-health-readout",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/590bd3dae04a107d14f3206054e374fb2dc896d36db24ec452ba41504aee592e/laa1991/dsh-health",
     "description": "Declarative health readout for DSH: declare where to read, what counts as healthy, and which verdict each reading maps to. Read-only."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Declare where to read, what counts as healthy, and what each failure means — get one verdict."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "792ab3dbc1c6bf90da10111ca780273568de1adb"
   },
   "github": {
@@ -42,27 +42,42 @@
   },
   "id": "gh:1383530081",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-llm-auto",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:liuyun847/dsh-llm-auto#792ab3dbc1c6bf90da10111ca780273568de1adb",
+    "version": "0.4.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-llm-auto",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/544382c3a87a44f960cae58261f67b92b8dfde5250b3d8c98534570fb42f9a05/liuyun847/dsh-llm-auto",
     "description": "DSH 宿主插件:注册 auto 模型,按有序回退链在多条 provider+model 间静默切换 (DeepSeek Harness)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 加一个 auto 模型:模型选择器里多出一个 Auto 分组,组内一条 auto。 选它以后,请求按你给的顺序依次尝试多条「provider + model」,某条失败会先按官方同款策略 在该路由内原地重试(瞬时错误,默认最多 5 次),重试耗尽才静默切下一条 —— 对上层(agent loop / 会话日志 / 压缩链路)它就是一个普通模型。用来把多个模型订阅\"合并\"成一个入口。"
   },
   "schemaVersion": 1,
   "scripts": {

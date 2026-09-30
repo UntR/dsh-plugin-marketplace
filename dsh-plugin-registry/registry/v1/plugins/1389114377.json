@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "37047fe3a55e9867cfaafba30d479de6e0fb5627"
   },
   "github": {
@@ -41,33 +41,45 @@
   },
   "id": "gh:1389114377",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-direnv",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-direnv@0.1.0-alpha.1",
+    "version": "0.1.0-alpha.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0-alpha.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-direnv",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-alpha.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0a46587d41b079802f62e6e5fe231a58801b75ceace0283cb8f4826c2b3f7d3c/Snowy117/dsh-direnv",
     "description": "Load each workspace's direnv environment into every DeepSeek Harness command. 让 DSH 每个工作区的子进程自动带上该工作区的 direnv 环境。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Every command the harness runs then inherits the direnv environment of its own working directory. Two minutes to install; needs direnv on PATH."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

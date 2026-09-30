@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "80f0cf0320f522d6a233a3ab1bb3d05d22f0d09c"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1389351940",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-dual-checkin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:G57651/dsh-dual-checkin#80f0cf0320f522d6a233a3ab1bb3d05d22f0d09c",
+    "version": "1.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.mjs",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-dual-checkin",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cbf3b9488b45567668490f13f4d16ea83db39b88c60845bc00e0f33bcdf9b04f/G57651/dsh-dual-checkin",
     "description": "DeepSeek Harness 插件 — Trae 与 WorkBuddy 每日自动签到（本机登录态、双平台互不阻塞、积分与到期提醒）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 签到插件：一个插件同时完成 Trae 与 WorkBuddy 的每日签到，并在主页侧边栏提供签到状态与积分面板。登录态只读本机文件——不读取青龙环境变量里的 token / uid / 账号列表，也不把解出的 token 写入 settings 或状态文件。"
   },
   "schemaVersion": 1,
   "scripts": {

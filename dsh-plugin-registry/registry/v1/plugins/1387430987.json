@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "080d594e5386c4b49018503fea9dd07acfe181b6"
   },
   "github": {
@@ -43,27 +43,43 @@
   },
   "id": "gh:1387430987",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-restart-task",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zchuxi/dsh-restart-task#080d594e5386c4b49018503fea9dd07acfe181b6",
+    "version": "1.2.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-restart-task",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e2e6e3189e2b91afa9f5ad2864a5ccc2fbc904a2c8ed9ca45f4163ad10516f69/zchuxi/dsh-restart-task",
     "description": "DSH Web 插件：三段式回合恢复（同轮静默重试 / 输出超限同轮续写 / 可选新一轮继续），输入框为空时发送键变成「继续」。A three-tier recovery policy for broken turns for DSH."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "--- description: \"DSH Web 插件：把被打断的回合救回来 —— 同一步内静默重试、输出被截断时同轮续写、可选的新一轮继续；输入框为空时发送键本身会变成「继续」。\" kind: \"package-reference\" ---"
   },
   "schemaVersion": 1,
   "scripts": {

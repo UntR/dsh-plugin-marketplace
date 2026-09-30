@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "4cbe544e2da4d885fae730de46933397dc95e103"
   },
   "github": {
@@ -44,33 +44,46 @@
   },
   "id": "gh:1393137291",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-model-ultra",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-model-ultra@2.0.1",
+    "version": "2.0.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "2.0.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/host.js",
+      "./client": "./dist/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "dist/host.js",
+    "name": "dsh-model-ultra",
+    "status": "valid",
+    "type": "module",
+    "version": "2.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9a9d202e451eb54e22c1363ddfebfe444614ed6334e351ac321b9f726f3f2baa/MrCashmere/dsh-model-ultra",
     "description": "对DeepSeek Harness v0.2.0生效的高自由度模型设置插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "面向 DeepSeek Harness (DSH) 的静态 bundle 插件：在设置页新增一个「模型 Ultra」入口，为 llm-pi-ai 提供商提供全生命周期管理 UI —— 新建 / 编辑 / 删除、启用 / 禁用、远端模型发现、连通性测试、逐模型思考强度、OpenRouter 提供商路由、智能路由、组合提供商、观测与探活；并在插件被卸载或禁用时把数据原样还回去（零丢失）。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "bd88cbfebb69460ca1ee6468b6e97bbd67d57d74"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1390830758",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-picker",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yoggu/dsh-model-picker#bd88cbfebb69460ca1ee6468b6e97bbd67d57d74",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-model-picker",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e7478bc6b4b5028c0a1d2535c4355a8c98589b671c235d6a38b684ec247ebd66/yoggu/dsh-model-picker",
     "description": "Search, pin and hide models in DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Searchable DSH Web composer model picker with a Plugins → Model Picker page to hide, pin and reorder models, set a persistent default reasoning effort per model, and refresh provider catalogs. Per-model effort defaults are applied whenever you select that model in a session. This"
   },
   "schemaVersion": 1,
   "scripts": {

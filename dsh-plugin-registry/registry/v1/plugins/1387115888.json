@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "a158ee08e93f65cb9ab13c86647300ed7912bda7"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1387115888",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-time-inject",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:CNyaotian-Lunar/dsh-time-inject#a158ee08e93f65cb9ab13c86647300ed7912bda7",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./text": "./lib/text.mjs"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-time-inject",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d2de540e48a63808c116d8a008d78c9723d6420d6380141d08ae962b8a2806f1/CNyaotian-Lunar/dsh-time-inject",
     "description": "DSH 插件：每个 turn 首个 step 往模型上下文追加一条单行中文时间读数（当前时间 / 星期 / 时区 / 距上条消息）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH（DeepSeek Harness） 的 host 插件： 每个 turn 的第一个 step 往模型上下文里追加一条单行中文时间读数， 让 agent 永远知道「现在几点、距上一条消息过了多久」。"
   },
   "schemaVersion": 1,
   "scripts": {

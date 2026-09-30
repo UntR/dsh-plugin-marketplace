@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "84d10e9c6cc1612442601439c1831e7c47f92a1e"
   },
   "github": {
@@ -49,27 +49,38 @@
   },
   "id": "gh:1390238456",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tex-block-normalizer",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:s11phere/dsh-tex-block-normalizer#84d10e9c6cc1612442601439c1831e7c47f92a1e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/host.js",
+    "name": "dsh-tex-block-normalizer",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1d4682fb33f416a96561c399ef88f57a2f74cddec968f32fe955c69e67663a76/s11phere/dsh-tex-block-normalizer",
     "description": "DSH plugin: fix Pandoc-style $$ display-math blocks that DSH mis-parses into a red KaTeX parse error."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Web 客户端插件：修好 Pandoc 风格 $$ 公式块在 DSH 里被误解析的问题——公式首行被静默丢弃、正文/表格/后续公式被吞进一个 KaTeX 报错节点，整段变成红色纯文本。"
   },
   "schemaVersion": 1,
   "scripts": {

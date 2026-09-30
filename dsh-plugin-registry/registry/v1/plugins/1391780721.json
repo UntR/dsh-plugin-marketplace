@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "8cd542f7d81052607cf0d32b06aa5db5c3268b4a"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1391780721",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-edit-retry",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:huangmiuXyz/dsh-edit-retry#8cd542f7d81052607cf0d32b06aa5db5c3268b4a",
+    "version": "0.3.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./src/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-edit-retry",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d7b8af2059e7968db6dce8c12c9113811bc953714006ed986e7bb06db43ac4db/huangmiuXyz/dsh-edit-retry",
     "description": "Right-click any user message to edit it and retry from that point — a client-side plugin for DeepSeek Harness (DSH). · 右键编辑任意一条用户消息并从那里重试。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "重发任意一条用户消息。 右键会话里的一条消息，可以重试，也可以先改再重试 —— DSH 都从这条消息之前的位置分叉出一个新会话，把文本当作第一句话发出去。"
   },
   "schemaVersion": 1,
   "scripts": {

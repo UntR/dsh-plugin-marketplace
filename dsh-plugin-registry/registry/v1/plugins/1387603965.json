@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "982d77402df30e10be4d2010250cfecf9a558a88"
   },
   "github": {
@@ -46,27 +46,46 @@
   },
   "id": "gh:1387603965",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@deepseek-ai/dsh-model-audit",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jghwwnq/dsh-model-audit#982d77402df30e10be4d2010250cfecf9a558a88",
+    "version": "0.1.7-rc.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@deepseek-ai/dsh-model-audit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.7-rc.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/81e2636cf4520c4dc457d858aa8002496bf695d63588569e676e9d29bd2a76ee/jghwwnq/dsh-model-audit",
     "description": "Unofficial local plugin for DeepSeek Harness: compares the requested model with the model the upstream response declares (DeepSeek Messages, GPT Responses, Chat Completions)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "中文安装与维护说明"
   },
   "schemaVersion": 1,
   "scripts": {

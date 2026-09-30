@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./patch.cordis.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "583c045f481d76275693e6b754a1e7f38c149e5e"
   },
   "github": {
@@ -49,33 +49,44 @@
   },
   "id": "gh:1390042095",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-waker",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:SFLAQiu/dsh-waker#583c045f481d76275693e6b754a1e7f38c149e5e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./pkg/lib/index.js",
+      "./client": "./pkg/client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "pkg/lib/index.js",
+    "name": "dsh-waker",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/067108358f1cd7c493cc74912ebca1c81c2f726f803571c899b89464e9beb1d2/SFLAQiu/dsh-waker",
     "description": "正在苏醒的数字员工"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把IM变成 DSH 数字员工的唤醒入口：在群里 @机器人 说一句需求，任务就自动执行并把结果发回群里。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

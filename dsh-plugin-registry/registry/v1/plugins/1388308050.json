@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "7cf91fefab3b65f8aa20a62b6df8351baa466d95"
   },
   "github": {
@@ -43,27 +43,43 @@
   },
   "id": "gh:1388308050",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-opencode-sounds",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:notf0und/dsh-opencode-sounds#7cf91fefab3b65f8aa20a62b6df8351baa466d95",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-opencode-sounds",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/270a021f1767251f751041c3f5a0f8cb155f9cfd6c8ca19513c700968b506f23/notf0und/dsh-opencode-sounds",
     "description": "DeepSeek Harness plugin: opencode's notification sound pack for the DSH Web UI (fork of @ai-galaxy/dsh-sound)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) Web UI plugin that plays opencode's notification sound pack when a task finishes or something needs a human."
   },
   "schemaVersion": 1,
   "scripts": {

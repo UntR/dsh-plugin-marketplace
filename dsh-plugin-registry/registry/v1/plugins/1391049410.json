@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./packages/jev/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "cd041b90a3a291d832d75030ea92975501280f63"
   },
   "github": {
@@ -16,7 +16,7 @@
     "defaultBranch": "main",
     "description": "Native DeepSeek Harness (DSH) plugin integrating TypeSafe Jev as a System One decision layer for agent selection, supervision, corrections, and approvals.",
     "fork": false,
-    "forks": 1,
+    "forks": 4,
     "headSha": "cd041b90a3a291d832d75030ea92975501280f63",
     "homepageUrl": "https://luobosibing2.github.io/dsh-jev-plugin/",
     "language": "JavaScript",
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUum6wg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/47e72f91b1eeaaf775cdc31de1853b53448d2e3ae9cbfa73e6f592f10af8f3cd/luobosibing2/dsh-jev-plugin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/fb2b6e7e577ea7f185c7c01943d7b95ea944998e82b06fec5ab01df068d731da/luobosibing2/dsh-jev-plugin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/96646876?v=4",
       "login": "luobosibing2"
     },
-    "pushedAt": "2026-09-29T03:49:17Z",
+    "pushedAt": "2026-09-29T12:27:03Z",
     "slug": "luobosibing2/dsh-jev-plugin",
-    "stars": 18,
+    "stars": 40,
     "topics": [
       "agent-harness",
       "ai-agents",
@@ -45,32 +45,90 @@
       "plugins",
       "typesafe-ai"
     ],
-    "updatedAt": "2026-09-29T05:51:27Z",
+    "updatedAt": "2026-09-30T10:07:41Z",
     "url": "https://github.com/luobosibing2/dsh-jev-plugin"
   },
   "id": "gh:1391049410",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-jev/plugin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:luobosibing2/dsh-jev-plugin#cd041b90a3a291d832d75030ea92975501280f63",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./runtime/index.js",
+        "types": "./runtime/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./runtime/client.js",
+        "types": "./runtime/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./packages/jev/cordis.patch.yml",
+      "./instructions": {
+        "default": "./runtime/instructions.js",
+        "types": "./runtime/types/instructions.d.ts"
+      },
+      "./interjection": {
+        "default": "./runtime/interjection.js",
+        "types": "./runtime/types/interjection.d.ts"
+      },
+      "./output-admission": {
+        "default": "./runtime/output-admission.js",
+        "types": "./runtime/types/output-admission.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./runtime/typert.remote-client.js",
+        "types": "./runtime/typert.remote-client.d.ts"
+      },
+      "./selection": {
+        "default": "./runtime/selection.js",
+        "types": "./runtime/types/selection.d.ts"
+      },
+      "./shared-findings": {
+        "default": "./runtime/shared-findings.js",
+        "types": "./runtime/types/shared-findings.d.ts"
+      },
+      "./supervision": {
+        "default": "./runtime/supervision.js",
+        "types": "./runtime/types/supervision.d.ts"
+      },
+      "./typert": {
+        "default": "./runtime/typert.host.js",
+        "types": "./runtime/typert.host.d.ts"
+      },
+      "./types": {
+        "default": "./runtime/types/types.js",
+        "types": "./runtime/types/types.d.ts"
+      },
+      "./workspace-approval": {
+        "default": "./runtime/workspace-approval.js",
+        "types": "./runtime/types/workspace-approval.d.ts"
+      }
+    },
+    "main": "./runtime/index.js",
+    "name": "@dsh-jev/plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/47e72f91b1eeaaf775cdc31de1853b53448d2e3ae9cbfa73e6f592f10af8f3cd/luobosibing2/dsh-jev-plugin",
+    "coverUrl": "https://opengraph.githubassets.com/fb2b6e7e577ea7f185c7c01943d7b95ea944998e82b06fec5ab01df068d731da/luobosibing2/dsh-jev-plugin",
     "description": "Native DeepSeek Harness (DSH) plugin integrating TypeSafe Jev as a System One decision layer for agent selection, supervision, corrections, and approvals."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Native DeepSeek Harness (DSH) plugin integrating TypeSafe Jev as a System One decision layer."
   },
   "schemaVersion": 1,
   "scripts": {

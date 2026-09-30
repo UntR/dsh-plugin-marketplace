@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "245c6e9f3fcda5ed65aa2e16a02db657afe90dcd"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1389664388",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-adaptive-max-tokens",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:3289192-bot/dsh-adaptive-max-tokens#245c6e9f3fcda5ed65aa2e16a02db657afe90dcd",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/adaptive-max-tokens.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/adaptive-max-tokens.mjs",
+    "name": "dsh-adaptive-max-tokens",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/802172a6e37a77c1090c3f1d8b7f028c70ce4e72e9b19e69a8ca5a306bf9f244/3289192-bot/dsh-adaptive-max-tokens",
     "description": "DeepSeek Harness 动态输出额度插件：随上下文增长调整 maxTokens，压缩后恢复额度。支持 DSH 0.1.6-alpha.1 / 0.1.7-rc.2。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把固定的 384K 输出预留变成动态额度，让长对话能使用原本被过量预留占住的上下文空间。"
   },
   "schemaVersion": 1,
   "scripts": {

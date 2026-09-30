@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "d96dbd750eebd8da7955fea14b568b1e5a18ee3e"
   },
   "github": {
@@ -41,27 +41,41 @@
   },
   "id": "gh:1389958320",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-ssh",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:supengpeng/dsh-ssh#d96dbd750eebd8da7955fea14b568b1e5a18ee3e",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@local/dsh-ssh",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/204865ceabfaf445c8bf083549359f31e36cabff220dd0f4558c867685bb7457/supengpeng/dsh-ssh",
     "description": "SSH plugin for DSH (DeepSeek Harness): connection, exec/PTY, SFTP transfer, right-sidebar UI"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 右侧边栏里管理 SSH 连接：连接档案、多会话工作区（终端 / 命令 / 文件 / 日志）、SFTP 传输、审计日志，并同时以 Agent 工具的形式暴露给模型。"
   },
   "schemaVersion": 1,
   "scripts": {

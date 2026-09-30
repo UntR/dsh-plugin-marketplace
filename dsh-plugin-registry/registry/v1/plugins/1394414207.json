@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "5ea4840908d5be289d7dc8cf171906f1bf9aa0f5"
   },
   "github": {
@@ -48,27 +48,37 @@
   },
   "id": "gh:1394414207",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-vdesktop",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jafewff/dsh-vdesktop#5ea4840908d5be289d7dc8cf171906f1bf9aa0f5",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-vdesktop",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/804c37ab0ef82349e6eabe75637277eeb359968f22d30bb6a7530e8c54df8748/jafewff/dsh-vdesktop",
     "description": "Run GUI apps on an invisible Win32 virtual desktop: an LLM agent drives them via vdesk_* tools, while you watch and take over with real mouse clicks from the DSH (DeepSeek Harness) web GUI panel."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-vdesktop 是 DSH（DeepSeek Harness） 的一个 cordis 插件：它在你本机上开一个用户看不见的 Win32 虚拟桌面（CreateDesktopW），把 GUI 应用跑进这个隔离桌面里，然后——"
   },
   "schemaVersion": 1,
   "scripts": {

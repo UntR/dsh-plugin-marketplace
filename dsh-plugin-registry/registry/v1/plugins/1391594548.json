@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "617e4d872a0b50c5b369c0bf8e7187e280325d48"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "@aiwayds/dsh-jev-core",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1f63c5462a56238caa3d7bbcd39f6912e162c3cc04e6f037c36a6ff37c42433b/fan56/dsh-jev-core",
     "description": "Shared TypeSafe Jev decision-model client for the dsh ecosystem: strict response validation, keychain-first key resolution, typed fail-open errors. Jev-optional by design."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh 生态共享的 TypeSafe Jev（System One）决策模型客户端：一次 HTTP 调用携带 N 个原子问题（choice / score / noul），响应经严格单档校验后返回类型化判定。"
   },
   "schemaVersion": 1,
   "scripts": {

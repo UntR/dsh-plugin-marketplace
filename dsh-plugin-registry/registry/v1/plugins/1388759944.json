@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "1a54b66d2e43e098a300386b9a22abb089e0c0ee"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1388759944",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-proxy-router",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Lequait/dsh-proxy-router#1a54b66d2e43e098a300386b9a22abb089e0c0ee",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./core": "./lib/core.mjs",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-proxy-router",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/26392e4747faa79c3abd10f1a0bbfa90fe4cff4d05dd0ce6e2aece2971591fa8/Lequait/dsh-proxy-router",
     "description": "Direct-first fetching with automatic proxy fallback for DeepSeek Harness. 订阅链接 → 本地内核 → 直连优先、失败自动切代理"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 的「直连优先、代理兜底」取回能力。 导入一份代理订阅，直连失败的目标自动改走代理，并记住下次直接走对的那条路。"
   },
   "schemaVersion": 1,
   "scripts": {

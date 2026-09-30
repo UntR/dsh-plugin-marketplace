@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "3ccf336eab84ac882927e17132232572b9c0c428"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1394565930",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-stop-kills-jobs",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Ezisup/dsh-stop-kills-jobs#3ccf336eab84ac882927e17132232572b9c0c428",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-stop-kills-jobs",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3217d8f2563bd3b8e4cef4598beb7bba28cbccd8552965439e5433976d720c03/Ezisup/dsh-stop-kills-jobs",
     "description": "在点击DSH停止时, 不只是停止会话输出而包含了停止后台终端运行"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "按下对话的停止按钮时，除了中断当前回复，还会结束这一轮发起的后台任务。"
   },
   "schemaVersion": 1,
   "scripts": {

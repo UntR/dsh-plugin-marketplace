@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "246817f8f19fa7044d634b07a9cce7b385394b1c"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1394074196",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-plugins/dsh-workspace-auto-sort",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:huimingli666/dsh-workspace-auto-sort#246817f8f19fa7044d634b07a9cce7b385394b1c",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "@dsh-plugins/dsh-workspace-auto-sort",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bdf6aec6410f641b7d2815439c254d1bdfa40b6f3e94edc86b74d6f627810900/huimingli666/dsh-workspace-auto-sort",
-    "description": ""
+    "description": "为 DSH（DeepSeek Harness）Web / 桌面端新增工作区自动排序：会话收到新的用户消息时， 自动把侧边栏的各个工作区按「子会话最后一条用户消息时间」降序持久化重排——刚被使用的 工作区上浮到最前，且顺序在重启后保留。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DSH（DeepSeek Harness）Web / 桌面端新增工作区自动排序：会话收到新的用户消息时， 自动把侧边栏的各个工作区按「子会话最后一条用户消息时间」降序持久化重排——刚被使用的 工作区上浮到最前，且顺序在重启后保留。"
   },
   "schemaVersion": 1,
   "scripts": {

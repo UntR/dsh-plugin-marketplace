@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "be5a0d58582a2877100d1740485682eaedc71146"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1390560253",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@pandarayc/dsh-skill-tier",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:pandarayc/dsh-skill-tier#be5a0d58582a2877100d1740485682eaedc71146",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@pandarayc/dsh-skill-tier",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a3a32cdf9a36449cd9ac701e34d0c404edd142c9bb7fb806e5d72a64e66e41e1/pandarayc/dsh-skill-tier",
     "description": "Progressive disclosure for DSH skill collections: one generated index skill stays in the catalog, every member stays user-invocable but leaves the model catalog. Zero dependencies."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的 skill 目录（catalog）是每个会话每一轮都携带的常驻消息：每个 model-invocable 的 skill 贡献一条 - \\name\\: 。一个域只要有几十个 skill，代价就很可观："
   },
   "schemaVersion": 1,
   "scripts": {

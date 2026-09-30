@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "9b1c3da4853bbbd6c176e3e36d8a1f464ff0a7c2"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1387345441",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-zotero",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:H-xie/zotero4DSH#9b1c3da4853bbbd6c176e3e36d8a1f464ff0a7c2",
+    "version": "1.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.11.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-zotero",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8c22d9f65f557aa4b962f814d21d2ff312d00c5b21e16d4bd6af003531cd8793/H-xie/zotero4DSH",
     "description": "Zotero 文献全文检索插件（DeepSeek Harness plugin）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个用于 DeepSeek Harness（DSH）的插件：连接本机 Zotero，对整个文库中所有文献的 PDF 全文建立索引。之后既可在「Zotero 文献」面板中检索，也可在对话中让 AI 检索并阅读文献全文。检索时可按分类（collection）名称限定范围（含子分类），不填则检索整个文库。"
   },
   "schemaVersion": 1,
   "scripts": {

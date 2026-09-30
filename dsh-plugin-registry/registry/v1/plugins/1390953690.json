@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "9ac14ab3be09bc81512220ee9506587458247e78"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1390953690",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-git-commit",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:qingyou002/dsh-git-commit#9ac14ab3be09bc81512220ee9506587458247e78",
+    "version": "1.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-git-commit",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/08816b2ae166c4c8fe0be92bf60abbb27e30637be9f5bc7a063108e1678ff123/qingyou002/dsh-git-commit",
     "description": "DSH slash command /commit: stages all changes, summarizes the staged diff with the session model, and commits; no browser UI required, with a local fallback when the model call fails."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that adds one global slash command — /commit. It stages every change in the session's working directory, asks the model the session is currently using to summarize the staged diff, and commits with that message."
   },
   "schemaVersion": 1,
   "scripts": {

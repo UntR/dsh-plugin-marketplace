@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "ad8cb2d4cab28f657449c5f0fea1c70ae1ebcae1"
   },
   "github": {
@@ -45,27 +45,44 @@
   },
   "id": "gh:1388561362",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-llm-moe4all",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Headmaster218/dsh-llm-moe4all#ad8cb2d4cab28f657449c5f0fea1c70ae1ebcae1",
+    "version": "0.1.0-alpha.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-llm-moe4all",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-alpha.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2ce56d0aae370f2217ff809a903940ae1430e9daed46eb78604a9c815a11ffa6/Headmaster218/dsh-llm-moe4all",
     "description": "Local MoE4All engine provider for DeepSeek Harness. / DeepSeek Harness MoE4All"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-llm-moe4all connects DeepSeek Harness to a MoE4All OpenAI-compatible server and can safely manage a local server process when an executable and arguments are configured."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "03bd53979e2dc030705a78490c2111498fdac67c"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1390144812",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ask-timeout-notify",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:SJTUMalPan/dsh-ask-timeout-notify#03bd53979e2dc030705a78490c2111498fdac67c",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./notify": "./lib/notify.mjs",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-ask-timeout-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/84bfb2042d6b24946e76810df8106773425a9c80741d127156e2fb756ef6da04/SJTUMalPan/dsh-ask-timeout-notify",
     "description": "DSH 宿主插件：ask_user_question 超过阈值（默认 60 分钟）无人回答时，向 notify-hub 投递一条待办并通过飞书/webhook/email 推送"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 宿主插件：模型通过 askuserquestion 提问后，如果超过阈值（默认 60 分钟） 仍无人回答，就往 notify-hub 投递一条 needack 消息，由 notify-hub 落成待办并按渠道推送（飞书 / webhook / email）。"
   },
   "schemaVersion": 1,
   "scripts": {

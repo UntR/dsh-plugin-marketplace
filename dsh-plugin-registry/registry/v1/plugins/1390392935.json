@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "33a9e70a9df80df8a93b5253a8e8be42f16414b5"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@my-plugins/dsh-markdown-highlighter",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c2c9b8eed1ed25a4c53f5a37825d4d64f4501d2d1ce9488623539bd7815c051c/luckbiao/dsh-markdown-highlighter",
     "description": "Rich syntax highlighting for DSH Markdown: activates builtin Shiki theme colors and styles diff codeblocks with green/red backgrounds and split-view"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH (DeepSeek Harness) Web GUI 消息正文 Markdown 代码块增强插件：激活内置 Shiki 语法高亮，赋予 Diff 代码块 + 浅绿 / - 浅红底色，支持 左右分列 (Split) 与单栏 (Unified) 一键切换 以及 Diff 智能自动语言识别与首行提示双重语法高亮。"
   },
   "schemaVersion": 1,
   "scripts": {

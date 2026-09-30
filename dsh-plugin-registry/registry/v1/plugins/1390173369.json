@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "325e09365dafbd8be1766fc8e825f283b142cbb0"
   },
   "github": {
@@ -43,33 +43,91 @@
   },
   "id": "gh:1390173369",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@askdkc/dsh-cli",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "@askdkc/dsh-cli@0.12.1",
+    "version": "0.12.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.12.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/types/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./api": {
+        "import": "./lib/types/api.js",
+        "types": "./lib/types/api.d.ts"
+      },
+      "./command-trees": {
+        "import": "./lib/types/command-trees.js",
+        "types": "./lib/types/command-trees.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./extensions": {
+        "import": "./lib/types/extensions.js",
+        "types": "./lib/types/extensions.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/types/dsh-adapter/invariant.js",
+        "types": "./lib/types/dsh-adapter/invariant.d.ts"
+      },
+      "./jsx-runtime": {
+        "import": "./lib/types/jsx-runtime.js",
+        "types": "./lib/types/jsx-runtime.d.ts"
+      },
+      "./oauth": {
+        "import": "./lib/types/oauth.js",
+        "types": "./lib/types/oauth.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./plugin-host": {
+        "import": "./lib/types/plugin-host.js",
+        "types": "./lib/types/plugin-host.d.ts"
+      },
+      "./scenes": {
+        "import": "./lib/types/scenes.js",
+        "types": "./lib/types/scenes.d.ts"
+      },
+      "./settings-sections": {
+        "import": "./lib/types/settings-sections.js",
+        "types": "./lib/types/settings-sections.d.ts"
+      },
+      "./working-activity": {
+        "import": "./lib/types/working-activity.js",
+        "types": "./lib/types/working-activity.d.ts"
+      },
+      "./workspaces": {
+        "import": "./lib/types/workspaces.js",
+        "types": "./lib/types/workspaces.d.ts"
+      }
+    },
+    "main": "lib/types/index.js",
+    "name": "@askdkc/dsh-cli",
+    "status": "valid",
+    "type": "module",
+    "version": "0.12.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/15cf0243e29d4da74ae01e0359334253f80abd42dd947a45382c6eab6ed68da2/askdkc/dsh-cli",
     "description": "DSH向けCLI Plugin / DSH CLIplugin — whale bar, live status, streaming thoughts, double-Esc rollback, context bar + TPS"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "This is dkc's independently developed fork of dsh-TUI by chimney."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

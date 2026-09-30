@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "97639e08920564c53bd38053d3f822d9a46f4160"
   },
   "github": {
@@ -46,27 +46,37 @@
   },
   "id": "gh:1389001445",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-maibot-plugin-writer",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Lgv-H/dsh-maibot-plugin-writer#97639e08920564c53bd38053d3f822d9a46f4160",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-maibot-plugin-writer",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/008f68c441de2bdebeb3561a357932ba52ee02392441ddfdb94a1478af1ae574/Lgv-H/dsh-maibot-plugin-writer",
     "description": "DSH 插件：让 DSH（DeepSeek Harness）自己编写、校验、安装麦麦（MaiBot）插件。5 个 maibot_* 工具 + 随包 skill，能力白名单与 SDK 方法表实时取自本机 MaiBot"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DSH（DeepSeek Harness）自己写麦麦（MaiBot）插件：读当前宿主的真实契约 → 生成骨架 → 校验到 0 error → 安装。"
   },
   "schemaVersion": 1,
   "scripts": {

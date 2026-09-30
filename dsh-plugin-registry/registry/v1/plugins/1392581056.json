@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "99c4171b53c6cc1df421bd3def743a040cc1bc4d"
   },
   "github": {
@@ -51,27 +51,38 @@
   },
   "id": "gh:1392581056",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mcp-manager",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ZnonEn/dsh-mcp-manager#99c4171b53c6cc1df421bd3def743a040cc1bc4d",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.6.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./client/bundle.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-mcp-manager",
+    "status": "valid",
+    "type": null,
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5f16fb384b4949d2dd158a6bee5fe74207b93b2c1ed394b997a2c0e0ba4629b8/ZnonEn/dsh-mcp-manager",
     "description": "DeepSeek Harness (DSH) 插件：在桌面端设置页里管理 MCP 服务器 —— 新增/编辑/删除/启停 + 运行状态，直接读写 profile 的 cordis.patch.yml，零依赖。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 桌面端的设置页里管理 MCP 服务器：列表、新增、编辑、删除、启用/停用，并显示每个服务器的真实运行状态 —— 不用再手改 cordis.patch.yml。"
   },
   "schemaVersion": 1,
   "scripts": {

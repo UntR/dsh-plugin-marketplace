@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
-    "headSha": "0209e8e176e5b0fc36f6b9bd3c1fa49476370af0"
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
+    "headSha": "ed650080337303f9a012b6eda77a3b3cc2cad3f8"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-26T02:06:16Z",
     "databaseId": 1388380650,
     "defaultBranch": "main",
-    "description": "dsh-worktree-space is a DSH plugin that creates isolated multi-repo workspaces for AI agents using Git worktrees. Each task gets its own workspace containing separate worktrees for every repository, enabling parallel agents to work without file conflicts, context pollution, or tangled commits.",
+    "description": "Worktree Space：将一个包含一个或多个 Git 仓库的工作区任务放进独立的任务空间目录——参与的每个仓库使用同一个任务分支各开一个 worktree；空间自动注册为 DSH 工作区，会话直接在其中开工，多个任务并行推进、互不干扰。收尾时可合并回各仓库当前分支、移除 worktree，并把 Git 未跟踪的文件归档到指定目录；结束任务时可选把未处理的提交和合并冲突交给 agent 处理。",
     "fork": false,
     "forks": 0,
-    "headSha": "0209e8e176e5b0fc36f6b9bd3c1fa49476370af0",
+    "headSha": "ed650080337303f9a012b6eda77a3b3cc2cad3f8",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUsEB6g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a01c00e2d2cb2017cdb5b0fce424a6be51f4d21dd194acab246b452e8d2b7b40/kangtsang/dsh-worktree-space",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e4aa9f68edafe3f23d7ef05830a352ce4eefe25163366a4f34463d010c2a8c03/kangtsang/dsh-worktree-space",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/72589730?v=4",
       "login": "kangtsang"
     },
-    "pushedAt": "2026-09-29T02:58:33Z",
+    "pushedAt": "2026-09-29T15:51:45Z",
     "slug": "kangtsang/dsh-worktree-space",
     "stars": 0,
     "topics": [
@@ -41,32 +41,46 @@
       "worktree-manager",
       "worktree-workflow"
     ],
-    "updatedAt": "2026-09-29T02:58:12Z",
+    "updatedAt": "2026-09-29T16:45:44Z",
     "url": "https://github.com/kangtsang/dsh-worktree-space"
   },
   "id": "gh:1388380650",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-worktree-space",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-worktree-space@1.0.8",
+    "version": "1.0.8"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.8",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/en.json": "./locale/en.json",
+      "./locale/zh.json": "./locale/zh.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-worktree-space",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.8"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a01c00e2d2cb2017cdb5b0fce424a6be51f4d21dd194acab246b452e8d2b7b40/kangtsang/dsh-worktree-space",
-    "description": "dsh-worktree-space is a DSH plugin that creates isolated multi-repo workspaces for AI agents using Git worktrees. Each task gets its own workspace containing separate worktrees for every repository, enabling parallel agents to work without file conflicts, context pollution, or ta"
+    "coverUrl": "https://opengraph.githubassets.com/e4aa9f68edafe3f23d7ef05830a352ce4eefe25163366a4f34463d010c2a8c03/kangtsang/dsh-worktree-space",
+    "description": "Worktree Space：将一个包含一个或多个 Git 仓库的工作区任务放进独立的任务空间目录——参与的每个仓库使用同一个任务分支各开一个 worktree；空间自动注册为 DSH 工作区，会话直接在其中开工，多个任务并行推进、互不干扰。收尾时可合并回各仓库当前分支、移除 worktree，并把 Git 未跟踪的文件归档到指定目录；结束任务时可选把未处理的提交和合并冲突交给 agent 处理。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的 Worktree Space 插件：一个包含单个/多个 Git 仓库的工作任务，在一个共同的任务空间 目录下每个仓库各开一份同名 worktree 分支，并注册成一个 Agent 工作区，可以独立创建会话执行任务，多任务 可以并行处理互不干扰，任务完成后合并回主干分支并删除 worktree 分支和任务空间。"
   },
   "schemaVersion": 1,
   "scripts": {

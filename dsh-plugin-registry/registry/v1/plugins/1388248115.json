@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "8822c1137fbf76bd51b0e0212d4ef57e153c275c"
   },
   "github": {
@@ -40,27 +40,38 @@
   },
   "id": "gh:1388248115",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@weibaohui/dsh-flow",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@weibaohui/dsh-flow@0.1.7",
+    "version": "0.1.7"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.7",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./client/bundle.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "@weibaohui/dsh-flow",
+    "status": "valid",
+    "type": null,
+    "version": "0.1.7"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bc7d0caf7162febc9ccf2aa6ec866f9406430d3ceea49738dd2f10f541a8068f/weibaohui/dsh-flow",
     "description": "dsh 插件 · 执行流程图：把当前会话的执行过程画成实时三泳道流程图（回合/用户/助手/工具/审批/重试），子代理发散-收敛扇形 + 双击下钻子流程，SSE 事件驱动直播"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "执行流程图：把当前会话的执行过程画成一张真正的流程图——椭圆是回合起止、菱形是审批决策、方框是用户/助手/工具动作，主链路用带箭头的普通曲线串联；子代理并行派发画成发散-收敛扇形，双击即可下钻到子代理自己的完整流程图。会话执行到哪，图就向下画到哪。另提供紧凑列表视图一键切换。"
   },
   "schemaVersion": 1,
   "scripts": {

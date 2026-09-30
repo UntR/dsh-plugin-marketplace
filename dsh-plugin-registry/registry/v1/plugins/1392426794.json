@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "e0f7c4b5682cba1156f7936ef031a0976716c6f6"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1392426794",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "deepseek-web-import",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:CwavGuy/deepseek-web-import#e0f7c4b5682cba1156f7936ef031a0976716c6f6",
+    "version": "0.2.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "deepseek-web-import",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d5c16a4c2ff288071112cef3903a81c6e1c02fee3d5a39b322c7f8860ba75060/CwavGuy/deepseek-web-import",
     "description": "把 chat.deepseek.com 网页版对话导入 DeepSeek Harness 的插件（维护分支）：兼容 DSH Session 格式 v0–v4，含思维链导入与真实后端测试矩阵。Import DeepSeek web conversations into DSH as resumable sessions (Session format v0-v4)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 chat.deepseek.com 网页版的历史对话导入成 DeepSeek Harness (DSH) 的正式会话： 导入后出现在左侧工作区列表里，可以打开、查看完整历史（含思维链）、选模型继续对话。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "50fd116d04ffcfd202ef31d4ec4d2dca203bf603"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1389139054",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-agent-log",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Neo65536-engineer/dsh-agent-log#50fd116d04ffcfd202ef31d4ec4d2dca203bf603",
+    "version": "0.4.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-agent-log",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8b2160ff0da0917c6a826b832300a393784598daf27d6659000ebcfaf3d10a40/Neo65536-engineer/dsh-agent-log",
     "description": "Read-only work reports for DeepSeek Harness: reconstruct what an agent task actually did from session logs — tools used, files read/written, commands run, test results, failures, token usage, and whether it finished. Fully offline, no API key, no data leaves your machine."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件。从本机的 DSH 会话日志里只读还原一次任务做了什么，输出一份《本次 Agent 工作报告》。"
   },
   "schemaVersion": 1,
   "scripts": {

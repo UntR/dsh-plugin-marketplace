@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "6a120ca5538dc864aa5b9590130152545bf193b1"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1381147768",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ssh-shell",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:framecy/dsh-ssh-shell#6a120ca5538dc864aa5b9590130152545bf193b1",
+    "version": "0.4.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-ssh-shell",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/65125ee28eb4267e5131444883cbed9a40d0342fa6daee0cd9d725fa86d3b8b3/framecy/dsh-ssh-shell",
     "description": "DSH plugin: password SSH into a remote host — a natural-language tool over a persistent ControlMaster session, plus a browser terminal panel with a real PTY over WebSocket."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：用密码直连远程主机的 SSH 终端。一个自然语言工具（connect / exec / close / status）+ 浏览器右侧浮动终端面板，底层是 OpenSSH ControlMaster 常驻会话 + sshpass + node-pty 起的真实 PTY，经 WebSocket 桥到浏览器。"
   },
   "schemaVersion": 1,
   "scripts": {

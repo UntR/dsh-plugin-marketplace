@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "4e6882a41debd25f90f610efcca0b524c65d3215"
   },
   "github": {
@@ -48,27 +48,41 @@
   },
   "id": "gh:1388554458",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-wb-memory",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:miseryrua/dsh-wb-memory#4e6882a41debd25f90f610efcca0b524c65d3215",
+    "version": "9.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-wb-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "9.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f6ed2fb1e7aa1bf64be8ea6006e35253ddddab3870e0e4e6bb9e1ae0682cd739/miseryrua/dsh-wb-memory",
     "description": "给 DSH 里的 Agent 一份跨会话长期记忆：真值源是工作区里的纯 Markdown，无向量库、无外部服务、零运行时依赖；每回合按预算分层注入 systemPrompt，后台自动流水 → 提炼 → 整理 → 治理。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 里的 Agent 一份跨会话长期记忆。 记忆就是工作区里的 Markdown 文件——没有向量库、没有外部服务、没有运行时依赖；每回合按 token 预算分层注入到 systemPrompt。"
   },
   "schemaVersion": 1,
   "scripts": {

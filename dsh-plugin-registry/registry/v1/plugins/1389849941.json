@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "d7a7a1276ffd0ef6ec9a66d1a0cca7fe858909f5"
   },
   "github": {
@@ -41,27 +41,37 @@
   },
   "id": "gh:1389849941",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-destinywind-tpm",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:rickwindman/dsh-destinywind-tpm#d7a7a1276ffd0ef6ec9a66d1a0cca7fe858909f5",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-destinywind-tpm",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8109a703d662fd9b7ff9523e8ecd18b15b4c4ca04008eb232939118b0e69787f/rickwindman/dsh-destinywind-tpm",
     "description": "DeepSeek Harness 插件：TPM/DPAPI 封存的凭据提供器，取代明文凭据文件 · TPM/DPAPI-sealed credential provider plugin for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "跨平台硬件级凭据存储插件（DSH bundle）。引用值与记录在落盘前用本机最强的密钥保护者封存（AES-256-GCM 信封加密），只在 resolve 时解封："
   },
   "schemaVersion": 1,
   "scripts": {

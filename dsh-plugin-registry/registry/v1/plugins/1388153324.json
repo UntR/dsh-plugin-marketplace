@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./src/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "816a9a12bbeb7652b8ed5e97bf5d9de8b348ea1e"
   },
   "github": {
@@ -39,33 +39,45 @@
   },
   "id": "gh:1388153324",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@amir83nasr/rastin",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:Amir83Nasr/dsh-rastin#816a9a12bbeb7652b8ed5e97bf5d9de8b348ea1e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@amir83nasr/rastin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5aa550ae8866a3106fa810a2625027aa585072f14d656fc9182bbf4412526fe9/Amir83Nasr/dsh-rastin",
     "description": "Rastin — Persian RTL Cordis bundle for DeepSeek Harness Web GUI: RTL chat, queue, questions on embedded IranYekanX; FiraMono Nerd Font sidebar terminal; todo dock auto-open."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Cordis bundle for the DeepSeek Harness Web GUI: Persian RTL layout with embedded fonts."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
-    "preinstall": false,
+    "preinstall": true,
     "prepare": false
   }
 }

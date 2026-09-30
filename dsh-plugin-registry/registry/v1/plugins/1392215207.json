@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "8f6375bb96bc613be9a33609d3541b128c7d539b"
   },
   "github": {
@@ -49,27 +49,38 @@
   },
   "id": "gh:1392215207",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-agents-loader",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:CrazyPigHead/dsh-plugin-agents-loader#8f6375bb96bc613be9a33609d3541b128c7d539b",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/entry.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "src/entry.js",
+    "name": "dsh-plugin-agents-loader",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/dd8ca86e33eb9c9ea6be54b4ce7189e59ca41ae740834daaf747ad968b53a313/CrazyPigHead/dsh-plugin-agents-loader",
     "description": "dsh plugin: auto-load ~/.agents/mcp.json MCP servers (http/stdio), ~/.agents/commands/ slash commands and AGENTS.md, with hot reload"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "适配 dsh 0.1.7-rc.2（cordis 4.0.4）。peer 依赖按 dsh 官方包惯例精确锁定版本，安装前请阅读「安装 · 前置要求」。"
   },
   "schemaVersion": 1,
   "scripts": {

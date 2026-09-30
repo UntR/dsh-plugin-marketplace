@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "f79ce715fcda5cb8179a2eba7ed17e1e5c13e67b"
   },
   "github": {
@@ -50,27 +50,38 @@
   },
   "id": "gh:1387117653",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-peak-gate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:CNyaotian-Lunar/dsh-peak-gate#f79ce715fcda5cb8179a2eba7ed17e1e5c13e67b",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-peak-gate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0d2559b5ae450a09c8134a2b065460836cb887d199f40b56772df10c13327f40/CNyaotian-Lunar/dsh-peak-gate",
     "description": "DSH 插件：按 DeepSeek 峰谷分时计价，在高峰时段给 token 花销踩刹车（拦大任务 / 压缩输出上限 / 让模型少说废话），并提供一键放行口令"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "按 DeepSeek 的峰谷分时计价，在高峰时段给 token 花销踩刹车：大任务拦下、输出上限压缩、并让模型少说废话，还提供一键放行口令。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "13519eeacc5e2139c2b682640dba0ab6a392e9ab"
   },
   "github": {
@@ -48,24 +48,39 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-pipeline",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/07d97371d45b16e6545797d513a9ac82ca9aa6ccc920293b8d9c6c28a459d798/yuluo554/dsh-pipeline",
     "description": "Multi-node agent pipeline orchestration plugin for DeepSeek Harness (dsh) — JSON-defined workflows, per-node model/skills routing, web editor, live run cards. Responds to dsh#7704."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（dsh）多节点工作流编排插件 —— 回应官方讨论 #7704： 把\"每轮对话手动换模型、挂技能、贴提示词、复制上一步结果\"的重复流程， 定义成一份可复用、可进 git 的 JSON 流水线，一条命令编译并运行。"
   },
   "schemaVersion": 1,
   "scripts": {

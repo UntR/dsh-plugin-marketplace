@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "392b276113ded01f2040fee40382b2aae8e492b4"
   },
   "github": {
@@ -58,24 +58,61 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.20",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/src/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/src/client/index.d.ts"
+      },
+      "./contracts": {
+        "default": "./lib/contracts.js",
+        "types": "./lib/types/src/core/contracts/index.d.ts"
+      },
+      "./core": {
+        "default": "./lib/core.js",
+        "types": "./lib/types/src/core/plugin.d.ts"
+      },
+      "./extension-sdk": {
+        "default": "./lib/extension-sdk.js",
+        "types": "./lib/types/src/sdk/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./source-sdk": {
+        "default": "./lib/source-sdk.js",
+        "types": "./lib/types/src/sdk/source/index.d.ts"
+      },
+      "./testing": {
+        "default": "./lib/testing.js",
+        "types": "./lib/types/src/sdk/testing.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-mnemon",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.13"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1f521cf2e90fa75ab30b74da5909d16336d003293968efea708ee24b79d1ba4f/Grivn/mnemon-memory-agent",
     "description": "Long-term memory for AI agents on Jev. Keep raw records, judge them with a fast System 1 model and answer from under 4k tokens of context."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Paper · Results · Reproduce · Run ·"
   },
   "schemaVersion": 1,
   "scripts": {

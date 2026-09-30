@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "8cc4c62a0275261886542f7a33c0126748c8dbaa"
   },
   "github": {
@@ -45,27 +45,44 @@
   },
   "id": "gh:1393117522",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-deep-diving-skin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Menghuan1918/dsh-deep-diving-skin#8cc4c62a0275261886542f7a33c0126748c8dbaa",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-deep-diving-skin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3bd6cd501862234006d3acfc76bea261c53cabdc4c2f969b4ab37f688b7dbb90/Menghuan1918/dsh-deep-diving-skin",
     "description": "替换“深度求索中”为任意你想要的文本，比如：少女祈祷中......"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "替换 DeepSeek Harness 运行状态行的图标、文本和颜色——就是那一行「深度求索中，用时 16分0秒…」。默认图标是旋转太极，默认文本「少女祈祷中」，默认颜色为红色。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
-    "headSha": "5f18c012d22b9fcb066508a0347776df262bb010"
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
+    "headSha": "958a35f7822962c2d54941ed47ac9ba5a27db450"
   },
   "github": {
     "archived": false,
@@ -17,24 +17,24 @@
     "description": null,
     "fork": false,
     "forks": 0,
-    "headSha": "5f18c012d22b9fcb066508a0347776df262bb010",
+    "headSha": "958a35f7822962c2d54941ed47ac9ba5a27db450",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOUu8d4g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/30b5eba60a29f6fde588213c16403c0334dd5436b4081d398e147c97b91c2e6a/rin721/dsh-mythor-plugin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/fdd27a6cc13acb8a2aea83dc85809a41d52396c10c477e1352e8e42c3b834be9/rin721/dsh-mythor-plugin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/147812354?u=2d2448c9cebcc1bb9be9a81aaeba529497374d17&v=4",
       "login": "rin721"
     },
-    "pushedAt": "2026-09-29T09:04:09Z",
+    "pushedAt": "2026-09-30T08:19:50Z",
     "slug": "rin721/dsh-mythor-plugin",
     "stars": 0,
     "topics": [
       "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-29T09:04:13Z",
+    "updatedAt": "2026-09-30T08:19:54Z",
     "url": "https://github.com/rin721/dsh-mythor-plugin"
   },
   "id": "gh:1391402466",
@@ -42,7 +42,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -52,14 +52,30 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./types": "./lib/types/shared/contracts.d.ts"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-mythor-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/30b5eba60a29f6fde588213c16403c0334dd5436b4081d398e147c97b91c2e6a/rin721/dsh-mythor-plugin",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/fdd27a6cc13acb8a2aea83dc85809a41d52396c10c477e1352e8e42c3b834be9/rin721/dsh-mythor-plugin",
+    "description": "基于 docs/goal.md：规则塑造人物处境，欲望遭遇阻碍，选择产生后果，后果改变状态。Mythor 将这些创作活动组织为可持续维护的领域数据、阶段任务与可审阅变更。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "基于 docs/goal.md：规则塑造人物处境，欲望遭遇阻碍，选择产生后果，后果改变状态。Mythor 将这些创作活动组织为可持续维护的领域数据、阶段任务与可审阅变更。"
   },
   "schemaVersion": 1,
   "scripts": {

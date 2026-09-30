@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
-    "headSha": "dd85242ec529cbce992a72a7e1fbc1ecd071787e"
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
+    "headSha": "444a158442c557aee8823df71da3a21b6a70dc51"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "direnv support for dsh",
     "fork": false,
     "forks": 0,
-    "headSha": "dd85242ec529cbce992a72a7e1fbc1ecd071787e",
+    "headSha": "444a158442c557aee8823df71da3a21b6a70dc51",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,50 +25,77 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUqwmqw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/19a8014bdc1a9c40f3a20eae7536424f076070bbc36dea50ec401e23145d5aea/snylonue/dsh-direnv",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/9412da2b0f564decb8705bfcda10633fd1a13cd45bb6d7805746ba8150439114/snylonue/dsh-direnv",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/48825598?u=4fdfbdfb9ca4749221bf9955894808c7bdf12dd9&v=4",
       "login": "snylonue"
     },
-    "pushedAt": "2026-09-26T13:46:09Z",
+    "pushedAt": "2026-09-30T04:46:40Z",
     "slug": "snylonue/dsh-direnv",
     "stars": 0,
     "topics": [
       "direnv",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-26T13:46:13Z",
+    "updatedAt": "2026-09-30T04:46:44Z",
     "url": "https://github.com/snylonue/dsh-direnv"
   },
   "id": "gh:1387013803",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-direnv",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:snylonue/dsh-direnv#444a158442c557aee8823df71da3a21b6a70dc51",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0-alpha.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/provider.js",
+        "types": "./dist/provider.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./core": {
+        "default": "./dist/core.js",
+        "types": "./dist/core.d.ts"
+      },
+      "./integration-plugin": {
+        "default": "./dist/integration-plugin.js",
+        "types": "./dist/integration-plugin.d.ts"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./tools": {
+        "default": "./dist/tools.js",
+        "types": "./dist/tools.d.ts"
+      }
+    },
+    "main": "./dist/provider.js",
+    "name": "dsh-direnv",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/19a8014bdc1a9c40f3a20eae7536424f076070bbc36dea50ec401e23145d5aea/snylonue/dsh-direnv",
+    "coverUrl": "https://opengraph.githubassets.com/9412da2b0f564decb8705bfcda10633fd1a13cd45bb6d7805746ba8150439114/snylonue/dsh-direnv",
     "description": "direnv support for dsh"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Workspace-aware direnv support for DeepSeek Harness: every agent-owned shell command automatically receives its workspace's .envrc environment, and a blocked .envrc produces an actionable notice plus a direnvallow tool that asks the user before authorizing anything."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

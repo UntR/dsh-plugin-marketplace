@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "9f8a2d7f2e7feee5bb048cad630837d6de85746f"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1388962358",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-decision-layer",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-decision-layer@0.5.5",
+    "version": "0.5.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.5",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./service/dsh.mjs",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./service/dsh.mjs",
+    "name": "dsh-decision-layer",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4fe9f5b35ab58623f1bf73b4217d7a916274c2f24ea9fef95495b931e92a1101/xbzbing/dsh-decision-layer",
     "description": "A structured decision layer for the DeepSeek Harness agent loop, backed by a pluggable adjudication model (dev / laya)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）的结构化裁决插件。它把有明确判断标准的问题交给同协议的裁决后端，供 agent 在需要时使用，并在 agent loop 上接入危险门控、产出自检、工具收窄和防循环等自动介入。"
   },
   "schemaVersion": 1,
   "scripts": {

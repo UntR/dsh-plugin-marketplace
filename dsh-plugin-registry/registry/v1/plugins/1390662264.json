@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "7f14876b105d58d2578f6ae33b3a3bee617ddc03"
   },
   "github": {
@@ -55,7 +55,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -65,14 +65,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": "./dist/client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "dist/index.js",
+    "name": "@bigbigtooth/dsh-devops",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/33b2d28c8fa29be4e8e77aa08d77daa47580b2a41b3f348fd5cb4d90082cdd21/bigbigtooth/DSH-DevOps-Plugin",
     "description": "DSH 远程运维插件：SSH 服务器管理、硬件/进程/日志监控、只读 AI 巡检、Git 部署闭环。 Remote operations for DeepSeek Harness: SSH server management, monitoring, read-only AI inspection, and a Git deploy loop."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Server operations inside the DSH Web app: SSH server management · hardware / process / log monitoring · AI inspection · a Git deploy loop"
   },
   "schemaVersion": 1,
   "scripts": {

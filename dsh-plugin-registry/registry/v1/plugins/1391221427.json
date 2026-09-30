@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "464d65700f553884e60958760ed8a7e3688b18c0"
   },
   "github": {
@@ -49,27 +49,38 @@
   },
   "id": "gh:1391221427",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-netguard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:JackZo400/dsh-netguard#464d65700f553884e60958760ed8a7e3688b18c0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.7.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json",
+      "./src/*.js": "./src/*.js"
+    },
+    "main": null,
+    "name": "dsh-netguard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7495509da826dac84d21b95fe8155cc2ef14fba1a01695320db85214181a55df/JackZo400/dsh-netguard",
     "description": "dsh 插件：出网护栏——只放公网、重定向逐跳复查、边读边限大小（防 SSRF） · Egress guard for dsh: public addresses only, every redirect hop re-checked, size capped while streaming."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（dsh）用的出网护栏： 让\"拉一个外部 URL\"这件事不再是一个 SSRF 入口。"
   },
   "schemaVersion": 1,
   "scripts": {

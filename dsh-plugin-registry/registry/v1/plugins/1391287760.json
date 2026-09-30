@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "a9a8d5e557d3ccded99788f504e030acebfe1303"
   },
   "github": {
@@ -48,27 +48,40 @@
   },
   "id": "gh:1391287760",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-memory-plugin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:AieXile/dsh-memory-plugin#a9a8d5e557d3ccded99788f504e030acebfe1303",
+    "version": "1.4.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.7.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./host": "./lib/host.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/host.js",
+    "name": "dsh-memory-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "1.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4acfda000a8ffa5fdd253fcea7177ec3b4483de104f2f9471ff36f0041793697/AieXile/dsh-memory-plugin",
     "description": "DSH 记忆/规则插件（profile bundle）：每轮注入记忆与规则，提供 memory_* / rule_* 工具，标题栏图标浮层 + 设置页「记忆与规则」"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个独立的 DSH 记忆 / 规则持久插件（profile bundle）：与宿主项目解耦，任何工作区 都能用。它由 AnimeTrack 项目里的动态 Cordis 插件演化而来，早期以 @animetrack/memory-plugin 的名义存在，v1.4.0 起独立命名为 dsh-memory-plugin （存储路径同批迁移，旧数据自动兼容，见下文）。"
   },
   "schemaVersion": 1,
   "scripts": {

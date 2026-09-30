@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "7a921fd7dbc08f599c43a2db2f01ba66a3d12890"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1388548983",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-anthropic-image-clamp",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:noahchalifour/dsh-anthropic-image-clamp#7a921fd7dbc08f599c43a2db2f01ba66a3d12890",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./clamp": "./lib/clamp.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-anthropic-image-clamp",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/14d2d23f3c8795026c3438f5f1c3bb43b66c6fde99ba1d74c7c746626b5a4a00/noahchalifour/dsh-anthropic-image-clamp",
     "description": "DeepSeek Harness plugin: downscale images on Claude requests so many-image requests never hit the 2000px limit"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Stops this Claude error in DeepSeek Harness:"
   },
   "schemaVersion": 1,
   "scripts": {

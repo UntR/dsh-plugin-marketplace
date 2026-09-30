@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "11a0017674676c324410f9b5b846eaccb1d12dba"
   },
   "github": {
@@ -45,27 +45,42 @@
   },
   "id": "gh:1394785240",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-kimi-code-oauth",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:SiriusWJ/dsh-kimi-code-oauth#11a0017674676c324410f9b5b846eaccb1d12dba",
+    "version": "0.3.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-kimi-code-oauth",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fb0e9e09f0778f781f4dcd67ce64014bcda66a3c491deb4b4a0efa211979ef31/SiriusWJ/dsh-kimi-code-oauth",
     "description": "DeepSeek Harness plugin for Kimi Code subscription OAuth"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的 Kimi Code 订阅 OAuth 插件。默认文档语言为中文，Web 设置界面会跟随 DSH 的中英文语言设置，并使用当前主题配色。"
   },
   "schemaVersion": 1,
   "scripts": {

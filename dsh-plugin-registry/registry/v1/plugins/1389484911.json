@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./plugin/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
-    "headSha": "bfd31b8417881c8db130bfa744f2248d27f4fc20"
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
+    "headSha": "26dc19f965fffc255736123f97fc1067cc267efe"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "自建 DSH 浏览器服务：单例 CDP 守护 + DSH ctx.browser provider + 兼容 dsh-univer-office 的可执行包装（非 root 服务器环境）",
     "fork": false,
     "forks": 0,
-    "headSha": "bfd31b8417881c8db130bfa744f2248d27f4fc20",
+    "headSha": "26dc19f965fffc255736123f97fc1067cc267efe",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUtHbbw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f7ae9a2eaaea0163b72c3b9715a127089060cc2bb40a9aef08484d6d85217561/lyp88997/dsh-browser-service",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d03b50e2c0df859134c2efa042976091dc25d5dee91f8a04544fc76b36ab60ef/lyp88997/dsh-browser-service",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/72334453?u=ac2f241680232fab4ed653c985fb51ceb5c3ad91&v=4",
       "login": "lyp88997"
     },
-    "pushedAt": "2026-09-29T00:26:57Z",
+    "pushedAt": "2026-09-29T15:35:39Z",
     "slug": "lyp88997/dsh-browser-service",
     "stars": 0,
     "topics": [
@@ -40,32 +40,46 @@
       "dsh-plugin",
       "headless-chromium"
     ],
-    "updatedAt": "2026-09-29T00:24:53Z",
+    "updatedAt": "2026-09-29T15:36:38Z",
     "url": "https://github.com/lyp88997/dsh-browser-service"
   },
   "id": "gh:1389484911",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-browser-service",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-browser-service@0.8.0",
+    "version": "0.8.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.8.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./plugin/lib/index.js",
+      "./browser": "./plugin/shims/browser.js",
+      "./client": "./plugin/client.js",
+      "./cordis.patch.yml": "./plugin/cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./tool-browser": "./plugin/shims/tool-browser.js"
+    },
+    "main": "./plugin/lib/index.js",
+    "name": "dsh-browser-service",
+    "status": "valid",
+    "type": "module",
+    "version": "0.8.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f7ae9a2eaaea0163b72c3b9715a127089060cc2bb40a9aef08484d6d85217561/lyp88997/dsh-browser-service",
+    "coverUrl": "https://opengraph.githubassets.com/d03b50e2c0df859134c2efa042976091dc25d5dee91f8a04544fc76b36ab60ef/lyp88997/dsh-browser-service",
     "description": "自建 DSH 浏览器服务：单例 CDP 守护 + DSH ctx.browser provider + 兼容 dsh-univer-office 的可执行包装（非 root 服务器环境）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 一个能跑在无 root、无 GUI 容器里的浏览器：一个单例 CDP 守护进程 + 完整的 33 个 browser 工具面 + ctx.browser 接缝的 cdp-daemon provider，一个包装完（不再需要 Electron、不再需要先装第三方接缝包）。同一个内核也能以「浏览器可执行文件」的形态给 dsh-univer-office 这类只认 browserExecutablePath 的插件用。"
   },
   "schemaVersion": 1,
   "scripts": {

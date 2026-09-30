@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "5e87b802127ac609eb04cfa4e305882ab06ea3df"
   },
   "github": {
@@ -55,27 +55,43 @@
   },
   "id": "gh:1392619960",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-memvault",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zhang66633/dsh-memvault#5e87b802127ac609eb04cfa4e305882ab06ea3df",
+    "version": "0.9.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./blocks": "./lib/blocks.js",
+      "./client": "./lib/client.js",
+      "./flags": "./lib/flags.js",
+      "./memories": "./lib/memories.js",
+      "./package.json": "./package.json",
+      "./panel": "./lib/panel.js",
+      "./review": "./lib/review.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-memvault",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b6ba5eb2fed73ef971dbb18de64e014b348cda55bfe4498ae3fa3f7913bb50fe/zhang66633/dsh-memvault",
     "description": "DeepSeek Harness 插件：把 MemVault 的核心记忆块注入 system prompt（每步可见、无需工具调用），并把每个完成的回合交给 MemVault 的抽取/向量化管线。Host-only bundle · 零运行时依赖 · 只读直连 SQLite ｜ Inject MemVault core memory into the DSH system prompt and auto-extract finished turns."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Push MemVault's core memory into the DeepSeek Harness system prompt — and let every finished turn flow back. With a memory panel in the GUI · zero runtime dependencies · no bundler · no second server"
   },
   "schemaVersion": 1,
   "scripts": {

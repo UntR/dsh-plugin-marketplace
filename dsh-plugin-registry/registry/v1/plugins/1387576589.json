@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "652f14616e469b697a8615740690ab2c1c28a3a9"
   },
   "github": {
@@ -50,27 +50,40 @@
   },
   "id": "gh:1387576589",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-xiaozhi",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:toddpan/dsh-xiaozhi#652f14616e469b697a8615740690ab2c1c28a3a9",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.6",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-xiaozhi",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6fb42b82aa88008229ec1e257878a70c0e82d094cec4ed97d7386dc50317be13/toddpan/dsh-xiaozhi",
-    "description": "把小智（Xiaozhi）语音助手接入 DSH Web：DSH 作为 MCP 工具提供方，把 35 个 DSH Web 接口封装成 16 个语音友好工具，自带 DSH Web 设置页。 · Connect the Xiaozhi voice assistant to DSH Web as an MCP tool provider: 35 DSH Web endpoints woven into 16 voice-friendly tools, with a DSH Web settings page."
+    "description": "把小智（Xiaozhi.me）语音助手接入 DSH Web：DSH 作为 MCP 工具提供方，把 35 个 DSH Web 接口封装成 16 个语音友好工具，自带 DSH Web 设置页。 · Connect the Xiaozhi voice assistant to DSH Web as an MCP tool provider: 35 DSH Web endpoints woven into 16 voice-friendly tools, with a DSH Web settings page."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Connects the Xiaozhi (小智) voice assistant to DeepSeek Harness (DSH) Web: DSH acts as the MCP tool provider, exposing workspaces, sessions, models, settings and files as tools a voice assistant can call over JSON-RPC 2.0 on a WebSocket."
   },
   "schemaVersion": 1,
   "scripts": {

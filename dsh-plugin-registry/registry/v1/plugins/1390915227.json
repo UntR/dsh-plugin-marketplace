@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "48614bcbd64fe0498337e8bc1473fdcb8f53cb1c"
   },
   "github": {
@@ -47,27 +47,37 @@
   },
   "id": "gh:1390915227",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "viya-memory",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:MengXinSu/dsh-viya-memory#48614bcbd64fe0498337e8bc1473fdcb8f53cb1c",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "viya-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6c908b7a65c1cc50b1989c935829d1e0945a9e0c2fd149a215fd322046a76904/MengXinSu/dsh-viya-memory",
     "description": "本地长期记忆插件 for DeepSeek Harness：卡片以 Markdown 存在你自己的 Obsidian vault 里 · Local long-term memory as plain Markdown cards in your own Obsidian vault"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DSH host 插件：单文件、零构建、零外部依赖（只用 DSH 自带的 @deepseek-ai/schemastery）， 提供七个记忆工具，卡片以 Markdown + YAML frontmatter + [[]] 双链 落盘。"
   },
   "schemaVersion": 1,
   "scripts": {

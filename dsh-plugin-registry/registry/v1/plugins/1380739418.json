@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "d2cca631530e21f21a353c9604e027989db0e7ca"
   },
   "github": {
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@gausszhou/dsh-scavenger",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b3125ed520502cc98113a53ed14e82dd366661f23056351cd6cca964bae8444e/gausszhou/dsh-scavenger",
     "description": "deepseek harness 插件清道夫 🧹🛡️"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "清扫 DeepSeek Harness (DSH) profile：静态分析找出导致报错的插件并清理它们 （plan → apply，自动备份可回滚）。不启动 DSH、不导入插件代码（契约检查在隔离的 worker 线程沙箱里进行）。"
   },
   "schemaVersion": 1,
   "scripts": {

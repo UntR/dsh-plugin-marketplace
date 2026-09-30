@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "f70b4b7a0f1df87f7a3401677af7723e2df40736"
   },
   "github": {
@@ -41,27 +41,43 @@
   },
   "id": "gh:1390001613",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-persona-memory",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hu568/dsh-plugin-persona-memory#f70b4b7a0f1df87f7a3401677af7723e2df40736",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-persona-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/01bb87add0ab9a017d511cf39b452c2b07f30cd50b69f0a3e92bd1b9fa70d373/hu568/dsh-plugin-persona-memory",
     "description": "DSH 插件：角色设定与长期记忆（角色库 persona.yml/SOUL.md/USER.md + FACT.md/MEMORY.md + JOURNAL.jsonl），注册在宿主组合层，对所有 agent 预设生效，附右侧栏管理面板。MIT。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的角色设定 + 长期记忆管理插件。替换掉 0.1.5 之前那套「预设级记忆加载器」 （memory / memory-boot / ptc-memory 三个 agent 预设 + router-standard 内嵌的 memory-loader）——那些只在选中对应预设时才注入，新方案注册在宿主组合里， 对所有 agent 预设的每个会话生效。"
   },
   "schemaVersion": 1,
   "scripts": {

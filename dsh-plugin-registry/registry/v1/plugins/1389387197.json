@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "7615ca616158c3ae32b4be2df29a3ad690763ec6"
   },
   "github": {
@@ -49,33 +49,49 @@
   },
   "id": "gh:1389387197",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@5havv/dsh-weixin",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "@5havv/dsh-weixin@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./bridge": {
+        "default": "./lib/bridge/index.js",
+        "types": "./lib/bridge/index.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "@5havv/dsh-weixin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/46ce5288989415e4537ab9e53dc793e85df8064a734da4a318035ceabff92bd7/5havv/dsh-weixin",
     "description": "WeChat channel plugin for DeepSeek Harness, over Tencent's iLink Bot API"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DeepSeek Harness（DSH）通过个人微信收发的渠道插件。基于腾讯 iLink Bot API，与腾讯官方 openclaw-weixin 及 Hermes 的微信适配器同源同协议。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

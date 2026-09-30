@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "60d0f755691dd52d671abd986332eb6ae285a32d"
   },
   "github": {
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,20 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": null,
+    "name": "dsh-no-phone-home",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7467b2c61c5b30ab2bc55299f8e6b8fa599f78d61166cd1d5e6832f1e35a0be9/mattcarvercom/dsh-no-phone-home",
     "description": "Stop DeepSeek Harness (dsh) from phoning home: a patch-only bundle that disables every telemetry, diagnostics-upload, and feedback-collection row"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Stops DeepSeek Harness (dsh) from phoning home. This is a patch-only bundle: it ships no runtime code, it only disables the shipped plugin rows that send data off your machine for DeepSeek's diagnostics, or that record data so it can be sent later."
   },
   "schemaVersion": 1,
   "scripts": {

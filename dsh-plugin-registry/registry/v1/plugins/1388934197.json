@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
-    "headSha": "163083a1d0eef9d00c47c9f6d381922f6fb8522a"
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
+    "headSha": "6e7c009c8b63b323249a8f0fe32283653f5bc31e"
   },
   "github": {
     "archived": false,
@@ -17,49 +17,61 @@
     "description": "DSH 宿主插件:给模型一个 restart_dsh 工具,重启 dsh 后自动恢复原会话续跑 (DeepSeek Harness)",
     "fork": false,
     "forks": 0,
-    "headSha": "163083a1d0eef9d00c47c9f6d381922f6fb8522a",
+    "headSha": "6e7c009c8b63b323249a8f0fe32283653f5bc31e",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": null,
     "nodeId": "R_kgDOUsl0NQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d30f4b2a6f20e0496331aa641b29c11eb1328494ec92ff3425b2913fd9fb2513/liuyun847/dsh-host-restart",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/dd0e60c64ab4599a90ba487542fd24e7f442dc5ee8985d2324b8099af5618a2f/liuyun847/dsh-host-restart",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/94478373?v=4",
       "login": "liuyun847"
     },
-    "pushedAt": "2026-09-28T22:09:12Z",
+    "pushedAt": "2026-09-30T08:56:20Z",
     "slug": "liuyun847/dsh-host-restart",
     "stars": 0,
     "topics": [
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-28T22:09:17Z",
+    "updatedAt": "2026-09-30T08:56:27Z",
     "url": "https://github.com/liuyun847/dsh-host-restart"
   },
   "id": "gh:1388934197",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-host-restart",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:liuyun847/dsh-host-restart#6e7c009c8b63b323249a8f0fe32283653f5bc31e",
+    "version": "0.5.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-host-restart",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d30f4b2a6f20e0496331aa641b29c11eb1328494ec92ff3425b2913fd9fb2513/liuyun847/dsh-host-restart",
+    "coverUrl": "https://opengraph.githubassets.com/dd0e60c64ab4599a90ba487542fd24e7f442dc5ee8985d2324b8099af5618a2f/liuyun847/dsh-host-restart",
     "description": "DSH 宿主插件:给模型一个 restart_dsh 工具,重启 dsh 后自动恢复原会话续跑 (DeepSeek Harness)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH web 宿主加一个模型可调用的工具 restartdsh：杀掉当前 dsh 后端 → 常驻看门狗拉起新进程 → 新进程自动恢复原会话并注入「已重启」继续对话。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "34bc4698c0f24c0357ca607e9a27e95f3ae5e67c"
   },
   "github": {
@@ -41,27 +41,49 @@
   },
   "id": "gh:1388231124",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-alphasolve",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dxww123/dsh-alphasolve#34bc4698c0f24c0357ca607e9a27e95f3ae5e67c",
+    "version": "0.3.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./python": {
+        "default": "./lib/python.js",
+        "types": "./lib/types/python-runtime.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-alphasolve",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/90c01e31695707ed1fb67bd0a3e80a63f20c7e61071e93f0e98a66c879b1e326/dxww123/dsh-alphasolve",
     "description": "Session-scoped AlphaSolve workflow for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "中文"
   },
   "schemaVersion": 1,
   "scripts": {

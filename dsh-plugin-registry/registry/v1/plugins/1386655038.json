@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "716cc4a6c83adede0ad170e54202bb9c9be372fa"
   },
   "github": {
@@ -44,27 +44,44 @@
   },
   "id": "gh:1386655038",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "@refkit/dsh-plugin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:refkitjs/dsh-plugin#716cc4a6c83adede0ad170e54202bb9c9be372fa",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@refkit/dsh-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2433b535c8d76a815d276526c406d4ecdef96b4c2207cef584f1347431acf06b/refkitjs/dsh-plugin",
     "description": "DeepSeek Harness (dsh) plugin for refkit: license-normalized creative reference search across 23 sources, a strict-deny use-gate, and a web card with license and use-verdict badges"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Eleven sources work with no key at all (Openverse, Met, Art Institute of Chicago, Wikimedia Commons, Rijksmuseum, Internet Archive, Project Gutenberg, PoetryDB, Poly Haven, ambientCG, nailbook). Add free keys for the rest under Settings → Plugins → refkit."
   },
   "schemaVersion": 1,
   "scripts": {

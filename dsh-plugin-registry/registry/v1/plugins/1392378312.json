@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
-    "headSha": "3916ca310f2ae5bc384b73c22139dc4e765913c5"
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
+    "headSha": "351d9e7f8b977c77325fcbec994bdb7e31cc01a0"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,20 @@
     "description": "DeepSeek Harness project-board plugin —— 适配 DeepSeek Harness 的项目看板插件：agent 写的 .canvas.tsx 看板实时编译渲染到右栏，面板决定可回流给 agent。",
     "fork": false,
     "forks": 0,
-    "headSha": "3916ca310f2ae5bc384b73c22139dc4e765913c5",
+    "headSha": "351d9e7f8b977c77325fcbec994bdb7e31cc01a0",
     "homepageUrl": null,
     "language": "JavaScript",
-    "license": null,
+    "license": {
+      "name": "MIT License",
+      "spdxId": "MIT"
+    },
     "nodeId": "R_kgDOUv4ByA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/32eba9329ce51e9605fc7d3911c4563a3ad7062b93d1f50773a5b6496a023881/demxyuanli/dsh-canvas",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c258975d975980c51168b7a82f9d6fa65c3ea9786c528af6d55b5df0ea139b4b/demxyuanli/dsh-canvas",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/3982880?v=4",
       "login": "demxyuanli"
     },
-    "pushedAt": "2026-09-29T09:05:37Z",
+    "pushedAt": "2026-09-29T14:56:55Z",
     "slug": "demxyuanli/dsh-canvas",
     "stars": 1,
     "topics": [
@@ -42,32 +45,45 @@
       "project-board",
       "tsx"
     ],
-    "updatedAt": "2026-09-29T09:05:41Z",
+    "updatedAt": "2026-09-29T14:57:05Z",
     "url": "https://github.com/demxyuanli/dsh-canvas"
   },
   "id": "gh:1392378312",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@demxyuanli/dsh-canvas",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:demxyuanli/dsh-canvas#351d9e7f8b977c77325fcbec994bdb7e31cc01a0",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "@demxyuanli/dsh-canvas",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/32eba9329ce51e9605fc7d3911c4563a3ad7062b93d1f50773a5b6496a023881/demxyuanli/dsh-canvas",
+    "coverUrl": "https://opengraph.githubassets.com/c258975d975980c51168b7a82f9d6fa65c3ea9786c528af6d55b5df0ea139b4b/demxyuanli/dsh-canvas",
     "description": "DeepSeek Harness project-board plugin —— 适配 DeepSeek Harness 的项目看板插件：agent 写的 .canvas.tsx 看板实时编译渲染到右栏，面板决定可回流给 agent。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "插件市场的实际形态就是 npm 注册表：在 Harness 侧栏的「插件」面板里粘贴下面这个 spec 即可 —— host 会先 pnpm view 读出它指向什么，再装进当前 profile："
   },
   "schemaVersion": 1,
   "scripts": {

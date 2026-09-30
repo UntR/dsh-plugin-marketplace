@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "0f83b21707e0dfc78e39369fb313788ec06965c3"
   },
   "github": {
@@ -41,33 +41,50 @@
   },
   "id": "gh:1387084990",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@dsh-external/dsh-feyagate-gateway",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:toddpan/dsh-feyagate#0f83b21707e0dfc78e39369fb313788ec06965c3",
+    "version": "0.3.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-feyagate-gateway",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a718c244b73685393c5a740379f829950af65f6b0d853f1144414558b0c1f33c/toddpan/dsh-feyagate",
-    "description": "dsh smart home gateway ,"
+    "description": "feyagate dsh plugin"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "npm 包名 @dsh-external/dsh-feyagate-gateway · 版本 0.3.1"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

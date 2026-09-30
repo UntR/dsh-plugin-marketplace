@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "7fb567ce817e25859b43e098f1e6cfbe4ec9e868"
   },
   "github": {
@@ -47,27 +47,37 @@
   },
   "id": "gh:1389059916",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-preset-gpt-6-astra",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Zioove/gpt-6-astra-dsh-preset#7fb567ce817e25859b43e098f1e6cfbe4ec9e868",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-preset-gpt-6-astra",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/775274016356cb33974af6b9c3cbbb46da4b05fec47b6d4a66b34d00fb8ddba0/Zioove/gpt-6-astra-dsh-preset",
     "description": "DeepSeek Harness (dsh) agent preset + bundle plugin: the GPT-6 / Codex Astra persona on dsh standard toolset, with a preset-local reference skill and a slim spawned-subagent persona"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 GPT-6 / Codex「Astra」提示词作为人格层，接到 DeepSeek Harness (dsh) 的 agent 预设上。装好后在 dsh 里选「GPT-6 Astra」即可得到一个带完整编码工具链、但身份 / 语气 / 判断准则 / 自主性按 Astra 原文运行的 agent。"
   },
   "schemaVersion": 1,
   "scripts": {

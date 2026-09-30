@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "7119ad1d25f1a045b5671422669e29bca7c91580"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1391569432",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-wait-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dn4hjtcr9s-del/dsh-wait-guard#7119ad1d25f1a045b5671422669e29bca7c91580",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-wait-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bf10c4797c07f3b96caf851a607b2acdda26ea53e437acd6c46bbfd878acadb2/dn4hjtcr9s-del/dsh-wait-guard",
     "description": "Keep an Agent's turn open until every descendant subagent settles — a pure Host-plane completion gate for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "主 Agent 的出口闸门：只要还有后代子代理处于 running，它的 turn 就不允许结束。"
   },
   "schemaVersion": 1,
   "scripts": {

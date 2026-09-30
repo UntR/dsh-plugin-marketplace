@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
-    "headSha": "ea27c7f1784160930edfdba5094e5951fa912691"
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
+    "headSha": "f5606d9c43785811db60e3ab7fa760998b376897"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Jev-guided dispatch advice for DeepSeek Harness: before each turn, Jev judges whether to delegate and to which registered agent. Advice only — jev-optional, fail-open, keychain-first.",
     "fork": false,
     "forks": 0,
-    "headSha": "ea27c7f1784160930edfdba5094e5951fa912691",
+    "headSha": "f5606d9c43785811db60e3ab7fa760998b376897",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUvLsSg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/ad89a20e4eff4592d74384ac2e331334728a9550bb2d2e8f9c9f718e8d2b24d3/fan56/dsh-agent-dispatch",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e47e563417b6db1cfaafe896c61501672c36d5669fe50d4120e49bbca396deb8/fan56/dsh-agent-dispatch",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/141002846?v=4",
       "login": "fan56"
     },
-    "pushedAt": "2026-09-28T09:13:32Z",
+    "pushedAt": "2026-09-29T12:34:21Z",
     "slug": "fan56/dsh-agent-dispatch",
     "stars": 0,
     "topics": [
@@ -40,32 +40,38 @@
       "subagent",
       "typesafe"
     ],
-    "updatedAt": "2026-09-28T09:13:12Z",
+    "updatedAt": "2026-09-29T12:34:23Z",
     "url": "https://github.com/fan56/dsh-agent-dispatch"
   },
   "id": "gh:1391651914",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@aiwayds/dsh-agent-dispatch",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@aiwayds/dsh-agent-dispatch@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "main": "lib/index.js",
+    "name": "@aiwayds/dsh-agent-dispatch",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/ad89a20e4eff4592d74384ac2e331334728a9550bb2d2e8f9c9f718e8d2b24d3/fan56/dsh-agent-dispatch",
+    "coverUrl": "https://opengraph.githubassets.com/e47e563417b6db1cfaafe896c61501672c36d5669fe50d4120e49bbca396deb8/fan56/dsh-agent-dispatch",
     "description": "Jev-guided dispatch advice for DeepSeek Harness: before each turn, Jev judges whether to delegate and to which registered agent. Advice only — jev-optional, fail-open, keychain-first."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh 生态的事前派发建议插件（ex-ante dispatch）：在一个 turn 进入模型之前，问 TypeSafe Jev（System One）一次——该不该派、派给哪个已注册 agent——判定过阈值就在该 turn 的消息末尾追加一条四行的建议消息。插件不拥有任何委派机制：useagent（dsh-subagent-registry）负责真正 spawning，本插件只给建议，且明说可以无视。"
   },
   "schemaVersion": 1,
   "scripts": {

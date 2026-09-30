@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "829753b97720329368cc690d9231e25842cda9ac"
   },
   "github": {
@@ -41,27 +41,42 @@
   },
   "id": "gh:1387274096",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-github-accel",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:qcsjjjjj/dsh-github-accel#829753b97720329368cc690d9231e25842cda9ac",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./server/accel.js": "./server/accel.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-github-accel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ccb17a4aa371485b6398760e4a155d453f2e89c28a562636fd215e116c51547c/qcsjjjjj/dsh-github-accel",
     "description": "GitHub accelerator for DSH: hosts takeover + per-domain loopback SNI passthrough (no TLS MITM, no certificate install), a local CONNECT proxy and a PAC fallback."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH（DeepSeek Harness） 用的 GitHub 加速插件。 不做 TLS 中间人、不装证书、不改系统代理，浏览器 / git / npm / ghcr.io 一次全通。 开关在会话顶部栏偏右的位置（席位 conversation.session.header.utilities， 标题之后、角落按钮之前）。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "9d86e54b0f5236dda137d5c4637af4ddd9f15a88"
   },
   "github": {
@@ -40,27 +40,38 @@
   },
   "id": "gh:1390777433",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@weibaohui/dsh-dashboard",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@weibaohui/dsh-dashboard@0.1.6",
+    "version": "0.1.6"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.6",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./client/bundle.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "@weibaohui/dsh-dashboard",
+    "status": "valid",
+    "type": null,
+    "version": "0.1.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d811f0ee4aefa0c696ab6185ab5445ef5dd04b25063552cfa1fca461472dba71/weibaohui/dsh-dashboard",
     "description": "dsh 插件 · 使用量仪表盘：离线扫描会话日志的统计分析与可编排 Dashboard（gridstack + ECharts）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "使用量仪表盘：离线扫描本机全部 dsh 会话日志，把每天/每周/每月的 token 用量、估算费用、模型/工具/技能/命令榜、输出速度、工作时段与质量错误做成可编排的 Dashboard——gridstack 拖拽卡片 + ECharts 图表 + GitHub 同款日历热力图，支持自定义公式、AI 编排整页配置，不监听任何运行时事件、全部统计在本地完成。"
   },
   "schemaVersion": 1,
   "scripts": {

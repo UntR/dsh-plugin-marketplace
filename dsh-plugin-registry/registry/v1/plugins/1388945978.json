@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "b6e4312dcc9d17b6f6f2487c5948241cfb6815fa"
   },
   "github": {
@@ -51,7 +51,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,14 +61,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/tools.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-plugin-system-one",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8ccb7e27314e90bf59c0ded2b3633c848d2a3bc1b12772f0712d045edd37bba8/ZhengSJCode/jev-dsh",
     "description": "System One (TypeSafe Jev) decision tool for DeepSeek Harness — bounded choice / noul / score judgments as an agent tool + skill."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 一个 systemone 工具 + 一个技能：agent 可以对已有上下文做校准过的有界决策 （choice / noul / score），而不是把 Jev 当聊天模型塞进模型选择器。"
   },
   "schemaVersion": 1,
   "scripts": {

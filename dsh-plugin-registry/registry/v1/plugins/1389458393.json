@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "b1a6d01db800f469e68181fc1baf054d555fa298"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1389458393",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@gw/dsh-text-inject",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:1497105876/dsh-text-inject#b1a6d01db800f469e68181fc1baf054d555fa298",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@gw/dsh-text-inject",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/26c7ef0e2a22c10e4fd6061b10e8014b097c3f03935b2d47373f0e706dd0fc61/1497105876/dsh-text-inject",
     "description": "dsh 插件：在官方设置页把文字注入系统提示词 / 会话上下文，独立文件存储，热加载 + 历史备份 · Inject text into the DSH system prompt or session context from a Settings page"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 dsh（DeepSeek Harness）官方设置页左侧栏添加一个「文字注入」分区：把文字注入到 系统提示词（每轮生效）或会话上下文；内容存于独立文件，支持热加载与历史备份。"
   },
   "schemaVersion": 1,
   "scripts": {

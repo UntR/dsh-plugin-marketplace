@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "b8dbc04d473e5db9432c1f922b6ee2be80f876de"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUwx9Qw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b3c256bb44a4b76cd8190c6c4953585ac7c672911ad7b5577ccbf18608c80eca/wqx11235/dsh-upgrade-guard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ff14f67181a502877e7a4789b98e36083f03416d34fac61efd5323a9d3110837/wqx11235/dsh-upgrade-guard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/213742488?u=ed902cb688afc555d0bdffed97afa0a9c0477838&v=4",
       "login": "wqx11235"
     },
     "pushedAt": "2026-09-28T16:53:09Z",
     "slug": "wqx11235/dsh-upgrade-guard",
-    "stars": 1,
+    "stars": 2,
     "topics": [
       "compatibility",
       "deepseek-harness",
@@ -42,7 +42,7 @@
       "smoke-test",
       "upgrade"
     ],
-    "updatedAt": "2026-09-28T16:55:15Z",
+    "updatedAt": "2026-09-29T15:58:03Z",
     "url": "https://github.com/wqx11235/dsh-upgrade-guard"
   },
   "id": "gh:1393327427",
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./lib/guard.mjs": "./lib/guard.mjs",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-upgrade-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b3c256bb44a4b76cd8190c6c4953585ac7c672911ad7b5577ccbf18608c80eca/wqx11235/dsh-upgrade-guard",
+    "coverUrl": "https://opengraph.githubassets.com/ff14f67181a502877e7a4789b98e36083f03416d34fac61efd5323a9d3110837/wqx11235/dsh-upgrade-guard",
     "description": "DSH 升级守卫：升级前兼容盘点 / 升级后契约扫描 / 启动冒烟（DeepSeek Harness 插件）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（dsh） 的插件生态很活跃，但宿主每次升级都可能改契约，跟在后面的插件就容易崩。真实案例（同一个坑反复出现）："
   },
   "schemaVersion": 1,
   "scripts": {

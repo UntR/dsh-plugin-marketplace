@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "febaddda1e3638ff724a6b58fe85547f7c75e4cc"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1392435972",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-new-workdir",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:miqian-nomad/dsh-new-workdir#febaddda1e3638ff724a6b58fe85547f7c75e4cc",
+    "version": "0.4.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./src/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-new-workdir",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c541ef25056fa51a19bbd4b694f35d588acd3299845795ad3d50a5790d84e7bf/miqian-nomad/dsh-new-workdir",
     "description": "一键领一个独立工作目录并开干净会话：目录即沙盒边界，产物不再互相污染。One click: a fresh timestamped workdir as a DSH workspace with a clean session. 零官方文件改动。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一键「领一个独立工作目录 + 开一个干净会话」的 DSH 插件。目录即沙盒边界： 每个任务一个目录，产物不再互相污染；工作区标题就是时间戳，侧栏一眼能认出。"
   },
   "schemaVersion": 1,
   "scripts": {

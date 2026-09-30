@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "c6c700fbc6a0b4ed56b962af67606f96d35fa18a"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1387770610",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-side-branch",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-side-branch@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-side-branch",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1833675a103447b61a60d472597e266794325f0bee6aaa91b715c325a3984de7/wucl12/dsh-side-branch",
-    "description": ""
+    "description": "Select text in the main session, and a read-only branch session will pop up in the right sidebar. It inherits the existing context of the main session, streams its answers token-by-token, and its responses never pollute the model context of the main session."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Select text in the main session, and a read-only branch session will pop up in the right sidebar. It inherits the existing context of the main session, streams its answers token-by-token, and its responses never pollute the model context of the main session."
   },
   "schemaVersion": 1,
   "scripts": {

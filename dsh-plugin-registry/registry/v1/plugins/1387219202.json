@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "2f953e22a2347049fa128cbc5ff9c23bceb2dc5c"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1387219202",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@camusugar/dsh-notify",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Camusugar/dsh-notify#2f953e22a2347049fa128cbc5ff9c23bceb2dc5c",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@camusugar/dsh-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a71aa49c614fb36a31fd37bdbec6da94897e1d6d94f3b661f702a2d40c779dbb/Camusugar/dsh-notify",
-    "description": ""
+    "description": "DSH 用户级插件：当会话卡在等人操作时（权限批准 / askuserquestion 提问 / plan 模式方案确认），且应用窗口不在前台（最小化、切到别的窗口、失焦），弹一条 操作系统级系统通知（Windows toast / macOS 通知中心）。用户回到应用窗口，或回答完 对应请求后，通知自动消失。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 用户级插件：当会话卡在等人操作时（权限批准 / askuserquestion 提问 / plan 模式方案确认），且应用窗口不在前台（最小化、切到别的窗口、失焦），弹一条 操作系统级系统通知（Windows toast / macOS 通知中心）。用户回到应用窗口，或回答完 对应请求后，通知自动消失。"
   },
   "schemaVersion": 1,
   "scripts": {

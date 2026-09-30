@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "18ac3b44976bd9ccc8cdd7ae74dda94daf0c39ff"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,40 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/typert.host.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "@h2mzzz/dsh-openai-subscription",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/26928b23ce5a8d3ea0dc819b7b7fc25ccc373ddca80f1f86c6e4ed128bbee090/HuaiminHuang/dsh-subscription-plugin",
     "description": "Experimental DeepSeek Harness (DSH) plugin for ChatGPT/Codex subscription sign-in and model routing. v0.0.2 preview; real login unverified."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "--- description: \"独立的 DSH ChatGPT/Codex 订阅登录与模型接入 Bundle。\" kind: \"package-bundle\" ---"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-09-30T10:17:12.871Z",
+    "enrichmentStatus": "ok",
     "headSha": "a2499112428b31f3cd047531760aa3edc2f9cd67"
   },
   "github": {
@@ -49,27 +49,39 @@
   },
   "id": "gh:1392041989",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "GitPanel",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:relaxyabc/dsh-GitPanel#a2499112428b31f3cd047531760aa3edc2f9cd67",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./src/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "GitPanel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/042f77b6d5235c2ceaae1c955abadabd9ab22c9bc2bf3cb9008a82cf38b02094/relaxyabc/dsh-GitPanel",
     "description": "一个类似 intellij-idea 中 Git 插件UI 的 dsh git 插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Web 客户端的 Git 管理插件 —— 在左侧面板栏打开一个全页三栏 Git 工具(分支 / 历史 / 提交详情),右侧边栏的 Git 胶囊只负责把面板打开。类似 IntelliJ 的 Git 工具窗口,以 DSH 插件 bundle 形式挂载。"
   },
   "schemaVersion": 1,
   "scripts": {
