@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-30T10:17:12.871Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-01T10:42:45.296Z",
+    "enrichmentStatus": "ok",
     "headSha": "5e7c6030a6952dc6fbb65e1caa909d882d79725f"
   },
   "github": {
@@ -50,24 +50,41 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.4",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./optimizer": {
+        "default": "./lib/optimizer.js",
+        "types": "./lib/optimizer.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@mimichunterz/agent-compact",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/063a9db49c17ba62427bbcff4b14b09f1aa3620115d9cce816280902ff79391a/windwhiterain/dsh-agent-compact",
     "description": "DSH plugin for agent-driven span compaction: compress chosen conversation spans into self-written checkpoints instead of the official head-anchored full-context sweep."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English · 简体中文"
   },
   "schemaVersion": 1,
   "scripts": {

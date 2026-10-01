@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-30T10:17:12.871Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-01T10:42:45.296Z",
+    "enrichmentStatus": "ok",
     "headSha": "023a420e769a08d2a5776bf4c77679907fab1846"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./protocol": "./lib/protocol.js"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-png-pet",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c718f47d521c4ab5531d82f2a72ad5f25c263c77d7fa49fc35e40b03f45e6e2b/comfylies/dsh-png-pet",
     "description": "A Windows desktop pet companion for DeepSeek Harness (DSH PNG pet)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Windows-only DeepSeek Harness（DSH）桌宠插件。DSH 负责会话和模型；此插件只启动本地 WPF 桌宠 Helper，并通过 stdin/stdout JSON Lines 通信。"
   },
   "schemaVersion": 1,
   "scripts": {

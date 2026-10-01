@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-30T10:17:12.871Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-01T10:42:45.296Z",
+    "enrichmentStatus": "ok",
     "headSha": "e483dd545f5d90e7811a332fee9e98067ff9d2f7"
   },
   "github": {
@@ -50,27 +50,39 @@
   },
   "id": "gh:1375379953",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-lark-session-monitor-plugin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lifeopsgo/dsh-lark-session-monitor-plugin#e483dd545f5d90e7811a332fee9e98067ff9d2f7",
+    "version": "2.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-lark-session-monitor-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "2.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/273d817c62c9ec02063072ddbe3b8242d4ed2dcf382acde30a9264bfa9ba5d88/lifeopsgo/dsh-lark-session-monitor-plugin",
     "description": "飞书会话监听并投递到指定工作区的会话中"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Watch Feishu (Lark) conversations as yourself, and forward new messages into a DeepSeek Harness session."
   },
   "schemaVersion": 1,
   "scripts": {

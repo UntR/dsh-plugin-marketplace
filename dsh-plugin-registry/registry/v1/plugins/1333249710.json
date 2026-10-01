@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-29T10:24:30.835Z",
+    "enrichedAt": "2026-10-01T10:42:45.296Z",
     "enrichmentStatus": "ok",
-    "headSha": "3bbb2534bd1d9ab4dcd46faf0ef4f0182797dfbd"
+    "headSha": "590238351b7a1c8cdf3ec9090dcdbb8672e8ba9c"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-13T15:12:45Z",
     "databaseId": 1333249710,
     "defaultBranch": "main",
-    "description": "Git workflow plugin for DeepSeek Harness: slash commands and read-only git tools",
+    "description": "Git workflow plugin for DeepSeek Harness (DSH): slash commands, read-only tools, pre-commit checks and stash snapshots.",
     "fork": false,
     "forks": 0,
-    "headSha": "3bbb2534bd1d9ab4dcd46faf0ef4f0182797dfbd",
+    "headSha": "590238351b7a1c8cdf3ec9090dcdbb8672e8ba9c",
     "homepageUrl": "https://www.npmjs.com/package/dsh-git-plugin",
     "language": "JavaScript",
     "license": {
@@ -25,55 +25,62 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT3fGrg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/2b45e0b0326c8cb743f790a68709aadf57b0f925232e4f018b1c565f96f33812/MashedPotato817/dsh-git-plugin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d28a981dc8607239ddac86a336f1c2949a38863722e282143c44179242aa48e6/MashedPotato817/dsh-git-plugin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/192052181?v=4",
       "login": "MashedPotato817"
     },
-    "pushedAt": "2026-08-13T16:35:33Z",
+    "pushedAt": "2026-10-01T07:43:17Z",
     "slug": "MashedPotato817/dsh-git-plugin",
     "stars": 1,
     "topics": [
+      "deepseek",
       "deepseek-harness",
+      "dsh",
       "dsh-plugin",
-      "git"
+      "git",
+      "git-plugin"
     ],
-    "updatedAt": "2026-09-12T00:39:41Z",
+    "updatedAt": "2026-10-01T07:43:22Z",
     "url": "https://github.com/MashedPotato817/dsh-git-plugin"
   },
   "id": "gh:1333249710",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-git-plugin",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-git-plugin@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
   "package": {
     "exports": {
-      ".": "./lib/index.js",
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
       "./package.json": "./package.json"
     },
     "main": "lib/index.js",
     "name": "dsh-git-plugin",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.2.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/2b45e0b0326c8cb743f790a68709aadf57b0f925232e4f018b1c565f96f33812/MashedPotato817/dsh-git-plugin",
-    "description": "Git workflow plugin for DeepSeek Harness: slash commands and read-only git tools"
+    "coverUrl": "https://opengraph.githubassets.com/d28a981dc8607239ddac86a336f1c2949a38863722e282143c44179242aa48e6/MashedPotato817/dsh-git-plugin",
+    "description": "Git workflow plugin for DeepSeek Harness (DSH): slash commands, read-only tools, pre-commit checks and stash snapshots."
   },
   "readme": {
     "available": true,
-    "excerpt": "给 DeepSeek Harness（DSH）的 Git 工作流插件：补齐 DSH 相比 Claude Code / Codex 缺失的「程序员手感」——diff 感知、自动分支、规范提交、可恢复撤销。全部通过 ctx.subprocess seam 以纯 argv 调用 git，不经过 shell 层，每次运行都受字节与超时上限约束。"
+    "excerpt": "查看改动、创建分支、提交前检查、保存可恢复快照。5 个斜杠命令 + 4 个模型只读工具，让你和模型看到同一份仓库状态。"
   },
   "schemaVersion": 1,
   "scripts": {

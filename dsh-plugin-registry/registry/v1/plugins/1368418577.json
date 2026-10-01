@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-09-30T10:17:12.871Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-01T10:42:45.296Z",
+    "enrichmentStatus": "ok",
     "headSha": "0a0a5f2f46fc5fa0153a86878ca32606df725b3e"
   },
   "github": {
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,14 +51,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-live-diff",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c1277a6d2a5b94aeb327195b513a1151d4fdec1add8f14668775cc54c84b72bf/phoenixyun/dsh-plugin-live-diff",
     "description": "Live streaming diffs for DSH file edits: a diff that grows while the model is still emitting the edit arguments."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Live streaming diffs for DSH file edits — a diff that grows while the model is still emitting the call, instead of appearing all at once when the tool call settles."
   },
   "schemaVersion": 1,
   "scripts": {

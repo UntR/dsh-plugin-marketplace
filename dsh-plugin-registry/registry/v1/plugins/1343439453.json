@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-30T10:17:12.871Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-01T10:42:45.296Z",
+    "enrichmentStatus": "ok",
     "headSha": "00069a52a1e28148ee721e7e2e9d0ffd87b51f2c"
   },
   "github": {
@@ -47,27 +47,44 @@
   },
   "id": "gh:1343439453",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-deepseek-balance",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:OwlNjust/DSH-DeepSeek-Balance#00069a52a1e28148ee721e7e2e9d0ffd87b51f2c",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-deepseek-balance",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5c6849767d02ad555551d57842da918a21b67fef144ce4b653fdacbf5c215167/OwlNjust/DSH-DeepSeek-Balance",
     "description": "DeepSeek balance & usage monitor plugin for DeepSeek Harness (dsh web) — floating widget with peak/off-peak price reminder (梁文峰/梁文谷)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Topics: dsh-plugin · deepseek-harness · deepseek"
   },
   "schemaVersion": 1,
   "scripts": {

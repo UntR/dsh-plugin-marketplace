@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-09-30T10:17:12.871Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-01T10:42:45.296Z",
+    "enrichmentStatus": "ok",
     "headSha": "ae6602d012c9109d88efd788ca85b7368f9b61b9"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1373813461",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-turn-delete",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:TiJun-Prime/dsh-turn-delete#ae6602d012c9109d88efd788ca85b7368f9b61b9",
+    "version": "0.2.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-turn-delete",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/577f43be0751184313170910f9f713ccd3c168555128404fc501b4a8403b0c26/TiJun-Prime/dsh-turn-delete",
     "description": "Delete one finished turn from a DSH session without deleting the session. A trash button removes that turn's question, reply and tool records from the conversation and the model context, while the session, later turns and the append-only log stay. Independent continuation of hans"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "从 DeepSeek Harness 的对话中删除一个完整且已结束的 Turn（轮次），不删除也不替换整个 Session：该轮的提问、助手回复与工具记录会从后续模型上下文中移除，而 Session id、标题、工作区关联、之后的轮次以及原始 append-only 事件日志全部保留。每个已完成的顶层轮次，其最后一条助手回复旁会出现一个垃圾桶按钮。"
   },
   "schemaVersion": 1,
   "scripts": {
