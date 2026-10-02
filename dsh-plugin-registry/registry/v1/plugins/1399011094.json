@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
-    "headSha": "6fc1cf4b030cdea623629610e4df84d039d4e38c"
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
+    "headSha": "b117ab1d830ed3db809dd0f0d5ed60cdbb350826"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh plugin: compiles a rough need into a versioned task book, then hands it to any AI window losslessly via a read-back handshake (/forge /relay /ack /answer /forge-list)",
     "fork": false,
     "forks": 0,
-    "headSha": "6fc1cf4b030cdea623629610e4df84d039d4e38c",
+    "headSha": "b117ab1d830ed3db809dd0f0d5ed60cdbb350826",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU2M3Fg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/deef031696d9f484383d03c7fe1fb86788777a3b9c7e77f018d1f3d7d3f81433/121212165/dsh-plugin-task-forge",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/6c87e7f66323fc9cd337118d00a1a26a0c37c05d63308c529240685b4acd345c/121212165/dsh-plugin-task-forge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/185351029?v=4",
       "login": "121212165"
     },
-    "pushedAt": "2026-10-01T09:33:08Z",
+    "pushedAt": "2026-10-02T01:52:58Z",
     "slug": "121212165/dsh-plugin-task-forge",
     "stars": 0,
     "topics": [
@@ -42,38 +42,53 @@
       "prompt-engineering",
       "spec"
     ],
-    "updatedAt": "2026-10-01T09:33:12Z",
+    "updatedAt": "2026-10-02T01:53:02Z",
     "url": "https://github.com/121212165/dsh-plugin-task-forge"
   },
   "id": "gh:1399011094",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-task-forge",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:121212165/dsh-plugin-task-forge#b117ab1d830ed3db809dd0f0d5ed60cdbb350826",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./icon.svg": "./icon.svg",
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-task-forge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/deef031696d9f484383d03c7fe1fb86788777a3b9c7e77f018d1f3d7d3f81433/121212165/dsh-plugin-task-forge",
+    "coverUrl": "https://opengraph.githubassets.com/6c87e7f66323fc9cd337118d00a1a26a0c37c05d63308c529240685b4acd345c/121212165/dsh-plugin-task-forge",
     "description": "dsh plugin: compiles a rough need into a versioned task book, then hands it to any AI window losslessly via a read-back handshake (/forge /relay /ack /answer /forge-list)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "EN · Compiles a rough need into a versioned task book, then hands it to any other AI window through a read-back handshake: /forge compiles, /relay emits, /ack proves the receiver got it byte-for-byte, /answer returns — aimed at the lossy copy-paste handoff between agents. · 26 no"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

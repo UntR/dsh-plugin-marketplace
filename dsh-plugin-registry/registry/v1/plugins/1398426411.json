@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "1cae4cb15c51b77ad4e94d32e7887e014b03b0e0"
   },
   "github": {
@@ -41,27 +41,44 @@
   },
   "id": "gh:1398426411",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@huanlin/dsh-plugin-sidebar-terminal-tools",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:HuanLinOTO/dsh-plugin-sidebar-terminal-tools#1cae4cb15c51b77ad4e94d32e7887e014b03b0e0",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@huanlin/dsh-plugin-sidebar-terminal-tools",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/39f5b3e784085c2901fbd84b4d4f67bd6f0f7860ba8d7511ee50b85b37dd8fa3/HuanLinOTO/dsh-plugin-sidebar-terminal-tools",
     "description": "DSH plugin: model-driven official sidebar terminals — six sidebar_terminal_* tools over ctx.terminalController; terminals auto-appear as native sidebar tabs, the user can take over anytime. / DSH 插件：模型驱动官方侧栏终端，自动出现原生终端 tab，用户可随时接管。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH plugin that gives the model six sidebarterminal tools over the official right-sidebar terminal stack (ctx.terminalController), which upstream exposes with no model-facing entry point. Terminals the model opens appear in the user's sidebar automatically as native terminal tabs"
   },
   "schemaVersion": 1,
   "scripts": {

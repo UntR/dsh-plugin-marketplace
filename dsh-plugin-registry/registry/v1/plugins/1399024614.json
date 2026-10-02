@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "06d786482183f1d89c11c20358c477f42b3fdb91"
   },
   "github": {
@@ -47,27 +47,40 @@
   },
   "id": "gh:1399024614",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-publisher",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Gty2408/dsh-plugin-publisher#06d786482183f1d89c11c20358c477f42b3fdb91",
+    "version": "2.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-publisher",
+    "status": "valid",
+    "type": "module",
+    "version": "2.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a432ee972d5f488309426c15599003a6520110b6003b6f836dc0af25d2d4fff6/Gty2408/dsh-plugin-publisher",
     "description": "Publish a DSH plugin to GitHub and submit it to the plugin marketplace from a settings page. Validates the manifest against the listing requirements, creates the repository, uploads the tree, and opens the listing pull request."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把插件一键上传到 GitHub —— 给 DSH 用的工具，没有界面。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
-    "headSha": "3481f092daff5da81c4ea8696039c3f0f3dc2a41"
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
+    "headSha": "da42a1c6ff14373a5a621a9b39945aede21ceeb6"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-28T05:33:51Z",
     "databaseId": 1391898223,
     "defaultBranch": "main",
-    "description": "Telegram / WeChat bridge plugin for DeepSeek Harness (DSH): bind your bot to a DSH workspace in one command, with handoff continuity between sessions.",
+    "description": "通过 TG/微信实现离家办公：发布任务、语音聊天、切换模型、升级重启、自动记忆...Telegram / WeChat bridge plugin for DeepSeek Harness (DSH): bind your bot to a DSH workspace in one command, with handoff continuity between sessions.",
     "fork": false,
     "forks": 0,
-    "headSha": "3481f092daff5da81c4ea8696039c3f0f3dc2a41",
+    "headSha": "da42a1c6ff14373a5a621a9b39945aede21ceeb6",
     "homepageUrl": "https://github.com/aitcmhk-web/DSH-bot",
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUvaubw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/c22d3c56f852afb2e653e788584705b2f6e473b56179b5643f6bdd51ddea6741/aitcmhk-web/DSH-bot",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/6f12106c6ec46e69f50c48ac30a1c91aa6acd56aaedc8ebffd60f2d454ef9268/aitcmhk-web/DSH-bot",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/240978320?u=caae5f1bd3d93d50220404800fa2774285c6c09b&v=4",
       "login": "aitcmhk-web"
     },
-    "pushedAt": "2026-10-01T10:04:14Z",
+    "pushedAt": "2026-10-02T08:43:34Z",
     "slug": "aitcmhk-web/DSH-bot",
     "stars": 1,
     "topics": [
@@ -43,32 +43,43 @@
       "wechat",
       "wechat-bot"
     ],
-    "updatedAt": "2026-10-01T10:04:17Z",
+    "updatedAt": "2026-10-02T08:43:36Z",
     "url": "https://github.com/aitcmhk-web/DSH-bot"
   },
   "id": "gh:1391898223",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-botplugin",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-botplugin@1.0.8",
+    "version": "1.0.8"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.8",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-botplugin",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.8"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/c22d3c56f852afb2e653e788584705b2f6e473b56179b5643f6bdd51ddea6741/aitcmhk-web/DSH-bot",
-    "description": "Telegram / WeChat bridge plugin for DeepSeek Harness (DSH): bind your bot to a DSH workspace in one command, with handoff continuity between sessions."
+    "coverUrl": "https://opengraph.githubassets.com/6f12106c6ec46e69f50c48ac30a1c91aa6acd56aaedc8ebffd60f2d454ef9268/aitcmhk-web/DSH-bot",
+    "description": "通过 TG/微信实现离家办公：发布任务、语音聊天、切换模型、升级重启、自动记忆...Telegram / WeChat bridge plugin for DeepSeek Harness (DSH): bind your bot to a DSH workspace in one command, with handoff continuity between sessions."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 Telegram / 微信变成 DSH 的聊天入口的插件。三大功能：Telegram 入口、微信入口、handoff 记忆接续，外加语音转文字。"
   },
   "schemaVersion": 1,
   "scripts": {

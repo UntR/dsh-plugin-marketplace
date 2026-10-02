@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "stale",
-    "headSha": "23e42ec42521277b6737272129b3d4ebb89c33d2"
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
+    "headSha": "732396eb3131659819eda6c46b58ed305f0fadcc"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness 插件：模型请求失败自动注入「继续」并切换兜底模型，免手动干预",
     "fork": false,
     "forks": 0,
-    "headSha": "23e42ec42521277b6737272129b3d4ebb89c33d2",
+    "headSha": "732396eb3131659819eda6c46b58ed305f0fadcc",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU0yRyw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b21ac8b51c2609a9d7b19ee68a5ee8be86cdab8942bac14a53b1acb36271a949/cglyvip/dsh-auto-continue",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c248b64a90e2f0eefa34b164115cba7f67b7efc27ffc5568a7c049b60bff7162/cglyvip/dsh-auto-continue",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/38149163?v=4",
       "login": "cglyvip"
     },
-    "pushedAt": "2026-10-01T08:54:00Z",
+    "pushedAt": "2026-10-01T12:51:21Z",
     "slug": "cglyvip/dsh-auto-continue",
     "stars": 0,
     "topics": [
@@ -39,7 +39,7 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-01T08:54:04Z",
+    "updatedAt": "2026-10-01T12:51:25Z",
     "url": "https://github.com/cglyvip/dsh-auto-continue"
   },
   "id": "gh:1397526987",
@@ -49,8 +49,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:cglyvip/dsh-auto-continue#2dd88bebe4fd18c555fc7c0ca0d60c29dabbac7f",
-    "version": "0.1.1"
+    "spec": "github:cglyvip/dsh-auto-continue#732396eb3131659819eda6c46b58ed305f0fadcc",
+    "version": "0.5.2"
   },
   "npm": {
     "latestVersion": null,
@@ -60,21 +60,22 @@
   "package": {
     "exports": {
       ".": "./lib/index.js",
+      "./client": "./lib/client.js",
       "./package.json": "./package.json"
     },
     "main": "lib/index.js",
     "name": "dsh-auto-continue",
     "status": "valid",
     "type": "module",
-    "version": "0.1.1"
+    "version": "0.5.2"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b21ac8b51c2609a9d7b19ee68a5ee8be86cdab8942bac14a53b1acb36271a949/cglyvip/dsh-auto-continue",
+    "coverUrl": "https://opengraph.githubassets.com/c248b64a90e2f0eefa34b164115cba7f67b7efc27ffc5568a7c049b60bff7162/cglyvip/dsh-auto-continue",
     "description": "DeepSeek Harness 插件：模型请求失败自动注入「继续」并切换兜底模型，免手动干预"
   },
   "readme": {
     "available": true,
-    "excerpt": "DeepSeek Harness (dsh) 插件：自定义模型/中转在开发过程中请求失败（内置重试 5/5 耗尽、显示\"本轮运行失败\"）时，自动切换到兜底模型并注入「继续」，不用再手动点继续。"
+    "excerpt": "DeepSeek Harness (dsh) 插件：自定义模型/中转在开发过程中请求失败（内置重试 5/5 耗尽、显示\"本轮运行失败\"）时，先留在原模型重试数次，再沿兜底链循环切换并注入「继续」，不用再手动点继续。"
   },
   "schemaVersion": 1,
   "scripts": {

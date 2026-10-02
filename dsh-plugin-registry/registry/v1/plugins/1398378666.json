@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "4cdedae57bde8cf0805e7f6bbd87014ea8bbe129"
   },
   "github": {
@@ -38,27 +38,40 @@
   },
   "id": "gh:1398378666",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mail-notify",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Cangjier/dsh-mail-notify#4cdedae57bde8cf0805e7f6bbd87014ea8bbe129",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./mime": "./mime.mjs",
+      "./package.json": "./package.json",
+      "./smtp": "./smtp.mjs"
+    },
+    "main": null,
+    "name": "dsh-mail-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b955f1549fe98b37a389256cc5417386bf4fda6ce0d52172268aa84bb0fe7632/Cangjier/dsh-mail-notify",
-    "description": ""
+    "description": "DeepSeek Harness 插件：agent 每结束一轮回答（会话日志里的 turn/end）就发一封通知邮件， 正文是该轮的回答文本，标题在固定前缀之后带上这轮回答的摘要（DSH 任务完成｜路径已改好）， 这样不用点开邮件就能从收件箱看出每轮干了什么。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件：agent 每结束一轮回答（会话日志里的 turn/end）就发一封通知邮件， 正文是该轮的回答文本，标题在固定前缀之后带上这轮回答的摘要（DSH 任务完成｜路径已改好）， 这样不用点开邮件就能从收件箱看出每轮干了什么。"
   },
   "schemaVersion": 1,
   "scripts": {

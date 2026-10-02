@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "b31a2cf7f7bca068537e5d30bc8b0ec2300ef807"
   },
   "github": {
@@ -49,24 +49,35 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-database",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-alpha.12.15"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d9b75252b025f5fcc5997f5c03bca43f4cb97f5e1a661bf4476d8da874490c44/zhuoxiaoshuai/dsh-database",
     "description": "MySQL, Oracle, Redis and Kafka inside DeepSeek Harness. Written entirely with AI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin, not part of dsh web itself. After you add it to the web profile and restart, a Database tab appears in the conversation’s right sidebar. It talks to MySQL, Oracle, Redis, and Kafka. Remove the plugin and dsh web is unchanged."
   },
   "schemaVersion": 1,
   "scripts": {

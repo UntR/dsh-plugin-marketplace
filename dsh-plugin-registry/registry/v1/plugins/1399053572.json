@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "918de3eebb6e705a5475ec3a8ba41675a906fa30"
   },
   "github": {
@@ -42,27 +42,44 @@
   },
   "id": "gh:1399053572",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-whale-girl",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:aigisx/dsh-plugin-whale-girl#918de3eebb6e705a5475ec3a8ba41675a906fa30",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-whale-girl",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3e589e3ac1b0e17c1a105ea301ecbe85397b4affb60d5ad68c5487f79bec5f45/aigisx/dsh-plugin-whale-girl",
     "description": "修改应用内的图标，并调整尺寸大小。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DeepSeek Harness 应用内的鲸鱼图标换成鲸鱼娘，「思考中」前面的小图标换成一只蓝底小米饭小碗，并把中文的「深度求索中」改成「努力干饭中」；两个图标的大小都可以在应用内的插件设置里单独调整。"
   },
   "schemaVersion": 1,
   "scripts": {

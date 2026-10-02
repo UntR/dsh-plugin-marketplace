@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
-    "headSha": "1677f7e607f26d1db6c0848d4d35cba89b6005c3"
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
+    "headSha": "1bd985fbb57440077f18cd6581b92d9bfd908467"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-28T04:00:23Z",
     "databaseId": 1391753510,
     "defaultBranch": "main",
-    "description": "@a9i5k4/dsh-auto-memory 的增量插件：①跨实例硬约束注入（一份 cross/RULES.md，全部实例共用，全文注入不截断）；②结构化写入工具 cross_memory_write_entry（自动锚点行 / ≤200 索引行校验 / 正文外移 / 写前基线）。",
+    "description": "@a9i5k4/dsh-auto-memory 的增量插件（只做本体没有的两件事）：①跨实例硬约束注入（一份 cross/RULES.md，全部实例共用，全文注入不截断）；②锚点结构修复 cross_memory_fix_bare_entries（无锚点裸条 / 空锚点 orphan / 重复锚点三分类，只插入新行、绝不改动既有行）。",
     "fork": false,
     "forks": 0,
-    "headSha": "1677f7e607f26d1db6c0848d4d35cba89b6005c3",
+    "headSha": "1bd985fbb57440077f18cd6581b92d9bfd908467",
     "homepageUrl": "https://github.com/ShukebtAb/Dsh-Cross-Memory#readme",
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUvR5Jg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/92877b0d9e901d1957bc68306b15744b1397fe1a767243f5c4f1dbaacb77185b/ShukebtAb/Dsh-Cross-Memory",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/84f1d03559ea73c7a1b6cd3e32b708dca668b5f8af3f0ec21df2a26bf45b1971/ShukebtAb/Dsh-Cross-Memory",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/88775155?v=4",
       "login": "ShukebtAb"
     },
-    "pushedAt": "2026-10-01T04:42:51Z",
+    "pushedAt": "2026-10-01T12:48:45Z",
     "slug": "ShukebtAb/Dsh-Cross-Memory",
     "stars": 0,
     "topics": [
@@ -40,32 +40,41 @@
       "dsh-plugin",
       "memory"
     ],
-    "updatedAt": "2026-10-01T04:42:54Z",
+    "updatedAt": "2026-10-01T12:49:13Z",
     "url": "https://github.com/ShukebtAb/Dsh-Cross-Memory"
   },
   "id": "gh:1391753510",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cross-memory",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ShukebtAb/Dsh-Cross-Memory#1bd985fbb57440077f18cd6581b92d9bfd908467",
+    "version": "0.4.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js"
+    },
+    "main": "index.js",
+    "name": "dsh-cross-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/92877b0d9e901d1957bc68306b15744b1397fe1a767243f5c4f1dbaacb77185b/ShukebtAb/Dsh-Cross-Memory",
-    "description": "@a9i5k4/dsh-auto-memory 的增量插件：①跨实例硬约束注入（一份 cross/RULES.md，全部实例共用，全文注入不截断）；②结构化写入工具 cross_memory_write_entry（自动锚点行 / ≤200 索引行校验 / 正文外移 / 写前基线）。"
+    "coverUrl": "https://opengraph.githubassets.com/84f1d03559ea73c7a1b6cd3e32b708dca668b5f8af3f0ec21df2a26bf45b1971/ShukebtAb/Dsh-Cross-Memory",
+    "description": "@a9i5k4/dsh-auto-memory 的增量插件（只做本体没有的两件事）：①跨实例硬约束注入（一份 cross/RULES.md，全部实例共用，全文注入不截断）；②锚点结构修复 cross_memory_fix_bare_entries（无锚点裸条 / 空锚点 orphan / 重复锚点三分类，只插入新行、绝不改动既有行）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "多个 DSH 实例各自有独立记忆时，「哪些约束是所有实例都必须遵守的」没有统一来源。本插件从固定路径读取一份共享规则文件，把其中的条目注入每轮上下文——改一处，全部实例生效。"
   },
   "schemaVersion": 1,
   "scripts": {

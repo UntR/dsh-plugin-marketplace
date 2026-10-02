@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
-    "headSha": "5e39c06311b0d0bfe373cbe155d534c4a696db5c"
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
+    "headSha": "7d7968fad53dca781e50876a925a7cb7847ed620"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Markdown rendering for DeepSeek Harness sent messages: the user and steering chat bubbles render headings, lists, code, tables, math and quotes through the host's own Markdown pipeline, while reference chips, attachments and the action strip stay intact.",
     "fork": false,
     "forks": 0,
-    "headSha": "5e39c06311b0d0bfe373cbe155d534c4a696db5c",
+    "headSha": "7d7968fad53dca781e50876a925a7cb7847ed620",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU1m8SA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/67130cd1f7b6a85e60f5fb2b6bdbf92a152ea827752e0537c6763ebb340c90cb/DDDMUC/dsh-markdown-bubble",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b856519dc99ba1b6744509829c5713dc5a9e76cc795a2d6848d735faa986106a/DDDMUC/dsh-markdown-bubble",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/175344510?u=959622c9a56d53e2d25bdb609f132aa7aef9e8ef&v=4",
       "login": "DDDMUC"
     },
-    "pushedAt": "2026-09-30T19:00:02Z",
+    "pushedAt": "2026-10-02T05:30:38Z",
     "slug": "DDDMUC/dsh-markdown-bubble",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "chat",
       "deepseek-harness",
@@ -41,32 +41,43 @@
       "markdown",
       "render"
     ],
-    "updatedAt": "2026-09-30T18:58:46Z",
+    "updatedAt": "2026-10-02T07:06:07Z",
     "url": "https://github.com/DDDMUC/dsh-markdown-bubble"
   },
   "id": "gh:1398389832",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-markdown-bubble",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-markdown-bubble@0.1.4",
+    "version": "0.1.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.4",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./src/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-markdown-bubble",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/67130cd1f7b6a85e60f5fb2b6bdbf92a152ea827752e0537c6763ebb340c90cb/DDDMUC/dsh-markdown-bubble",
+    "coverUrl": "https://opengraph.githubassets.com/b856519dc99ba1b6744509829c5713dc5a9e76cc795a2d6848d735faa986106a/DDDMUC/dsh-markdown-bubble",
     "description": "Markdown rendering for DeepSeek Harness sent messages: the user and steering chat bubbles render headings, lists, code, tables, math and quotes through the host's own Markdown pipeline, while reference chips, attachments and the action strip stay intact."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 用户消息 Markdown 渲染插件 —— 你发出去的每一条消息，都按 Markdown 渲染。 标题、列表、加粗、行内代码、引用、代码块、表格与公式不再以源码形态躺在气泡里，而是经宿主自己的 Markdown 管线（MarkdownText）呈现；引用 chip、附件、时间/复制操作条与其它插件注入的按钮全部原样保留。实现方式是官方 keyed 槽位 conversation.chat.node 的 user / steering 座位替换，不修改 DSH 源码，不改写任何会话日志。"
   },
   "schemaVersion": 1,
   "scripts": {

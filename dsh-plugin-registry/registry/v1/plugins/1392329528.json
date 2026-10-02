@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
-    "headSha": "9cdfa32faca9bdc3078813055f73b5ac808aa648"
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
+    "headSha": "3eab094647082f876fdbcfc2a611fa43d32c90c6"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh plugin: bills every model call into a monthly JSONL cost ledger - token buckets, cache reads, off-peak rules (/ledger /ledger-export)",
     "fork": false,
     "forks": 0,
-    "headSha": "9cdfa32faca9bdc3078813055f73b5ac808aa648",
+    "headSha": "3eab094647082f876fdbcfc2a611fa43d32c90c6",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUv1DOA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/288f73b43feea8a3086cfeaed656d15cff9e7dd5d41410c6ad891b3b0198ce8c/121212165/dsh-plugin-cost-ledger",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5ca884bb881dcf2997c6889679c2c7cd3c3d45f3ff7e0fc75c82597b0c2db2da/121212165/dsh-plugin-cost-ledger",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/185351029?v=4",
       "login": "121212165"
     },
-    "pushedAt": "2026-10-01T09:55:20Z",
+    "pushedAt": "2026-10-02T01:34:00Z",
     "slug": "121212165/dsh-plugin-cost-ledger",
     "stars": 0,
     "topics": [
@@ -39,38 +39,61 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-01T09:55:24Z",
+    "updatedAt": "2026-10-02T01:34:03Z",
     "url": "https://github.com/121212165/dsh-plugin-cost-ledger"
   },
   "id": "gh:1392329528",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-cost-ledger",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:121212165/dsh-plugin-cost-ledger#3eab094647082f876fdbcfc2a611fa43d32c90c6",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./icon.svg": "./icon.svg",
+      "./ledger": {
+        "default": "./lib/ledger/index.js",
+        "types": "./lib/types/ledger/index.d.ts"
+      },
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json",
+      "./pricing": {
+        "default": "./lib/pricing/index.js",
+        "types": "./lib/types/pricing/index.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-cost-ledger",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/288f73b43feea8a3086cfeaed656d15cff9e7dd5d41410c6ad891b3b0198ce8c/121212165/dsh-plugin-cost-ledger",
+    "coverUrl": "https://opengraph.githubassets.com/5ca884bb881dcf2997c6889679c2c7cd3c3d45f3ff7e0fc75c82597b0c2db2da/121212165/dsh-plugin-cost-ledger",
     "description": "dsh plugin: bills every model call into a monthly JSONL cost ledger - token buckets, cache reads, off-peak rules (/ledger /ledger-export)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "EN · Bills every model call into a monthly JSONL cost ledger — token buckets (uncached input / cache read / cache write / output), off-peak dates, per-currency isolation — then /ledger prints month tables and /ledger-export writes CSV. Anything without a price row is dropped rath"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

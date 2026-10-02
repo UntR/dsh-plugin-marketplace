@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "057f231820e29bf949cda5f6d79aa896e6c01557"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1398939948",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-completion-playground",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Zhichii/dsh-completion-playground#057f231820e29bf949cda5f6d79aa896e6c01557",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-completion-playground",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/28f7b4ed9a026d21b997b6f8cf7421dd970f149a7985a70f8a14f5f9f6148913/Zhichii/dsh-completion-playground",
     "description": "To play with DeepSeek's Completion API and check logprobs."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A fullscreen raw-prompt playground for DeepSeek Harness, packaged as an agent mode. Every \"Run\" is an ordinary conversation turn whose model call happens to be DeepSeek's raw /beta/completions endpoint — so the harness keeps doing the work it already knows: Chat, the built-in Tra"
   },
   "schemaVersion": 1,
   "scripts": {

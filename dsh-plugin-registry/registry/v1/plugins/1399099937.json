@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
-    "headSha": "815a87275b1ca52ff824a5bc02c4bfeb3b339a5b"
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
+    "headSha": "94adae422397eabc7f44e4df640d6966e2e4ac96"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH 会话接力插件：拉取六家 agent 会话（/resume-*）、寄存当前会话（/handoff）、开局取件（/inbox），落在 handoff: 1 开放协议上",
     "fork": false,
     "forks": 0,
-    "headSha": "815a87275b1ca52ff824a5bc02c4bfeb3b339a5b",
+    "headSha": "94adae422397eabc7f44e4df640d6966e2e4ac96",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,13 +25,13 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU2SSIQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/16d890d7c469c7df125c7c6cb6544119c1d28107ea30a4a58d52e93710ef5595/IKEASven69/dsh-baton",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/eb647c60dc3f50b7e5e8ee33aa1fde3e07ad830b67d0ebdd35ff4ca879e570e5/IKEASven69/dsh-takeover",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/73433709?u=eb4e073054d1aa17a0b54730ac26276f7e0496ff&v=4",
       "login": "IKEASven69"
     },
-    "pushedAt": "2026-10-01T08:35:49Z",
-    "slug": "IKEASven69/dsh-baton",
+    "pushedAt": "2026-10-02T08:04:16Z",
+    "slug": "IKEASven69/dsh-takeover",
     "stars": 0,
     "topics": [
       "deepseek-harness",
@@ -39,32 +39,48 @@
       "handoff",
       "session-handoff"
     ],
-    "updatedAt": "2026-10-01T08:35:54Z",
-    "url": "https://github.com/IKEASven69/dsh-baton"
+    "updatedAt": "2026-10-02T08:04:19Z",
+    "url": "https://github.com/IKEASven69/dsh-takeover"
   },
   "id": "gh:1399099937",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-takeover",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:IKEASven69/dsh-takeover#94adae422397eabc7f44e4df640d6966e2e4ac96",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./cordis.yml": "./cordis.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-takeover",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/16d890d7c469c7df125c7c6cb6544119c1d28107ea30a4a58d52e93710ef5595/IKEASven69/dsh-baton",
+    "coverUrl": "https://opengraph.githubassets.com/eb647c60dc3f50b7e5e8ee33aa1fde3e07ad830b67d0ebdd35ff4ca879e570e5/IKEASven69/dsh-takeover",
     "description": "DSH 会话接力插件：拉取六家 agent 会话（/resume-*）、寄存当前会话（/handoff）、开局取件（/inbox），落在 handoff: 1 开放协议上"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "会拉、会推、会接管：拉取八家外部 agent 会话，寄存当前会话，开局取件。"
   },
   "schemaVersion": 1,
   "scripts": {

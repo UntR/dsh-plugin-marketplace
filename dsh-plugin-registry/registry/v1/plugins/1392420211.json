@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
-    "headSha": "273afb4d6d1e2820429f28a38ebf202826bdef2e"
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
+    "headSha": "dfe11c3141eec92b43273aca33c4533b83b1e286"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh plugin: reads remaining quota and usage from any OpenAI-compatible relay's billing surface (/quota, quota_check)",
     "fork": false,
     "forks": 0,
-    "headSha": "273afb4d6d1e2820429f28a38ebf202826bdef2e",
+    "headSha": "dfe11c3141eec92b43273aca33c4533b83b1e286",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUv6lcw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/80b1606fbe0d4c32bfb8ebd12c1ab973c7babfec0da2179962f4a34185d9636f/121212165/dsh-plugin-relay-quota",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/65777c6ac0f3837a9d20f5e0414a8e99e7baf78cdaf536be44b7784c6d592da8/121212165/dsh-plugin-relay-quota",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/185351029?v=4",
       "login": "121212165"
     },
-    "pushedAt": "2026-10-01T09:57:41Z",
+    "pushedAt": "2026-10-02T00:27:11Z",
     "slug": "121212165/dsh-plugin-relay-quota",
     "stars": 0,
     "topics": [
@@ -39,38 +39,59 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-01T09:57:46Z",
+    "updatedAt": "2026-10-02T00:27:16Z",
     "url": "https://github.com/121212165/dsh-plugin-relay-quota"
   },
   "id": "gh:1392420211",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-relay-quota",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:121212165/dsh-plugin-relay-quota#dfe11c3141eec92b43273aca33c4533b83b1e286",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./ledger": {
+        "default": "./lib/ledger/index.js",
+        "types": "./lib/types/ledger/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./pricing": {
+        "default": "./lib/pricing/index.js",
+        "types": "./lib/types/pricing/index.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-relay-quota",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/80b1606fbe0d4c32bfb8ebd12c1ab973c7babfec0da2179962f4a34185d9636f/121212165/dsh-plugin-relay-quota",
+    "coverUrl": "https://opengraph.githubassets.com/65777c6ac0f3837a9d20f5e0414a8e99e7baf78cdaf536be44b7784c6d592da8/121212165/dsh-plugin-relay-quota",
     "description": "dsh plugin: reads remaining quota and usage from any OpenAI-compatible relay's billing surface (/quota, quota_check)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "EN · Reads remaining quota and usage straight from any OpenAI-compatible relay's billing surface (new-api style) via /quota or the quotacheck tool, handling the 1e8 unlimited sentinel and cent→currency conversion. · endpoint shapes verified with curl against a real relay · parsin"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

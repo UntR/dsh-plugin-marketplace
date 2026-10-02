@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "fb1de9175594df85c54fa497d925ba705904bf6d"
   },
   "github": {
@@ -43,27 +43,40 @@
   },
   "id": "gh:1399357750",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-desktop-ui-reasoning-effort",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-desktop-ui-reasoning-effort@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon.svg": "./icon.svg",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-desktop-ui-reasoning-effort",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f61351d656f875a1e22d5fdeda8a0641a80e870385a4a1d2d8f669c6a00ef6e5/YIYuNCU/DSH-Reasoning-Effort",
-    "description": ""
+    "description": "在 DSH 里接入第三方模型服务（比如 OpenAI 兼容的中转站、Anthropic 兼容接口）后，模型选择器里没有「思考强度」可选，GPT、Claude 这些明明支持思考的模型也只能用默认档位。这个插件在 设置 → 模型 里补上思考强度的配置，并给常见模型准备好推荐档位，点一下就能用。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 里接入第三方模型服务（比如 OpenAI 兼容的中转站、Anthropic 兼容接口）后，模型选择器里没有「思考强度」可选，GPT、Claude 这些明明支持思考的模型也只能用默认档位。这个插件在 设置 → 模型 里补上思考强度的配置，并给常见模型准备好推荐档位，点一下就能用。"
   },
   "schemaVersion": 1,
   "scripts": {

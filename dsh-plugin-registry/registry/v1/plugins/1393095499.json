@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
-    "headSha": "c4cccbb5cbe4c2c57ff2f5e18be8f421101a284a"
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
+    "headSha": "4f5f143df550c6b2172d21d841623192dd4bb2ef"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh plugin: prefix-cache health guard - separates real prefix rewrites from ordinary context growth, prices the tokens they waste, and warns the model once per break (/cache, cache_status)",
     "fork": false,
     "forks": 0,
-    "headSha": "c4cccbb5cbe4c2c57ff2f5e18be8f421101a284a",
+    "headSha": "4f5f143df550c6b2172d21d841623192dd4bb2ef",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUwjzSw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/2c1b7f10d97c747d961b5fd8666d3ad2337f63098e1a33c7f354001f10a18d87/121212165/dsh-plugin-cache-guard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/4dd7058ba11abaa477b61c60944d952a7a5e2625ba093edd0308ca100b5f7c34/121212165/dsh-plugin-cache-guard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/185351029?v=4",
       "login": "121212165"
     },
-    "pushedAt": "2026-10-01T08:11:59Z",
+    "pushedAt": "2026-10-02T00:30:23Z",
     "slug": "121212165/dsh-plugin-cache-guard",
     "stars": 0,
     "topics": [
@@ -39,38 +39,51 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-01T09:04:53Z",
+    "updatedAt": "2026-10-02T00:30:28Z",
     "url": "https://github.com/121212165/dsh-plugin-cache-guard"
   },
   "id": "gh:1393095499",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-cache-guard",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:121212165/dsh-plugin-cache-guard#4f5f143df550c6b2172d21d841623192dd4bb2ef",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-cache-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/2c1b7f10d97c747d961b5fd8666d3ad2337f63098e1a33c7f354001f10a18d87/121212165/dsh-plugin-cache-guard",
+    "coverUrl": "https://opengraph.githubassets.com/4dd7058ba11abaa477b61c60944d952a7a5e2625ba093edd0308ca100b5f7c34/121212165/dsh-plugin-cache-guard",
     "description": "dsh plugin: prefix-cache health guard - separates real prefix rewrites from ordinary context growth, prices the tokens they waste, and warns the model once per break (/cache, cache_status)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness (dsh) 插件：前缀缓存健康守卫。DeepSeek 的前缀缓存是省钱命脉——系统提示、工具列表或任何位于上下文开头的内容一旦被改写，整个前缀重新按未缓存全价计费。本插件监听 usage 流，把\"只是变长\"和\"前缀真被重写\"分开，估算重写多付的 token，并在出现重写时把诊断注入上下文。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

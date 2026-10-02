@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
-    "headSha": "ddd00ce4e907acb5a56f09df253185cebcf15da9"
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
+    "headSha": "49704a678d077f12317382efd9d2291a7b5d82f7"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh plugin: one hub over your coding IDEs (Trae/Qoder/ZCode/CatPaw/Codex/Claude Code/OpenCode/dsh) - session inventory, quota runway, shared prompt rules, Obsidian export (/ide-hub /hub-sessions /hub-usage)",
     "fork": false,
     "forks": 0,
-    "headSha": "ddd00ce4e907acb5a56f09df253185cebcf15da9",
+    "headSha": "49704a678d077f12317382efd9d2291a7b5d82f7",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU1D_kw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3bf249bf2f0de814f45583f9b3ff4f62cb729ea2ae2c44941bf375d16ef2eaa7/121212165/dsh-plugin-ide-hub",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/87162d16c6e42018017a20a7a60ebdf9531260716682b04f664f20d5a3edaf28/121212165/dsh-plugin-ide-hub",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/185351029?v=4",
       "login": "121212165"
     },
-    "pushedAt": "2026-10-01T09:54:08Z",
+    "pushedAt": "2026-10-02T01:44:12Z",
     "slug": "121212165/dsh-plugin-ide-hub",
     "stars": 0,
     "topics": [
@@ -39,38 +39,61 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-01T09:54:12Z",
+    "updatedAt": "2026-10-02T01:44:15Z",
     "url": "https://github.com/121212165/dsh-plugin-ide-hub"
   },
   "id": "gh:1397817235",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-ide-hub",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:121212165/dsh-plugin-ide-hub#49704a678d077f12317382efd9d2291a7b5d82f7",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./icon.svg": "./icon.svg",
+      "./ledger": {
+        "default": "./lib/ledger/index.js",
+        "types": "./lib/types/ledger/index.d.ts"
+      },
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json",
+      "./pricing": {
+        "default": "./lib/pricing/index.js",
+        "types": "./lib/types/pricing/index.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-ide-hub",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3bf249bf2f0de814f45583f9b3ff4f62cb729ea2ae2c44941bf375d16ef2eaa7/121212165/dsh-plugin-ide-hub",
+    "coverUrl": "https://opengraph.githubassets.com/87162d16c6e42018017a20a7a60ebdf9531260716682b04f664f20d5a3edaf28/121212165/dsh-plugin-ide-hub",
     "description": "dsh plugin: one hub over your coding IDEs (Trae/Qoder/ZCode/CatPaw/Codex/Claude Code/OpenCode/dsh) - session inventory, quota runway, shared prompt rules, Obsidian export (/ide-hub /hub-sessions /hub-usage)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "EN · One hub over the coding IDEs you actually run — dsh, Claude Code, Codex, ZCode, Qoder, CatPaw, Trae, OpenCode. It reads each tool's own on-disk state (sessions, usage, prompt-rule files) instead of calling any API, then gives you an inventory (/ide-hub), a quota-runway migra"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

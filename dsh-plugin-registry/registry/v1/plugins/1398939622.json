@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
-    "headSha": "c9760437da0a973ed9b47da7f0077ae52f04adf5"
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
+    "headSha": "2346a2a23c4d3bae529ea738baf42c18e72d8f28"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-01T02:21:19Z",
     "databaseId": 1398939622,
     "defaultBranch": "main",
-    "description": "Publish a DSH plugin to GitHub in one command: validates the manifest and bundle identifiers, creates the repo, uploads the tree, sets the required topic, and writes the plugin-market catalog entry.",
+    "description": "Publish or update a DSH plugin on GitHub in one command: validates the manifest and bundle identifiers, creates or reuses the repo, uploads the tree as one commit, honours .gitignore, and sets the required topic without dropping yours.",
     "fork": false,
     "forks": 0,
-    "headSha": "c9760437da0a973ed9b47da7f0077ae52f04adf5",
+    "headSha": "2346a2a23c4d3bae529ea738baf42c18e72d8f28",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU2If5g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5dd49f473c8e57e9afe14edc6421219e4c35922bc64dcafc5d7873a369cf7628/Gty2408/dsh-plugin-publish",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5ba0c82c02ebab8e9a0500f55f883d6f451859edc9d3c9a92da2a1c304c2077a/Gty2408/dsh-plugin-publish",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/262975838?v=4",
       "login": "Gty2408"
     },
-    "pushedAt": "2026-10-01T07:12:51Z",
+    "pushedAt": "2026-10-01T14:15:00Z",
     "slug": "Gty2408/dsh-plugin-publish",
     "stars": 0,
     "topics": [
@@ -39,32 +39,44 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-01T07:12:55Z",
+    "updatedAt": "2026-10-01T14:15:05Z",
     "url": "https://github.com/Gty2408/dsh-plugin-publish"
   },
   "id": "gh:1398939622",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-publish",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Gty2408/dsh-plugin-publish#2346a2a23c4d3bae529ea738baf42c18e72d8f28",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./github": "./lib/github.mjs",
+      "./package.json": "./package.json",
+      "./preflight": "./lib/preflight.mjs"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-publish",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5dd49f473c8e57e9afe14edc6421219e4c35922bc64dcafc5d7873a369cf7628/Gty2408/dsh-plugin-publish",
-    "description": "Publish a DSH plugin to GitHub in one command: validates the manifest and bundle identifiers, creates the repo, uploads the tree, sets the required topic, and writes the plugin-market catalog entry."
+    "coverUrl": "https://opengraph.githubassets.com/5ba0c82c02ebab8e9a0500f55f883d6f451859edc9d3c9a92da2a1c304c2077a/Gty2408/dsh-plugin-publish",
+    "description": "Publish or update a DSH plugin on GitHub in one command: validates the manifest and bundle identifiers, creates or reuses the repo, uploads the tree as one commit, honours .gitignore, and sets the required topic without dropping yours."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一条命令把 DSH 插件发布到 GitHub。产出一个公开仓库，任何其他机器都能从它安装这个插件。"
   },
   "schemaVersion": 1,
   "scripts": {

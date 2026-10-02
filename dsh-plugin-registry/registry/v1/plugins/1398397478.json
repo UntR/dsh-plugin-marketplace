@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "d99f32277ff8dc19e5853c8fd0f6a8f2c4c35802"
   },
   "github": {
@@ -43,27 +43,37 @@
   },
   "id": "gh:1398397478",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-send-debounce",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:praystring/dsh-send-debounce#d99f32277ff8dc19e5853c8fd0f6a8f2c4c35802",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.mjs",
+    "name": "dsh-send-debounce",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6a4d87d8775e1cde3cbdf17f964c98600184f5e690781e9ead9c4d67f8d4845d/praystring/dsh-send-debounce",
     "description": "把聊天框里连发的几条短消息合并成一轮后再唤醒模型（DSH 插件）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 的「连发消息」加一层缓冲：用户在聊天框里一句接一句地发，中间不产生 N 次唤醒/回复； 停手若干秒后，这几条合并成一轮送进模型，只回一次。"
   },
   "schemaVersion": 1,
   "scripts": {

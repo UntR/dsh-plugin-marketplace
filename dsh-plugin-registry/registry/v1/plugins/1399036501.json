@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "8ee754f64267853b4503b793d162a15ab88af432"
   },
   "github": {
@@ -43,27 +43,37 @@
   },
   "id": "gh:1399036501",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-web-search-keyless",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:s11phere/dsh-web-search-keyless#8ee754f64267853b4503b793d162a15ab88af432",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/host.js",
+    "name": "dsh-web-search-keyless",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/37b29957f5804947409a7c37f329c26abb5f6c4301831af927e6e384bebea2d9/s11phere/dsh-web-search-keyless",
     "description": "DSH 插件：给 ctx.web 换上一个不需要密钥、也不消耗模型回合的搜索 provider"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 宿主插件：给 ctx.web 换上一个不需要密钥、也不消耗模型回合的搜索 provider。 Bing RSS 为主，DuckDuckGo Lite 为备，命中失败自动顺延。"
   },
   "schemaVersion": 1,
   "scripts": {

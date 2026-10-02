@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "13f40796c73db1023ba35008ed531d44a991a70a"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1398343002",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@workspace/dsh-jp-translate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wangjiezhe/dsh-jp-translate#13f40796c73db1023ba35008ed531d44a991a70a",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json",
+      "./preset": "./presets/jp-translate.mjs"
+    },
+    "main": "lib/index.js",
+    "name": "@workspace/dsh-jp-translate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a9ce643c6bde687cd191ca7db7e1312621b7952ca31da8642c1fc57d0fac9886/wangjiezhe/dsh-jp-translate",
     "description": "「日语翻译」模式"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个比「极简模式」还简洁的 DSH agent 预设：只做日译中，不加载任何工具，并且 每次请求只发送 systemprompt 与 userprompt，不携带任何历史消息。"
   },
   "schemaVersion": 1,
   "scripts": {

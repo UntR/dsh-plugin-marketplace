@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
-    "headSha": "26752ce2f42c6b018167999f36f937afa2cc968f"
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
+    "headSha": "125cd58dbdf25ec2ee06a15546b3da44a26f8cea"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh plugin: cross-session activity stats from per-call token records - daily trend, priciest sessions, model mix, CSV export (/insights /insights-export)",
     "fork": false,
     "forks": 0,
-    "headSha": "26752ce2f42c6b018167999f36f937afa2cc968f",
+    "headSha": "125cd58dbdf25ec2ee06a15546b3da44a26f8cea",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUv1DoQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f16c0334d27c49a74624c95de4c285d54600651d9a5c78409da7a6791ce78f3f/121212165/dsh-plugin-session-insights",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a972fdc26493420b7184daba1259d0a6cb00e9eda545c0db8fcd89627e4bc20c/121212165/dsh-plugin-session-insights",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/185351029?v=4",
       "login": "121212165"
     },
-    "pushedAt": "2026-10-01T09:53:52Z",
+    "pushedAt": "2026-10-02T01:44:21Z",
     "slug": "121212165/dsh-plugin-session-insights",
     "stars": 0,
     "topics": [
@@ -39,38 +39,57 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-01T09:53:57Z",
+    "updatedAt": "2026-10-02T01:44:24Z",
     "url": "https://github.com/121212165/dsh-plugin-session-insights"
   },
   "id": "gh:1392329633",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-session-insights",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:121212165/dsh-plugin-session-insights#125cd58dbdf25ec2ee06a15546b3da44a26f8cea",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./icon.svg": "./icon.svg",
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json",
+      "./stats": {
+        "default": "./lib/pure/index.js",
+        "types": "./lib/types/pure/index.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-session-insights",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f16c0334d27c49a74624c95de4c285d54600651d9a5c78409da7a6791ce78f3f/121212165/dsh-plugin-session-insights",
+    "coverUrl": "https://opengraph.githubassets.com/a972fdc26493420b7184daba1259d0a6cb00e9eda545c0db8fcd89627e4bc20c/121212165/dsh-plugin-session-insights",
     "description": "dsh plugin: cross-session activity stats from per-call token records - daily trend, priciest sessions, model mix, CSV export (/insights /insights-export)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "EN · Cross-session activity stats: every model call — priced or not — is appended to a monthly JSONL sidecar; /insights prints daily trend bars, priciest sessions and model mix, and /insights-export writes a BOM+CRLF CSV. The model/provider pair is read from the assistant message"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

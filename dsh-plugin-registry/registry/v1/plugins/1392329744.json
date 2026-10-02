@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
-    "headSha": "ccc816a0ee083ca1a0f753bd896563729edaa632"
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
+    "headSha": "984d7345e386794abadd8baa8b3cda79b0ab1eae"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh plugin: archives every session turn to monthly JSONL sidecars and exports Markdown - the transcript layer other plugins search, render and push (/transcript /transcript-export)",
     "fork": false,
     "forks": 0,
-    "headSha": "ccc816a0ee083ca1a0f753bd896563729edaa632",
+    "headSha": "984d7345e386794abadd8baa8b3cda79b0ab1eae",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUv1EEA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/9edb722d459d45bbfa0cceead0ff1609ed5a2dbf2c4c42d8e1b516b02ea4c8ff/121212165/dsh-plugin-transcript",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8074533cc0e8be588d12671ce4f4aa2e84e8841351ca29a238cefd05dbd62b50/121212165/dsh-plugin-transcript",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/185351029?v=4",
       "login": "121212165"
     },
-    "pushedAt": "2026-10-01T09:59:21Z",
+    "pushedAt": "2026-10-02T00:26:33Z",
     "slug": "121212165/dsh-plugin-transcript",
     "stars": 0,
     "topics": [
@@ -39,38 +39,55 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-01T09:59:24Z",
+    "updatedAt": "2026-10-02T00:26:37Z",
     "url": "https://github.com/121212165/dsh-plugin-transcript"
   },
   "id": "gh:1392329744",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-transcript",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:121212165/dsh-plugin-transcript#984d7345e386794abadd8baa8b3cda79b0ab1eae",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./render": {
+        "default": "./lib/transcript/render.js",
+        "types": "./lib/types/transcript/render.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-transcript",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/9edb722d459d45bbfa0cceead0ff1609ed5a2dbf2c4c42d8e1b516b02ea4c8ff/121212165/dsh-plugin-transcript",
+    "coverUrl": "https://opengraph.githubassets.com/8074533cc0e8be588d12671ce4f4aa2e84e8841351ca29a238cefd05dbd62b50/121212165/dsh-plugin-transcript",
     "description": "dsh plugin: archives every session turn to monthly JSONL sidecars and exports Markdown - the transcript layer other plugins search, render and push (/transcript /transcript-export)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "EN · The data layer other plugins read: archives every session turn (user/message, assistant/message, tool/call, session/title) into monthly JSONL sidecars and renders Markdown on demand (/transcript, /transcript-export). dsh-plugin-transcript-search, dsh-plugin-obsidian-push and"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

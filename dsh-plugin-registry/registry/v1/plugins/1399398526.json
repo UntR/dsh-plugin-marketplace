@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "ad23bd43940e18e95314e055ae10f74e0ad4a051"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1399398526",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-advisor-flow",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ccll/dsh-advisor-flow#ad23bd43940e18e95314e055ae10f74e0ad4a051",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-advisor-flow",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/029ca9bd9e93317665d6c60e3eae081d1523b316ad830364cb78f9e0e12f55cd/ccll/dsh-advisor-flow",
     "description": "DeepSeek Harness plugin: on-demand executor/advisor workflow ported from pi-advisor-flow — ask_advisor, review gates, usage ledger, privacy tiers"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）插件：把 pi-advisor-flow 的执行者/顾问工作流移植到 DSH。日常任务由执行者用日常模型完成；关键决策、反复失败与收尾时刻由更强大的顾问模型提供第二意见。顾问只给意见、不接管工作（advisory only），会话主对成本、隐私与阻断行为拥有完全的配置与可见性。"
   },
   "schemaVersion": 1,
   "scripts": {

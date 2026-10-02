@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./plugin/dsh-minato-bridge/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
     "enrichmentStatus": "ok",
-    "headSha": "983520089e9a1c316db1e6cc6b4476fe16e683be"
+    "headSha": "744da3de5703d95713137435dae1014f46d7dda8"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh-shio — 社区版本机部署运维套件 for DeepSeek Harness (dsh): install / start / monitor, backup & restore, diagnose and quarantine broken plugins (unofficial) · 安装 / 启动监控 / 备份恢复 / 插件诊断与隔离",
     "fork": false,
     "forks": 0,
-    "headSha": "983520089e9a1c316db1e6cc6b4476fe16e683be",
+    "headSha": "744da3de5703d95713137435dae1014f46d7dda8",
     "homepageUrl": null,
     "language": "C#",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT5LdkQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/6ac0f4ec7914a7ec954043c25072ee5cb8b5a1b32b3736c183c8c0a05a94f0c7/sakanamaru/dsh-minato",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/553758671f0677956d259975a4480d2afb6d9ef2ec5b4cf855dbeb29cfc7b427/sakanamaru/dsh-minato",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/140717343?u=adfff3990ffdefea098912444cb4c601f140c925&v=4",
       "login": "sakanamaru"
     },
-    "pushedAt": "2026-10-01T06:55:10Z",
+    "pushedAt": "2026-10-02T09:35:43Z",
     "slug": "sakanamaru/dsh-minato",
     "stars": 3,
     "topics": [
@@ -55,32 +55,41 @@
       "unofficial",
       "windows-tool"
     ],
-    "updatedAt": "2026-10-01T06:55:17Z",
+    "updatedAt": "2026-10-02T09:35:45Z",
     "url": "https://github.com/sakanamaru/dsh-minato"
   },
   "id": "gh:1335025041",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-minato-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:sakanamaru/dsh-minato#744da3de5703d95713137435dae1014f46d7dda8",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./plugin/dsh-minato-bridge/index.js"
+    },
+    "main": "plugin/dsh-minato-bridge/index.js",
+    "name": "dsh-minato-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/6ac0f4ec7914a7ec954043c25072ee5cb8b5a1b32b3736c183c8c0a05a94f0c7/sakanamaru/dsh-minato",
+    "coverUrl": "https://opengraph.githubassets.com/553758671f0677956d259975a4480d2afb6d9ef2ec5b4cf855dbeb29cfc7b427/sakanamaru/dsh-minato",
     "description": "dsh-shio — 社区版本机部署运维套件 for DeepSeek Harness (dsh): install / start / monitor, backup & restore, diagnose and quarantine broken plugins (unofficial) · 安装 / 启动监控 / 备份恢复 / 插件诊断与隔离"
   },
   "readme": {
     "available": true,
-    "excerpt": "English · 简体中文"
+    "excerpt": "A no-terminal-needed installer, monitor, backup and repair toolbox for the DeepSeek Harness (dsh) Web UI. Windows and Linux. Runs locally. No telemetry, no accounts, no uploads."
   },
   "schemaVersion": 1,
   "scripts": {

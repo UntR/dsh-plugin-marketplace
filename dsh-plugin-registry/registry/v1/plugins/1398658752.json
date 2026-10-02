@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "bba5d3c9abe33f89b2c502606af30f7e8d24a6a2"
   },
   "github": {
@@ -47,27 +47,42 @@
   },
   "id": "gh:1398658752",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-aionui-layout",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:tenyding/dsh-aionui-layout#bba5d3c9abe33f89b2c502606af30f7e8d24a6a2",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-aionui-layout",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0c3561aae3b88ea2efe1150f0b216211519b501c5ae7262f53fa787a22602d6b/tenyding/dsh-aionui-layout",
     "description": "AionUi-style two-column right sidebar for the DSH Web GUI, seeded on top of dsh-better-sidebar (preview + files/changes), no build step"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 AionUi 那套右侧面板（预览 + 文件 / 变更）重新拼回 DSH 0.1.7+， 而面板内容 100% 是 dsh-better-sidebar 自己的 tab —— 所以 better-sidebar 的新特性一个都不丢，只是把「它该长什么样」 固定成你习惯的那个样子。"
   },
   "schemaVersion": 1,
   "scripts": {

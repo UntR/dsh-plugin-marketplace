@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "f5b1c748ff2b0591eec0a6c0c2dd1717ae6493ed"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1398649982",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-drag",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ttmouse/dsh-drag#f5b1c748ff2b0591eec0a6c0c2dd1717ae6493ed",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/host.js",
+    "name": "dsh-drag",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/42beca14bd5a4c6db0612ac098d823f973582f1e296954b71dcc305ef52dcfa8/ttmouse/dsh-drag",
     "description": "Drag a conversation row from the DSH web sidebar onto the chat area to insert it into the composer draft as a session-reference chip."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把左侧边栏会话列表里的一个会话拖到聊天记录区域松开，一条规范的会话引用 （@标题 mention）就会以引用 chip 的形式插进当前输入草稿—— 发送前还能再检查一眼。dsh Web GUI 插件（DSH 0.1.5-rc.x）。"
   },
   "schemaVersion": 1,
   "scripts": {

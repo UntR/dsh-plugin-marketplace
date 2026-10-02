@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "e31671b10698a3d692bd4fd0e74a5938d6ca588e"
   },
   "github": {
@@ -45,27 +45,36 @@
   },
   "id": "gh:1399348150",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-imagegen",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dong2007-png/dsh-imagegen#e31671b10698a3d692bd4fd0e74a5938d6ca588e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-imagegen",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d925d4f8f649d0c4086a054b890062fcb7a226ea0defb5a1acb36ecd7b2b5669/dong2007-png/dsh-imagegen",
     "description": "DSH plugin: generate images via a New API relay (tools: generate_image, list_image_models)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 用的图片生成插件：直接调 New API 中转站（guaihub 等）的 OpenAI 风格接口出图，图片会显示在对话的工具卡片里，同时可以落盘到工作区。"
   },
   "schemaVersion": 1,
   "scripts": {

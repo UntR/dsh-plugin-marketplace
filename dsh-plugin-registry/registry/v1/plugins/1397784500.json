@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "2a8e21a0a47ae03ec04b58fb72bcd9f29cc7e2a9"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1397784500",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "yoka-dsh-billing",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:niliemi/dsh-billing#2a8e21a0a47ae03ec04b58fb72bcd9f29cc7e2a9",
+    "version": "0.2.8"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "yoka-dsh-billing",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.8"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3799f8069c7c6bbcd7de18d88d347f836cda7f910029a739ae2cd11795c47550/niliemi/dsh-billing",
     "description": "DSH plugin: prices tokens with the official model price table, shows the running cost beside the composer context meter, and blocks a turn once spend passes the ceiling you set."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH Desktop 里按 token 计费：聊天输入框下方、token 环左边常驻显示本会话与全局两条费用，左侧边栏底部显示 DeepSeek 账号余额；每条费用右边有一个 ↺ 可重置计费起点（本次归零、历史只进累计），达到上限时宿主在该轮开始前阻断 LLM 请求。"
   },
   "schemaVersion": 1,
   "scripts": {

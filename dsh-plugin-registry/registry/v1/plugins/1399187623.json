@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "dc5f0608c33794b98d9d2db494cab5b158d10fa3"
   },
   "github": {
@@ -47,27 +47,42 @@
   },
   "id": "gh:1399187623",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-revise",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Lostforest7/dsh-revise#dc5f0608c33794b98d9d2db494cab5b158d10fa3",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./vite": {
+        "import": "./lib/vite.js",
+        "types": "./lib/vite.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-revise",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/44f5eefdf38e01fc60d49a533f4b597eecc1c4a350e6f370c7a258baec7410e4/Lostforest7/dsh-revise",
     "description": "Visual frontend revisions for DeepSeek Harness: point at elements, send changes, and review screenshots + code diffs."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Point at your frontend. Ask for changes. Review what actually changed."
   },
   "schemaVersion": 1,
   "scripts": {

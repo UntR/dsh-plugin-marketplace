@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
-    "headSha": "2539440a403d236204a4d4005301b4433ee26bab"
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
+    "headSha": "5c031d1f45f0269b569a165f806a50d7508b02c3"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh plugin: pushes archived session transcripts into an Obsidian vault as Markdown with YAML frontmatter, deduped by content hash (/obsidian-push)",
     "fork": false,
     "forks": 0,
-    "headSha": "2539440a403d236204a4d4005301b4433ee26bab",
+    "headSha": "5c031d1f45f0269b569a165f806a50d7508b02c3",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUv6oIA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/fb4acbb04d6543ec991565a966ee66c62ee6c4ddd227fb60fb5b424f322016bb/121212165/dsh-plugin-obsidian-push",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d2b924e4164acf6212452d7ff6a51794f8ec47bd4d447c1e910d2d9b85cef82e/121212165/dsh-plugin-obsidian-push",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/185351029?v=4",
       "login": "121212165"
     },
-    "pushedAt": "2026-10-01T09:56:31Z",
+    "pushedAt": "2026-10-02T01:34:17Z",
     "slug": "121212165/dsh-plugin-obsidian-push",
     "stars": 0,
     "topics": [
@@ -39,38 +39,57 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-01T09:56:36Z",
+    "updatedAt": "2026-10-02T01:34:20Z",
     "url": "https://github.com/121212165/dsh-plugin-obsidian-push"
   },
   "id": "gh:1392420896",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-obsidian-push",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:121212165/dsh-plugin-obsidian-push#5c031d1f45f0269b569a165f806a50d7508b02c3",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./icon.svg": "./icon.svg",
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json",
+      "./render": {
+        "default": "./lib/transcript/render.js",
+        "types": "./lib/types/transcript/render.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-obsidian-push",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/fb4acbb04d6543ec991565a966ee66c62ee6c4ddd227fb60fb5b424f322016bb/121212165/dsh-plugin-obsidian-push",
+    "coverUrl": "https://opengraph.githubassets.com/d2b924e4164acf6212452d7ff6a51794f8ec47bd4d447c1e910d2d9b85cef82e/121212165/dsh-plugin-obsidian-push",
     "description": "dsh plugin: pushes archived session transcripts into an Obsidian vault as Markdown with YAML frontmatter, deduped by content hash (/obsidian-push)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "EN · Pushes archived transcripts (from dsh-plugin-transcript) into an Obsidian vault as Markdown with YAML frontmatter, filename YYYY-MM-DD-.md, deduped by content hash so a re-run skips what has not changed (/obsidian-push). · 12 node --test green (incl. YAML quote escaping) · l"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
-    "headSha": "a427a485319a63ef7ebb3c604cb943a0a31f1853"
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
+    "headSha": "31ec8ee8170aa09109fa071f4d88cb7b442eb9de"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "OpenCode on DeepSeek Harness — DSH plugin that keeps OpenCode Zen + Go free-tier models working: session affinity, gateway origin headers, and tool-schema fallback.",
     "fork": false,
     "forks": 0,
-    "headSha": "a427a485319a63ef7ebb3c604cb943a0a31f1853",
+    "headSha": "31ec8ee8170aa09109fa071f4d88cb7b442eb9de",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,13 +25,13 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU1tPmQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/912ac0f61eab7876666a575fd0a946e1d5433349d0b292b544addcd3773c5403/viztor/dsh-opencode",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/efc2cd565f18c0869cd5db0edf23adc1959c29d4b3f6b0ef73dc7633aeee0e6f/viztor/dsh-opencode-patch",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/3511050?v=4",
       "login": "viztor"
     },
-    "pushedAt": "2026-10-01T10:34:53Z",
-    "slug": "viztor/dsh-opencode",
+    "pushedAt": "2026-10-02T01:47:38Z",
+    "slug": "viztor/dsh-opencode-patch",
     "stars": 1,
     "topics": [
       "cordis",
@@ -43,38 +43,58 @@
       "session-affinity",
       "typescript"
     ],
-    "updatedAt": "2026-10-01T10:34:57Z",
-    "url": "https://github.com/viztor/dsh-opencode"
+    "updatedAt": "2026-10-02T01:47:42Z",
+    "url": "https://github.com/viztor/dsh-opencode-patch"
   },
   "id": "gh:1398493081",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-opencode-patch",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-opencode-patch@0.10.1",
+    "version": "0.10.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.10.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs",
+        "import": "./lib/index.mjs",
+        "types": "./lib/index.d.mts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-opencode-patch",
+    "status": "valid",
+    "type": "module",
+    "version": "0.10.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/912ac0f61eab7876666a575fd0a946e1d5433349d0b292b544addcd3773c5403/viztor/dsh-opencode",
+    "coverUrl": "https://opengraph.githubassets.com/efc2cd565f18c0869cd5db0edf23adc1959c29d4b3f6b0ef73dc7633aeee0e6f/viztor/dsh-opencode-patch",
     "description": "OpenCode on DeepSeek Harness — DSH plugin that keeps OpenCode Zen + Go free-tier models working: session affinity, gateway origin headers, and tool-schema fallback."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "---"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

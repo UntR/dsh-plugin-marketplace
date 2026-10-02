@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
-    "headSha": "9e1bbdeca6fadb133e63eaf277e25d64afd7e5a1"
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
+    "headSha": "4d0dc904b807f83d7887d987fbb3bd5b349f84f6"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh plugin: full-text search across archived session transcripts, reading the JSONL sidecars written by dsh-plugin-transcript (/find, session_search)",
     "fork": false,
     "forks": 0,
-    "headSha": "9e1bbdeca6fadb133e63eaf277e25d64afd7e5a1",
+    "headSha": "4d0dc904b807f83d7887d987fbb3bd5b349f84f6",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUv6mug",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/70cfe2b916111e341bf1588d712bd74680a7194a4e47ef8a28150e69e7aa08ed/121212165/dsh-plugin-transcript-search",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c2b975b3dd45876e26ede86715e7d88f1fbe0a4fdd48c558c0565307ffa4da37/121212165/dsh-plugin-transcript-search",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/185351029?v=4",
       "login": "121212165"
     },
-    "pushedAt": "2026-10-01T09:59:35Z",
+    "pushedAt": "2026-10-02T00:26:22Z",
     "slug": "121212165/dsh-plugin-transcript-search",
     "stars": 0,
     "topics": [
@@ -39,38 +39,55 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-01T09:59:38Z",
+    "updatedAt": "2026-10-02T00:26:26Z",
     "url": "https://github.com/121212165/dsh-plugin-transcript-search"
   },
   "id": "gh:1392420538",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-transcript-search",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:121212165/dsh-plugin-transcript-search#4d0dc904b807f83d7887d987fbb3bd5b349f84f6",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./render": {
+        "default": "./lib/transcript/render.js",
+        "types": "./lib/types/transcript/render.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-transcript-search",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/70cfe2b916111e341bf1588d712bd74680a7194a4e47ef8a28150e69e7aa08ed/121212165/dsh-plugin-transcript-search",
+    "coverUrl": "https://opengraph.githubassets.com/c2b975b3dd45876e26ede86715e7d88f1fbe0a4fdd48c558c0565307ffa4da37/121212165/dsh-plugin-transcript-search",
     "description": "dsh plugin: full-text search across archived session transcripts, reading the JSONL sidecars written by dsh-plugin-transcript (/find, session_search)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "EN · Full-text search over the transcripts dsh-plugin-transcript writes: /find and the sessionsearch tool return ranked hits with excerpts, reading the month JSONL files directly. · 5 node --test green · the line-format contract is kept field-for-field with the writer · not live-"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "ba51612f9a0d054b7496c452b21da867cafa0420"
   },
   "github": {
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-codex-auto-approval",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f9ae178d23c9235a5c53000c374e01e5b7a2d16b5e7171918f3fcf1e2fd6b4d3/MagicSpirit007/CodexAutoApprovalDSH",
     "description": "Auto approval tool for DSH"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "For long-running tasks, manual approvals are exhausting, while granting full access is nerve-racking. So I ported the Guardian reviewer behind “Approve for me”, my favorite auto-approval feature in Codex CLI, into a standalone DeepSeek Harness (DSH) plugin, including risk assessm"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "8b04b77297af477c68ac5f367b7f2b8a3b661ce1"
   },
   "github": {
@@ -60,27 +60,41 @@
   },
   "id": "gh:1398536430",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-auto-review-jev",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xlennart/dsh-auto-review-jev#8b04b77297af477c68ac5f367b7f2b8a3b661ce1",
+    "version": "0.2.0-jev.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-auto-review-jev",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0-jev.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/325560557cd9719dcc8ca6992c6d56414813bc9c033d880fedaa823b111e88e3/xlennart/dsh-auto-review-jev",
     "description": "DeepSeek Harness 审批守护者：权限请求先由审查模型裁决。内置 System One 决策 API 后端（TypeSafe Jev / 硅基流动 systemone / 自部署 Laya）、onLowConfidence 低置信度策略与 allowRules 免审白名单。fork 自 gbthui/dsh-auto-review。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "安装 · 快速开始 · 工作方式 · 配置 · System One · 策略 · 信任边界 ·"
   },
   "schemaVersion": 1,
   "scripts": {

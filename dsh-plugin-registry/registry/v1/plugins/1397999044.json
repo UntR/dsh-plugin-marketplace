@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-02T10:21:15.954Z",
+    "enrichmentStatus": "ok",
     "headSha": "57e11677cdecd9443df32b550150b92cd492ba8a"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1397999044",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@kewen/dsh-model-controls",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Hu9956/DSH-model-controls#57e11677cdecd9443df32b550150b92cd492ba8a",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@kewen/dsh-model-controls",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/50356cbda8641342a0dc04efb98efc1da60310d7344e04ea1c91622ce9e693a7/Hu9956/DSH-model-controls",
     "description": "切换供应商、模型与思考强度，每个模型各自记住档位。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "官方 DeepSeek Harness 的模型控制插件：切换模型、调节思考强度、收藏模型与调整供应商顺序。源码、构建工具和产物均在本目录；构建不需要 DSH003。运行时使用宿主提供的 React、插槽、模型目录和 MenuSurface。界面名称为 DSH 模型控制器。"
   },
   "schemaVersion": 1,
   "scripts": {
