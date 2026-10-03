@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-02T10:21:15.954Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-03T09:38:53.749Z",
+    "enrichmentStatus": "ok",
     "headSha": "478a8e96b87e82c45ebb1e62de31f63df317f253"
   },
   "github": {
@@ -47,27 +47,37 @@
   },
   "id": "gh:1376244082",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-llm-ollama-native",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:JoblessJoe/dsh-llm-ollama-native#478a8e96b87e82c45ebb1e62de31f63df317f253",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./adapter": "./adapter.js"
+    },
+    "main": "./index.js",
+    "name": "dsh-llm-ollama-native",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a915c70cb21a1e2e64ec4afd6c299f8dd51d01f414a48aab0f9b2fe03aaf0b02/JoblessJoe/dsh-llm-ollama-native",
     "description": "Ollama native /api/chat adapter for DeepSeek Harness (dsh): makes reasoningEffort off/low/medium/high actually work."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An LLM adapter for DeepSeek Harness (dsh) that talks to Ollama's native /api/chat endpoint instead of its OpenAI-compatible one, so reasoningEffort: off / low / medium / high actually changes how long your local model thinks."
   },
   "schemaVersion": 1,
   "scripts": {

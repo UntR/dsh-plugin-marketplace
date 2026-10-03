@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-02T10:21:15.954Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-03T09:38:53.749Z",
+    "enrichmentStatus": "ok",
     "headSha": "d1493975424789b4ba68631432632d5cf414c182"
   },
   "github": {
@@ -43,27 +43,41 @@
   },
   "id": "gh:1377231331",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-new-session",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yoggu/dsh-new-session#d1493975424789b4ba68631432632d5cf414c182",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client.js",
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-new-session",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6fe370dcc9a70e2adad6c8fa2ca74090b54aee3955be6e23e00286f9790a4653/yoggu/dsh-new-session",
     "description": "Adds a /new command to start and open a new Session in the current Workspace."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Adds /new to the DSH Web input. It opens a session in the current workspace (or the most recently used workspace), like the workspace + button. An existing empty session may be reused. Your unsent composer draft is not submitted."
   },
   "schemaVersion": 1,
   "scripts": {

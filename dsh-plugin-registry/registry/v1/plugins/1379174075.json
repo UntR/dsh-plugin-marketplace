@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-02T10:21:15.954Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-03T09:38:53.749Z",
+    "enrichmentStatus": "ok",
     "headSha": "a44e63fad40b9a670488d5b3211c60213ea7c44f"
   },
   "github": {
@@ -41,27 +41,43 @@
   },
   "id": "gh:1379174075",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@leaf233/dsh-model-gateway",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Leafyezi233/dsh-model-relay#a44e63fad40b9a670488d5b3211c60213ea7c44f",
+    "version": "1.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.2.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./compatibility.json": "./compatibility.json",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@leaf233/dsh-model-gateway",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c26ba69f6895a4ec34a6d7c3ac58e61955f9cc88405adb7c74801be900892f40/Leafyezi233/dsh-model-relay",
     "description": "把deepseek harness里已经配好的模型中转出去，让其他项目可以使用。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 挂一个 OpenAI 兼容的 /v1 接口，把 harness 里已注册的大模型（比如 @tnnevol/dsh-codebuddy 里的 CodeBuddy 模型）反代出去，其他项目用标准 OpenAI 客户端就能调用。"
   },
   "schemaVersion": 1,
   "scripts": {

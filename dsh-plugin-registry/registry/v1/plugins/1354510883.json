@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-02T10:21:15.954Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-03T09:38:53.749Z",
+    "enrichmentStatus": "ok",
     "headSha": "10048be499a0542b2561da2c731dc3d762d521d6"
   },
   "github": {
@@ -38,27 +38,44 @@
   },
   "id": "gh:1354510883",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-jumpserver",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:pc439527/dsh-jumpserver#10048be499a0542b2561da2c731dc3d762d521d6",
+    "version": "0.4.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-jumpserver",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ebeab4c6dc85ac744ead3615ec9ce2b2be8dc6c5fe51f2ac4566438da2be0341/pc439527/dsh-jumpserver",
     "description": "JumpServer (KoKo) bastion connector plugin for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "然后在设置 → 插件 → JumpServer 填写堡垒机 host / 端口 / 用户名 / 密码（推荐权限模式 READONLY），点卡片内的 测试连接 验证（独立一次性会话，不打扰正在运行的 Agent 会话）。"
   },
   "schemaVersion": 1,
   "scripts": {

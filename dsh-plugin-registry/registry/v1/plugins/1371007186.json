@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-02T10:21:15.954Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-03T09:38:53.749Z",
+    "enrichmentStatus": "ok",
     "headSha": "e3f200f27ad3ee3f0a58d488c590ae2b35612eea"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1371007186",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@wjj-8283/dsh-opencode-go-proxy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wjj-8283/dsh-opencode-go-proxy#e3f200f27ad3ee3f0a58d488c590ae2b35612eea",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json",
+      "./proxy": "./proxy.js"
+    },
+    "main": "index.js",
+    "name": "@wjj-8283/dsh-opencode-go-proxy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/99b77054e5bc2c36eac727019f5d022e22c0abf93295fc783b6f38f77e1ad829/wjj-8283/dsh-opencode-go-proxy",
     "description": "适用于OpenCode Go的反代插件，用来解决OpenCode Go需要请求头不能直接访问的问题"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：本机 OpenCode Go 反代理。dsh 启动时自动把反代理挂到 DSH 自己的 webserver 上(与 DSH 共用端口)，转发到 OpenCode Go 上游(默认 https://opencode.ai)， 并在发包前注入 OpenCode 要求的会话/请求头(x-opencode-session / x-opencode-request / x-opencode-client / x-opencode-project / User-Agent)。"
   },
   "schemaVersion": 1,
   "scripts": {

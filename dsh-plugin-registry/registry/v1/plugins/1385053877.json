@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-02T10:21:15.954Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-03T09:38:53.749Z",
+    "enrichmentStatus": "ok",
     "headSha": "90536f0edfdafefd2f3be293ff01d090172ae3ab"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1385053877",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-windows-notifier",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ADkun/dsh-windows-notifier#90536f0edfdafefd2f3be293ff01d090172ae3ab",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/plugin.js",
+      "./client": "./src/client.js",
+      "./config": "./src/config.js",
+      "./messages": "./src/messages.js",
+      "./package.json": "./package.json",
+      "./settings": "./src/settings.js",
+      "./src/*": "./src/*"
+    },
+    "main": "src/plugin.js",
+    "name": "dsh-windows-notifier",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/dcf321ec2cdb41f64afe750f25003f264422307eab3f4f8294cb47fc6ee74e1b/ADkun/dsh-windows-notifier",
     "description": "DSH plugin that raises a native Windows toast whenever any DSH conversation needs you: a task finished, a question was asked, or an approval is waiting."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH（DeepSeek Harness）用的 Windows 原生通知插件：任何对话把控制权交还给你的时候，弹一条 Windows 系统通知。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-02T10:21:15.954Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-03T09:38:53.749Z",
+    "enrichmentStatus": "ok",
     "headSha": "fef0c9eeb6c77d3be4d0f7c8b14be484e0161315"
   },
   "github": {
@@ -52,27 +52,46 @@
   },
   "id": "gh:1379241260",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-jev-verify",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-jev-verify@0.7.4",
+    "version": "0.7.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.7.4",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cases": {
+        "default": "./lib/cases.js",
+        "types": "./lib/types/cases.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-jev-verify",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0cb5e8a2af85193d8eef3862c60d24f559051b14440943b82ccaae6c5a9f93a2/xienda/dsh-jev-verify",
-    "description": "Jev (TypeSafe System One decision model) for DeepSeek Harness: jev_decision, jev_overview, jev_guard_status and jev_verify, structured in-chat tool views, a full settings card, an auto-guard (deterministic + Jev risk/loop) and a /jev dashboard. Real API only, measured numbers."
+    "description": "Jev (TypeSafe System One) for DeepSeek Harness: five verdict tools - jev_decision, jev_choose, jev_overview, jev_guard_status, jev_verify - with in-chat views, real system-prompt guidance, a full settings card, an auto-guard (deterministic + Jev risk/loop) and a /jev dashboard. R"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Jev — TypeSafe AI's System One decision model — as a first-class plugin for DeepSeek Harness (dsh)."
   },
   "schemaVersion": 1,
   "scripts": {

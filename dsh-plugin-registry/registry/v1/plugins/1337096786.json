@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-01T10:42:45.296Z",
+    "enrichedAt": "2026-10-03T09:38:53.749Z",
     "enrichmentStatus": "ok",
-    "headSha": "4a191f790210bee228379fb071366067f757a2df"
+    "headSha": "c93651356309588d9098fb9af399621a58239024"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-17T11:49:50Z",
     "databaseId": 1337096786,
     "defaultBranch": "master",
-    "description": "DeepSeek Harness (dsh) Web 插件：每条 AI 回复下显示该轮真实花费（人民币，官方峰谷价）",
+    "description": "DeepSeek Harness (dsh) Web 插件：显示每轮与整个会话的预估费用（人民币、官方峰谷价、缓存读占比；周末与中国法定节假日全天按空闲价）。成本只由本机会话日志里 provider 上报的 token 用量折叠而来，可叠加本机费率表，没有单价的模型只显 token。",
     "fork": false,
     "forks": 0,
-    "headSha": "4a191f790210bee228379fb071366067f757a2df",
+    "headSha": "c93651356309588d9098fb9af399621a58239024",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT7J6Ug",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/980cefab3cdc4f98862040c23c8fb16a9f4b877eab87d0629a50e1d6b77b03b2/WFMinerva/dsh-turn-cost",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/1f54714eb792f15f685bef243303ede498c73364c03007183927addbc14a55ce/WFMinerva/dsh-turn-cost",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/114909767?u=abdeb9951718f53680efdce8fdb13110a080ca43&v=4",
       "login": "WFMinerva"
     },
-    "pushedAt": "2026-09-10T17:48:54Z",
+    "pushedAt": "2026-10-02T22:08:34Z",
     "slug": "WFMinerva/dsh-turn-cost",
     "stars": 0,
     "topics": [
@@ -43,7 +43,7 @@
       "llm-cost",
       "token-cost"
     ],
-    "updatedAt": "2026-09-10T17:49:03Z",
+    "updatedAt": "2026-10-02T22:08:38Z",
     "url": "https://github.com/WFMinerva/dsh-turn-cost"
   },
   "id": "gh:1337096786",
@@ -53,18 +53,19 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-turn-cost@0.1.3",
-    "version": "0.1.3"
+    "spec": "dsh-turn-cost@0.6.2",
+    "version": "0.6.2"
   },
   "npm": {
-    "latestVersion": "0.1.3",
+    "latestVersion": "0.6.2",
     "published": true,
     "repositoryMatches": true
   },
   "package": {
     "exports": {
       ".": {
-        "default": "./lib/index.js"
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
       },
       "./client": {
         "default": "./lib/client.js"
@@ -75,15 +76,15 @@
     "name": "dsh-turn-cost",
     "status": "valid",
     "type": "module",
-    "version": "0.5.2"
+    "version": "0.6.2"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/980cefab3cdc4f98862040c23c8fb16a9f4b877eab87d0629a50e1d6b77b03b2/WFMinerva/dsh-turn-cost",
-    "description": "DeepSeek Harness (dsh) Web 插件：每条 AI 回复下显示该轮真实花费（人民币，官方峰谷价）"
+    "coverUrl": "https://opengraph.githubassets.com/1f54714eb792f15f685bef243303ede498c73364c03007183927addbc14a55ce/WFMinerva/dsh-turn-cost",
+    "description": "DeepSeek Harness (dsh) Web 插件：显示每轮与整个会话的预估费用（人民币、官方峰谷价、缓存读占比；周末与中国法定节假日全天按空闲价）。成本只由本机会话日志里 provider 上报的 token 用量折叠而来，可叠加本机费率表，没有单价的模型只显 token。"
   },
   "readme": {
     "available": true,
-    "excerpt": "DeepSeek Harness（dsh）Web UI 插件：按对话实际用的路由分流显示——官方按量模型（DeepSeek）显示金额（¥），Kimi 订阅显示「本轮 token + 7 天周额度剩余次数 + 加油包余额（¥）」，阿里 Token Plan 订阅显示「本轮 token + 7 天限额剩余比例」；另有会话级累计。"
+    "excerpt": "在 DeepSeek Harness（dsh）Web UI 里显示每轮与整会话的预估费用：按 provider 上报的真实 token 用量与本地费率表计价，人民币结算、峰谷自动分档。"
   },
   "schemaVersion": 1,
   "scripts": {

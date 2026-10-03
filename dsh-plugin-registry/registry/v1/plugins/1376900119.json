@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-02T10:21:15.954Z",
-    "enrichmentStatus": "failed",
-    "headSha": "cabd31c4fb310f1c43b907fbbef1dec30a893941"
+    "enrichedAt": "2026-10-03T09:38:53.749Z",
+    "enrichmentStatus": "ok",
+    "headSha": "7ea94c2e711004f1beb2db6648c39704b41b0910"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-19T08:05:20Z",
     "databaseId": 1376900119,
     "defaultBranch": "main",
-    "description": "DSH 插件｜拼图模式：一个会话只绑一个拼图项目（主文档 + 若干模块文档），AI 主动提问把不确定项变成已定项，用五维算项目健康性；主文档第五节 `## 工作流` 是标准化流水线（一条 = 一个 ### 名字块 + 有序步骤）。文档格式 v6。",
+    "description": "DSH 插件｜拼图模式：把项目拆成主文档 + 若干模块文档，AI 主动提问把不确定项变成已定项，用五维算项目健康性。一个会话可同时绑多个项目，面板有绑定切换条；项目分小 / 中 / 大三档，条目上限随档位放宽或收紧；主文档第五节 `## 工作流` 是标准化流水线（一条 = 一个 ### 名字块 + 有序步骤），命中触发词自动注入。文档格式 v7；与 dsh-infinite-gen-5 同装时按契约共存（段序可协商、六条分工条款、verify:cross 双向核对）。",
     "fork": false,
-    "forks": 0,
-    "headSha": "cabd31c4fb310f1c43b907fbbef1dec30a893941",
+    "forks": 1,
+    "headSha": "7ea94c2e711004f1beb2db6648c39704b41b0910",
     "homepageUrl": "https://github.com/liancha22/dsh-puzzle-mode",
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUhHUFw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e6f0d203b1592b4842122aeaf4a4f81fdf2baaaf9f070d0d281865af9709b357/liancha22/dsh-puzzle-mode",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e6de7cc19c746d2a8b86f621735034774d8c305b460a3bd63bdf4c3b13f4e67c/liancha22/dsh-puzzle-mode",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/318233016?v=4",
       "login": "liancha22"
     },
-    "pushedAt": "2026-10-02T07:54:49Z",
+    "pushedAt": "2026-10-03T07:17:21Z",
     "slug": "liancha22/dsh-puzzle-mode",
     "stars": 2,
     "topics": [
@@ -39,32 +39,43 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-02T07:54:52Z",
+    "updatedAt": "2026-10-03T07:18:02Z",
     "url": "https://github.com/liancha22/dsh-puzzle-mode"
   },
   "id": "gh:1376900119",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-puzzle-mode",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:liancha22/dsh-puzzle-mode#7ea94c2e711004f1beb2db6648c39704b41b0910",
+    "version": "0.23.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-puzzle-mode",
+    "status": "valid",
+    "type": "module",
+    "version": "0.23.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e6f0d203b1592b4842122aeaf4a4f81fdf2baaaf9f070d0d281865af9709b357/liancha22/dsh-puzzle-mode",
-    "description": "DSH 插件｜拼图模式：一个会话只绑一个拼图项目（主文档 + 若干模块文档），AI 主动提问把不确定项变成已定项，用五维算项目健康性；主文档第五节 `## 工作流` 是标准化流水线（一条 = 一个 ### 名字块 + 有序步骤）。文档格式 v6。"
+    "coverUrl": "https://opengraph.githubassets.com/e6de7cc19c746d2a8b86f621735034774d8c305b460a3bd63bdf4c3b13f4e67c/liancha22/dsh-puzzle-mode",
+    "description": "DSH 插件｜拼图模式：把项目拆成主文档 + 若干模块文档，AI 主动提问把不确定项变成已定项，用五维算项目健康性。一个会话可同时绑多个项目，面板有绑定切换条；项目分小 / 中 / 大三档，条目上限随档位放宽或收紧；主文档第五节 `## 工作流` 是标准化流水线（一条 = 一个 ### 名字块 + 有序步骤），命中触发词自动注入。文档格式 v7；与 dsh-infinite-gen-5 同装时按契约共存（段序可协商、六条分工条款、verify:cross 双向核对）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "它解决什么：长会话里，项目的关键决定散落在聊天记录里——AI 会忘，你也没处查。 拼图模式把这些决定落到你随时能打开看的文件里：主文档当查找入口， 模块文档存细节，每条都带源码出处，随时能回查。"
   },
   "schemaVersion": 1,
   "scripts": {
