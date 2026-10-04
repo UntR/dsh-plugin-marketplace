@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "5b2fabff24d09e501ca9ec1ed54ff2102ad0857d"
   },
   "github": {
@@ -53,27 +53,38 @@
   },
   "id": "gh:1399520090",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-office-markdown",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-plugin-office-markdown@1.2.1",
+    "version": "1.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-office-markdown",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cbce6b36fd0b8989a1db1e0a0c64c0e6ec0d98427e1a43b31b554b6f9798eb7e/Z8906/dsh-plugin-office-markdown",
     "description": "读取 Office / PDF 前先转成 Markdown，用一行路径代替整份全文 —— 省 token 的 DSH bundle 插件。0 npm 依赖，转换全在本地，产物归你所有，卸载自动清理 Python 环境。 Convert Office/PDF to Markdown before reading in DeepSeek Harness — one path instead of the whole document."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 读取 Office / PDF 之前，先把它们转成 Markdown —— 进入模型上下文的是一个文件路径，而不是整份文件的原始内容。"
   },
   "schemaVersion": 1,
   "scripts": {

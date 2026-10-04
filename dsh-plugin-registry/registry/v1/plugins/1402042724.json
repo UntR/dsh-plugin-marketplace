@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "99111e3d296fd3b226beb98b48a951fe174f0217"
   },
   "github": {
@@ -45,27 +45,43 @@
   },
   "id": "gh:1402042724",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-archive-manager",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:YOGEMOW/dsh-archive-manager#99111e3d296fd3b226beb98b48a951fe174f0217",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-archive-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9c6e069eda98f7b7e078db8592fe8df893598ef46687f891a2d40847b690d832/YOGEMOW/dsh-archive-manager",
     "description": "Codex-style archived-chats manager for DeepSeek Harness: search, filter, unarchive and permanently delete archived sessions. | DSH 已归档会话管理器"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）的已归档会话管理器：一个类似 Codex「Archived chats」的设置页，用来集中查看、搜索、筛选、取消归档，以及永久删除已归档的会话。"
   },
   "schemaVersion": 1,
   "scripts": {

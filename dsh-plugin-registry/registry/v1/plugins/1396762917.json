@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
-    "headSha": "ddf6b9299782e11677426f4e255eef8211617b7a"
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
+    "headSha": "e6e4f717c899b79bfa4280134920bf0e2ac10d42"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH bundle: native MSYS2 (UCRT64) bash for the DSH shell seam — fork of @deepseek-ai/dsh-bash-local with configurable bash path",
     "fork": false,
     "forks": 0,
-    "headSha": "ddf6b9299782e11677426f4e255eef8211617b7a",
+    "headSha": "e6e4f717c899b79bfa4280134920bf0e2ac10d42",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU0DpJQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/2833e7cccbc71844f89df4c271bc670ce3d8058b412beffa31ae84e91f1dac86/ch1bug/dsh-shell-host",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7fa76a4e633d3050e1e2e7d1523f60ebd0d5108d9481d6fdcea7e13b8e438e03/ch1bug/dsh-shell-host",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/86644859?u=a135c301dcad122070bee0455c22a276b0d3c2f5&v=4",
       "login": "ch1bug"
     },
-    "pushedAt": "2026-10-03T08:19:27Z",
+    "pushedAt": "2026-10-03T11:45:04Z",
     "slug": "ch1bug/dsh-shell-host",
     "stars": 0,
     "topics": [
@@ -41,7 +41,7 @@
       "windows",
       "wsl"
     ],
-    "updatedAt": "2026-10-03T08:19:31Z",
+    "updatedAt": "2026-10-03T11:44:31Z",
     "url": "https://github.com/ch1bug/dsh-shell-host"
   },
   "id": "gh:1396762917",
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,36 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json",
+      "./permission-presets": {
+        "default": "./lib/permission-presets.js",
+        "types": "./lib/types/permission-presets.d.ts"
+      },
+      "./permission-presets/locale/*": "./assets/permission-presets/locale/*",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-shell-host",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1-alpha.1-r1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/2833e7cccbc71844f89df4c271bc670ce3d8058b412beffa31ae84e91f1dac86/ch1bug/dsh-shell-host",
+    "coverUrl": "https://opengraph.githubassets.com/7fa76a4e633d3050e1e2e7d1523f60ebd0d5108d9481d6fdcea7e13b8e438e03/ch1bug/dsh-shell-host",
     "description": "DSH bundle: native MSYS2 (UCRT64) bash for the DSH shell seam — fork of @deepseek-ai/dsh-bash-local with configurable bash path"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH bundle: the host-plane shell executor replacement layer for Windows — a replacement of the built-in platform shell executors with pluggable backends (msys2 default, plain, pwsh; wsl reserved), plus a Plugins-page settings card. MSYS2 is the default backend, not the bundle's i"
   },
   "schemaVersion": 1,
   "scripts": {

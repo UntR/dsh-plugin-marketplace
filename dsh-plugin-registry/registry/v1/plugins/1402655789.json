@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "e6f4ee9501924542d26a3ea97a4f6566e3c7b327"
   },
   "github": {
@@ -44,27 +44,43 @@
   },
   "id": "gh:1402655789",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-prompt-tuner",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lzyyzznl/dsh-prompt-tuner#e6f4ee9501924542d26a3ea97a4f6566e3c7b327",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-prompt-tuner",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e7d13fe708bf640f203b40bbbb53985ea34bf1ea284641a3c779dfffc57ab248/lzyyzznl/dsh-prompt-tuner",
     "description": "Composer prompt tuner for the DeepSeek Harness Web GUI: rewrites the input draft through a model you choose, with a review card, SSE streaming, and a settings page for model / reasoning effort / style / optimization prompt."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH Web 界面里，把输入框里已经写好但还不够明确的内容，一键改写为指向清楚、可直接执行的提示词。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "52af121f390aad048b310ea3177369a6d6e236c7"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU3KNdg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/eb7586aed704360684212237217238b29a93e11206f2a4638838f55a3d6f1082/Sky-lll27/DSH-chat-keeper",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/cfbb410ed7f26e941e0abc8b61d300a9610d1a3e293f7bf4173932e0ef44f233/Sky-lll27/DSH-chat-keeper",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/200900306?u=963b630bec27106e12510a15655a76c611db5cad&v=4",
       "login": "Sky-lll27"
     },
     "pushedAt": "2026-10-02T14:23:43Z",
     "slug": "Sky-lll27/DSH-chat-keeper",
-    "stars": 1,
+    "stars": 2,
     "topics": [
       "chat-history",
       "conversation-manager",
@@ -44,32 +44,47 @@
       "session-manager",
       "tooling"
     ],
-    "updatedAt": "2026-10-02T14:23:44Z",
+    "updatedAt": "2026-10-04T05:22:26Z",
     "url": "https://github.com/Sky-lll27/DSH-chat-keeper"
   },
   "id": "gh:1400016246",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-conversation-manager",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Sky-lll27/DSH-chat-keeper#52af121f390aad048b310ea3177369a6d6e236c7",
+    "version": "0.5.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./index.js"
+      },
+      "./client": {
+        "default": "./dist/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-conversation-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/eb7586aed704360684212237217238b29a93e11206f2a4638838f55a3d6f1082/Sky-lll27/DSH-chat-keeper",
+    "coverUrl": "https://opengraph.githubassets.com/cfbb410ed7f26e941e0abc8b61d300a9610d1a3e293f7bf4173932e0ef44f233/Sky-lll27/DSH-chat-keeper",
     "description": "DSH 对话管家：跨工作区对话总表 · 正文搜索（中文子串 / 未打开的旧对话也能搜 / 定位到命中那句并读出上下文）· 按时间批量归档 · 回收站式删除（可恢复、分批、不删除正在运行的对话）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个真正接入 DeepSeek Harness（DSH） 插件体系的对话管家。它补齐了 DSH 界面缺失的那部分： 跨工作区盘点、正文搜索、批量处理，以及 DSH 本身没有的 —— 删除对话（回收站式，可恢复）。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "1af261d179d833b56ee5503374efeba5762f3b9e"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1402454452",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-math-copy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:YizhouLouisLu/dsh-math-copy#1af261d179d833b56ee5503374efeba5762f3b9e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-math-copy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ea9c13b25d3dee81fa008c739ef8046433db7472761acc056f3eea9131dc5b20/YizhouLouisLu/dsh-math-copy",
     "description": "Copy rendered math in the DSH Web UI as its LaTeX source instead of KaTeX's glyph text."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Copying rendered math from the DSH Web UI puts the formula's LaTeX source on the clipboard, instead of KaTeX's visual glyph text (x2 for x^2)."
   },
   "schemaVersion": 1,
   "scripts": {

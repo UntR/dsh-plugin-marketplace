@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "3f0d4c2f3a9fff40c8aeebfe26c6d556942c4e80"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1401648918",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-hidden-session",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xthreehao/dsh-hidden-session#3f0d4c2f3a9fff40c8aeebfe26c6d556942c4e80",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-hidden-session",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bcf44349c77b2331a08facc26d34d7f42cef432128b6d9d6ec76ffe74d620417/xthreehao/dsh-hidden-session",
     "description": "DSH（DeepSeek Harness）隐藏会话插件：把会话从侧边栏隐藏、可随时恢复。免构建零依赖，契约取自运行中的 0.2.0-rc.2。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把不想出现在侧边栏的会话隐藏起来，随时可以恢复。隐藏只作用于显示层：会话本身、 历史记录、磁盘数据、Workspace 归属都不会被改动。"
   },
   "schemaVersion": 1,
   "scripts": {

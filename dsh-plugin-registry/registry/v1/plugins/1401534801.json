@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "6e14fe20952036185da808bc7647838349613525"
   },
   "github": {
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./lib/client.js": "./lib/client.js",
+      "./lib/index.js": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-client-ui-skill-bar",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c4cc088c75584812eeef023ff7c210cefd3e2bf9b01c0452357b098355ae0b8d/GuaiWuA/dsh-skill-bar",
     "description": "让 DSH 的 skill 变成可浏览的技能栏：搜索、收藏、点一下或拖一下写进输入框。/A browsable skill bar for DSH: search, favorite, and click or drag to insert into the input box."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A skill bar for the DSH web GUI. Every user-invocable skill of the current session becomes a card you can search, favorite, and cast into the composer as / with a click or a drag."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "a6ffb48e9e029afed3e94296aec55503c34c88ea"
   },
   "github": {
@@ -41,27 +41,45 @@
   },
   "id": "gh:1397578066",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-runninghub-plugin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:achenjins/dsh-runninghub-plugin#a6ffb48e9e029afed3e94296aec55503c34c88ea",
+    "version": "0.1.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./host/index.mjs"
+      },
+      "./client": {
+        "default": "./client/client.js"
+      },
+      "./package.json": "./package.json",
+      "./typert": {
+        "default": "./typert.host.mjs"
+      }
+    },
+    "main": "./host/index.mjs",
+    "name": "dsh-runninghub-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5bd57b49ef20d5aa53d3c2a426dc285bce5859906e97f4594bf24493d0839006/achenjins/dsh-runninghub-plugin",
     "description": "一个dsh插件，用于让ai在dsh内调用runninghub在线工作流"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 中调用 RunningHub 工作流，生成图片、视频、音频或其它文件。可以让 AI 帮你配置工作流，也可以在插件面板中管理 Key、节点参数和提示词文档。"
   },
   "schemaVersion": 1,
   "scripts": {

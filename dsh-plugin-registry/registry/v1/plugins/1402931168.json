@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "2f8410e25c17be017cfaf925d7eb920fa03dc292"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1402931168",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-computer-control",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:baldovinmarques391-design/dsh-computer-control#2f8410e25c17be017cfaf925d7eb920fa03dc292",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-computer-control",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/701488de0cd228e488a64a2ecdb818e29d1a06af7469478efeeb6bcee7d6970e/baldovinmarques391-design/dsh-computer-control",
     "description": "DeepSeek Harness bundle: Windows desktop operation as discrete tool calls, each returning the frames captured around the call."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness bundle that turns Windows desktop operation into discrete tool calls. Every call performs exactly one action and returns the frames captured from just before that action until a settle period after it, so the model never has to remember to take a screenshot."
   },
   "schemaVersion": 1,
   "scripts": {

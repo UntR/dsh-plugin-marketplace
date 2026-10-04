@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
-    "headSha": "cd03e9f2bae1c9ec618e209ec32facf917cf9da6"
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
+    "headSha": "9d72a0c6f68c98fdf8ee65aa523012b09ea0ac69"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH host RSI for local LLMs (currently Qwen3.8 27B): per-use continual self-improvement, counter-reason self-check, critic escalation, and memory retrieval.",
     "fork": false,
     "forks": 0,
-    "headSha": "cd03e9f2bae1c9ec618e209ec32facf917cf9da6",
+    "headSha": "9d72a0c6f68c98fdf8ee65aa523012b09ea0ac69",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,43 +25,55 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU4xmTQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/62fdd7f06d12315e8c2eb77b5d1b9020ac405d7efe1f3a978afd242dd8a4615d/pk14742952-AD/dsh-host-rsi",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8d4ddd9eaee7dfcee91a958a23bccee28e01eb8513678bc6413d9bf5f4848bf1/pk14742952-AD/dsh-host-rsi",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/192967623?v=4",
       "login": "pk14742952-AD"
     },
-    "pushedAt": "2026-10-03T03:36:53Z",
+    "pushedAt": "2026-10-03T12:27:28Z",
     "slug": "pk14742952-AD/dsh-host-rsi",
-    "stars": 9,
+    "stars": 10,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-03T09:28:13Z",
+    "updatedAt": "2026-10-03T12:26:02Z",
     "url": "https://github.com/pk14742952-AD/dsh-host-rsi"
   },
   "id": "gh:1401710157",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-host-rsi",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:pk14742952-AD/dsh-host-rsi#9d72a0c6f68c98fdf8ee65aa523012b09ea0ac69",
+    "version": "0.1.11"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-host-rsi",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.11"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/62fdd7f06d12315e8c2eb77b5d1b9020ac405d7efe1f3a978afd242dd8a4615d/pk14742952-AD/dsh-host-rsi",
+    "coverUrl": "https://opengraph.githubassets.com/8d4ddd9eaee7dfcee91a958a23bccee28e01eb8513678bc6413d9bf5f4848bf1/pk14742952-AD/dsh-host-rsi",
     "description": "DSH host RSI for local LLMs (currently Qwen3.8 27B): per-use continual self-improvement, counter-reason self-check, critic escalation, and memory retrieval."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 做的通用宿主插件，默认面向本地大模型调参；当前重点覆盖 Qwen3.8-27B 与 Qwen3.8 Flash 等本地 27B/轻量模型，也兼容 API 模型。 插件不做模型权重修改，只做每次使用持续自进化的宿主侧记忆层，以 DSH 宿主插件形式实现。 每次使用：模型先\"反问式\"自检（counter-reason）自己的答案；可信教训被保存并在下次注入； 便宜方法没解决时，深度批评轮自动升级。通用模式：无需针对特定任务的评分器。"
   },
   "schemaVersion": 1,
   "scripts": {

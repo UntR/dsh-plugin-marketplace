@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
-    "headSha": "237af1136e03197c5a060d6c423921cd476e6d5d"
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
+    "headSha": "40041897163d9a904cb63269331e82feb769ab1c"
   },
   "github": {
     "archived": false,
@@ -17,19 +17,19 @@
     "description": "Pi-style Code Mode for DeepSeek Harness (DSH): Programmatic Tool Calling via QuickJS-WASM sandbox",
     "fork": false,
     "forks": 0,
-    "headSha": "237af1136e03197c5a060d6c423921cd476e6d5d",
+    "headSha": "40041897163d9a904cb63269331e82feb769ab1c",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOU4x7bA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a5c0015fc7bfbdbaca6924c7c7526ea13c4793646e532f1fa51ff90519e73022/Yum-wu/dsh-plugin-codemode",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5ba3f8d0bc9e3ae00a1bccbbca8b8f2e33dd4962d6b3bae843fed79189f582a9/Yum-wu/dsh-plugin-codemode",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/118118663?v=4",
       "login": "Yum-wu"
     },
-    "pushedAt": "2026-10-02T17:29:30Z",
+    "pushedAt": "2026-10-04T10:10:24Z",
     "slug": "Yum-wu/dsh-plugin-codemode",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "ai-agents",
       "codemode",
@@ -37,7 +37,7 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-02T17:29:34Z",
+    "updatedAt": "2026-10-04T10:10:28Z",
     "url": "https://github.com/Yum-wu/dsh-plugin-codemode"
   },
   "id": "gh:1401715564",
@@ -45,24 +45,38 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-codemode",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a5c0015fc7bfbdbaca6924c7c7526ea13c4793646e532f1fa51ff90519e73022/Yum-wu/dsh-plugin-codemode",
+    "coverUrl": "https://opengraph.githubassets.com/5ba3f8d0bc9e3ae00a1bccbbca8b8f2e33dd4962d6b3bae843fed79189f582a9/Yum-wu/dsh-plugin-codemode",
     "description": "Pi-style Code Mode for DeepSeek Harness (DSH): Programmatic Tool Calling via QuickJS-WASM sandbox"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Pi-style Code Mode (Programmatic Tool Calling) for DeepSeek Harness (DSH). Turn verbose O(N) multi-turn ReAct loops into a single O(1) JavaScript orchestration script executed in an isolated memory sandbox."
   },
   "schemaVersion": 1,
   "scripts": {

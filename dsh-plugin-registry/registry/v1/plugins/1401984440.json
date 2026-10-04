@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "e0cf98b8d42b461a5d535828ebcf36ab8cc89547"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1401984440",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-harness-pilot",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Lawrence7y/dsh-harness-pilot#e0cf98b8d42b461a5d535828ebcf36ab8cc89547",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-harness-pilot",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f69be4a718347e87ce96dcf39c350f8d2c2e476ed5f19cd47e1cd66754e1c5cd/Lawrence7y/dsh-harness-pilot",
     "description": "把其他 agent harness（opencode / Antigravity / claude / codex / ZCode / MiMo / Cursor / Qoder …）接入 DeepSeek Harness：作为 DSH 子代理派发任务、指定各家模型，并在设置页查看已配置的 harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把其他 agent harness 接入 DeepSeek Harness：既能作为 DSH 的子代理派发任务，也能以窗口级方式交互操控它们。不依赖截图 OCR —— 优先走协议与文本通道，截图只在最后兜底。"
   },
   "schemaVersion": 1,
   "scripts": {

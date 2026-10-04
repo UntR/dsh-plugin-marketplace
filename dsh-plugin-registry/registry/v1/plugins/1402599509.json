@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "43d7e4bf9c3cd7365310574dace3a765150c651f"
   },
   "github": {
@@ -49,24 +49,36 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/index.js",
+      "./client": "./dist/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-plugin-appshot",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/90dce1fe6c828d0955f2a06cc2a03e2f852e38975b0f7f4376a45b8c0d7b9abd/daoyu1993-lab/dsh-plugin-appshot",
     "description": "DeepSeek Harness (DSH) appshot plugin — DSH 0.2.0-rc.2 port (crash-proof config store) + macOS ⌘⇧A region capture. Fork of TaurusWood/dsh-plugin-appshot (MIT)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "项目主页（GitHub Pages）： https://appshot.twoodbyte.top/"
   },
   "schemaVersion": 1,
   "scripts": {

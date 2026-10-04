@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "101d3ef79ec7558ff4eda31a635ad246c3ff20b4"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU50vyQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3b9433a92a28d73d1ba6bf885bc0cc7aa4e01a686fc0d9fc258d730468cdb82d/wbb316/dsh-comfyui-image",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/04291c600f379d5d37643e522b39ba39b3b4f469925ba8134163172934fb029a/wbb316/dsh-comfyui-image",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/234775990?v=4",
       "login": "wbb316"
     },
     "pushedAt": "2026-10-03T08:09:01Z",
     "slug": "wbb316/dsh-comfyui-image",
-    "stars": 1,
+    "stars": 2,
     "topics": [
       "comfyui",
       "cordis",
@@ -44,32 +44,42 @@
       "stable-diffusion",
       "text-to-image"
     ],
-    "updatedAt": "2026-10-03T08:10:56Z",
+    "updatedAt": "2026-10-03T18:05:25Z",
     "url": "https://github.com/wbb316/dsh-comfyui-image"
   },
   "id": "gh:1402810313",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-comfyui-image",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wbb316/dsh-comfyui-image#101d3ef79ec7558ff4eda31a635ad246c3ff20b4",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-comfyui-image",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3b9433a92a28d73d1ba6bf885bc0cc7aa4e01a686fc0d9fc258d730468cdb82d/wbb316/dsh-comfyui-image",
+    "coverUrl": "https://opengraph.githubassets.com/04291c600f379d5d37643e522b39ba39b3b4f469925ba8134163172934fb029a/wbb316/dsh-comfyui-image",
     "description": "DSH（DeepSeek Harness）的本地 ComfyUI 图片生成插件：一个 generate_image 工具覆盖文生图 / 图生图 / 局部重绘 / 去背景，参数有智能默认值、报错可照做；零第三方运行时依赖，附 doctor 自检与 88 项测试（自带 mock ComfyUI，无需真装）。Local ComfyUI image plugin for DSH — one generate_image tool with text2img / img2img / inpaint / remove-background modes."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）补上图片生成能力的插件：后端接本地 ComfyUI， 对外只暴露一个 Agent 工具 generateimage —— 文生图、图生图、局部重绘、背景移除四合一。 不依赖任何外部商业 API，运行时零第三方依赖（只用 Node 内置的 fetch / FormData）。"
   },
   "schemaVersion": 1,
   "scripts": {

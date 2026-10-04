@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "637cda560c966c5d054da2101a073deb21d57f43"
   },
   "github": {
@@ -45,27 +45,37 @@
   },
   "id": "gh:1402646455",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cc-switch-skills",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:artorias-zj/dsh-cc-switch-skills#637cda560c966c5d054da2101a073deb21d57f43",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-cc-switch-skills",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b134c04b46a086400619ef7560ba9f0dd62c828e983f861a4a03e7306a683cb9/artorias-zj/dsh-cc-switch-skills",
     "description": "DSH plugin: load every skill from the current user's .cc-switch\\skills into DeepSeek Harness at startup"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) plugin that loads every skill in C:\\Users\\.cc-switch\\skills when DSH starts, and watches that directory for adds, renames, and deletes (no restart needed)."
   },
   "schemaVersion": 1,
   "scripts": {

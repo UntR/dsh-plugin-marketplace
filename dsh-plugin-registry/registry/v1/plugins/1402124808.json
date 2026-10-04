@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "e788ec6da97971b3bb991b6156d9762116bc54ca"
   },
   "github": {
@@ -51,27 +51,45 @@
   },
   "id": "gh:1402124808",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@lytharalab/dsh-cons-auto-review",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@lytharalab/dsh-cons-auto-review@1.2.0",
+    "version": "1.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.js",
+        "types": "./src/index.d.ts"
+      },
+      "./config": "./src/config.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./core": "./src/engine.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./permission-presets": "./src/permission-presets.js"
+    },
+    "main": "./src/index.js",
+    "name": "@lytharalab/dsh-cons-auto-review",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f56defdd123c5ca18f1e5884fab04532ccb9f94b5ac5885f302c55b01ddec81b/LytharaLab/DSH-Cons-Auto-Review",
     "description": "DCAR · Deterministic-first auto review for DeepSeek Harness — CAutoR 权限模式：程序先放行，疑难按需交给 LLM"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "@lytharalab/dsh-cons-auto-review 为 DeepSeek Harness 的「权限」菜单添加 CAutoR 模式：先用 DSH「工作区内修改」的确定性路径规则自动放行安全操作，仅将无法由程序自动批准的操作交给 LLM Auto Review。第一层只返回 allow 或 escalate。"
   },
   "schemaVersion": 1,
   "scripts": {

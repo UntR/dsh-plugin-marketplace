@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "e9ec0ad190518d793cda9b3bddefc0846f22d32d"
   },
   "github": {
@@ -46,27 +46,41 @@
   },
   "id": "gh:1401617168",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-sync",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:bitsmug/dsh-session-sync#e9ec0ad190518d793cda9b3bddefc0846f22d32d",
+    "version": "0.2.20"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.20",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./index.mjs",
+        "types": "./types.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.mjs",
+    "name": "dsh-session-sync",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.20"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1262d10f946dfc5b56c586314651d0927e8bacbab8308590a9dbc77df6ae5196/bitsmug/dsh-session-sync",
     "description": "Cross-device DeepSeek Harness session sync: a dedicated git mirror with append-only keep-both conflict resolution (fork files, never silently overwritten), /sync command and sync_* tools"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Cross-device session sync for DeepSeek Harness — a dedicated git mirror of your session store."
   },
   "schemaVersion": 1,
   "scripts": {

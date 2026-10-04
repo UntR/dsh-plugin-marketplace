@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "47f45fcd6842801564ebec082447d6d3bd4f68c0"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1402022231",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-openrouter-imagen-v2",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:fancyui/dsh-openrouter-imagen-v2#47f45fcd6842801564ebec082447d6d3bd4f68c0",
+    "version": "2.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-openrouter-imagen-v2",
+    "status": "valid",
+    "type": "module",
+    "version": "2.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d97b4bcd915b624082669463c76f3d3302abbae6216f16589ad5a9c378eb15cb/fancyui/dsh-openrouter-imagen-v2",
     "description": "dsh plugin: use openrouter models to generate images"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DSH 插件：通过 OpenRouter Image API 生成与编辑图片。提供独立工作台（侧栏入口 + 中央主视图），并提供可供 agent 调用的工具。"
   },
   "schemaVersion": 1,
   "scripts": {

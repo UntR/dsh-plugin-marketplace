@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "065e46fb9834acfc4921fbf9eef194175ef39a11"
   },
   "github": {
@@ -44,27 +44,43 @@
   },
   "id": "gh:1401474004",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-token-counter",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:OkliaoliO/dsh-token-counter#065e46fb9834acfc4921fbf9eef194175ef39a11",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-token-counter",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0114e97ab1d2bc6a93be9f170dff4c6f070a7d0347448081a3844f4a2d144a62/OkliaoliO/dsh-token-counter",
     "description": "A DeepSeek Harness (DSH) plugin that shows the account balance and, after every conversation turn, that turn's token usage and what it cost. Written by DeepSeek-V4.1-Flash at maximum reasoning effort (max). 一个 DeepSeek Harness（DSH）插件：显示账户余额，并在每轮对话结束后显示该轮的 Token 消耗量与本次花费。本插件由 Deep"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) plugin that shows the account balance and, after every conversation turn, that turn's token usage and what it cost."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "360b662d9ba72a362cb3eb81ffa89b2709fa4d7c"
   },
   "github": {
@@ -25,19 +25,19 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU4mWmg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e46debf3faa62f134a0f62927afb20cabd6b3c9c67c209f20486f6586a43839b/yinhong-zhou/jevdo",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/cef021150e427faf4fc0b08ea47797228b43438bf182e5ed8c7de7da456fa230/yinhong-zhou/jevdo",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/92208790?u=773eafa3522cba7ff097a8ba3e9183500c0b96dc&v=4",
       "login": "yinhong-zhou"
     },
     "pushedAt": "2026-10-03T06:37:14Z",
     "slug": "yinhong-zhou/jevdo",
-    "stars": 8,
+    "stars": 16,
     "topics": [
       "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-03T06:37:18Z",
+    "updatedAt": "2026-10-04T08:40:55Z",
     "url": "https://github.com/yinhong-zhou/jevdo"
   },
   "id": "gh:1401525914",
@@ -45,7 +45,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -55,14 +55,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "dist/index.js",
+    "name": "jevaction",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e46debf3faa62f134a0f62927afb20cabd6b3c9c67c209f20486f6586a43839b/yinhong-zhou/jevdo",
+    "coverUrl": "https://opengraph.githubassets.com/cef021150e427faf4fc0b08ea47797228b43438bf182e5ed8c7de7da456fa230/yinhong-zhou/jevdo",
     "description": "Just Jev it. A Jev-first agent loop with reusable actions for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "以 Jev 为调度核心的新一代 harness 架构。 Action 沉淀经验 · Jev 决定下一步 · 大模型只是选项之一"
   },
   "schemaVersion": 1,
   "scripts": {

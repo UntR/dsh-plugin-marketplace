@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "79682e63a56a78fc5d1948356f501706fe9c4c9a"
   },
   "github": {
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      "./package.json": "./package.json",
+      "./runtime": "./runtime.mjs"
+    },
+    "main": null,
+    "name": "dsh-plugin-ctf",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d52d7dd76764c03daa78dc032bb3668bf299de1dda2a2b66c865329063f662be/ClassicXTx/dsh-plugin-ctf",
     "description": "CTF competition mode for DeepSeek Harness: 11 attributed skills, evidence review, portable tools and isolated Playwright MCP."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "适用于 DeepSeek Harness 0.2.0-rc.2 的社区 CTF 插件。在新会话选择 CTF 竞赛，即可使用 11 个技能、证据复核流程、4 个分析脚本和独立 Playwright MCP 浏览器。可在 Web 与 Desktop 插件管理器安装。本仓库与 DeepSeek 官方没有隶属关系。"
   },
   "schemaVersion": 1,
   "scripts": {

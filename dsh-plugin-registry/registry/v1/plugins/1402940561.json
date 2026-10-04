@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "a9ef9439a1e8f7957a402c742bc639919ab1d1c8"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU58skQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/ec3d123af03325f2b072d77364c974ba33b92a80fe51c4e548be78271e2da77a/AK-blank/dsh-plugin-mac-notify",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/dd11c620955bb69539dcced133632a7cb411bb358bcd6bb6adefa7b80e0c07eb/AK-blank/dsh-plugin-mac-notify",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/56591429?v=4",
       "login": "AK-blank"
     },
     "pushedAt": "2026-10-03T09:35:58Z",
     "slug": "AK-blank/dsh-plugin-mac-notify",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "cordis",
       "cordis-plugin",
@@ -43,32 +43,45 @@
       "notification",
       "terminal-notifier"
     ],
-    "updatedAt": "2026-10-03T09:36:02Z",
+    "updatedAt": "2026-10-03T18:37:18Z",
     "url": "https://github.com/AK-blank/dsh-plugin-mac-notify"
   },
   "id": "gh:1402940561",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-mac-notify",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:AK-blank/dsh-plugin-mac-notify#a9ef9439a1e8f7957a402c742bc639919ab1d1c8",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./click": "./lib/click.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-mac-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/ec3d123af03325f2b072d77364c974ba33b92a80fe51c4e548be78271e2da77a/AK-blank/dsh-plugin-mac-notify",
+    "coverUrl": "https://opengraph.githubassets.com/dd11c620955bb69539dcced133632a7cb411bb358bcd6bb6adefa7b80e0c07eb/AK-blank/dsh-plugin-mac-notify",
     "description": "Unofficial DSH (DeepSeek Harness) plugin: macOS Notification Center alerts when a session finishes or needs you — the banner carries the last reply, plays your system alert sound, and clicking it jumps back to the DSH page."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "macOS Notification Center alerts for DSH (DeepSeek Harness) sessions — so an unattended run can call you back to the machine."
   },
   "schemaVersion": 1,
   "scripts": {

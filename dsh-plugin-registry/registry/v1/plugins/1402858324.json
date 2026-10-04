@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
-    "headSha": "e4d259178e9ad2b56b4758640dac4458ed0c4aeb"
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
+    "headSha": "766003ff3e737fed5eb783ce3bca10a4c66a811d"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness 插件：超级搜索 toolkit——集成 TinyFish 结构化检索、AnySearch REST、Bing 免 Key 爬取、Jina 与 DuckDuckGo，接管 DSH 原生 web_search，零 Token 消耗。",
     "fork": false,
     "forks": 0,
-    "headSha": "e4d259178e9ad2b56b4758640dac4458ed0c4aeb",
+    "headSha": "766003ff3e737fed5eb783ce3bca10a4c66a811d",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,49 +25,64 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU53rVA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d0b5523a6620c4df492ad35b8f178f703cd461f0a77b39e0a36fbb79c1fc8fd5/huguangyu666/dsh-plugin-ai-super-search",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7fc986a816c113cb44fdd29c3eea4a7127991f18674f40ead6b7716b7e26c1ba/huguangyu666/dsh-plugin-ai-super-search",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/126304621?u=08c044eb257f727351f48e693463bd14047a95e6&v=4",
       "login": "huguangyu666"
     },
-    "pushedAt": "2026-10-03T09:20:14Z",
+    "pushedAt": "2026-10-03T14:59:17Z",
     "slug": "huguangyu666/dsh-plugin-ai-super-search",
-    "stars": 0,
+    "stars": 2,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-03T09:32:58Z",
+    "updatedAt": "2026-10-04T05:56:39Z",
     "url": "https://github.com/huguangyu666/dsh-plugin-ai-super-search"
   },
   "id": "gh:1402858324",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-ai-super-search",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:huguangyu666/dsh-plugin-ai-super-search#766003ff3e737fed5eb783ce3bca10a4c66a811d",
+    "version": "0.2.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.4",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-ai-super-search",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.4"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d0b5523a6620c4df492ad35b8f178f703cd461f0a77b39e0a36fbb79c1fc8fd5/huguangyu666/dsh-plugin-ai-super-search",
+    "coverUrl": "https://opengraph.githubassets.com/7fc986a816c113cb44fdd29c3eea4a7127991f18674f40ead6b7716b7e26c1ba/huguangyu666/dsh-plugin-ai-super-search",
     "description": "DeepSeek Harness 插件：超级搜索 toolkit——集成 TinyFish 结构化检索、AnySearch REST、Bing 免 Key 爬取、Jina 与 DuckDuckGo，接管 DSH 原生 web_search，零 Token 消耗。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 aisupersearch 的四个核心入口与免费搜索链路做成 DSH 全功能插件：用纯免费通道（TinyFish / AnySearch / Bing 爬取 / Jina / DuckDuckGo）彻底顶替官方 DeepSeek 的付费搜索，零 LLM 额外调用、零 Token 消耗。插件使用 Node 22 原生 fetch 与 fs/promises，不需要 Python 或额外运行时。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "9fbd6e62140805bf1c289f3bd2da35e16fae84fc"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1401530245",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-bilibili",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:CloudWoR/dsh-bilibili#9fbd6e62140805bf1c289f3bd2da35e16fae84fc",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-bilibili",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a0fc3b360e2472d8f5de8afc8470cef7686d5f85825f601ffe0e989cd2eb20d8/CloudWoR/dsh-bilibili",
     "description": "dsh-web嵌入B站视频插件，可登录，但建议使用小号。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DSH 插件（bundle）。浏览器不直连 B 站（其 API 不发 CORS 头），所有出网请求都由插件的 Host 半侧代理。"
   },
   "schemaVersion": 1,
   "scripts": {

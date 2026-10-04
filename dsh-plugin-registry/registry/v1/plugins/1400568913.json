@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "c2c08e858c6cfeb7121f8706d796109c83269f8a"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU3r8UQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/32dd4d77a1c809b6bdd8c9dfce818eb75f8fbaa08c52ced0b11c830a91ebe72f/FrostLeafKEE/dsh-chat-bridge",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/9d13d246f2ed1c3b99e2da42b9fae0c04c25dddf2af8461cb8a77d844a06ceb6/FrostLeafKEE/dsh-chat-bridge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/117099160?u=2f7eebf4a768ede70b4bb0c658811f5ccda75aa0&v=4",
       "login": "FrostLeafKEE"
     },
     "pushedAt": "2026-10-01T18:51:51Z",
     "slug": "FrostLeafKEE/dsh-chat-bridge",
-    "stars": 3,
+    "stars": 4,
     "topics": [
       "conversation-import",
       "deepseek",
@@ -47,7 +47,7 @@
       "webview",
       "workspace"
     ],
-    "updatedAt": "2026-10-02T17:12:49Z",
+    "updatedAt": "2026-10-03T15:46:37Z",
     "url": "https://github.com/FrostLeafKEE/dsh-chat-bridge"
   },
   "id": "gh:1400568913",
@@ -55,7 +55,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -65,14 +65,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-chat-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/32dd4d77a1c809b6bdd8c9dfce818eb75f8fbaa08c52ced0b11c830a91ebe72f/FrostLeafKEE/dsh-chat-bridge",
+    "coverUrl": "https://opengraph.githubassets.com/9d13d246f2ed1c3b99e2da42b9fae0c04c25dddf2af8461cb8a77d844a06ceb6/FrostLeafKEE/dsh-chat-bridge",
     "description": "Switch between DeepSeek web chat and workspaces in DeepSeek Harness. Web history sidebar and one-click conversation import. / 网页聊天、历史侧栏与工作区一键导入。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 中无缝切换网页版聊天与工作区，一键把聊天会话导入工作。"
   },
   "schemaVersion": 1,
   "scripts": {

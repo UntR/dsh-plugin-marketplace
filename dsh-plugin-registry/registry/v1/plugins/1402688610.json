@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "e6b10f1372c629461c2e89449557dab56908f41a"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1402688610",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-subagent-model-switch",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:YuMo-233/dsh-subagent-model-switch#e6b10f1372c629461c2e89449557dab56908f41a",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-subagent-model-switch",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/46f080ef603e00aa55cb002ce7dfbcd280e34f7b919cf50df2c62b23ea1553ba/YuMo-233/dsh-subagent-model-switch",
     "description": "DSH ??:???/?????????????--??????????,????? turn ?????"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 原生的模型切换器对 origin === \"subagent\" 的会话是硬禁用的（子代理会话拿不到模型目录，按下也没反应）；子代理只能在启动那一刻决定模型，之后想换就只能重开一个。这个插件补上这一格：在子代理会话头部渲染与原生同款的下拉菜单，选完当场生效——不重开会话、不丢上下文，并且跨重启记住选择。"
   },
   "schemaVersion": 1,
   "scripts": {

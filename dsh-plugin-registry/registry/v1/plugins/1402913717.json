@@ -1,36 +1,36 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
-    "headSha": "c9c23cfb7b0159d8a7d8dd0c6db0989c1584e699"
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
+    "headSha": "a59c1394e1c49d5be84797ae98e2cdeed732fe57"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-03T08:53:07Z",
     "databaseId": 1402913717,
     "defaultBranch": "main",
-    "description": "DeepSeek Harness plugin: project-scoped automatic full permissions, with one-at-a-time user confirmation for everything outside the project and for every system-level call.",
+    "description": "DeepSeek Harness permission guard: work inside the workspace is never interrupted; only the extra permission a call asks for is judged — machine-safe actions pass, system changes ask with a consequence analysis, destructive ones are refused.",
     "fork": false,
     "forks": 0,
-    "headSha": "c9c23cfb7b0159d8a7d8dd0c6db0989c1584e699",
-    "homepageUrl": null,
+    "headSha": "a59c1394e1c49d5be84797ae98e2cdeed732fe57",
+    "homepageUrl": "https://www.npmjs.com/package/dsh-project-guard",
     "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU57DtQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/6c365f060e7ad04da79ddc6c132024cb07934f39f703e2cd13cd4ba9b3db9fde/Inceptzws/dsh-project-guard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/4b32b76eb629ced1935e9110d76021d4aec9b7be05f8b1cce8969ccc1ce28843/Inceptzws/dsh-project-guard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/61704308?u=d8c50b7858f6fa4ccbcd31a441fdc8355bc0bdcb&v=4",
       "login": "Inceptzws"
     },
-    "pushedAt": "2026-10-03T09:16:51Z",
+    "pushedAt": "2026-10-03T10:45:59Z",
     "slug": "Inceptzws/dsh-project-guard",
     "stars": 0,
     "topics": [
@@ -45,32 +45,44 @@
       "plugin",
       "sandbox"
     ],
-    "updatedAt": "2026-10-03T09:16:54Z",
+    "updatedAt": "2026-10-03T10:46:03Z",
     "url": "https://github.com/Inceptzws/dsh-project-guard"
   },
   "id": "gh:1402913717",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-project-guard",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-project-guard@1.0.1",
+    "version": "1.0.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-project-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/6c365f060e7ad04da79ddc6c132024cb07934f39f703e2cd13cd4ba9b3db9fde/Inceptzws/dsh-project-guard",
-    "description": "DeepSeek Harness plugin: project-scoped automatic full permissions, with one-at-a-time user confirmation for everything outside the project and for every system-level call."
+    "coverUrl": "https://opengraph.githubassets.com/4b32b76eb629ced1935e9110d76021d4aec9b7be05f8b1cce8969ccc1ce28843/Inceptzws/dsh-project-guard",
+    "description": "DeepSeek Harness permission guard: work inside the workspace is never interrupted; only the extra permission a call asks for is judged — machine-safe actions pass, system changes ask with a consequence analysis, destructive ones are refused."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that keeps the sandbox mode you chose and judges only the extra permission a call asks for. Work inside the workspace never involves the plugin at all — the sandbox already confines it. When a call wants more than that mode allows, the test is whether it"
   },
   "schemaVersion": 1,
   "scripts": {

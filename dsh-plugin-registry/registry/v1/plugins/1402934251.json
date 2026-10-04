@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
-    "headSha": "40f53c1e9cbeed4ff8ed43d19d473b015b9741ee"
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
+    "headSha": "c5141c7e795086b47610539646895273b8bc9426"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "归档守护：DSH 会话归档后自动提炼要点，由你自己决定每条归档的去留（保留原文 / 只留摘要 / 彻底删除，删除可恢复）。",
     "fork": false,
     "forks": 0,
-    "headSha": "40f53c1e9cbeed4ff8ed43d19d473b015b9741ee",
+    "headSha": "c5141c7e795086b47610539646895273b8bc9426",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU58T6w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/fcf8ae3667d50764e85f0d1946dbce1c7aca54eb54cdfdfcac6b1ef6d821692e/Isle-ux/dsh-archive-keeper-plugin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ae2790a012d585bc5e7be0f5e98c16d4527c5f743ed21b12c1adb2d507a09b79/Isle-ux/dsh-archive-keeper-plugin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/334047838?v=4",
       "login": "Isle-ux"
     },
-    "pushedAt": "2026-10-03T09:27:10Z",
+    "pushedAt": "2026-10-04T04:34:48Z",
     "slug": "Isle-ux/dsh-archive-keeper-plugin",
     "stars": 1,
     "topics": [
@@ -42,32 +42,48 @@
       "session",
       "typescript"
     ],
-    "updatedAt": "2026-10-03T09:27:13Z",
+    "updatedAt": "2026-10-04T04:34:41Z",
     "url": "https://github.com/Isle-ux/dsh-archive-keeper-plugin"
   },
   "id": "gh:1402934251",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-archive-keeper",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Isle-ux/dsh-archive-keeper-plugin#c5141c7e795086b47610539646895273b8bc9426",
+    "version": "1.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-archive-keeper",
+    "status": "valid",
+    "type": "module",
+    "version": "1.3.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/fcf8ae3667d50764e85f0d1946dbce1c7aca54eb54cdfdfcac6b1ef6d821692e/Isle-ux/dsh-archive-keeper-plugin",
+    "coverUrl": "https://opengraph.githubassets.com/ae2790a012d585bc5e7be0f5e98c16d4527c5f743ed21b12c1adb2d507a09b79/Isle-ux/dsh-archive-keeper-plugin",
     "description": "归档守护：DSH 会话归档后自动提炼要点，由你自己决定每条归档的去留（保留原文 / 只留摘要 / 彻底删除，删除可恢复）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的「归档」只改标记、不动磁盘。时间一长，$DSHHOME/sessions/ 会堆下一大坨再也不会翻的原文。"
   },
   "schemaVersion": 1,
   "scripts": {

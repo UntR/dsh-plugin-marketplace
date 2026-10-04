@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-03T09:38:53.749Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichmentStatus": "ok",
     "headSha": "823966a9411256fece4cb4a4942ef4ca6f5db2ef"
   },
   "github": {
@@ -44,27 +44,37 @@
   },
   "id": "gh:1402052803",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-reload",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:louisyeaaah/dsh-reload#823966a9411256fece4cb4a4942ef4ca6f5db2ef",
+    "version": "0.1.5"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-reload",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b5a7a8e6fa91278965901687e0fb9b3de4064104a47e1ddbb4a3718411d02835/louisyeaaah/dsh-reload",
     "description": "Reload DSH plugins and skills without restarting: reload_plugin re-imports a loaded plugin's own modules and re-applies it (with rollback); reload_skill forces skill re-discovery and diagnoses why a skill is invisible."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Reload DSH plugins and re-discover skills without restarting the app: two tools (reloadplugin, reloadskill) and two slash commands (/reload-plugin, /reload-skill), in one plugin."
   },
   "schemaVersion": 1,
   "scripts": {
