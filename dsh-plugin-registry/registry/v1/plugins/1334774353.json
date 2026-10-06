@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": true,
-    "patch": "./cordis.patch.yml",
-    "patchExists": true
+    "detected": false,
+    "patch": null,
+    "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichedAt": "2026-10-06T10:53:14.327Z",
     "enrichmentStatus": "ok",
-    "headSha": "4c1a667ad4ccc0ef047ab634d4a70e7f2e57ccdf"
+    "headSha": "4f74d36c409490a4054f91a752077e8a677bbdb9"
   },
   "github": {
     "archived": false,
@@ -17,9 +17,9 @@
     "description": "ACP server for DeepSeek Harness — bridges Zed and other IDEs to dsh agents",
     "fork": false,
     "forks": 1,
-    "headSha": "4c1a667ad4ccc0ef047ab634d4a70e7f2e57ccdf",
+    "headSha": "4f74d36c409490a4054f91a752077e8a677bbdb9",
     "homepageUrl": null,
-    "language": "JavaScript",
+    "language": "TypeScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
@@ -30,7 +30,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/195626009?u=5a6bede814699b46bd0fcbe6ac853e9334929051&v=4",
       "login": "cnctem"
     },
-    "pushedAt": "2026-08-31T03:06:50Z",
+    "pushedAt": "2026-10-06T02:51:45Z",
     "slug": "cnctem/dsh-acp",
     "stars": 5,
     "topics": [
@@ -41,30 +41,38 @@
       "dsh-plugin",
       "zed"
     ],
-    "updatedAt": "2026-09-12T14:38:38Z",
+    "updatedAt": "2026-10-06T02:51:48Z",
     "url": "https://github.com/cnctem/dsh-acp"
   },
   "id": "gh:1334774353",
   "install": {
-    "available": true,
-    "packageName": "dsh-acp",
-    "preferred": "github",
-    "reason": null,
+    "available": false,
+    "packageName": null,
+    "preferred": null,
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
-    "spec": "github:cnctem/dsh-acp#4c1a667ad4ccc0ef047ab634d4a70e7f2e57ccdf",
-    "version": "0.1.1"
+    "spec": null,
+    "version": null
   },
   "npm": {
-    "latestVersion": "0.1.30",
-    "published": true,
-    "repositoryMatches": false
+    "latestVersion": null,
+    "published": false,
+    "repositoryMatches": null
   },
   "package": {
-    "main": "lib/index.js",
-    "name": "dsh-acp",
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@cnctem/dsh-acp",
     "status": "valid",
     "type": "module",
-    "version": "0.1.1"
+    "version": "0.2.0-rc.2"
   },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1334774353/fe350c16-af78-4ad1-a64a-d1c6dd74b4cf",
@@ -72,7 +80,7 @@
   },
   "readme": {
     "available": true,
-    "excerpt": "An Agent Client Protocol (ACP) server for DeepSeek Harness (dsh) that lets Zed and other IDEs drive dsh agents over JSON-RPC 2.0 stdio."
+    "excerpt": "An Agent Client Protocol (ACP) server for DeepSeek Harness (dsh) that lets Zed and other editors drive dsh agents over JSON-RPC 2.0 stdio."
   },
   "schemaVersion": 1,
   "scripts": {

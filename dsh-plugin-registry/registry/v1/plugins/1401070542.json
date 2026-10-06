@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichedAt": "2026-10-06T10:53:14.327Z",
     "enrichmentStatus": "ok",
-    "headSha": "9a4ee5a2b2a2ba2766b1c87c7ed256850bf0b172"
+    "headSha": "d14cadb01f8f498e5da78b9e6133037427eb400b"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Run a DeepSeek Harness session against a WSL distro: ctx.shell, ctx.fs and the GUI terminal served from inside the distro, sandboxed with bubblewrap",
     "fork": false,
     "forks": 0,
-    "headSha": "9a4ee5a2b2a2ba2766b1c87c7ed256850bf0b172",
+    "headSha": "d14cadb01f8f498e5da78b9e6133037427eb400b",
     "homepageUrl": "https://github.com/Big-Dao/dsh-plugin-wsl-env#readme",
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU4Kjzg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/4f98c9c9ee7a63cfa64a08a7875d2a22a2c59f1ae4df0d2ee677b9ddc7fc70b3/Big-Dao/dsh-plugin-wsl-env",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/70e4a1b8331a5a48b917ab4ff44ea803e41c763dbddabaccef5681d0755acf4c/Big-Dao/dsh-plugin-wsl-env",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/35797992?u=71b1a0a1ce15b761f483a90fb23eb6386c995758&v=4",
       "login": "Big-Dao"
     },
-    "pushedAt": "2026-10-04T03:15:25Z",
+    "pushedAt": "2026-10-06T09:49:11Z",
     "slug": "Big-Dao/dsh-plugin-wsl-env",
     "stars": 2,
     "topics": [
@@ -41,7 +41,7 @@
       "windows",
       "wsl2"
     ],
-    "updatedAt": "2026-10-04T03:15:29Z",
+    "updatedAt": "2026-10-06T09:49:17Z",
     "url": "https://github.com/Big-Dao/dsh-plugin-wsl-env"
   },
   "id": "gh:1401070542",
@@ -51,46 +51,94 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-plugin-wsl-env@0.6.0",
-    "version": "0.6.0"
+    "spec": "dsh-plugin-wsl-env@0.9.0",
+    "version": "0.9.0"
   },
   "npm": {
-    "latestVersion": "0.6.0",
+    "latestVersion": "0.9.0",
     "published": true,
     "repositoryMatches": true
   },
   "package": {
     "exports": {
-      ".": "./lib/shell.js",
-      "./agent": "./lib/agent.js",
-      "./auto-preset": "./lib/auto-preset.js",
+      ".": {
+        "default": "./lib/shell.js",
+        "types": "./lib/shell.d.ts"
+      },
+      "./agent": {
+        "default": "./lib/agent.js",
+        "types": "./lib/agent.d.ts"
+      },
+      "./auto-preset": {
+        "default": "./lib/auto-preset.js",
+        "types": "./lib/auto-preset.d.ts"
+      },
       "./auto-preset/locale/en.json": "./locale/auto-preset/en.json",
       "./auto-preset/locale/zh.json": "./locale/auto-preset/zh.json",
-      "./fs": "./lib/fs.js",
+      "./file-reference-wsl": {
+        "default": "./lib/file-reference-wsl.js",
+        "types": "./lib/file-reference-wsl.d.ts"
+      },
+      "./fs": {
+        "default": "./lib/fs.js",
+        "types": "./lib/fs.d.ts"
+      },
+      "./fs-routing": {
+        "default": "./lib/fs-routing.js",
+        "types": "./lib/fs-routing.d.ts"
+      },
       "./locale/en.json": "./locale/en.json",
       "./locale/zh.json": "./locale/zh.json",
       "./package.json": "./package.json",
-      "./paths": "./lib/paths.js",
-      "./picker": "./lib/picker.js",
+      "./paths": {
+        "default": "./lib/paths.js",
+        "types": "./lib/paths.d.ts"
+      },
+      "./picker": {
+        "default": "./lib/picker.js",
+        "types": "./lib/picker.d.ts"
+      },
       "./picker/locale/en.json": "./locale/picker/en.json",
       "./picker/locale/zh.json": "./locale/picker/zh.json",
-      "./shell": "./lib/shell.js",
-      "./shell-env": "./lib/shell-env.js",
+      "./preflight": {
+        "default": "./lib/preflight.js",
+        "types": "./lib/preflight.d.ts"
+      },
+      "./preflight/locale/en.json": "./locale/preflight/en.json",
+      "./preflight/locale/zh.json": "./locale/preflight/zh.json",
+      "./shell": {
+        "default": "./lib/shell.js",
+        "types": "./lib/shell.d.ts"
+      },
+      "./shell-env": {
+        "default": "./lib/shell-env.js",
+        "types": "./lib/shell-env.d.ts"
+      },
       "./shell-env/locale/en.json": "./locale/shell-env/en.json",
       "./shell-env/locale/zh.json": "./locale/shell-env/zh.json",
-      "./subprocess": "./lib/subprocess.js",
+      "./subprocess": {
+        "default": "./lib/subprocess.js",
+        "types": "./lib/subprocess.d.ts"
+      },
       "./subprocess/locale/en.json": "./locale/subprocess/en.json",
       "./subprocess/locale/zh.json": "./locale/subprocess/zh.json",
-      "./wsl": "./lib/wsl.js"
+      "./workspace-files-wsl": {
+        "default": "./lib/workspace-files-wsl.js",
+        "types": "./lib/workspace-files-wsl.d.ts"
+      },
+      "./wsl": {
+        "default": "./lib/wsl.js",
+        "types": "./lib/wsl.d.ts"
+      }
     },
     "main": "lib/shell.js",
     "name": "dsh-plugin-wsl-env",
     "status": "valid",
     "type": "module",
-    "version": "0.6.0"
+    "version": "0.9.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/4f98c9c9ee7a63cfa64a08a7875d2a22a2c59f1ae4df0d2ee677b9ddc7fc70b3/Big-Dao/dsh-plugin-wsl-env",
+    "coverUrl": "https://opengraph.githubassets.com/70e4a1b8331a5a48b917ab4ff44ea803e41c763dbddabaccef5681d0755acf4c/Big-Dao/dsh-plugin-wsl-env",
     "description": "Run a DeepSeek Harness session against a WSL distro: ctx.shell, ctx.fs and the GUI terminal served from inside the distro, sandboxed with bubblewrap"
   },
   "readme": {

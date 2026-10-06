@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichedAt": "2026-10-06T10:53:14.327Z",
     "enrichmentStatus": "ok",
-    "headSha": "487e72037c85cd7e2dfa2755464f55ac6e852f8f"
+    "headSha": "af1e2558f4aa935ebdfef654ee1a9ad27567d5b4"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-30T05:43:48Z",
     "databaseId": 1397089188,
     "defaultBranch": "main",
-    "description": "DeepSeek Harness plugin: on task send, pick a different model for subagents and an independent reviewer that validates each subagent's work before it reaches the main agent",
+    "description": "DeepSeek Harness plugin: on task send, pick the model your subagents run on. Enforced in code on every child DSH starts, workflow agents included: the model, a reasoning-effort ceiling and an output-token cap.",
     "fork": false,
     "forks": 0,
-    "headSha": "487e72037c85cd7e2dfa2755464f55ac6e852f8f",
+    "headSha": "af1e2558f4aa935ebdfef654ee1a9ad27567d5b4",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,23 +25,24 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU0XjpA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/55fd3ba70a4b0f75ab1218634c9648ace974f8018dbdca38dc8667cf9469cc51/frederico-kluser/dsh-orquestrator",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/0bd7f1a7f33a14820162fef0150b26c3e289b289a9145c41695c6a958aebe273/frederico-kluser/dsh-orquestrator",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/13138187?u=c2cc7b8c490a510c1028f4a6a24216338772dd45&v=4",
       "login": "frederico-kluser"
     },
-    "pushedAt": "2026-10-03T22:42:50Z",
+    "pushedAt": "2026-10-04T21:55:05Z",
     "slug": "frederico-kluser/dsh-orquestrator",
     "stars": 0,
     "topics": [
-      "code-review",
       "cordis",
       "deepseek-harness",
       "dsh-plugin",
       "llm-agents",
+      "model-routing",
+      "reasoning-effort",
       "subagents"
     ],
-    "updatedAt": "2026-10-03T22:42:53Z",
+    "updatedAt": "2026-10-04T21:55:09Z",
     "url": "https://github.com/frederico-kluser/dsh-orquestrator"
   },
   "id": "gh:1397089188",
@@ -51,8 +52,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:frederico-kluser/dsh-orquestrator#487e72037c85cd7e2dfa2755464f55ac6e852f8f",
-    "version": "0.3.0"
+    "spec": "github:frederico-kluser/dsh-orquestrator#af1e2558f4aa935ebdfef654ee1a9ad27567d5b4",
+    "version": "0.5.1"
   },
   "npm": {
     "latestVersion": null,
@@ -73,15 +74,15 @@
     "name": "dsh-orquestrator",
     "status": "valid",
     "type": "module",
-    "version": "0.3.0"
+    "version": "0.5.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/55fd3ba70a4b0f75ab1218634c9648ace974f8018dbdca38dc8667cf9469cc51/frederico-kluser/dsh-orquestrator",
-    "description": "DeepSeek Harness plugin: on task send, pick a different model for subagents and an independent reviewer that validates each subagent's work before it reaches the main agent"
+    "coverUrl": "https://opengraph.githubassets.com/0bd7f1a7f33a14820162fef0150b26c3e289b289a9145c41695c6a958aebe273/frederico-kluser/dsh-orquestrator",
+    "description": "DeepSeek Harness plugin: on task send, pick the model your subagents run on. Enforced in code on every child DSH starts, workflow agents included: the model, a reasoning-effort ceiling and an output-token cap."
   },
   "readme": {
     "available": true,
-    "excerpt": "A plugin for DeepSeek Harness (DSH). When you send a new task, a dialog in the stock DSH look asks two things:"
+    "excerpt": "A plugin for DeepSeek Harness (DSH). When you send a new task, a dialog in the stock DSH look asks one question:"
   },
   "schemaVersion": 1,
   "scripts": {

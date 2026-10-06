@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-04T10:18:09.179Z",
+    "enrichedAt": "2026-10-06T10:53:14.327Z",
     "enrichmentStatus": "ok",
-    "headSha": "e48ee4b8a5561c46d07f2ca4f62aaeb91e25b492"
+    "headSha": "778576d5a330d41106a15e019b6c6b807f89c29c"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Supervisor daemon for DSH Web resilience — auto-detect crashes, rollback to LKG, report",
     "fork": false,
     "forks": 0,
-    "headSha": "e48ee4b8a5561c46d07f2ca4f62aaeb91e25b492",
+    "headSha": "778576d5a330d41106a15e019b6c6b807f89c29c",
     "homepageUrl": "https://github.com/ddtcorex/dsh-maestro-supervisor",
     "language": "TypeScript",
     "license": {
@@ -25,13 +25,13 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUFjSRw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/9676015e71df7b32c657de3c6d71087cf338ee23b815c7c23f9119b90b4e47fc/ddtcorex/dsh-maestro-supervisor",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/26156f754da7e73048c72d8aa9cfb78b41be11585a375d32d5bbf7f02244174c/ddtcorex/dsh-maestro-core",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/103315997?u=ad490aaef0b858ff4645437082eba607ea6fe7e2&v=4",
       "login": "ddtcorex"
     },
-    "pushedAt": "2026-10-02T13:33:08Z",
-    "slug": "ddtcorex/dsh-maestro-supervisor",
+    "pushedAt": "2026-10-06T08:20:39Z",
+    "slug": "ddtcorex/dsh-maestro-core",
     "stars": 1,
     "topics": [
       "cordis",
@@ -41,21 +41,21 @@
       "resilience",
       "supervisor"
     ],
-    "updatedAt": "2026-10-02T13:33:13Z",
-    "url": "https://github.com/ddtcorex/dsh-maestro-supervisor"
+    "updatedAt": "2026-10-06T08:16:04Z",
+    "url": "https://github.com/ddtcorex/dsh-maestro-core"
   },
   "id": "gh:1347998279",
   "install": {
     "available": true,
-    "packageName": "@ddtcorex/dsh-maestro-supervisor",
+    "packageName": "@ddtcorex/dsh-maestro-core",
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "@ddtcorex/dsh-maestro-supervisor@0.9.0",
-    "version": "0.9.0"
+    "spec": "@ddtcorex/dsh-maestro-core@0.11.1",
+    "version": "0.11.1"
   },
   "npm": {
-    "latestVersion": "0.9.0",
+    "latestVersion": "0.11.1",
     "published": true,
     "repositoryMatches": true
   },
@@ -63,28 +63,33 @@
     "exports": {
       ".": {
         "default": "./lib/index.js",
-        "types": "./lib/types/index.d.ts"
+        "types": "./lib/index.d.ts"
       },
       "./client": {
         "default": "./lib/client.js",
-        "types": "./lib/types/client/auto-reload.d.ts"
+        "types": "./lib/types/client/index.d.ts"
       },
       "./cordis.patch.yml": "./cordis.patch.yml",
-      "./package.json": "./package.json"
+      "./lib/*": "./lib/*",
+      "./package.json": "./package.json",
+      "./store": {
+        "default": "./lib/store/index.js",
+        "types": "./lib/store/index.d.ts"
+      }
     },
     "main": "./lib/index.js",
-    "name": "@ddtcorex/dsh-maestro-supervisor",
+    "name": "@ddtcorex/dsh-maestro-core",
     "status": "valid",
     "type": "module",
-    "version": "0.9.0"
+    "version": "0.11.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/9676015e71df7b32c657de3c6d71087cf338ee23b815c7c23f9119b90b4e47fc/ddtcorex/dsh-maestro-supervisor",
+    "coverUrl": "https://opengraph.githubassets.com/26156f754da7e73048c72d8aa9cfb78b41be11585a375d32d5bbf7f02244174c/ddtcorex/dsh-maestro-core",
     "description": "Supervisor daemon for DSH Web resilience — auto-detect crashes, rollback to LKG, report"
   },
   "readme": {
     "available": true,
-    "excerpt": "Supervisor for DSH Web resilience — Phase 1 Guard & Report + Phase 3 Auto-Resume & Auto-Reload."
+    "excerpt": "Supervisor for DSH Web resilience — Phase 1 Guard & Report + Phase 3 Auto-Resume & Auto-Reload — together with the settings store, the Maestro settings card, the tool guard and the harness-to-harness sync engine that used to be four separate packages."
   },
   "schemaVersion": 1,
   "scripts": {
