@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-06T10:53:14.327Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-07T10:53:28.650Z",
+    "enrichmentStatus": "ok",
     "headSha": "bc4f5beafb534d1f0f18b81d6076cf244d41b2d6"
   },
   "github": {
@@ -52,27 +52,39 @@
   },
   "id": "gh:1373282826",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-math-rigor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:bauerelizabeth07139/math-rigor#bc4f5beafb534d1f0f18b81d6076cf244d41b2d6",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-math-rigor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4b93b2efeb10efdf2b55b9fe6f156c0a133c51707b4f18feb3c86c35906852aa/bauerelizabeth07139/math-rigor",
     "description": "Auditable mathematical proving for DeepSeek Harness: a local stdio MCP server (23 tools), a bundled workflow skill, and the /prove and /audit-proof commands. proven / refuted / inconclusive are never conflated, and unproven steps are reported, not hidden."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "可审计的数学证明工具链，作为 DSH 插件运行：本地 stdio MCP 服务器（23 个工具）+ 流程 skill + 两个 slash 命令"
   },
   "schemaVersion": 1,
   "scripts": {

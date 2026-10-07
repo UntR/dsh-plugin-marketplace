@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-06T10:53:14.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-07T10:53:28.650Z",
+    "enrichmentStatus": "ok",
     "headSha": "59300cc1e09a90486bbe19d313fb7564d34411da"
   },
   "github": {
@@ -57,7 +57,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -67,14 +67,30 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./adapters/openai": {
+        "import": "./dist/adapters/openai.js",
+        "types": "./dist/adapters/openai.d.ts"
+      }
+    },
+    "main": null,
+    "name": "@chrok/braid",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/016f7f529fcfb5d0c3a3062ef581052aad69739d830fdadaf64ba520c7565d12/Epsirom/braid",
     "description": "TypeScript runtime for LLM agent graphs with bounded loops, live updates, isolated Git worktrees, and explicit integration. Framework-agnostic core, OpenAI-compatible runner, and plugins for Pi and DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Braid coordinates multiple LLM agents as a graph. Define each agent's task and which results it needs; Braid runs independent tasks in parallel and passes their outputs to the next step."
   },
   "schemaVersion": 1,
   "scripts": {

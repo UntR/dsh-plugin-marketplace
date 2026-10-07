@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-06T10:53:14.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-07T10:53:28.650Z",
+    "enrichmentStatus": "ok",
     "headSha": "83f5d467dfe2f8d0c2c80ddd7cb083f3690a92b3"
   },
   "github": {
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./preset": "./preset.yml"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-review-cn",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4c05cdd001928003bf757a5422a997d7fcdbb6e7c8ffae0aa3fbf228dc94348d/LM20230311/dsh-code-review",
     "description": "DeepSeek Harness AI 代码审查插件 — /review 一键触发，四维度分析，支持自定义规则"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "第一步： 在 cordis.yml 里加配置："
   },
   "schemaVersion": 1,
   "scripts": {

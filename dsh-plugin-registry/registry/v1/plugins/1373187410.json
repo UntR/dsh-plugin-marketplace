@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-06T10:53:14.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-07T10:53:28.650Z",
+    "enrichmentStatus": "ok",
     "headSha": "8aea31a8dd68e040a6b60755766c2d89299c4eeb"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1373187410",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-usage-stats",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:iuuuuuuuu/dsh-usage-stats#8aea31a8dd68e040a6b60755766c2d89299c4eeb",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.16",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-usage-stats",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0b29963d8975c5528852a73b4b647ee7d945cb018f63a9fbc5530c8cfdceba0e/iuuuuuuuu/dsh-usage-stats",
     "description": "DSH plugin: per-day token usage and time-to-first-token statistics, broken down by workspace and session. Reads local session logs only."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：统计每天的 token 消耗与平均首字延迟，可按工作区与会话拆分。"
   },
   "schemaVersion": 1,
   "scripts": {

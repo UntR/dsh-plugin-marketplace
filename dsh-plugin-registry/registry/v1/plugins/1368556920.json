@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-06T10:53:14.327Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-07T10:53:28.650Z",
+    "enrichmentStatus": "ok",
     "headSha": "4c4874ea0a4c5e712aaab6daa22910c8b095ceac"
   },
   "github": {
@@ -41,33 +41,50 @@
   },
   "id": "gh:1368556920",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-session-import",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:rinneditor/session-import-dsh#4c4874ea0a4c5e712aaab6daa22910c8b095ceac",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-import",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bb85cf78854cb186f8a1860cc792f065f0916aa5390939da8b1977307680ede4/rinneditor/session-import-dsh",
-    "description": ""
+    "description": "将 Codex 本地会话和 DeepSeek Harness 导出的会话 ZIP 导入 DeepSeek Harness（DSH），在确认导入时选择目标工作区和会话模式。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "将 Codex 本地会话和 DeepSeek Harness 导出的会话 ZIP 导入 DeepSeek Harness（DSH），在确认导入时选择目标工作区和会话模式。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
