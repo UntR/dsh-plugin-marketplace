@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-07T10:53:28.650Z",
+    "enrichedAt": "2026-10-08T11:13:23.912Z",
     "enrichmentStatus": "ok",
-    "headSha": "2cfc4e172bfe3165773e1e137c5f5da3ebcc0046"
+    "headSha": "e9e3b5f763cfbfbd316c74998b260bcf94214731"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh plugin: in-process proxy that injects official OpenCode Zen client headers, enabling Zen free models in dsh without the 429 FreeUsageLimitError",
     "fork": false,
     "forks": 2,
-    "headSha": "2cfc4e172bfe3165773e1e137c5f5da3ebcc0046",
+    "headSha": "e9e3b5f763cfbfbd316c74998b260bcf94214731",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4FcBA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5ca8a8f5ceb290a142bc62fb3a8920a698b18d6d139a8f871e11f012ab850792/Yee-h/dsh-zen-proxy",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/0ab692498f58033d9d8cfec2357faa6095a0f1258cdce98156e924a36abbbe59/Yee-h/dsh-zen-proxy",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/158449431?u=4697c1e017ce5d40e4e25a5dd9f8dfb2578548e9&v=4",
       "login": "Yee-h"
     },
-    "pushedAt": "2026-08-14T06:42:38Z",
+    "pushedAt": "2026-10-08T08:55:43Z",
     "slug": "Yee-h/dsh-zen-proxy",
     "stars": 3,
     "topics": [
@@ -40,18 +40,18 @@
       "proxy",
       "zen"
     ],
-    "updatedAt": "2026-09-12T05:40:20Z",
+    "updatedAt": "2026-10-08T08:55:47Z",
     "url": "https://github.com/Yee-h/dsh-zen-proxy"
   },
   "id": "gh:1333877764",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-zen-proxy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Yee-h/dsh-zen-proxy#e9e3b5f763cfbfbd316c74998b260bcf94214731",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
@@ -59,19 +59,23 @@
     "repositoryMatches": null
   },
   "package": {
-    "main": "index.js",
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
     "name": "dsh-zen-proxy",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.2.2"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5ca8a8f5ceb290a142bc62fb3a8920a698b18d6d139a8f871e11f012ab850792/Yee-h/dsh-zen-proxy",
+    "coverUrl": "https://opengraph.githubassets.com/0ab692498f58033d9d8cfec2357faa6095a0f1258cdce98156e924a36abbbe59/Yee-h/dsh-zen-proxy",
     "description": "dsh plugin: in-process proxy that injects official OpenCode Zen client headers, enabling Zen free models in dsh without the 429 FreeUsageLimitError"
   },
   "readme": {
     "available": true,
-    "excerpt": "A DeepSeek Harness (dsh) plugin: an in-process, OpenAI-compatible proxy that injects the official OpenCode Zen client headers on upstream requests, enabling Zen free models in dsh without the 429 FreeUsageLimitError."
+    "excerpt": "一个 DeepSeek Harness（dsh） 插件： 把 OpenCode Zen 的免费模型车道接成 dsh 的原生 llm-provider。"
   },
   "schemaVersion": 1,
   "scripts": {

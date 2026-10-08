@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-07T10:53:28.650Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-08T11:13:23.912Z",
+    "enrichmentStatus": "ok",
     "headSha": "50b8128a1dbb852a605d92b1122b144662e05ca9"
   },
   "github": {
@@ -50,27 +50,38 @@
   },
   "id": "gh:1379768542",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-doc2md",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jessehoo89/markdown_monitor#50b8128a1dbb852a605d92b1122b144662e05ca9",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-doc2md",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/51d1de5a684cc19970036bf56321755407d7374d1ab0cf3b38421419777edc88/jessehoo89/markdown_monitor",
     "description": "实时监控目录，把新增/改动的文档自动转成 Markdown（docx/doc/xlsx/xls/pdf/图片）。扫描件与复杂版面 PDF 走多后端 OCR（本地+云端，带熔断切换），配置热加载、state.db 防重复转换；Windows 安装程序 + Linux 单文件一键安装"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "实时监控目录，把新增或改动的文档自动转成 Markdown。"
   },
   "schemaVersion": 1,
   "scripts": {
