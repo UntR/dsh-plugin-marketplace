@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-08T11:13:23.912Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-09T11:09:46.875Z",
+    "enrichmentStatus": "ok",
     "headSha": "7415dc489d9feac98c1fbb2d37eefdf2a3c9e945"
   },
   "github": {
@@ -42,27 +42,48 @@
   },
   "id": "gh:1391097107",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@missher/dsh-mse-learning",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Missher12/Missher-MSE-Learning#7415dc489d9feac98c1fbb2d37eefdf2a3c9e945",
+    "version": "0.9.0-alpha.18"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/root.mjs",
+      "./adapters/dsh": "./adapters/dsh/index.mjs",
+      "./cases": "./src/cases.mjs",
+      "./checks": "./src/checks.mjs",
+      "./client": "./adapters/dsh/client.js",
+      "./core": "./src/index.mjs",
+      "./details": "./adapters/dsh/details.mjs",
+      "./evaluation": "./src/evaluation.mjs",
+      "./harness": "./adapters/harness.mjs",
+      "./project": "./adapters/dsh/project.mjs",
+      "./recall": "./src/recall.mjs",
+      "./status": "./src/status.mjs",
+      "./typert": "./adapters/dsh/typert.mjs"
+    },
+    "main": "./src/root.mjs",
+    "name": "@missher/dsh-mse-learning",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.0-alpha.18"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9bcfb97b699c5819dcf544aba431b645aec05f53cc18874c535bb40ac944d89a/Missher12/Missher-MSE-Learning",
     "description": "Missher MSE Learning: standalone learning product for DSH and other agents; no personal learning data.；桌面入口与其他插件见主页链接。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DSH 保存按项目隔离的用户纠错与方法候选，在相关任务中限额召回，并记录可信宿主确认的采用和验证结果。它不训练模型权重，也不保证模型永不犯错。"
   },
   "schemaVersion": 1,
   "scripts": {

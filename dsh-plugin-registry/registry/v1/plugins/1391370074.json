@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-08T11:13:23.912Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-09T11:09:46.875Z",
+    "enrichmentStatus": "ok",
     "headSha": "4107f0a0f986d674672ba0626012cfbc78655d03"
   },
   "github": {
@@ -47,33 +47,44 @@
   },
   "id": "gh:1391370074",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-local-long-horizon",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-local-long-horizon@1.0.3",
+    "version": "1.0.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-local-long-horizon",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1629956d7a13f1dc5727d0918acc934016ed0ee80d5e2d1ff89d6c7e555eebd0/janpauldahlke/dsh-local-long-horizon",
     "description": "DeepSeek Harness plugin: host-owned long-horizon task board for local coding agents. Next≤3, in-flight, done+verify, inject file + STATUS.md + rightbar/dock chip."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Host-owned long-horizon task status for local coding agents in the DeepSeek Harness web UI."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

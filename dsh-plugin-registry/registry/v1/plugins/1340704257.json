@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-08T11:13:23.912Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-09T11:09:46.875Z",
+    "enrichmentStatus": "ok",
     "headSha": "b06d0f3f10c6fa3b04c964617581c06b1ea9012b"
   },
   "github": {
@@ -48,27 +48,39 @@
   },
   "id": "gh:1340704257",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-opencode-eyes-nvidia",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:bauerelizabeth07139/opencode-eyes-nvidia#b06d0f3f10c6fa3b04c964617581c06b1ea9012b",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-opencode-eyes-nvidia",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2c9ec33280efd92fa0339433b9f606f85d1a1a359a0dd02e27fd42b646b2f6e6/bauerelizabeth07139/opencode-eyes-nvidia",
     "description": "DeepSeek Harness plugin and OpenCode MCP server: describe an image with any of seven NVIDIA NIM vision models, rotating several API keys. Exposes mcp__opencode_eyes_nvidia__describe_image."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Eyes for models that cannot see — on NVIDIA NIM. Any of seven hosted vision models (MiniMax-M3 by default), with multi-key rotation when one key is rate-limited."
   },
   "schemaVersion": 1,
   "scripts": {

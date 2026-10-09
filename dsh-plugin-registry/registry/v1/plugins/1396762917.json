@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-08T11:13:23.912Z",
-    "enrichmentStatus": "stale",
-    "headSha": "e6e4f717c899b79bfa4280134920bf0e2ac10d42"
+    "enrichedAt": "2026-10-09T11:09:46.875Z",
+    "enrichmentStatus": "ok",
+    "headSha": "57667d999e30105c9a029f331b0de55572c11031"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH bundle: native MSYS2 (UCRT64) bash for the DSH shell seam — fork of @deepseek-ai/dsh-bash-local with configurable bash path",
     "fork": false,
     "forks": 0,
-    "headSha": "e6e4f717c899b79bfa4280134920bf0e2ac10d42",
+    "headSha": "57667d999e30105c9a029f331b0de55572c11031",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU0DpJQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7fa76a4e633d3050e1e2e7d1523f60ebd0d5108d9481d6fdcea7e13b8e438e03/ch1bug/dsh-shell-host",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e285e7290198afae00ba17ad660cdd6914de1e69344f0b23dad4ac481912989c/ch1bug/dsh-shell-host",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/86644859?u=a135c301dcad122070bee0455c22a276b0d3c2f5&v=4",
       "login": "ch1bug"
     },
-    "pushedAt": "2026-10-08T08:46:04Z",
+    "pushedAt": "2026-10-09T08:04:13Z",
     "slug": "ch1bug/dsh-shell-host",
     "stars": 0,
     "topics": [
@@ -41,7 +41,7 @@
       "windows",
       "wsl"
     ],
-    "updatedAt": "2026-10-03T11:44:31Z",
+    "updatedAt": "2026-10-09T07:59:41Z",
     "url": "https://github.com/ch1bug/dsh-shell-host"
   },
   "id": "gh:1396762917",
@@ -73,22 +73,33 @@
         "default": "./lib/permission-presets.js",
         "types": "./lib/types/permission-presets.d.ts"
       },
-      "./permission-presets/locale/*": "./assets/permission-presets/locale/*",
-      "./src/*": "./src/*"
+      "./pty": {
+        "default": "./lib/pty/index.js",
+        "types": "./lib/types/pty/index.d.ts"
+      },
+      "./remote": {
+        "default": "./lib/remote/index.js",
+        "types": "./lib/types/remote/index.d.ts"
+      },
+      "./src/*": "./src/*",
+      "./wsl": {
+        "default": "./lib/wsl-plugin/index.js",
+        "types": "./lib/types/wsl-plugin/index.d.ts"
+      }
     },
     "main": "lib/index.js",
     "name": "dsh-shell-host",
     "status": "valid",
     "type": "module",
-    "version": "0.2.1-alpha.1-r1"
+    "version": "0.2.0-rc.2-r1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7fa76a4e633d3050e1e2e7d1523f60ebd0d5108d9481d6fdcea7e13b8e438e03/ch1bug/dsh-shell-host",
+    "coverUrl": "https://opengraph.githubassets.com/e285e7290198afae00ba17ad660cdd6914de1e69344f0b23dad4ac481912989c/ch1bug/dsh-shell-host",
     "description": "DSH bundle: native MSYS2 (UCRT64) bash for the DSH shell seam — fork of @deepseek-ai/dsh-bash-local with configurable bash path"
   },
   "readme": {
     "available": true,
-    "excerpt": "DSH bundle: the host-plane shell executor replacement layer for Windows — a replacement of the built-in platform shell executors with pluggable backends (msys2 default, plain, pwsh; wsl reserved), plus a Plugins-page settings card. MSYS2 is the default backend, not the bundle's i"
+    "excerpt": "DSH bundle: an independent shell executor for the DSH shell seam on Windows — VS Code terminal-profile modeled, routed backends selectable per config (msys2 default, plain, pwsh, wsl, ssh), coexisting with the platform shell executors, plus a Plugins-page settings card. MSYS2 is "
   },
   "schemaVersion": 1,
   "scripts": {

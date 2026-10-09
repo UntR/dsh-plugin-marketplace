@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-08T11:13:23.912Z",
-    "enrichmentStatus": "stale",
-    "headSha": "0e16eff51fdf228d93b01f4130f8daa308c80f32"
+    "enrichedAt": "2026-10-09T11:09:46.875Z",
+    "enrichmentStatus": "ok",
+    "headSha": "7c0714fa3606cf0e84e7bd59b375bd0102c4b2c0"
   },
   "github": {
     "archived": false,
@@ -17,20 +17,20 @@
     "description": "DSH 侧边栏的未读 + 待办 + 状态读数中枢：跨重启也不丢的未读，⌘⇧J / ⌘⇧I 顺序定位，⌘⇧K 弹出未读与待决策总览；另带六项会话状态读数。",
     "fork": false,
     "forks": 0,
-    "headSha": "0e16eff51fdf228d93b01f4130f8daa308c80f32",
+    "headSha": "7c0714fa3606cf0e84e7bd59b375bd0102c4b2c0",
     "homepageUrl": "https://www.npmjs.com/package/dsh-session-radar",
-    "language": "TypeScript",
+    "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUvV9gg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/06c206c300bee752da128e2efcf3f537ba699a35f6058da96512b599ee7b6c7a/d0ublecl1ck/dsh-session-radar",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/bae02da77b396a881b32c2bc9a9e18c4daccf2981515203d0a140383be9135c4/d0ublecl1ck/dsh-session-radar",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/118952787?u=beed169caa5d276e6e374846c8ba83340ab2656b&v=4",
       "login": "d0ublecl1ck"
     },
-    "pushedAt": "2026-10-08T06:51:47Z",
+    "pushedAt": "2026-10-09T03:07:42Z",
     "slug": "d0ublecl1ck/dsh-session-radar",
     "stars": 0,
     "topics": [
@@ -48,32 +48,54 @@
       "typescript",
       "unread"
     ],
-    "updatedAt": "2026-10-08T06:51:51Z",
+    "updatedAt": "2026-10-09T03:07:46Z",
     "url": "https://github.com/d0ublecl1ck/dsh-session-radar"
   },
   "id": "gh:1391820162",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-radar",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-session-radar@1.3.0",
+    "version": "1.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.3.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./activity-model": {
+        "default": "./lib/activity-model.js",
+        "types": "./lib/activity-model.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-radar",
+    "status": "valid",
+    "type": "module",
+    "version": "1.3.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/06c206c300bee752da128e2efcf3f537ba699a35f6058da96512b599ee7b6c7a/d0ublecl1ck/dsh-session-radar",
+    "coverUrl": "https://opengraph.githubassets.com/bae02da77b396a881b32c2bc9a9e18c4daccf2981515203d0a140383be9135c4/d0ublecl1ck/dsh-session-radar",
     "description": "DSH 侧边栏的未读 + 待办 + 状态读数中枢：跨重启也不丢的未读，⌘⇧J / ⌘⇧I 顺序定位，⌘⇧K 弹出未读与待决策总览；另带六项会话状态读数。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 侧边栏的未读与待办中枢：⌘⇧J 按顺序定位未读会话，⌘⇧I 处理正在等你输入的会话（提问 / 审批 / 计划审阅），⌘⇧K 弹出「等你处理」总览——所有未读与待决策的会话分成两区铺成卡片网格，一眼看清还欠多少；账本落在 host 半边，重启也不丢——上次退出时还在跑的会话，下次启动就算未读，⌘⇧J 一步走到。侧边栏底部另有一行六项会话状态读数——每个图标都能点，点一下跳到下一个同类会话，设置页可逐项开关。"
   },
   "schemaVersion": 1,
   "scripts": {

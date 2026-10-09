@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-08T11:13:23.912Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-09T11:09:46.875Z",
+    "enrichmentStatus": "ok",
     "headSha": "14d72df788bedeaba9c89920a4dfb5ca8512357d"
   },
   "github": {
@@ -41,27 +41,45 @@
   },
   "id": "gh:1397289333",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-codearts",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-codearts@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs",
+        "types": "./lib/index.d.mts"
+      },
+      "./client": {
+        "default": "./lib/client/index.js",
+        "types": "./lib/client/index.d.cts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-codearts",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/151cff5a7533b9c71ad8c6dfd5ab76fc5ba8f4f1e70e0ecc92a292e256bf4ad1/elegant01/dsh-codearts",
     "description": "dsh-plugin, 在DSH中使用华为codearts的积分，token,"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把华为云 CodeArts 接入 DeepSeek Harness（DSH），实现在 DSH 对话窗口里直接使用 CodeArts 提供的模型（GLM-5.2、盘古、Qwen、DeepSeek 等）。"
   },
   "schemaVersion": 1,
   "scripts": {

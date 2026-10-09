@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./dsh-plugin/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-08T11:13:23.912Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-09T11:09:46.875Z",
+    "enrichmentStatus": "ok",
     "headSha": "3f915f7220ab03bc35913de7d04da78d9b55bbcf"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1389183792",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "pocket-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jyb114/pocket-bridge#3f915f7220ab03bc35913de7d04da78d9b55bbcf",
+    "version": "1.0.0-preview.13"
   },
   "npm": {
     "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dsh-plugin/index.js",
+      "./client": "./dsh-plugin/client.js",
+      "./dsh-plugin/cordis.patch.yml": "./dsh-plugin/cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "scripts/gateway-daemon.js",
+    "name": "pocket-bridge",
+    "status": "valid",
+    "type": null,
+    "version": "1.0.0-preview.13"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/188c70aa5c16f94ecf6a33834902ac5486899b19e34d0f3f23f2773a52860296/jyb114/pocket-bridge",
     "description": "A lightweight, encrypted phone interface for DeepSeek Harness on your Windows PC, with an optional DSH Settings plugin for pairing, gateway controls, and diagnostics."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A lightweight, unofficial phone interface for DeepSeek Harness (DSH) running on your own Windows computer. Open a browser on your phone to work with local projects and conversations, send instructions, respond to supported approvals, and transfer workspace files. Your computer ru"
   },
   "schemaVersion": 1,
   "scripts": {

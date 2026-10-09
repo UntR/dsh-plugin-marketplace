@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-08T11:13:23.912Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-09T11:09:46.875Z",
+    "enrichmentStatus": "ok",
     "headSha": "5fdf0004e3a5d254e754936948988302aa0afdad"
   },
   "github": {
@@ -45,27 +45,42 @@
   },
   "id": "gh:1399106572",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-adjudication",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:AEmbers/dsh-adjudication#5fdf0004e3a5d254e754936948988302aa0afdad",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./contracts": "./lib/contracts.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./domains": "./lib/domains.js",
+      "./engine": "./lib/engine.js",
+      "./package.json": "./package.json",
+      "./registry": "./lib/registry.js"
+    },
+    "main": "index.js",
+    "name": "dsh-adjudication",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/393084e65634029786cec859551e80892ce1c080e2a97a59d88a85e200df7c37/AEmbers/dsh-adjudication",
     "description": "Multi-domain adjudication engine for DeepSeek Harness — a deterministic pipeline (gate/bundle/anchor/critique) plus a registry of on-demand domain packs. Ported from Alibaba's open-code-review."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个面向 DeepSeek Harness 的多领域审定引擎 bundle 插件。"
   },
   "schemaVersion": 1,
   "scripts": {

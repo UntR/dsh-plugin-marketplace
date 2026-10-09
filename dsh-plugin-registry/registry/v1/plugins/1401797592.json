@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-08T11:13:23.912Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-09T11:09:46.875Z",
+    "enrichmentStatus": "ok",
     "headSha": "cba54d3d2f1cca03ffceb4e930cbb7f891ea8067"
   },
   "github": {
@@ -43,27 +43,43 @@
   },
   "id": "gh:1401797592",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-magpie-connect",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-magpie-connect@0.3.5",
+    "version": "0.3.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.5",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-magpie-connect",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a60891051a1af1943ef0035a9c7b452579e7c509d26f1d9b688967731f32bfe2/bitxeno/dsh-magpie-connect",
     "description": "将 Magpie 网关模型快速接入 DeepSeek Harness 的插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 Magpie 网关上的模型接进 DeepSeek Harness（DSH）的模型选择器。"
   },
   "schemaVersion": 1,
   "scripts": {

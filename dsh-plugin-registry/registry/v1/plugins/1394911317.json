@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-08T11:13:23.912Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-09T11:09:46.875Z",
+    "enrichmentStatus": "ok",
     "headSha": "ee0cce825c1941ecd9b383f05e64d768164b5a26"
   },
   "github": {
@@ -43,27 +43,48 @@
   },
   "id": "gh:1394911317",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-git-branch-manage",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-git-branch-manage@1.0.1",
+    "version": "1.0.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./wire": {
+        "default": "./lib/wire.js",
+        "types": "./lib/wire.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-git-branch-manage",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/62bfb65de48f685e4b766b6909029d61491fb70c7a557fa85b44e1724ca23dd3/GaoHu1997/dsh-git-branch",
-    "description": ""
+    "description": "提供 git 分支与 worktree 管理：输入框工具栏显示当前分支、可原地切换；支持 IDEA 风格分支选择器、远程分支检出、右键操作菜单（新建/重命名/删除/复制）、推送与更新当前分支，以及把分支隔离到独立 worktree 工作区，并管理其创建与删除。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "提供 git 分支与 worktree 管理：输入框工具栏显示当前分支、可原地切换；支持 IDEA 风格分支选择器、远程分支检出、右键操作菜单（新建/重命名/删除/复制）、推送与更新当前分支，以及把分支隔离到独立 worktree 工作区，并管理其创建与删除。"
   },
   "schemaVersion": 1,
   "scripts": {

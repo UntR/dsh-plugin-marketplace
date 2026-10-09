@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-08T11:13:23.912Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-09T11:09:46.875Z",
+    "enrichmentStatus": "ok",
     "headSha": "a7cabd6fb7d26c52166969ed3e81fed64158977d"
   },
   "github": {
@@ -49,27 +49,38 @@
   },
   "id": "gh:1390951068",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-pilot",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:momasiku/dsh-pilot#a7cabd6fb7d26c52166969ed3e81fed64158977d",
+    "version": "0.5.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-pilot",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4317a06e0175c2faef479d07327ab1b9d102b0ef266b5c61d25d8c15d9d9b56b/momasiku/dsh-pilot",
-    "description": "Give DeepSeek Harness hands and eyes: screen_view hands the model a real PNG of your desktop, desktop_control drives the mouse, keyboard and windows, desktop_sequence runs a whole task in one call."
+    "description": "Desktop automation for DeepSeek Harness: hands and eyes on the whole Windows machine - screen_view returns a live PNG of the screen, desktop_control drives the real mouse, keyboard and windows at the same pixel coordinates, desktop_sequence runs a whole task in one call. Any appl"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Give DeepSeek Harness hands and eyes on your desktop."
   },
   "schemaVersion": 1,
   "scripts": {

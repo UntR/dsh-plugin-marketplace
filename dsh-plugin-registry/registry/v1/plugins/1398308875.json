@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-08T11:13:23.912Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-09T11:09:46.875Z",
+    "enrichmentStatus": "ok",
     "headSha": "e802ccf5187deebef1ee3074ec379a554e02d138"
   },
   "github": {
@@ -44,27 +44,40 @@
   },
   "id": "gh:1398308875",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-unity-mcp-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xiake-1/dsh-unity-mcp-bridge#e802ccf5187deebef1ee3074ec379a554e02d138",
+    "version": "0.3.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-unity-mcp-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1596c4711ba6a2d78ff671cc78252474e66a5d23c933a27f9b5ff97406f41057/xiake-1/dsh-unity-mcp-bridge",
     "description": "连接unitymcp（第三方unitymcp工具，实测速度和质量兼具）和dsh的插件，同时加入了技能工具，精简了unitymcp的输入和输出量，加快使用agent协助unity开发速度"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A self-contained DeepSeek Harness (DSH) plugin that connects on demand to a Unity MCP server (AI Game Developer / com.ivanmurzak.unity.mcp). It is dormant until the user runs /unity-mcp-tools — Unity capability never turns on by itself (see Activation model). On top of that it ad"
   },
   "schemaVersion": 1,
   "scripts": {

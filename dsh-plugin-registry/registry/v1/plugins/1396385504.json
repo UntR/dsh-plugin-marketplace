@@ -5,46 +5,46 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-08T11:13:23.912Z",
-    "enrichmentStatus": "stale",
-    "headSha": "52f911da4979d9b2d8bcb45d2c9f63315ec77759"
+    "enrichedAt": "2026-10-09T11:09:46.875Z",
+    "enrichmentStatus": "ok",
+    "headSha": "df4a6d85ba9706359f165dbed00776cfe721c7f0"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-29T18:52:21Z",
     "databaseId": 1396385504,
     "defaultBranch": "main",
-    "description": "A DeepSeek Harness permission preset that grants write access to configured extra directories on top of the session workspace. Linux bwrap.",
+    "description": "Registers arbitrary configured DSH permission presets, each selecting a sandbox mode and approval policy plus the directories writable on top of it. Linux bwrap only.",
     "fork": false,
     "forks": 0,
-    "headSha": "52f911da4979d9b2d8bcb45d2c9f63315ec77759",
+    "headSha": "df4a6d85ba9706359f165dbed00776cfe721c7f0",
     "homepageUrl": null,
-    "language": "JavaScript",
+    "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOUzsm4A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/bdd48440dbadca4e09d50e56db89acfaf7469fc0518a52697969037e2d05061b/beicause/dsh-workspace-write-extra",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5abeddc75d99646287f9c94766d686d267bcdc2bb8695697480d83fa70c0691e/beicause/dsh-extra-sandbox-presets",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/75941842?u=febc5a127181f20863d3d34c300625f7ce78ca8f&v=4",
       "login": "beicause"
     },
-    "pushedAt": "2026-09-29T19:18:59Z",
-    "slug": "beicause/dsh-workspace-write-extra",
+    "pushedAt": "2026-10-08T20:26:29Z",
+    "slug": "beicause/dsh-extra-sandbox-presets",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-09-29T19:19:04Z",
-    "url": "https://github.com/beicause/dsh-workspace-write-extra"
+    "updatedAt": "2026-10-08T20:26:33Z",
+    "url": "https://github.com/beicause/dsh-extra-sandbox-presets"
   },
   "id": "gh:1396385504",
   "install": {
     "available": true,
-    "packageName": "dsh-workspace-write-extra",
+    "packageName": "dsh-extra-sandbox-presets",
     "preferred": "github",
     "reason": null,
-    "requiresBuildApproval": false,
-    "spec": "github:beicause/dsh-workspace-write-extra#52f911da4979d9b2d8bcb45d2c9f63315ec77759",
-    "version": "0.2.0"
+    "requiresBuildApproval": true,
+    "spec": "github:beicause/dsh-extra-sandbox-presets#df4a6d85ba9706359f165dbed00776cfe721c7f0",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
@@ -53,29 +53,32 @@
   },
   "package": {
     "exports": {
-      ".": "./lib/service.mjs",
+      ".": {
+        "default": "./lib/service.js",
+        "types": "./lib/service.d.ts"
+      },
       "./cordis.patch.yml": "./cordis.patch.yml",
       "./package.json": "./package.json"
     },
-    "main": "lib/service.mjs",
-    "name": "dsh-workspace-write-extra",
+    "main": "lib/service.js",
+    "name": "dsh-extra-sandbox-presets",
     "status": "valid",
     "type": "module",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/bdd48440dbadca4e09d50e56db89acfaf7469fc0518a52697969037e2d05061b/beicause/dsh-workspace-write-extra",
-    "description": "A DeepSeek Harness permission preset that grants write access to configured extra directories on top of the session workspace. Linux bwrap."
+    "coverUrl": "https://opengraph.githubassets.com/5abeddc75d99646287f9c94766d686d267bcdc2bb8695697480d83fa70c0691e/beicause/dsh-extra-sandbox-presets",
+    "description": "Registers arbitrary configured DSH permission presets, each selecting a sandbox mode and approval policy plus the directories writable on top of it. Linux bwrap only."
   },
   "readme": {
     "available": true,
-    "excerpt": "Adds a fourth permission preset to DeepSeek Harness that grants write access to configured directories in addition to the session workspace."
+    "excerpt": "Registers any number of configured permission presets in DeepSeek Harness. Each preset selects a sandbox mode and an approval policy, plus the directories that become writable on top of whatever that mode already allows."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
