@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-09T11:09:46.875Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-10T10:22:19.193Z",
+    "enrichmentStatus": "ok",
     "headSha": "73b4c7023f9252d85e538f3554445d3566cb478a"
   },
   "github": {
@@ -41,33 +41,48 @@
   },
   "id": "gh:1387245591",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-modeltester",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-modeltester@0.0.7-alpha.6",
+    "version": "0.0.7-alpha.6"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.7-alpha.6",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-modeltester",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.7-alpha.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0a8eaa665729a019098e462509937a680a8c665921f0962b032ae81c83c79a56/Yuer6327/ModelTester",
     "description": "模型测试器 ModelTester（前身 NoLetMe）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "ModelTester 是 DeepSeek Harness（dsh）网页端插件：在会话页右上角挂载一块模型检测面板，回答一个问题——"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

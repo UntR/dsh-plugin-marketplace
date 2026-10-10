@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-09T11:09:46.875Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-10T10:22:19.193Z",
+    "enrichmentStatus": "ok",
     "headSha": "a355ab6d5ad36334eaf005bb00c020368fff1590"
   },
   "github": {
@@ -41,27 +41,47 @@
   },
   "id": "gh:1348513032",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-rabi-default-persona",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vb2250158/dsh-rabi-default-persona#a355ab6d5ad36334eaf005bb00c020368fff1590",
+    "version": "0.1.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./typert": {
+        "default": "./lib/typert.host.js"
+      }
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-rabi-default-persona",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ec9748a6f20c4a299796db768e2c97bdf7f2b8c7affab39b5c4faa4f90b6f7e0/vb2250158/dsh-rabi-default-persona",
     "description": "Durable global Rabi persona prompt and its DSH settings page"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "通过设置中的“Rabi”页面连接 Rabi Manager，选择并启用全局人格。聊天侧栏不再提供“计划”入口。"
   },
   "schemaVersion": 1,
   "scripts": {

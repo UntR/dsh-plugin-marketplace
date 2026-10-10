@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "dsh-proxy/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-09T11:09:46.875Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-10T10:22:19.193Z",
+    "enrichmentStatus": "ok",
     "headSha": "e47bebfbe321a454c8be0062d8df2f3482170b0b"
   },
   "github": {
@@ -41,27 +41,46 @@
   },
   "id": "gh:1377132928",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@smanx/dsh-proxy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vb2250158/dsh-proxy#e47bebfbe321a454c8be0062d8df2f3482170b0b",
+    "version": "0.1.16"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dsh-proxy/lib/index.cjs",
+        "types": "./dsh-proxy/lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./dsh-proxy/lib/client.js",
+        "types": "./dsh-proxy/lib/types/client/index.d.ts"
+      },
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "dsh-proxy/lib/index.cjs",
+    "name": "@smanx/dsh-proxy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.16"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/80891137c026002c6f544f3d844b4765acd19ac644d5ea08bb56051512d4fe97/vb2250158/dsh-proxy",
     "description": "HTTP + WebSocket 反向代理：把局域网端口转发到本地 DSH 服务"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "This release requires DSH 0.2.1-alpha.1 or a compatible 0.2 release. See compatibility details."
   },
   "schemaVersion": 1,
   "scripts": {

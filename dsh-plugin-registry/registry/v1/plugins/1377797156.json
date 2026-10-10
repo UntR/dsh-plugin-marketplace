@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-09T11:09:46.875Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-10T10:22:19.193Z",
+    "enrichmentStatus": "ok",
     "headSha": "44da2fb0386e40402ea5134fd39054141ec17889"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1377797156",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-workbuddy-gateway",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vb2250158/dsh-plugin-workbuddy-gateway#44da2fb0386e40402ea5134fd39054141ec17889",
+    "version": "0.2.9"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./src/client/index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/index.js",
+    "name": "dsh-plugin-workbuddy-gateway",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.9"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/850871dac3349eaddf82df8d5ed4773e63101a5a8501747e58846a30a693a8ae/vb2250158/dsh-plugin-workbuddy-gateway",
     "description": "Use a WorkBuddy subscription as a model provider in DSH: supervises the local OpenAI-compatible gateway and manages it from the settings page."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "This release requires DSH 0.2.1-alpha.1 or a compatible 0.2 release. See compatibility details."
   },
   "schemaVersion": 1,
   "scripts": {

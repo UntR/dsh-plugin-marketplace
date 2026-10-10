@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-09T11:09:46.875Z",
-    "enrichmentStatus": "failed",
-    "headSha": "bd6a6405efc4a8130a44abbd56172edb6d3c44ad"
+    "enrichedAt": "2026-10-10T10:22:19.193Z",
+    "enrichmentStatus": "ok",
+    "headSha": "4bec8d69bfc296452b1827f7f91cd81441b19ec8"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": null,
     "fork": false,
     "forks": 0,
-    "headSha": "bd6a6405efc4a8130a44abbd56172edb6d3c44ad",
+    "headSha": "4bec8d69bfc296452b1827f7f91cd81441b19ec8",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,43 +25,61 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUHU7tg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a547fb56a47b7915b3d1bdb1e1f3602787f920622df314342415b05a9a088da0/vb2250158/dsh-chat-enhancement",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/3c149f39c6ef8a911afaf7f386bc49c39b6dccccb6a2a05cc0320ac3ebf7f7a6/vb2250158/dsh-chat-enhancement",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/32808497?u=5ff97c59e26eb7af269c7e056100f24cc7cbed5a&v=4",
       "login": "vb2250158"
     },
-    "pushedAt": "2026-10-09T07:48:49Z",
+    "pushedAt": "2026-10-09T11:41:07Z",
     "slug": "vb2250158/dsh-chat-enhancement",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-09T08:33:44Z",
+    "updatedAt": "2026-10-09T11:41:12Z",
     "url": "https://github.com/vb2250158/dsh-chat-enhancement"
   },
   "id": "gh:1349860278",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-chat-enhancement",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vb2250158/dsh-chat-enhancement#4bec8d69bfc296452b1827f7f91cd81441b19ec8",
+    "version": "0.3.71"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./image-attachments": "./src/image-attachments.js",
+      "./image-attachments/icon": "./image-attachments.svg",
+      "./image-attachments/locale/*.json": "./locale/image-attachments/*.json",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./session-title-provider": "./src/session-title-provider.js",
+      "./typert": "./lib/typert.host.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-chat-enhancement",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.71"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a547fb56a47b7915b3d1bdb1e1f3602787f920622df314342415b05a9a088da0/vb2250158/dsh-chat-enhancement",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/3c149f39c6ef8a911afaf7f386bc49c39b6dccccb6a2a05cc0320ac3ebf7f7a6/vb2250158/dsh-chat-enhancement",
+    "description": "主会话和子会话通过配套宿主接口续跑原轮次，保留身份、模型、队列和父子关系，不添加恢复消息。临时错误只重试失败项；宿主接口缺失时提示“需更新并重启”，停用无效重试和后台轮询，悬停可查看成功数量及每项错误。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "主会话和子会话通过配套宿主接口续跑原轮次，保留身份、模型、队列和父子关系，不添加恢复消息。临时错误只重试失败项；宿主接口缺失时提示“需更新并重启”，停用无效重试和后台轮询，悬停可查看成功数量及每项错误。"
   },
   "schemaVersion": 1,
   "scripts": {

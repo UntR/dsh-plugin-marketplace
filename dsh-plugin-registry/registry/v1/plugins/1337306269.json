@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./packages/citeciter/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-08T11:13:23.912Z",
+    "enrichedAt": "2026-10-10T10:22:19.193Z",
     "enrichmentStatus": "ok",
-    "headSha": "a4076bb9c1efb6ee90b7d1803e773f4fd8b4a4de"
+    "headSha": "7897881bf87915505d4a7e7b9991020a2986630c"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "为 DeepSeek Harness 打造：选中 AI 回答或思考内容，随时追问、学习、检查与纠偏。",
     "fork": false,
     "forks": 1,
-    "headSha": "a4076bb9c1efb6ee90b7d1803e773f4fd8b4a4de",
+    "headSha": "7897881bf87915505d4a7e7b9991020a2986630c",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT7WsnQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e1501f7f3a96b7c7829207d1769162459fd4518094c02d70feadf5ccf34edfc4/kirkchinese/CiteCiter",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8ed50b8a9423a8d445acba7c58e738ad526743f17ff7a84f87edda70fe28540f/kirkchinese/CiteCiter",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/145675463?u=4e6778da925405cee065ac3b3a74e6d66f44c3bf&v=4",
       "login": "kirkchinese"
     },
-    "pushedAt": "2026-10-09T04:21:26Z",
+    "pushedAt": "2026-10-10T07:35:27Z",
     "slug": "kirkchinese/CiteCiter",
-    "stars": 32,
+    "stars": 34,
     "topics": [
       "ai-agent",
       "citeciter",
@@ -44,38 +44,58 @@
       "llm",
       "reasoning"
     ],
-    "updatedAt": "2026-10-09T06:48:31Z",
+    "updatedAt": "2026-10-10T07:33:25Z",
     "url": "https://github.com/kirkchinese/CiteCiter"
   },
   "id": "gh:1337306269",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "@kirkchinese/dsh-citeciter",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@kirkchinese/dsh-citeciter@0.9.0-alpha.3",
+    "version": "0.9.0-alpha.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.9.0-alpha.3",
+    "published": true,
+    "repositoryMatches": true
   },
   "package": {
-    "main": null,
-    "name": "citeciter-workspace",
+    "exports": {
+      ".": {
+        "default": "./packages/citeciter/lib/index.js",
+        "types": "./packages/citeciter/lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./packages/citeciter/lib/client.js",
+        "types": "./packages/citeciter/lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./packages/citeciter/cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./packages/citeciter/lib/typert.remote-client.js",
+        "types": "./packages/citeciter/lib/types/typert.remote-client.d.ts"
+      },
+      "./typert": {
+        "default": "./packages/citeciter/lib/typert.host.js",
+        "types": "./packages/citeciter/lib/types/typert.host.d.ts"
+      }
+    },
+    "main": "./packages/citeciter/lib/index.js",
+    "name": "@kirkchinese/dsh-citeciter",
     "status": "valid",
-    "type": null,
-    "version": null
+    "type": "module",
+    "version": "0.9.0-beta.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e1501f7f3a96b7c7829207d1769162459fd4518094c02d70feadf5ccf34edfc4/kirkchinese/CiteCiter",
+    "coverUrl": "https://opengraph.githubassets.com/8ed50b8a9423a8d445acba7c58e738ad526743f17ff7a84f87edda70fe28540f/kirkchinese/CiteCiter",
     "description": "为 DeepSeek Harness 打造：选中 AI 回答或思考内容，随时追问、学习、检查与纠偏。"
   },
   "readme": {
     "available": true,
-    "excerpt": "English · npm · 问题反馈"
+    "excerpt": "English · npm · 更新记录 · 问题反馈"
   },
   "schemaVersion": 1,
   "scripts": {

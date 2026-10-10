@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-09T11:09:46.875Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-10T10:22:19.193Z",
+    "enrichmentStatus": "ok",
     "headSha": "48e0cd21f18e7a6c4fd0f854e1fc8d592adada9d"
   },
   "github": {
@@ -41,27 +41,44 @@
   },
   "id": "gh:1371121796",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-usage-plugin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vb2250158/dsh-usage-plugin#48e0cd21f18e7a6c4fd0f854e1fc8d592adada9d",
+    "version": "1.23.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.5",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./pricing": "./lib/pricing.js",
+      "./usage-statistics-slots": {
+        "types": "./lib/usage-statistics-slots.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-usage-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "1.23.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/99773d0e8d1d3e6ca19d090f0ce16ac231271113c5a4c8eba250267cf031b1fe/vb2250158/dsh-usage-plugin",
     "description": "DeepSeek Harness 用量与消耗插件（dsh-usage-plugin）—— 每次调用的 token 用量/缓存命中统计、峰谷计费、余额查询、CSV/JSON/PNG 导出，可经桌面端一键安装或命令行 dsh plugin add 安装。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English · 简体中文"
   },
   "schemaVersion": 1,
   "scripts": {

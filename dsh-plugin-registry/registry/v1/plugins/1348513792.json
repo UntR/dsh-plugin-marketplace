@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-09T11:09:46.875Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-10T10:22:19.193Z",
+    "enrichmentStatus": "ok",
     "headSha": "8c99978daf6ba97314652350802dc3445c265efc"
   },
   "github": {
@@ -41,27 +41,47 @@
   },
   "id": "gh:1348513792",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-theme-blue",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vb2250158/dsh-theme-blue#8c99978daf6ba97314652350802dc3445c265efc",
+    "version": "0.1.0-rc.8.17"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-theme-blue",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-rc.8.17"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c916069f2bdfa9317d269e0e9ca04cf8362d561831505ae4f9448b999a40bf2e/vb2250158/dsh-theme-blue",
     "description": "Private blue theme foundation for the DeepSeek Harness web client"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "This release requires DSH 0.2.1-alpha.1 or a compatible 0.2 release. See compatibility details."
   },
   "schemaVersion": 1,
   "scripts": {

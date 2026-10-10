@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-09T11:09:46.875Z",
-    "enrichmentStatus": "failed",
-    "headSha": "7657136768dd9351ce71bff401a56b34ab22dbf2"
+    "enrichedAt": "2026-10-10T10:22:19.193Z",
+    "enrichmentStatus": "ok",
+    "headSha": "3505443b56b46ce0f09d5f1073ad05d75e2449e1"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Search and read local Claude Code, Codex, Antigravity, Grok and DSH sessions with the 1session CLI or DSH Web plugin. Raw files stay local; SQLite speeds search.",
     "fork": false,
     "forks": 0,
-    "headSha": "7657136768dd9351ce71bff401a56b34ab22dbf2",
+    "headSha": "3505443b56b46ce0f09d5f1073ad05d75e2449e1",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUYmdoQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/cb9fe41ee7f44af04053b042e42c93ce4aceb7eeec0ae0d9dcd9e92dc61fe5e7/scottzx/session-reader",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/0e4e58723c413ad02d58428890fc83adaf390746d2f79921de3246fdae035436/scottzx/session-reader",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/59874469?v=4",
       "login": "scottzx"
     },
-    "pushedAt": "2026-10-09T10:58:21Z",
+    "pushedAt": "2026-10-10T06:17:34Z",
     "slug": "scottzx/session-reader",
     "stars": 0,
     "topics": [
@@ -42,32 +42,53 @@
       "session-history",
       "session-reader"
     ],
-    "updatedAt": "2026-10-09T10:58:25Z",
+    "updatedAt": "2026-10-10T06:17:38Z",
     "url": "https://github.com/scottzx/session-reader"
   },
   "id": "gh:1367973281",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@1agents/session-reader",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@1agents/session-reader@0.8.5",
+    "version": "0.8.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.8.5",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/src/index.js",
+        "types": "./dist/src/index.d.ts"
+      },
+      "./client": {
+        "default": "./dist/src/dsh/client.js",
+        "types": "./dist/src/dsh/client.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./dsh": {
+        "import": "./dist/src/dsh/index.js",
+        "types": "./dist/src/dsh/index.d.ts"
+      }
+    },
+    "main": "./dist/src/index.js",
+    "name": "@1agents/session-reader",
+    "status": "valid",
+    "type": "module",
+    "version": "0.8.5"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/cb9fe41ee7f44af04053b042e42c93ce4aceb7eeec0ae0d9dcd9e92dc61fe5e7/scottzx/session-reader",
+    "coverUrl": "https://opengraph.githubassets.com/0e4e58723c413ad02d58428890fc83adaf390746d2f79921de3246fdae035436/scottzx/session-reader",
     "description": "Search and read local Claude Code, Codex, Antigravity, Grok and DSH sessions with the 1session CLI or DSH Web plugin. Raw files stay local; SQLite speeds search."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH Web 中查看跨智能体历史，也可作为独立 1session CLI 与 TypeScript 库使用。"
   },
   "schemaVersion": 1,
   "scripts": {

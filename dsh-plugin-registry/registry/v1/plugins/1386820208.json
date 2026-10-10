@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-09T11:09:46.875Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-10T10:22:19.193Z",
+    "enrichmentStatus": "ok",
     "headSha": "15a4d5e7249aeaa1fab2db0964b29a73aa13eb44"
   },
   "github": {
@@ -44,27 +44,37 @@
   },
   "id": "gh:1386820208",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tool-everything",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:leolee9086/dsh-tool-everything#15a4d5e7249aeaa1fab2db0964b29a73aa13eb44",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-tool-everything",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/249f2c5cbcab5b53f5f244a10ac5c928ae956eb419f56de96006644157e4ba87/leolee9086/dsh-tool-everything",
     "description": "DSH plugin: instant file search via the Everything HTTP API"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 工具插件：通过 Everything（voidtools，Windows 文件名搜索引擎）自带的 HTTP 接口检索本机文件索引，提供 everythingsearch、everythingworkspacesearch 和 everythingstatus 三个 Host 工具。前者检整机（每次调用都要审批），后者只检当前会话的工作区（免审批）。"
   },
   "schemaVersion": 1,
   "scripts": {

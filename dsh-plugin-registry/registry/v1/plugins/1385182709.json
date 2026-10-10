@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-09T11:09:46.875Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-10T10:22:19.193Z",
+    "enrichmentStatus": "ok",
     "headSha": "9d39b4a506d7f6d095853bc4bc7518ca55b78a63"
   },
   "github": {
@@ -51,27 +51,40 @@
   },
   "id": "gh:1385182709",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "@stolyarovmn/dsh-ui-registry-aggregator",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@stolyarovmn/dsh-ui-registry-aggregator@0.5.2",
+    "version": "0.5.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./source-core": "./source-core.js"
+    },
+    "main": null,
+    "name": "@stolyarovmn/dsh-ui-registry-aggregator",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/43050fb85eaa3c1346a5c9ee052c6ee36b653bfb5c04edddfc8194b66c128880/Stolyarovmn/dsh-ui-registry-aggregator",
     "description": "Federated plugin registry aggregator for DeepSeek Harness — combine npm, GitHub, and JSON catalogs into one searchable index."
   },
   "readme": {
     "available": true,
-    "excerpt": "This repository is being reorganized for the DSH 0.2.x plugin architecture."
+    "excerpt": "Registry Aggregator adds federated plugin discovery and update discovery around the native DeepSeek Harness Plugin Manager."
   },
   "schemaVersion": 1,
   "scripts": {

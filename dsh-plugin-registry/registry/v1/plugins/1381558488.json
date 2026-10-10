@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-09T11:09:46.875Z",
-    "enrichmentStatus": "failed",
-    "headSha": "9c8de9e3c0c0a7d4a4496ea73b5a75eea9a7a493"
+    "enrichedAt": "2026-10-10T10:22:19.193Z",
+    "enrichmentStatus": "ok",
+    "headSha": "9cf9691c94fd4e905dfbf748ffc046ee69aa65de"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "让微信成为 DeepSeek Harness (DSH) 的第二客户端：通过腾讯 iLink bot 协议把微信私聊桥接到 DSH agent——文本/图片/文件/语音消息双向收发、微信内 slash 命令管理会话/工作区/Preset/模型/权限、审批与提问卡与 GUI 双端同卡同决策、DSH 设置页内扫码登录与连接配置。以静态 Cordis 插件交付，零运行时 @deepseek-ai 依赖。",
     "fork": true,
     "forks": 0,
-    "headSha": "9c8de9e3c0c0a7d4a4496ea73b5a75eea9a7a493",
+    "headSha": "9cf9691c94fd4e905dfbf748ffc046ee69aa65de",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUljo2A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/8fdb6e451c722b4a14d3eb3a2a65f47f74c3094562e48a9d6f7a08140b9231bc/PerryLink/dsh-wechat",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ebe36a22e76e092a79b832b20b6f5ca47bba7a4e247f00dc3a9657ddec3a3e14/PerryLink/dsh-wechat",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/255665900?u=c45dcefbeb0005ad85d4a3d472d67eec6d962dae&v=4",
       "login": "PerryLink"
     },
-    "pushedAt": "2026-10-09T04:44:40Z",
+    "pushedAt": "2026-10-10T00:58:45Z",
     "slug": "PerryLink/dsh-wechat",
     "stars": 0,
     "topics": [
@@ -47,7 +47,7 @@
       "wechat",
       "wechat-bot"
     ],
-    "updatedAt": "2026-10-09T05:37:47Z",
+    "updatedAt": "2026-10-10T00:58:46Z",
     "url": "https://github.com/PerryLink/dsh-wechat"
   },
   "id": "gh:1381558488",
@@ -55,24 +55,38 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.9.11",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": "./dist/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-wechat",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.8"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/8fdb6e451c722b4a14d3eb3a2a65f47f74c3094562e48a9d6f7a08140b9231bc/PerryLink/dsh-wechat",
+    "coverUrl": "https://opengraph.githubassets.com/ebe36a22e76e092a79b832b20b6f5ca47bba7a4e247f00dc3a9657ddec3a3e14/PerryLink/dsh-wechat",
     "description": "让微信成为 DeepSeek Harness (DSH) 的第二客户端：通过腾讯 iLink bot 协议把微信私聊桥接到 DSH agent——文本/图片/文件/语音消息双向收发、微信内 slash 命令管理会话/工作区/Preset/模型/权限、审批与提问卡与 GUI 双端同卡同决策、DSH 设置页内扫码登录与连接配置。以静态 Cordis 插件交付，零运行时 @deepseek-ai 依赖。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让微信成为 DeepSeek Harness (DSH) 的第二客户端：通过腾讯 iLink bot 协议把 微信私聊桥接到 DSH agent——文本/图片/文件/语音消息双向收发、微信内 slash 命令管理会话/工作区/Preset/模型/权限、审批与提问卡与 GUI 双端同卡同决策、 DSH 设置页内扫码登录与连接配置。以静态 Cordis 插件交付，零运行时 @deepseek-ai 依赖，直接调用 DSH 进程内服务。"
   },
   "schemaVersion": 1,
   "scripts": {

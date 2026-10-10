@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-09T11:09:46.875Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-10T10:22:19.193Z",
+    "enrichmentStatus": "ok",
     "headSha": "40d322a874815ee1bd662567d501740859b60459"
   },
   "github": {
@@ -41,27 +41,50 @@
   },
   "id": "gh:1348513963",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-turn-continuation",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vb2250158/dsh-turn-continuation#40d322a874815ee1bd662567d501740859b60459",
+    "version": "0.1.7"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*",
+      "./typert": {
+        "default": "./lib/typert.host.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-turn-continuation",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.7"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a89e5ec777fe87434fb52d4dac116fdbe15ec5113c95190ff99f20704c9c1ab4/vb2250158/dsh-turn-continuation",
     "description": "Continue an unfinished interrupted DSH Web agent turn from its saved session context"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "This release requires DSH 0.2.1-alpha.1 or a compatible 0.2 release. See compatibility details."
   },
   "schemaVersion": 1,
   "scripts": {

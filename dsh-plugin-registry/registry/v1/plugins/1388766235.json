@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-09T11:09:46.875Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-10T10:22:19.193Z",
+    "enrichmentStatus": "ok",
     "headSha": "cd99f273f9582729475272e48722d7ec850d6857"
   },
   "github": {
@@ -30,7 +30,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/94857789?u=4dee5dcd3ae7accbf9084631be466a4c55ac2deb&v=4",
       "login": "AliceSaikawa"
     },
-    "pushedAt": "2026-10-08T07:27:29Z",
+    "pushedAt": "2026-10-10T03:17:10Z",
     "slug": "AliceSaikawa/dsh-webui-m3e",
     "stars": 1,
     "topics": [
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-webui-m3e",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.8"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/eecb5262c92f465448bb084c925b6501e5b4a853509d91f72e97b22d7f2ae775/AliceSaikawa/dsh-webui-m3e",
     "description": "Material 3 Expressive mobile Web UI plugin for DeepSeek Harness (DSH), switched per device"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）を、スマートフォンで使いやすい Material 3 Expressive の画面で操作するためのプラグインです。"
   },
   "schemaVersion": 1,
   "scripts": {
