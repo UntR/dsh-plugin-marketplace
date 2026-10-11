@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "e122c2a6a037a0e2f3fdf07faa5188d6ded08258"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1412984762",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-smart-config",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Seller-1990/dsh-model-smart-config#e122c2a6a037a0e2f3fdf07faa5188d6ded08258",
+    "version": "0.3.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-model-smart-config",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/dfbcfcb8a39fcdb35e8cd79afc7339db8c5e20df39461dfd3acf012b3054cdbd/Seller-1990/dsh-model-smart-config",
     "description": "Smart model setup for DeepSeek Harness third-party API providers: recognize a model ID and fill in context window, input modalities and reasoning levels."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-model-smart-config 给 DeepSeek Harness 的第三方 API 补上「智能配置」： 填完 url / key / model 之后，插件按模型名识别它是谁，把上下文窗口、输入模态、思考等级 直接填进官方那一条模型行里 —— 不必再手工编辑 cordis.patch.yml。"
   },
   "schemaVersion": 1,
   "scripts": {

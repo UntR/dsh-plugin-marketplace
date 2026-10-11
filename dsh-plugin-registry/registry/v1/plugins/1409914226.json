@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "321bff314f7c5ad93377ea1dabf45d4a6f7f44fa"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1409914226",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@agi321/dsh-temp-chat",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@agi321/dsh-temp-chat@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@agi321/dsh-temp-chat",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a565a3faf997f1bb71e4dd2fdad8cddd64f0f935fd458de21215ed2f23b4def9/agi321/dsh-temp-chat",
     "description": "dsh-temp-chat可以在DeepSeek Harness的主会话里开启临时会话，用来向大模型提问与主会话上下文无关的内容，不会读取和污染主会话的上下文。可以在一个主会话里用/single-turn 开启多个上下文互不相关的临时会话。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在当前对话里随手问一句、拿一份联网检索的答案，答案只出现在对话里，不进入主模型上下文。"
   },
   "schemaVersion": 1,
   "scripts": {

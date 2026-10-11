@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "1617ead5c979c88a93ced12cbadcf1f3219f9704"
   },
   "github": {
@@ -50,27 +50,41 @@
   },
   "id": "gh:1411176469",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@hope_phenom/dsh-plugin-code-quality",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@hope_phenom/dsh-plugin-code-quality@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./prompts/code-review": "./lib/prompts/code-review.js",
+      "./prompts/simplify": "./lib/prompts/simplify.js",
+      "./skills": "./lib/skills.js"
+    },
+    "main": "lib/index.js",
+    "name": "@hope_phenom/dsh-plugin-code-quality",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a959872da990902e7d3520507984b0665d4eb7c31fe5f28122d225bd722414d3/Hope-Phenom/dsh-plugin-code-quality",
     "description": "DSH 插件：给 `/` 菜单加上 /simplify（不改行为的清理）与 /code-review（多角度找 bug + 独立验证，/review 为别名），适配 DSH 的工具、指令文件布局与 subagent 模型。｜A DSH plugin adding /simplify and /code-review (alias /review) to the `/` menu."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that adds two code-quality commands to the / menu:"
   },
   "schemaVersion": 1,
   "scripts": {

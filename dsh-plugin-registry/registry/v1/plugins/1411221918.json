@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "027541e39409dc7eee4809b72235283a3d27a074"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1411221918",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-delete",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Baboo-ming/dsh-session-delete#027541e39409dc7eee4809b72235283a3d27a074",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-delete",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ed68b8822c73c28625187fca389ecd8505ff4d891cafa076b47cffff6d105001/Baboo-ming/dsh-session-delete",
     "description": "dsh 侧栏会话删除插件。支持普通用户安全清理侧栏会话数据，可穿透 junction/符号链接定位真实文件并彻底删除，安装使用简单。 | A dsh plugin to securely delete side session data, with junction/symlink resolution."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "当前版本 0.1.2（0.1.1 → 0.1.2：会话数据搬到别的盘、原位置只留目录链接（junction/符号链接）时也能删干净，见 §8 第 19–20 条；0.1.0 → 0.1.1：修掉「宿主 dispose 写回投影缓存」的时序缺陷，见 §8 第 18 条）。"
   },
   "schemaVersion": 1,
   "scripts": {

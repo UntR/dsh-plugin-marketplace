@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "5b762bab05d7a76593cdb2fa9c74473c9791d17e"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1411448429",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-web-search-session",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-web-search-session@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-web-search-session",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7e7fe6014d5a79b23bf67a3868644f1651c9c04781d2cb12d20b360bf13c88fd/YDT-china/dsh-web-search-session",
     "description": "DSH web search using the current session model and a self-hosted retrieval backend"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 自带的联网搜索按官方 token 额度计费。即便已经自配网关，这部分调用仍会走官方通道， 费用在不知不觉中累积——本插件正是为解决这一点而做。"
   },
   "schemaVersion": 1,
   "scripts": {

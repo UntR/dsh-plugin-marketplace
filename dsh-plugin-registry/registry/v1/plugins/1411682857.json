@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "5ef7d44927e1c505b8d42e7abe066aa055419e6a"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1411682857",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@eaglezlee/dsh-ui-html",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:eaglezlee/dsh-ui-html#5ef7d44927e1c505b8d42e7abe066aa055419e6a",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@eaglezlee/dsh-ui-html",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6b54e95ebee82645e8905dd3f97c98b8608cc52dbaf583bfe7b4217980f03b21/eaglezlee/dsh-ui-html",
     "description": "Renders sandboxed interactive HTML in a chat turn and sends the user's selections, clicks and form input back to the model — as a new user message by default, or as the tool result in blocking mode."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-ui-html 提供一个 showui 工具：模型给出 HTML，对话里就地渲染成一张界面卡片；用户在其中操作后，界面通过 window.dsh.emit(name, payload) 提交的结构化数据会回到模型，模型据此继续。"
   },
   "schemaVersion": 1,
   "scripts": {

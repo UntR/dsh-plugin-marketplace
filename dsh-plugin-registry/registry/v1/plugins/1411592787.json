@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
-    "headSha": "00c05ea0ab6b82d9ebd15cce49002be84a50eea5"
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
+    "headSha": "2fc790dfac4fde3146e4909ed82601b5b294189b"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "oh-my-zsh-style enhancement bundle for DeepSeek Harness (dsh): packaged skills, work-rule prompt guidance, the Enhance agent preset with a persistent deep-work prompt section, guards + delivery gate, work tracking, worktrees, advisor — install and go",
     "fork": false,
     "forks": 0,
-    "headSha": "00c05ea0ab6b82d9ebd15cce49002be84a50eea5",
+    "headSha": "2fc790dfac4fde3146e4909ed82601b5b294189b",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVCMyUw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/2318cf9ae795d548794fb0085229c12d3f15c9bb0337de6a8c98732b5f8701fa/P-JIANGH/dsh-enhance",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/84b9592e614d487f471c904304034a9361092cb6cdc68612554c2f7d4836d8f2/P-JIANGH/dsh-enhance",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/32102573?u=24b1eec4e1dcbbefce1710e98afebb13aadc6f95&v=4",
       "login": "P-JIANGH"
     },
-    "pushedAt": "2026-10-10T08:50:33Z",
+    "pushedAt": "2026-10-10T13:55:34Z",
     "slug": "P-JIANGH/dsh-enhance",
     "stars": 1,
     "topics": [
@@ -38,38 +38,58 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-10T08:50:37Z",
+    "updatedAt": "2026-10-10T13:55:38Z",
     "url": "https://github.com/P-JIANGH/dsh-enhance"
   },
   "id": "gh:1411592787",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@p-jiangh/dsh-enhance",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:P-JIANGH/dsh-enhance#2fc790dfac4fde3146e4909ed82601b5b294189b",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./enhance-mode": {
+        "default": "./lib/enhance-mode.js",
+        "types": "./lib/enhance-mode.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./skills/*": "./skills/*"
+    },
+    "main": "lib/index.js",
+    "name": "@p-jiangh/dsh-enhance",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/2318cf9ae795d548794fb0085229c12d3f15c9bb0337de6a8c98732b5f8701fa/P-JIANGH/dsh-enhance",
+    "coverUrl": "https://opengraph.githubassets.com/84b9592e614d487f471c904304034a9361092cb6cdc68612554c2f7d4836d8f2/P-JIANGH/dsh-enhance",
     "description": "oh-my-zsh-style enhancement bundle for DeepSeek Harness (dsh): packaged skills, work-rule prompt guidance, the Enhance agent preset with a persistent deep-work prompt section, guards + delivery gate, work tracking, worktrees, advisor — install and go"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "面向 DeepSeek Harness（dsh）的 oh-my-zsh 风格增强插件。一次安装即可获得：打包的技能、持久的 work-rules 提示词段、doctor 工具，以及不断增长的 v2 能力面：工作追踪（boulder + 写令牌；goal 用原生服务）、守卫 + delivery-gate 纪律、worktree、advisor 伴随审核运行时，以及一个把 scout / librarian / reviewer / task 作为子代理派发的编排预设 Enhance（id enhance）——它还常驻一段深度工作协议（enhance-mo"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "47790951deee4df4872af787c6a44c219fba99b2"
   },
   "github": {
@@ -46,27 +46,44 @@
   },
   "id": "gh:1411547680",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-task-assist",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:TheFold060629/dsh-task-assist#47790951deee4df4872af787c6a44c219fba99b2",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-task-assist",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5764cdc8d28c66905e3a1504510f6ac51a4c26826c17f1b339c1cf0c504d1a6a/TheFold060629/dsh-task-assist",
     "description": "DSH 任务辅助启动器：在对话框发送键旁放置一个常驻按钮，点击后自动扫描本会话已安装的、对当前任务有帮助的技能与 MCP 工具，弹候选清单（默认勾选匹配项），一键确认后把选中技能注入当前对话交给 Agent 自动执行。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）任务辅助启动器插件。在对话框输入卡 发送键左侧 放一个常驻「辅助」按钮：点击后自动扫描本会话已安装的、对当前任务有帮助的 技能（skills） 与 MCP 工具，弹出候选清单（命中关键词的技能默认勾选），确认后把选中技能作为指令注入当前对话，由正在运行的 Agent 自动加载并按其方法论执行。"
   },
   "schemaVersion": 1,
   "scripts": {

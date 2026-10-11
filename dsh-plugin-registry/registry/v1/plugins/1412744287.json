@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "ae3e2ada538ad1d44784a4fc89039fea81dcc226"
   },
   "github": {
@@ -47,27 +47,42 @@
   },
   "id": "gh:1412744287",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-provider-quote",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:miku05231/dsh-provider-quote#ae3e2ada538ad1d44784a4fc89039fea81dcc226",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.js",
+      "./client": "./client.js",
+      "./host": "./lib/host.js",
+      "./index": "./index.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./pricing": "./lib/pricing.js"
+    },
+    "main": null,
+    "name": "@local/dsh-provider-quote",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f2196d4fc6b7b8d0715847b583d43a7dcfb2c9790e96523f241c08a4ebc69e8f/miku05231/dsh-provider-quote",
     "description": "DSH 插件：对正在使用的模型提供商询价（余额 + 单价，参考 cc-switch 的「服务商询价」）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "参考 cc-switch 的「服务商询价」，把同一件事做进 DSH：当前在用哪个提供商，就查它的余额与单价。"
   },
   "schemaVersion": 1,
   "scripts": {

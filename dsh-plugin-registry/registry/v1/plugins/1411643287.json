@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "cfa0db240230d51f546b7d5cd0566625e948aca8"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1411643287",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ollama-quota",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:okku000/dsh-ollama-quota#cfa0db240230d51f546b7d5cd0566625e948aca8",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-ollama-quota",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5049a2eb6d59eb679e7bf4930ddde31b5dd86b9ed772ec1692ba9b114a8d63cb/okku000/dsh-ollama-quota",
     "description": "DeepSeek Harness plugin: show the Ollama Cloud credit balance and recent usage as a Settings section, with an in-page API key editor."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness plugin that shows the Ollama Cloud credit balance as a Settings section (id ollama-quota, order -9, directly below the shipped Account entry) and lets you enter or replace the Ollama Cloud API key on that same page."
   },
   "schemaVersion": 1,
   "scripts": {

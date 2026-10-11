@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
-    "headSha": "42ec63e2acfd69a76151ac02f3a773e5a8d26583"
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
+    "headSha": "d3d1301e1118aa2dd741e93ab2b5cb5285ddaf45"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH 插件：上游网关按图片张数拒绝请求时，把最旧的图片卸载为占位文本并重试，恢复卡死的视觉模型会话（复用官方 image/offload 投影）。",
     "fork": false,
     "forks": 0,
-    "headSha": "42ec63e2acfd69a76151ac02f3a773e5a8d26583",
+    "headSha": "d3d1301e1118aa2dd741e93ab2b5cb5285ddaf45",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU-1eWw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/4608a98d7785d7d8115c0b5fee6fac445f6ac8c5ad04e378f81680c86960496c/MacilyDots/dsh-image-count-guard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/800956e7b327fc22b6b2f024c9a95c6cef3ab9cced994a1181f9354fd8b85ecc/MacilyDots/dsh-image-count-guard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/332532802?u=aa1e9c679dc712ec5df57ac5e4341873b6523dde&v=4",
       "login": "MacilyDots"
     },
-    "pushedAt": "2026-10-09T14:16:27Z",
+    "pushedAt": "2026-10-10T11:44:40Z",
     "slug": "MacilyDots/dsh-image-count-guard",
     "stars": 0,
     "topics": [
@@ -39,32 +39,42 @@
       "image",
       "vision"
     ],
-    "updatedAt": "2026-10-09T14:35:05Z",
+    "updatedAt": "2026-10-10T11:44:44Z",
     "url": "https://github.com/MacilyDots/dsh-image-count-guard"
   },
   "id": "gh:1408065115",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-image-count-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:MacilyDots/dsh-image-count-guard#d3d1301e1118aa2dd741e93ab2b5cb5285ddaf45",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/index.js",
+    "name": "dsh-image-count-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/4608a98d7785d7d8115c0b5fee6fac445f6ac8c5ad04e378f81680c86960496c/MacilyDots/dsh-image-count-guard",
+    "coverUrl": "https://opengraph.githubassets.com/800956e7b327fc22b6b2f024c9a95c6cef3ab9cced994a1181f9354fd8b85ecc/MacilyDots/dsh-image-count-guard",
     "description": "DSH 插件：上游网关按图片张数拒绝请求时，把最旧的图片卸载为占位文本并重试，恢复卡死的视觉模型会话（复用官方 image/offload 投影）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A fallback plugin for DSH visual-model sessions that hit an image-count limit."
   },
   "schemaVersion": 1,
   "scripts": {

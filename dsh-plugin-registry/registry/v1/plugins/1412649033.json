@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "39058a162fd142c1d24266c252be442cae256808"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1412649033",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-remove",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:rhl88/dsh-session-delete#39058a162fd142c1d24266c252be442cae256808",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.4",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-session-remove",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0f307fa3a0ee97ca7607a9ad0a166183773c3cea95b63fc6878840fb98d3a310/rhl88/dsh-session-delete",
     "description": "DeepSeek Harness（DSH）插件：在侧边栏会话菜单里加入删除会话（永久移除会话记录与完整历史，补足只能归档的限制）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness (cordis) bundle plugin adding permanent session deletion to the Web GUI. Stock DSH only archives sessions: the sidebar session menu gets a destructive Delete session entry (after pin/rename/fork/archive, behind a separator), a confirmation dialog, and a host rout"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "3b1dcb36d3d529406a7db54895ff6b5f56c2737a"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1412138766",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-balance-peek",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-balance-peek@2.0.0",
+    "version": "2.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "2.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-balance-peek",
+    "status": "valid",
+    "type": "module",
+    "version": "2.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0f92a1e1a072fdae2e6e9ad6d931e46974ddb3172aef61b4e67a888bad0e2d38/QWHYQ114514-cell/dsh-balance-peek",
     "description": "DeepSeek Harness plugin: minimal two-line balance, today's spend and peak/off-peak readout at the sidebar foot."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 侧边栏底部，用两行极简文字显示 DeepSeek 余额 和 当前峰谷时段。"
   },
   "schemaVersion": 1,
   "scripts": {

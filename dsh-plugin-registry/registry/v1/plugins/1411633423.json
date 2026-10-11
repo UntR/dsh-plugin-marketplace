@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "a660b935bb6f8faaf6a4cdafa12a3e90dfef1dfa"
   },
   "github": {
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-3d-viewer",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7a34eb1147341679254fb798acb77d0abbd822da7daba9c7b0c7d045a3c54f08/guiyidu-ui/dsh-plugin-3d-viewer",
     "description": "DSH 三维查看器插件：消息里的 3d 代码块原地渲染为 Three.js 视图 + 右侧栏常驻 3D 预览面板（支持 obj/stl/gltf/glb）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）用的三维查看器插件： 把助手消息里的 3d 代码块（或 [3d:路径] 链接）原地渲染成可旋转/缩放的三维视图， 并在 DSH 右侧栏提供一个「本会话出现过的 3D 模型」常驻预览面板。"
   },
   "schemaVersion": 1,
   "scripts": {

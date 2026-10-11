@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "99ca575f9eb241f349b8ed3e051e5e895be74b47"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1411621903",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-task-overlay",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:gg947919490-byte/dsh-task-overlay#99ca575f9eb241f349b8ed3e051e5e895be74b47",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dsh/index.js",
+      "./client": "./dsh/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-task-overlay",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f8588978114e6cbf033bc63a6059d67932aa9500d9bd17d72c6be29ca8497fc1/gg947919490-byte/dsh-task-overlay",
     "description": "Desktop task overlay for DeepSeek Harness: goal / todo progress / pending-confirmation alerts, with an in-app switch."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 窗口之外放一个桌面悬浮窗，实时显示当前任务状态；并在 DSH 侧栏提供一个启停开关。"
   },
   "schemaVersion": 1,
   "scripts": {

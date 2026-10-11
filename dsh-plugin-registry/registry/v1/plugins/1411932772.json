@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "4736f42bb944f9925e8c839ac894c6cd10b3bd22"
   },
   "github": {
@@ -45,27 +45,41 @@
   },
   "id": "gh:1411932772",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-web-search-tavily-relay",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hjnvv00v/dsh-web-search-tavily-relay#4736f42bb944f9925e8c839ac894c6cd10b3bd22",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-web-search-tavily-relay",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cf7102f15dc5e8d3dad8d78ddde025b09616d395c47d2d455b7250b998b9c4b4/hjnvv00v/dsh-web-search-tavily-relay",
     "description": "Tavily-compatible web search provider for the DeepSeek Harness web seam (ctx.web): the official Tavily API, a Tavily-shaped relay, or an OpenAI-compatible gateway, all from configuration"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Tavily-backed web search for the DeepSeek Harness web seam (ctx.web) — with the endpoint, credential, and wire protocol all configurable, so a relay or gateway domain works exactly like the official one."
   },
   "schemaVersion": 1,
   "scripts": {

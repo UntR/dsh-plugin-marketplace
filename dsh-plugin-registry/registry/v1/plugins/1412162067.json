@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "756fa15ba689f2cb0af38f20f4270c21f44f703d"
   },
   "github": {
@@ -47,27 +47,42 @@
   },
   "id": "gh:1412162067",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-scroll-piano",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:439436269-ctrl/dsh-scroll-piano#756fa15ba689f2cb0af38f20f4270c21f44f703d",
+    "version": "0.3.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.5",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-scroll-piano",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c53c9419a63c2f9b39676def059600a640d00cbb4a5fbb0c21cf35ee9f20c96c/439436269-ctrl/dsh-scroll-piano",
     "description": "滚动钢琴：鼠标滑过 DSH 聊天区右边缘的竖条时，按纵向位置发出钢琴音（越上越高，特雷门琴式），竖条上还带「我的消息」刻度可跳转。A theremin-style scroll piano for the DeepSeek Harness UI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "鼠标滑过 DSH 聊天区右边缘的竖条（滚动条/把手那一条）时，按鼠标的纵向位置发出钢琴音：越靠上音越高、越靠下音越低（特雷门琴式）。"
   },
   "schemaVersion": 1,
   "scripts": {

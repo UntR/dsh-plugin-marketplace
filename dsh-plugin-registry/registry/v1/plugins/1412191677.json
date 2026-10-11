@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "415236ee1f2908bfb8c43aa5722b62071ae7b904"
   },
   "github": {
@@ -45,33 +45,46 @@
   },
   "id": "gh:1412191677",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-weixin-web",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:agi-redtea/dsh-weixin-web#415236ee1f2908bfb8c43aa5722b62071ae7b904",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/index.mjs",
+      "./client": {
+        "default": "./client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.mjs",
+    "name": "dsh-weixin-web",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f662f018405c891aec1ec6b5d583018c36b133a39fc0293e0be412ffe8072035/agi-redtea/dsh-weixin-web",
     "description": "DeepSeek Harness 微信 iLink 通道插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness 提供微信 iLink 通道。插件把微信消息接入独立的 DSH 会话，并在 DSH Web 侧边栏中提供扫码登录、机器人管理和消息列表。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

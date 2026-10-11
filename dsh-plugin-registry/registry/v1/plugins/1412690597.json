@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "13633881390fa32b09ae63ccd12c1c1fca37471d"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1412690597",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-token-stats",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:KILLEDx/dsh-token-stats#13633881390fa32b09ae63ccd12c1c1fca37471d",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-token-stats",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8a8c8cc8858ea83e2b3ca9a49c0d77d05473fc52b1e567e0257bf1de3d5e207b/KILLEDx/dsh-token-stats",
     "description": "DSH设置页 Token 统计分区：跨会话用量指标、热力图与常驻悬浮小窗（读本地日志，零模型消耗）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DSH Web 插件：在设置页新增「Token 统计」分区，展示跨会话的 token 用量；并在界面上常驻一个悬浮小窗。"
   },
   "schemaVersion": 1,
   "scripts": {

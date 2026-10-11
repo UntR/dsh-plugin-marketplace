@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "a2fb12f4fdded385a0efa5bb5489c0d1034d2934"
   },
   "github": {
@@ -46,33 +46,52 @@
   },
   "id": "gh:1405819463",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-better-reasoning-effort-fish",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-better-reasoning-effort-fish@0.5.7",
+    "version": "0.5.7"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.7",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-better-reasoning-effort-fish",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.7"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d3e02fd3bdf7e882499ec99876c804e88443a21d80a4573fe0356fe6aacb443b/Fish-under-sea/dsh-better-reasoning-effort-fish",
     "description": "DSH 插件（上游 HaoyueQin/dsh-better-reasoning-effort 的 Fork）：在官方「模型」页编辑卡里直接编辑每模型的思考强度（reasoningEfforts）与输入模态（input）声明，并支持一键适配；本 Fork 让出模型能力面板的席位。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "第三方模型的思考强度与输入模态，直接改在官方「模型」页的编辑卡里"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

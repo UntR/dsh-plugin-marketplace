@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "05dff42d9268ad98447673cb28e9276f5ae623cd"
   },
   "github": {
@@ -45,27 +45,50 @@
   },
   "id": "gh:1408574806",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-openclaw-memory",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-openclaw-memory@0.1.4",
+    "version": "0.1.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.4",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./index.js",
+        "types": "./dist/service/index.d.ts"
+      },
+      "./client": "./client.js",
+      "./memory-core": {
+        "import": "./memory-core.js",
+        "types": "./dist/core/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "import": "./remote.js",
+        "types": "./dist/remote/schema.d.ts"
+      },
+      "./typert": "./typert.host.js"
+    },
+    "main": "index.js",
+    "name": "dsh-openclaw-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e60953a05a04f3feeba583c36a2e9c77bc2eebeceb4761038dd56ebf76d97b7c/zzy-fxxxexxxyxxx/dsh-openclaw-memory",
     "description": "Keep your OpenClaw persona and memory when moving to DeepSeek Harness: one shared Markdown workspace, bounded context, and a native DSH Sidebar."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "简体中文"
   },
   "schemaVersion": 1,
   "scripts": {

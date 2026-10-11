@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "75e533e3077dda03a337a1e6d054dac5d63730d0"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1412696449",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-lock",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:felixpu/dsh-lock#75e533e3077dda03a337a1e6d054dac5d63730d0",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-lock",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/80d0a954aedebd7909e5a499824533e6306b88b44430c15ee2020574384a01b7/felixpu/dsh-lock",
     "description": "密码门禁：打开 DSH 时先显示密码界面，解锁后才能使用；支持手动锁定与自动锁定，密码以 scrypt 单向哈希存储。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH（DeepSeek Harness）网页版加一道密码门禁：打开页面先显示锁定界面，输入密码解锁后才能使用。"
   },
   "schemaVersion": 1,
   "scripts": {

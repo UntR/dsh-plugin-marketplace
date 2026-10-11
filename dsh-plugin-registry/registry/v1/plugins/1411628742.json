@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "4fff868ab668d40926c4c67c49380d46e7467a71"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1411628742",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-account-glance",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:faith372/dsh-account-glance#4fff868ab668d40926c4c67c49380d46e7467a71",
+    "version": "1.4.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-account-glance",
+    "status": "valid",
+    "type": "module",
+    "version": "1.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b900dc9cc6ba292a2009e276d4a790bcb25e39e9d567299956fe24898be3b0a2/faith372/dsh-account-glance",
-    "description": "DSH Web GUI sidebar glance card: DeepSeek account balance, peak/off-peak billing countdown and today's spend / tokens / calls, seated right above the account row."
+    "description": "DSH Web GUI sidebar glance card: DeepSeek account balance, peak/off-peak billing countdown and today's spend / tokens / calls, seated right above the account row. Self-contained host half; @linxin666/dsh-usage optional."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A three-line glance card for the DSH Web GUI, seated directly above the sidebar's bottom-left account / Settings row:"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "18fe5cbe6cbda0f682c6ddbb25a5f771393a7112"
   },
   "github": {
@@ -58,27 +58,41 @@
   },
   "id": "gh:1412918990",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-postgres-expert",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-postgres-expert@1.0.1",
+    "version": "1.0.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./prompt": "./src/entry-prompt.js",
+      "./skills": "./src/entry-skills.js",
+      "./sync": "./scripts/sync-upstream.mjs"
+    },
+    "main": "./src/index.js",
+    "name": "dsh-postgres-expert",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c7378b1e77601fdad8adb2f63727c809d08890727c6d44e1797b527e834236cc/mirelconstantin/dsh-postgres-expert",
     "description": "PostgreSQL expertise for DeepSeek Harness: 11 curated pg-aiguide skills from Tiger Data registered natively, plus the pg-aiguide MCP server for version-exact manual search."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "PostgreSQL expertise for DeepSeek Harness. Eleven curated skills from Tiger Data's pg-aiguide, registered as native skills, plus the public MCP server for version-exact manual search — so the model stops writing 2015-era schemas from memory."
   },
   "schemaVersion": 1,
   "scripts": {

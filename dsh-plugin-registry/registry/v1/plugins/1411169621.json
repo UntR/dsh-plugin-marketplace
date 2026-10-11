@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "5c9fb6d7cf90a398020a5c311c3343088e7ac216"
   },
   "github": {
@@ -46,27 +46,41 @@
   },
   "id": "gh:1411169621",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-compact-manager",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:frankshi2024/dsh-compact-manager#5c9fb6d7cf90a398020a5c311c3343088e7ac216",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./policy": "./lib/policy.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-compact-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c08b46e6b50c455482443150776fbd5e87403482b08a45e7f6742dfa8a47b5ff/frankshi2024/dsh-compact-manager",
     "description": "Layered compaction-threshold manager for DeepSeek Harness: global / context-window tier / model policies with a live sidebar editor."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "面向 DeepSeek Harness（dsh）的分层压缩阈值管理器：让你按全局 → 上下文长度档位 → 模型三级覆盖自动压缩（compaction）的触发点，并在侧边栏里实时查看每个模型当前生效的阈值与策略。"
   },
   "schemaVersion": 1,
   "scripts": {

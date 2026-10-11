@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "3f1b2466ba2c6c14379b0d22fabbd70cbed0ed90"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1411836942",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-verified-progress",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lion231226/dsh-verified-progress#3f1b2466ba2c6c14379b0d22fabbd70cbed0ed90",
+    "version": "0.3.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./core": "./lib/core/ledger.js",
+      "./guard": "./lib/core/guard.js",
+      "./package.json": "./package.json",
+      "./verdict": "./lib/core/verdict.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-verified-progress",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/14b3e7175b437386ea862451223c0ecf070670e63b539a272c5af82e6f405d24/lion231226/dsh-verified-progress",
     "description": "Verified-progress ledger for long-running DSH work: an independent verifier certifies each claimed step, and a fingerprint check voids any verdict whose verifier mutated the workspace."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A verified-progress ledger for long-running DSH work — where a verdict only counts if the thing that produced it provably stayed read-only."
   },
   "schemaVersion": 1,
   "scripts": {

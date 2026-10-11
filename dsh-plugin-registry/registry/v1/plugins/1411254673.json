@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "eb3bbc833bea4b3ef4afcf5b7e3b0d3b97135f4d"
   },
   "github": {
@@ -44,27 +44,37 @@
   },
   "id": "gh:1411254673",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-agent/dsh-agent-memory",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:TindalosKorone/dsh-agent-memory#eb3bbc833bea4b3ef4afcf5b7e3b0d3b97135f4d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@dsh-agent/dsh-agent-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8890a07a7eeaeeadd477848e9933ebdd0008c703d5f6b60f1cd0680b9a3ef35e/TindalosKorone/dsh-agent-memory",
     "description": "DSH 跨会话长期记忆插件：零运行时依赖、输出可自算自证、请求级隔离；每项机制都附能判红的取证（CC BY-NC-SA 4.0）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH Agent 用的跨会话长期记忆：四个工具（memoryremember / memoryrecall / memoryexpand / memoryprune）把值得留下的结论写进一份人类可读的 NDJSON 文件，下次会话按需召回。"
   },
   "schemaVersion": 1,
   "scripts": {

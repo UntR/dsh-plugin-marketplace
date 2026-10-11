@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "d049f4f61ba880b9d7d204bc97f43295e4c3364b"
   },
   "github": {
@@ -25,46 +25,64 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOVB0sFw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/64687446055f94428415fc17238388e03d0c694b62e42cd32c504676503cf777/xyrrrrr-r/dsh-eval-control",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/29b73cac6c587fe17b8cea3baf8fe8cd909e882590a7c6f90ee5b25d448dcb31/xyrrrrr-r/dsh-eval-control",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/277159592?u=b4757170908e7d20d67718a39f5be4ec87044a6f&v=4",
       "login": "xyrrrrr-r"
     },
     "pushedAt": "2026-10-10T06:38:56Z",
     "slug": "xyrrrrr-r/dsh-eval-control",
-    "stars": 2,
+    "stars": 5,
     "topics": [
       "agent-evaluation",
       "deepseek-harness",
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-10-10T06:36:38Z",
+    "updatedAt": "2026-10-11T10:02:48Z",
     "url": "https://github.com/xyrrrrr-r/dsh-eval-control"
   },
   "id": "gh:1411197975",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-eval-control",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-eval-control@0.2.3",
+    "version": "0.2.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./dist/*": "./dist/*",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "dist/index.js",
+    "name": "dsh-eval-control",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/64687446055f94428415fc17238388e03d0c694b62e42cd32c504676503cf777/xyrrrrr-r/dsh-eval-control",
+    "coverUrl": "https://opengraph.githubassets.com/29b73cac6c587fe17b8cea3baf8fe8cd909e882590a7c6f90ee5b25d448dcb31/xyrrrrr-r/dsh-eval-control",
     "description": "Host-side DSH evaluation control plugin for aeval：一次评测试次的配置注入、预算封顶与证据归属"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "aeval 的宿主侧 DSH 评测控制插件：把一次评测试次所需的全部实验事实—— 变量、预算、血统、证据归属——一次性注入 DSH agent 进程，并密封成可校验的 bundle descriptor。"
   },
   "schemaVersion": 1,
   "scripts": {

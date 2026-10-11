@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "423ecffbba17bcef1c96bd0a0548bfb8b3065adb"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1411323099",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-folder-timemachine",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:guomi6450/dsh-folder-timemachine#423ecffbba17bcef1c96bd0a0548bfb8b3065adb",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/host.js",
+    "name": "dsh-folder-timemachine",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3c133b99ce30cabd85b3c71aeec69ee034c9e4c141de57790e0d172b24b7cc5c/guomi6450/dsh-folder-timemachine",
     "description": "给任意文件夹留历史版本、随时回到过去——像 Git 一样有版本历史，但不需要懂 Git，游戏存档 / 软件配置 / 散落文档都能用。实时（改动静默 8 秒）或定时自动存档，按内容去重、内容没变不产生空版本、空文件夹也记录；每次恢复前自动存安全点，所以恢复本身也可撤销。DeepSeek Harness 插件，纯 JS 零依赖。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给任意文件夹留下历史时间点，随时一键回到过去的样子。"
   },
   "schemaVersion": 1,
   "scripts": {

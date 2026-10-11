@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "46e48c60574237ebe17feddadc36778627a95a79"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1411318487",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ikuai-mcp",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-ikuai-mcp@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-ikuai-mcp",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fb6e504e2c41cdc7ee4239452fa7cc4496c36df5232e5c7cf6b1f784e69bdc0b/MingShi350/dsh-ikuai-mcp",
     "description": "DSH plugin: control iKuai (爱快) soft routers over their JSON API. Zero-dependency Node MCP stdio server exposing 11 read tools plus a write-gated generic API call; credentials live in the DSH credential store."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness (DSH) 里控制爱快 (iKuai) 软路由。纯 Node 零依赖的 MCP stdio server + DSH 宿主半： 模型侧出现 11 个 mcpikuai 工具，另有 3 个宿主工具（ikuaicredentialsstatus / ikuaisetcredentials / ikuaiping）。写操作默认关闭。"
   },
   "schemaVersion": 1,
   "scripts": {

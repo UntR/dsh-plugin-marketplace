@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "8364a3ffb66d71bd36fcd20986b52f3c22edd06c"
   },
   "github": {
@@ -52,27 +52,38 @@
   },
   "id": "gh:1411428505",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-sidebar-git",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Gnatnaituy/dsh-sidebar-git#8364a3ffb66d71bd36fcd20986b52f3c22edd06c",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-sidebar-git",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/30afcad75de92b9f0cef02c4b5a01e022814acf453757e40f509bb59ee8dd212/Gnatnaituy/dsh-sidebar-git",
     "description": "A Git tab in DSH's right sidebar: follows the session's repository to review changes and diffs, stage, commit, switch branches, push/pull — destructive ops go through a prepare→confirm gate."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）动态插件：右侧栏里的一个 Git 页签。跟随当前会话的仓库，看变更与 diff、暂存提交、切分支、推拉远端——整个「改完代码 → stage → commit → push」流程不离开会话页面。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
-    "headSha": "e8f11d8cdfa7cbacf4851ad8cdc2861ee02b0a6d"
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
+    "headSha": "c053ec6df36187ee48c85450d572e3af9be6bde9"
   },
   "github": {
     "archived": false,
@@ -17,20 +17,20 @@
     "description": "DSH 会话费用账单：账号余额 + 峰谷计价 + 每个会话（含子代理衍生会话）的消耗构成，输入框下方读数与右侧栏面板双入口。 DeepSeek Harness session cost breakdown: balance, peak/off-peak pricing, and how each session's spend is composed.",
     "fork": false,
     "forks": 0,
-    "headSha": "e8f11d8cdfa7cbacf4851ad8cdc2861ee02b0a6d",
+    "headSha": "c053ec6df36187ee48c85450d572e3af9be6bde9",
     "homepageUrl": null,
-    "language": "JavaScript",
+    "language": "TypeScript",
     "license": {
-      "name": "MIT License",
-      "spdxId": "MIT"
+      "name": "Apache License 2.0",
+      "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOVDRJaA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e81764b6b38ab3105cc31f9d6bc3013f52cf1fc919467da265c4826362ba61cd/liaimei/dsh-cost-breakdown",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8a5319238dbce7a2f839a2d14498a34813be6426ab6a67526171fc9617b9de43/liaimei/dsh-cost-breakdown",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/171688237?u=48514c3728d8bd4726f026a8ebaea32fc8217af3&v=4",
       "login": "liaimei"
     },
-    "pushedAt": "2026-10-10T08:12:30Z",
+    "pushedAt": "2026-10-11T08:34:17Z",
     "slug": "liaimei/dsh-cost-breakdown",
     "stars": 0,
     "topics": [
@@ -40,38 +40,53 @@
       "dsh-plugin",
       "typescript"
     ],
-    "updatedAt": "2026-10-10T08:12:34Z",
+    "updatedAt": "2026-10-11T08:34:23Z",
     "url": "https://github.com/liaimei/dsh-cost-breakdown"
   },
   "id": "gh:1412712808",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-cost-breakdown",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:liaimei/dsh-cost-breakdown#c053ec6df36187ee48c85450d572e3af9be6bde9",
+    "version": "0.00.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-cost-breakdown",
+    "status": "valid",
+    "type": "module",
+    "version": "0.00.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e81764b6b38ab3105cc31f9d6bc3013f52cf1fc919467da265c4826362ba61cd/liaimei/dsh-cost-breakdown",
+    "coverUrl": "https://opengraph.githubassets.com/8a5319238dbce7a2f839a2d14498a34813be6426ab6a67526171fc9617b9de43/liaimei/dsh-cost-breakdown",
     "description": "DSH 会话费用账单：账号余额 + 峰谷计价 + 每个会话（含子代理衍生会话）的消耗构成，输入框下方读数与右侧栏面板双入口。 DeepSeek Harness session cost breakdown: balance, peak/off-peak pricing, and how each session's spend is composed."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "上游的代码逐行保留（除下文列出的接线文件）——注释与若干界面文案已按本仓库的 约定改写，但没有任何一条语句、表达式或类型被改动（改动范围见 NOTICE）。 因此下列上下文洞察能力全部保留："
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

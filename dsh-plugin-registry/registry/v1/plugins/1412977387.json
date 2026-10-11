@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "e00615068a3ae4804b98f870885143008adbc6b1"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1412977387",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-postman",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:LiuJiaCheng11/dsh-postman#e00615068a3ae4804b98f870885143008adbc6b1",
+    "version": "0.5.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./postman-api": "./src/postman-api.js"
+    },
+    "main": "src/index.js",
+    "name": "dsh-postman",
+    "status": "valid",
+    "type": "commonjs",
+    "version": "0.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9badf54cdde7e57f6e8fff4e8b6cdc1ffb6572cc49b79befd1aa25d14913a573/LiuJiaCheng11/dsh-postman",
     "description": "DeepSeekHarness插件，允许你的AI直接操作你的Postman（网页版）的COLLECTIONS"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 dsh（DeepSeek Harness） 插件： 给 AI 一套访问线上 Postman 的工具——查询、新增（单个或批量）、修改、删除接口，导出导入集合。"
   },
   "schemaVersion": 1,
   "scripts": {

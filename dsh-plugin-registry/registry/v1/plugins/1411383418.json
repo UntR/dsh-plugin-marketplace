@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "681b3ddd2d48e8f46a89f21b3354f703c65e75f6"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1411383418",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-kb-curator",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Mark-mph/dsh-kb-curator#681b3ddd2d48e8f46a89f21b3354f703c65e75f6",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-kb-curator",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e744bb3c9928a4e3c72056c4ef42f93bdbd8f514d4380a54ff30059212a1d533/Mark-mph/dsh-kb-curator",
     "description": "Bundles the kb-curator skill: a local three-layer knowledge base engine for DeepSeek Harness that refuses to index anything you have not approved."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness composition bundle that contributes one read-only skill, kb-curator, teaching an agent to maintain a local, three-layer knowledge base with a mandatory human review gate."
   },
   "schemaVersion": 1,
   "scripts": {

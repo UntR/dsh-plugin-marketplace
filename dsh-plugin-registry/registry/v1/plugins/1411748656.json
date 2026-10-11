@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "3d33debbd1d485126a07b70009cb474451c9db50"
   },
   "github": {
@@ -45,27 +45,45 @@
   },
   "id": "gh:1411748656",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cost",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Arun1016/dsh-cost#3d33debbd1d485126a07b70009cb474451c9db50",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-cost",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/59eda4fd76048f69886135f5a6e3fb43b94f27d8716afde9630f20ad1c48a2d6/Arun1016/dsh-cost",
     "description": "Account balance and per-session cost pill for DeepSeek Harness (dsh) web GUI: official peak/off-peak pricing, per-model breakdown, no credentials stored."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Real-time account balance and per-session cost pill for the DeepSeek Harness Web GUI. It adds one more pill next to the built-in clock and token pills above the composer — billing period dot · balance · session cost — and opens a breakdown when clicked."
   },
   "schemaVersion": 1,
   "scripts": {

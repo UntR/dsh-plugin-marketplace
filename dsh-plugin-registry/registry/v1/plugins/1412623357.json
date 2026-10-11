@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "345248d15861e7db831573b439c3c6425c12d640"
   },
   "github": {
@@ -38,27 +38,40 @@
   },
   "id": "gh:1412623357",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-gotify-notify",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-gotify-notify@2.2.0",
+    "version": "2.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "2.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-gotify-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "2.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/08ee0b0cc08ea02febb954ecd391d764dc3d013e3960d0fe0c7b84f56d629c37/AhYi8/dsh-gotify-notify",
     "description": "DSH 的 Gotify 通知插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的 Gotify 通知插件：每轮会话结束时向你的 Gotify 服务器推送一条通知，可在 DSH 的插件管理页里直接配置，无需手改配置文件。"
   },
   "schemaVersion": 1,
   "scripts": {

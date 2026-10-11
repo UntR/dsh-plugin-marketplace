@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "956a3874d1696ba37e236521e65b21747b7cd367"
   },
   "github": {
@@ -42,27 +42,40 @@
   },
   "id": "gh:1412859085",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-recall",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:liu-zhengdong/dsh-recall#956a3874d1696ba37e236521e65b21747b7cd367",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./client/client.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-recall",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2102c663dbfd1921b93dd4279747a1385b41ed6530a43b0989fe3c679ee17f30/liu-zhengdong/dsh-recall",
     "description": "DSH 插件：把每个 turn 归档为一条 Run，后台生成摘要，让 Agent 检索自己的执行历史"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DSH 的每个 turn 归档为一条 Run，并让 Agent 检索自己的执行历史。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "eb7e92f398907e6ff73fb0711394ab82bc38dab8"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1411978508",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-image-once",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:senyayume/dsh-image-once#eb7e92f398907e6ff73fb0711394ab82bc38dab8",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-image-once",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2f46554d497994b79f9222c7cf93fb97ce003ecdc6bb379d2d3c6b76e751a0a3/senyayume/dsh-image-once",
     "description": "DSH plugin: inline each image block only in the request where it first appears, then swap it for the harness's own placeholder text"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "「图片只发一次」：对话里的每个图片块只在它出现的那一次请求里以 base64 内联，之后的请求换成 DSH 自带的占位文字（占位文字里带本地只读路径，模型要看时自己 readimage）。"
   },
   "schemaVersion": 1,
   "scripts": {

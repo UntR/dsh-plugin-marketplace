@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "8da6134c0b7846943b6777cd637e27a37719fcbb"
   },
   "github": {
@@ -48,27 +48,42 @@
   },
   "id": "gh:1411485065",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-persona-forge",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-persona-forge@0.3.1",
+    "version": "0.3.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-persona-forge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/122b1c7a7f04731ab14cf23e5d43e2eb96fd0857d94442d5fa8e2541e1065504/sugarmaster666/dsh-persona-forge",
     "description": "给 DeepSeek Harness 用的角色扮演提示词改写插件：在输入框选一张角色卡，草稿就会由 harness 的模型改写成该角色的口吻（跟随当前会话正在使用的模型），然后直接发出或先人工审查。零依赖、零构建。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 用的角色扮演提示词改写插件。"
   },
   "schemaVersion": 1,
   "scripts": {

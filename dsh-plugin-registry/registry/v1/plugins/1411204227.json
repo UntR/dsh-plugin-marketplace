@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "6e0c08b714639c3dec47dc4673235fb189683ad5"
   },
   "github": {
@@ -41,27 +41,44 @@
   },
   "id": "gh:1411204227",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-attention",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:renjianbuchai/dsh-session-attention#6e0c08b714639c3dec47dc4673235fb189683ad5",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-attention",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/57456ebfeefa78e7f89cc4b9411508884f17fdedb76be1f5e9b0774251a2cd6a/renjianbuchai/dsh-session-attention",
     "description": "Browser-side attention reminders for DeepSeek Harness — desktop notification, tab-title dot and PWA badge when a reply finishes in the background or a session needs your input. 会话在后台跑完或等你回应时：系统通知 + 标题红点 + PWA 徽标。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Attention reminders for DeepSeek Harness — a client-only plugin. No DSH core file is patched."
   },
   "schemaVersion": 1,
   "scripts": {

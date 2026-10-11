@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
-    "headSha": "a10f5c91598610a29a4b1ce5f868206ebd05842a"
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
+    "headSha": "efbe19c6a8d459b47fc4922cf2528d4e916e316b"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-07T13:08:58Z",
     "databaseId": 1408804040,
     "defaultBranch": "main",
-    "description": "Plugin security review for DeepSeek Harness: dependency advisories, contextual evidence, AI-assisted review, and reversible enforcement.",
+    "description": "Security gate for DeepSeek Harness plugins: npm advisory audit, static evidence, a call-time Allow once / Allow / Disable prompt, plugin-manager sync, and agent review.",
     "fork": false,
     "forks": 0,
-    "headSha": "a10f5c91598610a29a4b1ce5f868206ebd05842a",
+    "headSha": "efbe19c6a8d459b47fc4922cf2528d4e916e316b",
     "homepageUrl": "https://www.npmjs.com/package/dsh-plugin-security",
     "language": "JavaScript",
     "license": {
@@ -25,47 +25,71 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU_ikyA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/62b5ff9621297664e9f62ce39c2e3c530c0835e9f90f09e94131007d5a7bba59/dushaobindoudou/dsh-plugin-security",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8d25453b7cbc9261a6db6afd22110fa8c2c8e2a100018bcca80776b744f8210b/dushaobindoudou/dsh-plugin-security",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/2606820?v=4",
       "login": "dushaobindoudou"
     },
-    "pushedAt": "2026-10-10T05:25:11Z",
+    "pushedAt": "2026-10-11T08:44:39Z",
     "slug": "dushaobindoudou/dsh-plugin-security",
     "stars": 2,
     "topics": [
       "ai",
+      "deepseek",
       "deepseek-harness",
+      "dsh",
       "dsh-plugin",
+      "npm-audit",
+      "plugin-security",
       "security",
+      "static-analysis",
       "supply-chain-security"
     ],
-    "updatedAt": "2026-10-10T06:27:29Z",
+    "updatedAt": "2026-10-11T08:43:41Z",
     "url": "https://github.com/dushaobindoudou/dsh-plugin-security"
   },
   "id": "gh:1408804040",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-security",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-plugin-security@0.5.0",
+    "version": "0.5.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./audit": "./lib/audit.js",
+      "./client": "./lib/client.js",
+      "./disposition": "./lib/disposition.js",
+      "./gate": "./lib/gate.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./risk": "./lib/risk.js",
+      "./scan": "./lib/scan.js",
+      "./screen": "./lib/screen.js",
+      "./state": "./lib/state.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-security",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/62b5ff9621297664e9f62ce39c2e3c530c0835e9f90f09e94131007d5a7bba59/dushaobindoudou/dsh-plugin-security",
-    "description": "Plugin security review for DeepSeek Harness: dependency advisories, contextual evidence, AI-assisted review, and reversible enforcement."
+    "coverUrl": "https://opengraph.githubassets.com/8d25453b7cbc9261a6db6afd22110fa8c2c8e2a100018bcca80776b744f8210b/dushaobindoudou/dsh-plugin-security",
+    "description": "Security gate for DeepSeek Harness plugins: npm advisory audit, static evidence, a call-time Allow once / Allow / Disable prompt, plugin-manager sync, and agent review."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "中文 · npm · Changelog · Security policy"
   },
   "schemaVersion": 1,
   "scripts": {

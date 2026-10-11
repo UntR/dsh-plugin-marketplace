@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "17691cf2ff8cc32a8047a53675f34329cf675b20"
   },
   "github": {
@@ -41,27 +41,102 @@
   },
   "id": "gh:1411995202",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@jk-uzi/dsh-multi-remote",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@jk-uzi/dsh-multi-remote@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.js"
+      },
+      "./client": {
+        "default": "./src/client.js"
+      },
+      "./mirror/index.js": {
+        "default": "./src/mirror/index.js"
+      },
+      "./package.json": "./package.json",
+      "./session/binder.js": {
+        "default": "./src/session/binder.js"
+      },
+      "./session/connection.js": {
+        "default": "./src/session/connection.js"
+      },
+      "./session/preset.js": {
+        "default": "./src/session/preset.js"
+      },
+      "./session/profile.js": {
+        "default": "./src/session/profile.js"
+      },
+      "./terminal/backend.js": {
+        "default": "./src/terminal/backend.js"
+      },
+      "./terminal/backends.js": {
+        "default": "./src/terminal/backends.js"
+      },
+      "./terminal/quote.js": {
+        "default": "./src/terminal/quote.js"
+      },
+      "./terminal/session.js": {
+        "default": "./src/terminal/session.js"
+      },
+      "./terminal/tool.js": {
+        "default": "./src/terminal/tool.js"
+      },
+      "./transport/docker.js": {
+        "default": "./src/transport/docker.js"
+      },
+      "./transport/registry.js": {
+        "default": "./src/transport/registry.js"
+      },
+      "./transport/ssh.js": {
+        "default": "./src/transport/ssh.js"
+      },
+      "./transport/tar.js": {
+        "default": "./src/transport/tar.js"
+      },
+      "./transport/transport.js": {
+        "default": "./src/transport/transport.js"
+      },
+      "./transport/wsl.js": {
+        "default": "./src/transport/wsl.js"
+      },
+      "./world/fs.js": {
+        "default": "./src/world/fs.js"
+      },
+      "./world/search.js": {
+        "default": "./src/world/search.js"
+      },
+      "./world/shell.js": {
+        "default": "./src/world/shell.js"
+      },
+      "./world/terminal.js": {
+        "default": "./src/world/terminal.js"
+      }
+    },
+    "main": "src/index.js",
+    "name": "@jk-uzi/dsh-multi-remote",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/69976f25a52f7cff5bba03addb204b6bb479a0def82c7efb0649fbd1fa0b30c6/jk-uzi/dsh-multi-remote",
     "description": "DSH 插件：SSH / WSL / Docker 三种远程开发 —— agent 的文件读写、命令、终端全部落在目标环境"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）插件：同时支持 SSH / WSL / Docker 三种远程环境。 连上之后，agent 的文件读写、bash 执行、搜索全部在目标环境里执行——大脑留在本地，文件和命令在远端。"
   },
   "schemaVersion": 1,
   "scripts": {

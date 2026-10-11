@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "505dbf1bac4840e597453168f023eda7189c3d1a"
   },
   "github": {
@@ -42,27 +42,43 @@
   },
   "id": "gh:1411389481",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-document-reader",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kialexdl/dsh-document-reader#505dbf1bac4840e597453168f023eda7189c3d1a",
+    "version": "0.3.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-document-reader",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/14ac394513267b184e6512a3fa1241e4acefb926ae408d76873bb326404c609a/kialexdl/dsh-document-reader",
-    "description": ""
+    "description": "DSH 原生文档读取与关键词查找插件。支持 PDF、DOCX、PPTX、XLSX、XLS、CSV、PNG/JPEG；在原生插件页面选择 DSH 已配置的服务商与图片模型，通过 DSH 统一调用；不继承或自动选择主会话模型。旧独立端点配置仍兼容。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 原生文档读取与关键词查找插件。支持 PDF、DOCX、PPTX、XLSX、XLS、CSV、PNG/JPEG；在原生插件页面选择 DSH 已配置的服务商与图片模型，通过 DSH 统一调用；不继承或自动选择主会话模型。旧独立端点配置仍兼容。"
   },
   "schemaVersion": 1,
   "scripts": {

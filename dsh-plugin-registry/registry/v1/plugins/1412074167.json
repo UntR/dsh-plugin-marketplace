@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "641afcb0016e71943d6f811758f0f45964074f73"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1412074167",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ccswitch-plugin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vandoor7-droid/dsh-ccswitch-plugin#641afcb0016e71943d6f811758f0f45964074f73",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/index.mjs",
+      "./catalog": "./dist/domain/catalog.mjs",
+      "./ccs-provider": "./dist/domain/ccs-provider.mjs",
+      "./client": "./dist/client.js",
+      "./package.json": "./package.json",
+      "./settings": "./dist/domain/settings.mjs",
+      "./validation": "./dist/domain/validation.mjs"
+    },
+    "main": "dist/index.mjs",
+    "name": "dsh-ccswitch-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/db4ddf7aee24a69f155cfbcc8d181a474312ea96401969d6ba51ae40eb0ad190/vandoor7-droid/dsh-ccswitch-plugin",
     "description": "A CC Switch provider manager for the DeepSeek Harness (DSH 0.2.0-rc.2): imports providers from CC Switch's SQLite database across 10 app types, manages them in DSH Settings, and on activation writes Claude Code / Codex live configs. Fork of 2995288295/dsh-ccswitch-importer-plus ("
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 里管理 CC Switch 的 provider：把 Codex、Claude、Claude Desktop、OpenCode、Gemini、Hermes、Grok Build、Pi、MCode 与 OpenClaw 的 provider 导入 DSH，也能不依赖 CC Switch 单独新增/编辑/激活 provider，并把它写回 Claude Code 与 Codex 自己的配置文件。"
   },
   "schemaVersion": 1,
   "scripts": {

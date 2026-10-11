@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "fec792160d2b17e84befbcec93f407687dbac270"
   },
   "github": {
@@ -40,27 +40,39 @@
   },
   "id": "gh:1411451744",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-task-memory",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xjhao-heim/dsh-task-memory#fec792160d2b17e84befbcec93f407687dbac270",
+    "version": "0.3.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-task-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ab000f5fe546198950df43e02ec1dbb1823b9c4965e4a3b4f5a9eb93df3c70f3/xjhao-heim/dsh-task-memory",
     "description": "DeepSeek Harness 插件:工作区级任务记忆,把做过的任务存成记忆卡,下次会话不必重新分析一遍。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件：工作区级任务记忆。"
   },
   "schemaVersion": 1,
   "scripts": {

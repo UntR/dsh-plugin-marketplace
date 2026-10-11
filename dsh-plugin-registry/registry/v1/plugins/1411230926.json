@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "cfbbe33e2c56da6ba7e75b02a687a58d4f926d02"
   },
   "github": {
@@ -52,7 +52,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -62,14 +62,79 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/types/index.d.ts"
+      },
+      "./blocks": {
+        "import": "./dist/blocks.js",
+        "types": "./dist/types/blocks.d.ts"
+      },
+      "./icons": {
+        "import": "./dist/icons.js",
+        "types": "./dist/types/icons.d.ts"
+      },
+      "./katex.css": {
+        "default": "./dist/katex.css",
+        "types": "./dist/katex.css.d.ts"
+      },
+      "./markdown": {
+        "import": "./dist/markdown.js",
+        "types": "./dist/types/markdown.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./seekbuddy": {
+        "import": "./dist/seekbuddy.js",
+        "types": "./dist/types/seekbuddy/index.d.ts"
+      },
+      "./seekbuddy/card": {
+        "import": "./dist/seekbuddy-card.js",
+        "types": "./dist/types/seekbuddy/Card.d.ts"
+      },
+      "./seekbuddy/empty": {
+        "import": "./dist/seekbuddy-empty.js",
+        "types": "./dist/types/seekbuddy/Empty.d.ts"
+      },
+      "./seekbuddy/spinner": {
+        "import": "./dist/seekbuddy-spinner.js",
+        "types": "./dist/types/seekbuddy/Spinner.d.ts"
+      },
+      "./seekbuddy/tabs": {
+        "import": "./dist/seekbuddy-tabs.js",
+        "types": "./dist/types/seekbuddy/Tabs.d.ts"
+      },
+      "./seekbuddy/timeline": {
+        "import": "./dist/seekbuddy-timeline.js",
+        "types": "./dist/types/seekbuddy/Timeline.d.ts"
+      },
+      "./theme": {
+        "import": "./dist/theme.js",
+        "types": "./dist/types/theme.d.ts"
+      },
+      "./theme/bootstrap": {
+        "import": "./dist/theme-bootstrap.js",
+        "types": "./dist/types/theme-bootstrap.d.ts"
+      },
+      "./tokens.css": {
+        "default": "./dist/tokens.css",
+        "types": "./dist/tokens.css.d.ts"
+      }
+    },
+    "main": "./dist/index.js",
+    "name": "@seekbuddy/dsh-ui",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0-beta.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fe87e6ed377ae732f0cbd6b84be33b82d624d0ee050648b62612d51c92cad058/seekbuddy/dsh-ui",
     "description": "Unofficial React components in the DeepSeek Harness (DSH) web UI design system: the DSH primitives plus the components DSH lacks (cards, tabs, pagination, messages, upload, date/time pickers), on the same --dsw-* tokens."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "React components in the DeepSeek Harness (DSH) web UI design system, for building product pages around DSH: the DSH primitives (--dsw- design tokens, light / dark themes, controls, icons, Markdown and tool-output renderers) plus the components DSH does not provide, such as cards,"
   },
   "schemaVersion": 1,
   "scripts": {

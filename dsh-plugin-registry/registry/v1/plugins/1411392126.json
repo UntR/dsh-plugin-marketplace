@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "a7a0f5181acad3874ec781700df60432fd910a4e"
   },
   "github": {
@@ -55,7 +55,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -65,14 +65,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./paths": "./lib/paths.js",
+      "./quota": "./lib/quota.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-zcode-coding-plan",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e0d26bd9e82172f106f97c5fd7ffb8acdc80f757aba116145bf3fdc8d50600fc/yuyang2230/dsh-zcode-coding-plan",
     "description": "DeepSeek Harness desktop plugin: dispatch GLM Coding Plan tasks through the official ZCode CLI (1.5x plan credits, native agent tools, quota-aware auto-routing)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "中文 · English · Release notes"
   },
   "schemaVersion": 1,
   "scripts": {

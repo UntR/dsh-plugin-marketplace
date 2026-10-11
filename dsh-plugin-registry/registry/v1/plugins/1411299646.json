@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "97df1228952ac6dd670726ca2d45dcad262e5678"
   },
   "github": {
@@ -45,27 +45,41 @@
   },
   "id": "gh:1411299646",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-jev-judge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:HunterXing/jev-judge#97df1228952ac6dd670726ca2d45dcad262e5678",
+    "version": "0.1.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./hooks": "./src/runtimes/hooks/index.js",
+      "./host": "./src/runtimes/dsh/index.js",
+      "./mcp": "./src/runtimes/mcp/server.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-jev-judge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a6e6feee90f129c11f6415ab9d3f1aec19f0f364420822d5a7eddaea36c528e3/HunterXing/jev-judge",
     "description": "A judgment kernel for coding agents: routine judgments go to a small Jev judge, and every verdict is recorded in a ledger."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A judgment kernel for coding agents. The small, frequent calls an agent makes — does this tool output matter, did anything actually verify that claim, does this page carry instructions aimed at the model, did the user really ask for this command — go to a small judge instead of t"
   },
   "schemaVersion": 1,
   "scripts": {

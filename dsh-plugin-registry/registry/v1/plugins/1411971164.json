@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "bb14c5976630f8614886bc486309e5fd16b84ef1"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1411971164",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-backroom",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:LEEKINBUN-dsh-tools/dsh-backroom#bb14c5976630f8614886bc486309e5fd16b84ef1",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-backroom",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f9dc9246e5b2a4edba50f1dc9e9f0b321b688e1fcc889202551f6f8ed2a6517f/LEEKINBUN-dsh-tools/dsh-backroom",
     "description": "dsh plugin: read-only host diagnostics (log tail, service-face reachability, crash attribution) plus a key-gated session mouth, closed by default."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A read-only back room for DeepSeek Harness (dsh) plugin authors: it makes the host's own log buffer readable over loopback HTTP, and reports — live, in the running process — which official service faces a plugin can actually reach."
   },
   "schemaVersion": 1,
   "scripts": {

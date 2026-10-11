@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
-    "headSha": "06300573aaaed2b29135d5f4e529aaabbf8798b2"
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
+    "headSha": "101795721c95a1ab5ae5e08dabd87e9c5c86911b"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Independent Auto Review model settings and GUI for DeepSeek Harness.",
     "fork": false,
     "forks": 0,
-    "headSha": "06300573aaaed2b29135d5f4e529aaabbf8798b2",
+    "headSha": "101795721c95a1ab5ae5e08dabd87e9c5c86911b",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,43 +25,56 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVB8JXg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/dd5c11e3dbf074ff1ebfa5749354c6f9b83296b2de09ff2fe2bcba0a3f1ee83b/QR-0W/dsh-independent-auto-review",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7f4b08c71160c5e53d562f15e9af7eb82c39757b69182f408749bbb6f30ffee2/QR-0W/dsh-independent-auto-review",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/84510337?u=d64e718b3bc8b40ba11e95872131cb966eea8d0f&v=4",
       "login": "QR-0W"
     },
-    "pushedAt": "2026-10-09T07:55:54Z",
+    "pushedAt": "2026-10-11T07:46:35Z",
     "slug": "QR-0W/dsh-independent-auto-review",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-09T07:55:56Z",
+    "updatedAt": "2026-10-11T07:46:39Z",
     "url": "https://github.com/QR-0W/dsh-independent-auto-review"
   },
   "id": "gh:1411320158",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-independent-auto-review",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:QR-0W/dsh-independent-auto-review#101795721c95a1ab5ae5e08dabd87e9c5c86911b",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/auto-review.js",
+      "./client": "./tools/gui/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./settings": "./tools/gui/host.js"
+    },
+    "main": "./src/auto-review.js",
+    "name": "@local/dsh-independent-auto-review",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/dd5c11e3dbf074ff1ebfa5749354c6f9b83296b2de09ff2fe2bcba0a3f1ee83b/QR-0W/dsh-independent-auto-review",
+    "coverUrl": "https://opengraph.githubassets.com/7f4b08c71160c5e53d562f15e9af7eb82c39757b69182f408749bbb6f30ffee2/QR-0W/dsh-independent-auto-review",
     "description": "Independent Auto Review model settings and GUI for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Use a separate model to review DSH tool calls. Keep the main model unchanged."
   },
   "schemaVersion": 1,
   "scripts": {

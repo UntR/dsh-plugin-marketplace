@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "59da1e2e71796f56bac779c0cf84963a085c1142"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1412696741",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-settings-params",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:felixpu/dsh-settings-params#59da1e2e71796f56bac779c0cf84963a085c1142",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-settings-params",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/030435383a7e68a42bf42fc58229571b7af80ebc9f97873954f4de3631270b0f/felixpu/dsh-settings-params",
     "description": "集中管理注入宿主的环境变量，并支持按白名单热重载那些启动时只读一次环境变量的插件（如 dsh-sql），免重启即可读取新值。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH（DeepSeek Harness）网页版侧栏「插件」→ 本插件的详情页里，集中管理注入宿主的环境变量。"
   },
   "schemaVersion": 1,
   "scripts": {

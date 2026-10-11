@@ -5,9 +5,9 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
-    "headSha": "8532c88660a373995fc12afe10814882e97427ef"
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
+    "headSha": "745abe702b6dce3f6fb64e652b61a94532041ebb"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Wire protocol for DSH Remote Control: sealed-record encryption (XSalsa20-Poly1305), key derivation, pairing URI, relay control frames, payload catalog. Pure functions, zero I/O. DSH 远控的线协议层：密封记录加密、KDF、配对 URI、控制帧与载荷目录，纯函数零 I/O。",
     "fork": false,
     "forks": 0,
-    "headSha": "8532c88660a373995fc12afe10814882e97427ef",
+    "headSha": "745abe702b6dce3f6fb64e652b61a94532041ebb",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVAXO1A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/014871ff92dfd20ad04deb5a864d2531eaec55afb59ad8cc3fb75a0aaa9d1387/dsh-remote/protocol",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/332b94b46985cba1f6a0c92ee136c2a68ac0e59f32294b181c32260980cd9626/dsh-remote/protocol",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/339393568?v=4",
       "login": "dsh-remote"
     },
-    "pushedAt": "2026-10-10T09:06:12Z",
+    "pushedAt": "2026-10-11T09:36:41Z",
     "slug": "dsh-remote/protocol",
     "stars": 0,
     "topics": [
@@ -40,7 +40,7 @@
       "e2e-encryption",
       "remote-control"
     ],
-    "updatedAt": "2026-10-10T09:06:16Z",
+    "updatedAt": "2026-10-11T09:35:36Z",
     "url": "https://github.com/dsh-remote/protocol"
   },
   "id": "gh:1409666772",
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,20 +58,89 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/src/index.js",
+        "types": "./dist/src/index.d.ts"
+      },
+      "./classify": {
+        "default": "./dist/src/wire/classify.js",
+        "types": "./dist/src/wire/classify.d.ts"
+      },
+      "./errors": {
+        "default": "./dist/src/wire/errors.js",
+        "types": "./dist/src/wire/errors.d.ts"
+      },
+      "./frames": {
+        "default": "./dist/src/wire/frames.js",
+        "types": "./dist/src/wire/frames.d.ts"
+      },
+      "./idempotency": {
+        "default": "./dist/src/wire/idempotency.js",
+        "types": "./dist/src/wire/idempotency.d.ts"
+      },
+      "./ids": {
+        "default": "./dist/src/identity/ids.js",
+        "types": "./dist/src/identity/ids.d.ts"
+      },
+      "./keys": {
+        "default": "./dist/src/crypto/keys.js",
+        "types": "./dist/src/crypto/keys.d.ts"
+      },
+      "./limits": {
+        "default": "./dist/src/wire/limits.js",
+        "types": "./dist/src/wire/limits.d.ts"
+      },
+      "./negotiate": {
+        "default": "./dist/src/wire/negotiate.js",
+        "types": "./dist/src/wire/negotiate.d.ts"
+      },
+      "./outbound": {
+        "default": "./dist/src/wire/outbound.js",
+        "types": "./dist/src/wire/outbound.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./pairing": {
+        "default": "./dist/src/identity/pairing.js",
+        "types": "./dist/src/identity/pairing.d.ts"
+      },
+      "./payloads": {
+        "default": "./dist/src/wire/payloads.js",
+        "types": "./dist/src/wire/payloads.d.ts"
+      },
+      "./record": {
+        "default": "./dist/src/crypto/record.js",
+        "types": "./dist/src/crypto/record.d.ts"
+      },
+      "./registry": {
+        "default": "./dist/src/wire/registry.js",
+        "types": "./dist/src/wire/registry.d.ts"
+      },
+      "./sleep": {
+        "default": "./dist/src/platform/sleep.js",
+        "types": "./dist/src/platform/sleep.d.ts"
+      }
+    },
+    "main": "./dist/src/index.js",
+    "name": "@dsh-remote/protocol",
+    "status": "valid",
+    "type": "module",
+    "version": "3.1.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/014871ff92dfd20ad04deb5a864d2531eaec55afb59ad8cc3fb75a0aaa9d1387/dsh-remote/protocol",
+    "coverUrl": "https://opengraph.githubassets.com/332b94b46985cba1f6a0c92ee136c2a68ac0e59f32294b181c32260980cd9626/dsh-remote/protocol",
     "description": "Wire protocol for DSH Remote Control: sealed-record encryption (XSalsa20-Poly1305), key derivation, pairing URI, relay control frames, payload catalog. Pure functions, zero I/O. DSH 远控的线协议层：密封记录加密、KDF、配对 URI、控制帧与载荷目录，纯函数零 I/O。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Remote Control 的线协议层：密封记录（XSalsa20-Poly1305）、方向密钥派生（KDF）、 配对 URI、中继控制帧、cmd. / ev. 载荷目录、错误码可重试表、防休眠命令构造器。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

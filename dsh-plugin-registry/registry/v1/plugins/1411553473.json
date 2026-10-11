@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "fd1ac04550e34cf0e061c33c28f7d4ee83f16a90"
   },
   "github": {
@@ -46,27 +46,57 @@
   },
   "id": "gh:1411553473",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-agent-team-presets",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:bloodarea/dsh-agent-team-presets#fd1ac04550e34cf0e061c33c28f7d4ee83f16a90",
+    "version": "0.1.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
+      "./src/*": "./src/*",
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/typert.host.d.ts"
+      },
+      "./types": {
+        "types": "./lib/types/types.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-agent-team-presets",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/49f3d44b096309ac3efbd46b7668f30e0509df876c09268eb0c741ad2c94450a/bloodarea/dsh-agent-team-presets",
     "description": "Reusable Agent Team presets for DeepSeek Harness: a captain plus members with their own prompt, model, reasoning effort, and tools."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-agent-team-presets adds a Settings page that configures named Agent Teams and a composer control that applies one Team to a Session. A Team has a captain and any number of members: the captain carries its own prompt and tool policy, while each member also carries its own prov"
   },
   "schemaVersion": 1,
   "scripts": {

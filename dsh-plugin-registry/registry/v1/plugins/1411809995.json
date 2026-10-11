@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
-    "headSha": "a9c0a9c972fe75fe1067520bd0c3405e31b9b124"
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
+    "headSha": "206b6776569211193555be30b4939bb1e6d04dad"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Self-hosted gateway plugin for DeepSeek Harness: registers a local WorkBuddy / CodeBuddy account pool as OpenAI-compatible model providers, with a web settings panel and a task-automation engine.",
     "fork": false,
     "forks": 0,
-    "headSha": "a9c0a9c972fe75fe1067520bd0c3405e31b9b124",
+    "headSha": "206b6776569211193555be30b4939bb1e6d04dad",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVCaCyw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/808296912e41430114d4a747670badc11c826929646025bbd87f2cb5dd1a0f19/Wei894348/dsh-wb2api",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/94eb4633fae820ba9432d0b82707a06b59486d721946e6328303fdc9c2d8f6df/Wei894348/dsh-wb2api",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/266931593?u=5e59c71b13e4a8ff1445517563b8cb95b0d645e2&v=4",
       "login": "Wei894348"
     },
-    "pushedAt": "2026-10-10T07:02:45Z",
+    "pushedAt": "2026-10-10T10:56:20Z",
     "slug": "Wei894348/dsh-wb2api",
     "stars": 1,
     "topics": [
@@ -45,32 +45,54 @@
       "plugin",
       "workbuddy"
     ],
-    "updatedAt": "2026-10-10T10:00:20Z",
+    "updatedAt": "2026-10-10T10:56:24Z",
     "url": "https://github.com/Wei894348/dsh-wb2api"
   },
   "id": "gh:1411809995",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-wb2api-ui",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Wei894348/dsh-wb2api#206b6776569211193555be30b4939bb1e6d04dad",
+    "version": "1.5.7"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./client/client.js"
+      },
+      "./engine": {
+        "default": "./engine/wb_tasks.mjs"
+      },
+      "./gateway": {
+        "default": "./lib/gw/index.js"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-wb2api-ui",
+    "status": "valid",
+    "type": "module",
+    "version": "1.5.7"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/808296912e41430114d4a747670badc11c826929646025bbd87f2cb5dd1a0f19/Wei894348/dsh-wb2api",
+    "coverUrl": "https://opengraph.githubassets.com/94eb4633fae820ba9432d0b82707a06b59486d721946e6328303fdc9c2d8f6df/Wei894348/dsh-wb2api",
     "description": "Self-hosted gateway plugin for DeepSeek Harness: registers a local WorkBuddy / CodeBuddy account pool as OpenAI-compatible model providers, with a web settings panel and a task-automation engine."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "这是一个 DeepSeek Harness（dsh）插件：把本机 WorkBuddy / CodeBuddy 账号池变成一个本地模型网关，并注册为 dsh 的 LLM provider —— 装好后直接在 dsh 里选模型使用，附带一个设置面板管理账号与积分。"
   },
   "schemaVersion": 1,
   "scripts": {

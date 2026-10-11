@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "e4b6de3e8e9874146f3fa9b6a1df090858d69d6c"
   },
   "github": {
@@ -51,27 +51,40 @@
   },
   "id": "gh:1411461676",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-codex-chrome",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-codex-chrome@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./launcher": "./bin/chrome-mcp.mjs",
+      "./package.json": "./package.json",
+      "./session": "./lib/browser-session.mjs",
+      "./skills/*": "./skills/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-codex-chrome",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f581d072f6cb05973778a8036ea8cf0f322942c9f65b149ebe879e871dd33da5/BruceZhang1993/dsh-codex-chrome",
     "description": "DeepSeek Harness plugin: migrates OpenAI Codex's chrome@openai-bundled plugin into DSH as native mcp__chrome__* tools — drive your own Chrome (tabs, logged-in sessions, accessibility trees, screenshots, input) with a bundled control-chrome skill and zero runtime dependencies."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English · 简体中文"
   },
   "schemaVersion": 1,
   "scripts": {

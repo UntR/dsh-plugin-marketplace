@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
     "enrichmentStatus": "ok",
-    "headSha": "b07199f7fc4fd02a53b13cb094d54b7a1cd3f982"
+    "headSha": "78f511acef2aad57a90419fcefa44f591cdbe657"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Reasoning Bridge for dsh: hand high-cost reasoning to web AI (ChatGPT first, multi-target); keep local evidence, adoption gate, edits, and tests. Contract-based handoffs, versioned consent, SHA-256 receipts. Zero dependencies.",
     "fork": false,
     "forks": 1,
-    "headSha": "b07199f7fc4fd02a53b13cb094d54b7a1cd3f982",
+    "headSha": "78f511acef2aad57a90419fcefa44f591cdbe657",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUNEI2w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/34ae2a49111bfbf961afd4db1da01dcece98d9818ccede240554d4c754b853f9/shangdi178/dsh-reasoning-bridge",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/46f1db6b78c52451c39fc3112542b550b9fad2c560e6492a69d2ce884d765eea/shangdi178/dsh-reasoning-bridge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/92671064?u=043884ab8cadece3bd0d6e9f5f8def498c8de275&v=4",
       "login": "shangdi178"
     },
-    "pushedAt": "2026-09-04T01:28:41Z",
+    "pushedAt": "2026-10-10T15:03:42Z",
     "slug": "shangdi178/dsh-reasoning-bridge",
     "stars": 1,
     "topics": [
@@ -42,38 +42,44 @@
       "dsh-plugin",
       "reasoning"
     ],
-    "updatedAt": "2026-09-27T04:06:37Z",
+    "updatedAt": "2026-10-10T15:03:34Z",
     "url": "https://github.com/shangdi178/dsh-reasoning-bridge"
   },
   "id": "gh:1355876571",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-reasoning-bridge",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-reasoning-bridge@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
   "package": {
-    "main": null,
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./web": "./lib/web.js"
+    },
+    "main": "./lib/index.js",
     "name": "dsh-reasoning-bridge",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.4.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/34ae2a49111bfbf961afd4db1da01dcece98d9818ccede240554d4c754b853f9/shangdi178/dsh-reasoning-bridge",
+    "coverUrl": "https://opengraph.githubassets.com/46f1db6b78c52451c39fc3112542b550b9fad2c560e6492a69d2ce884d765eea/shangdi178/dsh-reasoning-bridge",
     "description": "Reasoning Bridge for dsh: hand high-cost reasoning to web AI (ChatGPT first, multi-target); keep local evidence, adoption gate, edits, and tests. Contract-based handoffs, versioned consent, SHA-256 receipts. Zero dependencies."
   },
   "readme": {
     "available": true,
-    "excerpt": "DeepSeek Harness（dsh）推理桥接插件：把高成本推理交给网页版 AI（默认 ChatGPT 网页版， 目标可切换），把取证、采纳、修改、测试全部留在 dsh 本地。基于契约化 Context Packet / Reasoning Result 交接、版本化风险授权门和 SHA-256 运行回执， 每条来自网页的建议都必须先通过本地采纳门才能执行。"
+    "excerpt": "DeepSeek Harness（dsh）推理桥接插件：把高成本推理交给网页版 AI（默认 ChatGPT 网页版， 目标可切换；当前内置 chatgpt 与 arena），把取证、采纳、修改、测试全部留在 dsh 本地。 基于契约化 Context Packet / Reasoning Result 交接、版本化风险授权门、可执行的浏览器传输驱动 和 SHA-256 运行回执。来自网页的建议必须经本地重新取证后才能执行——见下方 强制执行 vs. 纪律约定 一节，那里写明了哪些是代码机制、 哪些只是工作流纪律，不要把它们混为一谈。"
   },
   "schemaVersion": 1,
   "scripts": {

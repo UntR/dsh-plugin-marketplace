@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "4e3fc4bc4181339afaddb0fb4342e7d600167047"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1411613753",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@lijixu/bark-notify",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@lijixu/bark-notify@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./plugin.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "plugin.js",
+    "name": "@lijixu/bark-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d1384687151f54ee200a2a0738f96c90ddccd16c3d711fcc37b9b44252fbad83/xuliji/bark-notify",
     "description": "DSH 插件：Agent 运行结束、需要人工授权、或运行出错时，通过 Bark 推送到 iPhone / Apple Watch。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：任务跑完、需要你授权、或者运行出错时，把通知推到你的 iPhone（会自动镜像到配对的 Apple Watch）。"
   },
   "schemaVersion": 1,
   "scripts": {

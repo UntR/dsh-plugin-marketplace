@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "ade9f044aa72267c354fb4c4d2c96abe13960dda"
   },
   "github": {
@@ -42,27 +42,37 @@
   },
   "id": "gh:1412503957",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-compact-selected-model",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-compact-selected-model@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-compact-selected-model",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ddfcdab7c5776532bd4caa8e393b5b832dcad2475113d209a0698a606300e476/DenAbr/dsh-compact-selected-model",
     "description": "DeepSeek Harness plugin: /compact uses the currently selected model, not the one that finished the last turn"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "By default, DeepSeek Harness compacts a session with the model that answered the last turn. If you switch models in the picker and then run /compact, the old model still writes the summary. With this plugin, the summary is written by the model you have selected now."
   },
   "schemaVersion": 1,
   "scripts": {

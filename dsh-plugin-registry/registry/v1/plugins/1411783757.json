@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "1b0f2d70a2f918ad031e4cd82dc89952039be8a8"
   },
   "github": {
@@ -41,27 +41,44 @@
   },
   "id": "gh:1411783757",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@fenzhenhua123/dsh-balance-meter",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:FenZhenHua/dsh-balance-meter#1b0f2d70a2f918ad031e4cd82dc89952039be8a8",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@fenzhenhua123/dsh-balance-meter",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8bcee2c105517efc61e3e241a60297e28a656e080a3647d99c265765a7ca671f/FenZhenHua/dsh-balance-meter",
     "description": "DeepSeek Harness plugin: API 余额与本次会话费用（官方计费）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 会话页面底部统计条（会话统计 / Token 用量 / 上下文已用 同一行）追加一个「余额 · 本次」胶囊，显示："
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "56adb049897b826760580bce8a175728e8a660e2"
   },
   "github": {
@@ -41,33 +41,46 @@
   },
   "id": "gh:1413019030",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-auto-visual",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:Herbert-wang820/dsh-image#56adb049897b826760580bce8a175728e8a660e2",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/index.js",
+      "./client": "./dist/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./core": "./dist/core.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-auto-visual",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c96cec28d249fc179fb6ed5c146d73cad106370c60785caf393a437d333981c5/Herbert-wang820/dsh-image",
-    "description": ""
+    "description": "为 DSH 提供图片素材规划、提示词整理、供应商解耦生成和使用登记。供应商可选： disabled（默认，不生成）、mock（本地生成明确标注 MOCK TEST 的测试图，不联网）、 openai（任何 OpenAI 兼容 Images API，真实生成）。插件只负责规划、生成、校验和登记素材； 它不会自己编辑 PPT、网页或文档，插图由主 Agent 用制作工具完成。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DSH 提供图片素材规划、提示词整理、供应商解耦生成和使用登记。供应商可选： disabled（默认，不生成）、mock（本地生成明确标注 MOCK TEST 的测试图，不联网）、 openai（任何 OpenAI 兼容 Images API，真实生成）。插件只负责规划、生成、校验和登记素材； 它不会自己编辑 PPT、网页或文档，插图由主 Agent 用制作工具完成。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

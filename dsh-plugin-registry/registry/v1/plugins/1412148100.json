@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "948d1bad3d396aedb008e30eafb5659185941d14"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1412148100",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-delete",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:RicardoYan/dsh-session-delete#948d1bad3d396aedb008e30eafb5659185941d14",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-delete",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9d907bcb7b82df94c9aae16e8f163c09c96d5f4fc97c033a71db0b499bd6dd1b/RicardoYan/dsh-session-delete",
     "description": "Delete a DSH session together with all its subagent sessions · 永久删除 DSH 会话及其派生的所有子代理会话"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 会话菜单加一个「删除会话」：连同它派生的所有子代理会话（任意层级）一起永久删除。"
   },
   "schemaVersion": 1,
   "scripts": {

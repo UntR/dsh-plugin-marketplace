@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-10T10:22:19.193Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-11T10:31:16.108Z",
+    "enrichmentStatus": "ok",
     "headSha": "83ad67fefe3bd02d889ccbac4e54719479b877f6"
   },
   "github": {
@@ -41,27 +41,53 @@
   },
   "id": "gh:1411338233",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@takboo/dsh-session-bin",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@takboo/dsh-session-bin@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": {
+        "default": "./dist/client.js",
+        "types": "./dist/types/client/index.d.ts"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./operations": {
+        "default": "./dist/operations.js",
+        "types": "./dist/operations/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./dist/remote.js",
+        "types": "./dist/remote/contracts.d.ts"
+      }
+    },
+    "main": "./dist/index.js",
+    "name": "@takboo/dsh-session-bin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e479a4fab3e9ebf1e80ed523819ecd21748fd5c325df7d093c7d7e3fa3effa05/takboo/dsh-session-bin",
     "description": "Native archived-session management for DeepSeek Harness with guarded permanent deletion and fixed batches."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的原生归档管理插件。在一个面板中搜索、筛选和管理已归档会话，支持取消归档、单项永久删除、批量永久删除和清空归档。"
   },
   "schemaVersion": 1,
   "scripts": {
