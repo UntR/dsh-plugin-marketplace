@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-12T11:27:38.805Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-13T11:15:58.128Z",
+    "enrichmentStatus": "ok",
     "headSha": "acc9e87f3a93bc7db1e94b33aa127386dfb348c2"
   },
   "github": {
@@ -60,33 +60,56 @@
   },
   "id": "gh:1404080555",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@wenaixi/dsh-prompt-history",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "@wenaixi/dsh-prompt-history@2.4.1",
+    "version": "2.4.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "2.4.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@wenaixi/dsh-prompt-history",
+    "status": "valid",
+    "type": "module",
+    "version": "2.4.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7e091758e978d445f9a90c1f52f2b9c2976f3831104dd60d0bfe0984504c7a11/Wenaixi/dsh-prompt-history",
     "description": "DeepSeek Harness plugin: Claude Code-style prompt history, double-Esc picker, selection quote/copy & right-click paste | DeepSeek Harness 插件：Claude Code 风格上下键历史回溯、双击 Esc 历史搜索、选中文本引用/自动复制与鼠标右键直接粘贴"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness (DSH) Web GUI input composer enhancement plugin. Accurately recreates Claude Code's arrow-key prompt history recall and double-Escape workflows, provides selection toolbar quotation/auto-copy, right-click Linux-style direct paste, and unblocks inline slash comple"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

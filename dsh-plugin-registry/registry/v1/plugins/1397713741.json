@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./zcode-dispatch/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-12T11:27:38.805Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-13T11:15:58.128Z",
+    "enrichmentStatus": "ok",
     "headSha": "b37a7fc5bc8f25436345167ec2cd80577123a846"
   },
   "github": {
@@ -49,27 +49,41 @@
   },
   "id": "gh:1397713741",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-zcode-dispatch",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Shuffle-1992/zcode-dispatch#b37a7fc5bc8f25436345167ec2cd80577123a846",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./zcode-dispatch/index.js",
+      "./client": "./zcode-dispatch/client.js",
+      "./locale/*.json": "./zcode-dispatch/locale/*.json",
+      "./package.json": "./package.json",
+      "./remote": "./zcode-dispatch/wire.client.mjs",
+      "./typert": "./zcode-dispatch/wire.host.mjs"
+    },
+    "main": null,
+    "name": "dsh-zcode-dispatch",
+    "status": "valid",
+    "type": null,
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0894253c6d957c91d62026e97a748929f613adecfa40c754b32bcf2659cc82d4/Shuffle-1992/zcode-dispatch",
     "description": "把任务派发给本机 ZCode CLI 无头进程的 DeepSeek Harness 插件：面板可监视/终止/续跑/换通道；单写者文件锁 + 用量台账 + 降级链。支持付费套餐与免费额度（Start Plan 活动赠送）两种额度，后者托管官方 agent 走 app-server。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 自带的 subagent 跑的是 DSH 自己的 agent；本插件跑的是 ZCode——独立进程、独立额度、 独立会话，任务行出现在「ZCode 派发台」面板里，可查输出、可终止、可续跑、可换通道重跑。"
   },
   "schemaVersion": 1,
   "scripts": {
