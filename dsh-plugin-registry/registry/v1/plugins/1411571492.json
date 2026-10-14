@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-13T11:15:58.128Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-14T09:27:16.481Z",
+    "enrichmentStatus": "ok",
     "headSha": "270cca3038af5c5fc0e6ada34dc535123bbac60c"
   },
   "github": {
@@ -47,27 +47,45 @@
   },
   "id": "gh:1411571492",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-context-mode-adapter",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:sadjjk/dsh-context-mode-adapter#270cca3038af5c5fc0e6ada34dc535123bbac60c",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/host/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-context-mode-adapter",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cd0b92fde9a83e65bf026143a1269a33ffafcb4fc6a969c4dab428371cbbc9a3/sadjjk/dsh-context-mode-adapter",
     "description": "context-mode 没有官方 DSH 插件——本仓库补上：11 个 ctx_* 工具进程内注册 + hook 路由拦截，节省会话上下文"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "context-mode 没有官方 DSH 插件——本仓库补上这个空缺：把 context-mode 的沙箱工具与 hook 路由接入 DeepSeek Harness（DSH），实现会话上下文节省。"
   },
   "schemaVersion": 1,
   "scripts": {

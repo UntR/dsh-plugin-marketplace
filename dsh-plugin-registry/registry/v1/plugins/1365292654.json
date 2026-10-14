@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./dsh/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-13T11:15:58.128Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-14T09:27:16.481Z",
+    "enrichmentStatus": "ok",
     "headSha": "f4280157ccf356c25d49c9785f314497a0258cd3"
   },
   "github": {
@@ -53,32 +53,73 @@
   },
   "id": "gh:1365292654",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "rolebox",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "rolebox@1.10.0",
+    "version": "1.10.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.10.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/entries/opencode.js",
+        "import": "./dist/entries/opencode.js",
+        "types": "./dist/entries/opencode.d.ts"
+      },
+      "./client": {
+        "default": "./dist/dsh-web-client.js",
+        "types": "./dist/dsh-web-client.d.ts"
+      },
+      "./codex": {
+        "import": "./dist/entries/codex.js",
+        "types": "./dist/entries/codex.d.ts"
+      },
+      "./dsh": {
+        "import": "./dist/entries/dsh.js",
+        "types": "./dist/entries/dsh.d.ts"
+      },
+      "./dsh/cordis.patch.yml": "./dsh/cordis.patch.yml",
+      "./dsh/package.json": "./package.json",
+      "./package.json": "./package.json",
+      "./pi": {
+        "import": "./dist/entries/pi.js",
+        "types": "./dist/entries/pi.d.ts"
+      },
+      "./server": {
+        "default": "./dist/entries/opencode2.js",
+        "import": "./dist/entries/opencode2.js",
+        "types": "./dist/entries/opencode2.d.ts"
+      },
+      "./tui": {
+        "import": "./dist/tui.js",
+        "types": "./dist/tui.d.ts"
+      }
+    },
+    "main": "dist/entries/opencode.js",
+    "name": "rolebox",
+    "status": "valid",
+    "type": "module",
+    "version": "2.0.0-alpha.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4b9417de5afcbe445b27099f180f8e4f1634755181f2a31da274fb69237c9444/EricMoin/rolebox",
     "description": "Agent plugin for major harnesses — DeepSeek Harness (DSH), OpenCode, Pi and Codex: define custom AI agent roles with per-role prompts, models, skills, permissions, memory and multi-agent orchestration."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An agent-harness plugin — for opencode, pi, dsh, and Codex — with persistent memory, multi-agent dispatch, LSP integration, and engineering-team workflows."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
-    "postinstall": false,
+    "postinstall": true,
     "preinstall": false,
     "prepare": false
   }

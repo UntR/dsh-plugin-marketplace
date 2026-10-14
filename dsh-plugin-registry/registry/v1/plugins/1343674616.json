@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-13T11:15:58.128Z",
-    "enrichmentStatus": "stale",
-    "headSha": "6244efc7455ff188079d5e64fb99c159c3821dda"
+    "enrichedAt": "2026-10-14T09:27:16.481Z",
+    "enrichmentStatus": "ok",
+    "headSha": "52da331628ec32d2b9f2665415b2e25bd44c2d53"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH plugin: Git Bash shell for all agent modes on Windows (replaces pwsh executor)",
     "fork": false,
     "forks": 2,
-    "headSha": "6244efc7455ff188079d5e64fb99c159c3821dda",
+    "headSha": "52da331628ec32d2b9f2665415b2e25bd44c2d53",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUBbY-A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/130fa4625535dca4b7a081da7c4324bf6e64558ef06599482874a4ae8b531ae4/KannaKuron/dsh-gitbash-shell",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ec41545563c9e9b92c00b014fd29384a655233b4835a3e068a661071b6c2da3a/KannaKuron/dsh-gitbash-shell",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/114040390?u=5b92608102c35f73fcfa2a35853bd4ea4e98c118&v=4",
       "login": "KannaKuron"
     },
-    "pushedAt": "2026-10-13T06:54:35Z",
+    "pushedAt": "2026-10-14T05:36:05Z",
     "slug": "KannaKuron/dsh-gitbash-shell",
     "stars": 36,
     "topics": [
@@ -44,7 +44,7 @@
       "shell",
       "windows"
     ],
-    "updatedAt": "2026-10-13T06:54:39Z",
+    "updatedAt": "2026-10-14T05:35:45Z",
     "url": "https://github.com/KannaKuron/dsh-gitbash-shell"
   },
   "id": "gh:1343674616",
@@ -54,11 +54,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-gitbash-shell@0.35.1",
-    "version": "0.35.1"
+    "spec": "dsh-gitbash-shell@0.39.4",
+    "version": "0.39.4"
   },
   "npm": {
-    "latestVersion": "0.35.1",
+    "latestVersion": "0.39.4",
     "published": true,
     "repositoryMatches": true
   },
@@ -74,15 +74,15 @@
     "name": "dsh-gitbash-shell",
     "status": "valid",
     "type": "module",
-    "version": "0.35.0"
+    "version": "0.39.4"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/130fa4625535dca4b7a081da7c4324bf6e64558ef06599482874a4ae8b531ae4/KannaKuron/dsh-gitbash-shell",
+    "coverUrl": "https://opengraph.githubassets.com/ec41545563c9e9b92c00b014fd29384a655233b4835a3e068a661071b6c2da3a/KannaKuron/dsh-gitbash-shell",
     "description": "DSH plugin: Git Bash shell for all agent modes on Windows (replaces pwsh executor)"
   },
   "readme": {
     "available": true,
-    "excerpt": "官方 Windows 组合默认把 dsh-pwsh-sandbox 作为 ctx.shell(PowerShell 执行器), 且各 preset 的 tool-bash 行在 win32 上被禁用——因为在 Windows 上裸 bash 会解析到 C:\\Windows\\System32\\bash.exe(WSL 占位),本插件直接指定 C:/Program Files/Git/bin/bash.exe。沙箱语义在 POSIX 宿主上完整保留; Windows 宿主上受限模式有一处重要例外——见下方 「安全语义:Windows 上的受限模式」。"
+    "excerpt": "官方 Windows 组合默认把 dsh-pwsh-sandbox 作为 ctx.shell(PowerShell 执行器), 且各 preset 的 tool-bash 行在 win32 上被禁用——因为在 Windows 上裸 bash 会解析到 C:\\Windows\\System32\\bash.exe(WSL 占位)。本插件不替换这个执行器: 它新增一个自有 bash 工具,执行在私有的 Git Bash 执行器实例上(继承官方 @deepseek-ai/dsh-bash-sandbox,bashPath 只认 Git for Windows)。沙"
   },
   "schemaVersion": 1,
   "scripts": {

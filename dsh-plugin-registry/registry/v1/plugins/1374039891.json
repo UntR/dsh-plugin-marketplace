@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-13T11:15:58.128Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-14T09:27:16.481Z",
+    "enrichmentStatus": "ok",
     "headSha": "e5c6ca951d4e3e261a5f722754b8c236933d5529"
   },
   "github": {
@@ -60,27 +60,39 @@
   },
   "id": "gh:1374039891",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-evolution",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-evolution@0.2.2",
+    "version": "0.2.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/dist/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-evolution",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8f29396d694bb5fa304dde79f013cd5c45ba03c9db610833ffca729153044bfc/wycto/dsh-evolution",
     "description": "Local-first self-evolution plugin for DSH: records your coding-agent sessions to a local ledger, reviews them across sessions with the model you already configured, and turns repeated pitfalls into local knowledge. Zero uploads by default. 本地优先的 DSH 自动进化插件：会话账本 + 跨会话复盘，默认不联网、不上传。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English (TL;DR) — dsh-evolution is a local-first self-evolution plugin for DSH (the DeepSeek Harness coding agent). It writes your development sessions into a plain-text NDJSON ledger on your own disk, then reviews those sessions across the board with the model you already config"
   },
   "schemaVersion": 1,
   "scripts": {

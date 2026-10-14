@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-13T11:15:58.128Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-14T09:27:16.481Z",
+    "enrichmentStatus": "ok",
     "headSha": "3ab328b008c0a13c461b04c994241ab9c454c767"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1412613979",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@oihai/dsh-harness-trace",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@oihai/dsh-harness-trace@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./host.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@oihai/dsh-harness-trace",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/945388ecafed88ba23f524f774eec74b7207925449fea4981611af61649ced35/oihai/dsh-harness-trace",
     "description": "持续监听并记录本地 Harness 调用 LLM 的全过程：完整提示词（用户输入 + DSH/插件注入）、技能加载、工具调用与命令执行、本地文件读写、联网搜索抓取。按「轮次 → 步骤」依时间汇总为高可读 Markdown，落在会话对应工作区内，序号加时间命名。内置审阅页与可调配置。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "版本：1.0"
   },
   "schemaVersion": 1,
   "scripts": {

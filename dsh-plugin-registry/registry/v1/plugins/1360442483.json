@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-13T11:15:58.128Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-14T09:27:16.481Z",
+    "enrichmentStatus": "ok",
     "headSha": "1bb99b138311542445623bcd0ab0bb5c58ba6441"
   },
   "github": {
@@ -64,7 +64,8 @@
       "./client": "./lib/client.js",
       "./fs": "./lib/fs.mjs",
       "./package.json": "./package.json",
-      "./provider": "./lib/provider.mjs"
+      "./provider": "./lib/provider.mjs",
+      "./read-fence": "./lib/read-fence.mjs"
     },
     "main": "./lib/policy.mjs",
     "name": "dsh-write-protect",
@@ -78,7 +79,7 @@
   },
   "readme": {
     "available": true,
-    "excerpt": "给 DSH 沙箱补上工作区里某一段路径的只读保护, 典型用途是不让模型改 .git. 也可以在 workspace-write 下声明工作区外的额外可写根, 让 bash 与 write / edit 写到相邻目录, 而不必切到 danger-full-access."
+    "excerpt": "给 DSH 沙箱补上工作区里某一段路径的只读保护, 典型用途是不让模型改 .git. 也可以在 workspace-write 下声明工作区外的额外可写根, 让 bash 与 write / edit 写到相邻目录, 而不必切到 danger-full-access. 还能声明读拒绝路径: 命中的位置 read / grep / glob 这些工具与沙箱命令都读不到, 需要时由模型申请本会话授权, 同一条授权同时放开那条路径的读与写."
   },
   "schemaVersion": 1,
   "scripts": {
