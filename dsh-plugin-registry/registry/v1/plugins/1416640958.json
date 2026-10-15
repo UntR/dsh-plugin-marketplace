@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "deeb11187808c8a62cc60c743a110d1858506541"
   },
   "github": {
@@ -43,33 +43,44 @@
   },
   "id": "gh:1416640958",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-code-studio",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:MarchingWorkhorse/dsh-code-studio#deeb11187808c8a62cc60c743a110d1858506541",
+    "version": "0.14.9"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.14.9",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-code-studio",
+    "status": "valid",
+    "type": "module",
+    "version": "0.14.9"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a4eb7441af219ed54f284f5cc0cd5e322fab085cf43058226b7f8d8eab8ace85/MarchingWorkhorse/dsh-code-studio",
     "description": "像vscode一般支持修订记录审查，支持accept和undo，以及查看项目完整修订记录"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "检测到 DSH 0.1.5+ 官方右侧 Sidebar（ctx.sidebarRightTabs / ctx.sidebarRight）时， 编辑器注册为官方侧边栏 Tab，AI 对话（中央）与文件编辑（右侧）同屏，支持官方 多标签 / 分栏 / 浮出 / 全屏，打开路由即开即展开，官方引导页提供入口。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

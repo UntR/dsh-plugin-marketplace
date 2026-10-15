@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "434139a31c6ac2f813b4d00f214ab08f4fcb46e4"
   },
   "github": {
@@ -47,27 +47,37 @@
   },
   "id": "gh:1416321678",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-agent-hints",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:evan7ang/dsh-agent-hints#434139a31c6ac2f813b4d00f214ab08f4fcb46e4",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-agent-hints",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/23b9b05e3fda64878769f66b7cae96bafe6a2e5b2f432cc1a842395972172881/evan7ang/dsh-agent-hints",
     "description": "Per-request serving-intent hints for DeepSeek Harness (dsh): the X-Agent-Hint HTTP header on an independent chat-completions provider route. Install: dsh plugin add github:evan7ang/dsh-agent-hints"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Per-request serving-intent hints for DeepSeek Harness (DSH): every main-line model request carries a structured AgentHint on the X-Agent-Hint HTTP header (UTF-8 JSON, base64url) — session identity, agent status, priority, and cache control — so a serving engine (your inference ga"
   },
   "schemaVersion": 1,
   "scripts": {

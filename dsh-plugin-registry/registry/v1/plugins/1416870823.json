@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "ff40facbab2545415e5d94abf024ad6c801d415e"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1416870823",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-nickname",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:sanlisanxun/dsh-plugin-nickname#ff40facbab2545415e5d94abf024ad6c801d415e",
+    "version": "0.3.6"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-nickname",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cb6454a6204af6add2908e0d334af0b6c06f8c949dfa049269d880508211e776/sanlisanxun/dsh-plugin-nickname",
     "description": "给 DeepSeek Harness 插件列表里的插件自定义中文备注名，支持分组、折叠与自定义标签"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness (dsh) 插件列表里的插件自定义中文备注名，直接显示在原生插件设置页；支持按备注/标签分组、分组折叠、官方插件保护与自定义标签。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "7b07f39096a97ac5ae32df0a363cdf5a119208ce"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1416801935",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-waibao",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ericlee041769-hash/dsh-waibao#7b07f39096a97ac5ae32df0a363cdf5a119208ce",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "src/host.mjs",
+    "name": "dsh-waibao",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b03d058e8b3751fe5fdbce6c1e0aff02322ee0daedab2271edece17fb560dfe7/ericlee041769-hash/dsh-waibao",
     "description": "DSH 外包：Codex 分配任务，DSH 桌面执行；可见会话、连续上下文、完成回调。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Codex 分配任务，DSH 桌面执行；同一会话继续，完成后回来验收。"
   },
   "schemaVersion": 1,
   "scripts": {

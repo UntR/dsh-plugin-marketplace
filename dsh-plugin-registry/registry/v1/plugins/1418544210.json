@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "9f48779ba1c7698bd8d40f548d6e882df09639c1"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1418544210",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-local-model",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:songzhiyin/dsh-local-model#9f48779ba1c7698bd8d40f548d6e882df09639c1",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-local-model",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/afea0da904f7fb84ff051904e908b7233aa82322180c0ed9ba6cb8b218a4bcb7/songzhiyin/dsh-local-model",
     "description": "让 DeepSeek Harness 直连本地模型：兼容 OpenAI 协议（llama.cpp / LM Studio / vLLM / Ollama 的 /v1）与 Ollama 原生 API。无需登录、不消耗账号 token。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DeepSeek Harness 直连本地模型 —— 不用登录账号，也不消耗云端 token。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "3819664438229a74f53f2079bfc47091992a4eb9"
   },
   "github": {
@@ -44,27 +44,49 @@
   },
   "id": "gh:1418225356",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@sunrulin123/dsh-community-web-ui",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:sunrulin123/dsh-community-web-ui#3819664438229a74f53f2079bfc47091992a4eb9",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./invariant": {
+        "default": "./lib/invariant.js",
+        "types": "./lib/types/invariant.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@sunrulin123/dsh-community-web-ui",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/da3ea3a099e63c3df8ad934d102103d5ad1df688f6dce8b10561fcd39dad5efc/sunrulin123/dsh-community-web-ui",
     "description": "Unofficial responsive remote Web UI bundle for DeepSeek Harness with native Desktop isolation."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "GitHub Release tarballs ship prebuilt lib/ files and do not run a consumer-side build lifecycle. Source checkouts use pnpm run build."
   },
   "schemaVersion": 1,
   "scripts": {

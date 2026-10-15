@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
-    "headSha": "26681b76f141c35188dfa733fc5919831a168206"
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
+    "headSha": "96115a01cf6844d4dea16900a0894d18e32a7366"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-14T06:58:00Z",
     "databaseId": 1418503950,
     "defaultBranch": "main",
-    "description": "Auxiliary-model degradation guard for DSH 1.5: keeps side calls cheap (reasoning effort off, token floor, tool stripping) without touching the main loop.",
+    "description": "DSH 1.5 辅助模型降级：让压缩摘要、会话标题这类旁路调用更省更完整，主循环零影响。仅支持 DSH 1.5，后续会跟进更新。 / Auxiliary-model degradation for DSH 1.5: cheaper, complete side calls (reasoning off, token floor, tools stripped). DSH 1.5 only; newer releases will follow.",
     "fork": false,
     "forks": 0,
-    "headSha": "26681b76f141c35188dfa733fc5919831a168206",
+    "headSha": "96115a01cf6844d4dea16900a0894d18e32a7366",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,45 +25,70 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVIynDg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/fe5580aeeb10d625bc5c048c8ae8c185617cea34ef2dacaab10b92cd5dceed5c/xiamubumu/dsh-aux-degrade",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/05119de4a12726729d380b966414ac87e18f5e8c1c3de1e2b1cf185fa89db860/xiamubumu/dsh-aux-degrade",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/319493928?u=9df51cecf07d712d18567aab1aa83a02ade643fc&v=4",
       "login": "xiamubumu"
     },
-    "pushedAt": "2026-10-14T09:11:51Z",
+    "pushedAt": "2026-10-15T06:07:54Z",
     "slug": "xiamubumu/dsh-aux-degrade",
     "stars": 0,
     "topics": [
+      "agent",
+      "ai-agent",
+      "compaction",
+      "cordis",
+      "cost-optimization",
+      "deepseek",
       "deepseek-harness",
       "dsh",
-      "dsh-plugin"
+      "dsh-plugin",
+      "llm",
+      "llm-tools",
+      "plugin",
+      "prompt-engineering",
+      "reasoning",
+      "summarization",
+      "token-optimization"
     ],
-    "updatedAt": "2026-10-14T09:11:55Z",
+    "updatedAt": "2026-10-15T06:07:57Z",
     "url": "https://github.com/xiamubumu/dsh-aux-degrade"
   },
   "id": "gh:1418503950",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-aux-degrade",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xiamubumu/dsh-aux-degrade#96115a01cf6844d4dea16900a0894d18e32a7366",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": {
+        "default": "./lib/client.js"
+      }
+    },
+    "main": "./index.js",
+    "name": "dsh-aux-degrade",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/fe5580aeeb10d625bc5c048c8ae8c185617cea34ef2dacaab10b92cd5dceed5c/xiamubumu/dsh-aux-degrade",
-    "description": "Auxiliary-model degradation guard for DSH 1.5: keeps side calls cheap (reasoning effort off, token floor, tool stripping) without touching the main loop."
+    "coverUrl": "https://opengraph.githubassets.com/05119de4a12726729d380b966414ac87e18f5e8c1c3de1e2b1cf185fa89db860/xiamubumu/dsh-aux-degrade",
+    "description": "DSH 1.5 辅助模型降级：让压缩摘要、会话标题这类旁路调用更省更完整，主循环零影响。仅支持 DSH 1.5，后续会跟进更新。 / Auxiliary-model degradation for DSH 1.5: cheaper, complete side calls (reasoning off, token floor, tools stripped). DSH 1.5 only; newer releases will follow."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Compaction summaries and session titles stop burning their output budget on reasoning."
   },
   "schemaVersion": 1,
   "scripts": {

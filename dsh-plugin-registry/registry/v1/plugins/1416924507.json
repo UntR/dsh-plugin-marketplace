@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./dsh/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "17c7a25b14b4730dec65f9e32e44f64f5bb278f5"
   },
   "github": {
@@ -30,7 +30,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/180387319?u=d0018aaadc394e46b01f11c4842d0bedbbfd7480&v=4",
       "login": "Alice39s"
     },
-    "pushedAt": "2026-10-14T03:37:34Z",
+    "pushedAt": "2026-10-15T03:37:14Z",
     "slug": "Alice39s/agent-stash",
     "stars": 0,
     "topics": [
@@ -52,7 +52,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -62,14 +62,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      "./dsh/init": "./dist/dsh/init.js",
+      "./dsh/init/icon": "./dsh/init/icon.svg",
+      "./dsh/init/locale/*.json": "./dsh/init/locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "agent-stash",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/61cfa2fa89d8f4387c1b2ca5e58867f3d9b6c989ab2c1d2b0c92c7c1a074f1aa/Alice39s/agent-stash",
     "description": "Personal Agent Skills, Pi & DSH (DeepSeek Harness) plugins"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "自用的 Agent Skills、pi 扩展与 DSH（DeepSeek Harness）插件合集。"
   },
   "schemaVersion": 1,
   "scripts": {

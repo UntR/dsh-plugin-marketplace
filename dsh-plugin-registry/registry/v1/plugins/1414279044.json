@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "35eb99eb79406fa39dadf52ad8ba6bf54f77b52b"
   },
   "github": {
@@ -41,27 +41,37 @@
   },
   "id": "gh:1414279044",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-agents-md-only",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:RicardoYan/dsh-agents-md-only#35eb99eb79406fa39dadf52ad8ba6bf54f77b52b",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-agents-md-only",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/84dae866bffdb23dfd8fb264c998ff18aac9ea32fa15611b79b8584e9ae53ce2/RicardoYan/dsh-agents-md-only",
     "description": "Make DSH read only AGENTS.md / AGENTS.local.md, not CLAUDE.md · 让 DSH 只读 AGENTS.md / AGENTS.local.md，不读 CLAUDE.md"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DSH 只读 AGENTS.md 和 AGENTS.local.md 作为工作区指令，不再读 CLAUDE.md、CLAUDE.local.md。"
   },
   "schemaVersion": 1,
   "scripts": {

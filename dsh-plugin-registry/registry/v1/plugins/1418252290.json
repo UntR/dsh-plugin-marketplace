@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "0e6e3dd5fc29aec0fae4c492cc8f58b3e5024b66"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1418252290",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-restart-button",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wangbofan/dsh-restart-button#0e6e3dd5fc29aec0fae4c492cc8f58b3e5024b66",
+    "version": "1.0.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./host.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "host.js",
+    "name": "dsh-restart-button",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bbba1d67ab6da0e9af56a17880ebdffd1133758f2869663e59015caac65cb58b/wangbofan/dsh-restart-button",
     "description": "DSH desktop (Windows) titlebar menu: a Restart button that closes and relaunches the whole app - shell + Host. Plugin-only, no app.asar patching."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 桌面端（Windows） 的标题栏菜单栏加一个「重启」按钮：点一下，整个应用（Electron shell + DSH Host + 渲染进程 + 插件守护进程）退出并自动重新打开。"
   },
   "schemaVersion": 1,
   "scripts": {

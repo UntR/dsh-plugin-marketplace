@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "314d0e46c876760353359972bd430897f36dbc2d"
   },
   "github": {
@@ -50,27 +50,38 @@
   },
   "id": "gh:1418659761",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-asmrone",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:133563825as-ai/dsh-asmrone#314d0e46c876760353359972bd430897f36dbc2d",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-asmrone",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/41c9ba968bac99f72aabf0886994e45aff7810e6f7781bf6d38efc3159c7bff5/133563825as-ai/dsh-asmrone",
     "description": "DeepSeek Harness 音声库插件：asmr.one / B站 / DLsite 试听 / 本机曲库四源合一"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "开源（MIT）的 DeepSeek Harness 专用插件：把 asmr.one （DLsite 同人音声整库镜像，六万余部）、B 站、DLsite 官方免费试听、以及手机本地已经下好的音声 四个来源接进对话 —— 搜作品、看音轨、在线播放（后台播放 + 拖进度）、按自己的权重重排结果、 批量下载与删除，全程不必离开 DSH。带 Web 面板，也带一条让 agent 直接推歌出声的通道。"
   },
   "schemaVersion": 1,
   "scripts": {

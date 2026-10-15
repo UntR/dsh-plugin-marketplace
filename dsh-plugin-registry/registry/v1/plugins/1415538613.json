@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "814a55a7acde7f6cdbc934497a567072c32057c9"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1415538613",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ration",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wobenshiwomu/dsh-ration#814a55a7acde7f6cdbc934497a567072c32057c9",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.mjs",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.mjs",
+    "name": "dsh-ration",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9ab0c915d3666e503760a48ebd238e344433b16821059ca3de88c246402b365c/wobenshiwomu/dsh-ration",
     "description": "DeepSeek Harness 插件：配给 —— 自己给自己防沉迷的 token 限额。5 小时滚动窗 + 周，两把闸；越线就不接新活 | Ration your tokens: self-imposed 5-hour & weekly limits that actually stop you"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 里没有\"套餐额度\"这回事，按 token 烧钱、无限续杯——很容易一坐就是十几个小时。 配给给你装两把闸："
   },
   "schemaVersion": 1,
   "scripts": {

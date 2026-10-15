@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "8a4d5a71baf84644822ee52aa254b1956fbc7631"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1417009660",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-peak-scheduler",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yizhiyizhi0128/dsh-peak-scheduler#8a4d5a71baf84644822ee52aa254b1956fbc7631",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-peak-scheduler",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2c81ea82c90c885f5176562101d1f4b47c13baf353e228b29cb58de74c67b902/yizhiyizhi0128/dsh-peak-scheduler",
     "description": "DSH 插件：DeepSeek 峰谷价格自动调度"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "自动判定 DeepSeek 模型的峰价 / 谷价时段，并把「要不要等到谷价再跑」这件事做成一键选择："
   },
   "schemaVersion": 1,
   "scripts": {

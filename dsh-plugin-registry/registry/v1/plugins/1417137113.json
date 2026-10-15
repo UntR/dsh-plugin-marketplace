@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "5d8de3dc29894bdb1b88ab62e17138d6c8aec2c8"
   },
   "github": {
@@ -48,27 +48,42 @@
   },
   "id": "gh:1417137113",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-approval-explainer",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ArisuYuuko/dsh-approval-explainer#5d8de3dc29894bdb1b88ab62e17138d6c8aec2c8",
+    "version": "0.6.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-approval-explainer",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/396301451741d16eb9184cd67ed409a25ce6d3d2f79cc3cbf2310749646e7945/ArisuYuuko/dsh-approval-explainer",
     "description": "DSH 审批弹窗 AI 注释器：模型请求权限外操作时，用模型自己的推理解释这次操作的意义与风险"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An AI annotator for the approval dialog in DeepSeek Harness (dsh)."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "ff83ab3d9d4fd4cbb776b61a61aec7063ccd2087"
   },
   "github": {
@@ -50,27 +50,39 @@
   },
   "id": "gh:1416891708",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-coldread-cache",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:iuuuuuuuu/dsh-coldread-cache#ff83ab3d9d4fd4cbb776b61a61aec7063ccd2087",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-coldread-cache",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/58f8db4da8ad89fbd620ce8bff17cca3cede0275e58966c659dca4f6287ae6b4/iuuuuuuuu/dsh-coldread-cache",
     "description": "DSH plugin: keep a session's parsed event log resident so a local append extends the resident parse instead of invalidating it - a long session is parsed once per host process, not once per read."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把正在写入的会话日志常驻在内存里解析，长会话不再越用越卡。"
   },
   "schemaVersion": 1,
   "scripts": {

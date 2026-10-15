@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "9d5024b41ae89c2b6f7e0e99d3649acac21b915f"
   },
   "github": {
@@ -60,7 +60,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -70,14 +70,23 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.mjs"
+    },
+    "main": "src/index.mjs",
+    "name": "dsh-skill-router",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cd9b0de0252743e4992b6403552b1aca0ead984b1f601a0c9c6f6075a72d8af1/mikuniemo/dsh-skill-router",
     "description": "Shrink the DeepSeek Harness skill catalog from O(n) to ~600 tokens - router + on-demand category indexes. Zero dependencies, cross-platform."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Turn the DeepSeek Harness skill catalog from O(all skills) into one 600-token router."
   },
   "schemaVersion": 1,
   "scripts": {

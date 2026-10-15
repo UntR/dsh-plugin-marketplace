@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "242ee023a64a2a304b4bfb38c9ae9f8334376020"
   },
   "github": {
@@ -43,27 +43,42 @@
   },
   "id": "gh:1415097644",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@alm-allen/dsh-cangjie-preset",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Alm-Allen/dsh-cangjie-preset#242ee023a64a2a304b4bfb38c9ae9f8334376020",
+    "version": "2026.10.12"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./plugins/cangjie-zh.mjs",
+      "./audit-coverage": "./plugins/audit-coverage.mjs",
+      "./cangjie-zh": "./plugins/cangjie-zh.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./self-test": "./plugins/self-test.mjs"
+    },
+    "main": "./plugins/cangjie-zh.mjs",
+    "name": "@alm-allen/dsh-cangjie-preset",
+    "status": "valid",
+    "type": "module",
+    "version": "2026.10.12"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ae6374af90b10f809ed6f814487840975715024d147a2b8b24f84fb792efa5af/Alm-Allen/dsh-cangjie-preset",
     "description": "dsh 插件：把 DeepSeek Harness 的原生「PTC 模式」完整汉化——覆盖 preset-ptc，不新增预设条目。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DeepSeek Harness（dsh） 的原生 PTC 模式（ptc） 汉化：装上本包之后，PTC 模式 本身就说中文——系统提示词与 runcode 的工具提示词全部汉化，模型以中文思维链工作，工具调用 仍通过 runcode 的 TypeScript SDK 完成；工具名、参数名、代码、命令、路径一律保持原样—— 模型照样写 TypeScript 程序，只是用中文思考。"
   },
   "schemaVersion": 1,
   "scripts": {

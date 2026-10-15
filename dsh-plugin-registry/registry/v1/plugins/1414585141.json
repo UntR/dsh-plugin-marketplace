@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "a132404d026fab084bf90383c0da9f8e3287a5c6"
   },
   "github": {
@@ -53,7 +53,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -63,14 +63,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      "./client": "./statusline/client.js",
+      "./hooks": "./hooks.js",
+      "./package.json": "./package.json",
+      "./statusline": "./statusline/index.js",
+      "./statusline/client": "./statusline/client.js"
+    },
+    "main": null,
+    "name": "deepseek-harness-game-studios",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5048a8e40398d24c077ab9eebe0d4a2420f1b08dcd1822bd73951eefa7a49df8/HYClub/deepseek-harness-game-studios",
     "description": "DeepSeek Harness port of Claude Code Game Studios (CCGS v1.1.2, MIT) — one-package install: hook bridge (9 events), studio status line, self-installing framework payload (76 skills, 49 agents, 13 rules)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Turn a single DeepSeek Harness session into a full game development studio. 49 agents. 76 skills. One coordinated AI team."
   },
   "schemaVersion": 1,
   "scripts": {

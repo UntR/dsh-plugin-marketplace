@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "41abd0651fdc83a7ae7184ca5e85b8e4fe7323ef"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1416005729",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-bottom-cost",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-bottom-cost@0.5.2",
+    "version": "0.5.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-bottom-cost",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/63bf09376cd4aa0fce2a58a9fdfddceb336ba46e56d49a9115548c53b1e1dbcb/LanFeng97/dsh-bottom-cost",
     "description": "DSH web plugin: per-turn session cost chip in the composer stats row — per-turn spend and cache-hit / cache-miss totals (CNY), priced from an official price table refreshed on demand. · DSH 网页插件：输入框下方统计栏里的会话费用胶囊——逐轮花费与命中/未命中两项总额（CNY），价目表按需从官方定价页刷新。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A session cost chip for DeepSeek Harness: it sits in the same row as the built-in stats pills under the composer and answers \"what has this conversation cost\" and \"what did the last turn cost\" at a glance, splitting the spend into cache-hit and cache-miss parts."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "bf62da4ef258c1418cfec4dd71bed610466798f8"
   },
   "github": {
@@ -43,27 +43,40 @@
   },
   "id": "gh:1414233132",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-backup",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:shiinakaze/dsh-plugin-backup#bf62da4ef258c1418cfec4dd71bed610466798f8",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./typert": "./typert.js"
+    },
+    "main": "./index.js",
+    "name": "dsh-plugin-backup",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1dd00069d8f3ca8e5cec5b81f06c3110418798e2c069a68a41f588b5c7c0a655/shiinakaze/dsh-plugin-backup",
-    "description": ""
+    "description": "A backup plugin for DeepSeek Harness: it packages $DSHHOME into verifiable, restorable, downloadable archives by category, and can mirror those backups to GitHub. Everything is available from three faces that share one engine and one single-run lock: the Web settings page, the mo"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A backup plugin for DeepSeek Harness: it packages $DSHHOME into verifiable, restorable, downloadable archives by category, and can mirror those backups to GitHub. Everything is available from three faces that share one engine and one single-run lock: the Web settings page, the mo"
   },
   "schemaVersion": 1,
   "scripts": {

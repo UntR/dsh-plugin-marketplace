@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "da79361115ebc830508d8bbc9f409fba73476ca9"
   },
   "github": {
@@ -53,7 +53,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -63,14 +63,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-tianyicui-monitor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/344ca8dca75c08bbdef259dcf4ed4d073cf946f8a0260f5685bc003ffe0505cc/mrwisdon/dsh-tianyicui-monitor",
     "description": "DeepSeek Harness plugin: commit activity, contribution heatmap with shared selection, and a calibrated 72h release probability"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) plugin. It adds a sidebar entry showing a maintainer's commit activity and a calibrated probability that a new DSH version ships within 72 hours."
   },
   "schemaVersion": 1,
   "scripts": {

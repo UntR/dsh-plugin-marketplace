@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "7f9d671e9da05486e62eabef640d3a2f2a0f7c00"
   },
   "github": {
@@ -49,27 +49,45 @@
   },
   "id": "gh:1415699482",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-model-dispatch",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kolawong/dsh-plugin-model-dispatch#7f9d671e9da05486e62eabef640d3a2f2a0f7c00",
+    "version": "1.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-model-dispatch",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/891ab034add52321cafaf5af125bcf90de61b85b8e0d4b002ed78042c4853c77/kolawong/dsh-plugin-model-dispatch",
     "description": "DSH plugin: pick separate models and reasoning efforts for the main session, subagents, and plan mode."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Give the main model, your subagents, and plan mode their own model and reasoning effort — from the chat bar, in one menu."
   },
   "schemaVersion": 1,
   "scripts": {

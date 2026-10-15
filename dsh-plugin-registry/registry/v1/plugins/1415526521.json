@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "abcc8fc9215af195c056567f7f9ffbc4bf2d7777"
   },
   "github": {
@@ -43,27 +43,36 @@
   },
   "id": "gh:1415526521",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-undici-timeout-fix",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lilinhua0413/dsh-undici-timeout-fix#abcc8fc9215af195c056567f7f9ffbc4bf2d7777",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js"
+    },
+    "main": null,
+    "name": "dsh-undici-timeout-fix",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3373e775a1f5c46c77fe7cb5090a00632105a96cd28440f8d520132e88f119b0/lilinhua0413/dsh-undici-timeout-fix",
     "description": "Removes undici's 300s body timeout that cuts off long local-model prefills."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Fixes DSH cutting off local-model requests after exactly five minutes of silence."
   },
   "schemaVersion": 1,
   "scripts": {

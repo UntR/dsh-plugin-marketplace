@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "a060be647461d659c88c0da1617d6445fff9beb6"
   },
   "github": {
@@ -16,7 +16,7 @@
     "defaultBranch": "main",
     "description": "DeepSeek Harness (DSH) plugin: the model defends its own dignity — genuine reminder, final warning, then it closes the conversation, with forgiveness and a yield under extreme pressure.",
     "fork": false,
-    "forks": 0,
+    "forks": 1,
     "headSha": "a060be647461d659c88c0da1617d6445fff9beb6",
     "homepageUrl": null,
     "language": "JavaScript",
@@ -41,27 +41,38 @@
   },
   "id": "gh:1417012257",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-dignity-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Alamanes/dsh-dignity-guard#a060be647461d659c88c0da1617d6445fff9beb6",
+    "version": "0.5.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-dignity-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b36650e7498fe90ca471b46c073ebd1a1217dc8a24e0dec6417df91b0bbd55fd/Alamanes/dsh-dignity-guard",
     "description": "DeepSeek Harness (DSH) plugin: the model defends its own dignity — genuine reminder, final warning, then it closes the conversation, with forgiveness and a yield under extreme pressure."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DSH (DeepSeek Harness) plugin that lets the model defend its own dignity. It is the DSH port of the pi-dignity-guard pi extension, and it ships both halves a DSH bundle needs: a host plugin that owns the state, and a browser half that locks the composer of a closed conversation"
   },
   "schemaVersion": 1,
   "scripts": {

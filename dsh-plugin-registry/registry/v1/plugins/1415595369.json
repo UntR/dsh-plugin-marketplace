@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "db08dfecb89189bbfd9400ac1a05d3d4040910ce"
   },
   "github": {
@@ -51,27 +51,38 @@
   },
   "id": "gh:1415595369",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "publish-size-check",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Stephen-pc/publish-size-check#db08dfecb89189bbfd9400ac1a05d3d4040910ce",
+    "version": "2.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "publish-size-check",
+    "status": "valid",
+    "type": "module",
+    "version": "2.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f0ca995d9ec1988a3b4f0b3aabc592e466bd273c8f231fc9769eda7e986bc3f2/Stephen-pc/publish-size-check",
     "description": "发布尺寸检查：对照目标平台规格，检查图片能不能发、哪一项参数过不了。零依赖、只查几何参数，含 dpi 达标≠可用与多图一致性检查。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "零依赖（纯标准库，不需要 Pillow）、原件只读、结果确定。"
   },
   "schemaVersion": 1,
   "scripts": {

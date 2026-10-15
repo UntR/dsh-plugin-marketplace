@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
-    "headSha": "b00c1d78cb8e680a0d6128e2ba02f9fc3eeeead6"
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
+    "headSha": "667e531e9e48e7da57dfbb262eb23f85854bba37"
   },
   "github": {
     "archived": false,
@@ -17,48 +17,60 @@
     "description": "模型接力 —— 用优先级队列接管 LLM 输出",
     "fork": false,
     "forks": 0,
-    "headSha": "b00c1d78cb8e680a0d6128e2ba02f9fc3eeeead6",
+    "headSha": "667e531e9e48e7da57dfbb262eb23f85854bba37",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": null,
     "nodeId": "R_kgDOVGRboA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f1e8fc969f1f56afbaa9c9a9c10a3b29513420edf27df659aae63f7cdcef0fa5/Airisey/dsh-model-failover",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ee15433798944a2b3b958bc082e96bd346b793f4122b1574f06a47e11d838a7a/Airisey/dsh-model-failover",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/49581883?v=4",
       "login": "Airisey"
     },
-    "pushedAt": "2026-10-12T16:34:13Z",
+    "pushedAt": "2026-10-14T17:00:25Z",
     "slug": "Airisey/dsh-model-failover",
     "stars": 1,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-12T16:56:50Z",
+    "updatedAt": "2026-10-14T17:00:43Z",
     "url": "https://github.com/Airisey/dsh-model-failover"
   },
   "id": "gh:1415863200",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-failover",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Airisey/dsh-model-failover#667e531e9e48e7da57dfbb262eb23f85854bba37",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.7",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-model-failover",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f1e8fc969f1f56afbaa9c9a9c10a3b29513420edf27df659aae63f7cdcef0fa5/Airisey/dsh-model-failover",
+    "coverUrl": "https://opengraph.githubassets.com/ee15433798944a2b3b958bc082e96bd346b793f4122b1574f06a47e11d838a7a/Airisey/dsh-model-failover",
     "description": "模型接力 —— 用优先级队列接管 LLM 输出"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 已经接入 dsh 的全部模型排成一条优先级队列，然后把这个插件本身当成一个「模型」。 用户在模型选择里挑 模型接力，任务就会按你排好的顺序去跑：靠前的先上，不行就自动往下换， 直到任务跑完。"
   },
   "schemaVersion": 1,
   "scripts": {

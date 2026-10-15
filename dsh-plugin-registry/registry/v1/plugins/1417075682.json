@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./preset.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "67b49139c691626e08310d2e562c2211a1a9f30b"
   },
   "github": {
@@ -52,27 +52,38 @@
   },
   "id": "gh:1417075682",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-preset-github-plugin-security-review",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jiejiushijiehaohao-creator/deepseek-preset-github-plugin-security-review#67b49139c691626e08310d2e562c2211a1a9f30b",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json",
+      "./preset.patch.yml": "./preset.patch.yml"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-preset-github-plugin-security-review",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/215581bde01f8c523eb84121bedd9603767a130e9ae89c8aecee2af54a9b2de6/jiejiushijiehaohao-creator/deepseek-preset-github-plugin-security-review",
     "description": "基于 DeepSeek Harness 的 GitHub 插件静态安全审查预设，该项目代码由ai生成，主要框架由我搭建，通过“侦察员+审计员”双 Agent 协作、通过实验性ai自测攻防。主要功能有防死机上下文裁剪，有效防御投毒与提示词注入。包含21条安全红线、依赖树连坐排查与自动 YAML 校验，这是一名20岁非科班大学生的AI安全探索，欢迎大佬指导。本项目不能代替人工审计。请勿在生产环境或敏感凭证环境中使用。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DSH agent preset: a two-role pipeline that reviews the source of a plugin downloaded from GitHub — statically, without ever installing or executing it."
   },
   "schemaVersion": 1,
   "scripts": {

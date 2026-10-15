@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "f9e413fb8819d3007446b778f83fbf6f72cba20d"
   },
   "github": {
@@ -49,27 +49,43 @@
   },
   "id": "gh:1417203848",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-zh-tw-ui",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:linmino/dsh-zh-tw-ui#f9e413fb8819d3007446b778f83fbf6f72cba20d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-zh-tw-ui",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e39820a777c6af01f3b00a88e54a0c25681c92542a2d871f8e4b0c6eb6fd0c3d/linmino/dsh-zh-tw-ui",
     "description": "DeepSeek Harness Web UI in Traditional Chinese (Taiwan) - converts the whole rendered interface, including third-party plugin copy, at the DOM layer."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Renders the entire DeepSeek Harness (DSH) Web UI in Traditional Chinese (Taiwan) — DSH's own copy, third-party plugin copy, and text that later DSH versions add — by converting the DOM, not by shipping a language pack."
   },
   "schemaVersion": 1,
   "scripts": {

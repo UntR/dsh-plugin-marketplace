@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "1d70ea658733f1179cc69f96aab5553825b6f797"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1415750232",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ecnu-quota",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Taulee/dsh-ecnu-quota#1d70ea658733f1179cc69f96aab5553825b6f797",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-ecnu-quota",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8a9e08388cc22dfd1679b88cb319742c8d0747f7dc31d7bcc346dd58f44acdd7/Taulee/dsh-ecnu-quota",
     "description": "DSH 网页界面里的华东师范大学 (chat.ecnu.edu.cn) Open API 额度卡片与详情面板"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 华东师范大学 Open API（chat.ecnu.edu.cn）的额度显示在 DeepSeek Harness（DSH）界面里：侧边栏底部一张常驻卡片，点开是额度明细面板。只读、不消耗额度、不上传任何数据。"
   },
   "schemaVersion": 1,
   "scripts": {

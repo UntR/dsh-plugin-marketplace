@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "bc0b3cd908017156d0d4d6c00030ff3f994dfc86"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1416529458",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@ruaibeite/dsh-auto-observe",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ruaibeite/dsh-auto-observe#bc0b3cd908017156d0d4d6c00030ff3f994dfc86",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "@ruaibeite/dsh-auto-observe",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5f9236373395b5cd9b6bfa259b45f1b8c0904197247b9bc66acc7836416704cc/ruaibeite/dsh-auto-observe",
     "description": "Records the edit target's current version as an observation when the agent never used the read tool (bash inspection does not count), so the fs observation policy stops rejecting edits with FS_NOT_OBSERVED."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让「用 bash 看过、没用 read 工具读过」的文件也能编辑——修掉反复出现的"
   },
   "schemaVersion": 1,
   "scripts": {

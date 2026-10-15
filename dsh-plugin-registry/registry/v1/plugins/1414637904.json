@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "916f2da67308519ce58212542adfb966ead2c2c3"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-logger-channels",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/216e3aefc889e5f93335b13e8468b5874e91f1428125467658e5c81300e3a349/xuan25/dsh-logger-channels",
     "description": "dsh-logger-channels gives a DSH profile a visible log sink"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-logger-channels gives a DSH profile a visible log sink: named channels that receive every ctx.logger record from the framework and all plugins, so runtime log output reaches the operator instead of ending only in the host's in-memory buffers."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "b95deefcbbdd719bc13235c4d72b63db3e5e322f"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1416386334",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "codex-dsh-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:journ10/codex-dsh-bridge#b95deefcbbdd719bc13235c4d72b63db3e5e322f",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0-beta.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "codex-dsh-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2d53a91d23f8616e5a23d2bf1d22edc8f4daaabc0fd73999f76b989b658376be/journ10/codex-dsh-bridge",
     "description": "HTTP MCP bridge for Codex to create and continue visible sessions in DeepSeek Harness Web"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 Codex 通过 MCP 在正在运行的 DeepSeek Harness（DSH）Web 中创建任务、继续已有会话、查询进度和获取结果。会话由同一个 DSH Host 管理，可在 DSH Web 中查看。"
   },
   "schemaVersion": 1,
   "scripts": {

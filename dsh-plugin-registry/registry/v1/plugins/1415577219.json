@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "bb033b85fb94fac0b91751bf2f62441040d81086"
   },
   "github": {
@@ -43,27 +43,40 @@
   },
   "id": "gh:1415577219",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-endpoint",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Xxsttb/dsh-model-endpoint#bb033b85fb94fac0b91751bf2f62441040d81086",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-model-endpoint",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/687589a3a599f8a2e4d149f2255dc4643d83bbe3216fbe675a20282b4739278e/Xxsttb/dsh-model-endpoint",
     "description": "DeepSeek Harness plugin: exposes the model you selected in chat (or in Settings) through a standalone OpenAI-compatible HTTP API, reachable over LAN, public network or NAT port forwarding. Streaming, bearer auth, CORS and a dedicated settings page. AI-generated."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Publishes the model your DeepSeek Harness profile is already using as an OpenAI-compatible HTTP endpoint."
   },
   "schemaVersion": 1,
   "scripts": {

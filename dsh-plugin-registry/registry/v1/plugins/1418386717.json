@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "93fa1880ddb86f38f5e316007e08e29b5bfdc4b6"
   },
   "github": {
@@ -16,7 +16,7 @@
     "defaultBranch": "master",
     "description": "Pin an OpenCode Go upstream route in DeepSeek Harness by keeping one stable x-opencode-session key, with an in-GUI route picker and drift checks.",
     "fork": false,
-    "forks": 0,
+    "forks": 1,
     "headSha": "93fa1880ddb86f38f5e316007e08e29b5bfdc4b6",
     "homepageUrl": null,
     "language": "JavaScript",
@@ -38,27 +38,39 @@
   },
   "id": "gh:1418386717",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-opencode-pin",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-opencode-pin@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-opencode-pin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/aca61975db31028723474acdf71d5a34d6c6e750ed6daaed513c9630919adf8f/wobushiyoushen0214/dsh-opencode-pin",
     "description": "Pin an OpenCode Go upstream route in DeepSeek Harness by keeping one stable x-opencode-session key, with an in-GUI route picker and drift checks."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness（DSH）Host 插件：把所有模型调用钉在 OpenCode Go 套餐上，并保证每个请求都带 稳定的 x-opencode-session，从而让 OpenCode 的「会话 → 上游提供商」绑定在整段对话里不漂移。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
-    "headSha": "9fafc8ef2023c9771bfd15f0cbe344e91524a5bb"
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
+    "headSha": "c2cee5c4d7bed8d6a6d1501833e0db1d003e08a4"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-14T06:57:30Z",
     "databaseId": 1418503404,
     "defaultBranch": "main",
-    "description": "Context governance for DSH 1.5: folds tool results, keeps the prompt cache warm, and takes over the host writable-request path (no official dsh-llm file patch needed).",
+    "description": "DSH 1.5 上下文治理：折叠工具结果、保持提示词缓存命中、接管宿主可写请求（不再需要 dsh-llm 文件补丁）。仅支持 DSH 1.5，后续会跟进更新。 / Context governance for DSH 1.5: folds tool results, keeps the prompt cache warm, takes over the writable-request path. DSH 1.5 only; newer releases will follow.",
     "fork": false,
     "forks": 0,
-    "headSha": "9fafc8ef2023c9771bfd15f0cbe344e91524a5bb",
+    "headSha": "c2cee5c4d7bed8d6a6d1501833e0db1d003e08a4",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,45 +25,70 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVIyk7A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3343249d88adf4b80142f72a775770affda601ca559c0c5b003b0dd943ac6a8d/xiamubumu/dsh-context-reclaim",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ad5b6c6317ecda29fc6df596063ead191fd4887bd0259b398651a15593f7895e/xiamubumu/dsh-context-reclaim",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/319493928?u=9df51cecf07d712d18567aab1aa83a02ade643fc&v=4",
       "login": "xiamubumu"
     },
-    "pushedAt": "2026-10-14T09:11:34Z",
+    "pushedAt": "2026-10-15T06:07:42Z",
     "slug": "xiamubumu/dsh-context-reclaim",
-    "stars": 1,
+    "stars": 2,
     "topics": [
+      "agent",
+      "ai-agent",
+      "context-engineering",
+      "context-management",
+      "context-window",
+      "cordis",
+      "cost-optimization",
+      "deepseek",
       "deepseek-harness",
       "dsh",
-      "dsh-plugin"
+      "dsh-plugin",
+      "llm",
+      "llm-tools",
+      "plugin",
+      "prompt-cache",
+      "token-optimization"
     ],
-    "updatedAt": "2026-10-14T09:11:38Z",
+    "updatedAt": "2026-10-15T06:07:45Z",
     "url": "https://github.com/xiamubumu/dsh-context-reclaim"
   },
   "id": "gh:1418503404",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-context-reclaim",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xiamubumu/dsh-context-reclaim#c2cee5c4d7bed8d6a6d1501833e0db1d003e08a4",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": {
+        "default": "./lib/client.js"
+      }
+    },
+    "main": "./index.js",
+    "name": "dsh-context-reclaim",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3343249d88adf4b80142f72a775770affda601ca559c0c5b003b0dd943ac6a8d/xiamubumu/dsh-context-reclaim",
-    "description": "Context governance for DSH 1.5: folds tool results, keeps the prompt cache warm, and takes over the host writable-request path (no official dsh-llm file patch needed)."
+    "coverUrl": "https://opengraph.githubassets.com/ad5b6c6317ecda29fc6df596063ead191fd4887bd0259b398651a15593f7895e/xiamubumu/dsh-context-reclaim",
+    "description": "DSH 1.5 上下文治理：折叠工具结果、保持提示词缓存命中、接管宿主可写请求（不再需要 dsh-llm 文件补丁）。仅支持 DSH 1.5，后续会跟进更新。 / Context governance for DSH 1.5: folds tool results, keeps the prompt cache warm, takes over the writable-request path. DSH 1.5 only; newer releases will follow."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Tool results are reclaimed before they enter history, so the prompt cache never goes cold."
   },
   "schemaVersion": 1,
   "scripts": {

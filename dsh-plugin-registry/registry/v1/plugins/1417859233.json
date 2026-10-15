@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "7afc334edafacac63a14464f382507c6f06d45c5"
   },
   "github": {
@@ -49,27 +49,38 @@
   },
   "id": "gh:1417859233",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-usage-tab",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:CNyaotian-Lunar/dsh-usage-tab#7afc334edafacac63a14464f382507c6f06d45c5",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.mjs",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-usage-tab",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3d1457be422198577c7517c98dd4e57e43a67f5a21874fac1e05c824dc9e463f/CNyaotian-Lunar/dsh-usage-tab",
     "description": "DSH（DeepSeek Harness）Web 插件：会话页的「时间统计」tab —— 会话时长 / 活跃与空闲 / 每轮甘特 / 每小时分布 / 日历环比 / 会话清单 / 工作区趋势 / K 线 / 导出报告；宿主半提供 usageDaily 会话投影。纯本地计算、零网络请求。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH Web 会话页签加一个 「时间统计」 tab（排在 dsh-context 的「上下文」右边）， 把本会话的时间面貌画出来：挂钟跨度、活跃/空闲、每轮甘特、每小时分布、最慢的几轮。"
   },
   "schemaVersion": 1,
   "scripts": {

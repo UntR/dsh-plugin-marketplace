@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "6731ae64fdd0245af315d08d609c79995cf6dcbe"
   },
   "github": {
@@ -46,11 +46,11 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:Sharl210/dsh-strip-sandbox-permissions#091d62c3dca0fcaa0cc7f26e6e470e19ef355f35",
-    "version": "0.1.0"
+    "spec": "github:Sharl210/dsh-strip-sandbox-permissions#6731ae64fdd0245af315d08d609c79995cf6dcbe",
+    "version": "0.4.0"
   },
   "npm": {
-    "latestVersion": "0.1.0",
+    "latestVersion": "0.4.0",
     "published": true,
     "repositoryMatches": false
   },
@@ -64,15 +64,15 @@
     "name": "dsh-strip-sandbox-permissions",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.4.0"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1a13de8122c7be349ec0076c4164a01428cadc59eacc7fd1bda9bcf741b492be/Sharl210/dsh-strip-sandbox-permissions",
-    "description": "Strip sandbox_permissions/justification from model tool-call arguments to avoid false sandbox escalation errors"
+    "description": "Strip placeholder tool-call arguments that DSH rejects: sandbox_permissions/justification (false sandbox escalation) and empty reasoning_effort (rejected subagent delegation)."
   },
   "readme": {
     "available": true,
-    "excerpt": "A zero-dependency DeepSeek Harness (DSH) plugin that ignores sandboxpermissions / justification fields carried in model tool-call arguments, preventing false sandbox escalation rejections."
+    "excerpt": "A zero-dependency DeepSeek Harness (DSH) plugin that removes placeholder arguments some models attach to tool calls — arguments that DSH then rejects even though the call would have worked fine without them."
   },
   "schemaVersion": 1,
   "scripts": {

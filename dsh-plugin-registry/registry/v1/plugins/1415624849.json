@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "4f506dd9df8e71af57a6c987043c5baf8df71c0c"
   },
   "github": {
@@ -40,27 +40,39 @@
   },
   "id": "gh:1415624849",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-contrib/dsh-mcp-manager",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:shiliu153/dsh-mcp-manager#4f506dd9df8e71af57a6c987043c5baf8df71c0c",
+    "version": "0.5.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "@dsh-contrib/dsh-mcp-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d7f19ef57c6ba3ba9a251eced8d85d66974f3cde162f202d9242b02459a1fc35/shiliu153/dsh-mcp-manager",
     "description": "DeepSeek Harness bundle: manage MCP servers — list, probe, add from pasted project references, toggle, remove, rotate credentials. Official dsh-mcp-client contract compliant."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "对登记在 DSH patch 文件中的 MCP 服务器条目提供搜索、查看、探测、安装、编辑、启停、删除与凭据轮换。条目格式遵循官方 @deepseek-ai/dsh-mcp-client 的配置契约，全部写入经过同一条带守卫的管线。"
   },
   "schemaVersion": 1,
   "scripts": {

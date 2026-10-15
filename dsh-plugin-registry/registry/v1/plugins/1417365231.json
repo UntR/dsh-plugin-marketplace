@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "8a5d0181513fc255102a67f269f93dec446a98f7"
   },
   "github": {
@@ -45,27 +45,36 @@
   },
   "id": "gh:1417365231",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-gowin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lishuo4096/dsh-gowin#8a5d0181513fc255102a67f269f93dec446a98f7",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js"
+    },
+    "main": "index.js",
+    "name": "@local/dsh-gowin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ac767e82614f6b025e969b331f6d25ae73ea1e275d724f0024a8f2fdcd676c49/lishuo4096/dsh-gowin",
     "description": "DSH plugin for the Gowin 1.9 FPGA toolchain: 15 tools for environment probe, .gprj/.cst project and board-pinout audit, gw_sh batch build, pnr report parsing, programmer_cli flashing and GAO on-line logic analyzer capture."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把高云 Gowin 1.9 工具链（gwsh.exe / programmercli.exe / gaoanalyzer.exe）接进 DSH： 15 个工具 + 1 个技能（skill），让 DSH 会话里能直接探测环境、建模、静态校验、编译、烧录、在线调试、读报告， 并把它在真实闭环里踩到的坑写成机器可查的清单。"
   },
   "schemaVersion": 1,
   "scripts": {

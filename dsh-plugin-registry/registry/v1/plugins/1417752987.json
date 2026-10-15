@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
-    "headSha": "0ea78bac39f71483204c4dce31daba8000f8d15b"
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
+    "headSha": "4e7151069b67bffc57c56224ad35db4e82148c9a"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh中的类vscode源代码管理页面",
     "fork": false,
     "forks": 0,
-    "headSha": "0ea78bac39f71483204c4dce31daba8000f8d15b",
+    "headSha": "4e7151069b67bffc57c56224ad35db4e82148c9a",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,53 +25,71 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOVIExmw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7eafec51b9e0dcff68802bff853baf781d9a5b8e0ad2a715440a4fd8dcbaa85f/xzy-nine/dsh-source-control",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/1f28e671b0103db1455f2deacf7a018efbe29c3d34b27d9406f3ce294e78427d/xzy-nine/dsh-source-control",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/106339181?u=4d24ae15ef66899bc3e7fdcea37e2c5ea33111a8&v=4",
       "login": "xzy-nine"
     },
-    "pushedAt": "2026-10-14T09:10:25Z",
+    "pushedAt": "2026-10-15T08:53:39Z",
     "slug": "xzy-nine/dsh-source-control",
     "stars": 0,
     "topics": [
       "deepseek",
       "deepseek-harness",
       "dsh",
+      "dsh-better-sidebar",
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-10-14T04:10:33Z",
+    "updatedAt": "2026-10-15T01:14:38Z",
     "url": "https://github.com/xzy-nine/dsh-source-control"
   },
   "id": "gh:1417752987",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-source-control",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-source-control@0.3.0",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/src/index.js",
+        "types": "./lib/src/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/src/index.js",
+    "name": "dsh-source-control",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7eafec51b9e0dcff68802bff853baf781d9a5b8e0ad2a715440a4fd8dcbaa85f/xzy-nine/dsh-source-control",
+    "coverUrl": "https://opengraph.githubassets.com/1f28e671b0103db1455f2deacf7a018efbe29c3d34b27d9406f3ce294e78427d/xzy-nine/dsh-source-control",
     "description": "dsh中的类vscode源代码管理页面"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：在 DSH Web GUI 内置右侧 Sidebar 中以「源代码管理」页显示当前会话工作区的仓库、提交图、变更列表与 提交框。界面控件取自 DSH 内置组件，因此外观与 Harness 本身一致。 仓库自动绑定当前会话工作区，无需手动选择。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

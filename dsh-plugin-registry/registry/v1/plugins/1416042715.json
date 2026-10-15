@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "cfa19716dfddd595b8d72b8feccb9162b3174cf9"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1416042715",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-chat-eraser",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:giriimuls/dsh-chat-eraser#cfa19716dfddd595b8d72b8feccb9162b3174cf9",
+    "version": "0.1.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-chat-eraser",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c58ebdbb1e604ee79518ca6b74354cd7a8b747bc6e8fee286a9b0fee60fe8b16/giriimuls/dsh-chat-eraser",
     "description": "Allows for a deletion of chats under workspace. Also lets you edit the prompts that are already inputted."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Delete a whole chat session from the sidebar's ... menu, and delete a single turn from the transcript's turn tail. A DeepSeek Harness (dsh) plugin: the host half performs the durable removal, the browser half owns both affordances."
   },
   "schemaVersion": 1,
   "scripts": {

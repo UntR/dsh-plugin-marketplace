@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./plugin/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
-    "headSha": "d3fc30f4a6973c09303d7e3221e6ae1b11426fdc"
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
+    "headSha": "5126959485996dbe50f86fd9a4067172b0d0faa6"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "在 DeepSeek Harness (dsh) 里打开完整的 CPAMC 管理界面 · Open the full CPAMC console inside dsh",
     "fork": false,
     "forks": 0,
-    "headSha": "d3fc30f4a6973c09303d7e3221e6ae1b11426fdc",
+    "headSha": "5126959485996dbe50f86fd9a4067172b0d0faa6",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVF5EXQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e7025783babda75cbc20323a1596eb4eff8eaeb2d48197f7cec09b87bb49baed/AIcivilization/dsh-cpamc",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/fefa503f3b3639637e528cf0943d8480789452d790b6fe1c9fed6007cfa24c41/AIcivilization/dsh-cpamc",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/268566591?u=7d2b14a9917b36a1e1b6ff9532c169f9c6adf2c9&v=4",
       "login": "AIcivilization"
     },
-    "pushedAt": "2026-10-14T00:34:00Z",
+    "pushedAt": "2026-10-14T10:50:22Z",
     "slug": "AIcivilization/dsh-cpamc",
     "stars": 0,
     "topics": [
@@ -39,38 +39,43 @@
       "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-14T00:34:04Z",
+    "updatedAt": "2026-10-14T10:50:26Z",
     "url": "https://github.com/AIcivilization/dsh-cpamc"
   },
   "id": "gh:1415464029",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-cpamc",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-cpamc@0.1.3",
+    "version": "0.1.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.3",
+    "published": true,
+    "repositoryMatches": true
   },
   "package": {
-    "main": "index.js",
+    "exports": {
+      ".": "./plugin/index.js",
+      "./client": "./plugin/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
     "name": "dsh-cpamc",
     "status": "valid",
     "type": "module",
-    "version": "0.0.2"
+    "version": "0.1.3"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e7025783babda75cbc20323a1596eb4eff8eaeb2d48197f7cec09b87bb49baed/AIcivilization/dsh-cpamc",
+    "coverUrl": "https://opengraph.githubassets.com/fefa503f3b3639637e528cf0943d8480789452d790b6fe1c9fed6007cfa24c41/AIcivilization/dsh-cpamc",
     "description": "在 DeepSeek Harness (dsh) 里打开完整的 CPAMC 管理界面 · Open the full CPAMC console inside dsh"
   },
   "readme": {
     "available": true,
-    "excerpt": "在 DeepSeek Harness（dsh）里打开完整的 CPAMC 管理界面。"
+    "excerpt": "为 DeepSeek Harness（DSH）提供模型：装一个插件，就能在 DSH 里使用和管理多个模型来源。"
   },
   "schemaVersion": 1,
   "scripts": {

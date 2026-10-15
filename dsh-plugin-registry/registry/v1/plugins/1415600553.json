@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "c7dc5f0a5d48e2c804423785193774394a88204d"
   },
   "github": {
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-backdoor-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e5481d33faf1db0835d5a59c0894f83b7ec21ea431f84aece2b9d3e15492f64d/miketako3/dsh-backdoor-guard",
-    "description": ""
+    "description": "A DeepSeek Harness (dsh) plugin that stops trained-in backdoor payloads — model weights (e.g. a malicious QLoRa merge) that fire a specific tool call or credential exfiltration when a hidden trigger appears — before the tool executes."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (dsh) plugin that stops trained-in backdoor payloads — model weights (e.g. a malicious QLoRa merge) that fire a specific tool call or credential exfiltration when a hidden trigger appears — before the tool executes."
   },
   "schemaVersion": 1,
   "scripts": {

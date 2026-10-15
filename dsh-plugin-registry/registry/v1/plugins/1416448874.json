@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "7df0106a1ec448160a7a74f79fe04c836aeaf1c6"
   },
   "github": {
@@ -41,27 +41,43 @@
   },
   "id": "gh:1416448874",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-skill-toggles",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xiake-1/dsh-skill-toggles#7df0106a1ec448160a7a74f79fe04c836aeaf1c6",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-skill-toggles",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3a339105bc66b6fdecd72c8f29124e5347a6fdc7986ee5b8e177bd0286ffa0fb/xiake-1/dsh-skill-toggles",
     "description": "DSH plugin: enable/disable skills by group (skill toggles manager)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 技能开关插件：黑名单语义 + 分组——所有技能默认可用，只有被\"启用中的分组\"显式禁用的才被过滤（生效黑名单 = 启用分组黑名单的并集）。全新安装、状态文件缺失或损坏都等于\"全部启用\"，永不出现\"装上即全消失\"。"
   },
   "schemaVersion": 1,
   "scripts": {

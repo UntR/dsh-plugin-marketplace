@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "15f749966ba18ec92db7d68e50ad3fd26faa0bac"
   },
   "github": {
@@ -48,27 +48,39 @@
   },
   "id": "gh:1417350290",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-cleaner",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:fzy0517/deepseek-harness-session-cleaner#15f749966ba18ec92db7d68e50ad3fd26faa0bac",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-cleaner",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b2601c4ad50c4a45b6d564f67614865261e0c50644a1cfc1a43806a9fafc4593/fzy0517/deepseek-harness-session-cleaner",
     "description": "DeepSeek Harness 插件：批量删除/归档对话记录，支持删除未分组的对话。A DeepSeek Harness plugin to batch delete & archive conversations, including ungrouped ones."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 增加一个「删除对话」侧栏面板的插件：可以勾选并删除任意对话记录——包括未分组的对话（默认工作区 / 无工作区的对话）。官方界面只能删除工作区、归档对话，不能删除对话本身，这个插件补上了这个缺口。"
   },
   "schemaVersion": 1,
   "scripts": {

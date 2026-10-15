@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "fd84079f98170d5066547c087c58c824b4e59d07"
   },
   "github": {
@@ -38,27 +38,37 @@
   },
   "id": "gh:1414323673",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-agent-recycle-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:AhYi8/dsh-agent-recycle-guard#fd84079f98170d5066547c087c58c824b4e59d07",
+    "version": "1.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.2.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/plugin.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/plugin.js",
+    "name": "dsh-agent-recycle-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9192ac17a63e49cefb70dfe27ec696b92c372142ac2c0ed29a67a86329ab11df/AhYi8/dsh-agent-recycle-guard",
     "description": "DSH 删除防护插件：拦截 Agent 的 rm/del/Remove-Item 等删除命令，强制转入 Windows 回收站，fail-closed 无永久删除退路，安装即用零配置。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Agent 直接提交的常见删除命令改为系统回收站操作；执行脚本前做有限的内容检查。优先支持 DSH，支持 Windows、Linux 与 macOS 的回收后端，不提供永久删除兜底。"
   },
   "schemaVersion": 1,
   "scripts": {

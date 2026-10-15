@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "9b5dfb77e739c6adf2e1da6b10e67ffaaf493e83"
   },
   "github": {
@@ -14,7 +14,7 @@
     "createdAt": "2026-10-14T07:04:25Z",
     "databaseId": 1418510473,
     "defaultBranch": "main",
-    "description": "DeepSeek Harness 视频阅读插件（TypeScript）：HTTP Range 按需取字节 + ffmpeg 远程 seek，给定时间戳只拉目标区间，实测取一帧仅占整片 0.7%，不落盘任何视频文件",
+    "description": "DeepSeek Harness 视频阅读插件（TypeScript，骨架阶段）：让模型按时间戳取帧/取音频而不下载整片 —— HTTP Range + ffmpeg 远程 seek 已在 spike 验证，取一帧仅占整片 0.7%；目前只有 video_probe 落地成工具。",
     "fork": false,
     "forks": 0,
     "headSha": "9b5dfb77e739c6adf2e1da6b10e67ffaaf493e83",
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVIzAiQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f88f9bb805fa6800ea713a87fe1a7a2c2c2e2654b856200f794e89ba5376968d/RaganaBloodedge/dsh-read-video",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/274e26fd99ae7cb354aedf483906290795943db6143d8d34c88b23bec784af41/RaganaBloodedge/dsh-read-video",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/102952332?v=4",
       "login": "RaganaBloodedge"
@@ -43,38 +43,51 @@
       "typescript",
       "video"
     ],
-    "updatedAt": "2026-10-14T08:49:31Z",
+    "updatedAt": "2026-10-14T10:47:37Z",
     "url": "https://github.com/RaganaBloodedge/dsh-read-video"
   },
   "id": "gh:1418510473",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-readvideo",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-readvideo@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "dist/index.js",
+    "name": "dsh-readvideo",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f88f9bb805fa6800ea713a87fe1a7a2c2c2e2654b856200f794e89ba5376968d/RaganaBloodedge/dsh-read-video",
-    "description": "DeepSeek Harness 视频阅读插件（TypeScript）：HTTP Range 按需取字节 + ffmpeg 远程 seek，给定时间戳只拉目标区间，实测取一帧仅占整片 0.7%，不落盘任何视频文件"
+    "coverUrl": "https://opengraph.githubassets.com/274e26fd99ae7cb354aedf483906290795943db6143d8d34c88b23bec784af41/RaganaBloodedge/dsh-read-video",
+    "description": "DeepSeek Harness 视频阅读插件（TypeScript，骨架阶段）：让模型按时间戳取帧/取音频而不下载整片 —— HTTP Range + ffmpeg 远程 seek 已在 spike 验证，取一帧仅占整片 0.7%；目前只有 video_probe 落地成工具。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件：让模型\"看\"视频，但不把视频下载下来。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

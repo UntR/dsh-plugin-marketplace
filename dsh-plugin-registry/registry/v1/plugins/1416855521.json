@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "5a6521a78855e1c12b54dd5c4cfe3842b8406787"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js"
+    },
+    "main": null,
+    "name": "@local/dsh-daily-chat",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c0e27787764775add2e9d52d307599f779a827d0a4974b9477d088a4ad3a83ef/wangbofan/dsh-daily-chat",
     "description": "【蓝色大肥鱼版】DSH 日常聊天插件：把「新会话」拆成日常与工作，日常人格是「蓝色大肥鱼」（DeepSeek娘 / 鲸鱼娘），支持真删除单条与批量聊天记录"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "日常模式 = 只会聊天、有人格、能上网、能提问、能压缩上下文的轻量 agent。没有文件读写、没有 Shell、没有计划模式、没有子代理。工作模式 = DSH 原样，只多一行耗时。"
   },
   "schemaVersion": 1,
   "scripts": {

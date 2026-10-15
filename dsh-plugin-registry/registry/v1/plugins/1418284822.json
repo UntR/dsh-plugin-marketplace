@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "2f40105253e08e30dda1ae8ccae84ed5abd01a9c"
   },
   "github": {
@@ -42,27 +42,37 @@
   },
   "id": "gh:1418284822",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-export-plugin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:guyusky/dsh-export-plugin#2f40105253e08e30dda1ae8ccae84ed5abd01a9c",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-export-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a53b7a3f4c562fef5c4c124d23cae0da3e2695f534e6aa16c695e04e82a229c7/guyusky/dsh-export-plugin",
     "description": "DeepSeek Harness 会话导出插件：在 dsh Web 会话「更多」菜单注入「导出 Markdown / 导出 PDF」，纯前端注入、零 npm 依赖。Export DSH sessions to Markdown or PDF from the web GUI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 dsh 会话行\"更多\"菜单里,于\"归档会话\"下方注入两项:"
   },
   "schemaVersion": 1,
   "scripts": {

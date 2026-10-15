@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "6115fc891c344fe32468817a5c7df85c02f677a1"
   },
   "github": {
@@ -50,27 +50,44 @@
   },
   "id": "gh:1416589297",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tauri-notify-webhook",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:iuuuuuuuu/dsh-tauri-notify-webhook#6115fc891c344fe32468817a5c7df85c02f677a1",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": {
+        "default": "./dist/client.cjs"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-tauri-notify-webhook",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f1a65937389b7eb2fe601326fbc4c3c427d27f1372eb7f9a9757c128c37d068c/iuuuuuuuu/dsh-tauri-notify-webhook",
     "description": "DSH Tauri plugin: forward a task notification to email (SMTP) or pushplus when a task stops abnormally or completes, and only while the window is not in front of you."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English · 简体中文"
   },
   "schemaVersion": 1,
   "scripts": {

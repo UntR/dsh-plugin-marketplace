@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "50a65618d9b6e2460d4ff7cdda342285f092f29a"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1413968514",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-chat-file-actions",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:nico-zhuang/dsh-chat-file-actions#50a65618d9b6e2460d4ff7cdda342285f092f29a",
+    "version": "0.4.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-chat-file-actions",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e435f6fe71dc8b711c0e62baaf5b238723d34c24bec04c8f70f7f91d41c6ed32/nico-zhuang/dsh-chat-file-actions",
     "description": "Compact file actions for DeepSeek Harness chat turns | DSH 对话文件操作"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness 插件：在已完成的回复下按需显示「本轮资源」，集中操作本轮明确引用的本地文件、网页链接和已编辑文件。不覆盖右键菜单，也不修改 DSH 本体。"
   },
   "schemaVersion": 1,
   "scripts": {

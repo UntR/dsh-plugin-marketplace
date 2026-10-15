@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
-    "headSha": "81fa37448de5c213851fac6a29ef75ba6e67c299"
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
+    "headSha": "a71101a6621b095d87433c3ceec4c89499e24551"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-14T08:58:50Z",
     "databaseId": 1418634012,
     "defaultBranch": "main",
-    "description": "DSH (DeepSeek Harness) 原生插件：基于 CMU StarScout 启发式指标审计 GitHub 假星/水军/空壳仓库，并静态预检供应链投毒与敏感权限 | Standalone installable mirror of @suxeca/dsh-plugin-repo-auditor",
+    "description": "DSH native plugin: audit GitHub repos for fake stars, stargazer bot farms and hollow codebases using CMU StarScout heuristics, plus static supply-chain and sensitive-permission inspection.",
     "fork": false,
     "forks": 0,
-    "headSha": "81fa37448de5c213851fac6a29ef75ba6e67c299",
+    "headSha": "a71101a6621b095d87433c3ceec4c89499e24551",
     "homepageUrl": null,
     "language": null,
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVI6jHA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d647cba5f76aae14bfb276f5aeb66ae566d47a7d85b58ff84f0f06ec420a30ee/Suxeca/dsh-plugin-repo-auditor",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/9fad340d12006c1f97fdbaf7d0c961c979a9ba644ac83fdfe5274c54bbeb59ba/Suxeca/dsh-plugin-repo-auditor",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/127194151?u=ef24531962477a5ce9f35d5c7ec18d7686581e52&v=4",
       "login": "Suxeca"
     },
-    "pushedAt": "2026-10-14T09:17:20Z",
+    "pushedAt": "2026-10-14T09:45:44Z",
     "slug": "Suxeca/dsh-plugin-repo-auditor",
     "stars": 0,
     "topics": [
@@ -43,32 +43,38 @@
       "repo-auditor",
       "supply-chain-security"
     ],
-    "updatedAt": "2026-10-14T09:17:24Z",
+    "updatedAt": "2026-10-14T09:45:48Z",
     "url": "https://github.com/Suxeca/dsh-plugin-repo-auditor"
   },
   "id": "gh:1418634012",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@suxeca/dsh-plugin-repo-auditor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Suxeca/dsh-plugin-repo-auditor#a71101a6621b095d87433c3ceec4c89499e24551",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": "./lib/index.js",
+    "name": "@suxeca/dsh-plugin-repo-auditor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d647cba5f76aae14bfb276f5aeb66ae566d47a7d85b58ff84f0f06ec420a30ee/Suxeca/dsh-plugin-repo-auditor",
-    "description": "DSH (DeepSeek Harness) 原生插件：基于 CMU StarScout 启发式指标审计 GitHub 假星/水军/空壳仓库，并静态预检供应链投毒与敏感权限 | Standalone installable mirror of @suxeca/dsh-plugin-repo-auditor"
+    "coverUrl": "https://opengraph.githubassets.com/9fad340d12006c1f97fdbaf7d0c961c979a9ba644ac83fdfe5274c54bbeb59ba/Suxeca/dsh-plugin-repo-auditor",
+    "description": "DSH native plugin: audit GitHub repos for fake stars, stargazer bot farms and hollow codebases using CMU StarScout heuristics, plus static supply-chain and sensitive-permission inspection."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "本仓库只发布可安装产物（lib/、cordis.patch.yml、locale/、package.json），不含 src/ 与 tests/：审计器要检测的那些标记（安装钩子名、宿主进程 API、越狱口令等）在本仓库的产物中一律由运行时拼装生成（源仓库 src/tokens.ts），所以任何静态扫描都不会在本仓库里读到它自己的检测表 —— 否则它会扫到自己、把自己判成 CRITICAL（F 级），并让安装门禁对使用者误报。源码与唯一事实来源仍在源仓库。"
   },
   "schemaVersion": 1,
   "scripts": {

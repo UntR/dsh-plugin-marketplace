@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-14T09:27:16.481Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-15T09:01:10.328Z",
+    "enrichmentStatus": "ok",
     "headSha": "fe646bc931b3853815a760d7eb6943d96e6cad8f"
   },
   "github": {
@@ -47,27 +47,33 @@
   },
   "id": "gh:1417227361",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-peak-runner",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:439436269-ctrl/dsh-peak-runner#fe646bc931b3853815a760d7eb6943d96e6cad8f",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "main": "lib/index.js",
+    "name": "dsh-peak-runner",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bc8c6e8d58ed7b8609f7da75edc2363657897e11f3e0c95d283a3886daebbcfa/439436269-ctrl/dsh-peak-runner",
     "description": "DeepSeek 峰谷价感知的任务执行器：平价时段跑 flash 任务批，峰价前挂定时任务推迟到下一个平价时段执行。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek 峰谷价感知的任务执行器：平价时段直接跑 deepseek-flash 的任务批；峰价快到时把任务攒进队列、挂一条定时器，到下一个平价时段自动执行完。"
   },
   "schemaVersion": 1,
   "scripts": {
