@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-15T09:01:10.328Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-16T08:53:30.528Z",
+    "enrichmentStatus": "ok",
     "headSha": "ae0ef93b8d830b603090a4ced16de598f32c0de6"
   },
   "github": {
@@ -61,13 +61,16 @@
       ".": {
         "default": "./src/backup.js"
       },
+      "./archive": {
+        "default": "./src/archive.js"
+      },
       "./package.json": "./package.json"
     },
     "main": "src/backup.js",
     "name": "dsh-session-backup",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4cd346a2f7adbcd7668a363ffcc2887ad27181e022513efba05d89efd29db7d6/imtokenxinluo/dsh-session-backup",
@@ -75,7 +78,7 @@
   },
   "readme": {
     "available": true,
-    "excerpt": "DeepSeek Harness 会话历史冷备份工具：全量 + 增量备份（带 sha256 manifest 与 loader-mirror 预校验），以及校验恢复。零运行时依赖。"
+    "excerpt": "DeepSeek Harness 会话历史工具：冷备份（全量 + 增量，sha256 manifest + loader-mirror 预校验）与归档（把旧会话移出活跃库、按需还原）。零运行时依赖。"
   },
   "schemaVersion": 1,
   "scripts": {

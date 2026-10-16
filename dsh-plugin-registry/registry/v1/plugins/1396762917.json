@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-15T09:01:10.328Z",
-    "enrichmentStatus": "stale",
-    "headSha": "405c7204d01fd46c828588033356834343d986c1"
+    "enrichedAt": "2026-10-16T08:53:30.528Z",
+    "enrichmentStatus": "ok",
+    "headSha": "50b115439de6bacaff9ababf0f98e379c218defa"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH bundle: native MSYS2 (UCRT64) bash for the DSH shell seam — fork of @deepseek-ai/dsh-bash-local with configurable bash path",
     "fork": false,
     "forks": 0,
-    "headSha": "405c7204d01fd46c828588033356834343d986c1",
+    "headSha": "50b115439de6bacaff9ababf0f98e379c218defa",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU0DpJQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/88d44d6f0c4cd3bc70165b8f228b57edeb76502f7c1caa5ad9c625537d8873a3/ch1bug/dsh-shell-host",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/1a9b43a1a9e3e95b4597378d5c07647b9ed098423de8cc470693e8f5dc3c1319/ch1bug/dsh-shell-host",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/86644859?u=a135c301dcad122070bee0455c22a276b0d3c2f5&v=4",
       "login": "ch1bug"
     },
-    "pushedAt": "2026-10-13T07:30:30Z",
+    "pushedAt": "2026-10-16T08:29:51Z",
     "slug": "ch1bug/dsh-shell-host",
     "stars": 0,
     "topics": [
@@ -41,7 +41,7 @@
       "windows",
       "wsl"
     ],
-    "updatedAt": "2026-10-13T07:30:34Z",
+    "updatedAt": "2026-10-16T08:29:55Z",
     "url": "https://github.com/ch1bug/dsh-shell-host"
   },
   "id": "gh:1396762917",
@@ -62,28 +62,13 @@
   "package": {
     "exports": {
       ".": {
-        "default": "./lib/index.js",
-        "types": "./lib/types/index.d.ts"
-      },
-      "./client": {
-        "default": "./lib/client.js"
-      },
-      "./package.json": "./package.json",
-      "./permission-presets": {
-        "default": "./lib/permission-presets.js",
-        "types": "./lib/types/permission-presets.d.ts"
-      },
-      "./pty": {
         "default": "./lib/pty/index.js",
         "types": "./lib/types/pty/index.d.ts"
       },
-      "./pwsh": {
-        "default": "./lib/pwsh.js",
-        "types": "./lib/types/pwsh.d.ts"
-      },
-      "./remote": {
-        "default": "./lib/remote/index.js",
-        "types": "./lib/types/remote/index.d.ts"
+      "./package.json": "./package.json",
+      "./pty": {
+        "default": "./lib/pty/index.js",
+        "types": "./lib/types/pty/index.d.ts"
       },
       "./src/*": "./src/*",
       "./terminal": {
@@ -95,19 +80,19 @@
         "types": "./lib/types/wsl-plugin/index.d.ts"
       }
     },
-    "main": "lib/index.js",
+    "main": "lib/pty/index.js",
     "name": "dsh-shell-host",
     "status": "valid",
     "type": "module",
     "version": "0.2.0-rc.2-r1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/88d44d6f0c4cd3bc70165b8f228b57edeb76502f7c1caa5ad9c625537d8873a3/ch1bug/dsh-shell-host",
+    "coverUrl": "https://opengraph.githubassets.com/1a9b43a1a9e3e95b4597378d5c07647b9ed098423de8cc470693e8f5dc3c1319/ch1bug/dsh-shell-host",
     "description": "DSH bundle: native MSYS2 (UCRT64) bash for the DSH shell seam — fork of @deepseek-ai/dsh-bash-local with configurable bash path"
   },
   "readme": {
     "available": true,
-    "excerpt": "DSH bundle: an independent shell executor for the DSH shell seam on Windows — VS Code terminal-profile modeled, routed backends selectable per config (msys2 default, plain, pwsh, wsl, ssh), coexisting with the platform shell executors, plus a Plugins-page settings card. MSYS2 is "
+    "excerpt": "DSH bundle: a tools-only plugin (ADR-0012/0013) — persistent PTY sessions (./pty), launcher-preset terminals (shellopen, ./terminal), and WSL bridge tools (./wsl). No shell executor, no ctx.shell provider, no upstream loader-row takeover: every row in cordis.patch.yml is an own-i"
   },
   "schemaVersion": 1,
   "scripts": {
