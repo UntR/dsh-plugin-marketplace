@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-16T08:53:30.528Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-17T08:20:37.705Z",
+    "enrichmentStatus": "ok",
     "headSha": "c8e0ff89ba5be547959d8045956c4a6bf9b00367"
   },
   "github": {
@@ -42,33 +42,48 @@
   },
   "id": "gh:1404268996",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-thinking-effort",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:buguoshixc/dsh-thinking-effort#c8e0ff89ba5be547959d8045956c4a6bf9b00367",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-thinking-effort",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/525aa54c4b1e6471558c5d209b094b8ee5fbf1e66dfe5fff3eefcbb9e9e6d265/buguoshixc/dsh-thinking-effort",
     "description": "Adjustable thinking intensity (reasoning effort) for third-party API-key providers in DeepSeek Harness (dsh). Declares 推理等级 for custom OpenAI-compatible routes so the composer picker works again."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Bring back the thinking-intensity picker (推理等级 / reasoning effort) for third-party API keys in DeepSeek Harness."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

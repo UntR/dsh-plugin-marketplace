@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-16T08:53:30.528Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-17T08:20:37.705Z",
+    "enrichmentStatus": "ok",
     "headSha": "ff89afb0044243999da1256928541d067623820b"
   },
   "github": {
@@ -42,27 +42,39 @@
   },
   "id": "gh:1412615582",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-daily",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dingchenhui0618-arch/dsh-daily#ff89afb0044243999da1256928541d067623820b",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-daily",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a0c5240aa0be68923221eec62c0efa1df1e65593b4f02437b64737aeebe17db2/dingchenhui0618-arch/dsh-daily",
     "description": "Daily plugin brief for DeepSeek Harness: ranks the ecosystem against your own profile, proposes evidence-backed ideas, and hands an approved one to an agent to build and publish."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "每天 11:00，把 DSH 插件生态筛一遍，产出两样东西：在别人已发布的作品上往前走一步的具体改法，以及生态里还没有的新方向；你点一下，agent 就独立实现一个版本，发到你自己的仓库。"
   },
   "schemaVersion": 1,
   "scripts": {

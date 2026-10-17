@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-16T08:53:30.528Z",
-    "enrichmentStatus": "stale",
-    "headSha": "395442586c9590daa9b52a943ef5d97b77cbafe1"
+    "enrichedAt": "2026-10-17T08:20:37.705Z",
+    "enrichmentStatus": "ok",
+    "headSha": "16245f486eb1719481a6ed9892d8e412f9528f9f"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-11T15:03:51Z",
     "databaseId": 1414460208,
     "defaultBranch": "main",
-    "description": "Fix for huge, slow-loading, OOM-ing DSH sessions: deletes the dead streaming fragments out of session logs on disk, so the next load is smaller. DeepSeek Harness plugin.",
+    "description": "DSH 会话太大、加载越来越慢、最后 OOM 打不开？启动时清掉会话日志里没人读的流式碎片：实测 272 MB -> 12 MB，843 万对象 -> 不再撞内存上限，58 -> 238 tok/s。DeepSeek Harness plugin that deletes dead streaming fragments so the next load is smaller.",
     "fork": false,
     "forks": 0,
-    "headSha": "395442586c9590daa9b52a943ef5d97b77cbafe1",
+    "headSha": "16245f486eb1719481a6ed9892d8e412f9528f9f",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVE7zMA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d662d178b088e3cabbbecd0aee9aad01d028205879e8622b12552a1e5c88ef06/mili1360/dsh-session-vacuum",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ec44b2d551f598ed350ff8578182dd85b49ff08c7603535f200632bceb79ac03/mili1360/dsh-session-vacuum",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/340923113?u=0f933571028b477ed1e3e37c8a0c470f09e05338&v=4",
       "login": "mili1360"
     },
-    "pushedAt": "2026-10-15T14:16:33Z",
+    "pushedAt": "2026-10-17T06:01:12Z",
     "slug": "mili1360/dsh-session-vacuum",
     "stars": 1,
     "topics": [
@@ -40,13 +40,16 @@
       "long-session",
       "memory-optimization",
       "oom",
+      "out-of-memory",
+      "performance",
       "prune",
       "session-cleanup",
       "session-log",
+      "slow",
       "streaming-fragments",
       "vacuum"
     ],
-    "updatedAt": "2026-10-15T15:01:33Z",
+    "updatedAt": "2026-10-17T06:01:15Z",
     "url": "https://github.com/mili1360/dsh-session-vacuum"
   },
   "id": "gh:1414460208",
@@ -56,8 +59,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:mili1360/dsh-session-vacuum#1e351335026c519c7656b3f96a95285758e95af4",
-    "version": "0.1.0"
+    "spec": "github:mili1360/dsh-session-vacuum#16245f486eb1719481a6ed9892d8e412f9528f9f",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
@@ -74,15 +77,15 @@
     "name": "dsh-session-vacuum",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.2.2"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d662d178b088e3cabbbecd0aee9aad01d028205879e8622b12552a1e5c88ef06/mili1360/dsh-session-vacuum",
-    "description": "DSH plugin: prunes the dead streaming fragments out of session logs at startup, so a long session stops expanding into gigabytes when it is loaded. Inert and dry-run by default."
+    "coverUrl": "https://opengraph.githubassets.com/ec44b2d551f598ed350ff8578182dd85b49ff08c7603535f200632bceb79ac03/mili1360/dsh-session-vacuum",
+    "description": "DSH 会话太大、加载越来越慢、最后 OOM 打不开？启动时清掉会话日志里没人读的流式碎片：实测 272 MB -> 12 MB，843 万对象 -> 不再撞内存上限，58 -> 238 tok/s。DeepSeek Harness plugin that deletes dead streaming fragments so the next load is smaller."
   },
   "readme": {
     "available": true,
-    "excerpt": "Long DSH sessions get slower and heavier the longer they run. Every load expands the log into millions of objects, and eventually it OOMs."
+    "excerpt": "Is your DSH session getting slower every turn, slower to load, and eventually unopenable — or does it just OOM?"
   },
   "schemaVersion": 1,
   "scripts": {

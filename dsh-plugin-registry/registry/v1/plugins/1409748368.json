@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-16T08:53:30.528Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-17T08:20:37.705Z",
+    "enrichmentStatus": "ok",
     "headSha": "11d8a2084fc5e3c8a93d8a985733c75748c8f17f"
   },
   "github": {
@@ -48,27 +48,39 @@
   },
   "id": "gh:1409748368",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-webdav-sync",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:alfredhuang211/dsh-webdav-sync#11d8a2084fc5e3c8a93d8a985733c75748c8f17f",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/bundle.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-webdav-sync",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e76ee6f414aa85a1bf250799ff4d07efd989dcf202c5338eb044ae675b576046/alfredhuang211/dsh-webdav-sync",
     "description": "DeepSeek Harness 插件：把会话日志与插件环境备份到任意 WebDAV 服务，并可从 WebDAV 恢复（会话+环境双源同步、rev/generation 版本机制、三方比较与冲突策略）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DSH 的会话日志和插件环境同步到任意 WebDAV 服务，带版本号 / 时间 / 设备溯源，可增量备份与恢复。零运行时依赖（Node 内置 zstd + fetch），host + 客户端两半齐全，Desktop 与 CLI 都能用。"
   },
   "schemaVersion": 1,
   "scripts": {

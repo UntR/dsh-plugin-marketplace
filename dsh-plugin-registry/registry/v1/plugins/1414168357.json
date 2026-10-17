@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-16T08:53:30.528Z",
-    "enrichmentStatus": "stale",
-    "headSha": "6f4deec55c21e63a3220fd5c44ba171a3e2804d7"
+    "enrichedAt": "2026-10-17T08:20:37.705Z",
+    "enrichmentStatus": "ok",
+    "headSha": "07309c88eb78749a21389c7b7f68e33c26f29a01"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-11T09:30:17Z",
     "databaseId": 1414168357,
     "defaultBranch": "main",
-    "description": "DSH plugin: folds the oldest part of a session history into one message backed by a lossless local archive, so a long session sends fewer tokens. No model-written summary; everything recoverable.",
+    "description": "DSH 会话越长越慢、每轮越贵？把最老的历史折叠成一条带索引的消息，全文归档到本地、随时能沿路径找回来，不调用模型写摘要。DeepSeek Harness plugin: folds the oldest history span into one indexed message backed by a lossless local archive.",
     "fork": false,
     "forks": 0,
-    "headSha": "6f4deec55c21e63a3220fd5c44ba171a3e2804d7",
+    "headSha": "07309c88eb78749a21389c7b7f68e33c26f29a01",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,16 +25,17 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVEp_JQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/ff5da19dc6e9e2fbd85b01c3d341de4f94af9624783443b5dd276d94887deedd/mili1360/dsh-history-fold",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/769a4b91b6869825fbc6f35cd5e5cffd73ac9094a84557a7f78d94f81cb030df/mili1360/dsh-history-fold",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/340923113?u=0f933571028b477ed1e3e37c8a0c470f09e05338&v=4",
       "login": "mili1360"
     },
-    "pushedAt": "2026-10-15T13:54:52Z",
+    "pushedAt": "2026-10-16T14:30:43Z",
     "slug": "mili1360/dsh-history-fold",
     "stars": 1,
     "topics": [
       "context-compaction",
+      "cost",
       "deepseek-harness",
       "dsh",
       "dsh-plugin",
@@ -42,9 +43,11 @@
       "history-fold",
       "lossless-archive",
       "non-summary",
-      "recoverable"
+      "recoverable",
+      "slow",
+      "token-saving"
     ],
-    "updatedAt": "2026-10-15T15:01:34Z",
+    "updatedAt": "2026-10-17T04:15:08Z",
     "url": "https://github.com/mili1360/dsh-history-fold"
   },
   "id": "gh:1414168357",
@@ -54,8 +57,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:mili1360/dsh-history-fold#931b576212274eae1e8c183ccf574f5e372e5a87",
-    "version": "0.1.0"
+    "spec": "github:mili1360/dsh-history-fold#07309c88eb78749a21389c7b7f68e33c26f29a01",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
@@ -72,15 +75,15 @@
     "name": "dsh-history-fold",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.2.2"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/ff5da19dc6e9e2fbd85b01c3d341de4f94af9624783443b5dd276d94887deedd/mili1360/dsh-history-fold",
-    "description": "DSH plugin: folds the oldest part of a session history into one message backed by a lossless local archive. No model-written summary, everything recoverable."
+    "coverUrl": "https://opengraph.githubassets.com/769a4b91b6869825fbc6f35cd5e5cffd73ac9094a84557a7f78d94f81cb030df/mili1360/dsh-history-fold",
+    "description": "DSH 会话越长越慢、每轮越贵？把最老的历史折叠成一条带索引的消息，全文归档到本地、随时能沿路径找回来，不调用模型写摘要。DeepSeek Harness plugin: folds the oldest history span into one indexed message backed by a lossless local archive."
   },
   "readme": {
     "available": true,
-    "excerpt": "A DSH plugin that folds the oldest part of a session's visible history into a single message backed by a lossless local archive, so a long session stops paying for its entire history on every request."
+    "excerpt": "Is a long DSH session costing you more on every single turn — and getting slower while it does?"
   },
   "schemaVersion": 1,
   "scripts": {

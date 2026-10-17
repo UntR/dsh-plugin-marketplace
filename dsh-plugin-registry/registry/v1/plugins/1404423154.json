@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-16T08:53:30.528Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-17T08:20:37.705Z",
+    "enrichmentStatus": "ok",
     "headSha": "70ac0a7ce77225d10f59f31fdbfceb1106749a5e"
   },
   "github": {
@@ -42,27 +42,39 @@
   },
   "id": "gh:1404423154",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-selection-translate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:huanleyabo/dsh-selection-translate#70ac0a7ce77225d10f59f31fdbfceb1106749a5e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-selection-translate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f4a1ec8305cd328dca9471f0a20a690e3137ca3f07d8acd5fb9cd3fc9e2bf531/huanleyabo/dsh-selection-translate",
     "description": "dsh插件，用于直接对客户端内或网页内的文字划线翻译"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 客户端里选中任意文字，旁边就会浮出一个「译」按钮；点一下，模型就地翻译并在选区旁弹出结果，可一键复制。"
   },
   "schemaVersion": 1,
   "scripts": {

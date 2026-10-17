@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-16T08:53:30.528Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-17T08:20:37.705Z",
+    "enrichmentStatus": "ok",
     "headSha": "6717b0758c7ff8d7234bd7e138491584e8378252"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1412775602",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-second-opinion",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:alxy1018-ctrl/dsh-second-opinion#6717b0758c7ff8d7234bd7e138491584e8378252",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./adapters/exec": "./adapters/exec.mjs",
+      "./adapters/http": "./adapters/http.mjs"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-second-opinion",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/64b1fb953e7eea5f7d526d25fda9056b10cab25c5fd6a3a2c817e4cdd2844dc2/alxy1018-ctrl/dsh-second-opinion",
     "description": "先分析、再动手、最后交叉检查——给编码工作加一道第二意见，评审方可以换成你自己的（DeepSeek Harness 插件） · Analyze first, then implement, then cross-check: a second opinion for coding work, with a pluggable reviewer (DeepSeek Harness plugin)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给编码工作加一道第二意见：动手前先分析、把分析交给另一个脑子看一眼，代码写完和验证做完再各看一次， 多模块任务时两边分头写、互相查。"
   },
   "schemaVersion": 1,
   "scripts": {

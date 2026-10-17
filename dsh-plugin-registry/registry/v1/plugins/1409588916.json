@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-16T08:53:30.528Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-17T08:20:37.705Z",
+    "enrichmentStatus": "ok",
     "headSha": "60116819722ebcdefdef6d4c5251037cbe6a8041"
   },
   "github": {
@@ -47,27 +47,42 @@
   },
   "id": "gh:1409588916",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-codex-session",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:alfredhuang211/dsh-codex-session#60116819722ebcdefdef6d4c5251037cbe6a8041",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-codex-session",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e1f4d8ffcb9927414a781212d704749779bcffafacacb662a90a35e150133fdb/alfredhuang211/dsh-codex-session",
     "description": "DSH desktop plugin: choose a DSH-default or Codex session at new-session time. Codex sessions keep the DSH agent loop, tools, approval and UI, served by the locally authenticated Codex App Server."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 桌面端（desktop profile）插件：新建会话时可以选择「DSH 默认」或「Codex」会话。"
   },
   "schemaVersion": 1,
   "scripts": {
