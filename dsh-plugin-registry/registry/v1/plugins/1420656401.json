@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "55b58eb2646b7d95571956d83534f4c81ca4613f"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@dsh-ext/dsh-plugin-auxiliary-chat",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4ee3a2c4c478fc9747f19c571efa34d3682f397cca178d512987403e4960098c/Vincent-chk/dsh-plugin-auxiliary-chat",
     "description": "Sidebar auxiliary chat for DeepSeek Harness (DSH): right-column panel hosting temporary auxiliary sessions that one-way mirror the main session's context and are deleted when closed · DSH 侧边栏辅助会话插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "有些问题值得问模型，但不值得写进主对话的历史：这段代码为什么这么写、帮我把这版文案润色一下、这个报错到底什么意思……问完就过去了，不需要在主对话里留下痕迹。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "85d566ba856cf63d2ade3103fd8798e73d4d28a6"
   },
   "github": {
@@ -45,27 +45,42 @@
   },
   "id": "gh:1420431857",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-open-workspace-any-app",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:F1yBear/dsh-open-workspace-any-app#85d566ba856cf63d2ade3103fd8798e73d4d28a6",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-open-workspace-any-app",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/64a188626c19a6305638019b67a6bd47f7962ae656780a1219d88f1cda0a0373/F1yBear/dsh-open-workspace-any-app",
     "description": "dsh,支持自定义应用打开工作区"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 的会话头部加一个「用其它应用打开」按钮：把当前工作区目录交给任意应用 —— Zap、Qoder IDE、IntelliJ IDEA、Obsidian、HBuilderX，或任何你能写出启动方式的东西。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "f66e76573811c49040f3b3fcd6211b5261688975"
   },
   "github": {
@@ -55,8 +55,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:juanbaiing/dsh-alert-inject#de3bf21cf67490071dce5a64a503046ab90fee86",
-    "version": "0.3.0"
+    "spec": "github:juanbaiing/dsh-alert-inject#f66e76573811c49040f3b3fcd6211b5261688975",
+    "version": "0.5.0"
   },
   "npm": {
     "latestVersion": null,
@@ -66,17 +66,18 @@
   "package": {
     "exports": {
       ".": "./lib/index.js",
+      "./client": "./lib/client.js",
       "./package.json": "./package.json"
     },
     "main": "lib/index.js",
     "name": "dsh-alert-inject",
     "status": "valid",
     "type": "module",
-    "version": "0.3.0"
+    "version": "0.5.0"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9bdc79976eb79eca77554d748f16f65940cff4ba08355c298ceb603e0144dfcf/juanbaiing/dsh-alert-inject",
-    "description": "给 DSH agent 一个\"回答前会出声\"的机制：目标锚点、似曾相识检索、重复检测、引用核对、按语境分块的警报判据。零第三方依赖，核心不调 LLM。"
+    "description": "在 DSH agent 回答之前，把「你可能已经忘了」的东西重新摆到它眼前。零第三方依赖；判断全部由可核对的规则完成，不做生成式推理（语义那几段用本机 bge-m3 算向量）。"
   },
   "readme": {
     "available": true,

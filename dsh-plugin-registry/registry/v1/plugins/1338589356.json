@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
     "enrichmentStatus": "ok",
-    "headSha": "84ab38b68aaf07ea524d3b0d42fa1321222d3fa7"
+    "headSha": "6f073577bd527d59a35fb290923f4165b765b30e"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Multi-bash plugin for dsh. Add Git Bash / WSL Bash support for Windows.",
     "fork": false,
     "forks": 0,
-    "headSha": "84ab38b68aaf07ea524d3b0d42fa1321222d3fa7",
+    "headSha": "6f073577bd527d59a35fb290923f4165b765b30e",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT8lArA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/c5bb00defeb3c3160e585363d7519e76c516b29f79791fe5ad79219f6bfd3f54/Dinosaur-MC/dsh-win-multi-bash",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/97638d206c2594c172bc58adfc72645679044fcad9f2a29b03db00d988a87c94/Dinosaur-MC/dsh-win-multi-bash",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/52781148?u=e409c7e4b4cb3711766e56a9d91920edea840f96&v=4",
       "login": "Dinosaur-MC"
     },
-    "pushedAt": "2026-10-16T21:06:07Z",
+    "pushedAt": "2026-10-17T19:25:27Z",
     "slug": "Dinosaur-MC/dsh-win-multi-bash",
     "stars": 2,
     "topics": [
@@ -42,7 +42,7 @@
       "windows",
       "wsl"
     ],
-    "updatedAt": "2026-10-16T21:06:11Z",
+    "updatedAt": "2026-10-17T19:25:28Z",
     "url": "https://github.com/Dinosaur-MC/dsh-win-multi-bash"
   },
   "id": "gh:1338589356",
@@ -52,11 +52,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-win-multi-bash@0.7.0",
-    "version": "0.7.0"
+    "spec": "dsh-win-multi-bash@0.7.2",
+    "version": "0.7.2"
   },
   "npm": {
-    "latestVersion": "0.7.0",
+    "latestVersion": "0.7.2",
     "published": true,
     "repositoryMatches": true
   },
@@ -70,6 +70,7 @@
       "./shell-family": "./lib/tool-bash/types/shell-family.js",
       "./tool-git-bash": "./lib/tool-bash/types/git-bash.js",
       "./tool-msys2-bash": "./lib/tool-bash/types/msys2-bash.js",
+      "./tool-ssh-bash": "./lib/tool-bash/types/ssh-bash.js",
       "./tool-terminal": "./lib/tool-bash/types/terminal.js",
       "./tool-wsl-bash": "./lib/tool-bash/types/wsl-bash.js"
     },
@@ -77,15 +78,15 @@
     "name": "dsh-win-multi-bash",
     "status": "valid",
     "type": "module",
-    "version": "0.7.0"
+    "version": "0.7.2"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/c5bb00defeb3c3160e585363d7519e76c516b29f79791fe5ad79219f6bfd3f54/Dinosaur-MC/dsh-win-multi-bash",
+    "coverUrl": "https://opengraph.githubassets.com/97638d206c2594c172bc58adfc72645679044fcad9f2a29b03db00d988a87c94/Dinosaur-MC/dsh-win-multi-bash",
     "description": "Multi-bash plugin for dsh. Add Git Bash / WSL Bash support for Windows."
   },
   "readme": {
     "available": true,
-    "excerpt": "A Windows multi-bash plugin for DeepSeek Harness: the gitbash / wslbash model tools, each owning its own Git Bash / WSL executor. The plugin never touches the ctx.shell seat — dsh's own pwsh executor keeps it — so pwsh behavior is identical to a deployment without the plugin."
+    "excerpt": "A Windows multi-bash plugin for DeepSeek Harness. gitbash (Git for Windows / MSYS) is on by default. wslbash (WSL), msys2bash (MSYS2 UCRT64) and sshbash (a remote shell over the OpenSSH client) are opt-in. terminal keeps a real PTY session alive between calls."
   },
   "schemaVersion": 1,
   "scripts": {

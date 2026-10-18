@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "fbc2ca589a6f420efdf8c04082aba322cae8d680"
   },
   "github": {
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,20 +51,33 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-llm-probe",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d0ecbefddc41859afe710972efcace86dd7716e01861c6052f5df3dfdaf6cd49/jonah791/dsh-llm-probe",
-    "description": ""
+    "description": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 把任意 OpenAI 兼容端点当测量装置跑实验：直连通话 · 只回读数（正文落盘不进上下文）· 标定先于测量 · 端点不可达即响亮失败 inject: 'tools' tools: llmproberun,llmprobecalib runtime: host-only envDeps: 一个 OpenAI 兼容端点（必须显式给 URL，无默认值——防误打生产端点） boundary: 只回读数不回正文（正文落"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 把任意 OpenAI 兼容端点当测量装置跑实验：直连通话 · 只回读数（正文落盘不进上下文）· 标定先于测量 · 端点不可达即响亮失败 inject: 'tools' tools: llmproberun,llmprobecalib runtime: host-only envDeps: 一个 OpenAI 兼容端点（必须显式给 URL，无默认值——防误打生产端点） boundary: 只回读数不回正文（正文落"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

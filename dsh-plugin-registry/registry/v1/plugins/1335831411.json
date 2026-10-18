@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-08-16T14:47:59.364Z",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
     "enrichmentStatus": "ok",
-    "headSha": "75071fcfd49dc9ccc407d806cb684628a5a86720"
+    "headSha": "801667f68c5dc40ecb8c87806b670bf36590f760"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness 翻译模式：Agent 预设（只返回译文）+ 动态插件控件（语言/风格设置）+ 18 语 i18n",
     "fork": false,
     "forks": 0,
-    "headSha": "75071fcfd49dc9ccc407d806cb684628a5a86720",
+    "headSha": "801667f68c5dc40ecb8c87806b670bf36590f760",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT58rcw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/19ae05c3f8ea351a333f4ad779902348ebe1763cb42bd5427ef9de972f4a7637/576576/dsh-translate",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/1cfec79483249f81f125457770d7ba74ddd888dd1adc568653cbf1fab2d8f41e/576576/dsh-translate",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/54106099?u=dc95c8402ea0d815121dd0199f8a68be136a70c2&v=4",
       "login": "576576"
     },
-    "pushedAt": "2026-08-16T13:25:14Z",
+    "pushedAt": "2026-10-17T15:21:43Z",
     "slug": "576576/dsh-translate",
     "stars": 1,
     "topics": [
@@ -38,32 +38,46 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-17T07:12:40Z",
+    "updatedAt": "2026-10-17T15:21:47Z",
     "url": "https://github.com/576576/dsh-translate"
   },
   "id": "gh:1335831411",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-plugin-translate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:576576/dsh-translate#801667f68c5dc40ecb8c87806b670bf36590f760",
+    "version": "2.0.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.png",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./preset": "./lib/preset.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-translate",
+    "status": "valid",
+    "type": "module",
+    "version": "2.0.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/19ae05c3f8ea351a333f4ad779902348ebe1763cb42bd5427ef9de972f4a7637/576576/dsh-translate",
+    "coverUrl": "https://opengraph.githubassets.com/1cfec79483249f81f125457770d7ba74ddd888dd1adc568653cbf1fab2d8f41e/576576/dsh-translate",
     "description": "DeepSeek Harness 翻译模式：Agent 预设（只返回译文）+ 动态插件控件（语言/风格设置）+ 18 语 i18n"
   },
   "readme": {
     "available": true,
-    "excerpt": "为 DeepSeek Harness（WebUI 与桌面版通用）添加「翻译模式」：与标准模式/创造模式并列的 Agent 预设——发送原文，模型只返回译文。"
+    "excerpt": "为 DeepSeek Harness（Web UI 与桌面版通用）添加「翻译模式」：一个只返回译文的 Agent 预设，以及输入框工具行上的语言方向与翻译风格控件。"
   },
   "schemaVersion": 1,
   "scripts": {

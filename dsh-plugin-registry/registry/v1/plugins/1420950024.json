@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "6327dc17567b6c8a7d46ecd96e59fa0878b0b24d"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.js",
+        "types": "./types/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./test": {
+        "default": "./test/harness.mjs",
+        "types": "./types/test.d.ts"
+      }
+    },
+    "main": null,
+    "name": "dsh-build-tools",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5f9be821f2c4ad0faef914532f55d90c421702c70fe782ed21a636b853f187cc/janpauldahlke/dsh-build-tools",
     "description": "DeepSeek Harness (dsh) build tooling: shared dual-face bundler for out-of-tree plugins — host ESM + client __ModuleLoader__ CJS. One typed helper, esbuild peer, byte-identical lib/. Replaces copy-pasted build.mjs."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Shared build tooling for DeepSeek Harness (dsh) plugins. One package replaces the copy-pasted build.mjs that every dsh- plugin carries, so the dual-face packaging contract lives in exactly one place."
   },
   "schemaVersion": 1,
   "scripts": {

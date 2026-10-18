@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "4c7d1ae304b6e50ea1e26c24c8c980cf86482048"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1420411000",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mcp-glue",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:AkotaP/dsh-mcp-glue#4c7d1ae304b6e50ea1e26c24c8c980cf86482048",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./presets": "./src/presets.js"
+    },
+    "main": "src/index.js",
+    "name": "dsh-mcp-glue",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/88f854fd30abcc5c54d8ac244851a79c0144ab6679de158a31569e35fcf8bae3/AkotaP/dsh-mcp-glue",
     "description": "一个MCP管理插件，支持多种市面上的项目级MCP配置，也支持自定义预设。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness 0.2.0-rc.2 加载项目级 MCP 声明。一个工作区的会话只读取自己的配置，并在各自 Agent 作用域内连接服务器；不会把配置写入 DSH 全局 profile，也不会修改原声明文件。"
   },
   "schemaVersion": 1,
   "scripts": {

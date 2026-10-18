@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "b22e77b29efb2d9dfaba9a52c34387559276d05b"
   },
   "github": {
@@ -38,33 +38,46 @@
   },
   "id": "gh:1420906345",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-session-handoff",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:jonah791/dsh-session-handoff#b22e77b29efb2d9dfaba9a52c34387559276d05b",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-handoff",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/eccb15ab8f9f3a808c317db6676cc68377d3ad19b6eb8996b9baf67b7db7b561/jonah791/dsh-session-handoff",
-    "description": ""
+    "description": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 会话自动衔接：新建会话时自动把上一场会话的尾部对话注入为交接材料（per-session 动态上下文，仅在存在新鲜对话时注入） inject: ['systemPrompt', 'sessionQuery'] tools: （无工具 —— 纯行为插件） runtime: host-only envDeps: 见 README「配置」节 boundary: 见 README「设计要点」与「生效判据与回退」节 co"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 会话自动衔接：新建会话时自动把上一场会话的尾部对话注入为交接材料（per-session 动态上下文，仅在存在新鲜对话时注入） inject: ['systemPrompt', 'sessionQuery'] tools: （无工具 —— 纯行为插件） runtime: host-only envDeps: 见 README「配置」节 boundary: 见 README「设计要点」与「生效判据与回退」节 co"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

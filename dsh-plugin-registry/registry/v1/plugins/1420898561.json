@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "943f8c37a2326b33cb86a9ad3e7eadbf2f4f1e94"
   },
   "github": {
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,20 +51,33 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-evidence-router",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/483b24c1410285a0ab74573e03a516d01770ee77aff543a099878d886541cb9e/jonah791/dsh-evidence-router",
-    "description": ""
+    "description": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 证据构建台账与充分性双判仪器：把「证据是否充分」从产生者自判拆成两个可分别复算的读数（kappaself vs 独立覆盖 kappacov），冻结口径指纹并留痕，使「省了几轮」「够不够」这类结论可复算 inject: ['tools'] tools: evopen,evobserve,evassess,evclose,evreport runtime: host-only envDeps: 见 README「配"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 证据构建台账与充分性双判仪器：把「证据是否充分」从产生者自判拆成两个可分别复算的读数（kappaself vs 独立覆盖 kappacov），冻结口径指纹并留痕，使「省了几轮」「够不够」这类结论可复算 inject: ['tools'] tools: evopen,evobserve,evassess,evclose,evreport runtime: host-only envDeps: 见 README「配"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

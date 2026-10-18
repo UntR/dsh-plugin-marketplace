@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "02df7dd27e364d76e46bd597bf6afef2a9d89f82"
   },
   "github": {
@@ -50,27 +50,39 @@
   },
   "id": "gh:1420666131",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-vulnclaw-pentest",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:R1145141919810/dsh-vulnclaw-pentest#02df7dd27e364d76e46bd597bf6afef2a9d89f82",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./tools": "./tools.js"
+    },
+    "main": "index.js",
+    "name": "@local/dsh-vulnclaw-pentest",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/319cf3956679b4498b4b80c20886d72f75ea84082a6d2b8afe3c8f2a306ad390/R1145141919810/dsh-vulnclaw-pentest",
     "description": "VulnClaw penetration-testing mode for the DeepSeek Harness: nmap, HTTP probing, directory/JS recon, traffic evidence, reports and PoCs as native Harness tools. Based on VulnClaw (MIT) by UncleC."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 VulnClaw 的渗透测试工具链接入 DeepSeek Harness，在 Harness 的模式列表里 新增一个「渗透测试」Agent 模式。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "8b302eed564b625233d3446b3f81b3bdb743b0f8"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1420214306",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-quote-reply",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:liuhaolong16/dsh-quote-reply#8b302eed564b625233d3446b3f81b3bdb743b0f8",
+    "version": "0.9.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-quote-reply",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9f6c6acaf7fcaae34fb3a064cfa3ba651342a6e0bc5b4150a9644ff4487547f2/liuhaolong16/dsh-quote-reply",
     "description": "Quote reply layer for DeepSeek Harness: quote a passage into an editable tray above the composer; it rides into the next turn as model context (never into the message body) and shows as an expandable row under that turn. 引用回复层：选中一段进引用行，随下一回合作为上下文注入模型（不进消息正文），回合尾部显示可展开的引用(N)。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为什么必须是硬门：宿主半体只在 DSH 启动时加载（实测：启用/禁用、卸载重装、改 inject 全都无效）。 若它引用了不存在的 API、或与别的插件撞路由/撞上下文名，重启就是白重启一次（严重时会打断宿主 boot）。 所以\"能不能重启\"必须先验成一条可复跑的命令，而不是凭我的判断。"
   },
   "schemaVersion": 1,
   "scripts": {

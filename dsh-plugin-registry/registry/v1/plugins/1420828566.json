@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "ffecf8ce0b77e93b83b5350ba370bab983822388"
   },
   "github": {
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,20 +51,33 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-agent-sister",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/46cede6595650a2780fca5f3ffbd4be1ef89d82f0617f189b342507ee15b4cc5/jonah791/dsh-agent-sister",
-    "description": ""
+    "description": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 爱丽丝庄园·孪生妹妹（DSH 桌面端）的生命周期管理：启动/停止/状态/重启，带 CDP 调试端口与判活判据 inject: 'tools' tools: sisterstatus,sisterstart,sisterstop,sisterrestart runtime: host-only envDeps: DSH 桌面端（Electron）安装 boundary: 判活判据是「CDP 能应答」而非「进程存在"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 爱丽丝庄园·孪生妹妹（DSH 桌面端）的生命周期管理：启动/停止/状态/重启，带 CDP 调试端口与判活判据 inject: 'tools' tools: sisterstatus,sisterstart,sisterstop,sisterrestart runtime: host-only envDeps: DSH 桌面端（Electron）安装 boundary: 判活判据是「CDP 能应答」而非「进程存在"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

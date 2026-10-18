@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "e88d6ec63d7a67277bf3c6c86f38a43ee97527c4"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1417442557",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "agent-clinic",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:1687210989/agent-clinic#e88d6ec63d7a67277bf3c6c86f38a43ee97527c4",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./plugin/index.js",
+      "./client": "./plugin/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "plugin/index.js",
+    "name": "agent-clinic",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f3ac6f522d98e7222e0e13d5bcf95b7c09aa26d3b4aa7c567731e22c2217241e/1687210989/agent-clinic",
     "description": "Agent 体检诊所 —— 用可复核证据诊断 Agent 使用体验问题"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "装为 Skill（一行命令，无需克隆、无需选位置、无需回答任何提问）："
   },
   "schemaVersion": 1,
   "scripts": {

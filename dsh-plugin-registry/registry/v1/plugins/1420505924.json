@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "4d0f8464bb637e1d9812fe0edb445cca7c08a9ad"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1420505924",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cc-switch",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-cc-switch@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dsh/index.js",
+      "./dsh": "./dsh/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./dsh/index.js",
+    "name": "dsh-cc-switch",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f5b6235cc10a7c6adc24d620fc74983ed28894e3b7bf32354da7e8a74369a4d0/LightingHa/dsh-cc-switch",
     "description": "把 cc-switch 配置的模型供应商接入 DSH（转成 llm-pi-ai 路由，附连通性体检）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 cc-switch 里配置好的模型供应商直接接进 DeepSeek Harness： 读取 cc-switch 的数据库（/.cc-switch/cc-switch.db），把每家供应商转换成 DSH 内置 @deepseek-ai/dsh-llm-pi-ai 的 provider 路由，写进「模型」页面用的同一份配置，并把 API Key 存进 harness 的凭据存储。cc-switch 里有什么模型，DSH 的模型选择器里就能选到什么。"
   },
   "schemaVersion": 1,
   "scripts": {

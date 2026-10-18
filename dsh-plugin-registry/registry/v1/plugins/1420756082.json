@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "b5ce032d9f3946e3ad54a215ad293c72c29d1c83"
   },
   "github": {
@@ -47,27 +47,41 @@
   },
   "id": "gh:1420756082",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-token-bucket",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:youchai2016/dsh-plugin-token-bucket#b5ce032d9f3946e3ad54a215ad293c72c29d1c83",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./remote": "./lib/remote.js",
+      "./typert": "./lib/typert.host.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-token-bucket",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/08b28e8d73b6678e920a918cbf74e52778ca29ef59745cd413ff713554b98824/youchai2016/dsh-plugin-token-bucket",
     "description": "余额水桶：水位就是你的 DeepSeek API 余额，出水口流出的是正在花的钱。A bucket that drains while your DeepSeek API balance is being spent (DeepSeek Harness plugin)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A little bucket that drains while your DeepSeek API balance is being spent."
   },
   "schemaVersion": 1,
   "scripts": {

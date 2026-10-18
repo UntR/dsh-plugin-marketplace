@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "a4aa003f527b5d1328124299f51cd61bf0db24af"
   },
   "github": {
@@ -42,27 +42,40 @@
   },
   "id": "gh:1420531044",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-rea-mcp-toggle",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:VioletEverGarden-zc/dsh-rea-mcp-toggle#a4aa003f527b5d1328124299f51cd61bf0db24af",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./state": "./state.js"
+    },
+    "main": "index.js",
+    "name": "dsh-rea-mcp-toggle",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/34053b646972b3e965add59cfe168862232db27fde2566a8864d1d314a56c9de/VioletEverGarden-zc/dsh-rea-mcp-toggle",
     "description": "在 DeepSeek Harness Web UI 中一键开关 REA MCP 服务器（rea-mcp），并向模型暴露配套的开关工具 rea_mcp_toggle；选择按 profile 持久化，重启后依然生效。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness（DSH）bundle 插件：在 Harness Web UI 里一键开关 REA MCP 服务器，并把同一个开关交给模型（工具 reamcptoggle）。选择按 profile 保存，重启后依然生效。"
   },
   "schemaVersion": 1,
   "scripts": {

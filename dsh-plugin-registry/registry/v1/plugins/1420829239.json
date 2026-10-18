@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "4c9d27abaa92f33e59c1216acc7d26af10c39f3f"
   },
   "github": {
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,20 +51,33 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-agent-skill-lifecycle",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1a3d19180899c0d69b5148b5cbcbb109c65fe9cd416a4b621de5dfb58af9f4d8/jonah791/dsh-agent-skill-lifecycle",
-    "description": ""
+    "description": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 技能生命周期（借鉴 MemOS skill lifecycle）：Beta(1,1) 后验 η + candidate/active/archived 状态机 + 使用观测（tools/result 的 skill 调用）+ 台账 sidecar；不自动删除技能，只报告与显式流转 inject: 'tools','agents' tools: skilllifecycle runtime: host-only "
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 技能生命周期（借鉴 MemOS skill lifecycle）：Beta(1,1) 后验 η + candidate/active/archived 状态机 + 使用观测（tools/result 的 skill 调用）+ 台账 sidecar；不自动删除技能，只报告与显式流转 inject: 'tools','agents' tools: skilllifecycle runtime: host-only "
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

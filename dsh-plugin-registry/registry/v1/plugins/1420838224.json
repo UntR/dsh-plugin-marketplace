@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "ff65fcbad2128a513872cd57d2a1aab9c1bb6a04"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOVLBFUA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/72fc3b45c0a5269caa4a9533d885aefe08b194395f7ad4e5a52715eae8f0627e/Salty-Mocha/dsh-ops-mac",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/fcbb5c664961e99ab08e8b18f137e4db95390db6f282e209717689cb3211f336/Salty-Mocha/dsh-ops-mac",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/269928831?v=4",
       "login": "Salty-Mocha"
     },
     "pushedAt": "2026-10-15T14:39:08Z",
     "slug": "Salty-Mocha/dsh-ops-mac",
-    "stars": 2,
+    "stars": 3,
     "topics": [
       "deepseek",
       "deepseek-harness",
@@ -42,32 +42,58 @@
       "macos",
       "rust"
     ],
-    "updatedAt": "2026-10-16T11:25:43Z",
+    "updatedAt": "2026-10-17T12:14:01Z",
     "url": "https://github.com/Salty-Mocha/dsh-ops-mac"
   },
   "id": "gh:1420838224",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ops",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Salty-Mocha/dsh-ops-mac#ff65fcbad2128a513872cd57d2a1aab9c1bb6a04",
+    "version": "0.3.0-mac.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./file": {
+        "default": "./lib/components/file/index.js"
+      },
+      "./file/locale/*.json": "./lib/components/file/locale/*.json",
+      "./file/package.json": "./lib/components/file/package.json",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./policy": {
+        "default": "./lib/policy.js"
+      },
+      "./ptc": {
+        "default": "./lib/components/ptc/index.js"
+      },
+      "./ptc/locale/*.json": "./lib/components/ptc/locale/*.json",
+      "./ptc/package.json": "./lib/components/ptc/package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-ops",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0-mac.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/72fc3b45c0a5269caa4a9533d885aefe08b194395f7ad4e5a52715eae8f0627e/Salty-Mocha/dsh-ops-mac",
+    "coverUrl": "https://opengraph.githubassets.com/fcbb5c664961e99ab08e8b18f137e4db95390db6f282e209717689cb3211f336/Salty-Mocha/dsh-ops-mac",
     "description": "macOS (Apple Silicon) port of dsh-ops — Rust-powered file tools & PTC batching for DeepSeek Harness. Ported from T-Auto/dsh-ops."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "macOS（Apple Silicon）移植版的 dsh-ops —— 一个 DSH（DeepSeek Harness）性能工具插件：用 Rust 重写文件检索与批处理工具，减少 AI 编码时的 token 消耗、报错循环和任务耗时。"
   },
   "schemaVersion": 1,
   "scripts": {

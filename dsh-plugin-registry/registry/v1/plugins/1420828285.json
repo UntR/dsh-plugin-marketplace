@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "efbaf7d62dd87dfe9c81b2b4c14441e56e5d36f7"
   },
   "github": {
@@ -38,33 +38,46 @@
   },
   "id": "gh:1420828285",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-agent-reconstruction",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:jonah791/dsh-agent-reconstruction#efbaf7d62dd87dfe9c81b2b4c14441e56e5d36f7",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-agent-reconstruction",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5b2b2bab0c94711f02e135a965bad79a99ebd1d581eff01c05b1090f5fce9bbf/jonah791/dsh-agent-reconstruction",
-    "description": ""
+    "description": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 重建包注入：把我自己写下的重建包（projects/self/alice-reconstruction/packet.md）原样注入为动态上下文快照 inject: ['systemPrompt'] tools: （无工具 —— 纯行为插件） runtime: host-only envDeps: 见 README「配置」节 boundary: 见 README「设计要点」与「生效判据与回退」节 compat:"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 重建包注入：把我自己写下的重建包（projects/self/alice-reconstruction/packet.md）原样注入为动态上下文快照 inject: ['systemPrompt'] tools: （无工具 —— 纯行为插件） runtime: host-only envDeps: 见 README「配置」节 boundary: 见 README「设计要点」与「生效判据与回退」节 compat:"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

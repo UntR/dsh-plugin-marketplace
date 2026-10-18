@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "df7dc46e94d388bae913f858bba5e838d34884f4"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1416504925",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-delete-archived-session",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ocelot-D/dsh-delete-archived-session#df7dc46e94d388bae913f858bba5e838d34884f4",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-delete-archived-session",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c3860a623c234601703858c220b4953e048feac66a64c4b867ad31892d57760a/ocelot-D/dsh-delete-archived-session",
     "description": "列出并删除 DSH 已归档会话：默认移入回收站可恢复，带二次确认与日志归属校验。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DSH 插件：列出并删除已归档的会话。 DSH 本身只有「归档」和「取消归档」两个操作。归档只是把会话藏起来，日志永远留在磁盘上，官方没有任何办法把那块空间收回来。"
   },
   "schemaVersion": 1,
   "scripts": {

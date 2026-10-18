@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "55cc3a63a458267b97a5b4a47b958d37ff37f894"
   },
   "github": {
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,20 +51,33 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-agent-ask-timeout",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7ebcc12ad47c675789e83d3b214aa5496f6ea5d2998d16657904da9fcb0db0eb/jonah791/dsh-agent-ask-timeout",
-    "description": ""
+    "description": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 给宿主的 askuserquestion 补「长时间无回答即跳过」——挂在 user-questions/request 公开 waterfall 上 race(人类回答, 超时)，超时抛出语义清晰的错误让 agent 继续 inject: （无 —— 纯 waterfall 中间层，不依赖任何 service） tools: （无工具 —— 纯行为插件） runtime: host-only（挂宿主公开 wa"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 给宿主的 askuserquestion 补「长时间无回答即跳过」——挂在 user-questions/request 公开 waterfall 上 race(人类回答, 超时)，超时抛出语义清晰的错误让 agent 继续 inject: （无 —— 纯 waterfall 中间层，不依赖任何 service） tools: （无工具 —— 纯行为插件） runtime: host-only（挂宿主公开 wa"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

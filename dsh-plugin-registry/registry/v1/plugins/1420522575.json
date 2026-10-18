@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "3bf3f62313325fe05336ba117261bf6f68cb2df7"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1420522575",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-prompt-optimizer",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:windrover/dsh-prompt-optimizer#3bf3f62313325fe05336ba117261bf6f68cb2df7",
+    "version": "0.8.0-rc2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@local/dsh-prompt-optimizer",
+    "status": "valid",
+    "type": "module",
+    "version": "0.8.0-rc2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/265fb2c46a0f5946ed4ecaf600164a8c940ddf4a582998331378fca036583774/windrover/dsh-prompt-optimizer",
     "description": "Prompt optimizer for DeepSeek Harness (dsh): rewrite the conversation input draft in place with 15 templates (basic / context / image). 0.2.0-rc.2 adaptation of zhang-jiazhi/dsh-prompt-optimizer, which ports linshenkx/prompt-optimizer."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "本插件移植 prompt-optimizer（AGPL-3.0）的核心优化模板，去掉评估、对比、迭代、变量、图像生成对接等功能，只保留一件事：把输入框里的提示词一键优化好。"
   },
   "schemaVersion": 1,
   "scripts": {

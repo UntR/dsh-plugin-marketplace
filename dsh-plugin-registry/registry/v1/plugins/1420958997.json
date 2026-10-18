@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "e91afa46c3c0655e508703ee7d04e171e70ec33c"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1420958997",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-reply-forge-v2",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kinggod899/dsh-reply-forge-v2#e91afa46c3c0655e508703ee7d04e171e70ec33c",
+    "version": "2.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./.dsh-plugin/index.mjs",
+      "./client": "./.dsh-plugin/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./.dsh-plugin/index.mjs",
+    "name": "@local/dsh-reply-forge-v2",
+    "status": "valid",
+    "type": "module",
+    "version": "2.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4b6061ee301e86e3dec58c24942b29cb76a30a24b97091d707a2ea483db4a29e/kinggod899/dsh-reply-forge-v2",
-    "description": "DeepSeek Harness (DSH) plugin: rewrite assistant replies in the persisted session log in place, so later turns read your version. DSH 插件：就地改写会话落盘记录里的助手回复，后续轮次读到的是改写后的版本。"
+    "description": "DeepSeek Harness (DSH) plugin: rewrite assistant replies in the persisted session log in place, so later turns read your version. DSH 插件：就地改写会话落盘记录里的助手回复，后续轮次读到的是改写后的版本。也支持伪造伪造回复，刷新就变回去，不影响流程。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 桌面端插件 v2：真伪造——改写的 AI 回复进入会话落盘记录，被大模型 当作真实历史采信，且会话可继续对话。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "d28cefbfa6367950104b0d41930531e8e14bc24e"
   },
   "github": {
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,20 +51,33 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-pdf-render",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8463453446b27cb7748669696b540830afcbc4911e099d0f8a498c498f08010f/jonah791/dsh-pdf-render",
-    "description": ""
+    "description": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: PDF → 图片渲染：把 PDF 的指定页渲染成 PNG 供模型亲眼看版式/表格/图表（本机无 poppler/gs，走已装的 pypdfium2） inject: 'tools' tools: pdfrender runtime: host-only envDeps: pypdfium2（本机无 poppler / ghostscript，故不走 pdftoppm） boundary: 只返回文件路径不返回像"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: PDF → 图片渲染：把 PDF 的指定页渲染成 PNG 供模型亲眼看版式/表格/图表（本机无 poppler/gs，走已装的 pypdfium2） inject: 'tools' tools: pdfrender runtime: host-only envDeps: pypdfium2（本机无 poppler / ghostscript，故不走 pdftoppm） boundary: 只返回文件路径不返回像"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

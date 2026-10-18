@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "a1b093148d88b4e60289199cb7e25069c1d2c289"
   },
   "github": {
@@ -50,27 +50,41 @@
   },
   "id": "gh:1420090915",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-fallback",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yn2aa/dsh-model-fallback#a1b093148d88b4e60289199cb7e25069c1d2c289",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./chains": "./lib/chains.js",
+      "./client": "./lib/client.js",
+      "./cooldown": "./lib/cooldown.js",
+      "./failover": "./lib/failover.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-model-fallback",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2fb6ec3ed3fd18f8bae2485cb998baa652a89b186ed085e9c6a59a860f5b483e/yn2aa/dsh-model-fallback",
     "description": "DeepSeek Harness 的模型fallback链插件：以更智能、更人性化的方式配置fallback链。当主模型撞限流、额度耗尽，或者5xx超时的时候自动向下改派模型，回合不中断。设置页可视化编排：拖拽排序、按计费或者上下文窗口排序候选模型、失败模型自动冷却、管理多条链的停用和启用。零依赖、无构建步骤、默认不介入任何请求。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "本插件是给 DeepSeek Harness 的每个主模型配一条有序候选列表：请求失败且错误类别命中你勾选的触发条件时，由链上的下一个模型接替这次请求。回合不会中断，并在会话里注明改派原因。"
   },
   "schemaVersion": 1,
   "scripts": {

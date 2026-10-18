@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
-    "headSha": "405cfa94247c2643ea6156f8972d8b371adb7a8a"
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
+    "headSha": "a62b95cbadb2add830ae1e86fbe7efbbdd4c327d"
   },
   "github": {
     "archived": false,
@@ -17,57 +17,73 @@
     "description": null,
     "fork": false,
     "forks": 0,
-    "headSha": "405cfa94247c2643ea6156f8972d8b371adb7a8a",
+    "headSha": "a62b95cbadb2add830ae1e86fbe7efbbdd4c327d",
     "homepageUrl": null,
-    "language": "TypeScript",
+    "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVFt3OA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5ea3284c68e0656ab8f902d13e05e996d960fdaf2367e84774030d7e1c723a4c/Minokun/dsh-serper-search",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f9ecddbd997e9c6bc3a13a79ac90d7324fd6bbc8f0a2873c1efaa048e117ed26/Minokun/dsh-serper-search",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/15188302?u=5c1d237ba097a2b3566a9082c742d46d4a7230e6&v=4",
       "login": "Minokun"
     },
-    "pushedAt": "2026-10-15T13:29:31Z",
+    "pushedAt": "2026-10-17T16:09:03Z",
     "slug": "Minokun/dsh-serper-search",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-15T13:42:33Z",
+    "updatedAt": "2026-10-17T16:08:42Z",
     "url": "https://github.com/Minokun/dsh-serper-search"
   },
   "id": "gh:1415280440",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-serper-search",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-serper-search@0.3.4",
+    "version": "0.3.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.4",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-serper-search",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.4"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5ea3284c68e0656ab8f902d13e05e996d960fdaf2367e84774030d7e1c723a4c/Minokun/dsh-serper-search",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/f9ecddbd997e9c6bc3a13a79ac90d7324fd6bbc8f0a2873c1efaa048e117ed26/Minokun/dsh-serper-search",
+    "description": "DeepSeek Search API（官方自研搜索引擎）+ serper.dev（Google 搜索）双擎互补的搜索插件，接入 DeepSeek Harness 的 web 能力缝（ctx.web）。安装后，DSH 内置的 websearch 每次只发两次直连检索请求（native:true 且两路可用时；单路缺 key 或 native:false 时只发一次，无辅助模型调用），结果按 URL 去重后以 固定比例交错（默认 2:1）合并，让模型同时拿到 DeepSeek 自有索引与 Google 索引。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Search API（官方自研搜索引擎）+ serper.dev（Google 搜索）双擎互补的搜索插件，接入 DeepSeek Harness 的 web 能力缝（ctx.web）。安装后，DSH 内置的 websearch 每次只发两次直连检索请求（native:true 且两路可用时；单路缺 key 或 native:false 时只发一次，无辅助模型调用），结果按 URL 去重后以 固定比例交错（默认 2:1）合并，让模型同时拿到 DeepSeek 自有索引与 Google 索引。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

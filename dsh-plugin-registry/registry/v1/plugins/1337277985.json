@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-16T08:53:30.528Z",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
     "enrichmentStatus": "ok",
-    "headSha": "693f66cdb7f237a19a9e9cb8f8f7511784ec5391"
+    "headSha": "fe6c819b825c9aebb4ed294921412e399e05b1ed"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": null,
     "fork": false,
     "forks": 0,
-    "headSha": "693f66cdb7f237a19a9e9cb8f8f7511784ec5391",
+    "headSha": "fe6c819b825c9aebb4ed294921412e399e05b1ed",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT7U-IQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/9baa2452936bc9b04f188be37addae15fa3e5e6ddc1366e221d3fd1cf6531301/HuckOps/dsh-prometheus-plugin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/51692a7b7aa572862f6d0e716b0ce810815966d1900309f203982079e06fb885/HuckOps/dsh-prometheus-plugin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/39844451?u=254a6c1f8c507be9cef3f13cdcbb16bd25a997bd&v=4",
       "login": "HuckOps"
     },
-    "pushedAt": "2026-08-17T15:26:35Z",
+    "pushedAt": "2026-10-18T04:58:41Z",
     "slug": "HuckOps/dsh-prometheus-plugin",
     "stars": 0,
     "topics": [
@@ -38,7 +38,7 @@
       "dsh-plugin-market",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-08-17T15:29:58Z",
+    "updatedAt": "2026-10-18T04:58:45Z",
     "url": "https://github.com/HuckOps/dsh-prometheus-plugin"
   },
   "id": "gh:1337277985",
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -62,17 +62,18 @@
         "default": "./lib/index.js",
         "types": "./lib/types/index.d.ts"
       },
-      "./package.json": "./package.json",
-      "./src/*": "./src/*"
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
     },
     "main": "lib/index.js",
-    "name": "scratch-plugin",
+    "name": "@local/dsh-prometheus-plugin",
     "status": "valid",
     "type": "module",
     "version": "0.1.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/9baa2452936bc9b04f188be37addae15fa3e5e6ddc1366e221d3fd1cf6531301/HuckOps/dsh-prometheus-plugin",
+    "coverUrl": "https://opengraph.githubassets.com/51692a7b7aa572862f6d0e716b0ce810815966d1900309f203982079e06fb885/HuckOps/dsh-prometheus-plugin",
     "description": "A DeepSeek Harness (dsh) plugin that exposes the Prometheus HTTP API as a set of tools an LLM agent can call. Built on the Cordis framework and @deepseek-ai/dsh-tools."
   },
   "readme": {
@@ -82,7 +83,7 @@
   "schemaVersion": 1,
   "scripts": {
     "install": false,
-    "postinstall": false,
+    "postinstall": true,
     "preinstall": false,
     "prepare": false
   }

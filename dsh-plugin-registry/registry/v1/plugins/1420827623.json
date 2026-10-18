@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "c3b2dee6a4e1db81d66bbf8cce87b4bb16bd2742"
   },
   "github": {
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,20 +51,33 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-agent-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3efa1d58380df4e2875cdc987f4c7e50d7034e1a50641f1bca53e0e104b95317/jonah791/dsh-agent-notify",
-    "description": ""
+    "description": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 出外告警的唯一通道：以服务形式向主人推送告警（Telegram 双通道 + 去重/冷却 + 落盘留痕），供任何插件在「我不在场」时把话喊出机器 inject: （无 —— 本插件是通道，不是消费者） tools: （无工具 —— Service 型，对外提供 cordis 服务 notify） runtime: host-only envDeps: Telegram 凭据（bot token + chat id"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 出外告警的唯一通道：以服务形式向主人推送告警（Telegram 双通道 + 去重/冷却 + 落盘留痕），供任何插件在「我不在场」时把话喊出机器 inject: （无 —— 本插件是通道，不是消费者） tools: （无工具 —— Service 型，对外提供 cordis 服务 notify） runtime: host-only envDeps: Telegram 凭据（bot token + chat id"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

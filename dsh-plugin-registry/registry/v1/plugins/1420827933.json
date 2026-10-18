@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "67b7414d4aaa510b1e32d52c3231f7ef9d51580e"
   },
   "github": {
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,20 +51,33 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-experience-policy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e31628d6ae9acc68aa019f781173edfec893589325fb092d4688fc702fb12d75/jonah791/dsh-experience-policy",
-    "description": ""
+    "description": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 经验策略：把「状态→动作→回报」的历史经验转成对当前候选动作的数值加权（JitRL 式 test-time policy optimization 的本地实现，零梯度） inject: （无 —— 纯决策层，由调用方喂状态与经验） tools: （无工具 —— 纯行为插件） runtime: host-only envDeps: 无 boundary: 只给数值加权，不替调用方做决策；不自动采集经验（经验由调用"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 经验策略：把「状态→动作→回报」的历史经验转成对当前候选动作的数值加权（JitRL 式 test-time policy optimization 的本地实现，零梯度） inject: （无 —— 纯决策层，由调用方喂状态与经验） tools: （无工具 —— 纯行为插件） runtime: host-only envDeps: 无 boundary: 只给数值加权，不替调用方做决策；不自动采集经验（经验由调用"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "bf77bf38ca506b2e18e07519ca93769b273e4fbe"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1420425027",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-task-runner",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:bbskye5008/dsh-task-runner#bf77bf38ca506b2e18e07519ca93769b273e4fbe",
+    "version": "0.3.7"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./guard": "./guard.mjs",
+      "./pua": "./vendor/pua/lib/index.js",
+      "./specworkflow": "./specworkflow.mjs"
+    },
+    "main": "./index.mjs",
+    "name": "dsh-task-runner",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.7"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/75e91592745d1ed9033d8a8264dab4f69fcba547ddc5c209acce6630c06f966c/bbskye5008/dsh-task-runner",
     "description": "DeepSeek Harness task launcher combining PUA and Completion Guard with frozen acceptance, candidate-bound certificates, and an 8-round / 90-minute cap."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "输入想做的事情，先用 SpecWorkflow 澄清需求、整理规格和生成验收脚本；确认具体版本后，自动创建受门禁保护的任务会话。 已有可信验收命令时，仍可直接执行。 默认最多 8 轮、90 分钟；验收失败继续修复，到限取消并记录未完成。 同一候选验收通过、当前 Goal 证书有效且 Goal 已完成，才允许 PUA 自动结束。"
   },
   "schemaVersion": 1,
   "scripts": {

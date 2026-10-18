@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-17T08:20:37.705Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichmentStatus": "ok",
     "headSha": "0ff445a3085a0c2777dfa47bf3aa8cae501cda3a"
   },
   "github": {
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,14 +51,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-longhorizon",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bcf62bd4c217740d889e519fbdf1ca981e7143deb296b13ee40685051ff3af44/jonah791/dsh-longhorizon",
-    "description": ""
+    "description": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 长时域未完成项台账 + 每轮一行读数注入（对抗「低进度高剩余」的提前收工） inject: 'tools','agents' tools: longhorizonstatus,longhorizonopen,longhorizonupdate,longhorizonclose runtime: host-only envDeps: 无 boundary: 只送读数——不排序、不推荐、不自动执行（决策归主体）；写"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "<!-- DSH 插件生态公约声明（plugin-ecosystem-convention · 组合优先/声明清晰/兼容优先） purpose: 长时域未完成项台账 + 每轮一行读数注入（对抗「低进度高剩余」的提前收工） inject: 'tools','agents' tools: longhorizonstatus,longhorizonopen,longhorizonupdate,longhorizonclose runtime: host-only envDeps: 无 boundary: 只送读数——不排序、不推荐、不自动执行（决策归主体）；写"
   },
   "schemaVersion": 1,
   "scripts": {
