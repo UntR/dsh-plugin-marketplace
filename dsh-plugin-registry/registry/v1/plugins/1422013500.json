@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "fa2c93b257186b0714e3f315e42ad2a629b9ea12"
   },
   "github": {
@@ -51,7 +51,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,14 +61,20 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": "server.mjs",
+    "name": "joycode-proxy",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/222cbaf080e53a1522cb0e75bcd35fc6e01b2a6a5a50123c1b6efb5ad7e20a18/2151649856sjs-create/joycode-proxy",
     "description": "OpenAI-compatible local proxy exposing JoyCode (JD Cloud JoyCoder) credits, plus a DSH model-provider plugin"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 JoyCode（京东云 JoyCoder 积分） 反代成一个 OpenAI 兼容的 HTTP 服务，再通过一个 DSH provider 插件把它的积分池接进 DSH，当作 agent 的模型后端。整体思路与 qoder-proxy / dsh-llm-qoder 完全一致，只是后端换成了 JoyCode 的「color gateway」协议。"
   },
   "schemaVersion": 1,
   "scripts": {

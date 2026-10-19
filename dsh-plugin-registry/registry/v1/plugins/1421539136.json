@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "0680e42d8e6b36eafd511956bc9d4f40fea070f6"
   },
   "github": {
@@ -47,27 +47,45 @@
   },
   "id": "gh:1421539136",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-avatar-chat",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:suwodhcbbc/dsh-avatar-chat#0680e42d8e6b36eafd511956bc9d4f40fea070f6",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-avatar-chat",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0074e95d870bf6a72ec94be8eb5708b4e3c142e5c5969b2965c4a7657a0ad42a/suwodhcbbc/dsh-avatar-chat",
     "description": "Dual avatars (user + assistant) for the DeepSeek Harness chat transcript, with an Avatars settings page."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Dual avatars for the DeepSeek Harness chat transcript — a user avatar on the right of every user turn, an assistant avatar on the left of every answer — plus an Avatars page in Settings to switch each side on or off, set a picture, and pick the size."
   },
   "schemaVersion": 1,
   "scripts": {

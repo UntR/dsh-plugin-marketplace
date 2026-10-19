@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "bd23cbbe69f79539bc4f0e8ec04ba0007eb5aa8e"
   },
   "github": {
@@ -50,27 +50,38 @@
   },
   "id": "gh:1421964307",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-crawshrimp-office",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:howtimeschange/dsh-crawshrimp-office#bd23cbbe69f79539bc4f0e8ec04ba0007eb5aa8e",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-crawshrimp-office",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d715ab68ac8dc99826e4856857beac1ce298253c5c360b5a95d132693b4a5b14/howtimeschange/dsh-crawshrimp-office",
     "description": "抓虾 Office 插件｜DeepSeek Harness（DSH）Word / PowerPoint 生成、文本提取与 OOXML 检查校验。独立运行，无需 Python 或抓虾后端。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-crawshrimp-office 是一个独立的 DeepSeek Harness（DSH）Office 文档插件，面向本地、可复核的小型 Word 和 PowerPoint 工作流。它可以生成真实的 .docx 和 .pptx 文件，将有界 Markdown 转换为 DOCX，读取 Word 与逐页 PowerPoint 文本，检查 OOXML ZIP 结构，并按预期文本或数量校验文档。"
   },
   "schemaVersion": 1,
   "scripts": {

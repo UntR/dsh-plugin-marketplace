@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "e57d3db4f15c605dd1e0839d3c34b09b98bcbaa5"
   },
   "github": {
@@ -38,27 +38,38 @@
   },
   "id": "gh:1422975662",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-codex-dots",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:aadmin61-design/dsh-codex-dots#e57d3db4f15c605dd1e0839d3c34b09b98bcbaa5",
+    "version": "2.3.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@local/dsh-codex-dots",
+    "status": "valid",
+    "type": "module",
+    "version": "2.3.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/63e328fccfa7648c93e41e6b9e368828e6eed77428aa1a5948c3b2dbf867e209/aadmin61-design/dsh-codex-dots",
     "description": "DSH 中由 DeepSeek 主导的 Codex 后台协作插件：已有对话接管、实时 Markdown 侧栏、额度暂停与自动决策监督。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DSH 中的 DeepSeek 规划任务，后台调度 Codex 或 DSH 子对话，读取输出后继续派发，并在 DSH 对话中汇报阶段结果。提供项目对话列表、接管已有 Codex 对话、Markdown/代码高亮、完整历史、实时输出、额度暂停与人工确认恢复。"
   },
   "schemaVersion": 1,
   "scripts": {

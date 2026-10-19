@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "e6dce844671ca7ce5f84e4ddd4c6a072af2a64d3"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1423177661",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-web-fetch-vpn",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:baldovinmarques391-design/dsh-web-fetch-vpn#e6dce844671ca7ce5f84e4ddd4c6a072af2a64d3",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-web-fetch-vpn",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d8fc936cec4e2d32c551a704475266550942a2aacfe3f8e642cb3a504be68e56/baldovinmarques391-design/dsh-web-fetch-vpn",
     "description": "修复 VPN 下 web_fetch 被误判非公网地址"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DSH 的 webfetch 在开着 TUN / fake-IP 代理（Clash、Surge、sing-box 等）时照常工作。"
   },
   "schemaVersion": 1,
   "scripts": {

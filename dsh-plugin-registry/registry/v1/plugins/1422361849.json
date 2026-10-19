@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "12fb4a537f7894ad2f5d099af51200e000ac1319"
   },
   "github": {
@@ -38,27 +38,43 @@
   },
   "id": "gh:1422361849",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@huanlin/dsh-plugin-komari",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:HuanLinOTO/dsh-plugin-komari#12fb4a537f7894ad2f5d099af51200e000ac1319",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@huanlin/dsh-plugin-komari",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8bb4a37b37e6be94683908f79a684be26f118010e20d8b799d06f87da0a4f728/HuanLinOTO/dsh-plugin-komari",
     "description": "DSH 插件：向模型暴露 Komari 探针面板工具（列机器、远程执行、上传下载文件），设置页配置面板地址与账号 | DSH plugin exposing Komari monitoring-panel tools (list nodes, remote exec, file transfer) with a settings-page config card"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件（bundle 形式）：把 Komari 探针面板的能力暴露给模型——列机器（节点清单 + 实时状态）、控制机器（远程执行命令）与传输文件（本机 ↔ 目标机），并在 WebUI 设置页配置面板地址与账号。四个工具经 dsh-plugin-toolsets 注册为一个按需加载的工具集。"
   },
   "schemaVersion": 1,
   "scripts": {

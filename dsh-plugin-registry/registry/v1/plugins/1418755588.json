@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
     "enrichmentStatus": "ok",
-    "headSha": "70d59a17d3826b9d8c2248fc3ba63dd12328440d"
+    "headSha": "acd5a99485350d91767b9925c4559300e2d789bb"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-14T10:50:02Z",
     "databaseId": 1418755588,
     "defaultBranch": "master",
-    "description": "DeepSeek Harness 跨会话记忆（按需）：列出并加载之前会话干了什么，不自动污染上下文。Cross-session memory for DSH, loaded on demand.",
+    "description": "轻量级解压并读取历史会话，让新会话读取之前会话的内容，单次操作毫秒级。A lightweight plugin that decompresses and reads past sessions.",
     "fork": false,
     "forks": 0,
-    "headSha": "70d59a17d3826b9d8c2248fc3ba63dd12328440d",
+    "headSha": "acd5a99485350d91767b9925c4559300e2d789bb",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,34 +25,34 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVJB-BA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/6a16a6e58e6a8469ec1d490e1f23b3966553a0e2123597e5456c708d1cf1a647/imtwa/dsh-recall",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/2d7af3e4aba6388c4837c9a4b49d1ee2c39a1cd0bf600dc77cee4cdfde146072/imtwa/dsh-recall-sessions",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/170282285?u=9387e2fbfeea65e57efc679ddbbc47bf2e7f5f6c&v=4",
       "login": "imtwa"
     },
-    "pushedAt": "2026-10-14T10:51:45Z",
-    "slug": "imtwa/dsh-recall",
+    "pushedAt": "2026-10-19T03:03:31Z",
+    "slug": "imtwa/dsh-recall-sessions",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-14T11:27:56Z",
-    "url": "https://github.com/imtwa/dsh-recall"
+    "updatedAt": "2026-10-19T03:10:04Z",
+    "url": "https://github.com/imtwa/dsh-recall-sessions"
   },
   "id": "gh:1418755588",
   "install": {
     "available": true,
-    "packageName": "dsh-recall",
+    "packageName": "dsh-recall-sessions",
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:imtwa/dsh-recall#70d59a17d3826b9d8c2248fc3ba63dd12328440d",
+    "spec": "github:imtwa/dsh-recall-sessions#acd5a99485350d91767b9925c4559300e2d789bb",
     "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": "0.3.0",
-    "published": true,
-    "repositoryMatches": false
+    "latestVersion": null,
+    "published": false,
+    "repositoryMatches": null
   },
   "package": {
     "exports": {
@@ -60,18 +60,18 @@
       "./package.json": "./package.json"
     },
     "main": "lib/index.js",
-    "name": "dsh-recall",
+    "name": "dsh-recall-sessions",
     "status": "valid",
     "type": "module",
     "version": "0.1.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/6a16a6e58e6a8469ec1d490e1f23b3966553a0e2123597e5456c708d1cf1a647/imtwa/dsh-recall",
-    "description": "DeepSeek Harness 跨会话记忆（按需）：列出并加载之前会话干了什么，不自动污染上下文。Cross-session memory for DSH, loaded on demand."
+    "coverUrl": "https://opengraph.githubassets.com/2d7af3e4aba6388c4837c9a4b49d1ee2c39a1cd0bf600dc77cee4cdfde146072/imtwa/dsh-recall-sessions",
+    "description": "轻量级解压并读取历史会话，让新会话读取之前会话的内容，单次操作毫秒级。A lightweight plugin that decompresses and reads past sessions."
   },
   "readme": {
     "available": true,
-    "excerpt": "DSH 每个会话都是独立的，新开会话时模型对之前的对话一无所知。dsh-recall 把本机的历史会话 做成可检索、可加载的资源：需要的时候列个清单、指定一个会话读进来， 不会自作主张把整个项目的历史塞进上下文。"
+    "excerpt": "/recall 列出当前项目的历史会话（标题、最后活动时间、轮次、首问）；/recall 读回该会话的轮次内容；/recall all 覆盖所有项目；也可用自然语言让模型调用 recallsessions 工具查询。"
   },
   "schemaVersion": 1,
   "scripts": {

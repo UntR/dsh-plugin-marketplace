@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "d0aa3faf26d5f60e86c4b073c7ca8d6ad76da4e9"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1421062439",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-global-memory",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:07vvvv/dsh-global-memory#d0aa3faf26d5f60e86c4b073c7ca8d6ad76da4e9",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-global-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/60057999434e2d92897a35740794c7d4cb0ebe999667c416ee760dd1737336b2/07vvvv/dsh-global-memory",
     "description": "Global memory plugin for DeepSeek Harness (DSH): one persistent cross-session requirement injected into every session's system prompt. Ships a settings-page panel, a global_memory agent tool, and a same-origin HTTP API."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）用的一条全局性记忆：一段跨会话、跨任务的常驻要求，会被自动注入每一个会话的 system prompt，所以「每一次任务都必须遵循」。"
   },
   "schemaVersion": 1,
   "scripts": {

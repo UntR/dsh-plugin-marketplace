@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "6605d31626140311b031b357fc0aa2156002d2bc"
   },
   "github": {
@@ -45,27 +45,41 @@
   },
   "id": "gh:1421998122",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-persona-cards",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lyufeng000/dsh-persona-cards#6605d31626140311b031b357fc0aa2156002d2bc",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-persona-cards",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ed3f1ba5fb7d1acaf5904088353012d4d68e66318313cf6cdb09de4e9f30325f/lyufeng000/dsh-persona-cards",
     "description": "DSH 人设卡插件：按会话绑定的人设卡片与全局提示词段落，支持导入 .md 人设文件。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 设置 → 人设卡 里管理人设，在每个会话里选用哪一套。选中的那张会拼进 系统提示词，排在官方部署人设之后、所有工具说明之前。改完下一个模型步骤就生效，不用重启。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "f23ab2681e0ffcbaf63bb58f2ebbc6b166aaa27f"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1422010044",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-quota",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Leafmy/dsh-model-quota#f23ab2681e0ffcbaf63bb58f2ebbc6b166aaa27f",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/host.js",
+    "name": "dsh-model-quota",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1824da21eb69057270154079a9419104ea9546b2326f520c26d7269fc5ee8327/Leafmy/dsh-model-quota",
     "description": "DeepSeek Harness (DSH) plugin: a sidebar balance/quota card plus panel that follows the current conversation's model provider (DeepSeek Account, DeepSeek API, OpenCode Go, GLM/Z.AI, Kimi Code, OpenRouter...). Zero dependencies; secrets never leave the host."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness Web 界面加一个「模型余额与额度」面板：侧栏底部常驻一张额度卡片， 点一下在右侧展开面板，逐行列出各供应商的账户余额或套餐窗口（5 小时 / 每周 / 每月） 剩余百分比 + 重置时间。默认只显示 DeepSeek Account，其余供应商一旦检测到已配置的凭据 就自动出现；设置 → 额度面板 里可以逐个开关。密钥只在宿主进程内使用，不下发浏览器。"
   },
   "schemaVersion": 1,
   "scripts": {

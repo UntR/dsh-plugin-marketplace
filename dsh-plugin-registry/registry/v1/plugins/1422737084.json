@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "80587a5f4cdac7fb63c5bb29380066eb2789d142"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1422737084",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-output-loop-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ADistanceThereIs/dsh-output-loop-guard#80587a5f4cdac7fb63c5bb29380066eb2789d142",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./detector": "./detector.mjs",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-output-loop-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c91fbe161aeb1cacfeb4b0488f0253e32dc8c69c3ed88a9910fb6eeb7b90172a/ADistanceThereIs/dsh-output-loop-guard",
     "description": "DSH guard against self-repetition in streamed model output: detects a degeneration loop in reasoning or visible text, aborts the runaway turn and wakes the agent with a corrective notice."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An output self-repetition watchdog for DeepSeek Harness. When a model starts cycling the same short block instead of producing a tool call, the guard aborts that generation and wakes the agent with a corrective notice — no human stop button, and no human typing \"continue\"."
   },
   "schemaVersion": 1,
   "scripts": {

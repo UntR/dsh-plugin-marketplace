@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "4a57cad05fb8f57ae3c0cb12f8d4e5ef644d5190"
   },
   "github": {
@@ -42,27 +42,41 @@
   },
   "id": "gh:1422488467",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-inpage-translator",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:7gzgn/dsh-inpage-translator#4a57cad05fb8f57ae3c0cb12f8d4e5ef644d5190",
+    "version": "0.2.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./constants": "./lib/constants.js",
+      "./package.json": "./package.json",
+      "./page-script": "./lib/page-script.js",
+      "./text-chunks": "./lib/text-chunks.js",
+      "./translate": "./lib/translate.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-inpage-translator",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5a84183b14e0e96b459e96203e61800ad35530c2ad71d7fd30c68c30d96cd9fd/7gzgn/dsh-inpage-translator",
     "description": "Put a translate button into the page the agent is looking at: one click replaces every visible text node in place, another click restores the original. Long pages are chunked, repeats are translated once, and the host LLM service does the work (the plugin holds no API key)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "你把页面给 AI 看，它替你把整页翻成中文。"
   },
   "schemaVersion": 1,
   "scripts": {

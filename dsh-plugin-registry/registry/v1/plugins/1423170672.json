@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "33beecb3700340df3573731571ce4b98291143a8"
   },
   "github": {
@@ -52,27 +52,41 @@
   },
   "id": "gh:1423170672",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-web-search-edge",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-web-search-edge@0.4.0",
+    "version": "0.4.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./index.js",
+        "types": "./types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-web-search-edge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/074de806390f5a8f44457c434a0e8967d4d5bbf5d26845a801a20e5f8e5b1b42/ztc1522021381/dsh-web-search-edge",
     "description": "Keyless, zero-cost web_search for DeepSeek Harness with a browser you choose: render Shenma through any Chromium browser (Edge / Chrome / Chromium / Brave / Vivaldi) over CDP and read Bing over HTTP. No API key, no model call, no bill."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "零密钥、零费用的 websearch 后端，给 DeepSeek Harness 用。抓取走本机浏览器——用哪个浏览器你说了算。"
   },
   "schemaVersion": 1,
   "scripts": {

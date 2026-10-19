@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "cad79b910754f3ad01e711dfaafb16dbf566160f"
   },
   "github": {
@@ -50,27 +50,38 @@
   },
   "id": "gh:1421984399",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workbuddy-checkin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:leoc114119/dsh-workbuddy-checkin#cad79b910754f3ad01e711dfaafb16dbf566160f",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workbuddy-checkin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/979edb0224846f1692dc1d84f7d39e45f7ea1ef8f5194e351b2d8fcd58b5f4f0/leoc114119/dsh-workbuddy-checkin",
     "description": "DSH (DeepSeek Harness) 插件：注册 workbuddy_checkin 工具，读取本机 WorkBuddy 加密登录态并完成每日积分签到"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件：给 DSH 注册一个 workbuddycheckin 工具，读取本机 WorkBuddy 桌面端的加密登录态（只在内存中解密），查询并领取每日签到积分。"
   },
   "schemaVersion": 1,
   "scripts": {

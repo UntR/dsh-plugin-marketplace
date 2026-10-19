@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "31562ec5555d6e93a81c251b39d173b5d80c03c6"
   },
   "github": {
@@ -42,27 +42,41 @@
   },
   "id": "gh:1422176522",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-restart-planner",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:7gzgn/dsh-restart-planner#31562ec5555d6e93a81c251b39d173b5d80c03c6",
+    "version": "0.4.6"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./core": "./lib/core.js",
+      "./helper.mjs": "./lib/helper.mjs",
+      "./helper.ps1": "./lib/helper.ps1",
+      "./package.json": "./package.json",
+      "./plan": "./lib/plan.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-restart-planner",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9ae1afcdb678b459b0cd9986ac4a839c76dcb6bf4173986e8971286e0095d0e0/7gzgn/dsh-restart-planner",
-    "description": "Let the agent restart its own DSH host: schedule a self-restart, finish the turn first, then a detached helper stops and relaunches the app and reports back."
+    "description": "Let the agent restart its own DSH host: schedule a self-restart, finish the turn first, then a detached helper stops and relaunches the app and reports what happened."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH（DeepSeek Harness）用的自重启插件。 装完插件要重启才生效、改了 .js 要重启才加载、宿主卡住了要重启才能救 —— 以前这些都得干等用户动手。现在它是一个工具调用。"
   },
   "schemaVersion": 1,
   "scripts": {

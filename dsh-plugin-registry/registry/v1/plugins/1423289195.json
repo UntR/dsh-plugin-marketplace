@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "bce13dee11d145dcad5a8c33f4bd756f491b80a6"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1423289195",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-web-fetch-allowlist",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:icceey/dsh-web-fetch-allowlist#bce13dee11d145dcad5a8c33f4bd756f491b80a6",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "index.js",
+    "name": "dsh-web-fetch-allowlist",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e444b042b01ac8af111e8f682df1f7b74adee426584a157627df73f0ba315296/icceey/dsh-web-fetch-allowlist",
     "description": "为 DeepSeek Harness 的 web_fetch 提供可配置的 CIDR 白名单，支持 fake-IP。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 内置的 webfetch 会拒绝解析到内网、保留地址段的域名，防止 SSRF 攻击。但这也会导致有内网/透明代理需求的场景下请求失败。 内置插件无法关闭、也无法配置，因此本插件提供一个白名单补丁，支持额外放行一段 CIDR（默认 Clash/mihomo 的 fake-IP 段 198.18.0.0/15），其余行为全部沿用内置实现。"
   },
   "schemaVersion": 1,
   "scripts": {

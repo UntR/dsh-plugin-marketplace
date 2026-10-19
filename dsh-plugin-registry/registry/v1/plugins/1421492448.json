@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "e71cdce9892e998044a4d27ccbd1f7c947e26b3d"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1421492448",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-deepseek-web-chat",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:HAN-050917/dsh-plugin-dsweb-harness#e71cdce9892e998044a4d27ccbd1f7c947e26b3d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-deepseek-web-chat",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/37801ade19463d8a39622216171eca491d68b17c5e3e3cab4a1ae114a5d2d35a/HAN-050917/dsh-plugin-dsweb-harness",
     "description": "Use DeepSeek's web chat inside DSH - your real chat history in the leftmost sidebar, a Chat/Work switch beside the agent mode, plus streaming answers, thinking, web search and file uploads you can keep asking about."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 chat.deepseek.com（DeepSeek 网页版）的对话记录同步进 DSH 的 Web 界面，并在同一个窗口里 直接继续聊天——不用再切到浏览器。左侧面板栏多出一个「聊天」图标，会话标题栏多出一个 聊天 / 工作 切换开关，和 ChatGPT 桌面版的 聊天 ⇄ 工作 是一个意思。"
   },
   "schemaVersion": 1,
   "scripts": {

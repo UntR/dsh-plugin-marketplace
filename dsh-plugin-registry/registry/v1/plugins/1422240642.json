@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "ef331b30c89854e29dc9d4954bd86e457a24b850"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1422240642",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-orchd",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-plugin-orchd@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-orchd",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9151076ca75f5ede18c27588b15addb0aac3223af5b5839bc83f9b04686c7025/7bder/dsh-plugin-orchd",
     "description": "Read-only orchd panel for the DSH right sidebar: task board, dependency graph, ideas and review timeline for the session's project. · DSH 右侧栏的 orchd 只读面板。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Read-only orchd panel for the DeepSeek Harness (DSH) right sidebar: open a project session and see that project's task board, dependency graph, ideas and review timeline next to the conversation. No project configuration — the plugin derives the project from the session."
   },
   "schemaVersion": 1,
   "scripts": {

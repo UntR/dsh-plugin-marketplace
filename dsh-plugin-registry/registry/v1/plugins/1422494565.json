@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "61b56f31112c57c14815fa53f9c3d4cc34f5997c"
   },
   "github": {
@@ -39,27 +39,39 @@
   },
   "id": "gh:1422494565",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-zhipu-provider",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:youmu129/dsh-zhipu-provider#61b56f31112c57c14815fa53f9c3d4cc34f5997c",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-zhipu-provider",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2ffcef96efacb1b9c23ed88644d192b94bba6f543c580e99798d3fa389855877/youmu129/dsh-zhipu-provider",
     "description": "DSH 插件：播种智谱 Coding Plan 供应商，对话输入区底部显示用量（5 小时 / 周 / MCP 月度配额）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）插件：为 Web GUI 接入智谱 Coding Plan（智谱 OpenAI 兼容 coding 端点），并附带用量展示。"
   },
   "schemaVersion": 1,
   "scripts": {

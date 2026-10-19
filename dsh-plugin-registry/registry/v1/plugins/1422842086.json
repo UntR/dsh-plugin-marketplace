@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "fe79427e9400c04260e2a48b34bcdbbbd5c53570"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1422842086",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workspace-folders",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Fleey/dsh-workspace-folders#fe79427e9400c04260e2a48b34bcdbbbd5c53570",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workspace-folders",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3eb2e9d68ab8f90e9a88847cfee43ba23b6ef059393482cb6e3831b1861e4670/Fleey/dsh-workspace-folders",
     "description": "DeepSeek Harness (DSH) plugin: multiple working directories per workspace, like Claude's additional directories / /add-dir"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness（DSH）工作区添加多个工作目录的插件，效果类似 Claude 的 additional directories / /add-dir：除了工作区本身的目录，还可以把其他目录（例如共享库、文档仓库、另一个前端项目）加入同一个工作区，让模型一起读写。"
   },
   "schemaVersion": 1,
   "scripts": {

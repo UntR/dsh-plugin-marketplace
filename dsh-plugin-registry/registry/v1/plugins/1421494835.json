@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "28fd1d2aa2eb1cd0d5d1cbeb4f493b8d683db48f"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-host-mcp",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/71bfb3639e1dcd89c6eb248827d570f7ead86cfea3b6e94fc3b159d76c3c8ba1/awol2005ex3/dsh-hosts",
     "description": "DeepSeek Harness (dsh) 插件：连接装了 host_server_mcp 的服务器，在 Web 设置页配置（IP/主机名 + 端口 + token），之后 agent 对话里即可访问这些服务器排查问题——查看信息、执行脚本、读文件、一键诊断。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness (dsh) 插件：连接装了 hostservermcp 的服务器，在 Web 设置页配置（IP/主机名 + 端口 + token），之后 agent 对话里即可访问这些服务器排查问题——查看信息、执行脚本、读文件、一键诊断。"
   },
   "schemaVersion": 1,
   "scripts": {

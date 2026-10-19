@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "7894da833582b46526b251348cd8993b70a5ce85"
   },
   "github": {
@@ -49,27 +49,42 @@
   },
   "id": "gh:1423215529",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-which",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:11111353535/dsh-which#7894da833582b46526b251348cd8993b70a5ce85",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-which",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/abb165b45cb7fdf95bee8d0ddac77080b7f5e09cc63ffadffbb99b7d6716e05d/11111353535/dsh-which",
     "description": "Command resolution forensics: which file a command actually runs, what it shadows, and whether the copies agree."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Command resolution forensics for DeepSeek Harness. When you type node, a shell answers with a rule that is longer than people remember — PATH order, then PATHEXT on Windows or the executable bit elsewhere, with builtins short-circuiting the whole thing. dsh-which reports what tha"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "d052d2f8326205baba436e36de3d6c7e04b8135d"
   },
   "github": {
@@ -39,27 +39,39 @@
   },
   "id": "gh:1423123568",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-deepseek-provider",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:youmu129/dsh-deepseek-provider#d052d2f8326205baba436e36de3d6c7e04b8135d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-deepseek-provider",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7ae08e56311877dfe18547084933c72f73d1b58d717c227b0c448129083cf260/youmu129/dsh-deepseek-provider",
     "description": "DSH 插件：在 Web GUI 对话输入区底部显示 DeepSeek 账户余额（总额 / 赠送 / 充值）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）插件：Web GUI 底部余额 pill（conversation.composer.dock），仅当前会话选用 DeepSeek 模型时显示，摘要展示主币种总额（优先 CNY），点击开面板看各币种总额 / 赠金 / 充值与账户可用性。数据取自 DeepSeek 开放平台 GET /user/balance。"
   },
   "schemaVersion": 1,
   "scripts": {

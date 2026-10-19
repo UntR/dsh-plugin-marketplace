@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "374bc5a655696e092a018fb7a5efb068d5223a70"
   },
   "github": {
@@ -51,27 +51,51 @@
   },
   "id": "gh:1422036826",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-telegram",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:SMMURDA/dsh-paean-telegram#374bc5a655696e092a018fb7a5efb068d5223a70",
+    "version": "0.4.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./extensions/harness-feed": {
+        "default": "./dist/extensions/harness-feed.js",
+        "types": "./dist/extensions/harness-feed.d.ts"
+      },
+      "./extensions/openclaw": {
+        "default": "./dist/extensions/openclaw.js",
+        "types": "./dist/extensions/openclaw.d.ts"
+      },
+      "./extensions/reasoning": {
+        "default": "./dist/extensions/reasoning.js",
+        "types": "./dist/extensions/reasoning.d.ts"
+      }
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-telegram",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8325e9675dc0112a09f4617c522e8e6315c6e18d391b6cc0fc97f84f5547d351/SMMURDA/dsh-paean-telegram",
     "description": "Native Telegram bridge for Paean Harness (DeepSeek Harness distribution): chat with your agent and drive sessions, models, workspaces and goals from your phone. Also works with other DSH profiles."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A native Telegram bridge for DeepSeek Harness (DSH), built so the Paean Harness distribution — which ships no Telegram bridge of its own — can be driven from a phone. Send a message and the agent answers in the chat; everything else (sessions, models, workspaces, goals, skills, p"
   },
   "schemaVersion": 1,
   "scripts": {

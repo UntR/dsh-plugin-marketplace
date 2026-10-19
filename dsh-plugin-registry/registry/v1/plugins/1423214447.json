@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "98d9cd5d459f99084894612df66710866d191956"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1423214447",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-preset-inspector",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:omdsh-dev/dsh-preset-inspector#98d9cd5d459f99084894612df66710866d191956",
+    "version": "0.20.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.mjs",
+    "name": "dsh-preset-inspector",
+    "status": "valid",
+    "type": "module",
+    "version": "0.20.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3ebc73283cbdb63a4c134b6399bffe8603579bee0df4c8b23919a1d04d27c10c/omdsh-dev/dsh-preset-inspector",
     "description": "Agent preset 检查器：看清每个 preset 的层来源、装配树、提示词与工具（DeepSeek Harness 插件）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "设置页的「查看配置」只给你一份 YAML 文本：没有来源、没有包信息、没有层次。可 preset 的实际行为是多层补丁叠出来的——dsh-base 声明一行、dsh-web-app 改它、你的 cordis.patch.yml 再改一次。最后哪个值生效、这行是谁加的，全藏在多份文件里。"
   },
   "schemaVersion": 1,
   "scripts": {

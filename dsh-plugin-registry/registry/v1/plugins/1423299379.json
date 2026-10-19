@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "c131c6461139f1dae126ed13d6dd72af6dffab0b"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./presets/router-flash.patch.yml": "./presets/router-flash.patch.yml",
+      "./router-bootstrap": "./lib/router-bootstrap.mjs"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-router-flash",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/00b860d6ff9945768e4e8d478dbacd502e0b7c871a0ecd06617ffe69440d38f9/taxueseek/dsh-router-flash",
     "description": "探索模式 · DeepSeek V4 Flash 专用 agent preset — 渠道无关命中、首轮工具面收窄、声明行交付"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "预设选择器 / Preset Picker"
   },
   "schemaVersion": 1,
   "scripts": {

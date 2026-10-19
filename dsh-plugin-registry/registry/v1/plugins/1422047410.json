@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "1efc11f15f923bc7a19b592043a26aed26e552da"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1422047410",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-doubao-tts",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:qin-yu-1314/dsh-doubao-tts#1efc11f15f923bc7a19b592043a26aed26e552da",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./entry.js"
+      },
+      "./client": "./client/doubao-tts.js"
+    },
+    "main": "entry.js",
+    "name": "dsh-doubao-tts",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/09c744929769a4b463ef6b064e455485cd1dc8175aec0a5cd2df4d4dba406c32/qin-yu-1314/dsh-doubao-tts",
     "description": "在deepseekharness中接入豆包语言模型，阅读对话。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把火山引擎豆包「双向流式语音合成 V3」接进 DSH Web GUI：每条已定稿的助手回答后面多一个朗读按钮，点一下就把这条回答合成成语音播出来。"
   },
   "schemaVersion": 1,
   "scripts": {

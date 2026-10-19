@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "0c10a5fcdf07492252baa6c6db6ab9c9c5c50049"
   },
   "github": {
@@ -46,27 +46,36 @@
   },
   "id": "gh:1422321547",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-pylon-opencode-free",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:rumilhz/dsh-pylon-opencode-free#0c10a5fcdf07492252baa6c6db6ab9c9c5c50049",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.ts"
+    },
+    "main": "./src/index.ts",
+    "name": "dsh-pylon-opencode-free",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b68e495041f4cfe74345e42ca5099d1a8e5f9059be564555e3168fce75049a4d/rumilhz/dsh-pylon-opencode-free",
     "description": "Keeps the OpenCode Go free-tier provider in sync with the gateway: reads /v1/models, filters to models the official docs mark Free, and writes the list into the DSH profile. Adds new models, removes delisted ones."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "自动生成并维护 OpenCode Go 的免费档 provider（opencode-go-free）： 启动时问一次网关，把免费模型清单如实写进 profile —— 新增的补上，下架的删掉。"
   },
   "schemaVersion": 1,
   "scripts": {

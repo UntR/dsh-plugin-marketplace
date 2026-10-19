@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "52328a1c40aacb4471a787f6013a9e58182fde05"
   },
   "github": {
@@ -44,27 +44,43 @@
   },
   "id": "gh:1423021356",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-message-edit",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zhaoruizhe81/dsh-message-edit#52328a1c40aacb4471a787f6013a9e58182fde05",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-message-edit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5ff23b077ec09dc937523ad7868e5303f50bc2c4936024242533b40023ab5968/zhaoruizhe81/dsh-message-edit",
     "description": "dsh Web GUI 插件：模型这条回答不好就直接改它，改写后的版本成为后续对话的上下文，原始回答留在会话日志里。角色扮演刚需。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "模型这条回答不好——改它。改写后的版本成为后续对话的上下文，原始回答留在会话日志里。"
   },
   "schemaVersion": 1,
   "scripts": {

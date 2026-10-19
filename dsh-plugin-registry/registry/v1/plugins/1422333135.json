@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "41f7f66539d32aae9ddd47907221d93ad98c155f"
   },
   "github": {
@@ -44,27 +44,40 @@
   },
   "id": "gh:1422333135",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-context-diet",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dsh-plugin-db/dsh-context-diet#41f7f66539d32aae9ddd47907221d93ad98c155f",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./normalize": "./normalize.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-context-diet",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5ae3a38af6fceddfb991e65bdb6db893c44c1aa94587659138c3565b61e94ed8/dsh-plugin-db/dsh-context-diet",
     "description": "Cut model-facing tokens out of tool output before it enters a request. A global DeepSeek Harness plugin: lossless normalization, annotated repetition collapse, and recoverable structure-aware trimming."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A global DeepSeek Harness plugin that removes tokens from tool output before that output can enter a model request — without removing anything the model may need, and without changing what the model is able to do."
   },
   "schemaVersion": 1,
   "scripts": {

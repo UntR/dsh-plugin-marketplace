@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "c6bea74cad699b507d7f9acee30fbcccea0cfba4"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1422507951",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-extra-workspaces",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dongkid/dsh-extra-workspaces#c6bea74cad699b507d7f9acee30fbcccea0cfba4",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-extra-workspaces",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c3da469f90ecd0b20522e49863d4d7fabcbf7e147b95ff7e9ee44c30ae368349/dongkid/dsh-extra-workspaces",
     "description": "Per-session extra working directories for DSH: a session-settings option plus a runtime-context reminder that tells the model which extra directories this session may use."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给一个 DSH 会话挂上额外的本地工作目录。清单出现在右侧栏的 会话设置 页里，并且会作为一条运行时上下文提醒告诉模型——只在清单变化时注入，不是每轮重复。"
   },
   "schemaVersion": 1,
   "scripts": {

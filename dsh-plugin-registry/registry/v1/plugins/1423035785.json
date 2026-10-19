@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "370eb4fab632bf698f69a1328d1fcffccf2c3f99"
   },
   "github": {
@@ -16,7 +16,7 @@
     "defaultBranch": "main",
     "description": "DeepSeek Harness 本地视频制作与设计插件：多轨剪辑、模板与设计体系、原生预览画布和真实文件导出",
     "fork": false,
-    "forks": 1,
+    "forks": 2,
     "headSha": "370eb4fab632bf698f69a1328d1fcffccf2c3f99",
     "homepageUrl": null,
     "language": "JavaScript",
@@ -25,14 +25,14 @@
       "spdxId": "AGPL-3.0"
     },
     "nodeId": "R_kgDOVNHNiQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/14e4820063a73d7757a9798fcc05501c59d1e2efe3d47b434e2abdfca8c2ed81/Ebony-Vinyl/EAC-design-world",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/efe5097a9268c8ffb2c9ae06d3fbe5629863c83d0dfc8e7a45e70b7c92a0a218/Ebony-Vinyl/EAC-design-world",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/245557608?u=712c2e35c95203148495b217963d6c6c737aba70&v=4",
       "login": "Ebony-Vinyl"
     },
     "pushedAt": "2026-10-18T06:57:51Z",
     "slug": "Ebony-Vinyl/EAC-design-world",
-    "stars": 32,
+    "stars": 41,
     "topics": [
       "ai-design",
       "ai-video",
@@ -55,37 +55,49 @@
       "video-editor",
       "video-production"
     ],
-    "updatedAt": "2026-10-18T07:03:29Z",
+    "updatedAt": "2026-10-19T07:15:36Z",
     "url": "https://github.com/Ebony-Vinyl/EAC-design-world"
   },
   "id": "gh:1423035785",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "eac-design-world",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "eac-design-world@0.4.0",
+    "version": "0.4.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./plugin/host.mjs",
+      "./client": "./plugin/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./plugin/host.mjs",
+    "name": "eac-design-world",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/14e4820063a73d7757a9798fcc05501c59d1e2efe3d47b434e2abdfca8c2ed81/Ebony-Vinyl/EAC-design-world",
+    "coverUrl": "https://opengraph.githubassets.com/efe5097a9268c8ffb2c9ae06d3fbe5629863c83d0dfc8e7a45e70b7c92a0a218/Ebony-Vinyl/EAC-design-world",
     "description": "DeepSeek Harness 本地视频制作与设计插件：多轨剪辑、模板与设计体系、原生预览画布和真实文件导出"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让创作，自成世界。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
-    "postinstall": false,
+    "postinstall": true,
     "preinstall": false,
     "prepare": false
   }

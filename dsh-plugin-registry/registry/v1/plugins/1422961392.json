@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
-    "headSha": "e3100974c1aa80d4024d979a5b0e52e4a0f41eea"
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
+    "headSha": "887ccce97c109c711b65917227a1265ab69ab12e"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-17T04:58:15Z",
     "databaseId": 1422961392,
     "defaultBranch": "main",
-    "description": "DSH 桌面端（DeepSeek Harness）插件：编辑会话里的助手回复与思维链，让模型采信改后的内容——在线写入立即生效，也支持重启生效的落盘改写和不对会话造成影响刷新即恢复的仅渲染。",
+    "description": "DSH 桌面端（DeepSeek Harness）插件：编辑会话里的助手回复与思维链，让模型采信改后的内容—在线写入立即生效。Plugin: Edit the assistant's responses and thought chains within sessions, enabling the model to adopt the modified content — online writing takes effect immediately.",
     "fork": false,
     "forks": 0,
-    "headSha": "e3100974c1aa80d4024d979a5b0e52e4a0f41eea",
+    "headSha": "887ccce97c109c711b65917227a1265ab69ab12e",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVNCq8A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5e9f2c8312095f49dc8db79f307c8306b13335431b431e789beb7957141fec4c/kinggod899/dsh-reply-forge-v3",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/6ee4afd2d5b3bdf0cc51dc709791b50b8cdf2c113d22ddb1feb15e7e45cf19af/kinggod899/dsh-reply-forge-v3",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/57833500?u=9f851bc07a154191990148407e3effe72b3e41c2&v=4",
       "login": "kinggod899"
     },
-    "pushedAt": "2026-10-18T05:12:01Z",
+    "pushedAt": "2026-10-19T03:11:27Z",
     "slug": "kinggod899/dsh-reply-forge-v3",
-    "stars": 1,
+    "stars": 4,
     "topics": [
       "chat-editor",
       "deepseek",
@@ -41,32 +41,44 @@
       "dsh-plugin",
       "electron"
     ],
-    "updatedAt": "2026-10-18T07:11:49Z",
+    "updatedAt": "2026-10-19T03:11:31Z",
     "url": "https://github.com/kinggod899/dsh-reply-forge-v3"
   },
   "id": "gh:1422961392",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-reply-forge-v3",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kinggod899/dsh-reply-forge-v3#887ccce97c109c711b65917227a1265ab69ab12e",
+    "version": "3.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./.dsh-plugin/index.mjs",
+      "./client": "./.dsh-plugin/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./.dsh-plugin/index.mjs",
+    "name": "@local/dsh-reply-forge-v3",
+    "status": "valid",
+    "type": "module",
+    "version": "3.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5e9f2c8312095f49dc8db79f307c8306b13335431b431e789beb7957141fec4c/kinggod899/dsh-reply-forge-v3",
-    "description": "DSH 桌面端（DeepSeek Harness）插件：编辑会话里的助手回复与思维链，让模型采信改后的内容——在线写入立即生效，也支持重启生效的落盘改写和不对会话造成影响刷新即恢复的仅渲染。"
+    "coverUrl": "https://opengraph.githubassets.com/6ee4afd2d5b3bdf0cc51dc709791b50b8cdf2c113d22ddb1feb15e7e45cf19af/kinggod899/dsh-reply-forge-v3",
+    "description": "DSH 桌面端（DeepSeek Harness）插件：编辑会话里的助手回复与思维链，让模型采信改后的内容—在线写入立即生效。Plugin: Edit the assistant's responses and thought chains within sessions, enabling the model to adopt the modified content — online writing takes effect immediately."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 桌面端（DeepSeek Harness）插件。会话里每条 AI 回复旁边多一个按钮， 点开就能改正文或思维链；改完写进去，这个会话之后的每一轮，模型都只认你改过的版本。"
   },
   "schemaVersion": 1,
   "scripts": {

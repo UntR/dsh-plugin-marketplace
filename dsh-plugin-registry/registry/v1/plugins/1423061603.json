@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "5d1e4ae6aac19fb05131dd6a5da003a28032688e"
   },
   "github": {
@@ -48,27 +48,39 @@
   },
   "id": "gh:1423061603",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-smartprompt",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:shellpower96/dsh-prompt-optimizer#5d1e4ae6aac19fb05131dd6a5da003a28032688e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-smartprompt",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4260f911bde9222d54e8887bf443a57a545e6b959a3e329c600f924de7cc7e7c/shellpower96/dsh-prompt-optimizer",
     "description": "DSH web plugin: a Smart Prompt button under the composer that rewrites your draft into a structured prompt grounded in the project documents you declare (AGENTS.md / README.md), capped at 400 characters, configured entirely by the caller."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DSH Web plugin that adds a Smart Prompt button under the composer. Click it and your rough draft is rewritten into a structured, executable prompt grounded in your workspace conventions — then filled straight back into the composer."
   },
   "schemaVersion": 1,
   "scripts": {

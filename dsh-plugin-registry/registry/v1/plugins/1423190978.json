@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "c9124224e851eb219b89e76092a68c5d8b1a0590"
   },
   "github": {
@@ -42,27 +42,42 @@
   },
   "id": "gh:1423190978",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-organizer",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:a1137261060/dsh-session-organizer#c9124224e851eb219b89e76092a68c5d8b1a0590",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-organizer",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0dd3b42628e6d89aa1c703f17db959729e57557166783ea3c7ead87624c6b520/a1137261060/dsh-session-organizer",
     "description": "Two-level session organizer for DSH web sidebar: workspace groups + per-workspace session folders, drag & drop, status dots, full-text search"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Two-level session organizer for the DeepSeek Harness (DSH) web sidebar — organize workspaces into custom groups (level 1) and sessions into per-workspace folders (level 2, nesting supported). Drag & drop everywhere, live status dots (blocked / running / completed), a pending-sess"
   },
   "schemaVersion": 1,
   "scripts": {

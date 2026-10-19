@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "320cebb458a525e119d34095010e3faf55166c47"
   },
   "github": {
@@ -47,27 +47,42 @@
   },
   "id": "gh:1423194263",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-web-preview",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:nubeslove/dsh-web-preview#320cebb458a525e119d34095010e3faf55166c47",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-web-preview",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b342fcf69d32f62c5649b45b3f2cd6b175008c3775bd39eafa7ae60f142f6f1e/nubeslove/dsh-web-preview",
     "description": "DSH 侧栏网页预览：在右侧栏直接打开本地开发服务器或任意网址，不用跳出去开外部浏览器。In-sidebar web preview for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 右侧栏里直接预览网页，不用跳出 DSH 去开外部浏览器。"
   },
   "schemaVersion": 1,
   "scripts": {

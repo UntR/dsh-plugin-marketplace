@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "bca9c590f2187daf6764485c23ee3062da11763d"
   },
   "github": {
@@ -45,27 +45,42 @@
   },
   "id": "gh:1421997735",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-market-console",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lyufeng000/dsh-market-console#bca9c590f2187daf6764485c23ee3062da11763d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-market-console",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/33e0b936a96603719e73ff0b68b1a6e09332be80c42ca631158bc502df516c70/lyufeng000/dsh-market-console",
     "description": "DSH 插件市场控制台：在「设置 → 插件」里搜索、安装、启停、卸载第三方插件，全程走官方 plugin-manager 远程接口。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 的「设置 → 插件」分区里，加一个能搜索、安装、启停、卸载第三方插件的标签页。"
   },
   "schemaVersion": 1,
   "scripts": {

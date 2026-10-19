@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "ae70f8146ebe30000cf55eda1150b57d442d9f3a"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1421978025",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-resume-budget",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xingzoudefengye/dsh-resume-budget#ae70f8146ebe30000cf55eda1150b57d442d9f3a",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./decision": "./lib/decision.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-resume-budget",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/66ae2451dc26aecf45ccfa6b8ba75fbb7f2a655b2925376ae7343d2bcdbdb8fc/xingzoudefengye/dsh-resume-budget",
     "description": "Resume input budget for DeepSeek Harness: compact a restored session's history before its first request when the projection is over the ceiling."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "恢复一个长会话时，在第一个请求发出之前检查预计输入；超过阈值就先压缩一次，再发请求。"
   },
   "schemaVersion": 1,
   "scripts": {

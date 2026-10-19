@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "fba735c7719826a0f52d5dfba3ac8a0150efa695"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1423050202",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-fullscreen-shortcut",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kimufly/dsh-fullscreen-shortcut#fba735c7719826a0f52d5dfba3ac8a0150efa695",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-fullscreen-shortcut",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fe0d0cdcad28165d23aab6aa46be3a8776a480f4e0025f8943321fe9b834ee0f/kimufly/dsh-fullscreen-shortcut",
     "description": "macOS ⌃⌘F window-fullscreen shortcut for the DeepSeek Harness desktop app."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 桌面端使用自定义的 Electron 外壳，并替换掉了 Electron 默认的应用菜单。macOS 原生的「进入全屏幕 / Enter Full Screen」菜单项因此不存在，挂在它上面的系统快捷键 ⌃⌘F 也随之失效；而外壳自带的快捷键目录里并没有「窗口全屏」这条命令。"
   },
   "schemaVersion": 1,
   "scripts": {

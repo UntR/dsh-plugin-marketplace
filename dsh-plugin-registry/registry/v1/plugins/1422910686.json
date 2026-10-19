@@ -1,43 +1,48 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
-    "headSha": "1043686a23f92990dacc271d1720419d3fa3ef11"
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
+    "headSha": "1a1103cc2d02f0cf918c71fad94661d499d111a8"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-17T03:35:45Z",
     "databaseId": 1422910686,
     "defaultBranch": "main",
-    "description": "SourceDeck：DSH Desktop 的会话内资料台，LLM 搜索轮次、GitHub 可视化卡片、收藏与聊天联动。",
+    "description": "SourceDeck · 资料台 for DeepSeek Harness Desktop: background research, screen and compare open-source sources, then reference selections into the chat draft. Maintains DSH 0.2.1-rc.2 only.",
     "fork": false,
     "forks": 0,
-    "headSha": "1043686a23f92990dacc271d1720419d3fa3ef11",
-    "homepageUrl": null,
+    "headSha": "1a1103cc2d02f0cf918c71fad94661d499d111a8",
+    "homepageUrl": "https://github.com/Archaofan/dsh-source-deck/releases/tag/v0.3.0",
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOVM_k3g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/cd49a11294c7f2a7dbacb0cdcb98e2b476f91cd9628727fe4119eab55308de8c/Archaofan/dsh-source-deck",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f792a7a718001ffcd1ef43009c0f497b3cf4f8807a7f111456a1959f3792816d/Archaofan/dsh-source-deck",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/101515224?u=67156b855c4c0faba146972960a05c9c7f955844&v=4",
       "login": "Archaofan"
     },
-    "pushedAt": "2026-10-18T08:11:10Z",
+    "pushedAt": "2026-10-19T08:20:30Z",
     "slug": "Archaofan/dsh-source-deck",
-    "stars": 0,
+    "stars": 1,
     "topics": [
+      "ai-agents",
+      "ai-research",
       "deepseek-harness",
+      "desktop",
+      "developer-tools",
       "dsh",
       "dsh-plugin",
       "plugin",
+      "source-deck",
       "ui"
     ],
-    "updatedAt": "2026-10-18T03:30:30Z",
+    "updatedAt": "2026-10-19T08:20:35Z",
     "url": "https://github.com/Archaofan/dsh-source-deck"
   },
   "id": "gh:1422910686",
@@ -45,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -55,14 +60,32 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-source-deck",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/cd49a11294c7f2a7dbacb0cdcb98e2b476f91cd9628727fe4119eab55308de8c/Archaofan/dsh-source-deck",
-    "description": "SourceDeck：DSH Desktop 的会话内资料台，LLM 搜索轮次、GitHub 可视化卡片、收藏与聊天联动。"
+    "coverUrl": "https://opengraph.githubassets.com/f792a7a718001ffcd1ef43009c0f497b3cf4f8807a7f111456a1959f3792816d/Archaofan/dsh-source-deck",
+    "description": "SourceDeck · 资料台 for DeepSeek Harness Desktop: background research, screen and compare open-source sources, then reference selections into the chat draft. Maintains DSH 0.2.1-rc.2 only."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "GitHub · 0.3.2 预发行 · 稳定版 0.3.0 · GitMCP · Marketplace PR #7739"
   },
   "schemaVersion": 1,
   "scripts": {

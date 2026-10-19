@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "5d0ea75b95a7981154f36eecad2b80375d268cfd"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./host.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "host.js",
+    "name": "dsh-plugin-session-spend",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/79d57e5f79562c85428808ea8ff62791cd81e98a5ab1623c9f4dea744c2b5ad7/dtxovo/dsh-plugin-session-spend",
     "description": "DeepSeek Harness plugin: shows the current session's spend, priced by DeepSeek's peak and off-peak rate windows."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that shows what the current session has cost so far, split by DeepSeek's peak and off-peak rate windows."
   },
   "schemaVersion": 1,
   "scripts": {

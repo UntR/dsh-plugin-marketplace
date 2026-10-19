@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "fdbc39408ee34fc3f6a7bbb6c9eb4c3c9e8c08e4"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1423178439",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-qoder-subagent",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:baldovinmarques391-design/dsh-qoder-subagent#fdbc39408ee34fc3f6a7bbb6c9eb4c3c9e8c08e4",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index-v020.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@local/dsh-qoder-subagent",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e365805dd22865c42413c51914243c0fa60d653b68e98ba93e71fdaf51e0dd2e/baldovinmarques391-design/dsh-qoder-subagent",
     "description": "让 Qoder CN 的免费模型（Qwen3.8-Flash 等）当 DSH 的子代理：逐次选模型、逐次传权限、零提示词注入、全程留痕。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 Qoder CN 自带的 CLI（qoderclicn，藏在 resources\\app.asar.unpacked\\nodemodules\\@qoder-ai\\qoder-cn-agent-sdk\\dist\\worker\\ 里） 当成 DSH 的免费子代理用。默认模型 Qwen3.8-Flash（实测 billable: false、credits: 0、usd: 0）。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
     "enrichmentStatus": "ok",
-    "headSha": "a2a013818c41237d739d85e3b76a93b65c3a638f"
+    "headSha": "dd67dcaba34d25f29c42da9e5036080d4d54d27d"
   },
   "github": {
     "archived": false,
@@ -16,8 +16,8 @@
     "defaultBranch": "main",
     "description": "A toolkit for low-level operations in DSH, designed to reduce token usage and task execution time / DSH 底层操作工具插件，旨在减少 Token 消耗与任务耗时",
     "fork": false,
-    "forks": 82,
-    "headSha": "a2a013818c41237d739d85e3b76a93b65c3a638f",
+    "forks": 87,
+    "headSha": "dd67dcaba34d25f29c42da9e5036080d4d54d27d",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,20 +25,20 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOVAlDig",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/0527cfd75b483d6e489fd762f66965fa109844a9ba79c3de97c2a0d1003b08fd/T-Auto/dsh-ops",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f12a92df80e4027bd85c1dff3e12a0380a4f11fafb71ae567fdf3b601153adf8/T-Auto/dsh-ops",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/183904010?u=63a57869ea10404fa559669c0214df82be4c0bd8&v=4",
       "login": "T-Auto"
     },
-    "pushedAt": "2026-10-18T07:59:36Z",
+    "pushedAt": "2026-10-19T08:02:39Z",
     "slug": "T-Auto/dsh-ops",
-    "stars": 2934,
+    "stars": 3185,
     "topics": [
       "dsh",
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-10-18T08:34:30Z",
+    "updatedAt": "2026-10-19T09:31:25Z",
     "url": "https://github.com/T-Auto/dsh-ops"
   },
   "id": "gh:1409893258",
@@ -48,11 +48,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-ops@0.3.0",
-    "version": "0.3.0"
+    "spec": "dsh-ops@0.3.2",
+    "version": "0.3.2"
   },
   "npm": {
-    "latestVersion": "0.3.0",
+    "latestVersion": "0.3.2",
     "published": true,
     "repositoryMatches": true
   },
@@ -66,6 +66,14 @@
       },
       "./background/locale/*.json": "./lib/components/background/locale/*.json",
       "./background/package.json": "./lib/components/background/package.json",
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./discovery": {
+        "default": "./lib/components/discovery/index.js"
+      },
+      "./discovery/locale/*.json": "./lib/components/discovery/locale/*.json",
+      "./discovery/package.json": "./lib/components/discovery/package.json",
       "./file": {
         "default": "./lib/components/file/index.js"
       },
@@ -90,6 +98,9 @@
       "./ptc": {
         "default": "./lib/components/ptc/index.js"
       },
+      "./ptc-sdk": {
+        "types": "./lib/ptc/sdk.d.ts"
+      },
       "./ptc/locale/*.json": "./lib/components/ptc/locale/*.json",
       "./ptc/package.json": "./lib/components/ptc/package.json",
       "./shell": {
@@ -107,15 +118,15 @@
     "name": "dsh-ops",
     "status": "valid",
     "type": "module",
-    "version": "0.3.1"
+    "version": "0.4.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/0527cfd75b483d6e489fd762f66965fa109844a9ba79c3de97c2a0d1003b08fd/T-Auto/dsh-ops",
+    "coverUrl": "https://opengraph.githubassets.com/f12a92df80e4027bd85c1dff3e12a0380a4f11fafb71ae567fdf3b601153adf8/T-Auto/dsh-ops",
     "description": "A toolkit for low-level operations in DSH, designed to reduce token usage and task execution time / DSH 底层操作工具插件，旨在减少 Token 消耗与任务耗时"
   },
   "readme": {
     "available": true,
-    "excerpt": "致力优化dsh插件token效率，提升ai性能，减少token消耗，减少任务总时间的插件，解决 Windows 下 DSH 反复使用 PowerShell 报错造成的 token、时间和模型注意力浪费，会持续更新。"
+    "excerpt": "OPS 为 DSH 增加有界文件与文档工具。Native 模式返回紧凑、带行号的文本；PTC 代码从同一个按调用启动的 Rust worker 获取类型化 Outcome。宿主集成使用严格 TypeScript，编译后保持已有 JavaScript 包路径。"
   },
   "schemaVersion": 1,
   "scripts": {

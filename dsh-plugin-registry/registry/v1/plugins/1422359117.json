@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "b28316be0beca1f05126c8ef1d3166e14a9bb784"
   },
   "github": {
@@ -42,27 +42,40 @@
   },
   "id": "gh:1422359117",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-slipway",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:7gzgn/dsh-slipway#b28316be0beca1f05126c8ef1d3166e14a9bb784",
+    "version": "0.1.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./core": "./lib/core.js",
+      "./github": "./lib/github.js",
+      "./package.json": "./package.json",
+      "./publish": "./lib/publish.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-slipway",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/54b81de54e9fe2df36b1a38e7faf4e5633e1d19b9cab8763b0acf0b4b98677b6/7gzgn/dsh-slipway",
     "description": "Ship a local DSH plugin project to GitHub and the plugin market in one call: preflight, per-file upload with byte verification, the market registry PR, then pull every published file back and compare bytes."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把本地 DSH 插件工程一条命令发到 GitHub、再开一条市场收录 PR，最后把线上文件逐个拉回来比 sha256。"
   },
   "schemaVersion": 1,
   "scripts": {

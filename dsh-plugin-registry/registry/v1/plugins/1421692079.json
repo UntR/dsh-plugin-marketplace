@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "d49ba4b7dd6bf54f3bd52f8bd937af955f9a8add"
   },
   "github": {
@@ -50,33 +50,51 @@
   },
   "id": "gh:1421692079",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-session-metrics",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:mrdhira/dsh-session-metrics#d49ba4b7dd6bf54f3bd52f8bd937af955f9a8add",
+    "version": "1.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/v1/index.js"
+      },
+      "./client": {
+        "default": "./lib/v1/client.js"
+      },
+      "./host": {
+        "default": "./lib/v1/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/v1/index.js",
+    "name": "dsh-session-metrics",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0173940c5a1b6996ee2326bba980cae9514313c81b8477e39087b4380eabca8c/mrdhira/dsh-session-metrics",
     "description": "Session cost and billing metrics for the DSH Web GUI: what this conversation cost, what the cache saved, and whether the current hour is peak or off-peak. A companion to the shipped stats pills, never a duplicate of them."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Session cost and billing metrics for the DSH Web GUI — what this conversation cost, what the cache saved, and whether the current hour is peak or off-peak. Built as a companion to the shipped stats pills, never a duplicate of them."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

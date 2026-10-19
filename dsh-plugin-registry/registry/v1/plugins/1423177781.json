@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "9d055f1073865eda129d5b7e87a7388100a1b29b"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1423177781",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ban-strikethrough",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:baldovinmarques391-design/dsh-ban-strikethrough#9d055f1073865eda129d5b7e87a7388100a1b29b",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-ban-strikethrough",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fd461b69328edf95884084f341d47bfaf613482d6b17db7eba6cad77e74dc68e/baldovinmarques391-design/dsh-ban-strikethrough",
     "description": "不再渲染 Markdown 删除线，并还原被区间号吃掉的 ~ 字符。覆盖聊天、思考过程与会话文档预览。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：禁止删除线渲染。在 Harness Web GUI 的聊天、思考过程，以及会话文档预览的 Markdown 页里取消删除线，并把被吃掉的 字符还原回文本。"
   },
   "schemaVersion": 1,
   "scripts": {

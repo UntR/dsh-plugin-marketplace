@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "968d16e5a35ec98e96940f67e424689be466a34b"
   },
   "github": {
@@ -44,27 +44,43 @@
   },
   "id": "gh:1423286184",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-compact-focus",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Shinarin/dsh-compact-focus#968d16e5a35ec98e96940f67e424689be466a34b",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/engine.js",
+      "./command": "./lib/command.js",
+      "./command/icon": "./icon.svg",
+      "./command/locale/*.json": "./locale/*.json",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/engine.js",
+    "name": "dsh-compact-focus",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bb90d8d2c6728ea19ca6536449a15378ab9d6663a0ebbc1fdaeeb05ebb2063b1/Shinarin/dsh-compact-focus",
     "description": "DSH 压缩指令插件：给 /compact 增加可选的摘要重点，让压缩后的摘要优先保留指定内容。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的 /compact 加上“摘要重点”：压缩较早历史时，告诉摘要器这次要重点保留什么。"
   },
   "schemaVersion": 1,
   "scripts": {

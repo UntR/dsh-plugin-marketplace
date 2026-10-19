@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
-    "headSha": "404943cff155af8f55ff93455d85a3e2626c9def"
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
+    "headSha": "96cf2f4357b755c70ca5f718706d13f80a8f63c5"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness gate - per-turn persistent-operation counter: remind, instruct the model to stop, then ask for confirmation. Steps aside under sandbox/read-only modes; follows a live permission switch without restart. Verified on real hardware (full -> workspace-write -> read-only -> full). Crafted on an estimated 0.27 USD of model spend.",
     "fork": false,
     "forks": 0,
-    "headSha": "404943cff155af8f55ff93455d85a3e2626c9def",
+    "headSha": "96cf2f4357b755c70ca5f718706d13f80a8f63c5",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVNIohA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7d1992747ed2054698120f44c1b7f21bb0bf4320c01393ae9f55e74a65679e32/SteelUnion/dsh-confirm-gate",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/83a9932b8c19ea8280bcb59a7657c0b5bca3d1973f3349e73ad33b09b96166bb/SteelUnion/dsh-confirm-gate",
     "owner": {
-      "avatarUrl": "https://avatars.githubusercontent.com/u/343410766?v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/343410766?u=e67e5126a7a08bcb87ecd582797fc53a36920f54&v=4",
       "login": "SteelUnion"
     },
-    "pushedAt": "2026-10-18T08:30:05Z",
+    "pushedAt": "2026-10-18T09:08:37Z",
     "slug": "SteelUnion/dsh-confirm-gate",
     "stars": 0,
     "topics": [
@@ -51,32 +51,45 @@
       "plugin",
       "tool-use"
     ],
-    "updatedAt": "2026-10-18T08:30:09Z",
+    "updatedAt": "2026-10-18T09:08:33Z",
     "url": "https://github.com/SteelUnion/dsh-confirm-gate"
   },
   "id": "gh:1423059076",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@sroada/dsh-confirm-gate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:SteelUnion/dsh-confirm-gate#96cf2f4357b755c70ca5f718706d13f80a8f63c5",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@sroada/dsh-confirm-gate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7d1992747ed2054698120f44c1b7f21bb0bf4320c01393ae9f55e74a65679e32/SteelUnion/dsh-confirm-gate",
-    "description": "DeepSeek Harness 门控 — per-turn persistent-operation counter: remind, instruct the model to stop, then ask the user. Built for danger-full-access (the default); sandbox/read-only auto-disable is implemented but UNTESTED — verify on your own machine before relying on it."
+    "coverUrl": "https://opengraph.githubassets.com/83a9932b8c19ea8280bcb59a7657c0b5bca3d1973f3349e73ad33b09b96166bb/SteelUnion/dsh-confirm-gate",
+    "description": "DeepSeek Harness gate - per-turn persistent-operation counter: remind, instruct the model to stop, then ask for confirmation. Steps aside under sandbox/read-only modes; follows a live permission switch without restart. Verified on real hardware (full -> workspace-write -> read-on"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A bounded-run framework that keeps an AI agent accountable on hosts where you had to grant full permissions."
   },
   "schemaVersion": 1,
   "scripts": {

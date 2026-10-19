@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
-    "headSha": "019a394dc23854b17d20a781fd5fdb013f152550"
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
+    "headSha": "d300c125599d25cb9e36967b50b7eadad605cf9c"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Windows DSH bundle: route the pwsh tool to PowerShell 7, with per-user detection/install and sandbox-aware execution.",
     "fork": false,
     "forks": 0,
-    "headSha": "019a394dc23854b17d20a781fd5fdb013f152550",
+    "headSha": "d300c125599d25cb9e36967b50b7eadad605cf9c",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVNWl5w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f1189b2fd93e2eab25eeff6f7526af7e08149608970a9823ddbb8ceaf32e5917/drliuhuan/dsh-plugin-pwsh7",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c16125b3491b0ef02bf740ee5c74706148339a82798633689cb0130d7562a4af/drliuhuan/dsh-plugin-pwsh7",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/26193937?u=fec77876e54da378e1045909dee2c5fd81ef4f67&v=4",
       "login": "drliuhuan"
     },
-    "pushedAt": "2026-10-17T12:22:15Z",
+    "pushedAt": "2026-10-18T16:41:38Z",
     "slug": "drliuhuan/dsh-plugin-pwsh7",
     "stars": 0,
     "topics": [
@@ -39,32 +39,47 @@
       "powershell",
       "windows"
     ],
-    "updatedAt": "2026-10-17T15:39:32Z",
+    "updatedAt": "2026-10-18T16:40:32Z",
     "url": "https://github.com/drliuhuan/dsh-plugin-pwsh7"
   },
   "id": "gh:1423287783",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-pwsh7",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-plugin-pwsh7@0.2.2",
+    "version": "0.2.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./pwsh-executor": "./lib/executors/pwsh.mjs"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-pwsh7",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f1189b2fd93e2eab25eeff6f7526af7e08149608970a9823ddbb8ceaf32e5917/drliuhuan/dsh-plugin-pwsh7",
+    "coverUrl": "https://opengraph.githubassets.com/c16125b3491b0ef02bf740ee5c74706148339a82798633689cb0130d7562a4af/drliuhuan/dsh-plugin-pwsh7",
     "description": "Windows DSH bundle: route the pwsh tool to PowerShell 7, with per-user detection/install and sandbox-aware execution."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Windows DeepSeek Harness (DSH) bundle that routes the model-facing pwsh tool to PowerShell 7 (pwsh.exe, major version >= 7) instead of falling back to Windows PowerShell 5.1."
   },
   "schemaVersion": 1,
   "scripts": {

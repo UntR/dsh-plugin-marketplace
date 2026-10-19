@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "b2240d69ef2e235cb5a36dd2ecb1ccbe78f6283f"
   },
   "github": {
@@ -43,27 +43,43 @@
   },
   "id": "gh:1422305430",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-gemini-tool-schema",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-gemini-tool-schema@0.3.0",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./normalize": {
+        "default": "./dist/normalize.js",
+        "types": "./dist/normalize.d.ts"
+      }
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-gemini-tool-schema",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/604f7ff26f860db96f2588b5e35d6bb98a69d0a6a4e5473c194777941bb7459a/ChenXu233/dsh-gemini-tool-schema",
     "description": "DeepSeek Harness plugin: normalize tool schemas before the model request (fixes Gemini functionDeclarations 400s from any MCP or built-in tool)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Strict providers accept only a subset of JSON Schema. Google Gemini's functionDeclarations[].parameters rejects the whole request (HTTP 400) when:"
   },
   "schemaVersion": 1,
   "scripts": {

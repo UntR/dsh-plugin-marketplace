@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "c686b02914398b46786afa34a210e77f541cda9e"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1421478242",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-session-trash",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ZZZZZZZ-ZZZZZ/dsh-session-trash#c686b02914398b46786afa34a210e77f541cda9e",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-session-trash",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e27b57cb68ed4791c90497f21846750016936e92dfc5059ef7092f7fc5c22457/ZZZZZZZ-ZZZZZ/dsh-session-trash",
     "description": "Session trash for DeepSeek Harness: move conversations to a trash, restore them, or delete them permanently after a second confirmation."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) plugin that adds Move to trash to each session's sidebar menu. Sessions are not deleted outright: they go to a trash, where you can restore them from Settings → Session trash, or delete them permanently after a second confirmation. The trash is never empt"
   },
   "schemaVersion": 1,
   "scripts": {

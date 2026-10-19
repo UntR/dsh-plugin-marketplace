@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "e1c6158dbd4a4ec5c3057305d7d9c445edb9799f"
   },
   "github": {
@@ -42,27 +42,40 @@
   },
   "id": "gh:1422380986",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-file-handover",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:7gzgn/dsh-file-handover#e1c6158dbd4a4ec5c3057305d7d9c445edb9799f",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./handover": "./lib/handover.js",
+      "./handover.ps1": "./lib/handover.ps1",
+      "./package.json": "./package.json",
+      "./plan": "./lib/plan.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-file-handover",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5c44b6950769da48d40bc6b1fba73bdf934b43d448dd187c8e63b7e469bc7ac3/7gzgn/dsh-file-handover",
     "description": "Hand a local file to any program's file picker: wait for the native Open dialog, paste the path through the clipboard, read it back to verify character by character, then confirm. The target is always explicit and every step leaves evidence."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把一个本地文件交给系统\"打开文件\"对话框 —— 网页上传、微信发文件、Photoshop 打开， 凡是\"点一下、再在对话框里选文件\"的地方，都由它代劳。"
   },
   "schemaVersion": 1,
   "scripts": {

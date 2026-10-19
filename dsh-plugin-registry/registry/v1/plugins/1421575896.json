@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "9a414ba3d523789a669043e1afbebc116904cc5d"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsp-rdp",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e380ec92dc0d39f7fc12fe4f1e588c2abf7b3d100ff1a63a8998ef924ee99425/andarmworld/dsp-rdp",
     "description": "Multi-machine remote desktop plugin for DeepSeek Harness Web, powered by Apache Guacamole."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "适配 dsh Web 0.2.0-rc.2，通过 Apache Guacamole 1.6.0 提供多机器远程桌面。0.2.0 的机器配置与完整连接记录保存在本 DSH 实例；不同浏览器访问同一实例时使用相同记录。"
   },
   "schemaVersion": 1,
   "scripts": {

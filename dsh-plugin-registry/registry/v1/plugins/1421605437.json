@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "038b588d4217d1d7e3ecf1f3badf56fe028e409d"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1421605437",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-custom-search",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Anixuil/dsh-custom-search#038b588d4217d1d7e3ecf1f3badf56fe028e409d",
+    "version": "0.4.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-custom-search",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a6861fa65ab912dd669f5fd40c07f29c4395d304a8197480d504f37c2abd2e07/Anixuil/dsh-custom-search",
     "description": "Replace DSH's built-in DeepSeek search with SearXNG / Tavily / Exa / Brave / Serper / Bing / Google CSE. web_search keeps its name and schema."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "用你自己的搜索源替换 DSH 内置的「仅官方 DeepSeek」搜索。websearch 工具名与参数保持不变， 换的只是背后的检索通道——所以模型的提示词、工具表、Agent 预设都不用动。"
   },
   "schemaVersion": 1,
   "scripts": {

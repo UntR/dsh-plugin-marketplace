@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "9f82a5a1a7d49b05a4291f1f61c5e24d0344f4e3"
   },
   "github": {
@@ -48,33 +48,51 @@
   },
   "id": "gh:1421692597",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-skill-managers",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:mrdhira/dsh-skill-managers#9f82a5a1a7d49b05a4291f1f61c5e24d0344f4e3",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/v1/index.js"
+      },
+      "./client": {
+        "default": "./lib/v1/client.js"
+      },
+      "./host": {
+        "default": "./lib/v1/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/v1/index.js",
+    "name": "dsh-skill-managers",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/07cf8b11dca6412b9037c99aecb64453fccf436378f0955663996249a1ff1199/mrdhira/dsh-skill-managers",
     "description": "A Skills page for the DSH Web GUI: every skill DSH can see, grouped All · Global · Workspaces, with search, copy-command, per-skill origin, and the roots DSH discovers skills from."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A Skills page for the DSH Web GUI — its own sidebar entry beside Plugins, listing every skill DSH can see, grouped All · Global · Workspaces, with search, copy-command, per-skill origin, and the roots DSH discovers skills from."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

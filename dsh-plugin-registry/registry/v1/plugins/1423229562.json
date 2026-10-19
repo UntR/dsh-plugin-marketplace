@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "511a4abf7be2a363930a7bead5d16b83a76caaf3"
   },
   "github": {
@@ -48,27 +48,42 @@
   },
   "id": "gh:1423229562",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-web-annotate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:nubeslove/dsh-web-annotate#511a4abf7be2a363930a7bead5d16b83a76caaf3",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-web-annotate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9757c1d2e573e171de0ed152aedf94a08b2787ff8abcdf4f64c0b38502e7420f/nubeslove/dsh-web-annotate",
     "description": "DSH 侧栏网页批注：真浏览器跑在宿主里，指向元素就地批注，汇总成结构化指令。In-sidebar web annotation with real element picking for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 侧栏里跑一个真实浏览器，指向页面元素就地写批注，汇总成结构化指令。"
   },
   "schemaVersion": 1,
   "scripts": {

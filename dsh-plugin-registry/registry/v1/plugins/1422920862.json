@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "9415bff9e972b4655ced7a83b3ed47bd857525ed"
   },
   "github": {
@@ -42,27 +42,43 @@
   },
   "id": "gh:1422920862",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-prompt-optimizer",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wyin77/dsh-plugin-prompt-optimizer#9415bff9e972b4655ced7a83b3ed47bd857525ed",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-prompt-optimizer",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6681342f2e11886bd9d79de742ba345a1df3a7612e71bdda208994c61fa76a17/wyin77/dsh-plugin-prompt-optimizer",
     "description": "DSH prompt optimizer plugin: composer star button that rewrites the current draft in place"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 桌面端「提示词优化」插件。在对话框右下角、切换大模型按钮的左侧加一个小星星按钮：点击后调用当前会话正在使用的模型，把输入框里已有的提示词改写得更清晰、更可执行，并写回输入框；首次优化之后，星星左侧会出现一个重新优化按钮（螺旋箭头），在原结果基础上再改进一次。"
   },
   "schemaVersion": 1,
   "scripts": {

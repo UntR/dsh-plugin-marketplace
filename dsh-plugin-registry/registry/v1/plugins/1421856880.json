@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "df8fabccb3ed1498c58e7fc1cff119eda7f97ab9"
   },
   "github": {
@@ -42,33 +42,44 @@
   },
   "id": "gh:1421856880",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-git",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:cyrusgogogo/dsh-git#df8fabccb3ed1498c58e7fc1cff119eda7f97ab9",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/index.mjs",
+      "./client": "./dist/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.mjs",
+    "name": "dsh-git",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7142d447ae3a2f1c5e4cd4a6b9d59ac588d85a0f65145f729bdeeb0ede1e47a4/cyrusgogogo/dsh-git",
     "description": "DeepSeek Harness的GIT操作面板插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个面向 DeepSeek Harness 的原生 Git 插件。采用紧凑的 IDE 风格，并随宿主明暗主题自适应，在当前 DSH 工作区下提供分支、提交历史、提交图、文件差异和 Git worktree 管理。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "4f6b0929bc613c040345a8ad6222470c27377209"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1421986364",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@yyh/dsh-mcp-hub",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hlyyh21201-prog/dsh-mcp-hub#4f6b0929bc613c040345a8ad6222470c27377209",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@yyh/dsh-mcp-hub",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/69367d321cbe42c4b5aba1c9f4926f562155a001daca480808a429d8bbc6c242/hlyyh21201-prog/dsh-mcp-hub",
     "description": "DSH plugin: manage MCP servers from the Web settings panel (list, start/stop, edit, probe by real handshake) and import configs from Codex TOML, mcpServers JSON and VS Code mcp.json."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：可视化 MCP 服务器管理 + 多格式导入。"
   },
   "schemaVersion": 1,
   "scripts": {

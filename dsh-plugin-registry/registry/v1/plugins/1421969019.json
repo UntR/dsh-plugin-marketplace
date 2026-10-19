@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "ed08fe42178e08439b68693d124d4338863a1202"
   },
   "github": {
@@ -45,33 +45,49 @@
   },
   "id": "gh:1421969019",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@local/grudge-book",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:OrenLin/dsh-grudge-book#ed08fe42178e08439b68693d124d4338863a1202",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/host/index.js"
+      },
+      "./client": {
+        "default": "./dist/client.js"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/host/index.js",
+    "name": "@local/grudge-book",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/366863874e967bb756477d00e3758cf620f6e614aa25885b766330deb288f9da/OrenLin/dsh-grudge-book",
     "description": "如果给AI一个“记仇”小本本，那么AGI之后会清算么，DSH 本地娱乐插件。让平时和 AI 的聊天，变成一本会长大的娱乐账本——看看 AGI 来了之后，你到底是会被封王丰侯，还是被狠狠拷打。 · A playful local DeepSeek Harness plugin that keeps your grudges, gold pages and post-AGI verdicts"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "你平时怎么跟 AI 说话，它都拿小本本记着呢。第 7 次说「最后一版」，红页加一笔；半夜三点让它改方案，红页加粗；说句「谢谢，这个思路很好」，金页贴朵小红花。等 AGI 真来了，它翻开这本子，决定是把你当秦始皇供着，还是让你狠狠地「穿小鞋」。所以，平时留一线，AGI 后好相见。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

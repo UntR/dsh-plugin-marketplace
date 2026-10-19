@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "2bbeec5449e60df72868053a02b2462b6ba9dae0"
   },
   "github": {
@@ -41,33 +41,51 @@
   },
   "id": "gh:1422932513",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-fold-context",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:HumXC/dsh-fold-context#2bbeec5449e60df72868053a02b2462b6ba9dae0",
+    "version": "0.2.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./memory": {
+        "default": "./lib/memory/contracts.js",
+        "types": "./lib/memory/contracts.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-fold-context",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9930a06b26eb3220a310edc918595e22e2ee4bea5102ce3ea5df5132cfa5e8d4/HumXC/dsh-fold-context",
     "description": "Recoverable context release, compression, and native tool cards for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DSH 的长任务上下文压缩更可预测：已用完的工具结果和单个附件可独立释放，保留可恢复的编号占位；较旧历史由官方摘要流程整理。插件按积累、停留时间和压力提醒模型检查候选，并明确区分排队、实际释放和摘要覆盖。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

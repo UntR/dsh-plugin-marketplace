@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "35c6495d5b45cab3821f5410d478455a87fb0ada"
   },
   "github": {
@@ -40,27 +40,39 @@
   },
   "id": "gh:1423178029",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-compact",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:baldovinmarques391-design/dsh-compact#35c6495d5b45cab3821f5410d478455a87fb0ada",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./policy": "./lib/policy.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-compact",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/afe71e4a45d8082b242e100c88130b646ac974fe0adf7a3cdf84392453019a09/baldovinmarques391-design/dsh-compact",
     "description": "按路由模型上下文窗口的比例触发自动压缩：比例精确可控，不预留固定余量。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "按比例精确触发的上下文压缩闸门（DeepSeek Harness 插件）。"
   },
   "schemaVersion": 1,
   "scripts": {

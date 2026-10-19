@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "522e1a7981f2ab4947532900b85dcc52419367bd"
   },
   "github": {
@@ -48,27 +48,42 @@
   },
   "id": "gh:1422958215",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-connect-trae-models",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-connect-trae-models@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-connect-trae-models",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c0a52699830b1f25cf300a8cfaf65b7ed9ddc4597015745600c9c422d875aeb8/DragonHorizon-xtihc/dsh-connect-trae-models",
     "description": "Multi-account Trae model pool plugin for DeepSeek Harness: auto-failover, check-in automation, credits"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "多账号 Trae 模型池插件：把本机所有 Trae 登录态聚合成 DeepSeek Harness 里的一个模型供应商， 请求在账号池内自动容错换号，并配套手动/自动签到、模型倍率显示、账号使用方式切换（自动轮转 + 手动钉号）与可选模型配置页面。"
   },
   "schemaVersion": 1,
   "scripts": {

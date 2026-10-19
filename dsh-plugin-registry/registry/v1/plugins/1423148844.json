@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "44cd750ce63572d6f266efe5a06f657d86ccd1fc"
   },
   "github": {
@@ -16,7 +16,7 @@
     "defaultBranch": "main",
     "description": "DeepSeek Harness plugin fork of dsh-workbuddy-connect: multi-account pool, quota-aware failover, one-click/daily check-in. 多账号 / 额度用尽自动切换 / 一键签到，面向 DSH 0.2.1-rc.1。",
     "fork": false,
-    "forks": 1,
+    "forks": 2,
     "headSha": "44cd750ce63572d6f266efe5a06f657d86ccd1fc",
     "homepageUrl": null,
     "language": "TypeScript",
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVNOHLA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b3aaa10bcedc35bf02dfe44685ba669668239b23c97f00d8ae7ac0b1fb00630b/jyh5555/dsh-workbuddy-connect-pro",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/65bd43f615b1194ab90744818f6925c0039da1e712b744d8f49af2fd3f123121/jyh5555/dsh-workbuddy-connect-pro",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/162004310?v=4",
       "login": "jyh5555"
     },
     "pushedAt": "2026-10-17T12:18:57Z",
     "slug": "jyh5555/dsh-workbuddy-connect-pro",
-    "stars": 2,
+    "stars": 3,
     "topics": [
       "checkin",
       "deepseek",
@@ -42,32 +42,47 @@
       "multi-account",
       "workbuddy"
     ],
-    "updatedAt": "2026-10-17T13:08:25Z",
+    "updatedAt": "2026-10-19T03:46:06Z",
     "url": "https://github.com/jyh5555/dsh-workbuddy-connect-pro"
   },
   "id": "gh:1423148844",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workbuddy-connect",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jyh5555/dsh-workbuddy-connect-pro#44cd750ce63572d6f266efe5a06f657d86ccd1fc",
+    "version": "0.9.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.7.8",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workbuddy-connect",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b3aaa10bcedc35bf02dfe44685ba669668239b23c97f00d8ae7ac0b1fb00630b/jyh5555/dsh-workbuddy-connect-pro",
+    "coverUrl": "https://opengraph.githubassets.com/65bd43f615b1194ab90744818f6925c0039da1e712b744d8f49af2fd3f123121/jyh5555/dsh-workbuddy-connect-pro",
     "description": "DeepSeek Harness plugin fork of dsh-workbuddy-connect: multi-account pool, quota-aware failover, one-click/daily check-in. 多账号 / 额度用尽自动切换 / 一键签到，面向 DSH 0.2.1-rc.1。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "将已登录的 WorkBuddy / WorkBuddy AI 桌面应用中可用的模型接入 DeepSeek Harness；两版分别显示各自的模型分组，并沿用各自的账号登录与积分。"
   },
   "schemaVersion": 1,
   "scripts": {

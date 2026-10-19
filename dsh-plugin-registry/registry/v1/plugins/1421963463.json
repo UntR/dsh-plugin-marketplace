@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "fe4f23bed4bec14ad01577050eaacdc0893f57d9"
   },
   "github": {
@@ -38,27 +38,38 @@
   },
   "id": "gh:1421963463",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-chatgpt-style",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:137/dsh-chatgpt-style#fe4f23bed4bec14ad01577050eaacdc0893f57d9",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-chatgpt-style",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ad0a89c593afe6e52dd953a465a23d5ad10c50b39c41010169593478281b4834/137/dsh-chatgpt-style",
     "description": "ChatGPT-style conversation layout for the DeepSeek Harness Web client."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DSH Web 的对话流排成 ChatGPT 的样子，并且给语义上色：加强是绿的、警惕是红的、重点加粗、该有图标的地方都有图标。 纯样式 + 一层正文标注 + 发送框旁的思考/快速切换 + 左侧工作区高亮，不碰会话逻辑，关掉就回到原样。"
   },
   "schemaVersion": 1,
   "scripts": {

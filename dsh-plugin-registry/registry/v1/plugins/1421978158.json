@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "1275bcf7d71128ff52257b9f3101f2175dc9f835"
   },
   "github": {
@@ -45,27 +45,44 @@
   },
   "id": "gh:1421978158",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-project-memory",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xingzoudefengye/dsh-project-memory#1275bcf7d71128ff52257b9f3101f2175dc9f835",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/service.js",
+      "./command": "./lib/command.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./entries": "./lib/entries.js",
+      "./package.json": "./package.json",
+      "./section": "./lib/section.js",
+      "./service": "./lib/service.js",
+      "./store": "./lib/store.js",
+      "./tool": "./lib/tool.js"
+    },
+    "main": "lib/service.js",
+    "name": "dsh-project-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bf65fa7d5a0e6188c0fc4ed5b90d2577dcc963b16bad7323a07ef2c396e4fc84/xingzoudefengye/dsh-project-memory",
     "description": "Bounded, git-committable project memory for DeepSeek Harness: five whitelisted .ai/ files with capacity budgets, structured entries, tiered retention, and a stable prompt section."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "项目级有限容量长期记忆：把跨会话的项目认知（决策、约束、任务、坑、事实）存进工作区的 .ai/，可以提交进 git、跟着仓库走，并且有容量上限。"
   },
   "schemaVersion": 1,
   "scripts": {

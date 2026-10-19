@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "dd118dbc4a1839ebf2a5730eb0682a5fa1a93ffd"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1422121370",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-gui-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:7gzgn/dsh-gui-guard#dd118dbc4a1839ebf2a5730eb0682a5fa1a93ffd",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json",
+      "./win32": "./lib/win32.ps1"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-gui-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5b6f00ed353c12d53ffb66a29c484e6708298edd88c7285d7fe598f7ce2f2ff1/7gzgn/dsh-gui-guard",
     "description": "Windows GUI automation reliability layer: probe whether a window is minimized, foreground or DPI-scaled, then click and type with the coordinate space and activation order handled for you. Zero dependencies, local only."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH（DeepSeek Harness）用的 Windows 窗口操作可靠性层。 它把「agent 操作一个 Windows 窗口」这件事里最容易翻车的四步，收进一次原子调用。"
   },
   "schemaVersion": 1,
   "scripts": {

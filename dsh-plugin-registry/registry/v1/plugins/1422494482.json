@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "1fb64d90b7b979f6312b344ea3330b8ce662cd4d"
   },
   "github": {
@@ -39,27 +39,39 @@
   },
   "id": "gh:1422494482",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-kimi-provider",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:youmu129/dsh-kimi-provider#1fb64d90b7b979f6312b344ea3330b8ce662cd4d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-kimi-provider",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9229b0b98a43ff5a16b2b82664212761394f1b325c2b95f8a718eac1a555d370/youmu129/dsh-kimi-provider",
     "description": "DSH 插件：播种 Kimi Coding Plan 供应商，对话输入区底部显示用量（5 小时 / 周 / 月度配额）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）插件：为 Web GUI 接入 Kimi Coding Plan（月之暗面 OpenAI 兼容 coding 端点），并附带用量展示。"
   },
   "schemaVersion": 1,
   "scripts": {

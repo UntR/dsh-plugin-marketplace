@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "98cabfd3b490422e3f32620c3d34011c650da8ff"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1421306160",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-subagent-role-router",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:643048695/dsh-subagent-role-router#98cabfd3b490422e3f32620c3d34011c650da8ff",
+    "version": "3.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-subagent-role-router",
+    "status": "valid",
+    "type": "module",
+    "version": "3.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/693555d385e7c046270c3427846ce8a7fdebac59efea2ce84bf12b07411fab26/643048695/dsh-subagent-role-router",
     "description": "DSH subagent route picker: per-role routing (explore/plan/patch), multi-model rotation, cross-provider failover, and fork active-window slicing."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness (DSH) 的子代理（subagent）派发选择路由：按角色分流、多模型轮换、跨供应商故障转移，并为 fork 类派发做活跃窗口切片。"
   },
   "schemaVersion": 1,
   "scripts": {

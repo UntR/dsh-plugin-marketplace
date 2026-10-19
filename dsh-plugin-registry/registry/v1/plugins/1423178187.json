@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "a22166f5d184afa9ae12edb2905a9a5656d256a3"
   },
   "github": {
@@ -40,27 +40,39 @@
   },
   "id": "gh:1423178187",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-composer-hold",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:baldovinmarques391-design/dsh-composer-hold#a22166f5d184afa9ae12edb2905a9a5656d256a3",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-composer-hold",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/dc784e8633b179c85cf29b0133cc389c81a384fa9957f99ebd5e27fa632662c4/baldovinmarques391-design/dsh-composer-hold",
     "description": "运行中按一下只停当前回合，再按一下锁住注入闸门：后台任务、子代理汇报、定时提醒全部扣住，直到你发消息时一起送进模型。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "发送键与停止键分开，并且给\"绝对停止\"配一道注入闸门：你按下绝对停止之后， 后台任务完成、子代理汇报、定时提醒、webhook、目标续轮、hooks 注入——全部被扣住， 直到你发出下一条消息，它们与那条消息在同一次请求里送进模型。"
   },
   "schemaVersion": 1,
   "scripts": {

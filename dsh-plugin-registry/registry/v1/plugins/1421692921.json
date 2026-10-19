@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "994cd2fcf8c6005bb57f68386ba4a86739fbedae"
   },
   "github": {
@@ -50,33 +50,54 @@
   },
   "id": "gh:1421692921",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-kanban",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:mrdhira/dsh-kanban#994cd2fcf8c6005bb57f68386ba4a86739fbedae",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.10",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/v1/host/index.js"
+      },
+      "./client": {
+        "default": "./lib/v1/client.js"
+      },
+      "./host": {
+        "default": "./lib/v1/host/index.js"
+      },
+      "./package.json": "./package.json",
+      "./store": {
+        "default": "./lib/v1/store/index.js"
+      }
+    },
+    "main": "lib/v1/host/index.js",
+    "name": "dsh-kanban",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3db707dae28541e0c0381b712fd57cc47680023b6759c7824ac8fbcbca2b347d/mrdhira/dsh-kanban",
     "description": "A Kanban board for DSH: one SQLite board shared by a human and their agent sessions, in the desktop app's sidebar. Two gates (Definition of Ready, Definition of Done) are enforced by the board itself, and every move is an event, so cycle time and throughput come from what happene"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "One task board for the whole home directory, shared by Dhira and by every agent session: the panel is the human's view, the kanban tools are the agents', and bin/kanban.mjs is the scripted one — all over one SQLite store, through one policy engine, so the gate that refuses an age"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

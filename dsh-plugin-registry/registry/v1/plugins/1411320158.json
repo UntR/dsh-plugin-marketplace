@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
     "enrichmentStatus": "ok",
-    "headSha": "f6c6a8e7ba94cff9bbe049fb70e9bff310bfa35a"
+    "headSha": "946e2da875050d49f4c33b2165cd32e18664e130"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-09T05:11:56Z",
     "databaseId": 1411320158,
     "defaultBranch": "main",
-    "description": "Independent Auto Review model settings and GUI for DeepSeek Harness.",
+    "description": "Choose your own configured model and reasoning effort for DeepSeek Harness Auto Review.",
     "fork": false,
     "forks": 0,
-    "headSha": "f6c6a8e7ba94cff9bbe049fb70e9bff310bfa35a",
+    "headSha": "946e2da875050d49f4c33b2165cd32e18664e130",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,29 +25,29 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVB8JXg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/bde1d27929746b71f873cb807bd3062f90bca0c8c9065934d1a5698ef30b6d4b/QR-0W/dsh-independent-auto-review",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/98d26ef9c43f53b8b171433f6f48943971e96284fcfb39d3a5ede0885725199b/QR-0W/DSH-Custom-Auto-Review",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/84510337?u=d64e718b3bc8b40ba11e95872131cb966eea8d0f&v=4",
       "login": "QR-0W"
     },
-    "pushedAt": "2026-10-17T09:03:20Z",
-    "slug": "QR-0W/dsh-independent-auto-review",
+    "pushedAt": "2026-10-19T03:25:45Z",
+    "slug": "QR-0W/DSH-Custom-Auto-Review",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-17T09:03:24Z",
-    "url": "https://github.com/QR-0W/dsh-independent-auto-review"
+    "updatedAt": "2026-10-19T03:25:25Z",
+    "url": "https://github.com/QR-0W/DSH-Custom-Auto-Review"
   },
   "id": "gh:1411320158",
   "install": {
     "available": true,
-    "packageName": "@local/dsh-independent-auto-review",
+    "packageName": "@local/dsh-custom-auto-review",
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:QR-0W/dsh-independent-auto-review#f6c6a8e7ba94cff9bbe049fb70e9bff310bfa35a",
-    "version": "0.2.1"
+    "spec": "github:QR-0W/DSH-Custom-Auto-Review#946e2da875050d49f4c33b2165cd32e18664e130",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
@@ -58,23 +58,26 @@
     "exports": {
       ".": "./src/auto-review.js",
       "./client": "./tools/gui/client.js",
+      "./icon": "./icon.svg",
       "./locale/*.json": "./locale/*.json",
       "./package.json": "./package.json",
-      "./settings": "./tools/gui/host.js"
+      "./settings": "./tools/gui/host.js",
+      "./settings/icon": "./icon.svg",
+      "./settings/locale/*.json": "./tools/gui/locale/*.json"
     },
     "main": "./src/auto-review.js",
-    "name": "@local/dsh-independent-auto-review",
+    "name": "@local/dsh-custom-auto-review",
     "status": "valid",
     "type": "module",
-    "version": "0.2.1"
+    "version": "0.3.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/bde1d27929746b71f873cb807bd3062f90bca0c8c9065934d1a5698ef30b6d4b/QR-0W/dsh-independent-auto-review",
-    "description": "Independent Auto Review model settings and GUI for DeepSeek Harness."
+    "coverUrl": "https://opengraph.githubassets.com/98d26ef9c43f53b8b171433f6f48943971e96284fcfb39d3a5ede0885725199b/QR-0W/DSH-Custom-Auto-Review",
+    "description": "Choose your own configured model and reasoning effort for DeepSeek Harness Auto Review."
   },
   "readme": {
     "available": true,
-    "excerpt": "Use a separate model to review DSH tool calls. Keep the main model unchanged."
+    "excerpt": "DSH-Custom-Auto-Review adds a configurable review gate for DSH tool calls. The reviewer route is selected independently from the main model route. The review request still contains session and tool-call information, so a separate route does not create an isolated context or a pri"
   },
   "schemaVersion": 1,
   "scripts": {

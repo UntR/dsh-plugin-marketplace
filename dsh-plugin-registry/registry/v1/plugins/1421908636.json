@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "f000167d039d7de2f998401c5a1cc0d51d4609e5"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1421908636",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-live-model-probe",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lyufeng000/dsh-model-probe#f000167d039d7de2f998401c5a1cc0d51d4609e5",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-live-model-probe",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2f31f3932d9564b7ba815441d5879b4b9d532b8ed9cf4eb9de6ba820c2a95e00/lyufeng000/dsh-model-probe",
     "description": "DSH 模型探测插件：用已存凭据查询厂商实时模型目录，预览后经官方配置编辑器安全写回。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "透明增强 DSH 原有「设置 → 模型 → 获取可用模型」流程：普通获取立即读取配置和内置目录，只有显式点击「刷新 / 重试」才请求厂商。每个原生编辑器只有一个刷新按钮，打开选择弹窗后移入弹窗。"
   },
   "schemaVersion": 1,
   "scripts": {

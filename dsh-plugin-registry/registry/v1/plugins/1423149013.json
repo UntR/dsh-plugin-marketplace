@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "7b2a166d6f21029eb3744806999cbe177f7aa35b"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1423149013",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-pr-inbox",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:omdsh-dev/dsh-pr-inbox#7b2a166d6f21029eb3744806999cbe177f7aa35b",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-pr-inbox",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a79ab9dcc56c92c2e47ba7c148d28da70c5c50d1660cf7fca6bf1cbe2009abc2/omdsh-dev/dsh-pr-inbox",
     "description": "把与你相关的 GitHub PR（我提的 / 待我审 / 我合并的）照进 DSH 侧边栏，复用本机 gh 登录，只读（DeepSeek Harness 插件）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "侧边栏里的 GitHub PR 收件箱：我提的 / 待我审 / 我合并的 三桶照进 DSH 侧栏， 一眼看完\"该我动手的那几件\"。绑定当前会话工作区的仓库，复用本机已登录的 gh，插件不存任何凭据，只读。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "1abd62b88b13ca13e679af8c8660c6573f77114d"
   },
   "github": {
@@ -60,33 +60,50 @@
   },
   "id": "gh:1422133477",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-qwen-studio",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:kingcharleslzy-ai/dsh-qwen-studio#1abd62b88b13ca13e679af8c8660c6573f77114d",
+    "version": "2.12.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-qwen-studio",
+    "status": "valid",
+    "type": "module",
+    "version": "2.12.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/db24d0e6af17e252f76d51b69e67eab3da847df6b7abaa6db2cf69ab492f3f03/kingcharleslzy-ai/dsh-qwen-studio",
     "description": "Qwen Image 2.1 for DeepSeek Harness: native image editing on Apple Silicon MLX/MFLUX or self-hosted CUDA, LoRA, ControlNet, inpainting, presets & live agent progress. 本机生图 · 原生参考编辑"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 里生成、改图、继续创作。Apple Silicon 本机 MLX，或你自己的 NVIDIA GPU。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

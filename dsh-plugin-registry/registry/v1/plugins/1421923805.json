@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-18T08:38:39.505Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichmentStatus": "ok",
     "headSha": "c34394a675ee72fc29bd3efd305382fef305a857"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1421923805",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-crawshrimp-data",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:howtimeschange/dsh-crawshrimp-data#c34394a675ee72fc29bd3efd305382fef305a857",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-crawshrimp-data",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9da60624f4748591b537e582ce9c6544b1c09df6ac2133b6b038aff55b0dc5b3/howtimeschange/dsh-crawshrimp-data",
     "description": "抓虾数据插件｜DeepSeek Harness（DSH）CSV / Excel / JSON 预览、数据概览、筛选去重、排序转换与表格导出。独立运行，无需抓虾后端。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "抓虾数据工具是面向 DeepSeek Harness（DSH）的独立本地数据插件，可在 DSH 进程内预览、统计、清洗和导出 JSON、CSV、Excel（XLSX）数据。它适合商品表检查、库存汇总、订单数据整理，以及把浏览器或脚本产物转换成新的表格文件。无需安装抓虾应用或后端，也不需要抓虾 API Token、Python 运行时或其他配套插件；这是独立社区项目，不是 DeepSeek 官方插件。"
   },
   "schemaVersion": 1,
   "scripts": {
