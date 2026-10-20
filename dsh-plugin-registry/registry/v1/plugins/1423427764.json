@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "a9e9b690afa2286b0020170fc91ba544e0084594"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1423427764",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-rank-board",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:flysusdjd/dsh-rank-board#a9e9b690afa2286b0020170fc91ba544e0084594",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-rank-board",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1d96eda51d7113556816ff9cc3e70d2e45150ffdc6eb6429134fc4666f7eb968/flysusdjd/dsh-rank-board",
     "description": "DSH 插件下载量排行榜：在 DeepSeek Harness 设置页查看社区插件按 npm 真实下载量的日/周/月榜。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-rank-board 是一个 Cordis 插件（宿主端 + Web 客户端两半）：宿主拉取社区插件目录 awesome-dsh-plugin，向 npm 官方 API 查询下载量并缓存，客户端把结果渲染在「设置 → 插件榜单」里。"
   },
   "schemaVersion": 1,
   "scripts": {

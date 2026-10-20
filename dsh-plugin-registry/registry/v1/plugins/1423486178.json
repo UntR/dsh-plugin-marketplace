@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
-    "headSha": "55883b96e94dd4e239c7e372174838dc25f49dd7"
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
+    "headSha": "816fbcc92e3fa0f0f0fafd8599c9089810faa0b0"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH conversation deletion with an optional previewed memory cascade: soft delete + recycle bin, audit trail and per-session rollback. ????(??????????)?",
     "fork": false,
     "forks": 0,
-    "headSha": "55883b96e94dd4e239c7e372174838dc25f49dd7",
+    "headSha": "816fbcc92e3fa0f0f0fafd8599c9089810faa0b0",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVNis4g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/34c631d8acd7c5e5985a5bd788790b6f622296db28664d820f8ba880b35172b3/HERO476/dsh-conversation-recycle-bin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/23d43ac2045d9c5433fbbcb3fa379552375f3babe87d0d5837c26d44f4f2eccc/HERO476/dsh-conversation-recycle-bin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/322656778?v=4",
       "login": "HERO476"
     },
-    "pushedAt": "2026-10-18T15:25:39Z",
+    "pushedAt": "2026-10-19T13:48:47Z",
     "slug": "HERO476/dsh-conversation-recycle-bin",
     "stars": 0,
     "topics": [
@@ -39,32 +39,45 @@
       "dsh-plugin",
       "session"
     ],
-    "updatedAt": "2026-10-18T15:25:42Z",
+    "updatedAt": "2026-10-19T13:48:52Z",
     "url": "https://github.com/HERO476/dsh-conversation-recycle-bin"
   },
   "id": "gh:1423486178",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-conversation-recycle-bin",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-conversation-recycle-bin@0.3.3",
+    "version": "0.3.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-conversation-recycle-bin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/34c631d8acd7c5e5985a5bd788790b6f622296db28664d820f8ba880b35172b3/HERO476/dsh-conversation-recycle-bin",
+    "coverUrl": "https://opengraph.githubassets.com/23d43ac2045d9c5433fbbcb3fa379552375f3babe87d0d5837c26d44f4f2eccc/HERO476/dsh-conversation-recycle-bin",
     "description": "DSH conversation deletion with an optional previewed memory cascade: soft delete + recycle bin, audit trail and per-session rollback. ????(??????????)?"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness (DSH) Web 增加「删除对话」：会话列表的「…」菜单与会话详情页头部各有一个删除入口；确认框内可勾选「同时删除关联记忆」（默认不勾选），并实时显示将被影响的记忆条数。删除默认进入插件回收站，可恢复；每次操作写入审计日志；批量删除有上限与限流，批量软删除需输入数量，彻底删除一键执行；事务任一步失败即回滚。"
   },
   "schemaVersion": 1,
   "scripts": {

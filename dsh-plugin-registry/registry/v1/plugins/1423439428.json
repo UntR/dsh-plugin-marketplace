@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "00a61f57bee326b3fe5656a695a005b8504f3f23"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1423439428",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-codex-annotate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:mar1259/dsh-plugin-codex-annotate#00a61f57bee326b3fe5656a695a005b8504f3f23",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-plugin-codex-annotate",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8bf1f63e0a5ae0a68341a834f66c8c143bc71583ac7765a1bf47cb1cfdd13043/mar1259/dsh-plugin-codex-annotate",
     "description": "Codex-style selection quote annotations for the DeepSeek Harness Web UI"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的 Web UI 加一个 Codex 风格的「划词追问」：选中助手回复里的任意文字，右键选择 在此回答，写下你的问题或补充；可以连续攒下多条注释，最后一次性发出。发出的消息自带精确出处（消息 id、轮次、段号、小节、字符区间或代码行号）和原文，并在气泡里折叠成一条 📎 N 条注释 的附件条。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "49bad2b99b21957a38eb5bce2c7c58a3823abc05"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1379212597",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-purge",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-session-purge@0.5.2",
+    "version": "0.5.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-purge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/29ff4e1e90b3af5cfc599e47afc977377fe3b915c87fa50ba762c8840ea49635/verdana/dsh-session-purge",
     "description": "A recycle bin for DSH session deletion: deleting a session moves it to a bin where it can be restored, and space is reclaimed on permanent delete or on a retention schedule."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness (DSH) 的会话删除加一个回收站：删除不再不可恢复，而是把会话原样移入 回收站，可以随时复原、也可以真实删除；回收站不会无限增长——默认保留 30 天，到期自动清理。"
   },
   "schemaVersion": 1,
   "scripts": {

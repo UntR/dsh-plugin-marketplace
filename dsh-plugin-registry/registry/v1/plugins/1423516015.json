@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "d924e2356da191db3b4469f3b24fb49ea560281b"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1423516015",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ui-reload",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:minhaoli/dsh-ui-reload#d924e2356da191db3b4469f3b24fb49ea560281b",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-ui-reload",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/21ed2e18356169a75dfebc7f83f01e0beb5a2843ade218b942cc19172adab404/minhaoli/dsh-ui-reload",
     "description": "One-click full frontend reload button in the DSH conversation session header."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A \"reload the whole frontend\" button in the DSH conversation session header, immediately left of the share button."
   },
   "schemaVersion": 1,
   "scripts": {

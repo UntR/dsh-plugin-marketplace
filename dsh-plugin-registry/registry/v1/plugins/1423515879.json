@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "6200cdb2bb6c127a2533228639b596b82e3e5aac"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1423515879",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-search",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:minhaoli/dsh-session-search#6200cdb2bb6c127a2533228639b596b82e3e5aac",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-search",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3ffc40a7253b2b2deb7f1388d6438c4ceab279ec328596cd5c64f75de200b340/minhaoli/dsh-session-search",
     "description": "Find bar for the DSH conversation body: a header button opens a search panel that lists matches and scrolls to the hit with it highlighted."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A find bar for the conversation transcript in DSH: a search button in the conversation session header opens a floating panel that scans the loaded conversation, lists matches, and jumps to a hit with it highlighted. Ctrl+F / Cmd+F does the same."
   },
   "schemaVersion": 1,
   "scripts": {

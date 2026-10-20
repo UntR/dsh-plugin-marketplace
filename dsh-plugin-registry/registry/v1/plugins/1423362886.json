@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "dba93749d28bef31e5fe9dd4ff893c3db244dd6b"
   },
   "github": {
@@ -42,27 +42,46 @@
   },
   "id": "gh:1423362886",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-client-composer-enter",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zevire/dsh-client-composer-enter#dba93749d28bef31e5fe9dd4ff893c3db244dd6b",
+    "version": "0.4.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-client-composer-enter",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/71ed587a72030a5dc10f115aed7083283b2dc2f28001e8ea1bffab88768e0fc6/zevire/dsh-client-composer-enter",
     "description": "DeepSeek Harness 的输入框回车键行为调整插件。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh 的 composer 默认「裸 Enter 发送、Shift+Enter 换行」。写多行提示词时这是反的：一不留神就发出去了，想换行还得按修饰键。本插件把两个手势对调，同时原样保留 Cmd/Ctrl+Enter 的官方「互补」Queue/Steer 手势。"
   },
   "schemaVersion": 1,
   "scripts": {

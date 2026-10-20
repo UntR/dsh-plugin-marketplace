@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "e7bd969b56b7a995afb2f8b246a83d9d37fec75e"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVNpoJQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/55c847e30e6dd50a671576ef150fad7a0e2d7ca08b48554ff23be9a527da6db8/hg1048596-pixel/dsh-ppt-canvas",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/4bab0b88527be82f1f878debf8d81c54818d270d8c50e9a18e1358c0552244e7/hg1048596-pixel/dsh-ppt-canvas",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/275325321?u=cc9bf6d21241b1fac53bfa9098356e39e470a7cb&v=4",
       "login": "hg1048596-pixel"
     },
     "pushedAt": "2026-10-17T18:16:55Z",
     "slug": "hg1048596-pixel/dsh-ppt-canvas",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "dsh-plugin",
       "dsh-plugin-desktop",
@@ -40,32 +40,43 @@
       "dsh-plugins",
       "pptx"
     ],
-    "updatedAt": "2026-10-17T18:16:58Z",
+    "updatedAt": "2026-10-20T06:23:06Z",
     "url": "https://github.com/hg1048596-pixel/dsh-ppt-canvas"
   },
   "id": "gh:1423599653",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ppt-canvas",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-ppt-canvas@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./plugin/host.js",
+      "./client": "./plugin/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./plugin/host.js",
+    "name": "dsh-ppt-canvas",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/55c847e30e6dd50a671576ef150fad7a0e2d7ca08b48554ff23be9a527da6db8/hg1048596-pixel/dsh-ppt-canvas",
+    "coverUrl": "https://opengraph.githubassets.com/4bab0b88527be82f1f878debf8d81c54818d270d8c50e9a18e1358c0552244e7/hg1048596-pixel/dsh-ppt-canvas",
     "description": "DeepSeek Harness 的 PowerPoint 画布：选中形状或整页、用自然语言描述改动，AI 以字节保真的 OOXML 补丁写入 .pptx，支持撤销与重做。PowerPoint canvas for the DeepSeek Harness window: select shapes or a whole slide, describe the change in natural language, and the AI applies it to the .pptx as byte-preserving OOXML patches, w"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "灵感来自腾讯 WorkBuddy 的「人机双写」（V5.3.5，2026 07 30 发布）中的 PPT 能力：点选或框选元素 → 下达指令 → 只改选区。 本插件把它做成 DSH 的原生插件：改的是磁盘上的真实 .pptx，不是渲染出来的中间产物。"
   },
   "schemaVersion": 1,
   "scripts": {

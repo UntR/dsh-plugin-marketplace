@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "e6d5ad10a4f86588168fd4808ba38c6dc962f5e2"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1423447579",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-startup-intro",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zoe1nan/dsh-startup-intro#e6d5ad10a4f86588168fd4808ba38c6dc962f5e2",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-startup-intro",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/50efe58fbd8698d1e30b8c1d5fa24402e5d469a1da87e9a9530761457fb5dc36/zoe1nan/dsh-startup-intro",
     "description": "Custom video startup intro for DeepSeek Harness: import clips, tune playback, cross-fade into the workbench, follows the app light/dark appearance."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 加一个可自定义视频的启动开场：导入自己的视频素材，选中哪段，之后每次启动就播哪段；片段、速度、亮度、画面适配、影院填充、展示比例与淡出时长都能调，支持实时预览；播完交叉淡出，直接过渡到工作台。动画还会跟随 DSH 的浅色 / 深色外观自动选版。"
   },
   "schemaVersion": 1,
   "scripts": {

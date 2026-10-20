@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "62de1146134dfabe957d34302b1b3ef486d4e224"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1423482278",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-manual-bg",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:nu0y4/dsh-manual-bg#62de1146134dfabe957d34302b1b3ef486d4e224",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./tool": "./lib/tool.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-manual-bg",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2ddfb70b9fda77f923db46ae69e2803ab4106a57d1174b8e70f29b7cbafc9868/nu0y4/dsh-manual-bg",
     "description": "One-click move a running shell command to the background in DeepSeek Harness: a run tool whose card carries a small SVG U-turn button."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DeepSeek Harness（DSH）里正在跑的前台 shell 命令，点一下转成后台任务。"
   },
   "schemaVersion": 1,
   "scripts": {

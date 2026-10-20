@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "a08e683ae28c34cf850343597a36ade6910205c2"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1423708652",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-effort-sync",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:DC1024/dsh-effort-sync#a08e683ae28c34cf850343597a36ade6910205c2",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-effort-sync",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f49571a5d8a6f01dde781392d39542f3737bc4e690e5048ca5faccfcb3d89c73/DC1024/dsh-effort-sync",
     "description": "DSH plugin: sync model-catalog reasoning levels (reasoningEfforts) from what the provider advertises on /v1/models — sync_reasoning_levels tool plus a one-click button in the Models settings page."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DSH 模型目录里的推理等级与供应商实际声明的能力对齐。"
   },
   "schemaVersion": 1,
   "scripts": {

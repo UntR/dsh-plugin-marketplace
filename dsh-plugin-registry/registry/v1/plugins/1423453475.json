@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "f9d85ed2991a57021afb73d949f32f2214370931"
   },
   "github": {
@@ -46,27 +46,43 @@
   },
   "id": "gh:1423453475",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-peak-hours",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Adolanium/dsh-peak-hours#f9d85ed2991a57021afb73d949f32f2214370931",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./icon": "./assets/icon.svg",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-peak-hours",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/70e39ea4a2fae7dd2ecd2a373eb788bcd2aa70808a0da43bbab38f0a1464221d/Adolanium/dsh-peak-hours",
     "description": "Peak and off-peak pricing awareness for DeepSeek Harness: a live composer badge with the time left in the current window, converted to your timezone. Community plugin, not official."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek charges half price outside peak hours. This tells you when that is."
   },
   "schemaVersion": 1,
   "scripts": {

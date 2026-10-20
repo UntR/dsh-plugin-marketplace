@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
     "enrichmentStatus": "ok",
-    "headSha": "98f0c7b5722f3bb078810656cfe7cdd5bfc75597"
+    "headSha": "69cf298af2e241a9d83b3320214c413c0dc946cd"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-14T08:44:47Z",
     "databaseId": 1333978753,
     "defaultBranch": "main",
-    "description": "DeepSeek Harness 消息提醒插件：回合结束或等待确认时向浏览器、系统、飞书/钉钉/企业微信/通用 Webhook 发送通知",
+    "description": "DeepSeek Harness 消息提醒插件：回合结束、等待确认或提问时，向桌面/浏览器、系统、飞书/钉钉/企业微信/通用 Webhook 发送通知",
     "fork": false,
     "forks": 1,
-    "headSha": "98f0c7b5722f3bb078810656cfe7cdd5bfc75597",
+    "headSha": "69cf298af2e241a9d83b3320214c413c0dc946cd",
     "homepageUrl": "https://github.com/c-ling/dsh-plugin-notify#readme",
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4LmgQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e6793fcc2425cda984f75f1b596af9fbc614101cb0277155b73bad5493b5bdb0/c-ling/dsh-plugin-notify",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e33f85e5883508a303cbea30d1b32d170dce61649a0bb3a0e1eb552b99d45543/c-ling/dsh-plugin-notify",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/42890738?v=4",
       "login": "c-ling"
     },
-    "pushedAt": "2026-08-21T18:17:38Z",
+    "pushedAt": "2026-10-20T03:08:04Z",
     "slug": "c-ling/dsh-plugin-notify",
     "stars": 7,
     "topics": [
@@ -39,11 +39,13 @@
       "deepseek",
       "deepseek-ai",
       "deepseek-harness",
+      "desktop-notification",
       "dingtalk",
       "dsh",
       "dsh-plugin",
       "feishu",
       "javascript",
+      "native-notifications",
       "notification",
       "notify",
       "open-source",
@@ -53,23 +55,23 @@
       "webhook",
       "wecom"
     ],
-    "updatedAt": "2026-10-18T06:36:17Z",
+    "updatedAt": "2026-10-20T03:08:34Z",
     "url": "https://github.com/c-ling/dsh-plugin-notify"
   },
   "id": "gh:1333978753",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-plugin-notify",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:c-ling/dsh-plugin-notify#69cf298af2e241a9d83b3320214c413c0dc946cd",
+    "version": "1.4.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
   "package": {
     "exports": {
@@ -79,21 +81,22 @@
       "./client": {
         "default": "./lib/client.js"
       },
+      "./cordis.patch.yml": "./cordis.patch.yml",
       "./package.json": "./package.json"
     },
     "main": "lib/index.js",
     "name": "dsh-plugin-notify",
     "status": "valid",
     "type": "module",
-    "version": "1.3.0"
+    "version": "1.4.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e6793fcc2425cda984f75f1b596af9fbc614101cb0277155b73bad5493b5bdb0/c-ling/dsh-plugin-notify",
-    "description": "DeepSeek Harness 消息提醒插件：回合结束或等待确认时向浏览器、系统、飞书/钉钉/企业微信/通用 Webhook 发送通知"
+    "coverUrl": "https://opengraph.githubassets.com/e33f85e5883508a303cbea30d1b32d170dce61649a0bb3a0e1eb552b99d45543/c-ling/dsh-plugin-notify",
+    "description": "DeepSeek Harness 消息提醒插件：回合结束、等待确认或提问时，向桌面/浏览器、系统、飞书/钉钉/企业微信/通用 Webhook 发送通知"
   },
   "readme": {
     "available": true,
-    "excerpt": "DeepSeek Harness Web GUI 的消息提醒插件：任务回合执行结束、或执行到需要用户确认时，按配置向所选渠道发送提醒，并在设置面板提供「消息提醒」菜单页。"
+    "excerpt": "DeepSeek Harness Web 与桌面端的消息提醒插件：任务回合结束、执行等待用户确认、或模型通过提问工具等待回答时，按配置向所选渠道发送提醒，并在设置面板提供「消息提醒」菜单页。"
   },
   "schemaVersion": 1,
   "scripts": {

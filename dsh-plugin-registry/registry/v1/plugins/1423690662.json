@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "db9a955ea327cbdcf7b7e70837d2e12cf5cb1ac4"
   },
   "github": {
@@ -45,27 +45,44 @@
   },
   "id": "gh:1423690662",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-localhost",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kjx-talesofai/dsh-plugin-localhost#db9a955ea327cbdcf7b7e70837d2e12cf5cb1ac4",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./index.js"
+      },
+      "./client": {
+        "default": "./client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-localhost",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9154df8cad3be1a6ca8e0b8168a0ae51da8366c33512790f549a731bc256bbea/kjx-talesofai/dsh-plugin-localhost",
     "description": "A panel for the servers and static pages an agent started on localhost: port, directory, registering session, and one switch to stop each."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "agent 在开发里起服务是常态：pnpm dev、python -m http.server、一个 dist/ 静态页。它们是短暂的，但不会自己消失——三个小时后你没死，那个端口也没死。这个插件把\"起服务\"变成一次登记，于是端口不用猜、目录不会丢、关掉有地方点。"
   },
   "schemaVersion": 1,
   "scripts": {

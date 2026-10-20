@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "16d88c63e95a999581c23f20e590da84a868b00a"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1423534006",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ws-deflate",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-ws-deflate@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-ws-deflate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/612da9d4c423dc4ac72054482ed66856f976a5174f1560d97290fc92b0921f8a/Wanderingss/dsh-ws-deflate",
     "description": "DSH plugin: enable permessage-deflate on the WebSocket transport (/api/remote.mux) without modifying the DSH install tree"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Turns on permessage-deflate for DeepSeek Harness (dsh) web's WebSocket transport, without modifying the DSH installation. Measured on one machine: a session transcript that left the server as 1,206,822 B went out as 350,599 B — 70.9 % fewer wire bytes."
   },
   "schemaVersion": 1,
   "scripts": {

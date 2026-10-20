@@ -5,9 +5,9 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
     "enrichmentStatus": "ok",
-    "headSha": "93a33b69746720b124cedf7e91c84a3d3f830cd4"
+    "headSha": "77df36ff0a6814d763db13748735b07a8c022645"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "面向中国股市散户的金融投资智能体。Next-Gen AI-Driven Capital Generation.",
     "fork": false,
     "forks": 0,
-    "headSha": "93a33b69746720b124cedf7e91c84a3d3f830cd4",
+    "headSha": "77df36ff0a6814d763db13748735b07a8c022645",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -30,7 +30,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/111575731?u=0e452927035b393d9b0e307a0466ce7c07978a83&v=4",
       "login": "v587d"
     },
-    "pushedAt": "2026-10-17T08:24:05Z",
+    "pushedAt": "2026-10-20T07:22:18Z",
     "slug": "v587d/capital-generation",
     "stars": 17,
     "topics": [
@@ -46,7 +46,7 @@
       "multi-agent",
       "stock-analysis"
     ],
-    "updatedAt": "2026-10-18T05:43:11Z",
+    "updatedAt": "2026-10-20T07:22:24Z",
     "url": "https://github.com/v587d/capital-generation"
   },
   "id": "gh:1335734923",
@@ -72,13 +72,73 @@
         "types": "./lib/index.d.ts"
       },
       "./locale/*.json": "./locale/*.json",
-      "./package.json": "./package.json"
+      "./package.json": "./package.json",
+      "./policy": {
+        "default": "./lib/policy-entry.js",
+        "import": "./lib/policy-entry.js",
+        "types": "./lib/policy-entry.d.ts"
+      },
+      "./runtime": {
+        "default": "./lib/runtime-entry.js",
+        "import": "./lib/runtime-entry.js",
+        "types": "./lib/runtime-entry.d.ts"
+      },
+      "./tools/chart-render": {
+        "default": "./lib/chart-render-entry.js",
+        "import": "./lib/chart-render-entry.js",
+        "types": "./lib/chart-render-entry.d.ts"
+      },
+      "./tools/chart-source": {
+        "default": "./lib/chart-source-entry.js",
+        "import": "./lib/chart-source-entry.js",
+        "types": "./lib/chart-source-entry.d.ts"
+      },
+      "./tools/collect": {
+        "default": "./lib/collect-entry.js",
+        "import": "./lib/collect-entry.js",
+        "types": "./lib/collect-entry.d.ts"
+      },
+      "./tools/dataset-read": {
+        "default": "./lib/dataset-read-entry.js",
+        "import": "./lib/dataset-read-entry.js",
+        "types": "./lib/dataset-read-entry.d.ts"
+      },
+      "./tools/ocr": {
+        "default": "./lib/ocr-entry.js",
+        "import": "./lib/ocr-entry.js",
+        "types": "./lib/ocr-entry.d.ts"
+      },
+      "./tools/retrieve-search": {
+        "default": "./lib/search-entry.js",
+        "import": "./lib/search-entry.js",
+        "types": "./lib/search-entry.d.ts"
+      },
+      "./tools/retrieve-sources": {
+        "default": "./lib/sources-entry.js",
+        "import": "./lib/sources-entry.js",
+        "types": "./lib/sources-entry.d.ts"
+      },
+      "./tools/root-extras": {
+        "default": "./lib/root-extras-entry.js",
+        "import": "./lib/root-extras-entry.js",
+        "types": "./lib/root-extras-entry.d.ts"
+      },
+      "./tools/time": {
+        "default": "./lib/time-entry.js",
+        "import": "./lib/time-entry.js",
+        "types": "./lib/time-entry.d.ts"
+      },
+      "./tools/watchlist": {
+        "default": "./lib/watchlist-entry.js",
+        "import": "./lib/watchlist-entry.js",
+        "types": "./lib/watchlist-entry.d.ts"
+      }
     },
     "main": "./lib/index.js",
     "name": "@v587d/capital-generation",
     "status": "valid",
     "type": "module",
-    "version": "2.8.3"
+    "version": "2.9.0"
   },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1335734923/02a68430-d217-4cd3-a4d6-f12eb3cf96d6",
@@ -86,7 +146,7 @@
   },
   "readme": {
     "available": true,
-    "excerpt": "Capital Generation 是运行在 DeepSeek Harness（DSH） 里的证券研究插件，面向关注 A股/港股/美股 的个人投资者。安装后，在新会话中选择 Capital 模式，就可以用自然语言查行情、财务数据、公告和新闻，整理分析并生成图表。它不是独立应用，需要先安装 DSH。"
+    "excerpt": "Capital Generation 是运行在 DeepSeek Harness（DSH） 里的证券研究插件，面向关注 A 股、港股、美股的个体投资者。安装后，新会话的选择器里会多出 自动模式、行情专家、资讯专员 三个模式；日常研究选 自动模式，用自然语言查行情、财务数据、公告和新闻，由它安排取数、数据质检、资料检索与图表，最后给出带来源的结论。它不是独立应用，需要先安装 DSH。"
   },
   "schemaVersion": 1,
   "scripts": {

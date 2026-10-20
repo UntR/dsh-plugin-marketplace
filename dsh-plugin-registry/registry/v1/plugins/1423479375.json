@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "0072914947606a843873cd8e83def468c92f6932"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.mjs",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./remote": "./lib/typert.remote-client.mjs",
+      "./typert": "./lib/typert.host.mjs"
+    },
+    "main": "./lib/index.mjs",
+    "name": "@lemonel/dsh-prompt-freeze",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b78e8ad35de6fd0a2250a39ca75473b0765ee8abefd7afedf55e0dd1fbc1104a/lemonel/dsh-prompt-freeze",
     "description": "A DeepSeek Harness plugin that freezes tool declarations to improve prompt cache stability."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "冻结会话的工具声明和命名提示段落（system prompt），防止意外改动导致的缓存失效，审阅后决定是否修改。npm 包 @lemonel/dsh-prompt-freeze，不保证缓存命中，也不阻止或限制工具执行。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "ee4bd2f0b1014c2cafd80370625e3289e399c8bd"
   },
   "github": {
@@ -44,27 +44,37 @@
   },
   "id": "gh:1423336644",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-autocontinue",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kenjoe41/dsh-autocontinue#ee4bd2f0b1014c2cafd80370625e3289e399c8bd",
+    "version": "0.1.13"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-autocontinue",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.13"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b9384aa4653ada955ccfc8a16827a6f967d94762992f1619f1ea2afb1618acbd/kenjoe41/dsh-autocontinue",
     "description": "Automatic same-session continuation, retry with backoff, goal revival, and restart recovery for the DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A dsh plugin that keeps a session working when nobody is watching: it continues the conversation on its own, retries through provider and network failures with backoff, and refuses to let a goal session stall."
   },
   "schemaVersion": 1,
   "scripts": {

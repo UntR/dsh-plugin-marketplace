@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
     "enrichmentStatus": "ok",
-    "headSha": "a30ffa4a77aba84b52ae047d53c24887f35a817d"
+    "headSha": "6ae10dd5dced9c253818545fdc814c541482eb3f"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH 持仓盈亏悬浮卡片（同花顺投资账本）— 自动同步真实持仓数据，显示今日盈亏、上证指数和当日走势图，无需手动添加股票。",
     "fork": false,
     "forks": 0,
-    "headSha": "a30ffa4a77aba84b52ae047d53c24887f35a817d",
+    "headSha": "6ae10dd5dced9c253818545fdc814c541482eb3f",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,18 +25,18 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT5EEQw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/158299507f26d307810e0518311b95704a3898f6a5ff807f6e68c0a162a25e5d/PM25000/dsh-ths-holdings",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/52c05230beecaa63fdc5c517b5f89fd45f5486ff711a6a6c0b749488cdf00ca8/PM25000/dsh-ths-holdings",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/49863669?u=7a5d3faf532041dc67aac3c5ecab4b808ab4e735&v=4",
       "login": "PM25000"
     },
-    "pushedAt": "2026-10-18T14:48:14Z",
+    "pushedAt": "2026-10-20T06:40:56Z",
     "slug": "PM25000/dsh-ths-holdings",
-    "stars": 4,
+    "stars": 5,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-18T14:48:19Z",
+    "updatedAt": "2026-10-20T07:24:53Z",
     "url": "https://github.com/PM25000/dsh-ths-holdings"
   },
   "id": "gh:1334903875",
@@ -46,11 +46,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-ths-holdings@0.3.1",
-    "version": "0.3.1"
+    "spec": "dsh-ths-holdings@0.3.2",
+    "version": "0.3.2"
   },
   "npm": {
-    "latestVersion": "0.3.1",
+    "latestVersion": "0.3.2",
     "published": true,
     "repositoryMatches": true
   },
@@ -65,21 +65,27 @@
         "types": "./lib/types/client/index.d.ts"
       },
       "./cordis.patch.yml": "./cordis.patch.yml",
-      "./package.json": "./package.json"
+      "./locale/*.json": "./locale/card/*.json",
+      "./package.json": "./package.json",
+      "./skill": {
+        "default": "./lib/skill.js",
+        "types": "./lib/types/skill.d.ts"
+      },
+      "./skill/locale/*.json": "./locale/skill/*.json"
     },
     "main": "lib/index.js",
     "name": "dsh-ths-holdings",
     "status": "valid",
     "type": "module",
-    "version": "0.3.1"
+    "version": "0.3.2"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/158299507f26d307810e0518311b95704a3898f6a5ff807f6e68c0a162a25e5d/PM25000/dsh-ths-holdings",
+    "coverUrl": "https://opengraph.githubassets.com/52c05230beecaa63fdc5c517b5f89fd45f5486ff711a6a6c0b749488cdf00ca8/PM25000/dsh-ths-holdings",
     "description": "DSH 持仓盈亏悬浮卡片（同花顺投资账本）— 自动同步真实持仓数据，显示今日盈亏、上证指数和当日走势图，无需手动添加股票。"
   },
   "readme": {
     "available": true,
-    "excerpt": "A floating position P&L card for DeepSeek Harness (DSH) Desktop and Web. It automatically syncs your real portfolio data from the Tonghuashun investment-ledger (同花顺投资账本) — no manual stock picking. Displays 今日盈亏 (today's P&L), 上证指数 (Shanghai Composite Index), and an intraday mini "
+    "excerpt": "A Tonghuashun holdings plugin providing a floating position P&L card and a portfolio report Skill for DeepSeek Harness (DSH) Desktop and Web. It automatically syncs your real portfolio data from the Tonghuashun investment-ledger (同花顺投资账本) — no manual stock picking. Displays 今日盈亏 "
   },
   "schemaVersion": 1,
   "scripts": {

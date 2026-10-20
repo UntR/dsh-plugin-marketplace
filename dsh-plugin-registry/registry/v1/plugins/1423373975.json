@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "943606f09fcfd1273b12f90caeaf2ba80443f2df"
   },
   "github": {
@@ -49,27 +49,38 @@
   },
   "id": "gh:1423373975",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-music-local",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xiao000xue/dsh-music-local#943606f09fcfd1273b12f90caeaf2ba80443f2df",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-music-local",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7020cb5c7e319b77e6854542da70b3859d6571f3290897f1f0851e2954d7eb33/xiao000xue/dsh-music-local",
     "description": "DeepSeek Harness 本地音乐播放器插件：树形歌单、直接流式播放、零 token 消耗"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的本地音乐播放器插件。把一个音乐根目录下的每个子目录（树形，任意深度）当成一个播放列表，直接流式播放，不改动、不转存、不读取音频文件头。"
   },
   "schemaVersion": 1,
   "scripts": {

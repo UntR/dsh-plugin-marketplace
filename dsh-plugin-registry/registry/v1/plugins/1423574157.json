@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "d8f9ba9d69a443c89acd57e4094395aa3aaf3e7f"
   },
   "github": {
@@ -53,27 +53,46 @@
   },
   "id": "gh:1423574157",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "naruto-power-workbench",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:coin-6926/dsh-naruto-workbench#d8f9ba9d69a443c89acd57e4094395aa3aaf3e7f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./core": {
+        "import": "./dist/naruto-power.cjs",
+        "require": "./dist/naruto-power.cjs",
+        "types": "./dist/naruto-power.d.ts"
+      },
+      "./data": "./lib/power-data.js",
+      "./dsh": "./lib/index.js",
+      "./html": "./dist/naruto-workbench.html",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "naruto-power-workbench",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/81d161b539d2ed25cc2279b4a2845ffa9084880843425c2b3ebbb50aad6a2250/coin-6926/dsh-naruto-workbench",
     "description": "火影忍者手游战力工作台｜dsh-plugin，也可脱离 DSH 独立运行（单文件 HTML / Node CLI / UMD）｜AGENTS.md 是部署契约，把链接丢给 agent 即可装好｜每条数值带来源与置信度"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个挂在 DeepSeek Harness 里的战力工作台插件：填 16 板块战力面板 → 本地即时算 → 一键把结构化结论交给 agent 深入分析。"
   },
   "schemaVersion": 1,
   "scripts": {

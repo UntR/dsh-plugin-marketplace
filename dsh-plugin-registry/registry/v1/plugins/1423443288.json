@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichmentStatus": "ok",
     "headSha": "da8998e5eec75c53e67ea5397a081d185a84335b"
   },
   "github": {
@@ -38,27 +38,38 @@
   },
   "id": "gh:1423443288",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-md-export",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:AsakuraAOI/dsh-session-md-export#da8998e5eec75c53e67ea5397a081d185a84335b",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-session-md-export",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c8628523c1e5af21641b6755fffd81f4e1befb6dc1f1bf51fb52c9bcf1ef6374/AsakuraAOI/dsh-session-md-export",
     "description": "Export the current DSH Session trajectory as a Markdown file from the Session header."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "从会话标题栏下载一份可阅读的 Markdown 轨迹，保留对话、工具调用和压缩摘要，方便归档或复盘。"
   },
   "schemaVersion": 1,
   "scripts": {

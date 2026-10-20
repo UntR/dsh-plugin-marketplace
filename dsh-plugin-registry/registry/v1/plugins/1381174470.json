@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichedAt": "2026-10-20T09:17:09.312Z",
     "enrichmentStatus": "ok",
-    "headSha": "265894e4fb9921160dbe77c57e8a041f9d6994f1"
+    "headSha": "46d4ab33a5bb310603b7f1728258ed503ae7d3ad"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Edit any user turn in DeepSeek Harness and re-run it: an inline editor rolls the conversation back through the official surface-replace contract, then re-prompts the agent with the revised text. The append-only session log is never rewritten.",
     "fork": false,
     "forks": 0,
-    "headSha": "265894e4fb9921160dbe77c57e8a041f9d6994f1",
+    "headSha": "46d4ab33a5bb310603b7f1728258ed503ae7d3ad",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUlMMxg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/270249b1d0a4f41dcf1b826a7445419cc0ce169a467c4cb30cff7cb2f4894ff0/DDDMUC/dsh-edit-turn",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ed214298603a16d8fcff00dcfedd4db7658bfd558e11d93795adad6caf111663/DDDMUC/dsh-edit-turn",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/175344510?u=959622c9a56d53e2d25bdb609f132aa7aef9e8ef&v=4",
       "login": "DDDMUC"
     },
-    "pushedAt": "2026-10-15T07:50:22Z",
+    "pushedAt": "2026-10-20T06:59:39Z",
     "slug": "DDDMUC/dsh-edit-turn",
-    "stars": 6,
+    "stars": 7,
     "topics": [
       "deepseek-harness",
       "dsh",
@@ -40,7 +40,7 @@
       "edit",
       "turn"
     ],
-    "updatedAt": "2026-10-18T05:47:39Z",
+    "updatedAt": "2026-10-20T07:37:09Z",
     "url": "https://github.com/DDDMUC/dsh-edit-turn"
   },
   "id": "gh:1381174470",
@@ -50,11 +50,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-edit-turn@0.2.20",
-    "version": "0.2.20"
+    "spec": "dsh-edit-turn@0.3.0",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": "0.2.20",
+    "latestVersion": "0.3.0",
     "published": true,
     "repositoryMatches": true
   },
@@ -68,15 +68,15 @@
     "name": "dsh-edit-turn",
     "status": "valid",
     "type": "module",
-    "version": "0.2.20"
+    "version": "0.3.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/270249b1d0a4f41dcf1b826a7445419cc0ce169a467c4cb30cff7cb2f4894ff0/DDDMUC/dsh-edit-turn",
+    "coverUrl": "https://opengraph.githubassets.com/ed214298603a16d8fcff00dcfedd4db7658bfd558e11d93795adad6caf111663/DDDMUC/dsh-edit-turn",
     "description": "Edit any user turn in DeepSeek Harness and re-run it: an inline editor rolls the conversation back through the official surface-replace contract, then re-prompts the agent with the revised text. The append-only session log is never rewritten."
   },
   "readme": {
     "available": true,
-    "excerpt": "DeepSeek Harness 的「编辑某一轮」插件 —— 点用户消息旁的编辑按钮，就地改写那一句。保存即生效：改后的内容成为模型后续读到的版本，这一条消息下面的对话原样不动。 改写走官方 surface-replace 契约（一条替换事件同时完成\"删旧 + 立新\"，被替换的内容从模型上下文里消失），保存本身永不调用模型。会话日志是 append-only 的，原始字节一个都不改写。"
+    "excerpt": "DeepSeek Harness 的「编辑某一轮」插件 —— 点消息旁的编辑按钮，就地改写。改提问：那一句就地替换，这一条下面的回复与后续对话原样不动。改回答：可以只改正文，也可以只改思维链；改动通过官方 plugin record + message projection 就地生效，这一轮不挪位置、后面的轮次不重放、日志只多一条小记录。 提示词走官方 surface-replace 契约（一条替换事件同时完成\"删旧 + 立新\"）；回复块走宿主公开的 appendPluginRecord + registerMessageProjection，不是磁盘改"
   },
   "schemaVersion": 1,
   "scripts": {
