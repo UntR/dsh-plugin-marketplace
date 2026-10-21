@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "80faa90da1e072ecde0134c62809f102279f4885"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1424982898",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-session-auto-resume",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:tmt-homelab/dsh-session-auto-resume#80faa90da1e072ecde0134c62809f102279f4885",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json",
+      "./selftest.mjs": "./selftest.mjs",
+      "./verify-d1.mjs": "./verify-d1.mjs"
+    },
+    "main": "index.js",
+    "name": "@local/dsh-session-auto-resume",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ded5105d5122b95e1208bb9ab9189aab372635985c697108d25b61f06c57419b/tmt-homelab/dsh-session-auto-resume",
     "description": "DeepSeek Harness plugin: automatically resume sessions interrupted by app closure"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that automatically resumes agent sessions interrupted by app closure. When the DSH host relaunches, sessions that were mid-work at closure are detected from persisted state and recovered without human action:"
   },
   "schemaVersion": 1,
   "scripts": {

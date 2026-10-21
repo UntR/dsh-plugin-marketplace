@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "4737da7173fcb59b79db11b1f115110d44ebbfe9"
   },
   "github": {
@@ -44,27 +44,48 @@
   },
   "id": "gh:1424143988",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-dual-bridge",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-dual-bridge@0.13.2",
+    "version": "0.13.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.13.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client.d.ts"
+      },
+      "./client/api": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-dual-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.13.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2f1ab10c43c9664508a036b817c9ccb9d3d680e8defb2340db6fac7a782619ad/xiez0324-rgb/dsh-dual-bridge",
     "description": "分流对话 · Plugins of Conversation Departure — DSH 侧边栏项目上下文打包插件（纯本地，不联网）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Plugins of Conversation Departure — 把「读项目」分流给免费的 DeepSeek 网页版，把「改代码」留给 Harness API。"
   },
   "schemaVersion": 1,
   "scripts": {

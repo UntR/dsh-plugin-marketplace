@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "35dd21dec7b9afb1e2c71406040a27739f1311d8"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1424184139",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ask-assistant",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ytftu/dsh-ask-assistant#35dd21dec7b9afb1e2c71406040a27739f1311d8",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-ask-assistant",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6752ee705eb4affe7cb706dd6f186503aeb6931782e28bc3521a8457b9fa5e2a/ytftu/dsh-ask-assistant",
     "description": "DSH（DeepSeek Harness）插件：侧边栏底部动作区加「问助理」按钮，一键用内置浏览器打开 DeepSeek 网页版，随手问事不消耗会话 token。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（下称 DSH）桌面版加一个「问助理」按钮：点它就用右侧栏的内置浏览器打开 DeepSeek 网页版对话。随手查个东西、问个小事不必新开一个 DSH 会话，也就不消耗会话 token、不污染工作区上下文。"
   },
   "schemaVersion": 1,
   "scripts": {

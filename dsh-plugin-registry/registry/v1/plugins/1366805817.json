@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "6b7b60b49b7dd37e278acb1393a08e417a6d5e84"
   },
   "github": {
@@ -47,13 +47,13 @@
   },
   "id": "gh:1366805817",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-character-presets",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wwwangzilin/dsh-character-presets#6b7b60b49b7dd37e278acb1393a08e417a6d5e84",
+    "version": "2.0.1"
   },
   "npm": {
     "latestVersion": null,
@@ -61,11 +61,16 @@
     "repositoryMatches": null
   },
   "package": {
+    "exports": {
+      ".": "./luna-soul.mjs",
+      "./*": "./*",
+      "./package.json": "./package.json"
+    },
     "main": null,
     "name": "dsh-character-presets",
     "status": "valid",
     "type": "module",
-    "version": "1.0.0"
+    "version": "2.0.1"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ab6631553f5bc6d9fccde9856ead8f6f69d254e057922254a97fa807325c183b/wwwangzilin/dsh-character-presets",
@@ -73,7 +78,7 @@
   },
   "readme": {
     "available": true,
-    "excerpt": "这是一组 DSH agent preset：不替换你的模型、不改宿主配置，只是往 /.agent-presets/ 里放目录， 新建会话时选中哪一位，这个会话就由谁来跑——人格、说话方式、思考方式全换，能力一条不砍。"
+    "excerpt": "DeepSeek Harness 的 agent preset 插件包，提供单一预设「露娜模式」。"
   },
   "schemaVersion": 1,
   "scripts": {

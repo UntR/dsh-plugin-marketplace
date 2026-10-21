@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
     "enrichmentStatus": "ok",
-    "headSha": "3de6e1c2b2f228dc533fc4ad33e0f79f57a18fc2"
+    "headSha": "3f6c522d4c0e025d0d26af5c4f3011f9f9fdaacb"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness update plugin: official release checks, scheduled updates and supervised rollback",
     "fork": false,
     "forks": 0,
-    "headSha": "3de6e1c2b2f228dc533fc4ad33e0f79f57a18fc2",
+    "headSha": "3f6c522d4c0e025d0d26af5c4f3011f9f9fdaacb",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,13 +25,13 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOU6CnaA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/96a8aa8bf898913acabcf793d4ad6fa03109aba0f6e9bc5c1c1f3f535dba8ee1/zudazhuang/dsh-upgrade",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/48460e0ea0a23f28836d90eb9480730332dff52151de3f376f5adfcac2e229aa/zudazhuang/dsh-update-safe",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/271132520?v=4",
       "login": "zudazhuang"
     },
-    "pushedAt": "2026-10-20T06:50:43Z",
-    "slug": "zudazhuang/dsh-upgrade",
+    "pushedAt": "2026-10-21T07:50:45Z",
+    "slug": "zudazhuang/dsh-update-safe",
     "stars": 1,
     "topics": [
       "deepseek-harness",
@@ -39,23 +39,23 @@
       "dsh-plugin",
       "updater"
     ],
-    "updatedAt": "2026-10-20T06:44:31Z",
-    "url": "https://github.com/zudazhuang/dsh-upgrade"
+    "updatedAt": "2026-10-21T07:50:49Z",
+    "url": "https://github.com/zudazhuang/dsh-update-safe"
   },
   "id": "gh:1403037544",
   "install": {
     "available": true,
-    "packageName": "dsh-upgrade",
-    "preferred": "github",
+    "packageName": "dsh-update-safe",
+    "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:zudazhuang/dsh-upgrade#3de6e1c2b2f228dc533fc4ad33e0f79f57a18fc2",
-    "version": "0.3.8"
+    "spec": "dsh-update-safe@0.4.2",
+    "version": "0.4.2"
   },
   "npm": {
-    "latestVersion": "1.1.0",
+    "latestVersion": "0.4.2",
     "published": true,
-    "repositoryMatches": false
+    "repositoryMatches": true
   },
   "package": {
     "exports": {
@@ -64,18 +64,18 @@
       "./package.json": "./package.json"
     },
     "main": "index.js",
-    "name": "dsh-upgrade",
+    "name": "dsh-update-safe",
     "status": "valid",
     "type": "module",
-    "version": "0.3.8"
+    "version": "0.4.2"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/96a8aa8bf898913acabcf793d4ad6fa03109aba0f6e9bc5c1c1f3f535dba8ee1/zudazhuang/dsh-upgrade",
+    "coverUrl": "https://opengraph.githubassets.com/48460e0ea0a23f28836d90eb9480730332dff52151de3f376f5adfcac2e229aa/zudazhuang/dsh-update-safe",
     "description": "DeepSeek Harness update plugin: official release checks, scheduled updates and supervised rollback"
   },
   "readme": {
     "available": true,
-    "excerpt": "DeepSeek Harness 源码安装的官方版本检查和安全更新插件。适配 0.2.0-rc.2 与 0.2.1-alpha.1 的 ConfigForms 与插件详情页；提供启动检查、手动“检查更新”、可关闭的定时检查与每日安装时段。默认启动检查与每 30 分钟检查开启；自动安装默认关闭。侧栏底部提供更新入口和新版提示，核对 GitHub 官方发布和 npm 发布记录。网络错误显示未验证，预发布与稳定渠道分别比较，禁止降级。"
+    "excerpt": "DeepSeek Harness 源码安装的更新插件。它把一次更新拆成可回退的几步：核对官方发布 → 在独立目录构建候选版本 → 试启动并检查实际运行版本 → 由监督进程切换 → 失败时恢复原环境。"
   },
   "schemaVersion": 1,
   "scripts": {

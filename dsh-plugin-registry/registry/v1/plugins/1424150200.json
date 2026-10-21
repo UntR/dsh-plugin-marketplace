@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "06d64bca28c5948aea43fa474f028c4b88969e94"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1424150200",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-webchat-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:naiIong/dsh-webchat-bridge#06d64bca28c5948aea43fa474f028c4b88969e94",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-webchat-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/17086f64c6a15bdd28432026798cb8e49b304e71a93ffd51eaf9630394cec370/naiIong/dsh-webchat-bridge",
     "description": "Embed chat.deepseek.com web chat in DSH and transfer the conversation into a workspace session for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 里直接使用 chat.deepseek.com 的网页对话，并把对话一键转成工作区会话继续开发。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "7bbaaeb329eb8aadbbd07e750a5841ce56763259"
   },
   "github": {
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,20 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": null,
+    "name": "dsh-audit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/28b79a9fed03e01aa4bf20a543de16946ddf09f5d7120a9e4d27c1f87af6d880/weft-audit/dsh-audit",
     "description": "固定评分表 0-10 评分官（三眼定分），只打分、不裁决、不执行"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "子智能体评分官：固定 rubric 0-10（完整性3/准确性3/格式2/返工2），JSON 输出。 评分协议（2026-10-19）：模型评分路径采用「三眼定分」——同一回答独立连评 3 次取总分 中位数；不足 3 次有效输出标「依据不足」交人复核。 只评分、不裁决、不执行。"
   },
   "schemaVersion": 1,
   "scripts": {

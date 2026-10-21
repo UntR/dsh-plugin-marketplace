@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "1ebee745737d221f283c11f92f001942d85c0e2b"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1424110574",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-vba-bridge",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-vba-bridge@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-vba-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/45357105cbd08bbba6bbe18f720f4ad4a88038b2c172c794a95fd20faa0a1963/alexltr/dsh-vba-bridge",
     "description": "在 DSH-HARNESS 中通过插件读写 Excel VBA 工程"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DSH 会话里的 AI 直接读写 Excel VBA 工程：列模块、读源码、改代码、导出 .frm/.frx、列过程，并在保存后重新打开校验。核心走 Excel 自己的 COM/VBIDE， 所以改完的宏由 Excel 编译、保存和验收，而不是硬拆 vbaProject.bin。"
   },
   "schemaVersion": 1,
   "scripts": {

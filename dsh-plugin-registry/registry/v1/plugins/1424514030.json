@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "b0be3195e883726dfcb63b7fcdff2a3d88813076"
   },
   "github": {
@@ -41,27 +41,41 @@
   },
   "id": "gh:1424514030",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workspace-orchestrator",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Sum556677/dsh-workspace-orchestrator#b0be3195e883726dfcb63b7fcdff2a3d88813076",
+    "version": "0.3.6"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.6",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./index.js"
+      },
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-workspace-orchestrator",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f00cc868110ad8b35d1d135671fbf7aa468aa44c7487dce0086ba2e858e4f6b2/Sum556677/dsh-workspace-orchestrator",
     "description": "DSH plugin orchestration and workspace-isolation manager: plugin scanning, per-workspace isolated instances, and a standalone rescue entry."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "按工作区隔离插件、诊断冲突、并在 DSH 崩溃时自救。"
   },
   "schemaVersion": 1,
   "scripts": {

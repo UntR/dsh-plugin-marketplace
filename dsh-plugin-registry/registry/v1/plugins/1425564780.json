@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "c4d9a90032d10b984ff0c2f4be043b49d227b4cf"
   },
   "github": {
@@ -47,33 +47,45 @@
   },
   "id": "gh:1425564780",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-theme-inkstone",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:fuguang12123/dsh-theme-inkstone#c4d9a90032d10b984ff0c2f4be043b49d227b4cf",
+    "version": "0.1.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/index.js",
+      "./client": "./dist/client.js",
+      "./icon": "./assets/icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-theme-inkstone",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/61f5b9225797afe52f59c2f16ae6509a255496eddcda77c52b2d8170e12b93dc/fuguang12123/dsh-theme-inkstone",
     "description": "墨白 / Inkstone — an independent monochrome DSH community theme inspired by Minimal E-ink."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "平时用 Obsidian 记笔记，觉得它的阅读和写作体验很舒服，就想把自己喜欢的这份体验也带到 DeepSeek Harness 里，于是写了「墨白」。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

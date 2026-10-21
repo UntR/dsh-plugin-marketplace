@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "0926c4a605128ed1c27891e98ad6e04f60dbbd28"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1424950593",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tidy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:JHyugou/dsh-tidy#0926c4a605128ed1c27891e98ad6e04f60dbbd28",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./src/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-tidy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9a1197fde0a53daeac5e9589710f045cb702281c54768a2bef8b35249df31e36/JHyugou/dsh-tidy",
     "description": "DSH 插件：把暂时不用的工作区或单个会话拖进侧边栏「收纳区」，需要时再拖回来，收纳区可折叠（Sidebar stash area for DeepSeek Harness）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 侧边栏加一个收纳区：把暂时不用的工作区（连同它的所有会话）或单个会话拖进去，侧边栏立刻清爽；要用的时候再拖回来。"
   },
   "schemaVersion": 1,
   "scripts": {

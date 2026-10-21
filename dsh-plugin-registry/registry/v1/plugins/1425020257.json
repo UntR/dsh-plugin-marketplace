@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "1ca19b42d1c8388d541f9333e9015ab6ac3143f5"
   },
   "github": {
@@ -43,27 +43,40 @@
   },
   "id": "gh:1425020257",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-versions",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:just-liuyi/dsh-plugin-versions#1ca19b42d1c8388d541f9333e9015ab6ac3143f5",
+    "version": "0.1.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-versions",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/caaffd64d3173201b9dec5da83754c346b25e83ed9e7eedde9df9de3fa2e2644/just-liuyi/dsh-plugin-versions",
     "description": "Version browser for installed DeepSeek Harness plugins: list published versions, switch or roll back, and uninstall from the Plugins page."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Version browser for DeepSeek Harness plugins. It adds an Installed plugins page under Settings → Plugins where you can see every published version of an installed plugin, switch to one, roll back, or uninstall it — all through the host's own pluginManager service."
   },
   "schemaVersion": 1,
   "scripts": {

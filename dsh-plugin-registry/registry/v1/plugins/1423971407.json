@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "3fc67cbc66260801136ea38bc10be36072dc1c6e"
   },
   "github": {
@@ -27,7 +27,7 @@
     "nodeId": "R_kgDOVOAUTw",
     "openGraphImageUrl": "https://opengraph.githubassets.com/e220c4bb54a507678616935082403322bad8aaa8cc3785e4eeaa545a16da8c4b/qiyuexue-xiyu/dsh-tool-cost-hint",
     "owner": {
-      "avatarUrl": "https://avatars.githubusercontent.com/u/344185743?v=4",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/344185743?u=1357db8a4ff567677be169952df64c882aebc95e&v=4",
       "login": "qiyuexue-xiyu"
     },
     "pushedAt": "2026-10-18T04:13:24Z",
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": "./dist/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-tool-cost-hint",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e220c4bb54a507678616935082403322bad8aaa8cc3785e4eeaa545a16da8c4b/qiyuexue-xiyu/dsh-tool-cost-hint",
     "description": "不告诉你花了多少钱，只告诉你每个工具往你的上下文里塞了多少东西。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "纯被动观察插件：不注册工具、不往模型上下文写任何东西、不 append 任何 session 事件。 它只监听 session/event，在每轮结束时整理出\"这一轮谁调了哪些工具、各几次、各自注入多少 token\"。"
   },
   "schemaVersion": 1,
   "scripts": {

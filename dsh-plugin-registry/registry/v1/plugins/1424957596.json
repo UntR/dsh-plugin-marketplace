@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "1e594c79c52dd970505dbc6ca1896f0af978302f"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1424957596",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-agent-teams-optimizer",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Soulize/dsh-agent-teams-optimizer#1e594c79c52dd970505dbc6ca1896f0af978302f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-agent-teams-optimizer",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/06efcb3557e10b17d1bcf2b6814b59ec86d7a4f37625ad49ee7b9d8eb04b0e39/Soulize/dsh-agent-teams-optimizer",
     "description": "An independent DeepSeek Harness plugin to configure the actual Agent Teams teammate admission limit."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An independent DeepSeek Harness plugin to configure the actual Agent Teams teammate admission limit. It changes the number checked when spawnteammate creates a new, durable teammate; it does not merely ask the model to use more teammates."
   },
   "schemaVersion": 1,
   "scripts": {

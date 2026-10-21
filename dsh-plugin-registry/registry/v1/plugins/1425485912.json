@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "444cbc59b80e490db9413ac1272cf3adb76b1b6e"
   },
   "github": {
@@ -41,27 +41,41 @@
   },
   "id": "gh:1425485912",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@istarry/dsh-scheduled-tasks",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@istarry/dsh-scheduled-tasks@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@istarry/dsh-scheduled-tasks",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7f15d6dc40b1fcb2963e31d36b0c93c79d829b030af30948c75e6001a7f8864b/iStarryDust/dsh-scheduled-tasks",
     "description": "定时任务：任务绑定 agent、提示词与周期，到点后开启全新会话执行提示词，并保留运行记录"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 加一套定时任务：每个任务绑定一个 Agent 预设、一段提示词和一个周期，到点后开启一个全新的会话执行那段提示词，并保留运行记录。"
   },
   "schemaVersion": 1,
   "scripts": {

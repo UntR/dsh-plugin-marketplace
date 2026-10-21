@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "0ac08ad69ed6018eea7ce7245afaae22fe236477"
   },
   "github": {
@@ -48,24 +48,55 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/host/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/remote.js",
+        "types": "./lib/types/remote/index.d.ts"
+      },
+      "./schema.json": "./schema/ui.schema.json",
+      "./shared": {
+        "default": "./lib/shared.js",
+        "types": "./lib/types/shared/index.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/typert.js",
+        "types": "./lib/types/remote/host.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-intelligent-ui",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/36f5d13e5e8a66638c7f3760e3880ce9d76eb977878faa354bf286a30d756246/losinphantom/dsh-plugin-intelligent-ui",
     "description": "Validated, agent-composed interactive UI inside DeepSeek Harness conversations"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 当前对话中，让 Agent 根据任务选择文字、结构化 UI 或交互式 UI，组合严格校验的组件，并把界面作为本地计算、授权工具操作和后续 Agent 请求的入口。"
   },
   "schemaVersion": 1,
   "scripts": {

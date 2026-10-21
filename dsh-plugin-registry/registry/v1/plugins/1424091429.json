@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "b3bc8210247aef592fc9da92e0381066433d876a"
   },
   "github": {
@@ -38,27 +38,45 @@
   },
   "id": "gh:1424091429",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@huanlin/dsh-plugin-workspace-system",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:HuanLinOTO/dsh-plugin-workspace-system#b3bc8210247aef592fc9da92e0381066433d876a",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "./lib/index.js",
+    "name": "@huanlin/dsh-plugin-workspace-system",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1cd02e019a1ef66e02a334281c8b17a75f8543ecc656b1c6a6242766925d4ac5/HuanLinOTO/dsh-plugin-workspace-system",
     "description": "按 workspace 注入一段用户可编辑的 system 提示词，sidebar 面板内编辑、保存后下一轮生效 | Workspace-scoped user-editable system-prompt section with a sidebar editor"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "按 workspace 注入一段用户编辑的 system 提示词段落：同一 workspace（canonical cwd 相同）下的所有会话（含 subagent）共享这段文本，sidebar 面板内编辑，保存后下一轮模型请求即生效，无需重启。"
   },
   "schemaVersion": 1,
   "scripts": {

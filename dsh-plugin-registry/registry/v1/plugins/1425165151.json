@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "add92d169aebce6c3f043d4c566081a7c34feb9a"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1425165151",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-image-relay",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Bai-Ziyi/dsh-image-relay#add92d169aebce6c3f043d4c566081a7c34feb9a",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-image-relay",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/db09017c2bed07eb7abf41f18982aef7c735e80807de707bfaad864e7fa4bb73/Bai-Ziyi/dsh-image-relay",
     "description": "Generate images from a text prompt through any OpenAI-compatible relay and attach them to the DeepSeek Harness conversation."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（dsh）的图片生成插件：给文字模型一个 imagegenerate 工具，通过任意 OpenAI 兼容中转站生成图片，并把图片作为附件放进会话。"
   },
   "schemaVersion": 1,
   "scripts": {

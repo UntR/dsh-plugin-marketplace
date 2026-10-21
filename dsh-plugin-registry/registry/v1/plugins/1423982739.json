@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "e8e4b2bc2cfb2caabc1a93b19eb4c01bd04138f9"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1423982739",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-android-preview",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:skyjjgw/dsh-plugin-android-preview#e8e4b2bc2cfb2caabc1a93b19eb4c01bd04138f9",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-android-preview",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/061f1f8891ed9954092cd09d202233c137d668b904452fd4d09bd582d3be0d0d/skyjjgw/dsh-plugin-android-preview",
     "description": "Native Android preview tab for DeepSeek Harness, with scrcpy-style controls and Flutter hot reload."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 聊天右侧打开真实 Android App，支持点击、滑动、返回与 Flutter 界面热重载。当前适配星伴 / Operit2 工程，使用已构建的调试 APK，不在每次保存时 重新打包。插件通过 Harness 的原生右侧页签 API 接入，不改宿主安装包。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "6ec5569325645e6cab20fd09a77a0bd99b45aa81"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1425445739",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-clinepass-pin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:liujuntao123/dsh-clinepass-pin#6ec5569325645e6cab20fd09a77a0bd99b45aa81",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-clinepass-pin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8cc0c539c7aec44f810b95bf2831418ee6b5388b19bd2c128157d328fb3ce6be/liujuntao123/dsh-clinepass-pin",
     "description": "Pin the Cline Pass route in DeepSeek Harness to one upstream provider (default: first-party deepseek) by adding providerOptions.gateway.only to the chat request body."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的 cline-pass 路由硬钉一个上游 Provider（默认第一方 deepseek）。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "b9966334dc598c35fbe68b45ba14efeb731e7589"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-find-anywhere",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/af02f0fc764fd1c035acf1fecece67f7bb4a9605df3aeecd77dd4afe906127bb/hhhmhhh233/dsh-find-anywhere",
     "description": "Ctrl+F find bar for the DSH desktop UI: search the conversation and the right panel, highlight matches, and jump between results. As-is / best-effort."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness 桌面版 UI https://github.com/deepseek-ai/deepseek-harness 提供 Ctrl+F 式查找：在当前对话和右侧面板中搜索已渲染文本，高亮全部匹配，并在结果间循环定位。"
   },
   "schemaVersion": 1,
   "scripts": {

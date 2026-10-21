@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "b62071accf3b08a4a795053e0c1f4fc85998e1cc"
   },
   "github": {
@@ -49,27 +49,44 @@
   },
   "id": "gh:1423837212",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@riverzh/dsh-gitbash",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@riverzh/dsh-gitbash@0.2.2",
+    "version": "0.2.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./src/index.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./src/client/index.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@riverzh/dsh-gitbash",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/95ff44c7f2eb838092b3f2e177d9ef889ca91674b1687be23622cec6b06e0d2d/riverzhou/dsh-gitbash-new",
     "description": "Windows bash tool for DeepSeek Harness: replaces the preset's pwsh with Git for Windows or MSYS2 bash while keeping the official terminal contract (cwd, background jobs, timeout promotion, result markers, terminal cards)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A Windows terminal bridge for DeepSeek Harness (DSH). It replaces the model-facing pwsh tool with a real bash tool, with selectable Git for Windows and MSYS2 profiles, while keeping the official terminal-tool behaviour: working directory, background jobs, timeout promotion, permi"
   },
   "schemaVersion": 1,
   "scripts": {

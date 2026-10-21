@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "a981972bdf5e2016a68f0a43dde77df4ae74cd02"
   },
   "github": {
@@ -59,27 +59,44 @@
   },
   "id": "gh:1423908746",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-compat-adapter",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:denceee/dsh-compat-adapter#a981972bdf5e2016a68f0a43dde77df4ae74cd02",
+    "version": "0.5.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./index.js",
+        "types": "./index.d.ts"
+      },
+      "./matrix": {
+        "default": "./src/matrix.js",
+        "types": "./index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-compat-adapter",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/02ee57787088888634dd0dfe861df5871148568e4a9614cf64e896357e0d61d3/denceee/dsh-compat-adapter",
     "description": "DSH 前置/基座适配插件：把 Claude Code / Codex / WorkBuddy / OpenCode / GitHub Copilot 的 hooks 与 rules，通过显式声明适配到 DSH seam。5 家 vendor、112 个事件（102 真实/精确 + 10 自述 Approximate）、29 个原生翻译点；含自建 Copilot 桥、真实文件监听、真实 git worktree 检测、官方 LSP 接入。每条适配逐项列出损失，fail-closed，不发布虚假能力。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "🔌 我要用它 — 别的插件如何调用本适配器（消费者指南）"
   },
   "schemaVersion": 1,
   "scripts": {

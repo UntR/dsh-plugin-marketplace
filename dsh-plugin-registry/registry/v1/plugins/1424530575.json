@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "ef1546ff8d9c14ccc30fee87f26cbde35efb0e1e"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1424530575",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-parallel-dev",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zzd1990/dsh-parallel-dev#ef1546ff8d9c14ccc30fee87f26cbde35efb0e1e",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host/index.js",
+      "./client": "./src/client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/host/index.js",
+    "name": "dsh-parallel-dev",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/609bd0d077ff5fa04fb8a57cc317d064d4570215e346f508f5401290e56417a9/zzd1990/dsh-parallel-dev",
     "description": "DSH 并行开发编排插件：团队模式门禁、独立验收、依赖看板与设置页"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "面向 DeepSeek Harness 的编排插件。它不重造任务板，只补上平台没做的那一件事：把任务标记为「完成」时，必须有一份独立验收记录。"
   },
   "schemaVersion": 1,
   "scripts": {

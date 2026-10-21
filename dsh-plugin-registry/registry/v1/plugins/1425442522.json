@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "bf378b2911afd75530e08ad7968c9fa068479940"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1425442522",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "game-crash-doctor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:FLL123-Arch/game-crash-doctor#bf378b2911afd75530e08ad7968c9fa068479940",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "game-crash-doctor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f612fb9f4878cefabe3f482536d5e90a39884025a548ecef0cc38f827cb5374f/FLL123-Arch/game-crash-doctor",
     "description": "DeepSeek Harness plugin: explain Windows game crashes from Event Log, WER reports and crash dumps."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件：游戏崩溃后，用 Windows 事件日志、WER 报告和转储文件告诉你为什么崩、怎么修。"
   },
   "schemaVersion": 1,
   "scripts": {

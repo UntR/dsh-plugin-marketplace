@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "7945bea4aa4b25c2e41b124a3a25c4055c883035"
   },
   "github": {
@@ -49,27 +49,38 @@
   },
   "id": "gh:1423928556",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ptc-parse-frame",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yi-Xu-0100/dsh-ptc-parse-frame#7945bea4aa4b25c2e41b124a3a25c4055c883035",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-ptc-parse-frame",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2f0198b099d14e6095e757f615b941b29c3afa1a138d58dacb74db6808c12958/yi-Xu-0100/dsh-ptc-parse-frame",
     "description": "DSH PTC run_code parse-error position plugin (line + code frame)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 里，runcode 的程序在执行前会先经过 TypeScript 类型剥离 （stripTypeScriptTypes）。语法出错时，DSH 只把 error.message 转发给模型， 丢掉了错误栈里的行号和 ^^^ 代码框。于是漏一个逗号只会得到："
   },
   "schemaVersion": 1,
   "scripts": {

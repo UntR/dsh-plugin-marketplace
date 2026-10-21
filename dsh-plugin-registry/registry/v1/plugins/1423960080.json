@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "95b6a85e5a92cec76106e90c510427ed4d888fef"
   },
   "github": {
@@ -46,27 +46,49 @@
   },
   "id": "gh:1423960080",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-messaging",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-session-messaging@0.4.0",
+    "version": "0.4.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*",
+      "./tools": {
+        "default": "./lib/tools.js",
+        "types": "./lib/tools.d.ts"
+      },
+      "./tools/icon": "./assets/tools-icon.svg",
+      "./tools/locale/*.json": "./tools/locale/*.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-messaging",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/09d03d095dea429b01b71decb34647030a0cbc176b913ccc9567f569555a154f/XBXyftx/dsh-session-messaging",
     "description": "Cross-session messaging plugin for DeepSeek Harness: let user-launched sessions in one workspace message each other and coordinate tasks, write scopes, and conflicts."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Cross-session messaging for DeepSeek Harness (dsh): let user-launched sessions in the same workspace message each other to coordinate tasks, declared file-write scopes, and conflicts — without turning them into parent/child subagents."
   },
   "schemaVersion": 1,
   "scripts": {

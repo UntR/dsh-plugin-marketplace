@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "fc6bf01d3f6905701155cfa6cbdacf20e409894e"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVPfUvQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/282cb613d6d3f46797e29cd116d1d880b6d30d5a2e0a2a474e3118784dc46cd9/wusoudiaowei/dsh-conversation-trash",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/0c4cec9cdb299faaf9f06435788ee455bce3146e12b3d3124998a67754141504/wusoudiaowei/dsh-conversation-trash",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/216896300?v=4",
       "login": "wusoudiaowei"
     },
     "pushedAt": "2026-10-19T11:43:56Z",
     "slug": "wusoudiaowei/dsh-conversation-trash",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "deepseek-harness",
       "dsh",
@@ -40,32 +40,47 @@
       "recycle-bin",
       "session"
     ],
-    "updatedAt": "2026-10-19T11:43:58Z",
+    "updatedAt": "2026-10-21T04:49:22Z",
     "url": "https://github.com/wusoudiaowei/dsh-conversation-trash"
   },
   "id": "gh:1425527997",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-conversation-trash",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wusoudiaowei/dsh-conversation-trash#fc6bf01d3f6905701155cfa6cbdacf20e409894e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs"
+      },
+      "./client": {
+        "default": "./lib/client.cjs"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-conversation-trash",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/282cb613d6d3f46797e29cd116d1d880b6d30d5a2e0a2a474e3118784dc46cd9/wusoudiaowei/dsh-conversation-trash",
+    "coverUrl": "https://opengraph.githubassets.com/0c4cec9cdb299faaf9f06435788ee455bce3146e12b3d3124998a67754141504/wusoudiaowei/dsh-conversation-trash",
     "description": "Recycle bin for DeepSeek Harness conversations: undo for 8 seconds, restore or purge later."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH Web 侧栏加一个「删除对话」：软删除进回收站，8 秒内可撤销，子代理会话级联删除，分叉保留。"
   },
   "schemaVersion": 1,
   "scripts": {

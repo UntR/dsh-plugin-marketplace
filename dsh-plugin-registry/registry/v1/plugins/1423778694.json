@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "failed",
-    "headSha": "68aa46d5362f63b138009e7ea2a87d756dd4b35f"
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
+    "headSha": "37a028465d4549233e651286c778a135eedc406f"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Prompt-cache warmer for DeepSeek Harness: keeps a session provider cache prefix warm during long tool executions. Host plugin, per-provider TTL grid, journal + UTC-day budget.",
     "fork": false,
     "forks": 0,
-    "headSha": "68aa46d5362f63b138009e7ea2a87d756dd4b35f",
+    "headSha": "37a028465d4549233e651286c778a135eedc406f",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVN0jhg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/ff5d4331b9e305acc52775faea4d5b7869ce6915bc6ed042a30d15bde83f14d2/JanEickholt/dsh-warm",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ba94c2769d7b877d928a97fe995d619f396de1d82dfcef7d44e58d803f83252d/JanEickholt/dsh-warm",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/98643940?u=d944a91fa993046cad32cf2ffa905a56a1c3e031&v=4",
       "login": "JanEickholt"
     },
-    "pushedAt": "2026-10-20T01:05:31Z",
+    "pushedAt": "2026-10-20T18:57:53Z",
     "slug": "JanEickholt/dsh-warm",
     "stars": 0,
     "topics": [
@@ -40,32 +40,46 @@
       "host-plugin",
       "prompt-cache"
     ],
-    "updatedAt": "2026-10-20T01:05:50Z",
+    "updatedAt": "2026-10-20T18:57:57Z",
     "url": "https://github.com/JanEickholt/dsh-warm"
   },
   "id": "gh:1423778694",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-warm",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-warm@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-warm",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/ff5d4331b9e305acc52775faea4d5b7869ce6915bc6ed042a30d15bde83f14d2/JanEickholt/dsh-warm",
+    "coverUrl": "https://opengraph.githubassets.com/ba94c2769d7b877d928a97fe995d619f396de1d82dfcef7d44e58d803f83252d/JanEickholt/dsh-warm",
     "description": "Prompt-cache warmer for DeepSeek Harness: keeps a session provider cache prefix warm during long tool executions. Host plugin, per-provider TTL grid, journal + UTC-day budget."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Prompt-cache warmer for DeepSeek Harness, a host plugin. It keeps a session's provider prompt-cache prefix warm while, and only while, the session's agent loop is blocked inside a tool execution (long bash, joboutput, waitagent on teammates, and similar waits)."
   },
   "schemaVersion": 1,
   "scripts": {

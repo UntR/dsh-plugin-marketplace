@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "226924f2c04bb6628e1eca1a13d4f9baa9fc86f5"
   },
   "github": {
@@ -44,27 +44,40 @@
   },
   "id": "gh:1425349423",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-ssh-workspace/bundle",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ya-b/dsh-ssh-workspace#226924f2c04bb6628e1eca1a13d4f9baa9fc86f5",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./api": "./lib/api.js",
+      "./client": "./lib/client.js",
+      "./mount": "./lib/mount.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-ssh-workspace/bundle",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/190eabbc2d5feb6a54b13b3f35c3eaab04fbe73278256640d41046adcc49aabf/ya-b/dsh-ssh-workspace",
     "description": "DeepSeek Harness remote workspace plugin: pick a host from ~/.ssh/config, pick a directory, and its files, terminals and commands all run on that machine through a daemon-backed SSH pipe with exactly-once side effects."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的远程工作区插件：在 Web UI 里先选机器（本机或 /.ssh/config 中的主机）， 再选目录，创建出来的工作区其文件读写、终端和命令执行全部发生在远端。"
   },
   "schemaVersion": 1,
   "scripts": {

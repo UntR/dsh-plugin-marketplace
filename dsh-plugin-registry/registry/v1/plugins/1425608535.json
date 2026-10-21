@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "a6b70545adc930f235354506ee15ae6f71922746"
   },
   "github": {
@@ -30,7 +30,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/307066405?u=431ae0b25b3b9965dea7699744ac43aa3d494915&v=4",
       "login": "shinji00222"
     },
-    "pushedAt": "2026-10-20T07:27:11Z",
+    "pushedAt": "2026-10-21T07:19:26Z",
     "slug": "shinji00222/dsh-windows-computer-use",
     "stars": 1,
     "topics": [
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/plugin.js",
+      "./client": "./dist/client.js"
+    },
+    "main": "dist/plugin.js",
+    "name": "dsh-windows-computer-use",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-preview.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e46a00d011b6fbab5416d713e7bdff52da5031407b70d6f00add99055c39f051/shinji00222/dsh-windows-computer-use",
     "description": "DSH / DeepSeek Harness 的 Windows 电脑控制插件：截图、识别控件、点击、中文输入、OCR 和 Esc 急停。C# + TypeScript computer-use plugin."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DSH 操作 Windows 桌面：读取控件、截图和文字，点击、输入，再确认结果。"
   },
   "schemaVersion": 1,
   "scripts": {

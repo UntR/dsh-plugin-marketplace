@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
-    "headSha": "5853fbe63d555152e487b8a7fe41231f0f67829d"
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
+    "headSha": "d7ffdc0f101e1bfce25d27c63683f3e7609c1ad7"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-19T04:30:09Z",
     "databaseId": 1425108451,
     "defaultBranch": "main",
-    "description": "把磁盘扫成一张可批注的提案：Agent 标注、你来决定、删前可预览（DeepSeek Harness 插件）",
+    "description": "盘查：把磁盘变成一张可审查、可批注、可执行的盘面，Agent 标注、你来做决定（DeepSeek Harness 插件）",
     "fork": false,
     "forks": 0,
-    "headSha": "5853fbe63d555152e487b8a7fe41231f0f67829d",
+    "headSha": "d7ffdc0f101e1bfce25d27c63683f3e7609c1ad7",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,47 +25,59 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVPFt4w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7fa22d0599b734668de962d00f7923e6700c0b79eeee8604e7e2a449cebdf097/vlln/dsh-disk-canvas",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5931cec67253d7806f66bfafb2bd07a901fb38a92046de1977d7fe5f6d2d5a82/vlln/dsh-pancha",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/43031803?u=c701d7ae2617c16ea1449d8e1573a147b1ea77bb&v=4",
       "login": "vlln"
     },
-    "pushedAt": "2026-10-19T08:42:54Z",
-    "slug": "vlln/dsh-disk-canvas",
+    "pushedAt": "2026-10-20T11:10:42Z",
+    "slug": "vlln/dsh-pancha",
     "stars": 0,
     "topics": [
+      "cleanup",
       "deepseek-harness",
-      "disk-cleanup",
+      "disk",
       "dsh-plugin",
-      "macos",
       "treemap"
     ],
-    "updatedAt": "2026-10-19T08:42:58Z",
-    "url": "https://github.com/vlln/dsh-disk-canvas"
+    "updatedAt": "2026-10-20T11:10:43Z",
+    "url": "https://github.com/vlln/dsh-pancha"
   },
   "id": "gh:1425108451",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-pancha",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vlln/dsh-pancha#d7ffdc0f101e1bfce25d27c63683f3e7609c1ad7",
+    "version": "3.0.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.mjs",
+    "name": "dsh-pancha",
+    "status": "valid",
+    "type": "module",
+    "version": "3.0.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7fa22d0599b734668de962d00f7923e6700c0b79eeee8604e7e2a449cebdf097/vlln/dsh-disk-canvas",
-    "description": "把磁盘扫成一张可批注的提案：Agent 标注、你来决定、删前可预览（DeepSeek Harness 插件）"
+    "coverUrl": "https://opengraph.githubassets.com/5931cec67253d7806f66bfafb2bd07a901fb38a92046de1977d7fe5f6d2d5a82/vlln/dsh-pancha",
+    "description": "盘查：把磁盘变成一张可审查、可批注、可执行的盘面，Agent 标注、你来做决定（DeepSeek Harness 插件）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Finder 和 SpaceSniffer 只回答「哪个文件夹大」，不回答「它是什么、删了会怎样」。 真要清理时，你得自己翻进去看、自己判断、自己记住哪些不能动——一次只能处理一个目录。"
   },
   "schemaVersion": 1,
   "scripts": {

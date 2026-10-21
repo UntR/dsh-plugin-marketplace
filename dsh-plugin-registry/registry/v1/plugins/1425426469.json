@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "9a9d6312831477353161386745614c7906d35650"
   },
   "github": {
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,14 +51,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-local-browser-web",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8f1d3ef7ef1bab20309d8e6408cc310b1f365ee4e524a3f98e9a56b2b29341f7/xiaozhuHunter/dsh-local-browser-web",
-    "description": ""
+    "description": "一个 DeepSeek Harness（DSH）插件：用本机浏览器（CDP，可选 Playwright）为 ctx.web 能力接缝提供 搜索websearch 与 抓取webfetch provider，并补齐内置远程 API 之外的可扩展引擎注册表、四阶段清洗管线、质量过滤层与图形化设置页。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness（DSH）插件：用本机浏览器（CDP，可选 Playwright）为 ctx.web 能力接缝提供 搜索websearch 与 抓取webfetch provider，并补齐内置远程 API 之外的可扩展引擎注册表、四阶段清洗管线、质量过滤层与图形化设置页。"
   },
   "schemaVersion": 1,
   "scripts": {

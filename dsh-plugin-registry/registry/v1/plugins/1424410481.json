@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "f8c1fbe5ed6f936e4f34d5ac603f8cc33900fc96"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1424410481",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-memory",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:x-000001/dsh-memory-plugin#f8c1fbe5ed6f936e4f34d5ac603f8cc33900fc96",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.10.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e6671bcece75c76b820e2c09829376ed8785d32d3e772ae5fe75b3fc89e435ec/x-000001/dsh-memory-plugin",
     "description": "Layered long-term memory plugin for DeepSeek Harness (Cordis): project/global/habit stores, progressive disclosure, zero-LLM core, two-gate habit learning."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Cross-project long-term memory for DeepSeek Harness (DSH 0.2.x), built as a Cordis plugin bundle."
   },
   "schemaVersion": 1,
   "scripts": {

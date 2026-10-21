@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "7a95aea5b8661e282440f82f22a3fa3f25a81fcf"
   },
   "github": {
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@nutshelllee/dsh-agent-restart",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/44a3f101340323dc3ee34600d587a1823344b7a237dbf35a706cb2c0d0db5936/NutshellLee/dsh-agent-restart",
     "description": "Agent-initiated restart for DeepSeek Harness: journal, WMI relaunch, automatic continuation after restart. Windows."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Lets DeepSeek Harness (DSH NEXT desktop) pick up unfinished work by itself after the agent restarts the app."
   },
   "schemaVersion": 1,
   "scripts": {

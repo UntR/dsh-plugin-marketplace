@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "fa899ca53af058d3457faebafa26c9cab1863488"
   },
   "github": {
@@ -42,27 +42,33 @@
   },
   "id": "gh:1341255364",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@snow-the/dsh-plugin-doctor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:snow-The/dsh-plugin-doctor#fa899ca53af058d3457faebafa26c9cab1863488",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": "./dist/index.js",
+    "name": "@snow-the/dsh-plugin-doctor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c3962a8605511ab4c65ce043204aab502149624ee0919fd25f4e663c92e0e306/snow-The/dsh-plugin-doctor",
     "description": "Static pre-install vetting for DSH plugins: scans a directory or installed package for exfiltration, credential access, obfuscation, persistence and lifecycle-script red flags (own-built, replacing third-party vetting plugins)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Static vetting for DSH plugins — an own-built replacement for third-party vetting plugins. Scans a plugin directory (a checkout, or an installed package under /.dsh/profiles//nodemodules) for red flags, scores them SAFE / LOW / MEDIUM / HIGH, and reports evidence with file:line. "
   },
   "schemaVersion": 1,
   "scripts": {

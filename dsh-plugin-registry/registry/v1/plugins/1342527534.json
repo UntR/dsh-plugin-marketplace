@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "d72725e09130c1a62ef42f04f20f231ada939ab0"
   },
   "github": {
@@ -42,27 +42,41 @@
   },
   "id": "gh:1342527534",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@snow-the/dsh-busyloop",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:snow-The/dsh-busyloop#d72725e09130c1a62ef42f04f20f231ada939ab0",
+    "version": "0.1.26"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "@snow-the/dsh-busyloop",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.26"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a3b92e8df96e13ef473ddd0e66347fdc70883108593628addcbd2be5a24ddd96/snow-The/dsh-busyloop",
     "description": "DSH agent-loop engine: host-LLM adapter + loop skeleton over host ctx (busyloop: capability, not codex style)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH agent-loop 引擎:宿主 LLM 通道(官方 ctx.llm)+ 轻量 loop 骨架 + 工具表注入。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "5da1bf4c3232eb7e1719807d37a5d9804e8e15c4"
   },
   "github": {
@@ -47,27 +47,40 @@
   },
   "id": "gh:1425084684",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "llm-dsh-token-usage",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ai-v5/LLMDSHPlugin_token-usage#5da1bf4c3232eb7e1719807d37a5d9804e8e15c4",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "llm-dsh-token-usage",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ed81aaaded28458a2cc5d3e4c76de075bf9585cf4ab1d23a0467acef8169ec4a/ai-v5/LLMDSHPlugin_token-usage",
-    "description": "DeepSeek Harness plugin: sidebar token usage, daily calendar heatmap, turns/steps and tok/s, with durable history."
+    "description": "仅本地、只读、不上传的 DSH Token 面板；按 provider 实际 usage 统计，所有后端统一汇总，含历史总量、365 天热力图、输入+输出/缓存明细、轮次/步骤、tok/s，归档不丢。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness (DSH) 插件：在桌面端/Web 端侧边栏左下角增加 Token 统计。所有统计只读本机 Session 日志，不访问外部服务、不上传数据；除了历史总量和每日热力图，还能看到输入+输出、缓存读写、轮次/步骤和平均 tok/s，会话归档或删除后历史仍然保留。"
   },
   "schemaVersion": 1,
   "scripts": {

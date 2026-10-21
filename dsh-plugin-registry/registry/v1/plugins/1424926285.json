@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "d7c8ae71e95368fe3019f316a0928d02d1547c0c"
   },
   "github": {
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,20 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": null,
+    "name": "dsh-checkpoint",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b4841ca7c56c3b7b74f3d63a0e1381ceb4c959ae494ae480f5924f51a0b16224/weft-audit/dsh-checkpoint",
     "description": "任务断点协议——记录断点、恢复只做剩余步骤、绝不自动执行"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "任务断点协议（移植自 Jarvis checkpoint.py，语义一致）：纯文本断点文件， 每子步骤一更新；恢复时 plan 只返回「已完成 + 剩余下一步」。"
   },
   "schemaVersion": 1,
   "scripts": {

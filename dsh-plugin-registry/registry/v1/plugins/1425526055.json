@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "ffccb456f89d4093241aacbb86c1189f789bc482"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1425526055",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-xiaowu",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jxboop/dsh-plugin-xiaowu#ffccb456f89d4093241aacbb86c1189f789bc482",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-xiaowu",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f68be426bcb85bce7af3b31841ed0f8097ab01d4197c8f0955034982fdd7b0d5/jxboop/dsh-plugin-xiaowu",
     "description": "小舞 · DSH 桌宠：原创 SVG 手绘兔耳少女，跟随 agent 状态换动作，运行时合成甜声说「做完啦……」。无任何外部素材或录音。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个常驻 DSH Web 界面右下角的桌面宠物插件。她会跟着当前会话里 agent 的工作状态换动作， 任务做完的时候跳起来撒花，并且用一段运行时合成的甜美声音说一句「做完啦……」。 声音不是任何录音或采样：全部由 WebAudio 振荡器实时合成（详见下面「声音设计」）。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "2e04cc4ef1c1ef896a1bff349bc18007c7e5187d"
   },
   "github": {
@@ -56,27 +56,42 @@
   },
   "id": "gh:1424373214",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-plugin-migrator",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:chenzhihan1751-cyber/dsh-plugin-porter#2e04cc4ef1c1ef896a1bff349bc18007c7e5187d",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@dsh-external/dsh-plugin-migrator",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9744e5d9106f4867adfa1f1d996da125cbbeb6ccc5c8310ac5ad9665ee15282f/chenzhihan1751-cyber/dsh-plugin-porter",
     "description": "DSH plugin migrator & backup — 一键导出/导入插件、跨 profile 迁移、全量整合包、整机迁移。Export, import, migrate and back up DSH (DeepSeek Harness) plugins across machines and profiles in one click."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Plugin Porter is a plugin migrator / backup tool for DeepSeek Harness (DSH): export a migration bundle, import it on another machine, copy plugins to a different profile, or move the whole environment — config, memory, sessions, attachments, plugin sources — in one checksummed, m"
   },
   "schemaVersion": 1,
   "scripts": {

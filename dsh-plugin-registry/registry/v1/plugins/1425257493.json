@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "21a9712b7c0ea5736bc677061b9922006fa24862"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1425257493",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "claude-dsh-memory",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ximeng-y/Claude-DSH-Memory#21a9712b7c0ea5736bc677061b9922006fa24862",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "index.js",
+    "name": "claude-dsh-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/adfaf11fdcf561233eab8ef80542c3bf10e2c304cd62d1e2aa3bce30dc54d2b3/ximeng-y/Claude-DSH-Memory",
     "description": "Add a plugin for DeepSeek Harness that supports the Claude Code memory system."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 Claude Code 的项目记忆目录（MEMORY.md + 主题 .md 文件）直接复用给 DeepSeek Harness（DSH）会话的原生 Cordis 插件。"
   },
   "schemaVersion": 1,
   "scripts": {

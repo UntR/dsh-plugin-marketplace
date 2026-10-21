@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "cad6e81626f71bd3255ae8818e43e12727b7a9ee"
   },
   "github": {
@@ -48,27 +48,42 @@
   },
   "id": "gh:1425225620",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-hindsight-daemon",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:FYTXY/dsh-hindsight-daemon#cad6e81626f71bd3255ae8818e43e12727b7a9ee",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-hindsight-daemon",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/193aac58169bda495574e366f1da87b21ba37dfe648c683651a3513eb88fcb59/FYTXY/dsh-hindsight-daemon",
     "description": "DSH 插件：Hindsight 记忆服务的随行守护。DSH 启动时拉起本地 daemon，退出时连同嵌入式 PostgreSQL 一起清理干净，并在设置里提供独立页面（含记忆仓库的新建/切换/删除）。支持 Windows 与 Linux。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH Desktop 用的 Hindsight 本地记忆 daemon 生命周期插件。"
   },
   "schemaVersion": 1,
   "scripts": {

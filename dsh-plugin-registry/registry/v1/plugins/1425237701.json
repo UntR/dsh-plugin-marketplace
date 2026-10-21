@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
-    "headSha": "a76f301146e43af0a15d08e4d6628f1f9bdca2e1"
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
+    "headSha": "e5ef0146de3ace391b9e76f7cbe2f3ba6076d836"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-19T07:01:00Z",
     "databaseId": 1425237701,
     "defaultBranch": "main",
-    "description": "DSH 插件：两级模型调度（先选模型、再选渠道；失败先换渠道再换模型），带偏好模式与实时渠道健康面板",
+    "description": "DSH 插件：两级模型调度（先选模型、再选渠道；失败先换渠道再换模型），带偏好模式与实时渠道健康面板。定位为 dsh-our-free-model 的配套插件：OFM 把免费模型接进来，本插件在车道之间做调度；两者零代码依赖，不装 OFM 也能正常路由。",
     "fork": false,
     "forks": 0,
-    "headSha": "a76f301146e43af0a15d08e4d6628f1f9bdca2e1",
+    "headSha": "e5ef0146de3ace391b9e76f7cbe2f3ba6076d836",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,46 +25,60 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVPNmxQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/202e15d062ea4fa344d3ab88f1b3e7ee651c3069138cadbbb3cd6d8cf85f3b3f/DeZhou123/dsh-model-orchestrator",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8b5ebbdfda171d2255429fd51e700e407669f519aaac045ff6d7f8a6c3e84138/DeZhou123/dsh-model-orchestrator",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/322991017?v=4",
       "login": "DeZhou123"
     },
-    "pushedAt": "2026-10-19T07:56:05Z",
+    "pushedAt": "2026-10-21T07:38:41Z",
     "slug": "DeZhou123/dsh-model-orchestrator",
     "stars": 1,
     "topics": [
       "dsh",
+      "dsh-our-free-model",
       "dsh-plugin",
+      "free-models",
       "llm-router",
       "model-failover"
     ],
-    "updatedAt": "2026-10-19T07:56:08Z",
+    "updatedAt": "2026-10-21T07:38:45Z",
     "url": "https://github.com/DeZhou123/dsh-model-orchestrator"
   },
   "id": "gh:1425237701",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-orchestrator",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:DeZhou123/dsh-model-orchestrator#e5ef0146de3ace391b9e76f7cbe2f3ba6076d836",
+    "version": "2.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-model-orchestrator",
+    "status": "valid",
+    "type": "module",
+    "version": "2.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/202e15d062ea4fa344d3ab88f1b3e7ee651c3069138cadbbb3cd6d8cf85f3b3f/DeZhou123/dsh-model-orchestrator",
-    "description": "DSH 插件：两级模型调度（先选模型、再选渠道；失败先换渠道再换模型），带偏好模式与实时渠道健康面板"
+    "coverUrl": "https://opengraph.githubassets.com/8b5ebbdfda171d2255429fd51e700e407669f519aaac045ff6d7f8a6c3e84138/DeZhou123/dsh-model-orchestrator",
+    "description": "DSH 插件：两级模型调度（先选模型、再选渠道；失败先换渠道再换模型），带偏好模式与实时渠道健康面板。定位为 dsh-our-free-model 的配套插件：OFM 把免费模型接进来，本插件在车道之间做调度；两者零代码依赖，不装 OFM 也能正常路由。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "先选模型，再选这个模型所在的渠道；失败时先换渠道、再换模型。 输入框下方实时显示当前模型、渠道健康、今日用量与自动切换记录。"
   },
   "schemaVersion": 1,
   "scripts": {

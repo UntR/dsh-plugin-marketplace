@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
-    "headSha": "ed92523d653adde472539c6a82abc6fabad1f686"
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
+    "headSha": "d120908eb5e05493d78670ac5df7403bf4250d6d"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness 用の日本語ネイティブ TUI（設計段階 / design phase）",
     "fork": false,
     "forks": 0,
-    "headSha": "ed92523d653adde472539c6a82abc6fabad1f686",
+    "headSha": "d120908eb5e05493d78670ac5df7403bf4250d6d",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVN9unQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/6956f140bdca9c1c5ab6ffd0adb855c70e0a0d368667cc3b8a9f84c695b3a15d/mugi995/DSH-forJP-TUI",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/1f3de1cf9cefd89922cf2824d4edf55aed371e6593196e98aecf285f3b31b6d7/mugi995/DSH-forJP-TUI",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/151381455?u=03257fcf775b5ebe4519f5c73b49e61fd203cca8&v=4",
       "login": "mugi995"
     },
-    "pushedAt": "2026-10-20T08:54:27Z",
+    "pushedAt": "2026-10-21T09:04:44Z",
     "slug": "mugi995/DSH-forJP-TUI",
     "stars": 0,
     "topics": [
@@ -40,7 +40,7 @@
       "japanese",
       "tui"
     ],
-    "updatedAt": "2026-10-20T08:54:28Z",
+    "updatedAt": "2026-10-21T09:04:46Z",
     "url": "https://github.com/mugi995/DSH-forJP-TUI"
   },
   "id": "gh:1423928989",
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,36 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./ink": {
+        "default": "./lib/ink/index.js",
+        "types": "./lib/ink/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./yoga": {
+        "default": "./lib/yoga/yoga-layout-entry.js",
+        "types": "./lib/yoga/yoga-layout-entry.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-forjp-tui",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/6956f140bdca9c1c5ab6ffd0adb855c70e0a0d368667cc3b8a9f84c695b3a15d/mugi995/DSH-forJP-TUI",
+    "coverUrl": "https://opengraph.githubassets.com/1f3de1cf9cefd89922cf2824d4edf55aed371e6593196e98aecf285f3b31b6d7/mugi995/DSH-forJP-TUI",
     "description": "DeepSeek Harness 用の日本語ネイティブ TUI（設計段階 / design phase）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness (dsh) のための日本語ネイティブ TUI。"
   },
   "schemaVersion": 1,
   "scripts": {

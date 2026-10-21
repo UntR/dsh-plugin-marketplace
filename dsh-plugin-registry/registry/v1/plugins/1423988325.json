@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "ecfdf22cd9d0768cf16a076d7b4a82d2385f3891"
   },
   "github": {
@@ -49,27 +49,44 @@
   },
   "id": "gh:1423988325",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-task-notify",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Favio8/dsh-plugin-task-notify#ecfdf22cd9d0768cf16a076d7b4a82d2385f3891",
+    "version": "0.10.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.mjs",
+        "types": "./lib/index.d.mts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-plugin-task-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "0.10.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/dbb2fd46ee957065e7ae70917717f10ebf6d3ba77bfcfc7c4dd8c63bc761f7f2/Favio8/dsh-plugin-task-notify",
     "description": "DeepSeek Harness (DSH) task-completion notifications: fast native desktop card, exact session jump, in-app toast, settings preview."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 任务完成通知插件（适配 DSH 0.2.x，已在 0.2.1-rc.2 桌面版验证）：会话的一轮任务结束时提醒你。"
   },
   "schemaVersion": 1,
   "scripts": {

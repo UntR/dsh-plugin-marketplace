@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "6cd8a7870c8ab7ef0b4b367dafb2327700fb2e83"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1424206400",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-open-source-first",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wjc300000000-beep/dsh-plugin-open-source-first#6cd8a7870c8ab7ef0b4b367dafb2327700fb2e83",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-open-source-first",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/250e6dc34dd5f92d1dca80557249447ae4999419943bde8a213f8c4485399a97/wjc300000000-beep/dsh-plugin-open-source-first",
     "description": "DSH plugin: injects an auditable open-source-first workflow (search -> three-tier evaluation -> build) into the system prompt at order 50."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把「先搜索，再决策，最后才造」的开源复用优先原则注入 DSH 系统提示词的插件：在 persona 之后、plan/team 策略和工具引导之前，增加一段可审计的强制工序。"
   },
   "schemaVersion": 1,
   "scripts": {

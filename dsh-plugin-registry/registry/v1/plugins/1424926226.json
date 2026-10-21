@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "588a07141c97584b85c599e206b43c91d25ee592"
   },
   "github": {
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,20 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": null,
+    "name": "dsh-ledger",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/10af977dca79631f694c038187c6ff61e33bc8cca2fa3c8540fa4cbf00635406/weft-audit/dsh-ledger",
     "description": "用量事件 JSONL 记账与单一口径报表（只记账、不设闸、不读余额）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "用量账本（accounting only）：监听 session/event 中带 usage 的记录写 JSONL； ledgerreport.mjs 出单一口径报表。口径对齐 usage-aggregate.py： 只加不乘、原币不折算、面板数与机记分列（本插件只记机记）。"
   },
   "schemaVersion": 1,
   "scripts": {

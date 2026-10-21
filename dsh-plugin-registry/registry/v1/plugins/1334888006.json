@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-19T09:37:27.342Z",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
     "enrichmentStatus": "ok",
-    "headSha": "02bc2d457aa85d884865ec3f7c325fb05c9c0599"
+    "headSha": "b298085a18005c4d1cc696d264eb14bd3e10a2c5"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh-compat 是 DeepSeek Harness（DSH）的旧插件兼容层。它让原本面向 Claude Code、Codex 的插件尽量保持原目录与语义运行，而不是把每个插件重新迁移成 DSH 原生插件。",
     "fork": false,
     "forks": 0,
-    "headSha": "02bc2d457aa85d884865ec3f7c325fb05c9c0599",
+    "headSha": "b298085a18005c4d1cc696d264eb14bd3e10a2c5",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,36 +25,36 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT5DGRg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/0478706b3f3e95210864130ab950ed8dfa83afce48a462b21f4c2eaed6114f1c/rvaim/dsh-compat",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7991abe1bdbc5274ffbc870da733cb5cf5630aac43bc3bcaed22331ac21d14d7/rvaim/dsh-plugin-bridge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/282935037?v=4",
       "login": "rvaim"
     },
-    "pushedAt": "2026-08-15T10:52:19Z",
-    "slug": "rvaim/dsh-compat",
+    "pushedAt": "2026-10-20T17:09:16Z",
+    "slug": "rvaim/dsh-plugin-bridge",
     "stars": 0,
     "topics": [
       "dsh",
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-09-12T14:40:46Z",
-    "url": "https://github.com/rvaim/dsh-compat"
+    "updatedAt": "2026-10-21T02:45:41Z",
+    "url": "https://github.com/rvaim/dsh-plugin-bridge"
   },
   "id": "gh:1334888006",
   "install": {
     "available": true,
-    "packageName": "@rvaim/dsh-compat",
-    "preferred": "npm",
+    "packageName": "@rvaim/dsh-plugin-bridge",
+    "preferred": "github",
     "reason": null,
     "requiresBuildApproval": true,
-    "spec": "@rvaim/dsh-compat@0.4.4",
-    "version": "0.4.4"
+    "spec": "github:rvaim/dsh-plugin-bridge#b298085a18005c4d1cc696d264eb14bd3e10a2c5",
+    "version": "0.5.0"
   },
   "npm": {
-    "latestVersion": "0.4.4",
+    "latestVersion": "0.5.0",
     "published": true,
-    "repositoryMatches": true
+    "repositoryMatches": false
   },
   "package": {
     "exports": {
@@ -64,9 +64,27 @@
       },
       "./client": {
         "default": "./dist/client.js",
-        "types": "./dist/src/client/index.d.ts"
+        "types": "./dist/src/web/client/index.d.ts"
       },
+      "./icon": "./icon.png",
+      "./locale/*.json": "./locale/*.json",
       "./package.json": "./package.json",
+      "./parser": {
+        "import": "./dist/src/parser/index.js",
+        "types": "./dist/src/parser/index.d.ts"
+      },
+      "./protocols/agent-plugins": {
+        "import": "./dist/src/protocols/agent-plugins/index.js",
+        "types": "./dist/src/protocols/agent-plugins/index.d.ts"
+      },
+      "./protocols/claude-code": {
+        "import": "./dist/src/protocols/claude-code/index.js",
+        "types": "./dist/src/protocols/claude-code/index.d.ts"
+      },
+      "./protocols/codex": {
+        "import": "./dist/src/protocols/codex/index.js",
+        "types": "./dist/src/protocols/codex/index.d.ts"
+      },
       "./remote": {
         "default": "./dist/typert.remote-client.js",
         "types": "./dist/typert.remote-client.d.ts"
@@ -85,18 +103,18 @@
       }
     },
     "main": "./dist/src/index.js",
-    "name": "@rvaim/dsh-compat",
+    "name": "@rvaim/dsh-plugin-bridge",
     "status": "valid",
     "type": "module",
-    "version": "0.4.4"
+    "version": "0.5.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/0478706b3f3e95210864130ab950ed8dfa83afce48a462b21f4c2eaed6114f1c/rvaim/dsh-compat",
+    "coverUrl": "https://opengraph.githubassets.com/7991abe1bdbc5274ffbc870da733cb5cf5630aac43bc3bcaed22331ac21d14d7/rvaim/dsh-plugin-bridge",
     "description": "dsh-compat 是 DeepSeek Harness（DSH）的旧插件兼容层。它让原本面向 Claude Code、Codex 的插件尽量保持原目录与语义运行，而不是把每个插件重新迁移成 DSH 原生插件。"
   },
   "readme": {
     "available": true,
-    "excerpt": "DeepSeek Harness（DSH）的 Claude Code / Codex 旧插件兼容层。它把一个旧插件作为完整生命周期单元接入 DSH，让 Skill、MCP 与 Hook 尽量保持原目录和原语义运行。"
+    "excerpt": "插件桥（Plugin Bridge）是 DeepSeek Harness（DSH）的外部插件管理工具，支持独立 Agent Plugins 1.0.0、传统 Codex 与 Claude Code 插件。插件作为完整生命周期单元接入 DSH，复用 Source 快照、Skill Provider 和 MCP 子实例。"
   },
   "schemaVersion": 1,
   "scripts": {

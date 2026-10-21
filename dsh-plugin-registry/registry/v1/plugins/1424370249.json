@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "0d5201573f2e41c4f915499662221da45609c8f9"
   },
   "github": {
@@ -40,27 +40,38 @@
   },
   "id": "gh:1424370249",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@instpe/dsh-self-restart",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:instpe/dsh-self-restart#0d5201573f2e41c4f915499662221da45609c8f9",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@instpe/dsh-self-restart",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/16dd79a6b136cab6dc5316c35318bc0455ffbad4f3c821de869709184cba68df/instpe/dsh-self-restart",
     "description": "DSH 插件：会话智能体自重启宿主进程，并在重启后向原会话投递一条消息"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "允许会话智能体重启承载它的 DeepSeek Harness 宿主进程，并在重启完成后于原会话内收到一条消息（默认「已重启」）。"
   },
   "schemaVersion": 1,
   "scripts": {

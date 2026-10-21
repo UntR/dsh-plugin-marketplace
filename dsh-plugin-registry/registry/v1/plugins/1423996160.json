@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "a929c8ce06391ca6f973753aa7d7d4b87456507d"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1423996160",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-web-think",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:muodin/dsh-web-think#a929c8ce06391ca6f973753aa7d7d4b87456507d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-web-think",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/de0fedca4333a9c9d253d941293a7c8ed480bbf736ca1cf88885bfe2aa0c2777/muodin/dsh-web-think",
     "description": "DSH plugin: searches the web before every turn and injects citable sources. 每轮自动联网检索。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）Host 插件：在每一轮用户消息的第一次模型请求前，自动执行一次 Web 检索，把最新、可引用的来源作为上下文注入，并要求模型用 Markdown 链接标注来源。"
   },
   "schemaVersion": 1,
   "scripts": {

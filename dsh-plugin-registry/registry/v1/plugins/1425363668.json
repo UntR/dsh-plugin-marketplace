@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "f4b30e495aa6cd185a24027a88379bbf0a2d829d"
   },
   "github": {
@@ -44,33 +44,56 @@
   },
   "id": "gh:1425363668",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-search-hub",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-plugin-search-hub@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./tool": {
+        "default": "./lib/tool.js",
+        "types": "./lib/types/tool.d.ts"
+      },
+      "./tool/icon": "./icon.svg",
+      "./tool/locale/*.json": "./locale/tool/*.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-search-hub",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1b958cca57329878dcc12b97841a9ce69693998022b2905405aa5b77054f72ce/qunqin24/dsh-plugin-search-hub",
     "description": "Multi-engine web search plugin for DeepSeek Harness: free AI search rotation with cooldown, Tavily/Brave/Serper/Exa/Perplexity/Jina/Bocha/SearXNG, settings page."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的多引擎网页搜索插件（插件页显示名：中文界面为“多引擎网页搜索”，英文界面为“Multi-engine Web Search”，文案在 locale/ 里）："
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

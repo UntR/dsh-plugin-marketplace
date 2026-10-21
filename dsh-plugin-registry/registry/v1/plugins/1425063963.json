@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
-    "headSha": "b150391643b19376307b076f6438f1e64ded9cca"
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
+    "headSha": "315f54b8eb087b9a45966ac7ca44998ee81f0d53"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": null,
     "fork": false,
     "forks": 0,
-    "headSha": "b150391643b19376307b076f6438f1e64ded9cca",
+    "headSha": "315f54b8eb087b9a45966ac7ca44998ee81f0d53",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVPDAGw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b2b09f1033ea27f608f69480de48121e4ce501c4c190779a53e7e9dbada06578/GaoHu1997/dsh-webdav",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b5ff5e927e3c6a1a1aff200ffb5039f5eff4348f7d98f72459be8232a03c6dd5/GaoHu1997/dsh-webdav",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/124873767?u=51b0ef0abb430451f2709731f6b853951816568c&v=4",
       "login": "GaoHu1997"
     },
-    "pushedAt": "2026-10-19T10:32:08Z",
+    "pushedAt": "2026-10-21T08:34:15Z",
     "slug": "GaoHu1997/dsh-webdav",
     "stars": 0,
     "topics": [
@@ -39,32 +39,53 @@
       "sync",
       "webdav"
     ],
-    "updatedAt": "2026-10-19T10:32:13Z",
+    "updatedAt": "2026-10-21T08:34:19Z",
     "url": "https://github.com/GaoHu1997/dsh-webdav"
   },
   "id": "gh:1425063963",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-webdav-sync",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-webdav-sync@1.0.5",
+    "version": "1.0.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.5",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./wire": {
+        "default": "./lib/wire.js",
+        "types": "./lib/wire.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-webdav-sync",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.5"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b2b09f1033ea27f608f69480de48121e4ce501c4c190779a53e7e9dbada06578/GaoHu1997/dsh-webdav",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/b5ff5e927e3c6a1a1aff200ffb5039f5eff4348f7d98f72459be8232a03c6dd5/GaoHu1997/dsh-webdav",
+    "description": "用 WebDAV 在多台电脑之间同步 DSH 的配置。备份在离开本机之前就用口令封好（AES-256-GCM + PBKDF2-SHA256，600000 轮），所以服务器上自始至终只有一个密文文件 —— 它看不到你的模型目录、插件清单、API 密钥，也看不到密钥属于哪个供应商。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "用 WebDAV 在多台电脑之间同步 DSH 的配置。备份在离开本机之前就用口令封好（AES-256-GCM + PBKDF2-SHA256，600000 轮），所以服务器上自始至终只有一个密文文件 —— 它看不到你的模型目录、插件清单、API 密钥，也看不到密钥属于哪个供应商。"
   },
   "schemaVersion": 1,
   "scripts": {

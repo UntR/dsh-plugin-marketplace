@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "b958fc102663a3479051a26dc85cfd61fddbb4ce"
   },
   "github": {
@@ -46,27 +46,43 @@
   },
   "id": "gh:1424101164",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-proxy-whitelist",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lilith1257/dsh-proxy-whitelist#b958fc102663a3479051a26dc85cfd61fddbb4ce",
+    "version": "0.6.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-proxy-whitelist",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d3575c3e1cdf6ac3ed5e538a6000bdf62b2dd480a0c60c2d2b1d472dcb32e806/lilith1257/dsh-proxy-whitelist",
     "description": "DSH plugin: route only the model channels you tick through an HTTP proxy, everything else stays direct — with a settings card in the Web UI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 自带的代理支持（@deepseek-ai/dsh-http-proxy）读 HTTPSPROXY / HTTPPROXY / ALLPROXY / NOPROXY，启动时装一次、全进程生效：除了 NOPROXY 里的主机，所有请求都走代理。那是一份「绕过名单」，方向恰好相反——它没法表达「默认直连，只有这几个主机走代理」。noproxy 再怎么写也写不出白名单。"
   },
   "schemaVersion": 1,
   "scripts": {

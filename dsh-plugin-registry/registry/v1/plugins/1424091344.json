@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "84c4a3f8582ea781aa65ac085448b9878cff27a3"
   },
   "github": {
@@ -38,27 +38,40 @@
   },
   "id": "gh:1424091344",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@huanlin/dsh-plugin-toolsets",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:HuanLinOTO/dsh-plugin-toolsets#84c4a3f8582ea781aa65ac085448b9878cff27a3",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@huanlin/dsh-plugin-toolsets",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5d22219a0fc5bbeae00dd056282020dbe274ed7d55d80f3335cb633a1315134f/HuanLinOTO/dsh-plugin-toolsets",
     "description": "按需加载命名工具集：一条目录 + get_tools 元工具，把工具 schema 的上下文成本推迟到模型确认需要时 | On-demand toolset loading: a catalog plus a get_tools meta-tool that defers tool-schema cost until the model asks"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 ctx 上提供统一的 toolset API：插件注册带\"什么时候该用\"说明的命名工具集，模型需要时调用全局 gettools 工具按名把整组工具加载进自己所在 agent 的工具列表。"
   },
   "schemaVersion": 1,
   "scripts": {

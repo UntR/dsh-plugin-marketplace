@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "a2c1f1fe8b6a985cd001ccb66c0021d139bfca54"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1424946581",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-provider-peak",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:moonmoonCL/dsh-provider-peak#a2c1f1fe8b6a985cd001ccb66c0021d139bfca54",
+    "version": "1.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-provider-peak",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/313752bf513dd8ad7752b6b2b180733bfb6d27f68c281b3ca02f4d5cab9fa782/moonmoonCL/dsh-provider-peak",
     "description": "Provider-aware DeepSeek peak/off-peak badge for DSH. 在输入框工具栏显示 DeepSeek 峰谷时段，只在选中的模型属于 DeepSeek provider 时出现。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）Web 插件。在会话输入框工具栏常驻一枚小徽章，显示 DeepSeek API 当前按高峰还是空闲价计费；徽章跟随当前选中的模型，只有模型属于 DeepSeek 的 provider 时才出现。"
   },
   "schemaVersion": 1,
   "scripts": {

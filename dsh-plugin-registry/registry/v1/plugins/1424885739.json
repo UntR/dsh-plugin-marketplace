@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "2897dab392ba29884116cc4f20ce990f0799d96f"
   },
   "github": {
@@ -48,27 +48,41 @@
   },
   "id": "gh:1424885739",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-github-gate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:1273984347/dsh-github-gate#2897dab392ba29884116cc4f20ce990f0799d96f",
+    "version": "2.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./CHANGELOG.md": "./CHANGELOG.md",
+      "./LICENSE": "./LICENSE",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-github-gate",
+    "status": "valid",
+    "type": "module",
+    "version": "2.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d7e5fb13b210210e82ecbf4268cd46a44ce86d04c76c16e6c27493699ecba826/1273984347/dsh-github-gate",
     "description": "Guarded GitHub tools for DeepSeek Harness: 9 typed github_* tools (58 actions) where every state-changing action needs confirm:true plus a human approval seam, with a digest-verified self-update and a settings page. Zero runtime dependencies. | 面向 DSH 的 GitHub 工具：所有写动作都过审批门"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "GitHub tools for DeepSeek Harness where a write cannot happen by accident."
   },
   "schemaVersion": 1,
   "scripts": {

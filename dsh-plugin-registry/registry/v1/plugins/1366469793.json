@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
-    "headSha": "ccc7d058be007a4218240bf81971847f33dc584f"
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
+    "headSha": "583267e19fe3cfca01a28d4faa26a036c1d44a1b"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "多文件夹 workspace：让 DSH（DeepSeek Harness）的 Agent 不只能读写主目录，还能同时读写你添加的其他文件夹。Multi-folder workspace for DeepSeek Harness: let the agent read and write several folders at once, not just the primary one.",
     "fork": false,
     "forks": 2,
-    "headSha": "ccc7d058be007a4218240bf81971847f33dc584f",
+    "headSha": "583267e19fe3cfca01a28d4faa26a036c1d44a1b",
     "homepageUrl": "https://cherrchen.github.io/rivetdeck-website/plugins/multi-root-workspace",
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUXKsoQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/1678781780b4009d7358fdc6a3d13b06f5aa7ccaf838110bb134816410b027ab/cherrchen/dsh-plugin-multi-root-workspace",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/6f6c5be6992c8d662dc214909745b790762115f33d1e69c07fd2f46e359564f3/cherrchen/dsh-plugin-multi-root-workspace",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/113243001?v=4",
       "login": "cherrchen"
     },
-    "pushedAt": "2026-10-20T06:45:11Z",
+    "pushedAt": "2026-10-20T15:37:20Z",
     "slug": "cherrchen/dsh-plugin-multi-root-workspace",
     "stars": 10,
     "topics": [
@@ -48,7 +48,7 @@
       "typescript",
       "workspace"
     ],
-    "updatedAt": "2026-10-20T06:23:10Z",
+    "updatedAt": "2026-10-20T15:22:36Z",
     "url": "https://github.com/cherrchen/dsh-plugin-multi-root-workspace"
   },
   "id": "gh:1366469793",
@@ -58,11 +58,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": true,
-    "spec": "@dsh-electron/dsh-plugin-multi-root-workspace@0.1.6",
-    "version": "0.1.6"
+    "spec": "@dsh-electron/dsh-plugin-multi-root-workspace@0.1.9",
+    "version": "0.1.9"
   },
   "npm": {
-    "latestVersion": "0.1.6",
+    "latestVersion": "0.1.9",
     "published": true,
     "repositoryMatches": true
   },
@@ -71,6 +71,10 @@
       ".": {
         "default": "./lib/index.js",
         "types": "./lib/types/index.d.ts"
+      },
+      "./auto-review": {
+        "default": "./lib/auto-review.js",
+        "types": "./lib/types/auto-review/entry.d.ts"
       },
       "./client": {
         "default": "./lib/client.js",
@@ -97,6 +101,10 @@
         "types": "./lib/types/lsp.d.ts"
       },
       "./package.json": "./package.json",
+      "./process-fence": {
+        "default": "./lib/process-fence.js",
+        "types": "./lib/types/process-fence.d.ts"
+      },
       "./providers": {
         "default": "./lib/providers.js",
         "types": "./lib/types/providers.d.ts"
@@ -104,6 +112,10 @@
       "./registry": {
         "default": "./lib/registry.js",
         "types": "./lib/types/registry.d.ts"
+      },
+      "./review-context": {
+        "default": "./lib/review-context.js",
+        "types": "./lib/types/review-context.d.ts"
       },
       "./sandbox": {
         "default": "./lib/sandbox.js",
@@ -126,15 +138,15 @@
     "name": "@dsh-electron/dsh-plugin-multi-root-workspace",
     "status": "valid",
     "type": "module",
-    "version": "0.1.6"
+    "version": "0.1.9"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/1678781780b4009d7358fdc6a3d13b06f5aa7ccaf838110bb134816410b027ab/cherrchen/dsh-plugin-multi-root-workspace",
+    "coverUrl": "https://opengraph.githubassets.com/6f6c5be6992c8d662dc214909745b790762115f33d1e69c07fd2f46e359564f3/cherrchen/dsh-plugin-multi-root-workspace",
     "description": "多文件夹 workspace：让 DSH（DeepSeek Harness）的 Agent 不只能读写主目录，还能同时读写你添加的其他文件夹。Multi-folder workspace for DeepSeek Harness: let the agent read and write several folders at once, not just the primary one."
   },
   "readme": {
     "available": true,
-    "excerpt": "DSH（DeepSeek Harness）原生只把会话启动的目录当作 Agent 唯一的可写根；本插件是一个不修改上游任何代码的外部扩展，把可写范围扩为\"一个主目录 + 多个附加目录\"。"
+    "excerpt": "DeepSeek Harness 默认把新建工作区所在的目录作为 Agent 的主目录，在默认的工作区读写模式（workspace-write）下，沙箱的读写范围也仅覆盖这一个目录。本插件将 DSH 的工作区范围拓展到“一个主目录 + 多个附加目录”。"
   },
   "schemaVersion": 1,
   "scripts": {

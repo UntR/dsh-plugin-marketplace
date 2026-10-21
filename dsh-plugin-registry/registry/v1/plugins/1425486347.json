@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "86a110e4e48fd2f153a9a3ef53166997be64f99f"
   },
   "github": {
@@ -41,27 +41,42 @@
   },
   "id": "gh:1425486347",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@istarry/dsh-prompt-enhance",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@istarry/dsh-prompt-enhance@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@istarry/dsh-prompt-enhance",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0349b1587e0ee0bb766b61dc4851f7f32d3cc63c2e46a1edb6ad5593af22b368/iStarryDust/dsh-prompt-enhance",
     "description": "Prompt enhancement for the composer: a star button left of the send action rewrites the draft with the session's model, with editable template files beside the bundle"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "发送框\"发送消息\"按钮左侧的星形按钮：单击把输入框草稿单轮重写为更清晰的提示词（跟随会话当前模型，不读会话历史，附件不受影响）；重写后按钮变为\"恢复原文\"，再点恢复原稿；重写进行中点击 = 取消（原文不动）。"
   },
   "schemaVersion": 1,
   "scripts": {

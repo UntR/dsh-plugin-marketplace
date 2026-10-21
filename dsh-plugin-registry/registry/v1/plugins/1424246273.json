@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "4f666d9866040748b369585683fc2dec2431ff9a"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1424246273",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-connect-qpcm-gateway",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:llersakuya/dsh-connect-qpcm-gateway#4f666d9866040748b369585683fc2dec2431ff9a",
+    "version": "0.4.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-connect-qpcm-gateway",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/644f0e291a44008f1675930412006744c19ccdf664d63ef696a552da1ee9b4d0/llersakuya/dsh-connect-qpcm-gateway",
     "description": "DeepSeek Harness plugin: connect the QPCM OpenAI-compatible gateway (ai.qpcmqam.cn) as a DSH model source, with a settings panel for Base URL, API key, and model selection."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 https://ai.qpcmqam.cn/v1 这个 OpenAI 兼容网关接成 DSH 的模型来源，并给出一块可以在 Web UI 里操作的面板。"
   },
   "schemaVersion": 1,
   "scripts": {

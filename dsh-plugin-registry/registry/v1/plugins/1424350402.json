@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "cad89cc09f9ea5576d3910874abd7b1e58fa25bc"
   },
   "github": {
@@ -54,27 +54,38 @@
   },
   "id": "gh:1424350402",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@xfy9326/dsh-bsk-daemon",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:XFY9326/dsh-bsk-daemon#cad89cc09f9ea5576d3910874abd7b1e58fa25bc",
+    "version": "1.0.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@xfy9326/dsh-bsk-daemon",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/321863f51f22332af5943e2728bcaad671ba869e18f9b122ca7ae9e18b8bf33e/XFY9326/dsh-bsk-daemon",
     "description": "DSH bundle that supervises the BrowserSkill (bsk) bridge daemon as a host child process: starts with DSH, stops with DSH, auto-restarts after crashes."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) bundle that gives the BrowserSkill bsk bridge daemon the same lifecycle as DSH: it starts with DSH, is stopped when DSH exits, is restarted after a crash (bounded), and is never confused with a daemon somebody else started."
   },
   "schemaVersion": 1,
   "scripts": {

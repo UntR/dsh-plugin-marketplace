@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "a63f43a84167de3764267922e427549b6598ba4d"
   },
   "github": {
@@ -46,27 +46,44 @@
   },
   "id": "gh:1423902050",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-subagent-roster",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:121212165/dsh-plugin-subagent-roster#a63f43a84167de3764267922e427549b6598ba4d",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./roster": {
+        "default": "./lib/roster.js",
+        "types": "./lib/roster.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-subagent-roster",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bb2437e2717ced52f479bdb3acd9c982d40cd6a46301ea230060862bf8c9d8bf/121212165/dsh-plugin-subagent-roster",
     "description": "Constrained subagent roster for DeepSeek Harness: one tool per role, each pinning a child system prompt, a capability allow-list, and a model tier. Bulk work vs team work by tool shape. 子代理名册：按角色约束系统提示词/能力范围/模型档位。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A constrained subagent roster for DeepSeek Harness. Every role has a pinned system prompt, a pinned capability range, and a pinned model tier — and bulk work and team work are reached through tools of different shapes."
   },
   "schemaVersion": 1,
   "scripts": {

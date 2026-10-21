@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "598f870119435ba289d3ce620314d27474e84596"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1425082493",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-proxy-control",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Bai-Ziyi/dsh-proxy-control#598f870119435ba289d3ce620314d27474e84596",
+    "version": "0.1.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-proxy-control",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f0a313eeba6337d92dcf418bf2d18bf27538012f54b2fe034cf72705ea9b2763/Bai-Ziyi/dsh-proxy-control",
     "description": "Pre-launch and runtime HTTP proxy control for DeepSeek Harness: writes the user-level .env so the launcher and the first requests are proxied, then keeps it in sync from a Plugins-page switch."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（dsh）的启动前与运行时 HTTP 代理控制插件。"
   },
   "schemaVersion": 1,
   "scripts": {

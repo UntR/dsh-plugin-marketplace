@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "f5cc811441ddd7386183fb468d3b134888527d05"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1424594390",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-thought-capsule",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Holo-dataanalyst/dsh-thought-capsule#f5cc811441ddd7386183fb468d3b134888527d05",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-thought-capsule",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e349530f559fa9719462d9fac4247eade5d7b9043598009dda869bfa3188ba7f/Holo-dataanalyst/dsh-thought-capsule",
     "description": "思维胶囊：干活时想到的点子 / 待试插件，一句话记下来，自动分类进待办。带侧边栏面板、Agent 工具与命令行。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "是不是脑子里突然冒出来一个想法，想让DSH试一下新功能、修改之前的方案、添加新插件。但是DSH还没完成这项工作。亦或者你的灵感很零散，可能只是一个尚未成型的灵感，甚至只是临时起意的点子。但写在手机和便签里感觉又太麻烦，而且希望自己的点子会和AI有深度交互。那么这个思维胶囊就能容纳你的灵感，干活时脑子里冒出来的点子、待试的插件、要回头查的东西，写完后一句话丢进去；并且导航中的胶囊图标里整理成未整理 → 待办 → 已完成 → 归档，六种固定分类自动归类，也能建自己的分组。 面板里有搜索、本周回看（这周新增/完成/停了 7 天没动的待办）、导出 JSON；读长"
   },
   "schemaVersion": 1,
   "scripts": {

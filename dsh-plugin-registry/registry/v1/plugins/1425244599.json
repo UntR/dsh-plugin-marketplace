@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "d3ed508435293a515a7a616e1698bf286b4dbc57"
   },
   "github": {
@@ -22,43 +22,61 @@
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOVPOBtw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7f2b2624a4ce4d445c3f9174efb2db4d0cda3a48e80c74a24b6c09f5b240ade4/HuanLinOTO/dsh-neartoken",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ef887b46c36cfd88d0a363f381cd55874c3c5ebc5d5c4a1313330cb4334bfc62/HuanLinOTO/dsh-neartoken",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/94176676?u=57518fb3f1454c488f385186594a6f32dc4413b0&v=4",
       "login": "HuanLinOTO"
     },
     "pushedAt": "2026-10-20T05:05:12Z",
     "slug": "HuanLinOTO/dsh-neartoken",
-    "stars": 1,
+    "stars": 2,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-20T05:05:16Z",
+    "updatedAt": "2026-10-21T03:46:03Z",
     "url": "https://github.com/HuanLinOTO/dsh-neartoken"
   },
   "id": "gh:1425244599",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-neartoken",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:HuanLinOTO/dsh-neartoken#d3ed508435293a515a7a616e1698bf286b4dbc57",
+    "version": "0.10.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.10.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-neartoken",
+    "status": "valid",
+    "type": "module",
+    "version": "0.10.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7f2b2624a4ce4d445c3f9174efb2db4d0cda3a48e80c74a24b6c09f5b240ade4/HuanLinOTO/dsh-neartoken",
+    "coverUrl": "https://opengraph.githubassets.com/ef887b46c36cfd88d0a363f381cd55874c3c5ebc5d5c4a1313330cb4334bfc62/HuanLinOTO/dsh-neartoken",
     "description": "把 New API 站点接入 DSH 的模型供应商：设备授权登录、按渠道分组的三级模型选择器、模型白名单 | Sign in to a New API site from DSH settings; the plugin mints the API token, inserts itself as a provider, and offers a model/group/reasoning picker"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 New API 站点（NearToken，https://llm.pko.svcfusion.com）变成 DSH 的模型供应商：在设置页发起设备授权 → 用户在自己浏览器里登录站点并确认 → 插件自动接入 neartoken provider。插件全程不接触密码。模型选择器再把这批模型按 New API 的渠道分组折成 模型 → 分组 → 推理等级 三级。"
   },
   "schemaVersion": 1,
   "scripts": {

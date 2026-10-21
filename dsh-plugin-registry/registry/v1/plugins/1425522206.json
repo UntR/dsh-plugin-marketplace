@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "2e4aeb86117883f319c6593ba33d0e3f7f2467d7"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1425522206",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-balance-hud",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jxboop/dsh-plugin-balance-hud#2e4aeb86117883f319c6593ba33d0e3f7f2467d7",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-balance-hud",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8ace9664f15a4eebd5e4f72c9883d3f99f01d04e46d5030dbe56beba60ffc889/jxboop/dsh-plugin-balance-hud",
     "description": "DSH 插件：右下角科技玄幻风 DeepSeek 余额徽章，可拖动、靠边自动收缩；API Key 只留在 Node 进程，不进浏览器。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "常驻 DSH Web 界面上的余额徽章（shell.overlay 座位上的一格，点击穿透层里唯一接指针的条目）。Host 半边持有 DeepSeek API Key 并定时查询账户余额，浏览器半边把它渲染成一颗「能量核心」。"
   },
   "schemaVersion": 1,
   "scripts": {

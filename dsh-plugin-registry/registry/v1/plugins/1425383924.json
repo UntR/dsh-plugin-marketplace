@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "662d0027f2690af1b33e0f79de1c51f8d69dc923"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1425383924",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-edge-search",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Chuzhj/dsh-edge-search#662d0027f2690af1b33e0f79de1c51f8d69dc923",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "@local/dsh-edge-search",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3504a25057c8e43b603bf4c8de6552a8c2a31ba336bb544dbb392506126d83eb/Chuzhj/dsh-edge-search",
-    "description": "插件，作为deepseek api在非公网环境下无法调用web_fetch时的补救措施，能在非公网的环境下让dsh访问到网页"
+    "description": "插件，应对deepseek api的web_fetch拒绝访问非公网ip的情况，能让dsh访问到非公网ip网页（简单来说就是开vpn时也能使用访问网页的功能）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness（DSH）的 Host 插件，通过 CDP 驱动 你本机真实的 Edge 浏览器，给 agent 补上 edgesearch / edgeread 两个工具。 不要 API Key，不接第三方服务，不花一分钱。"
   },
   "schemaVersion": 1,
   "scripts": {

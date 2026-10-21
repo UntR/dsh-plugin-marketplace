@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "bdeaf96cfee13e3f2bcc9b24316b6f9135d81a79"
   },
   "github": {
@@ -55,7 +55,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -65,14 +65,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-win-control",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/386892ad87ea2bb17210e9883d89311a61d8a7ee19a78b72dfed5fc457331c64/kezi000/dsh-plugin-win-control",
     "description": "DSH/cordis plugin: 20 low-conflict Windows desktop + Chromium tools (window enumeration, UI Automation, offscreen capture, PostMessage click/type, isolated Chromium over CDP)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Windows 桌面 + Chromium 页面控制插件（DSH / cordis）。一条设计约束贯穿全部：用户还在用这台电脑。默认路径不移动光标、不抢焦点、不置前窗口；只有显式标记为侵入的工具才会抢焦点。"
   },
   "schemaVersion": 1,
   "scripts": {

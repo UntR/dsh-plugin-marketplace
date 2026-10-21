@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "c21c2b20e2ba1d0f49ba628c04bc90b9819193f7"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1425086092",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-gemini-argon",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-gemini-argon@0.7.0",
+    "version": "0.7.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.7.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-gemini-argon",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/062c52fa447e826bb95648cf43d52bc3d01344f3829f3ad021f5b65203a6f30c/zh-plus/dsh-gemini-argon",
     "description": "Gemini 4 Argon on Google Vertex AI for DeepSeek Harness: streaming, tool calls, thought-signature replay."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-gemini-argon 是专为 DeepSeek Harness 打造的 LLM provider 插件。它注册了独立的 gemini-argon 路由，通过 Vertex AI 原生的 streamGenerateContent 接口接入 gemini-4-argon 模型，完整支持流式输出、多轮工具调用、思考摘要与 Token 用量统计；认证既支持 Express API Key，也支持 service account JSON 密钥。"
   },
   "schemaVersion": 1,
   "scripts": {

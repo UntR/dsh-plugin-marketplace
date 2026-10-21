@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "6a35b0dabacd2b2fa9d2ed160fd0652e92fd2c69"
   },
   "github": {
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./channel": "./src/channel.js",
+      "./pool": "./src/pool.js"
+    },
+    "main": "./src/index.js",
+    "name": "@snow-the/goroutine",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c0a0321298797c9e0a988b644d1cc7dc0ee5a2e85f8be4fae2ac6dfb4c3344ee/snow-The/dsh-goroutine",
     "description": "@snow-the/goroutine: Go-style goroutines, channels and a worker pool on node:worker_threads (Node/Deno/Bun)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Go's concurrency vocabulary for JS runtimes — goroutines, channels, WaitGroups and an errgroup — built only on node:workerthreads, so the same code runs on Node, Deno and (by construction) Bun. No native addons, no AsyncResource, no blocking waits."
   },
   "schemaVersion": 1,
   "scripts": {

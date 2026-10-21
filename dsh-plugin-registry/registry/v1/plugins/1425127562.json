@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "506f28512ea3d3c0e0abe77fc2b8b8ba036cedf4"
   },
   "github": {
@@ -44,27 +44,40 @@
   },
   "id": "gh:1425127562",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tianjige",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:MengXingXiaoMing/dsh-tianjige#506f28512ea3d3c0e0abe77fc2b8b8ba036cedf4",
+    "version": "1.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./host.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "host.js",
+    "name": "dsh-tianjige",
+    "status": "valid",
+    "type": "module",
+    "version": "1.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6bd10f74ad5239036c34365c00e5f1bab4f285dfc4ee4b97ac2a4728100a0d8e/MengXingXiaoMing/dsh-tianjige",
     "description": "天机阁 · 算法天书：219 门图形/动画/物理/AI 算法的可查询 DSH 插件——10 个 agent 工具 + 侧栏页面（检索、档案、问天书、复核、体检），内置起始库，装完即用。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "The plugin is the interface; the codex itself lives in the algo-hub repository one level up (data/algorithms.json + data/taxonomy.json). A standalone install carries a seed snapshot (seed/) and seeds /.dsh/tianjige on first run, so the same package works without the repository."
   },
   "schemaVersion": 1,
   "scripts": {

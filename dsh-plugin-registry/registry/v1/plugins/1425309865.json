@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "2adca12613c306bd917105af1bdc86a9d4518090"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1425309865",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-pdf-formula",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-pdf-formula@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-pdf-formula",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f078673356fa29c0454d95d45fb786bbaa9321526f3202be906b910ed2846b77/zhangzhichen18/dsh-pdf-formula",
     "description": "PDF formula reader for DeepSeek Harness — decodes subset-font math glyphs into LaTeX"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的 Agent 用的纯主机端（Host-only）插件：读取 PDF 自带的文本层与字形轮廓，把论文里的 公式还原成 LaTeX，同时提供页面文本、页面尺寸与字体的体检信息。没有界面，不注入任何客户端代码。"
   },
   "schemaVersion": 1,
   "scripts": {

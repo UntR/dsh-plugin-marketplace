@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "3986487954ac7a47191e5b880d2c8f140fc5ab72"
   },
   "github": {
@@ -43,27 +43,43 @@
   },
   "id": "gh:1425284547",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-turn-notify",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:laobinghongcha/dsh-plugin-turn-notify#3986487954ac7a47191e5b880d2c8f140fc5ab72",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./format": "./lib/format.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./log": "./lib/log.js",
+      "./notify": "./lib/notify.js",
+      "./package.json": "./package.json",
+      "./test-turn-end": "./scripts/test-turn-end.js"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-turn-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/063403731d8924779d7f6783f0ddcb0da1e200449bd908d4ef5c17688dade12f/laobinghongcha/dsh-plugin-turn-notify",
     "description": "DSH 回合结束通知插件 — 系统原生通知 + 提示音，成功/出错/受阻/截断文案各异"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "每当一个 DSH 回合结束，弹出系统原生通知并播放提示音（类似 OpenCode / Claude Code 的完成提醒）。"
   },
   "schemaVersion": 1,
   "scripts": {

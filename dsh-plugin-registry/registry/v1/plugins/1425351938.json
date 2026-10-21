@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "47052e35a0d037d2e9dcd88ca49b7dcb8f320111"
   },
   "github": {
@@ -52,7 +52,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -62,14 +62,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./.dsh-plugin/index.mjs",
+      "./client": "./.dsh-plugin/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./.dsh-plugin/index.mjs",
+    "name": "wallpaper-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/55cc16f1585a09edc566c2ad5a5bdca4d7c045227143e5df87f1cfbcdd1e605a/youxin484/wallpaper-plugin",
     "description": "DSH 外观预设与壁纸插件（fork）：预设墙 · 美化工作室 · 素材库 · 背景自动轮播"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH） 用的外观预设与壁纸插件：预设墙、美化工作室、壁纸素材库，外加本文档重点介绍的背景自动轮播。"
   },
   "schemaVersion": 1,
   "scripts": {

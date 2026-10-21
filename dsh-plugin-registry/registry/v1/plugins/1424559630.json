@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
-    "headSha": "a8603563589d6e9d440f2312d9dc8bf30c118682"
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
+    "headSha": "d3886d69f4b2cb0bc58cfd6895577cf861da72a9"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Per-extension 'open with' for DSH: let DSH open files with the app you choose, without changing macOS default apps. Host plugin + settings page.",
     "fork": false,
     "forks": 0,
-    "headSha": "a8603563589d6e9d440f2312d9dc8bf30c118682",
+    "headSha": "d3886d69f4b2cb0bc58cfd6895577cf861da72a9",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,44 +25,60 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVOkODg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7d53a48fd8b869eb7a495d970122eb741193fa262f756111c9bbfb36eeaed375/HildebrandYu/dsh-open-with",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8bf2a29764849085e2d77f0b5b1e3b7f83aca0fdd73f137aaa748678eb0beca3/HildebrandYu/dsh-open-with",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/259054089?u=6d4d401efca28afbe21302a0bd8b98ed7419bb2e&v=4",
       "login": "HildebrandYu"
     },
-    "pushedAt": "2026-10-18T16:07:16Z",
+    "pushedAt": "2026-10-20T11:16:46Z",
     "slug": "HildebrandYu/dsh-open-with",
     "stars": 0,
     "topics": [
       "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-18T16:07:02Z",
+    "updatedAt": "2026-10-20T11:16:43Z",
     "url": "https://github.com/HildebrandYu/dsh-open-with"
   },
   "id": "gh:1424559630",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-open-with",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:HildebrandYu/dsh-open-with#d3886d69f4b2cb0bc58cfd6895577cf861da72a9",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./plugin/index.mjs"
+      },
+      "./client": {
+        "default": "./plugin/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./plugin/index.mjs",
+    "name": "dsh-open-with",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7d53a48fd8b869eb7a495d970122eb741193fa262f756111c9bbfb36eeaed375/HildebrandYu/dsh-open-with",
+    "coverUrl": "https://opengraph.githubassets.com/8bf2a29764849085e2d77f0b5b1e3b7f83aca0fdd73f137aaa748678eb0beca3/HildebrandYu/dsh-open-with",
     "description": "Per-extension 'open with' for DSH: let DSH open files with the app you choose, without changing macOS default apps. Host plugin + settings page."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH opens a file by handing it to macOS, so it always uses your system default application. This plugin gives DSH its own per-extension app map instead — Finder double-click keeps your normal default, while DSH's delivery cards, right-sidebar preview and change review open the ap"
   },
   "schemaVersion": 1,
   "scripts": {

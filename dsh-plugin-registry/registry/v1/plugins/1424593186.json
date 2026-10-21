@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-20T09:17:09.312Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichmentStatus": "ok",
     "headSha": "cbb25d851a967cfbd710ada2aead6c9c3544c267"
   },
   "github": {
@@ -47,27 +47,53 @@
   },
   "id": "gh:1424593186",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-opencode-connect",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Dreftian/Opencode-Connect#cbb25d851a967cfbd710ada2aead6c9c3544c267",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./adapter": {
+        "default": "./lib/adapter.js",
+        "types": "./lib/adapter.d.ts"
+      },
+      "./client": {
+        "default": "./lib/opencode-client.js",
+        "types": "./lib/opencode-client.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./sync": {
+        "default": "./lib/model-sync.js",
+        "types": "./lib/model-sync.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-opencode-connect",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0c17f72f7e0249f4c31682b23805c322d39715b142f2124d6a51c499c8535eb4/Dreftian/Opencode-Connect",
     "description": "DeepSeek Harness plugin to connect and auto-sync OpenCode Desktop free models"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Seamlessly connect and dynamically auto-sync all OpenCode Desktop free models into DeepSeek Harness."
   },
   "schemaVersion": 1,
   "scripts": {
