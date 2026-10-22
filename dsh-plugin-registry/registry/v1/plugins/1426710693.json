@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "c41f5bb80b86bd52802d9a86396406dd71f91d1c"
   },
   "github": {
@@ -47,27 +47,41 @@
   },
   "id": "gh:1426710693",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-miniprogram-helper",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:leo666-cloud/dsh-miniprogram-helper#c41f5bb80b86bd52802d9a86396406dd71f91d1c",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-miniprogram-helper",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d86d868b7da323b23bd37caf896c9bd6c8b1fc49666d4a80bae4dffe3235cb5d/leo666-cloud/dsh-miniprogram-helper",
     "description": "DSH plugin: scaffold, register and validate WeChat Mini Program pages, plus WeChat DevTools CLI integration"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DSH（DeepSeek Harness）插件：让 Agent 能扫描、生成、注册、校验微信小程序页面与配置，并能直接调微信开发者工具出预览二维码。"
   },
   "schemaVersion": 1,
   "scripts": {

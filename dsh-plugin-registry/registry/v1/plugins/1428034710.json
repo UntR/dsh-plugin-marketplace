@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "22f7d60a000a2c6ad608b25944932a752b690465"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1428034710",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@sueleven/dsh-auto-update",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@sueleven/dsh-auto-update@1.0.1",
+    "version": "1.0.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg"
+    },
+    "main": "lib/index.js",
+    "name": "@sueleven/dsh-auto-update",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8f3af61cc071ff7336c37246043c317bf86b73b3d24b0aca75b85041bdfd96a6/1708994293-hue/dsh-auto-update",
     "description": "DSH 插件：启动时检查已启用插件的新版本，列出并询问是否更新"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（dsh）插件：每次打开 DSH 时自动检查你已经下载并启用的插件有没有新版本，发现后主动列出并询问是否更新——点确认才更新，更新走 DSH 官方通道，不会覆盖你的 profile 配置。"
   },
   "schemaVersion": 1,
   "scripts": {

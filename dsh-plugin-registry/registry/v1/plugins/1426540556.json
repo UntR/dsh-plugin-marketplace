@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "21340ddbe45a228b6739cdf121025f452d0a9e1a"
   },
   "github": {
@@ -41,27 +41,36 @@
   },
   "id": "gh:1426540556",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-authless",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-authless@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js"
+    },
+    "main": "src/index.js",
+    "name": "dsh-authless",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0adb910454bc63b9246d4771c8cafebc7efdc48532dc3e44934f5b5beb4fd0ff/zerodegress/dsh-authless",
-    "description": ""
+    "description": "Removes the launch-token check from the local DSH Web UI. After installing, dsh prints a plain http://127.0.0.1:3080/, the page opens without a cookie, and /api answers a request that already cleared the authority check instead of replying 401. The WebSocket upgrade the UI opens "
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Removes the launch-token check from the local DSH Web UI. After installing, dsh prints a plain http://127.0.0.1:3080/, the page opens without a cookie, and /api answers a request that already cleared the authority check instead of replying 401. The WebSocket upgrade the UI opens "
   },
   "schemaVersion": 1,
   "scripts": {

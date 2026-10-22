@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "fc4b33f05e461b6da2b8eaa315a3e07eeb54c6f8"
   },
   "github": {
@@ -44,27 +44,37 @@
   },
   "id": "gh:1425904021",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dshx-image-clamp",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:callaumyan-design/dshx-image-clamp#fc4b33f05e461b6da2b8eaa315a3e07eeb54c6f8",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dshx-image-clamp",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2e6d191cb5c10997e718edd2293ab9d3ba733dac848cccc3706ee30760da9a6c/callaumyan-design/dshx-image-clamp",
     "description": "Clamp every image sent to the model to a maximum side length (default 2000px) so Claude's many-image limit is never exceeded."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Claude 在一次请求里图片超过 20 张时，任何一张边长超过 2000px 就会整条请求被拒。DSH 的附件归一化只限制总像素，单边仍可能超过 2000（例如 2730×1536），之后每一轮都会重放这张图，整个会话就卡死了。"
   },
   "schemaVersion": 1,
   "scripts": {

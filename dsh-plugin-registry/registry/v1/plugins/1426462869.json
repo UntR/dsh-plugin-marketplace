@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
-    "headSha": "783b03b49bf963f1537d992e8297a659d9584af3"
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
+    "headSha": "71c5aea4fdd5a003549c2009f5338a1d17431b89"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "NapCat / OneBot 11 QQ channel plugin for DeepSeek Harness（QQ 通道：私聊/群聊、@门控、白名单、每会话独立 agent、长文分段）",
     "fork": false,
     "forks": 0,
-    "headSha": "783b03b49bf963f1537d992e8297a659d9584af3",
+    "headSha": "71c5aea4fdd5a003549c2009f5338a1d17431b89",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVQYYlQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5097a473f48a29a6062e73368674457b595cf6658290a9cf395273427b1414d3/wzwei1990/dsh-napcat",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8f6ad580cb40d77dd895e4816f90d9b417a312b9a64617424f222da89f77dc60/wzwei1990/dsh-napcat",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/41670762?v=4",
       "login": "wzwei1990"
     },
-    "pushedAt": "2026-10-21T08:58:07Z",
+    "pushedAt": "2026-10-22T09:20:24Z",
     "slug": "wzwei1990/dsh-napcat",
     "stars": 0,
     "topics": [
@@ -40,32 +40,48 @@
       "onebot11",
       "qq"
     ],
-    "updatedAt": "2026-10-21T08:58:11Z",
+    "updatedAt": "2026-10-22T09:20:21Z",
     "url": "https://github.com/wzwei1990/dsh-napcat"
   },
   "id": "gh:1426462869",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-napcat",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wzwei1990/dsh-napcat#71c5aea4fdd5a003549c2009f5338a1d17431b89",
+    "version": "0.3.13"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./client/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-napcat",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.13"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5097a473f48a29a6062e73368674457b595cf6658290a9cf395273427b1414d3/wzwei1990/dsh-napcat",
+    "coverUrl": "https://opengraph.githubassets.com/8f6ad580cb40d77dd895e4816f90d9b417a312b9a64617424f222da89f77dc60/wzwei1990/dsh-napcat",
     "description": "NapCat / OneBot 11 QQ channel plugin for DeepSeek Harness（QQ 通道：私聊/群聊、@门控、白名单、每会话独立 agent、长文分段）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 加一个 QQ 通道：通过 NapCat（OneBot 11 协议）把群聊/私聊消息送进 dsh 的 agent，再把回复发回 QQ。"
   },
   "schemaVersion": 1,
   "scripts": {

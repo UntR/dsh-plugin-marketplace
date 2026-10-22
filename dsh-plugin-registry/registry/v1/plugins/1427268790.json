@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "e9524b60ac1ffcfe439da6e74e42131cd310ce6f"
   },
   "github": {
@@ -46,27 +46,43 @@
   },
   "id": "gh:1427268790",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@jcs130/dsh-harness2",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@jcs130/dsh-harness2@0.1.0-rc.1",
+    "version": "0.1.0-rc.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0-rc.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/plugin.mjs",
+      "./adapters/ledger": "./src/ledger.mjs",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locales/*.json",
+      "./model": "./src/model.mjs",
+      "./package.json": "./package.json",
+      "./runtime": "./src/runtime.mjs"
+    },
+    "main": "./src/plugin.mjs",
+    "name": "@jcs130/dsh-harness2",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-rc.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fa411c8a6cf3da1dc686c1830d46e957b4f106d97b654b04e3632d2ba74c8630/jcs130/dsh-harness2",
     "description": "Harness² experiments for DeepSeek Harness: isolated adapters, measured comparisons, native experiment views and evidence-linked lessons."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 Google Research 的 Harness² 接到 DeepSeek Harness。模型权重不变，比较的是任务周围的配置、提示、技能或受限参数。插件与 Minecraft 解耦，Minecraft 继续使用 agent-mc-world 的独立练习、证据与游戏记忆。"
   },
   "schemaVersion": 1,
   "scripts": {

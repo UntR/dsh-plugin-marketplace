@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
-    "headSha": "a1308ef453fa81b4005bc689a285c14b4d029bae"
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
+    "headSha": "b1dc9d529c73271b864c628fdd6cf07e1715b478"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH 插件：腾讯元宝网页版文生图（yuanbao_t2i 工具 + 插件内设置卡，可选 LaMa/OpenCV 去水印）",
     "fork": false,
     "forks": 0,
-    "headSha": "a1308ef453fa81b4005bc689a285c14b4d029bae",
+    "headSha": "b1dc9d529c73271b864c628fdd6cf07e1715b478",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVQcMig",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a82d952086f426b1fb2d1954629978f621682b87c68d3886e191d3ecd7b3da17/lm846802297-bit/dsh-yuanbao-t2i",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ceb0fe4989c5e7c19d1ca1304519dca52c9ce024d50d8b4ae814dc1339942d19/lm846802297-bit/dsh-yuanbao-t2i",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/339878315?v=4",
       "login": "lm846802297-bit"
     },
-    "pushedAt": "2026-10-21T04:43:07Z",
+    "pushedAt": "2026-10-21T18:19:50Z",
     "slug": "lm846802297-bit/dsh-yuanbao-t2i",
     "stars": 0,
     "topics": [
@@ -41,32 +41,44 @@
       "text-to-image",
       "yuanbao"
     ],
-    "updatedAt": "2026-10-21T04:43:09Z",
+    "updatedAt": "2026-10-21T18:19:55Z",
     "url": "https://github.com/lm846802297-bit/dsh-yuanbao-t2i"
   },
   "id": "gh:1426525322",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-yuanbao-t2i",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lm846802297-bit/dsh-yuanbao-t2i#b1dc9d529c73271b864c628fdd6cf07e1715b478",
+    "version": "0.10.7"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/plugin.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/plugin.js",
+    "name": "dsh-yuanbao-t2i",
+    "status": "valid",
+    "type": "module",
+    "version": "0.10.7"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a82d952086f426b1fb2d1954629978f621682b87c68d3886e191d3ecd7b3da17/lm846802297-bit/dsh-yuanbao-t2i",
+    "coverUrl": "https://opengraph.githubassets.com/ceb0fe4989c5e7c19d1ca1304519dca52c9ce024d50d8b4ae814dc1339942d19/lm846802297-bit/dsh-yuanbao-t2i",
     "description": "DSH 插件：腾讯元宝网页版文生图（yuanbao_t2i 工具 + 插件内设置卡，可选 LaMa/OpenCV 去水印）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）本地插件：用腾讯元宝网页版（混元 Hy Image）文生图 / 图生图，一次 4 张 PNG 直接落盘，输出比例/分辨率真可控（v0.7.0 起走元宝「AI 生图」模式的真实控件），画风可直接套用元宝官方模板库（v0.8.0 起，1000+ 条画风模板），并可在插件设置卡里选择图片存到哪个目录（v0.5.1 起支持点按钮选目录，不用手敲长路径）、是否去水印（v0.10.0 起修复范围不再是开关，掩膜由引擎内部自适应）。"
   },
   "schemaVersion": 1,
   "scripts": {

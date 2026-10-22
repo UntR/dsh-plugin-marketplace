@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "0e241a66398e57d2984138e870d2d18c763a8bb7"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-academic-search",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2e4d32bab2b3fa7a32b8ea997a84fefb1630a58a49f8d3d268ee58ace3411197/TianzeLuo/dsh-academic-search",
     "description": "DSH plugin for CS/AI academic search across arXiv, OpenAlex, Semantic Scholar, and Crossref — paper identity merging, bounded citation chains, arXiv handoff, no model API."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：CS/AI 学术检索。多来源论文发现、论文身份归并、有界引用链、arXiv 原文 下载与 reader 交接。六个工具只访问公开学术 API（arXiv / OpenAlex / Semantic Scholar / Crossref），不调用模型 API。"
   },
   "schemaVersion": 1,
   "scripts": {

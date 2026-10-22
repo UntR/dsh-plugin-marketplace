@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "a67457fb1234ce14076dbea9950a2361bb2d9b23"
   },
   "github": {
@@ -44,27 +44,37 @@
   },
   "id": "gh:1425904417",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dshx-loop-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:callaumyan-design/dshx-loop-guard#a67457fb1234ce14076dbea9950a2361bb2d9b23",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dshx-loop-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0db1e6bbabcca60b2a3f737cbf8fe32d077da13355eabee8f81e95c621f05a82/callaumyan-design/dshx-loop-guard",
     "description": "Detect and stop repeated identical tool calls (agent loops), mainly for small local models."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "防止 agent（主要是本地小模型）陷入「反复调用同一个工具」的死循环。只挂 DSH 公开的 agent/request、tools/pre-execute、tools/post-execute 事件，不改 agent 主循环。"
   },
   "schemaVersion": 1,
   "scripts": {

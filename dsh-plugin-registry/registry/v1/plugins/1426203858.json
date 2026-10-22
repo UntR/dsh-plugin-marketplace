@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "8f9abe944f6d828d54d7e33926537352519effe6"
   },
   "github": {
@@ -51,27 +51,39 @@
   },
   "id": "gh:1426203858",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-wechat-daily",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zengpu987-ctrl/dsh-wechat-daily#8f9abe944f6d828d54d7e33926537352519effe6",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-wechat-daily",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3e4065667e9af0601425f2eeba506f17efed38fbe435e3ccd7e7e443ca2a6e7c/zengpu987-ctrl/dsh-wechat-daily",
     "description": "DeepSeek Harness plugin: a Settings-resident WeChat daily report. Reads local WeChat 4.x databases read-only, ranks the day's chats, and separates what needs you from what to ignore."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个装进 DeepSeek Harness 设置页的微信日报插件：每天结束前，把本机微信里发生的事整理成一份日报， 分成 需要处理、值得一看、可以忽略 三段；同时在对话里给 agent 一个 wechatdailyreport 工具。"
   },
   "schemaVersion": 1,
   "scripts": {

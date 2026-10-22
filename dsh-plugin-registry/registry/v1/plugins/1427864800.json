@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "96fb9821acffc034caa479bd5cb8d02b063f0085"
   },
   "github": {
@@ -25,43 +25,54 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVRt84A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/41b05a25330046141e859aa1ca2da31ab8bb72a8a19a368171d24ac1f2b2b762/YumenoSayuri/dsh-time-weaver",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/083f2a60880d5da63459b41a8912fbea76d2373580d52b9f3c69e00041046523/YumenoSayuri/dsh-time-weaver",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/171713950?u=0b9241ed601a7eefacddd3077e354742d4655b24&v=4",
       "login": "YumenoSayuri"
     },
     "pushedAt": "2026-10-21T06:58:57Z",
     "slug": "YumenoSayuri/dsh-time-weaver",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-21T06:59:00Z",
+    "updatedAt": "2026-10-21T10:46:07Z",
     "url": "https://github.com/YumenoSayuri/dsh-time-weaver"
   },
   "id": "gh:1427864800",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-time-weaver",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:YumenoSayuri/dsh-time-weaver#96fb9821acffc034caa479bd5cb8d02b063f0085",
+    "version": "1.0.9"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./host.v8.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "host.v8.js",
+    "name": "@local/dsh-time-weaver",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.9"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/41b05a25330046141e859aa1ca2da31ab8bb72a8a19a368171d24ac1f2b2b762/YumenoSayuri/dsh-time-weaver",
+    "coverUrl": "https://opengraph.githubassets.com/083f2a60880d5da63459b41a8912fbea76d2373580d52b9f3c69e00041046523/YumenoSayuri/dsh-time-weaver",
     "description": "时空编织者 (Time Weaver) — 全能会话流控制：用户消息回溯重填、AI 回复原地编辑、语义占位撤回删除、保全工具链的时空回退重新生成。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "底层日志一条都不改，全部能力以 hook/invoked 保留事件追加落盘——所以关闭客户端、重启电脑、切换历史会话之后，所有编织状态依然成立，并且对插件安装之前创建的旧会话同样有效。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "fcb89f9b62eb15ae5ded7980a62acfbaf09c2b56"
   },
   "github": {
@@ -43,27 +43,41 @@
   },
   "id": "gh:1425672037",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-skills-mcp",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:BrokenDreamStar/dsh-skills-mcp#fcb89f9b62eb15ae5ded7980a62acfbaf09c2b56",
+    "version": "0.4.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": "./dist/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-skills-mcp",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/03f68dd33f2baf41d10c939f9195cb1a62f30d6a93988c124bc06a0f4c1c80ff/BrokenDreamStar/dsh-skills-mcp",
     "description": "为deepseek harness添加skills和mcp管理功能"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH Web 设置页和模型工具里，统一管理系统级 / 项目级的 Skills 与 MCP 服务器。"
   },
   "schemaVersion": 1,
   "scripts": {

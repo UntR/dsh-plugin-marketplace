@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "d522b8ed680e32f952f153ada402c35be2151910"
   },
   "github": {
@@ -41,27 +41,37 @@
   },
   "id": "gh:1427161685",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-wind-finance",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zirscard/dsh-wind-finance#d522b8ed680e32f952f153ada402c35be2151910",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-wind-finance",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b97ba2c3f4a6a44d74a4528e2bd6716af621a66f37559d9989654dc5303338de/zirscard/dsh-wind-finance",
     "description": "Wind financial-analysis capability as one standalone bundle: one wind_finance tool that routes a question to the right Wind data domain, executes it over the Wind meta-router MCP endpoint, and keeps a per-day receipt so the same dataset is not pulled twice against one shared dail"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Wind 万得金融分析能力的独立打包版本。一个 bundle 提供一个宿主工具 windfinance， 负责路由 → 取数 → 按日回执去重，让金融问题只走 Wind 一条数据链路。"
   },
   "schemaVersion": 1,
   "scripts": {

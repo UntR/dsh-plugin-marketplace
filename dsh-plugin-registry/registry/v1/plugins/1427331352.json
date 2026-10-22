@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "a1983e49aed212c87cc82e06bccd1f4e1760c4d2"
   },
   "github": {
@@ -48,27 +48,39 @@
   },
   "id": "gh:1427331352",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-codex-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:AK-blank/dsh-codex-bridge#a1983e49aed212c87cc82e06bccd1f4e1760c4d2",
+    "version": "1.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.5",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-codex-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ee9a12a1b563aa5613e8b74c04733d5479c67884ccde575a3980de56a73c595f/AK-blank/dsh-codex-bridge",
     "description": "Unofficial DSH bundle: quota-aware Codex CLI delegation. Reads the 5-hour and weekly ChatGPT-plan windows, defaults to gpt-6.1-sol/high, falls back to gpt-5.6-sol at 10% left, and requires an explicit opt-in for gpt-6-astra."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness bundle that lets the agent read the local Codex CLI quota and delegate hard tasks to codex exec with a model and reasoning effort that fit the current ChatGPT-plan budget."
   },
   "schemaVersion": 1,
   "scripts": {

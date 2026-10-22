@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "3212f20c0277c0ecb73cb7fc410dc88031318015"
   },
   "github": {
@@ -47,27 +47,42 @@
   },
   "id": "gh:1426948631",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@xiciyang/training-sft",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@xiciyang/training-sft@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.mjs"
+      },
+      "./package.json": "./package.json",
+      "./tools": {
+        "default": "./src/tools.mjs"
+      }
+    },
+    "main": "./src/index.mjs",
+    "name": "@xiciyang/training-sft",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/95fc2160228eafdbc8d13d93904df4257378bfdc43d33c6adc8fb2ab257fa219/xiciyang/training-sft",
     "description": "@xiciyang/training-sft — DSH 训练插件：可独立安装，依赖 @xiciyang/* 共享库"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "用真实 GPU 对一个基座模型做 LoRA 监督微调（SFT），并把每一步变成可审计的产物：数据准备、训练、合并、验收、回退，全部留下哈希链与机器可读报告。"
   },
   "schemaVersion": 1,
   "scripts": {

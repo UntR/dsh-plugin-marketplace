@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "e4bbe6246d6e4a6545efccb96193b6d0fa98d7c6"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVRWEuQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/4ab4eca400ed90b6d19ed44b51bea41fc65f934a6ec4b22b3e0cd50e1203a002/mllun/dsh-memory-layers",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e4e463f33d547fbb03a04d33ccd1b7fd97a34bd9c9395f71b6d12fe202b17d67/mllun/dsh-memory-layers",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/338252683?u=ca2c9a2ebfcd608b09634de849b3806119843266&v=4",
       "login": "mllun"
@@ -41,32 +41,44 @@
       "long-term-memory",
       "memory"
     ],
-    "updatedAt": "2026-10-21T09:09:39Z",
+    "updatedAt": "2026-10-21T16:40:48Z",
     "url": "https://github.com/mllun/dsh-memory-layers"
   },
   "id": "gh:1427473593",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-memory-layers",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:mllun/dsh-memory-layers#e4bbe6246d6e4a6545efccb96193b6d0fa98d7c6",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "@local/dsh-memory-layers",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/4ab4eca400ed90b6d19ed44b51bea41fc65f934a6ec4b22b3e0cd50e1203a002/mllun/dsh-memory-layers",
+    "coverUrl": "https://opengraph.githubassets.com/e4e463f33d547fbb03a04d33ccd1b7fd97a34bd9c9395f71b6d12fe202b17d67/mllun/dsh-memory-layers",
     "description": "Layered long-term memory for DeepSeek Harness: a ~600-char hot layer, month-archived cold entries with cross-month keyword recall, and extractive day/week/month summaries that keep injected context small."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的分层长期记忆：一个约 600 字、每次会话必读的热层，一份按月归档、可按关键词跨月召回的冷层全文，以及日 → 周 → 月三级抽取式摘要。目标是在不撑大上下文的前提下，让很久以前的细节仍然找得回来。"
   },
   "schemaVersion": 1,
   "scripts": {

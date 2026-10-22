@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "38e695117785a9e30f0cc6580d39d8ae2b853f38"
   },
   "github": {
@@ -53,27 +53,45 @@
   },
   "id": "gh:1426416438",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-llm-net-router",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dyh886/dsh-llm-net-router#38e695117785a9e30f0cc6580d39d8ae2b853f38",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client.js",
+      "./fingerprints": "./lib/fingerprints.js",
+      "./httpclient": "./lib/httpclient.js",
+      "./package.json": "./package.json",
+      "./probe": "./lib/probe.js",
+      "./router": "./lib/router.js",
+      "./store": "./lib/store.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-llm-net-router",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1426416438/4aa04202-cdcf-4de6-84aa-d35c09122ff5",
     "description": "Per-provider egress routing and client-fingerprint control for DeepSeek Harness: per-host proxy/direct routing plus client header rewrite at the fetch boundary."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 补一层它自己表达不了的出网策略：按 Provider 选代理，按 Provider 选“我是谁”。"
   },
   "schemaVersion": 1,
   "scripts": {

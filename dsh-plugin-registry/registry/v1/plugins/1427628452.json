@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
-    "headSha": "3ac5aacf1a51b7927fde6e00981bb17e8ac2bb66"
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
+    "headSha": "23f3ad280b1d76de53aa2a048cbe61e9ae83d5dc"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "AIDE (AI + IDE): VS Code-style local IDE for DeepSeek Harness — Monaco, explorer, search, Git, terminal",
     "fork": false,
     "forks": 0,
-    "headSha": "3ac5aacf1a51b7927fde6e00981bb17e8ac2bb66",
+    "headSha": "23f3ad280b1d76de53aa2a048cbe61e9ae83d5dc",
     "homepageUrl": "https://github.com/PrismScopes/dsh-aide",
     "language": "TypeScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVRfhpA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/59ebc0c0f4ca0098b7d9fff393cd09a25c4ee9e1d7eedbb317760784a00e8edf/PrismScopes/dsh-aide",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c140d91bfac30cd1b73d42e2a9356999df61dcb750fbad90ad9a44a4c28cd538/PrismScopes/dsh-aide",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/163329407?v=4",
       "login": "PrismScopes"
     },
-    "pushedAt": "2026-10-21T09:14:23Z",
+    "pushedAt": "2026-10-21T23:44:15Z",
     "slug": "PrismScopes/dsh-aide",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "ai",
       "deepseek-harness",
@@ -42,7 +42,7 @@
       "monaco-editor",
       "vscode-workbench"
     ],
-    "updatedAt": "2026-10-21T09:14:28Z",
+    "updatedAt": "2026-10-21T23:44:18Z",
     "url": "https://github.com/PrismScopes/dsh-aide"
   },
   "id": "gh:1427628452",
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-aide",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/59ebc0c0f4ca0098b7d9fff393cd09a25c4ee9e1d7eedbb317760784a00e8edf/PrismScopes/dsh-aide",
+    "coverUrl": "https://opengraph.githubassets.com/c140d91bfac30cd1b73d42e2a9356999df61dcb750fbad90ad9a44a4c28cd538/PrismScopes/dsh-aide",
     "description": "AIDE (AI + IDE): VS Code-style local IDE for DeepSeek Harness — Monaco, explorer, search, Git, terminal"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "（不是浮窗，切走/关标签即退出），游戏铺满编辑器面板，深浅色跟随 DSH 主题（深色下把画布反相，深灰精灵变浅灰）。 直接用 npm 包 react-chrome-dino（MIT），内置 Chrome 官方离线页的小恐龙（精灵图/音效），没有自写逻辑、也没有 vendored 资源。"
   },
   "schemaVersion": 1,
   "scripts": {

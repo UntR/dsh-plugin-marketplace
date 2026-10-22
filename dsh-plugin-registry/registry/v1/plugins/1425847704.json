@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "961b70a71d8a2e4f4302344ca268343e3fe73b6f"
   },
   "github": {
@@ -41,27 +41,43 @@
   },
   "id": "gh:1425847704",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-deepseek-web-panel",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ChengMioa/dsh-deepseek-web-panel#961b70a71d8a2e4f4302344ca268343e3fe73b6f",
+    "version": "0.3.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-deepseek-web-panel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e020a34bbd383f21482c93c31bed4a14d9b97d482fc9de5b5b4dc75ce23c75e9/ChengMioa/dsh-deepseek-web-panel",
     "description": "DeepSeek web panel for DSH"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DeepSeek 网页版接进 DeepSeek Harness： 主区域一个全局面板，用 Electron 加载真正的 chat.deepseek.com。 不经过 API，历史列表直接使用官网自带的侧栏，右键可删除对话。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
-    "headSha": "10dd9734b4c13498420eda17bca9609da07d6eab"
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
+    "headSha": "8f4ddaefbb3e5e6582475f41eadc06ab72c9321c"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Purge billion-context (bili) leftovers after an archive-manager session delete completes. Plugin for DeepSeek Harness.",
     "fork": false,
     "forks": 0,
-    "headSha": "10dd9734b4c13498420eda17bca9609da07d6eab",
+    "headSha": "8f4ddaefbb3e5e6582475f41eadc06ab72c9321c",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,13 +25,13 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVRXmDQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/577732aeb0deabda3b931ca8f127cf683fd383d3b7ebf0753e0138ee83c444d1/945562672/dsh-session-leftover-purge",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/0a104577c1f8f3f87912d582bacae6a33ab8d03d2cae938eddf275baf2b5f24c/FenrirCait/dsh-session-leftover-purge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/216096510?u=33a51d4ead8b43ed45eb776896697cf414a0208d&v=4",
-      "login": "945562672"
+      "login": "FenrirCait"
     },
-    "pushedAt": "2026-10-20T21:46:20Z",
-    "slug": "945562672/dsh-session-leftover-purge",
+    "pushedAt": "2026-10-21T16:28:14Z",
+    "slug": "FenrirCait/dsh-session-leftover-purge",
     "stars": 0,
     "topics": [
       "billion-context",
@@ -41,32 +41,47 @@
       "dsh-plugin",
       "session-cleanup"
     ],
-    "updatedAt": "2026-10-20T21:46:25Z",
-    "url": "https://github.com/945562672/dsh-session-leftover-purge"
+    "updatedAt": "2026-10-21T16:28:18Z",
+    "url": "https://github.com/FenrirCait/dsh-session-leftover-purge"
   },
   "id": "gh:1427498509",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-leftover-purge",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-session-leftover-purge@1.1.9",
+    "version": "1.1.9"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.1.9",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-leftover-purge",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.9"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/577732aeb0deabda3b931ca8f127cf683fd383d3b7ebf0753e0138ee83c444d1/945562672/dsh-session-leftover-purge",
+    "coverUrl": "https://opengraph.githubassets.com/0a104577c1f8f3f87912d582bacae6a33ab8d03d2cae938eddf275baf2b5f24c/FenrirCait/dsh-session-leftover-purge",
     "description": "Purge billion-context (bili) leftovers after an archive-manager session delete completes. Plugin for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "删掉一个会话后，DeepSeek Harness 自己的记录清干净了，但 billion-context 的快照和索引、 cost-meter 的账本明细还留着。于是 bili 面板里还能看到那条会话，它的正文也还在 index.db 里。这个插件订阅 DSH 的 api-session/removed 事件，把剩下的部分补完。"
   },
   "schemaVersion": 1,
   "scripts": {

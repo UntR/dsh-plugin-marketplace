@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "3cec4f4ac99ac553728b5ba5c31b5782a0684e99"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1426708484",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-backup",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Kirin-9000/dsh-plugin-backup#3cec4f4ac99ac553728b5ba5c31b5782a0684e99",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-plugin-backup",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8ce4e53b99abbaec783bf9eae97332a53a413e4fd7c2b5d7b5918339844fe453/Kirin-9000/dsh-plugin-backup",
     "description": "插件备份与恢复"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）的插件备份与恢复插件。DSH 更新有可能重置整个 .dsh——插件、配置、连同放在里面的备份一起消失。dsh-plugin-backup 把已安装插件清单持久化到 .dsh 之外的可配置目录，更新之后对比差异、勾选、一键恢复全部历史插件，不必逐个重新下载。"
   },
   "schemaVersion": 1,
   "scripts": {

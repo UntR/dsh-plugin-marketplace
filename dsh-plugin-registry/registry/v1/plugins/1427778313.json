@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "81d931fc0205e6363b9157bcb6a5378bc260100c"
   },
   "github": {
@@ -42,27 +42,41 @@
   },
   "id": "gh:1427778313",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-progress-summary",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:tastynoob/dsh-progress-summary#81d931fc0205e6363b9157bcb6a5378bc260100c",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./narrator": "./narrator.js",
+      "./package.json": "./package.json",
+      "./projection": "./projection.js"
+    },
+    "main": "index.js",
+    "name": "dsh-progress-summary",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/91de677f5b248014bd30529c12f0402ecf2a60a5f27b19fb8f7cecf0e67a7aff/tastynoob/dsh-progress-summary",
     "description": "DeepSeek Harness plugin: out-of-band progress narration for the Web UI and dsh-tui"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Out-of-band progress narration for DeepSeek Harness: a cheap auxiliary model turns the live chain of thought into one short status line, shown above the composer in the Web UI and on the dsh-tui status line."
   },
   "schemaVersion": 1,
   "scripts": {

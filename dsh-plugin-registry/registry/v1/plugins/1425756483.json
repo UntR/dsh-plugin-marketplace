@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "3ea8e814b16b7670c1688ba093fdb46ef41eaaaa"
   },
   "github": {
@@ -41,27 +41,46 @@
   },
   "id": "gh:1425756483",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-janitor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:guokecloud/dsh-session-janitor#3ea8e814b16b7670c1688ba093fdb46ef41eaaaa",
+    "version": "0.2.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./store": {
+        "default": "./lib/store.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-janitor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9c2a4e75ed55d51a96f0af5468966ee4ca04bc5971180d7075b2c491587cba22/guokecloud/dsh-session-janitor",
     "description": "DSH session cleaner: a sidebar page listing session records and archive caches, with a restorable recycle bin and an in-use guard."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 用的会话记录清理工具：列表 → 勾选 → 移入回收站 → 可恢复 → 确认后彻底清空。 删除永不直接抹掉，先移进 /.dsh/session-trash//，所以手滑也能救回来。"
   },
   "schemaVersion": 1,
   "scripts": {

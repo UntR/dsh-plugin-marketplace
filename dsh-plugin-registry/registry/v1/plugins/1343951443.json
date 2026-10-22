@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
     "enrichmentStatus": "ok",
-    "headSha": "48e500439ca6fdf53e21c3c25b935ee2e37c0fc0"
+    "headSha": "abe166fa08ff6d3538a21795b88c72f7ac9ea572"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh-agent-team gives DeepSeek Harness agents that don't reset: durable Members with their own memory, notes, and skills across sessions, rollovers, and restarts. You set the direction; agents coordinate through Channels and Tasks.",
     "fork": false,
     "forks": 17,
-    "headSha": "48e500439ca6fdf53e21c3c25b935ee2e37c0fc0",
+    "headSha": "abe166fa08ff6d3538a21795b88c72f7ac9ea572",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUBsSUw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/8e5bf1c80ffffce324c4ea8af7e82b6eef8bb35306385ea00d61882d0b328a6f/Contexera/dsh-agent-team",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/9964e458439e6cede3c23e8bf36e99a28df7407b96a205d399dbfdaa0911ec42/Contexera/dsh-agent-team",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/339391774?v=4",
       "login": "Contexera"
     },
-    "pushedAt": "2026-10-19T05:04:14Z",
+    "pushedAt": "2026-10-22T08:55:47Z",
     "slug": "Contexera/dsh-agent-team",
     "stars": 70,
     "topics": [
@@ -44,7 +44,7 @@
       "multi-agent",
       "multi-agent-systems"
     ],
-    "updatedAt": "2026-10-21T00:36:49Z",
+    "updatedAt": "2026-10-22T05:01:14Z",
     "url": "https://github.com/Contexera/dsh-agent-team"
   },
   "id": "gh:1343951443",
@@ -72,17 +72,21 @@
         "default": "./packages/client-agent-team/lib/client.js",
         "types": "./packages/client-agent-team/lib/types/client/index.d.ts"
       },
-      "./compaction-engine": {
-        "default": "./packages/agent-team/lib/compaction-engine.js",
-        "types": "./packages/agent-team/lib/types/compaction-engine.d.ts"
-      },
       "./host": {
         "default": "./packages/agent-team/lib/index.js",
         "types": "./packages/agent-team/lib/types/index.d.ts"
       },
+      "./human-settings": {
+        "default": "./packages/agent-team/lib/human-settings.js",
+        "types": "./packages/agent-team/lib/types/human-settings.d.ts"
+      },
       "./invariant": {
         "default": "./packages/agent-team/lib/invariant.js",
         "types": "./packages/agent-team/lib/types/invariant.d.ts"
+      },
+      "./member-compaction-engine": {
+        "default": "./packages/agent-team/lib/member-compaction-engine.js",
+        "types": "./packages/agent-team/lib/types/member-compaction-engine.d.ts"
       },
       "./member-context": {
         "default": "./packages/agent-team/lib/member-context.js",
@@ -137,12 +141,12 @@
     "version": "0.2.4"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/8e5bf1c80ffffce324c4ea8af7e82b6eef8bb35306385ea00d61882d0b328a6f/Contexera/dsh-agent-team",
+    "coverUrl": "https://opengraph.githubassets.com/9964e458439e6cede3c23e8bf36e99a28df7407b96a205d399dbfdaa0911ec42/Contexera/dsh-agent-team",
     "description": "dsh-agent-team gives DeepSeek Harness agents that don't reset: durable Members with their own memory, notes, and skills across sessions, rollovers, and restarts. You set the direction; agents coordinate through Channels and Tasks."
   },
   "readme": {
     "available": true,
-    "excerpt": "dsh-agent-team gives DeepSeek Harness agents that don't reset. Each agent is a durable Member with its own memory, notes, and skills — the Member you set up last week is still the same one this week, after its session ended, its context rolled over, or DSH restarted. You set the "
+    "excerpt": "dsh-agent-team gives DeepSeek Harness agents that don't reset. Each agent is a durable Member with its own memory, notes, and skills — the Member you set up last week is still the same one this week, after its session ended, its context was compacted or replaced, or DSH restarted"
   },
   "schemaVersion": 1,
   "scripts": {

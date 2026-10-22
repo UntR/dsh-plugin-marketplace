@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "4286e01e6e1f621fe09c03f79b2c4d6c36860037"
   },
   "github": {
@@ -49,27 +49,38 @@
   },
   "id": "gh:1426165961",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-system-fingerprint",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Mizumic/dsh-system-fingerprint#4286e01e6e1f621fe09c03f79b2c4d6c36860037",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-system-fingerprint",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/462c550c60661a247835c36d42db6bdc4285d9b7736d769479b7f352ba3eae81/Mizumic/dsh-system-fingerprint",
     "description": "会话头部的模型检查点徽标：探测 system_fingerprint / 网关请求级溯源 / 响应元数据存证（原始字节默认不落盘）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "本仓库是可分发型独立仓库：不写本机绝对路径、无 private、 供应商相关映射全部可配置、隐私默认安全。分发计划与完成状态见 ROADMAP.md； 对外契约（HTTP / 文件）见 docs/INTERFACE.md。"
   },
   "schemaVersion": 1,
   "scripts": {

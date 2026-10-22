@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "cab395d1383f5756dcaa85853c8b6f88b0a9417d"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOVP1EVA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/806f3d9cd0e704142c43e52a3625ef9edf49b99d0a7c34355864699fa9760b51/xiciyang/inference-tuning",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a0d4e7d60cf9a6a41302ac6690315943b28ac191a6b42b28b8caf99bce2b5c42/xiciyang/inference-tuning",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/95329325?v=4",
       "login": "xiciyang"
     },
     "pushedAt": "2026-10-20T13:38:58Z",
     "slug": "xiciyang/inference-tuning",
-    "stars": 1,
+    "stars": 3,
     "topics": [
       "deepseek-harness",
       "dsh",
@@ -41,32 +41,43 @@
       "performance",
       "tuning"
     ],
-    "updatedAt": "2026-10-21T04:26:34Z",
+    "updatedAt": "2026-10-22T06:08:19Z",
     "url": "https://github.com/xiciyang/inference-tuning"
   },
   "id": "gh:1425884244",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@xiciyang/inference-tuning",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xiciyang/inference-tuning#cab395d1383f5756dcaa85853c8b6f88b0a9417d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.mjs",
+      "./api": "./src/api.mjs",
+      "./mcp": "./mcp/server.mjs"
+    },
+    "main": "src/index.mjs",
+    "name": "@xiciyang/inference-tuning",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/806f3d9cd0e704142c43e52a3625ef9edf49b99d0a7c34355864699fa9760b51/xiciyang/inference-tuning",
+    "coverUrl": "https://opengraph.githubassets.com/a0d4e7d60cf9a6a41302ac6690315943b28ac191a6b42b28b8caf99bce2b5c42/xiciyang/inference-tuning",
     "description": "Find the root-cause wall, apply the top intervention, prove it with a two-sided gate — or roll back. Engine- and hardware-neutral: no implicit defaults, spec-sheet values are never load-bearing."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给模型 + 性能目标 + 精度容忍，找到根因墙、匹配 TOP1 干预、双闭环验证 —— 通过则输出可复用的优化配置，失败则自动回退。"
   },
   "schemaVersion": 1,
   "scripts": {

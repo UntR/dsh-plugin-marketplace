@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "2dbc9e14544712cccc192bf37208015f178ec134"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1425904754",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dshx-project",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:callaumyan-design/dshx-project#2dbc9e14544712cccc192bf37208015f178ec134",
+    "version": "2.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dshx-project",
+    "status": "valid",
+    "type": "module",
+    "version": "2.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b91c88ca87a9a4afc4a8d4dd9e5fa5cf675193593f629e6dc59605e87d020431/callaumyan-design/dshx-project",
     "description": "Show and open the session's real project directory from the session header, plus a set_project tool so the model can record it. Session cwd is immutable, so the mapping lives in this plugin's own durable store instead."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "不加任何按钮：直接接管标题栏自带的「Open In」图标。点它（资源管理器、VS Code 等任意应用），打开的是这个对话真正在做的项目，而不是工作区根目录。"
   },
   "schemaVersion": 1,
   "scripts": {

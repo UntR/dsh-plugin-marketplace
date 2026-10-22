@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "4072a3a55b04981c5a810f95659a28e00f0c76de"
   },
   "github": {
@@ -38,27 +38,38 @@
   },
   "id": "gh:1425831151",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-easyeda-agent",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:new-233/easyeda-agent#4072a3a55b04981c5a810f95659a28e00f0c76de",
+    "version": "0.4.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/main.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/main.js",
+    "name": "dsh-plugin-easyeda-agent",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/88dafb98045b210471e90c5dd5b41cbf3b0424e204c2da1199edaa4bd57d4c34/new-233/easyeda-agent",
     "description": "Nothing"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "嘉立创 EDA 专业版（EasyEDA Pro）自动化插件：给 DeepSeek Harness 的 Agent 装上「画板的手 + 工艺/绘制规则的脑」。 参考 easyeda-agent 的架构，但实现为一个 DSH 原生 Host 插件（直接注册工具与技能，无需 MCP 中转），并新增一等公民的知识层（工艺参数/绘制原则）。"
   },
   "schemaVersion": 1,
   "scripts": {

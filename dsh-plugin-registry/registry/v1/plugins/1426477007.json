@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
-    "headSha": "0fe322cbc486154ff5965e24e1bbad5dddbe776e"
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
+    "headSha": "0a3eb0d60bf9e5f923709ff76f2826e7d61db2c5"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Read-only DeepSeek Harness (DSH) plugin that surfaces the official Auto Review verdicts — review records and host-outcome evidence — in a sidebar panel. / DSH 自动审阅功能日志抓取",
     "fork": false,
     "forks": 0,
-    "headSha": "0fe322cbc486154ff5965e24e1bbad5dddbe776e",
+    "headSha": "0a3eb0d60bf9e5f923709ff76f2826e7d61db2c5",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVQZPzw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/63604133038c185a45ed5d9612838bf39d8d93a73a7bc529f0c5582837b9e058/cherrchen/dsh-auto-review-panel",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/4010920e70274bca7a56514d7e0c83fb17b31288ed02c79d4e741bd3d8dd79a7/cherrchen/dsh-auto-review-panel",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/113243001?v=4",
       "login": "cherrchen"
     },
-    "pushedAt": "2026-10-20T12:11:46Z",
+    "pushedAt": "2026-10-21T09:27:53Z",
     "slug": "cherrchen/dsh-auto-review-panel",
     "stars": 0,
     "topics": [
@@ -47,38 +47,63 @@
       "plugin",
       "typescript"
     ],
-    "updatedAt": "2026-10-20T12:32:17Z",
+    "updatedAt": "2026-10-21T09:27:51Z",
     "url": "https://github.com/cherrchen/dsh-auto-review-panel"
   },
   "id": "gh:1426477007",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@dsh-electron/dsh-auto-review-panel",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:cherrchen/dsh-auto-review-panel#0a3eb0d60bf9e5f923709ff76f2826e7d61db2c5",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./compat": {
+        "default": "./lib/compat.js",
+        "types": "./lib/types/compat.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./panel": {
+        "default": "./lib/panel.js",
+        "types": "./lib/types/panel.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "@dsh-electron/dsh-auto-review-panel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/63604133038c185a45ed5d9612838bf39d8d93a73a7bc529f0c5582837b9e058/cherrchen/dsh-auto-review-panel",
+    "coverUrl": "https://opengraph.githubassets.com/4010920e70274bca7a56514d7e0c83fb17b31288ed02c79d4e741bd3d8dd79a7/cherrchen/dsh-auto-review-panel",
     "description": "Read-only DeepSeek Harness (DSH) plugin that surfaces the official Auto Review verdicts — review records and host-outcome evidence — in a sidebar panel. / DSH 自动审阅功能日志抓取"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）的 Auto 权限预设由 Auto Review 审查器在后台裁决每一次工具调用——允许、放行还是拒绝——但这些裁决对使用者几乎不可见：调用被放行时悄无声息，被拒绝时只有一条结果消息。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

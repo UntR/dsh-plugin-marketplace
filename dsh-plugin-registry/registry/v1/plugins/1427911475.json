@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "be73782fb3af80fd3b0533b5a87405113e33d72a"
   },
   "github": {
@@ -47,27 +47,43 @@
   },
   "id": "gh:1427911475",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-lan-link",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-lan-link@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./gateway": {
+        "default": "./lib/gateway.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-lan-link",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3a57745f12e90e7337a2300d20c59b19b93fd4ce7ce884c4d9ba126bc5f0aef0/sqzw-x/dsh-lan-link",
     "description": "LAN access for DeepSeek Harness: authenticated launch links on disk, plus an optional in-process reverse gateway that lets a phone in with no token."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把当前这个 harness 进程的局域网访问交给别的设备：一条是落盘的、带 launch token 的启动链接，另一条（可选）是本进程自己在局域网端口上对外服务的网关。"
   },
   "schemaVersion": 1,
   "scripts": {

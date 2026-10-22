@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "26c00fa5aa4c1faa53aead87e15e0d67a6d90d37"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1426514107",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-qq-relay",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:FablerTan/dsh-qq-relay#26c00fa5aa4c1faa53aead87e15e0d67a6d90d37",
+    "version": "0.25.6"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-qq-relay",
+    "status": "valid",
+    "type": "module",
+    "version": "0.25.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/db006b3b83fe4813d8cba46f41b43108af73926fc6f8a838983553a44b94cbbf/FablerTan/dsh-qq-relay",
     "description": "DeepSeek Harness ↔ QQ 机器人桥插件（OneBot 11 / NapCat）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DeepSeek Harness（DSH） 接入 QQ 机器人的自研插件（bundle 包，host + client 双半身）。 当前 v0.25.6：P1「@ 直通」已真机验收（2026-10-19）；P1.5 基础配置页已落地（v0.17.0 起 搬到插件面板里 dsh-qq-relay 组合包自己的页面，拆成「连接 / 环境 / 项目 / 行为 / 画图·视频 / 预设 / 记录」二级页面）； P2.1/P2.2 消息闸门已落地（去抖 / 最小间隔 / 慢路 / 决策日志 / 发送队列， P2.3 jev 分类器已接（OpenRouter t"
   },
   "schemaVersion": 1,
   "scripts": {

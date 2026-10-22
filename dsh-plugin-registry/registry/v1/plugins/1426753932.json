@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "f52700e5171b0c86296ee7aa490c1a4f147961f1"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1426753932",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-agent-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lyc0110/dsh-agent-guard#f52700e5171b0c86296ee7aa490c1a4f147961f1",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-agent-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5de0b383a792c95427c6932a9ae0ca7a8ff5c46bd95c31f53d84b01bdfdaa85b/lyc0110/dsh-agent-guard",
     "description": "DSH pre-execute gate: ask before a tool call leaks a credential, stops a service, or rewrites host network/registry state."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的 tools/pre-execute 门禁：在工具真正执行前，把可机械判定的危险调用拦下来，交给用户决定。"
   },
   "schemaVersion": 1,
   "scripts": {

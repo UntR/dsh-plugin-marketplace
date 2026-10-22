@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "9904e7a170e1793fc175469421822234fc095803"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVQrJzg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/75bd37e348e170cbc53388d32c37985f35c6108ce2e87d5d2aa408774b364a07/MUMU-DADA/dsh-cot-translate",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a1b92be5851f2b977c98f0546f0684f59ad4aa70ebdb6877ac2aca5f03101d99/MUMU-DADA/dsh-cot-translate",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/142659202?v=4",
       "login": "MUMU-DADA"
     },
     "pushedAt": "2026-10-20T20:28:52Z",
     "slug": "MUMU-DADA/dsh-cot-translate",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "cot",
       "deepseek-harness",
@@ -41,38 +41,56 @@
       "reasoning",
       "translation"
     ],
-    "updatedAt": "2026-10-20T20:28:49Z",
+    "updatedAt": "2026-10-21T11:02:54Z",
     "url": "https://github.com/MUMU-DADA/dsh-cot-translate"
   },
   "id": "gh:1426770382",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-cot-translate",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:MUMU-DADA/dsh-cot-translate#9904e7a170e1793fc175469421822234fc095803",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-cot-translate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/75bd37e348e170cbc53388d32c37985f35c6108ce2e87d5d2aa408774b364a07/MUMU-DADA/dsh-cot-translate",
+    "coverUrl": "https://opengraph.githubassets.com/a1b92be5851f2b977c98f0546f0684f59ad4aa70ebdb6877ac2aca5f03101d99/MUMU-DADA/dsh-cot-translate",
     "description": "DSH 思维链/推理翻译插件：把 reasoning 实时翻译成中文，本地模型优先，原文与上下文不变 | Display-layer reasoning translation for DeepSeek Harness, local-first, 9 UI languages"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness（DSH） 界面中，把模型的思维链（reasoning / chain-of-thought）实时翻译成中文或多国语言的显示层插件。默认优先使用本地翻译模型（基于 llama.cpp 的 llama-server，可选 Ollama），全部不可用时自动降级到免费在线翻译。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

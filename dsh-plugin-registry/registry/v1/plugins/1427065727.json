@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "2d1acc65f3e4912507d66eb0b7f54c86290ecb10"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1427065727",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-fk-rollback",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:FuriousKinght/dsh-fk-rollback#2d1acc65f3e4912507d66eb0b7f54c86290ecb10",
+    "version": "1.4.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./entry.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "entry.js",
+    "name": "dsh-fk-rollback",
+    "status": "valid",
+    "type": "module",
+    "version": "1.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f3d0fbc039baf712e2f9f40ba03ed4076ade57df8b273db05217d7ab910c6953/FuriousKinght/dsh-fk-rollback",
     "description": "DSH 配置快照与回滚插件。自动留痕、出问题能查、坏了能退回 —— 保证 DSH 本体能启动、能输入输出、功能正常。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 配置的快照与回滚。自动留痕、出问题能查、坏了能退回。"
   },
   "schemaVersion": 1,
   "scripts": {

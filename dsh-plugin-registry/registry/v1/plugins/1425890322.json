@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./plugins/autolearn/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "0507eb1bf751615674b43c1cbe2346ca8f6b19d2"
   },
   "github": {
@@ -49,27 +49,38 @@
   },
   "id": "gh:1425890322",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-autolearn",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ILRI7512/dsh-autolearn#0507eb1bf751615674b43c1cbe2346ca8f6b19d2",
+    "version": "2.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/index.js",
+      "./dsh": "./dist/adapters/dsh/plugin.js",
+      "./mcp": "./dist/adapters/mcp/server.js"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-autolearn",
+    "status": "valid",
+    "type": "module",
+    "version": "2.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4f61900f894640c4009f0a3e3dd7d531c2cefa9529cd9b4babf97ed4c2c54968/ILRI7512/dsh-autolearn",
-    "description": "DSH autonomous-learning plugin: bounded learning rounds, traceable knowledge base, evidence-based verification, DSH approval dialog and settings card."
+    "description": "DSH autonomous-learning plugin (v2): TypeScript engine, 11 native DSH tools, evidence-based verification, optional MCP adapter."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把「学习目标 → 有界学习任务 → 可追溯知识库 → 证据核验 → 冲突检测 → 评估报告」 做成 DeepSeek Harness 的原生工具插件：一个 TypeScript 引擎，两个可选入口。"
   },
   "schemaVersion": 1,
   "scripts": {

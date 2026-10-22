@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "9bec86ac1ad0d0d5178b9aa0a94695cda2513684"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1426949055",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-chat-unread",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:nmglyx-hub/dsh-chat-unread#9bec86ac1ad0d0d5178b9aa0a94695cda2513684",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-chat-unread",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bdd74e47ddfc38f8963ee8d83d8e6158700399d72d6ca1472ad17fe121a4b16d/nmglyx-hub/dsh-chat-unread",
     "description": "DeepSeek Harness（DSH）桌面端会话列表「标记未读」插件：行首蓝点 + 会话菜单开关，宿主账本跨重启，打开会话自动清除。无外部依赖。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）桌面端左侧会话列表补一个手动标记未读：标记后行首亮一个蓝点，会话「…」菜单里可随时切换 「标记为未读 / 标记为已读」，打开该会话时自动清除。标记保存在宿主账本（$DSHHOME/chat-unread.json）， 应用重启后仍然在。"
   },
   "schemaVersion": 1,
   "scripts": {

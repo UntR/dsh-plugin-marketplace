@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "fae3d5087096237951819971d7512e5362dedb6e"
   },
   "github": {
@@ -46,27 +46,43 @@
   },
   "id": "gh:1427001051",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-lens",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xulianglong-akk/dsh-lens#fae3d5087096237951819971d7512e5362dedb6e",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.5",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-lens",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/375b5771e6092bdb5199069b19fb3fd70383d6437c050639e4f1d027e66051e4/xulianglong-akk/dsh-lens",
     "description": "Codex-style element annotation for DeepSeek Harness: Shift box selection, live style panel with from→to changes, Ctrl+click instant send, cross-page review sent as one message."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Codex 风格的界面批注插件，给 DeepSeek Harness 用。 打开当前工作区里正在跑的本地服务或静态页面，点元素、按住 Shift 框选区域、直接在页面上改样式实时预览，把修改意见一次性发进当前对话。"
   },
   "schemaVersion": 1,
   "scripts": {

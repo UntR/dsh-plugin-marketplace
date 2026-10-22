@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
-    "headSha": "a9ccd3a6438b4922bd970cc15b5df2bd123124bc"
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
+    "headSha": "c7f7c384eeb5b0c1bc6d744f8e2d5b95631ca7b6"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH plugin + probe suite for Minecraft 26.3 mod development: start a real server and client, drive them over HTTP, assert on world state and logs (Fabric / Forge / NeoForge)",
     "fork": false,
     "forks": 0,
-    "headSha": "a9ccd3a6438b4922bd970cc15b5df2bd123124bc",
+    "headSha": "c7f7c384eeb5b0c1bc6d744f8e2d5b95631ca7b6",
     "homepageUrl": null,
     "language": "Java",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOVQAdmw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/52874ab7e5b05a9267575ac89e0efe04499e696cf7e818fc26be5024342464de/7starsseeker/MCModsDevBridge",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c7df2f847c60107bd30083a3e459a7e7b81a72212a4150e56cfdff619ea9fcd7/7starsseeker/MCModsDevBridge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/18816083?u=2426792d2f8bf02878f89b570367a3736fdbb407&v=4",
       "login": "7starsseeker"
     },
-    "pushedAt": "2026-10-19T20:11:11Z",
+    "pushedAt": "2026-10-21T11:59:18Z",
     "slug": "7starsseeker/MCModsDevBridge",
     "stars": 0,
     "topics": [
@@ -43,32 +43,43 @@
       "modding",
       "neoforge"
     ],
-    "updatedAt": "2026-10-19T20:11:11Z",
+    "updatedAt": "2026-10-21T11:59:21Z",
     "url": "https://github.com/7starsseeker/MCModsDevBridge"
   },
   "id": "gh:1426070939",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "mcmodsdevbridge",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "mcmodsdevbridge@1.0.3",
+    "version": "1.0.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./tools/dsh-plugin/mcdev-devrun/dsh.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "tools/dsh-plugin/mcdev-devrun/dsh.mjs",
+    "name": "mcmodsdevbridge",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/52874ab7e5b05a9267575ac89e0efe04499e696cf7e818fc26be5024342464de/7starsseeker/MCModsDevBridge",
+    "coverUrl": "https://opengraph.githubassets.com/c7df2f847c60107bd30083a3e459a7e7b81a72212a4150e56cfdff619ea9fcd7/7starsseeker/MCModsDevBridge",
     "description": "DSH plugin + probe suite for Minecraft 26.3 mod development: start a real server and client, drive them over HTTP, assert on world state and logs (Fabric / Forge / NeoForge)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Turn \"the AI finished writing a mod, and now a human has to click through the game\" into one executable pipeline: start a real test server → start a real client → connect + op → run a scenario JSON → collect evidence → tear down, across Fabric / Forge / NeoForge."
   },
   "schemaVersion": 1,
   "scripts": {

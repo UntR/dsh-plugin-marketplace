@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
     "enrichmentStatus": "ok",
-    "headSha": "59a3485fa755f64cde80c9c9a0a2fa6ef0c870fb"
+    "headSha": "d6821c7c75e6825301fa5b5cb66b3d9a5e8b1138"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-08-16T15:30:56Z",
     "databaseId": 1336078752,
     "defaultBranch": "main",
-    "description": "DeepSeek Harness 网页端的 AI 与科技快讯看板：内置 RSS/JSON 源驱动的可拖拽浮窗，支持双语翻译、关键词过滤和设置页。",
+    "description": "DeepSeek Harness 0.2.1+ 的 AI/科技快讯看板：侧边栏独立页面、动态分类与来源矩阵、双语翻译、未读计数。",
     "fork": false,
     "forks": 0,
-    "headSha": "59a3485fa755f64cde80c9c9a0a2fa6ef0c870fb",
+    "headSha": "d6821c7c75e6825301fa5b5cb66b3d9a5e8b1138",
     "homepageUrl": "https://github.com/c-ling/dsh-plugin-newsboard#readme",
     "language": "JavaScript",
     "license": {
@@ -25,48 +25,48 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT6LxoA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d641b97c897d7fb9a99c05e3658a5361ea02a6e56b80aaee6477c77c1645ed80/c-ling/dsh-plugin-newsboard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e2fb15059cc2cef7662a3dc89dfe96567684f4e0cc936ec3cc2450f25ca66314/c-ling/dsh-plugin-newsboard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/42890738?v=4",
       "login": "c-ling"
     },
-    "pushedAt": "2026-08-21T17:06:39Z",
+    "pushedAt": "2026-10-22T07:07:33Z",
     "slug": "c-ling/dsh-plugin-newsboard",
     "stars": 3,
     "topics": [
-      "agent",
-      "ai",
       "ai-news",
+      "bilingual",
       "cordis",
-      "dashboard",
       "deepseek",
       "deepseek-ai",
       "deepseek-harness",
+      "desktop",
       "dsh",
       "dsh-plugin",
       "feed",
       "javascript",
       "news",
-      "open-source",
       "plugin",
+      "react",
       "rss",
       "sidebar",
-      "ticker",
+      "tech-news",
+      "translation",
       "ui-plugin",
       "web-ui"
     ],
-    "updatedAt": "2026-09-12T14:07:31Z",
+    "updatedAt": "2026-10-22T07:07:49Z",
     "url": "https://github.com/c-ling/dsh-plugin-newsboard"
   },
   "id": "gh:1336078752",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-plugin-newsboard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:c-ling/dsh-plugin-newsboard#d6821c7c75e6825301fa5b5cb66b3d9a5e8b1138",
+    "version": "2.0.0"
   },
   "npm": {
     "latestVersion": null,
@@ -81,21 +81,33 @@
       "./client": {
         "default": "./lib/client.js"
       },
-      "./package.json": "./package.json"
+      "./config": {
+        "default": "./lib/config.js"
+      },
+      "./connection-routes": {
+        "default": "./lib/connection-routes.js"
+      },
+      "./cordis.patch.yml": {
+        "default": "./cordis.patch.yml"
+      },
+      "./package.json": "./package.json",
+      "./store": {
+        "default": "./lib/store.js"
+      }
     },
     "main": "lib/index.js",
     "name": "dsh-plugin-newsboard",
     "status": "valid",
     "type": "module",
-    "version": "1.2.0"
+    "version": "2.0.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d641b97c897d7fb9a99c05e3658a5361ea02a6e56b80aaee6477c77c1645ed80/c-ling/dsh-plugin-newsboard",
-    "description": "DeepSeek Harness 网页端的 AI 与科技快讯看板：内置 RSS/JSON 源驱动的可拖拽浮窗，支持双语翻译、关键词过滤和设置页。"
+    "coverUrl": "https://opengraph.githubassets.com/e2fb15059cc2cef7662a3dc89dfe96567684f4e0cc936ec3cc2450f25ca66314/c-ling/dsh-plugin-newsboard",
+    "description": "DeepSeek Harness 0.2.1+ 的 AI/科技快讯看板：侧边栏独立页面、动态分类与来源矩阵、双语翻译、未读计数。"
   },
   "readme": {
     "available": true,
-    "excerpt": "DeepSeek Harness 的快讯看板：页面右上角一个轻量浮窗（拖拽标题栏即可移动，位置自动保存），由宿主侧抓取内置 RSS/JSON 来源并缓存，浏览器只负责轮询展示。默认不弹通知、不发声、不打断任务。"
+    "excerpt": "DeepSeek Harness 的 AI 与技术快讯看板。0.2.1+ 版本改为官方同款的左侧边栏入口 + 独立页面：不再有右上角浮窗，也不再占用「设置」页；所有内容在 快讯看板 页面内完成浏览、搜索、来源切换、翻译与设置。"
   },
   "schemaVersion": 1,
   "scripts": {

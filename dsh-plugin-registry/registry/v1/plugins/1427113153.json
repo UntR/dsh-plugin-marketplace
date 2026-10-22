@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "fd5a8987b5e78574b704921889dad2cb02eb423c"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./client": "./client.js"
+    },
+    "main": null,
+    "name": "dsh-tavern-rewrite",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d89d02b920cced3322b81b87a146bde282d94fe7b03119e8e6fcae16c0557b67/bigmalove/dsh-tavern-rewrite",
     "description": "revnovel润色：DSH Tavern 正文润色插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "revnovel润色：每轮正文写完后，把正文发给 revnovel 改写台 的 OpenAI 兼容 API 润色一次，再用 editTurn 把显示和存档里的正文替换成润色后的版本。"
   },
   "schemaVersion": 1,
   "scripts": {

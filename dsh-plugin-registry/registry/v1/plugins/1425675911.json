@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "a7ee96633c2ec86fc4a905e30a138374361a32f9"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1425675911",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-video-kit",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:shisuiqingqian/dsh-video-kit#a7ee96633c2ec86fc4a905e30a138374361a32f9",
+    "version": "1.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-video-kit",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c76105291ed54502f9373885650e688e18f007325cf49b65a903496116e9a33b/shisuiqingqian/dsh-video-kit",
     "description": "DeepSeek Harness 插件：读取本地视频或网页链接，返回带时间轴的逐字稿与关键帧图片，供模型逐帧查看。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 装上\"看视频\"的能力：一次工具调用，把本地视频或网页链接变成带时间轴的逐字稿 + 一组关键帧图片，模型可以直接逐帧看。"
   },
   "schemaVersion": 1,
   "scripts": {

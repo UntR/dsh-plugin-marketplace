@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "311064963e5103ec9ed3580cbce05044e4a6fba1"
   },
   "github": {
@@ -47,27 +47,40 @@
   },
   "id": "gh:1425740189",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-stata",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:SoldierNo4/dsh-stata#311064963e5103ec9ed3580cbce05044e4a6fba1",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./session": "./lib/session.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-stata",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/09c982ffe750f11c872edf56e8e3ca2598f1810681fa53db63f9986778a88f37/SoldierNo4/dsh-stata",
     "description": "在 DSH（DeepSeek Harness）中控制 Stata：常驻 GUI 会话、执行命令与 .do 文件、回读控制台输出（无需 COM / 管理员 / 批处理模式）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH（DeepSeek Harness） 里直接控制 Stata：一个常驻的 Stata 会话，执行命令、运行 .do 文件、读回真实控制台输出，数据与估计结果在多次调用之间保留。"
   },
   "schemaVersion": 1,
   "scripts": {

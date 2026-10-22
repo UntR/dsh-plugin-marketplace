@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "c7da57c5d95817b8f7c8b77e27b5a51d562eb9f7"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1426611598",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-account-switcher",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hyqweasd5-png/dsh-account-switcher#c7da57c5d95817b8f7c8b77e27b5a51d562eb9f7",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@local/dsh-account-switcher",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b04cbb038589c5131cf71e0102543f264c70bed6ab3b3baed3b90726ea808e03/hyqweasd5-png/dsh-account-switcher",
     "description": "DeepSeek Harness 多账号切换插件：本地 grant 库、热切换、余额与自动轮换"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 里管理多个 DeepSeek 官方账号，并在不重启 GUI、不撤销 token 的前提下切换。可选地按鉴权失效、额度耗尽、限流或低余额自动轮换。"
   },
   "schemaVersion": 1,
   "scripts": {

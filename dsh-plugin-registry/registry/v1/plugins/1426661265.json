@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "a2b857bcabe26df593c05b2de9506b8519375413"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,23 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js"
+    },
+    "main": "index.js",
+    "name": "dsh-dsml-reasoning-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1-rc.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8b520740b001c903319faa91e14c8fc81f0b78a83a28d8babdb62bbe2ab21177/Nicolas-One/dsh-dsml-reasoning-guard",
     "description": "从 reasoning 中恢复 DeepSeek DSML 工具调用，清理误泄漏到可见输出中的 <think> 标签"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "用于 dsh 的 DeepSeek 流式输出修复插件：恢复泄漏到 reasoning 中的完整 DSML 工具调用，并隐藏误出现在可见文本中的 ... 思考段。当前插件版本为 0.2.1-rc.3，支持 dsh 0.2.1-rc.2。"
   },
   "schemaVersion": 1,
   "scripts": {

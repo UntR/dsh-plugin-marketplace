@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "ea3f21606be03c333b0a9b4fc8616464a4505aff"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1427315730",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-skill-on-demand",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:qqmqq/dsh-skill-on-demand#ea3f21606be03c333b0a9b4fc8616464a4505aff",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-skill-on-demand",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/12775c224c54112defe0a7704aefd33ead5ebe366ff1095d81beb41db147c9a1/qqmqq/dsh-skill-on-demand",
     "description": "DSH plugin: keeps the session skill catalog out of every request — skills are listed on demand, the ones a task needs are recorded once, and only a picked skill is loaded by name."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness publishes the session skill catalog once per session, and every later request carries it again as part of the conversation. With dozens of installed skills that is a few thousand tokens of description text re-sent on every turn, most of it about skills the curren"
   },
   "schemaVersion": 1,
   "scripts": {

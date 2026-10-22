@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "aeb4b9f32573ff4e96eff9d378506c28aacfc8f7"
   },
   "github": {
@@ -45,33 +45,59 @@
   },
   "id": "gh:1426918497",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-knowledge",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:2994650874-coder/dsh-knowledge#aeb4b9f32573ff4e96eff9d378506c28aacfc8f7",
+    "version": "0.5.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/ui/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./knowledge": {
+        "default": "./lib/knowledge/index.js",
+        "types": "./lib/types/knowledge/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./tool-knowledge": {
+        "default": "./lib/tool-knowledge/index.js",
+        "types": "./lib/types/tool-knowledge/index.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-knowledge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a1d9ad3cd52e7192c78dff7f76b06090329f861c02c9639fc979ffbc85bc985e/2994650874-coder/dsh-knowledge",
     "description": "DSH 知识库插件的个人维护分支：按工作区控制知识库开放范围，面板可维护工作区列表。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的知识库插件"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

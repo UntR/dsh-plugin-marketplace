@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "08964c89b134bb489437ebb0bc2eed55eb389eeb"
   },
   "github": {
@@ -45,27 +45,53 @@
   },
   "id": "gh:1426586952",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-search-ledger",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-search-ledger@0.5.1",
+    "version": "0.5.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
+      "./typert": "./lib/typert.host.js",
+      "./types": {
+        "default": "./lib/contracts.js",
+        "types": "./lib/types/contracts.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-search-ledger",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e11761bebe61f1f7b9e1c0c304a0b5b59b14148e926d11027294aeb40671c7c5/gordan-code/dsh-search-ledger",
     "description": "Route DSH web search and fetch requests across providers, manage API keys and failover, and track usage and estimated costs in a local ledger."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "简体中文 · English"
   },
   "schemaVersion": 1,
   "scripts": {

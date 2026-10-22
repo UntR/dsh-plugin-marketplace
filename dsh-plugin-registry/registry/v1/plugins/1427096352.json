@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "fd50b78e4fbeed25c1696aa1bd8dd7285143b85d"
   },
   "github": {
@@ -41,27 +41,41 @@
   },
   "id": "gh:1427096352",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-file-editor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yangsong608/dsh-file-editor#fd50b78e4fbeed25c1696aa1bd8dd7285143b85d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-file-editor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0aa1a148ee53056ace292aac3b40e3516bc5bcfde7135f5de7acc2f862756d06/yangsong608/dsh-file-editor",
     "description": "DSH 桌面版文件编辑器插件：打开、编辑、查看文件（独立实现，不依赖 OneEdit）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 桌面版里提供「打开、编辑、查看文件」能力的插件。功能口径仿照 OneEdit，但与 OneEdit 应用及其工程没有任何关系，运行时不依赖、不调用 OneEdit。"
   },
   "schemaVersion": 1,
   "scripts": {

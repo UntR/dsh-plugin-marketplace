@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "5bebffc6f79414c113f31b77c88c28d696c3961b"
   },
   "github": {
@@ -49,27 +49,40 @@
   },
   "id": "gh:1425658524",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-agent-teams-dashboard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dadgrand/dsh-agent-teams-dashboard#5bebffc6f79414c113f31b77c88c28d696c3961b",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-agent-teams-dashboard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e27aae0d44ae31967abce07bbb7ac10bb0367183bf5cd8260b8ff17986987259/dadgrand/dsh-agent-teams-dashboard",
     "description": "AgentTeams dashboard for the DSH Web UI: teams, token spend (USD/RUB), work time and archive."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DSH Web plugin that adds a Teams section («Команды») to the sidebar and a dashboard for every AgentTeams chat: active runs and teams finished in the last three days, token spend with time-range controls, cost in USD and RUB, total and union work time, team cards with the orca r"
   },
   "schemaVersion": 1,
   "scripts": {

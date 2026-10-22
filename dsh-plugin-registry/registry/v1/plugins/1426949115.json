@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "5fb8ab45843f3654594680a699cafc91a82a4ab7"
   },
   "github": {
@@ -47,27 +47,42 @@
   },
   "id": "gh:1426949115",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@xiciyang/training-qat",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@xiciyang/training-qat@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.mjs"
+      },
+      "./package.json": "./package.json",
+      "./tools": {
+        "default": "./src/tools.mjs"
+      }
+    },
+    "main": "./src/index.mjs",
+    "name": "@xiciyang/training-qat",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f7e82176dd9ab828ec73b4f0391ef2237238d5a3a8a478a54f67a95cebc8bcbb/xiciyang/training-qat",
     "description": "@xiciyang/training-qat — DSH 训练插件：可独立安装，依赖 @xiciyang/* 共享库"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "量化感知训练（QAT）：在真实 GPU 上按可选 scheme 训练，产出一个可被量化流程直接消费的 checkpoint，并且拒绝把「看起来没掉点」当成验收通过。"
   },
   "schemaVersion": 1,
   "scripts": {

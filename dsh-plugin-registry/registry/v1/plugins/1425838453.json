@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "693515e94f9f762f74eaaca550109ece5e0e621f"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "BSD-3-Clause"
     },
     "nodeId": "R_kgDOVPyRdQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/326ab6421f53eb299f637a199632388d2f160815934bcb31cf159c8cd5453380/xiciyang/inference-diagnose",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d61bdc503a7e00bb2dccde7b37b5fce434bfca0905524d7c7b2a08f09328de6d/xiciyang/inference-diagnose",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/95329325?v=4",
       "login": "xiciyang"
     },
     "pushedAt": "2026-10-19T17:03:14Z",
     "slug": "xiciyang/inference-diagnose",
-    "stars": 1,
+    "stars": 3,
     "topics": [
       "deepseek-harness",
       "diagnosis",
@@ -41,7 +41,7 @@
       "inference",
       "root-cause"
     ],
-    "updatedAt": "2026-10-19T17:03:18Z",
+    "updatedAt": "2026-10-22T06:08:13Z",
     "url": "https://github.com/xiciyang/inference-diagnose"
   },
   "id": "gh:1425838453",
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@xiciyang/inference-diagnose",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/326ab6421f53eb299f637a199632388d2f160815934bcb31cf159c8cd5453380/xiciyang/inference-diagnose",
+    "coverUrl": "https://opengraph.githubassets.com/d61bdc503a7e00bb2dccde7b37b5fce434bfca0905524d7c7b2a08f09328de6d/xiciyang/inference-diagnose",
     "description": "Diagnose an inference service from evidence: generate a sanitized collection script, parse it offline, rank root causes with falsifiers, re-collect only what is missing. Hash-chained audit; five read-only DSH tools."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Diagnose an inference service from evidence, not guesswork — and say \"unconfirmed\" when the evidence is not there."
   },
   "schemaVersion": 1,
   "scripts": {

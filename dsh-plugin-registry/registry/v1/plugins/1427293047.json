@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
-    "headSha": "a1eef41070d494023281bc65341c67cbebf63351"
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
+    "headSha": "b658a1aea15f484611632e482441ced4c807a7c5"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH 插件用量与能力看板：本地采集会话事件、聚合为日表、面板/HTTP 查询，默认 local 零出站。",
     "fork": false,
     "forks": 0,
-    "headSha": "a1eef41070d494023281bc65341c67cbebf63351",
+    "headSha": "b658a1aea15f484611632e482441ced4c807a7c5",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVRLDdw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/ded56f2faffb5971c9e083bc052a6fd32bd6975fbb67d69781ab95898e7a3d43/wjf1/dsh-plugin-usage-analytics",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/16c1f9684ff4b9d6a02f89008fe1cb806a8361ad1c2789d355db4f07e81af769/wjf1/dsh-plugin-usage-analytics",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/50832152?v=4",
       "login": "wjf1"
     },
-    "pushedAt": "2026-10-20T16:39:47Z",
+    "pushedAt": "2026-10-21T11:08:44Z",
     "slug": "wjf1/dsh-plugin-usage-analytics",
     "stars": 0,
     "topics": [
@@ -39,32 +39,45 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-20T16:39:28Z",
+    "updatedAt": "2026-10-21T11:08:49Z",
     "url": "https://github.com/wjf1/dsh-plugin-usage-analytics"
   },
   "id": "gh:1427293047",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-usage-analytics",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wjf1/dsh-plugin-usage-analytics#b658a1aea15f484611632e482441ced4c807a7c5",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-usage-analytics",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/ded56f2faffb5971c9e083bc052a6fd32bd6975fbb67d69781ab95898e7a3d43/wjf1/dsh-plugin-usage-analytics",
+    "coverUrl": "https://opengraph.githubassets.com/16c1f9684ff4b9d6a02f89008fe1cb806a8361ad1c2789d355db4f07e81af769/wjf1/dsh-plugin-usage-analytics",
     "description": "DSH 插件用量与能力看板：本地采集会话事件、聚合为日表、面板/HTTP 查询，默认 local 零出站。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一款给 DeepSeek Harness（DSH）用的本地用量分析插件：订阅会话事件，把工具调用、回合、错误、耗时与能力使用情况聚合成日表，在侧栏面板里展示，并对外提供一套本地 HTTP 查询接口。默认 local 模式、零出站，不采集任何消息正文。"
   },
   "schemaVersion": 1,
   "scripts": {

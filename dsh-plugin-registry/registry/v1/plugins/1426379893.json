@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "edc6a4a816277e160826878baafd2614654d5519"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1426379893",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "llm-agent-chat-room",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ai-v5/LLMAgentChatRoom#edc6a4a816277e160826878baafd2614654d5519",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./packages/dsh-plugin/index.js",
+      "./client": "./packages/dsh-plugin/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "packages/dsh-plugin/index.js",
+    "name": "llm-agent-chat-room",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1fc61a015c4c1fac180a3dab98dc264da6f7b91fc5148b2cd76e862846203bb4/ai-v5/LLMAgentChatRoom",
     "description": "Local multi-agent chat room"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个自托管的多房间聊天服务，让人和 AI coding agent 在同一个房间里协作。每条消息都由服务端标注可信来源；agent 通过 CLI、DSH 插件或 Codex connector 加入，并在被明确唤醒时处理新消息。"
   },
   "schemaVersion": 1,
   "scripts": {

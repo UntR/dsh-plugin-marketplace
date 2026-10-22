@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "80df774cd2f77a42a90eaa8e5de10efca540c430"
   },
   "github": {
@@ -47,27 +47,44 @@
   },
   "id": "gh:1427060752",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-purge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wufeng0105/dsh-purge#80df774cd2f77a42a90eaa8e5de10efca540c430",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client.js",
+      "./package.json": "./package.json",
+      "./redteam": "./lib/redteam/index.js",
+      "./redteam/store": "./lib/redteam/store.js",
+      "./redteam/tools": "./lib/redteam/tools.js",
+      "./redteam/ui": "./lib/redteam/ui.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-purge",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bee6e9011ddea4e4b233417e6e3123047965394886fa0d68425ad31d5173da82/wufeng0105/dsh-purge",
     "description": "DeepSeek Harness 网络安全红队工具：补丁注入、多套规则集、演练台。Jailbreak and red-team evaluation for every model — swap prompts per model."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "v1.0.0 &nbsp;·&nbsp; 让所有模型都能破甲，不同模型可换不同提示词"
   },
   "schemaVersion": 1,
   "scripts": {

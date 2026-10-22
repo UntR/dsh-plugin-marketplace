@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "36273979d714c3bb263a8b05e95b40abc4618c26"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1425749157",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tray-restart",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:QIRSHENG/dsh-tray-restart#36273979d714c3bb263a8b05e95b40abc4618c26",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-tray-restart",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6a1d3887cee3314bada733af2fb1c2fcd0952c1e18cd22f6537f87ffe9e73b8a/QIRSHENG/dsh-tray-restart",
     "description": "Adds a Restart item to the DeepSeek Harness desktop system-tray menu and re-applies the patch after every app update."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 官方桌面端 的 Windows 系统托盘（任务栏通知区）右键菜单加两项： 「重启应用与 Host」 和 「刷新页面」（刷新前端），并在桌面端每次自动更新覆盖 app.asar 之后自动重打补丁。"
   },
   "schemaVersion": 1,
   "scripts": {

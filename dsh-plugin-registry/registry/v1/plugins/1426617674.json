@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "8a8a5c6079be74ea43ef548151a90f2480c5ce11"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1426617674",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-turn-notifier",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:king-shao/dsh-turn-notifier#8a8a5c6079be74ea43ef548151a90f2480c5ce11",
+    "version": "1.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-turn-notifier",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4d4a014c2a0c61b1b6307fd81c3820d2b183c35c23f758cc55e929ae9f3694b4/king-shao/dsh-turn-notifier",
     "description": "DeepSeek Harness 插件：每轮对话完成时弹出通知，标题为会话名、正文为回答摘要"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 宿主插件。每轮对话正常结束时发送一条系统通知，标题为会话名称，正文为本轮回答的摘要，用于在对话执行期间处理其他事务时获知完成状态。"
   },
   "schemaVersion": 1,
   "scripts": {

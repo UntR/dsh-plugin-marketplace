@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "d1a6388d3eedf7243f9a0494de34e835dbb4df42"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1427034022",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-quota-board",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Anixuil/dsh-quota-board#d1a6388d3eedf7243f9a0494de34e835dbb4df42",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-quota-board",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2f8578371d6b63d3533a25f96a3c49ae3d7fd7ce7e604600ec3064572b07d4f5/Anixuil/dsh-quota-board",
     "description": "dsh desktop quota-board"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个给 DeepSeek Harness 桌面端的「模型供应商额度看板」：侧栏底部、账号行上方多一个按钮， 点开就是一整块看板，把当前 profile 里所有已配置的模型供应商的余额、套餐额度、 以及本机的 token 用量摆在一起。看过期就点掉，不用离开正在进行的对话。"
   },
   "schemaVersion": 1,
   "scripts": {

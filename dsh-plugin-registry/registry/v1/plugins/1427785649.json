@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "41b3fdc46d2c8e1d8dac238692473cd33a0207c4"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1427785649",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-job-progress",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yezitotempeace/dsh-job-progress#41b3fdc46d2c8e1d8dac238692473cd33a0207c4",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.5",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-job-progress",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b6caf1abf6b2b509ac2a06c4b6a61a1cfc74e64668be40020ed508d804480eda/yezitotempeace/dsh-job-progress",
     "description": "Floating card with live progress for background jobs: progress bar, percentage, speed, ETA and the latest output line."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "后台任务（下载、构建、渲染……）一跑起来，会话右下角就出现一张浮动卡片： 每个任务一行，带进度条、百分比、耗时和最新输出；全部结束后自动消失。"
   },
   "schemaVersion": 1,
   "scripts": {

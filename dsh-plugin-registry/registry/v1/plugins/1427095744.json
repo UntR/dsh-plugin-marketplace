@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "ae45c16eb78b349e5dc9af6eb324e0f8f733e3bc"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1427095744",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workbench",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yangsong608/dsh-workbench#ae45c16eb78b349e5dc9af6eb324e0f8f733e3bc",
+    "version": "1.4.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.16.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workbench",
+    "status": "valid",
+    "type": "module",
+    "version": "1.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4ba7f8361642233f8e793867da7853d4bb1e7f500c8f934747eeb2bde813a861/yangsong608/dsh-workbench",
     "description": "个人工作台插件：任务 / 计划 / 专注 / 记事本 / Bug / 产品设计 / 测试 / 新闻（SQLite 本地库）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把「时序」式个人工作台搬进 DeepSeek Harness：任务、计划、专注、复盘、记事本（AI 完善）、Bug、产品设计（导图 / 模块 / 业务 / 端 / Demo）、测试（AI 用例 / 实时 3D 执行 / Bug 回归 / 报告 / Docker）、定时新闻在同一块面板完成，数据落在本机 SQLite，主题跟随 DSH，兼容 dsh-startup-moss 与 dsh-opencode-palette 的换肤。"
   },
   "schemaVersion": 1,
   "scripts": {

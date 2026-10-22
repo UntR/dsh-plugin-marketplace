@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
-    "headSha": "ae588d55f983e6955fbc2a9786c5158b67687f1c"
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
+    "headSha": "e3264e05397902cb322711fac565d90815ec965f"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH 模型故障自动转移 · provider-pool failover: on rate limit/quota/timeout, auto-retry with the next untried model from the selected providers' full model pools. Runtime tool: model_failover + Web UI panel.",
     "fork": false,
     "forks": 0,
-    "headSha": "ae588d55f983e6955fbc2a9786c5158b67687f1c",
+    "headSha": "e3264e05397902cb322711fac565d90815ec965f",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVQR3OA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/937d95a4ff491346cc87d6ffbfff45f4eb39d8107a1bb98cd56bf15df0f267a9/QGG4588/dsh-model-failover",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b7ad93fba8b23652c57b94764f06ecb8ca0bed7a3160b7d76836cb98120b5b10/QGG4588/dsh-model-failover",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/145002884?u=524bcc26a84109d87682058fe2e808ecc5d2f1c1&v=4",
       "login": "QGG4588"
     },
-    "pushedAt": "2026-10-20T09:05:29Z",
+    "pushedAt": "2026-10-22T00:59:40Z",
     "slug": "QGG4588/dsh-model-failover",
     "stars": 1,
     "topics": [
@@ -41,32 +41,44 @@
       "llm",
       "model-failover"
     ],
-    "updatedAt": "2026-10-20T09:05:22Z",
+    "updatedAt": "2026-10-22T00:58:52Z",
     "url": "https://github.com/QGG4588/dsh-model-failover"
   },
   "id": "gh:1426356024",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-failover",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:QGG4588/dsh-model-failover#e3264e05397902cb322711fac565d90815ec965f",
+    "version": "1.2.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.8",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-model-failover",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/937d95a4ff491346cc87d6ffbfff45f4eb39d8107a1bb98cd56bf15df0f267a9/QGG4588/dsh-model-failover",
+    "coverUrl": "https://opengraph.githubassets.com/b7ad93fba8b23652c57b94764f06ecb8ca0bed7a3160b7d76836cb98120b5b10/QGG4588/dsh-model-failover",
     "description": "DSH 模型故障自动转移 · provider-pool failover: on rate limit/quota/timeout, auto-retry with the next untried model from the selected providers' full model pools. Runtime tool: model_failover + Web UI panel."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 官方模型选择是「一次选定、失败就报错」。官方 dsh-llm-retry 只在同一供应商内重试—— 如果供应商整体限流/配额耗尽/宕掉，重试 5 次后这一轮仍然失败。"
   },
   "schemaVersion": 1,
   "scripts": {

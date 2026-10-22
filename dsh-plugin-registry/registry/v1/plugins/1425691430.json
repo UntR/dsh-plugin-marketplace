@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
-    "headSha": "68532db7dee0c83275ed7c862a369ca90d28bc9e"
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
+    "headSha": "a67b29cb7323f3b496ade08d4a1e077c9345cd8a"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-19T13:53:20Z",
     "databaseId": 1425691430,
     "defaultBranch": "main",
-    "description": "个人尝试，DSH桌面端的回收站",
+    "description": "DSH 会话回收站：删除即移入可恢复的回收站，子会话随父会话整树处理，支持批量归档/恢复/彻底删除，仅彻底清除才销毁数据。",
     "fork": false,
     "forks": 0,
-    "headSha": "68532db7dee0c83275ed7c862a369ca90d28bc9e",
+    "headSha": "a67b29cb7323f3b496ade08d4a1e077c9345cd8a",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVPpTJg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/9334880eda625555b732224f0abbb38c8ea50272cb981d113cae143563d50641/WangLemna/dsh-recycle-bin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5b5afae1dc31d448f69075283409a6c39a6d7365bc6009adc7179f966c5d6fdd/WangLemna/dsh-recycle-bin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/44938346?u=223203a4c8d4ac4b0445421d2cb65b5f91844f11&v=4",
       "login": "WangLemna"
     },
-    "pushedAt": "2026-10-20T01:34:53Z",
+    "pushedAt": "2026-10-22T01:36:22Z",
     "slug": "WangLemna/dsh-recycle-bin",
     "stars": 0,
     "topics": [
@@ -40,32 +40,45 @@
       "dsh-plugin",
       "session"
     ],
-    "updatedAt": "2026-10-20T01:28:06Z",
+    "updatedAt": "2026-10-22T01:36:26Z",
     "url": "https://github.com/WangLemna/dsh-recycle-bin"
   },
   "id": "gh:1425691430",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-recycle-bin",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-recycle-bin@1.4.1",
+    "version": "1.4.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.4.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-recycle-bin",
+    "status": "valid",
+    "type": "module",
+    "version": "1.4.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/9334880eda625555b732224f0abbb38c8ea50272cb981d113cae143563d50641/WangLemna/dsh-recycle-bin",
-    "description": "个人尝试，DSH桌面端的回收站"
+    "coverUrl": "https://opengraph.githubassets.com/5b5afae1dc31d448f69075283409a6c39a6d7365bc6009adc7179f966c5d6fdd/WangLemna/dsh-recycle-bin",
+    "description": "DSH 会话回收站：删除即移入可恢复的回收站，子会话随父会话整树处理，支持批量归档/恢复/彻底删除，仅彻底清除才销毁数据。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 补上删除会话的能力——删除即移入可恢复的回收站，子会话跟随主会话整树处理。"
   },
   "schemaVersion": 1,
   "scripts": {

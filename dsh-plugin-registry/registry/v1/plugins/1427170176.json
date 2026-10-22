@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "202d620ccb7beeb73ba93c9be4e4ed16c5ae9c9b"
   },
   "github": {
@@ -41,27 +41,37 @@
   },
   "id": "gh:1427170176",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workpaper-gate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zirscard/dsh-workpaper-gate#202d620ccb7beeb73ba93c9be4e4ed16c5ae9c9b",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-workpaper-gate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/93d2bed6fefb5e74b7de8887394ca7e9fbf106c64f4779378b76162e4d1acc3c/zirscard/dsh-workpaper-gate",
     "description": "Workpaper completeness gate for DeepSeek Harness: one workpaper_gate tool that audits a valuation workpaper set for completeness - both the target design/template itself and the instance-versus-template structure - with configurable rules, and returns blocker, warning and info fi"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 M1 的「目标与底稿完整性审核」做成 DSH 插件：agent 工具 workpapergate 对估值模块 M1 做两层审核，输出 blocker / warning / info 三级 issues + markdown/JSON 报告。"
   },
   "schemaVersion": 1,
   "scripts": {

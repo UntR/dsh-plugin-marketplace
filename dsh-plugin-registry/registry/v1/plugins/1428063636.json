@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
-    "headSha": "82031421c5630e61f89ade76a361e90aa06e31be"
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
+    "headSha": "834502b40232ec2a6b6798a5433d8cb50e18d608"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness plugin that supervises the local WorkBuddy reverse-proxy chain (wb2api gateway + Responses API bridge), so the provider port is always answering",
     "fork": false,
     "forks": 0,
-    "headSha": "82031421c5630e61f89ade76a361e90aa06e31be",
+    "headSha": "834502b40232ec2a6b6798a5433d8cb50e18d608",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,46 +25,63 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVR6FlA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d486cc446a5030fa1ae3ac7a4a5cfa57168dc77a7f653ab4bccd833a2007b52a/kangjiazhen/dsh-workbuddy-stack",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f53c90248954e0d7916283df9d6dc6b54eb60aa44dec0baef9d0736928b66657/kangjiazhen/dsh-workbuddy-codex",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/143594112?u=711c1c6a2199bce918f3f7f1cc2cb403ddc5208e&v=4",
       "login": "kangjiazhen"
     },
-    "pushedAt": "2026-10-21T08:56:28Z",
-    "slug": "kangjiazhen/dsh-workbuddy-stack",
-    "stars": 0,
+    "pushedAt": "2026-10-22T09:03:59Z",
+    "slug": "kangjiazhen/dsh-workbuddy-codex",
+    "stars": 1,
     "topics": [
       "codex",
       "deepseek-harness",
       "dsh-plugin",
       "workbuddy"
     ],
-    "updatedAt": "2026-10-21T08:56:31Z",
-    "url": "https://github.com/kangjiazhen/dsh-workbuddy-stack"
+    "updatedAt": "2026-10-22T09:04:03Z",
+    "url": "https://github.com/kangjiazhen/dsh-workbuddy-codex"
   },
   "id": "gh:1428063636",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workbuddy-codex",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kangjiazhen/dsh-workbuddy-codex#834502b40232ec2a6b6798a5433d8cb50e18d608",
+    "version": "0.3.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./bridge/codex-chat-bridge.mjs": "./bridge/codex-chat-bridge.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./provider": "./lib/provider.js",
+      "./status-tool": "./lib/status-tool.js",
+      "./supervisor": "./lib/supervisor.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workbuddy-codex",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d486cc446a5030fa1ae3ac7a4a5cfa57168dc77a7f653ab4bccd833a2007b52a/kangjiazhen/dsh-workbuddy-stack",
+    "coverUrl": "https://opengraph.githubassets.com/f53c90248954e0d7916283df9d6dc6b54eb60aa44dec0baef9d0736928b66657/kangjiazhen/dsh-workbuddy-codex",
     "description": "DeepSeek Harness plugin that supervises the local WorkBuddy reverse-proxy chain (wb2api gateway + Responses API bridge), so the provider port is always answering"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that keeps the local WorkBuddy reverse-proxy chain alive — the model picker's provider, the gateway behind it, and the Responses bridge that OpenAI Codex CLI needs."
   },
   "schemaVersion": 1,
   "scripts": {

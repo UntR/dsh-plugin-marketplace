@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "b078ca939167eef3eaa29f7f803cf3b5557ed5d2"
   },
   "github": {
@@ -47,27 +47,45 @@
   },
   "id": "gh:1426948834",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@xiciyang/training-rl",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@xiciyang/training-rl@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.mjs"
+      },
+      "./package.json": "./package.json",
+      "./reward": {
+        "default": "./src/reward.mjs"
+      },
+      "./tools": {
+        "default": "./src/tools.mjs"
+      }
+    },
+    "main": "./src/index.mjs",
+    "name": "@xiciyang/training-rl",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5bd4c6e12441c5d41f0ca0470a56abe2bbd3d4ecaf1dc3adbd099ee44fe6b4f8/xiciyang/training-rl",
     "description": "@xiciyang/training-rl — DSH 训练插件：可独立安装，依赖 @xiciyang/* 共享库"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "强化学习微调（RL）：在真实 GPU 上用可替换的奖励适配器训练，并对「收益是真的」「KL 没失控」「同一套判据只有一份实现」分别取证。"
   },
   "schemaVersion": 1,
   "scripts": {

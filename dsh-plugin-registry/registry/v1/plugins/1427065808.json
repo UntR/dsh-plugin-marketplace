@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "30c887af0e10aae61af3ed9e11d0edca586bdc48"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1427065808",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-fk-search-tier",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:FuriousKinght/dsh-fk-search-tier#30c887af0e10aae61af3ed9e11d0edca586bdc48",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-fk-search-tier",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/df2d6cf494a95f6747c3b761fd8f96ae5f47683c75b8357896d5e1571c68ea22/FuriousKinght/dsh-fk-search-tier",
     "description": "两级搜索 failover 插件（Tavily → DeepSeek Search API；Fetch: DeepSeek → 直连）。带额度感知熔断，第一层失败自动切第二层。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "两级搜索 + 两级抓取 failover —— 搜索先 Tavily 后 DeepSeek Search API；抓取先 DeepSeek Fetch API 后直连兜底。"
   },
   "schemaVersion": 1,
   "scripts": {

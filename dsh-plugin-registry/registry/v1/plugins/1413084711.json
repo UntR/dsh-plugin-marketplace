@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./packages/dsh-memory/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
     "enrichmentStatus": "ok",
-    "headSha": "ca7281004d8225f8e266806c131e5f0e51e0b927"
+    "headSha": "35fc97f3ebad6e35132a008a0432c07ce7e1bddc"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-10T11:03:03Z",
     "databaseId": 1413084711,
     "defaultBranch": "main",
-    "description": "DSH memory plugin: local JSONL memory + embeddings + agent tools + settings panel",
+    "description": "DSH 记忆系统 (Memory System): local-first memory — JSONL + local embeddings, five tools, auto recall, hard rules, visual panel.",
     "fork": false,
     "forks": 2,
-    "headSha": "ca7281004d8225f8e266806c131e5f0e51e0b927",
+    "headSha": "35fc97f3ebad6e35132a008a0432c07ce7e1bddc",
     "homepageUrl": "https://www.npmjs.com/package/@restregular/dsh-memory",
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVDn2Jw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/239a64c7f8a8ce190fcfc6485d32f4f4a3df81cb1d0e4da8ac78778c50219a03/RestRegular/dsh-memory",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/faef38e0ecaf47487d41aae0aee890e0e35bf11bd68598a116b703b23e26d469/RestRegular/dsh-memory",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/169018108?u=584f057ee8eed95f50ae18a28684b3f63360afff&v=4",
       "login": "RestRegular"
     },
-    "pushedAt": "2026-10-21T06:26:53Z",
+    "pushedAt": "2026-10-22T06:29:06Z",
     "slug": "RestRegular/dsh-memory",
     "stars": 5,
     "topics": [
@@ -39,38 +39,45 @@
       "embeddings",
       "memory"
     ],
-    "updatedAt": "2026-10-21T06:26:42Z",
+    "updatedAt": "2026-10-22T06:29:10Z",
     "url": "https://github.com/RestRegular/dsh-memory"
   },
   "id": "gh:1413084711",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "@restregular/dsh-memory",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@restregular/dsh-memory@0.14.0",
+    "version": "0.14.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.14.0",
+    "published": true,
+    "repositoryMatches": true
   },
   "package": {
+    "exports": {
+      ".": "./packages/dsh-memory/lib/index.js",
+      "./client": "./packages/dsh-memory/lib/client.js",
+      "./locale/en.json": "./packages/dsh-memory/locale/en.json",
+      "./locale/zh.json": "./packages/dsh-memory/locale/zh.json",
+      "./package.json": "./package.json"
+    },
     "main": null,
-    "name": "dsh-memory-workspace",
+    "name": "@restregular/dsh-memory",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.12.7"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/239a64c7f8a8ce190fcfc6485d32f4f4a3df81cb1d0e4da8ac78778c50219a03/RestRegular/dsh-memory",
-    "description": "DSH memory plugin: local JSONL memory + embeddings + agent tools + settings panel"
+    "coverUrl": "https://opengraph.githubassets.com/faef38e0ecaf47487d41aae0aee890e0e35bf11bd68598a116b703b23e26d469/RestRegular/dsh-memory",
+    "description": "DSH 记忆系统 (Memory System): local-first memory — JSONL + local embeddings, five tools, auto recall, hard rules, visual panel."
   },
   "readme": {
     "available": true,
-    "excerpt": "DeepSeek Harness 的本地长期记忆插件 —— 一个包、一条 Loader entry、四个半边:JSONL 存储 + 本地向量检索(llama-server,OpenAI 兼容)+ 五个模型工具 + 自动召回注入 + 设置页管理面板。"
+    "excerpt": "本地优先的长期记忆，让每次对话都接得上。"
   },
   "schemaVersion": 1,
   "scripts": {

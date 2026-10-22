@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "3bb21d2b67a1bb06f996e32c4ca6ab6580f8379b"
   },
   "github": {
@@ -44,27 +44,41 @@
   },
   "id": "gh:1426980471",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-pr-chip",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:N-o-c-t-i-s/dsh-pr-chip#3bb21d2b67a1bb06f996e32c4ca6ab6580f8379b",
+    "version": "0.1.6"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.png",
+      "./icon.svg": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-pr-chip",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/72aa280f2e412b4a28949d1b349ec1d90892b5f2ff7eeae306f50ad642a6fc27/N-o-c-t-i-s/dsh-pr-chip",
     "description": "Pull request state chip on every DeepSeek Harness session row."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Pull request state on every DSH session row — a small icon that tells you whether the work behind a chat is still open, sitting as a draft, already merged, or closed."
   },
   "schemaVersion": 1,
   "scripts": {

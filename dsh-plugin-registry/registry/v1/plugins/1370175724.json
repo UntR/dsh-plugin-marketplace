@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "81a5c667f2ce7c7371d571ae1febe2941cc51c38"
   },
   "github": {
@@ -42,13 +42,13 @@
   },
   "id": "gh:1370175724",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-isolation-pod",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Teow9/dsh-isolation-pod#81a5c667f2ce7c7371d571ae1febe2941cc51c38",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
@@ -62,13 +62,16 @@
       },
       "./client": {
         "default": "./lib/client.js"
-      }
+      },
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
     },
     "main": "lib/index.js",
     "name": "dsh-isolation-pod",
     "status": "valid",
     "type": "module",
-    "version": "0.1.3"
+    "version": "0.2.0"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/19070c6559e479d7e3501651c260b6ff13d32fbcc814d6c929aa3d71fd65371f/Teow9/dsh-isolation-pod",
@@ -76,7 +79,7 @@
   },
   "readme": {
     "available": true,
-    "excerpt": "才会注入一条可编辑的精简结果。"
+    "excerpt": "唯一注入入口是用户手动确认的「返回主会话」。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "8da6f374e6f1f8f7130e4257f191bebf02d41f69"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1426444365",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-baipiao-shigege",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:fortran2005/dsh-baipiao-shigege#8da6f374e6f1f8f7130e4257f191bebf02d41f69",
+    "version": "0.2.7"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-baipiao-shigege",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.7"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d9ad6ae8cbc24e5a4c6b3e0d4103954b7f849c5059fe4570a362efd14e82b7ba/fortran2005/dsh-baipiao-shigege",
     "description": "DeepSeek Harness plugin: auto-tier free-channel models into three 1M fallback chains plus a custom chain, ranked by measured throughput."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把白嫖渠道的模型按价格自动分成三条 1M 降级链，另加一条自己挑的 Custom 链；四条链都按实测吞吐从大到小排序，慢于门槛的模型直接出局。"
   },
   "schemaVersion": 1,
   "scripts": {

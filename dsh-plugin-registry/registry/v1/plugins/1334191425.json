@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
     "enrichmentStatus": "ok",
-    "headSha": "d97f2c0e0a586e9cf756f3589e467d78fb73b816"
+    "headSha": "3d1702742051e3c54931cab247af101f9c0cc403"
   },
   "github": {
     "archived": false,
@@ -17,26 +17,26 @@
     "description": null,
     "fork": false,
     "forks": 0,
-    "headSha": "d97f2c0e0a586e9cf756f3589e467d78fb73b816",
+    "headSha": "3d1702742051e3c54931cab247af101f9c0cc403",
     "homepageUrl": null,
-    "language": "TypeScript",
+    "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT4YlQQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f754aeb859ac2d50c0f60955336a3b307af69b1d161a63825487c4eed10e63c9/hrhgit/dsh-oauth-openai",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ebf0e32b944b3c872fe7783df04f6dea1b48252218d480ff721400c66937dbd1/hrhgit/dsh-oauth-openai",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/94909205?v=4",
       "login": "hrhgit"
     },
-    "pushedAt": "2026-08-31T08:56:18Z",
+    "pushedAt": "2026-10-21T23:49:53Z",
     "slug": "hrhgit/dsh-oauth-openai",
     "stars": 1,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-08-31T08:52:10Z",
+    "updatedAt": "2026-10-21T23:49:57Z",
     "url": "https://github.com/hrhgit/dsh-oauth-openai"
   },
   "id": "gh:1334191425",
@@ -45,7 +45,7 @@
     "packageName": "dsh-oauth-openai",
     "preferred": "npm",
     "reason": null,
-    "requiresBuildApproval": true,
+    "requiresBuildApproval": false,
     "spec": "dsh-oauth-openai@0.1.0",
     "version": "0.1.0"
   },
@@ -56,40 +56,31 @@
   },
   "package": {
     "exports": {
-      ".": {
-        "default": "./lib/index.js",
-        "types": "./lib/types/index.d.ts"
-      },
+      ".": "./src/index.js",
+      "./client": "./dist/client.js",
       "./cordis.patch.yml": "./cordis.patch.yml",
-      "./credential": {
-        "default": "./lib/credential.js",
-        "types": "./lib/types/credential.d.ts"
-      },
-      "./oauth-driver": {
-        "default": "./lib/oauth-driver.js",
-        "types": "./lib/types/oauth-driver.d.ts"
-      },
-      "./package.json": "./package.json"
+      "./package.json": "./package.json",
+      "./remote": "./src/remote.js"
     },
-    "main": "lib/index.js",
+    "main": "./src/index.js",
     "name": "dsh-oauth-openai",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f754aeb859ac2d50c0f60955336a3b307af69b1d161a63825487c4eed10e63c9/hrhgit/dsh-oauth-openai",
-    "description": "OpenAI Codex OAuth provider and model adapter for DeepSeek Harness. It is no longer an active implementation."
+    "coverUrl": "https://opengraph.githubassets.com/ebf0e32b944b3c872fe7783df04f6dea1b48252218d480ff721400c66937dbd1/hrhgit/dsh-oauth-openai",
+    "description": "A provider card extension for the Models settings page: it lets a person sign in with a provider subscription (ChatGPT Plus/Pro, and any other flow the Host exposes for a provider) instead of pasting an API key."
   },
   "readme": {
     "available": true,
-    "excerpt": "OpenAI Codex OAuth provider and model adapter for DeepSeek Harness. It is no longer an active implementation."
+    "excerpt": "A provider card extension for the Models settings page: it lets a person sign in with a provider subscription (ChatGPT Plus/Pro, and any other flow the Host exposes for a provider) instead of pasting an API key."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": true
+    "prepare": false
   }
 }

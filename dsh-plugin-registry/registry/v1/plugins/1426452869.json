@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "88489860dcb3e62aab3095a19a10853e38758bbe"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1426452869",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-account-balance",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:mantou2nd/dsh-plugin-account-balance#88489860dcb3e62aab3095a19a10853e38758bbe",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-account-balance",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/192c068cfe56dbb43fbf64020c5e2ba6db689756e3a7ad04406858a98ef6ff94/mantou2nd/dsh-plugin-account-balance",
     "description": "Account balance, session spend and turn estimate pill for the DeepSeek Harness composer dock"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）的会话输入框下面加一条余额统计： 余额 · 会话消耗 · 本轮估算，点一下展开明细面板。"
   },
   "schemaVersion": 1,
   "scripts": {

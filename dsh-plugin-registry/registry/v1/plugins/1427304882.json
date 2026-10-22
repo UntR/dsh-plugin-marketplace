@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "97553b8e5d7747e2190fc4238813f618e14eac1a"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1427304882",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-git-graph-panel",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:aski0006/dsh-git-graph-panel#97553b8e5d7747e2190fc4238813f618e14eac1a",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-git-graph-panel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7378863a45befce4a7bd70cbf57cbe4d0a71af8c9a964ecc7009627100c2df30/aski0006/dsh-git-graph-panel",
     "description": "Git Graph tab for the DSH Web right sidebar: repository detection plus a hand-drawn commit graph"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH Web 的右侧栏启动页加一张 Git Graph 卡片：一眼看出当前项目是不是 Git 仓库；是的话，直接把提交图画出来（泳道、合并分叉、分支/标签胶囊、脏文件计数）。"
   },
   "schemaVersion": 1,
   "scripts": {

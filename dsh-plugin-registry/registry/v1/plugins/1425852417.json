@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "a7ab8d1fc279ea034dc59eb372ea1449d7f3fa4b"
   },
   "github": {
@@ -44,27 +44,41 @@
   },
   "id": "gh:1425852417",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@vastplan/model-team",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vastplan/dsh-model-team#a7ab8d1fc279ea034dc59eb372ea1449d7f3fa4b",
+    "version": "0.5.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./assets/*.md": "./assets/*.md",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./typert": "./typert.js"
+    },
+    "main": null,
+    "name": "@vastplan/model-team",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0ce975f90576a0b2623cef339d2cb3b7c735c16155464a68e6bd69a15952b436/vastplan/dsh-model-team",
     "description": "多模型团队：DSH 插件，用同一份任务包并发询问多家模型，做事后审计、设计分叉与专责推理；内置 model-team 技能，安装即自动发现/调用；带账本、周报与逐模型进度窗。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "用同一份任务包并发询问多家模型，做事后审计、设计分叉与专责推理。 每家模型在会话输入框上方占一行，实时显示「思考 / 工具 / 回答 / 完成」； 打开「保存数据」后，结果进 SQLite 账本，可出周报与静态报告。"
   },
   "schemaVersion": 1,
   "scripts": {

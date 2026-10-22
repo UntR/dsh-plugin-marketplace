@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "63cb9e50cda6fdce26f9c1228cfa329e250f1f9a"
   },
   "github": {
@@ -49,27 +49,42 @@
   },
   "id": "gh:1425699216",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-image-canvas",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Link-h1j/dsh-image-canvas#63cb9e50cda6fdce26f9c1228cfa329e250f1f9a",
+    "version": "0.4.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-image-canvas",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6eac243a8c74584e992ff8e35ebcbf1c220f52d13d22d5a8089e35dc2e817d23/Link-h1j/dsh-image-canvas",
     "description": "DSH desktop right-sidebar infinite canvas: collect any opened image on one pannable board, annotate it, hand the notes to the Agent, and edit/generate with local ComfyUI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "灵感与交互参考自 KaichenCurry/dsh-design-mode（画布 + 图上批注 + 版本树）， 但那个是整仓 fork（0.1.1-rc.2，需要跑独立实例）；本插件是为 DSH 桌面版 0.2.x 重写的独立插件， 走官方右侧栏 tab 契约，直接装进你现在用的桌面版。"
   },
   "schemaVersion": 1,
   "scripts": {

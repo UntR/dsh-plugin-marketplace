@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "db29c1d9f3a8a50d5feb3bf406e46c374105bf84"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1425616519",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "filechecker",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:nanfangtown/file-checker#db29c1d9f3a8a50d5feb3bf406e46c374105bf84",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "filechecker",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0c61a0c9a4f45b8b53298fa7b287726e59a7aeed7dde40321be185f2dcc8ca6c/nanfangtown/file-checker",
     "description": "A DSH plugin that adds a one-click Open location button to delivered-file cards."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A delivered-file card in DeepSeek Harness can preview the file, but revealing its folder is buried inside the native-open menu. FileChecker promotes that gesture to a labelled button that is always visible, so a delivered report, image, video, or Office document is one click away"
   },
   "schemaVersion": 1,
   "scripts": {

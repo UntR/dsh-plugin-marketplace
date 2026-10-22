@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "3c1c82f3f601d7e828fb9661e48dd0ec7480b5cc"
   },
   "github": {
@@ -41,27 +41,41 @@
   },
   "id": "gh:1427096053",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-portal",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yangsong608/dsh-portal#3c1c82f3f601d7e828fb9661e48dd0ec7480b5cc",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-portal",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9773507e5500c3a3bd7de4032a9de2aa33d4742c424e53a3a6def3f079301a14/yangsong608/dsh-portal",
     "description": "DSH 工作台门户插件：双宽瀑布墙首页 + 极光底图 + 快捷入口"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的门户插件：启动 DSH 后先落到「工作台门户」——双宽瀑布墙（主卡 2 格宽高块、小卡 1 格矮块，按当前最矮列贪心铺排，列数随容器 2/3/4 自适应），主卡叠极光底图（亮/暗成对，随主题切换；进入门户随机分配、同屏不重样），卡片用内联 Lucide 线性图标 + accent 图标砖；点卡进入对应面板；左侧原有快捷菜单与其跳转完全不变。"
   },
   "schemaVersion": 1,
   "scripts": {

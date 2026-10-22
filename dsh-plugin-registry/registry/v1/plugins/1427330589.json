@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "88036298750d2a2d37dc56b28af73cd3eb8f0413"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVRNWHQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a3fd77bc834578d9c70e667c83d44b246930cf0c4fff31d309d9f2480ea0f226/basaltfold/dsh-tencent-channel-fix",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/4ea8e10079c67359ef94bb5d0a109b63b7fab1c79765d2a7954f03eed5563551/basaltfold/dsh-tencent-channel-fix",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/96673243?v=4",
       "login": "basaltfold"
     },
     "pushedAt": "2026-10-20T17:19:27Z",
     "slug": "basaltfold/dsh-tencent-channel-fix",
-    "stars": 1,
+    "stars": 0,
     "topics": [
       "buddy",
       "channel-fix",
@@ -45,32 +45,43 @@
       "tencent",
       "workbuddy"
     ],
-    "updatedAt": "2026-10-21T02:27:29Z",
+    "updatedAt": "2026-10-21T10:04:42Z",
     "url": "https://github.com/basaltfold/dsh-tencent-channel-fix"
   },
   "id": "gh:1427330589",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tencent-channel-fix",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:basaltfold/dsh-tencent-channel-fix#88036298750d2a2d37dc56b28af73cd3eb8f0413",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json",
+      "./patcher": "./lib/patcher.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-tencent-channel-fix",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a3fd77bc834578d9c70e667c83d44b246930cf0c4fff31d309d9f2480ea0f226/basaltfold/dsh-tencent-channel-fix",
+    "coverUrl": "https://opengraph.githubassets.com/4ea8e10079c67359ef94bb5d0a109b63b7fab1c79765d2a7954f03eed5563551/basaltfold/dsh-tencent-channel-fix",
     "description": "Fixes the buddy / workbuddy channel 400 (code 11128, \"Illegal API invocation from an unapproved channel\") in DeepSeek Harness, and re-applies the fix after every dsh-our-free-model upgrade."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Fixes the 400 / code 11128 returned by the buddy and workbuddy channels in DeepSeek Harness, and keeps it fixed across upgrades."
   },
   "schemaVersion": 1,
   "scripts": {

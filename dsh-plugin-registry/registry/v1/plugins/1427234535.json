@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "2516b699e10213df3c1ced2fa7c0c51a8b01044b"
   },
   "github": {
@@ -48,27 +48,40 @@
   },
   "id": "gh:1427234535",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-wechat-ai-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Windfarer/dsh-wechat-ai-bridge#2516b699e10213df3c1ced2fa7c0c51a8b01044b",
+    "version": "0.2.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-wechat-ai-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5568ca1ccc4df5bc8737e6eedcbb7617fcc32f0335d08e406be1820fb0b8dc02/Windfarer/dsh-wechat-ai-bridge",
     "description": "DeepSeek Harness ↔ WeChat bridge for the wechat-ai MCP server"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）的微信桥接插件：通过 wechat-ai 的 MCP 服务，把微信私聊/群聊 @ 消息交给持久化的 DSH Agent 会话，并把 Agent 的最终回复发回微信。同时提供 Web 设置页和微信上下文读取工具。"
   },
   "schemaVersion": 1,
   "scripts": {

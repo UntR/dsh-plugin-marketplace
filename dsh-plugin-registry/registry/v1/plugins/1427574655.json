@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "fbbcd5e6c48e91045ed70aafe62db835faf9c4f0"
   },
   "github": {
@@ -47,27 +47,40 @@
   },
   "id": "gh:1427574655",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-fakeip-http",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-fakeip-http@1.0.1",
+    "version": "1.0.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./policy": "./lib/policy.js"
+    },
+    "main": "index.js",
+    "name": "dsh-fakeip-http",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/06143d07bd4378484de124fccbb25e029b8608be9773aac9a41e7ea2c2e99e8a/Jayve/dsh-fakeip-http",
     "description": "Accept fake-IP DNS answers for DeepSeek Harness web_fetch while keeping the SSRF guard intact."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Make webfetch work behind a fake-IP DNS + TUN setup without weakening Harness's SSRF guard. Loopback, private, link-local, multicast, documentation, reserved, and IP-literal destinations stay blocked."
   },
   "schemaVersion": 1,
   "scripts": {

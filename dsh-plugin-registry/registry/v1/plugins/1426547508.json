@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "9ae71e03388aa9b40b00475f7e4b868b6c3c7848"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1426547508",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-billing",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-model-billing@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./host.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-model-billing",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b0978dc91515d93fc781a5dc3ac08936284295f4094b2a24430030f7d2b07d97/likaileave/dsh-model-billing",
     "description": "Model ordering, three-tier token prices, and per-turn/session cost estimates for the DeepSeek Harness Web GUI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-model-billing 是一个 DSH Web 客户端插件。它接管输入框右下角的模型选择器，让你按自己的顺序排列模型，并为每个模型维护三档 token 价格；会话过程中按实际 usage 估算每一轮和整个会话的费用。"
   },
   "schemaVersion": 1,
   "scripts": {

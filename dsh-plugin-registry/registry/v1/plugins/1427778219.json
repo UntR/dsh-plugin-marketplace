@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "f1b9db7830717eb1de7e4590f15d16d74999fd68"
   },
   "github": {
@@ -44,27 +44,40 @@
   },
   "id": "gh:1427778219",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-convo-mode",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:stansz/dsh-convo-mode#f1b9db7830717eb1de7e4590f15d16d74999fd68",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-convo-mode",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2a2c2fce60f02806ae953abe74d779fe8b7605af9233d45a5bb0583c9b2b7eba/stansz/dsh-convo-mode",
     "description": "DeepSeek Harness bundle: a per-session conversation mode (composer chip, /conversation command, conversation policy prompt, read-only tool policy)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A per-session conversation mode for DeepSeek Harness: the same agent, told to be a conversational assistant instead of a coding agent, with coding tools out of reach. It is a DSH bundle — a cordis.patch.yml row plus a Host plugin and a Web client plugin — so it installs into a pr"
   },
   "schemaVersion": 1,
   "scripts": {

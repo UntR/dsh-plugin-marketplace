@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "795026e67f72a65375e86453c939907e9cdedfbe"
   },
   "github": {
@@ -44,27 +44,44 @@
   },
   "id": "gh:1427809135",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-deepseek-saldo",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Brunojomosi/dsh-plugin-deepseek-saldo#795026e67f72a65375e86453c939907e9cdedfbe",
+    "version": "1.0.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-deepseek-saldo",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3778d76ad0ffad5fdc5f06710eaadbe8e466eb0fa26a152eef15026e76908d81/Brunojomosi/dsh-plugin-deepseek-saldo",
     "description": "DSH plugin: shows your DeepSeek account balance in the left sidebar, above the More button. Plugin do DSH: saldo da conta DeepSeek na barra lateral, acima do botao More."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Shows the money balance of your DeepSeek account in the left sidebar, right above the \"More\" button."
   },
   "schemaVersion": 1,
   "scripts": {

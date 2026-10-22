@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "91eeeaa394088b3d87a43f7920426cb3079e8d10"
   },
   "github": {
@@ -41,27 +41,37 @@
   },
   "id": "gh:1427165689",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-context-extract",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zirscard/dsh-context-extract#91eeeaa394088b3d87a43f7920426cb3079e8d10",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-context-extract",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ebcf67d5f029749d6b3e68c0f582539d66e9226cf2061aadbde93c345d5a4ac7/zirscard/dsh-context-extract",
     "description": "Context extraction and compression for DeepSeek Harness: one context_extract tool that turns long raw documents (financial reports, contracts, ledgers) into dense structured Markdown plus JSON - key metrics, tables, numbered clauses, entities and cross-check alerts."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把「前置信息萃取与路由 Agent」做成 DSH 插件：agent 直接调用 contextextract 工具，把超长、多模态的原始文件（财报工作簿、长合同、业务台账）压成高密度结构化 Markdown + JSON，过滤冗余、抽取实体、做勾稽校验，供下游 M1–M4 模块用最省 Token 的上下文。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "497a6a9067bd910dc29c7bce30830e7e31a7c462"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1426414055",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-image-studio",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:david-zdw/dsh-image-studio#497a6a9067bd910dc29c7bce30830e7e31a7c462",
+    "version": "0.8.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.7",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-image-studio",
+    "status": "valid",
+    "type": "module",
+    "version": "0.8.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b4144b774bfe07f902d7c4caa17f2d6f70d9fb9eff5fbb115acf28a89148b19f/david-zdw/dsh-image-studio",
     "description": "生图工作台 — DeepSeek Harness 侧边栏生图插件：Agnes / GPT Image / Grok / OpenAI 兼容，每个服务商独立 Key，支持 /image 简写。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的多服务商生图插件：Agnes / OpenAI GPT Image / Grok Image / OpenAI 兼容，每个服务商独立 Key；侧边栏一级页面 + /image 对话调用，复用 open-storyboard-canvas 的 Agnes 请求契约，并补齐 OpenAI Images 与 Grok Imagine 接口；支持文生图与最多 5 张参考图的图生图。"
   },
   "schemaVersion": 1,
   "scripts": {

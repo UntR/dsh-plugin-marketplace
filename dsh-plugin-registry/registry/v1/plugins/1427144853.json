@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "2266084a3b81cfbd12986f9e842bc5bf86163843"
   },
   "github": {
@@ -41,27 +41,37 @@
   },
   "id": "gh:1427144853",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-qqbot-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Chr1sut1na/dsh-qqbot-guard#2266084a3b81cfbd12986f9e842bc5bf86163843",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./client": "./lib/client.js"
+    },
+    "main": "./index.mjs",
+    "name": "dsh-qqbot-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/529b575c05a636a951e03221112cc96f621b149d29e4f4910c78f2efcfef4552/Chr1sut1na/dsh-qqbot-guard",
     "description": "给 dsh 的 QQ 机器人加边界：工具收窄到 2 个、被问本机或机制时用角色口吻回避；附可编辑规则文本与\"只在被叫到才接话\"补丁。策略层，非沙箱。dsh plugin: whitelist a QQ bot's tools and keep it in character when asked about local files or its internals."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "QQ 机器人边界守卫（dsh 插件）：给 @tencent-connect/dsh-qqbot 的机器人加两层防护，并带一个可在设置页编辑的约束提示词。"
   },
   "schemaVersion": 1,
   "scripts": {

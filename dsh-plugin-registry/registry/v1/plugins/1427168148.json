@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "4398fb5e96732a93a7d7dcab1a749e1860830020"
   },
   "github": {
@@ -41,27 +41,37 @@
   },
   "id": "gh:1427168148",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-office-audit",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zirscard/dsh-office-audit#4398fb5e96732a93a7d7dcab1a749e1860830020",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-office-audit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b1d1abf9d5aa021ee92f5a42c7ec54b2c9c1b662ab15db6aab6efec66a62b8b0/zirscard/dsh-office-audit",
     "description": "Financial-model and workbook auditor for DeepSeek Harness: one office_audit tool that recalculates formulas with the bundled LibreOffice Kit and runs static checks over the recalculated values - formula errors, broken references, hardcoded constants, format and unit mismatches, b"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把「审计器」做成 DSH 插件：agent 直接调用 officeaudit 工具，对任意 .xlsx/.xlsm 做一次结构化审计，输出 critical / warning / info 分级的问题清单 + markdown/JSON 报告，可选在工作簿副本里生成「模型审计」表。"
   },
   "schemaVersion": 1,
   "scripts": {

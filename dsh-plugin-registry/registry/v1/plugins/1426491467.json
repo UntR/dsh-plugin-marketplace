@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "63c59c5b4d49cc81f77dce31aa2779104cba980b"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1426491467",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-auto-think",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yezitotempeace/dsh-auto-think#63c59c5b4d49cc81f77dce31aa2779104cba980b",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-auto-think",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c710610d850d428dbbe1eea384a5c1d49a6768970937768dd6ef713b3c8b09a1/yezitotempeace/dsh-auto-think",
     "description": "Auto-expand the assistant reasoning block while it streams and fold it back when done; both directions animate, the sidebar switch only controls the automation."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "模型输出思考时自动展开思考块，思考结束后自动折叠——不用再手动点。 展开和折叠都带 200/180ms 的高度+透明度过渡动画，不管开关开没开、是不是手动点的，都不会「嗖」地闪一下。 左侧边栏底部有一个开关，只管「要不要自动」，不管动画。"
   },
   "schemaVersion": 1,
   "scripts": {

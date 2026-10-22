@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "6c35f79bfe67e79e8ba929d940f09e7a9d5599b2"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1427907524",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-loop-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lyc0110/dsh-loop-guard#6c35f79bfe67e79e8ba929d940f09e7a9d5599b2",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-loop-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4051558bd493a7e498faf47df7cbb21174f1a9a08fe3a7409c2484d26da8f86e/lyc0110/dsh-loop-guard",
     "description": "Guardrail for DSH llm/stream: detects when model reasoning or text degenerates into a periodic repetition loop and aborts the request instead of streaming until you give up."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 llm/stream 上装一道刹车：模型把思考（或正文）退化成重复循环时，立刻中断本次请求，而不是一直吐到用户手动放弃。"
   },
   "schemaVersion": 1,
   "scripts": {

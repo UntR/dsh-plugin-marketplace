@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "e5f2af68ed7941c219af5c313e1fda9dfb04e233"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1425903811",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dshx-ai-approval",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:callaumyan-design/dshx-ai-approval#e5f2af68ed7941c219af5c313e1fda9dfb04e233",
+    "version": "1.4.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dshx-ai-approval",
+    "status": "valid",
+    "type": "module",
+    "version": "1.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/868e8b64f530c162a5712e7a9c9e12a8d73ed63bb2b7deed992eb9ca7455a753/callaumyan-design/dshx-ai-approval",
     "description": "Adds an AI-reviewed sandbox escalation permission preset to DSH."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 增加一个 「由 AI 审批」 权限预设：工作区内照常操作，越权操作（一次性沙箱提权）先交给一个 AI 审核模型判断。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "afcf8153494dcd6736599075f3a4ed514e4b1a9a"
   },
   "github": {
@@ -47,27 +47,42 @@
   },
   "id": "gh:1426949359",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@xiciyang/training-pretrain",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@xiciyang/training-pretrain@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.mjs"
+      },
+      "./package.json": "./package.json",
+      "./tools": {
+        "default": "./src/tools.mjs"
+      }
+    },
+    "main": "./src/index.mjs",
+    "name": "@xiciyang/training-pretrain",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/810f5bc5bcf564466fbbdf29e2e837e2d70a0b5f656dda5516d91a437e74c627/xiciyang/training-pretrain",
     "description": "@xiciyang/training-pretrain — DSH 训练插件：可独立安装，依赖 @xiciyang/* 共享库"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "继续预训练（CPT）：把原始语料切成确定性分片，用真实 GPU 在基座模型上继续训练，并对「权重真的变了」「格式没有崩」两件事分别取证。"
   },
   "schemaVersion": 1,
   "scripts": {

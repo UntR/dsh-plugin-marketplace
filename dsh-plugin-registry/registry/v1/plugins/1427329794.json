@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
-    "headSha": "ee082fdbba32eba7849777dae515a4b381c295af"
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
+    "headSha": "57acd6850ec4bb357bcb764321cbbbd793a6a6ba"
   },
   "github": {
     "archived": false,
@@ -17,20 +17,20 @@
     "description": "Local file manager for DeepSeek Harness Web: browse, preview, download, upload, edit, rename and delete host files from the browser, over the same authenticated DSH web server",
     "fork": false,
     "forks": 0,
-    "headSha": "ee082fdbba32eba7849777dae515a4b381c295af",
+    "headSha": "57acd6850ec4bb357bcb764321cbbbd793a6a6ba",
     "homepageUrl": null,
-    "language": "HTML",
+    "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVRNTAg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b2f317e7f767cee99e0f0da0f04ddc40bea537e482d7eab3c1a470f0ea6f7065/DeveloperYe/dsh-local-files",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/1c81d324fd297bb8288a54dbff8f8af52ed9cf5587867bcd6fa8a3a568a5c2e3/DeveloperYe/dsh-local-files",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/110961681?u=bf1c8a7af7b319e52c7c309598c3d8c83da1e2af&v=4",
       "login": "DeveloperYe"
     },
-    "pushedAt": "2026-10-20T17:11:48Z",
+    "pushedAt": "2026-10-21T10:36:20Z",
     "slug": "DeveloperYe/dsh-local-files",
     "stars": 0,
     "topics": [
@@ -40,32 +40,47 @@
       "file-browser",
       "file-manager"
     ],
-    "updatedAt": "2026-10-20T17:12:07Z",
+    "updatedAt": "2026-10-21T10:36:23Z",
     "url": "https://github.com/DeveloperYe/dsh-local-files"
   },
   "id": "gh:1427329794",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-local-files",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-local-files@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-local-files",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b2f317e7f767cee99e0f0da0f04ddc40bea537e482d7eab3c1a470f0ea6f7065/DeveloperYe/dsh-local-files",
+    "coverUrl": "https://opengraph.githubassets.com/1c81d324fd297bb8288a54dbff8f8af52ed9cf5587867bcd6fa8a3a568a5c2e3/DeveloperYe/dsh-local-files",
     "description": "Local file manager for DeepSeek Harness Web: browse, preview, download, upload, edit, rename and delete host files from the browser, over the same authenticated DSH web server"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness Web 补上「本机文件管理」的本地小插件。零第三方依赖，只用 ctx.webServer 注册同源路由（同一个 3080 端口，复用 dsh-access-gate 的密码门），不引入新端口、不新起服务。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "67c49ddd32da3b6c267761f86ac1a6e6663418a0"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1427329829",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-media-tools",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:averyjohnkucan-arch/dsh-media-tools#67c49ddd32da3b6c267761f86ac1a6e6663418a0",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.mjs",
+      "./audio": "./src/audio-plugin.mjs",
+      "./video": "./src/video-plugin.mjs"
+    },
+    "main": null,
+    "name": "dsh-media-tools",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/90a638ed92e62e96c5e540271be7e8c8bbf110a7c041d5ad9b6b94e191d55ef1/averyjohnkucan-arch/dsh-media-tools",
     "description": "Portable audio and native temporal video plugins, agent skills, CLI and MCP server for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Two independent DSH/Cordis plugins, agent skills, a CLI and a stdio MCP server, with included on-demand Omni listening and native temporal video backends. The old Local AI v2 application does not need to run."
   },
   "schemaVersion": 1,
   "scripts": {

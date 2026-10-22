@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "bcd6874e7ef5408e859f22404ddf02fc79116560"
   },
   "github": {
@@ -48,27 +48,44 @@
   },
   "id": "gh:1426993254",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@apodemakeles/dsh-macos-notify",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:apodemakeles/dsh-macos-notify#bcd6874e7ef5408e859f22404ddf02fc79116560",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@apodemakeles/dsh-macos-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9469994e5394eb0eddeb20458fcaa9426429decbc7761001af52ded09a214813/apodemakeles/dsh-macos-notify",
     "description": "DeepSeek Harness (DSH) plugin: macOS turn-completion notifications and an unfocused-completion unread dot."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) plugin: when a conversation turn finishes while the harness window is not in the foreground, show a macOS system notification. It also leaves an in-app unread dot on sessions that finished while you were away."
   },
   "schemaVersion": 1,
   "scripts": {

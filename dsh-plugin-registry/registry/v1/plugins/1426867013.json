@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
     "headSha": "2863581f255a6f8fa5714563ff64507ad8a1c439"
   },
   "github": {
@@ -61,7 +61,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -71,14 +71,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-magic-context",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c96511e08915dbbbe392b196db912fa89cbd46086ffc9f0db8c268238f5dc3c4/wk544863858/dsh-plugin-magic-context",
     "description": "Magic Context for DeepSeek Harness: reversible context reclaim, an out-of-band historian, an m[0]/m[1] memory baseline, project memories, and the compaction seam."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-plugin-magic-context brings Magic Context's context management to DeepSeek Harness (DSH): reversible tool-result reclaim, an out-of-band historian that compacts history without touching the live prefix, a frozen m[0]/m[1] memory baseline, and per-project memory with FTS + loc"
   },
   "schemaVersion": 1,
   "scripts": {

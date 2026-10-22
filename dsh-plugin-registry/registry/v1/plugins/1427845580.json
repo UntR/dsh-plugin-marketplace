@@ -5,9 +5,9 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-21T09:20:09.852Z",
-    "enrichmentStatus": "failed",
-    "headSha": "430a3f060c89719dd64db43564c9c5e6cc153201"
+    "enrichedAt": "2026-10-22T09:23:15.329Z",
+    "enrichmentStatus": "ok",
+    "headSha": "ada591cae2743f1c90b24e2025e74a857efdfe1b"
   },
   "github": {
     "archived": false,
@@ -17,26 +17,26 @@
     "description": "A DeepSeek Harness plugin for AI-driven PCB design in KiCad. A plugin that lets DeepSeek Harness design PCBs with KiCad.",
     "fork": false,
     "forks": 0,
-    "headSha": "430a3f060c89719dd64db43564c9c5e6cc153201",
+    "headSha": "ada591cae2743f1c90b24e2025e74a857efdfe1b",
     "homepageUrl": null,
-    "language": "TypeScript",
+    "language": "Python",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVRsxzA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/cbc7ca606b7f631b9a7e3c34ddbe36c0128cfeb65da41652da3deab05cabb2e0/LuYanFCP/dsh-kicad",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/86dd9f7b7e862fbd7efda45d655468742573d8c81cfd913eb6031198fb54e808/LuYanFCP/dsh-kicad",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/25530442?u=678a6b685c2d80ed8c9c9270fa3683a437bd0315&v=4",
       "login": "LuYanFCP"
     },
-    "pushedAt": "2026-10-21T09:19:02Z",
+    "pushedAt": "2026-10-22T08:45:25Z",
     "slug": "LuYanFCP/dsh-kicad",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-21T08:32:16Z",
+    "updatedAt": "2026-10-22T08:59:06Z",
     "url": "https://github.com/LuYanFCP/dsh-kicad"
   },
   "id": "gh:1427845580",
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,41 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/dsh-kicad/lib/index.js",
+      "./bridge": "./dist/dsh-kicad/lib/bridge.js",
+      "./bridge/icon": "./dist/dsh-kicad/icon.svg",
+      "./bridge/locale/*.json": "./dist/dsh-kicad/locale/bridge/*.json",
+      "./client": "./dist/dsh-kicad/lib/client.js",
+      "./cordis.patch.yml": "./dist/dsh-kicad/cordis.patch.yml",
+      "./icon": "./dist/dsh-kicad/icon.svg",
+      "./locale/*.json": "./dist/dsh-kicad/locale/*.json",
+      "./package.json": "./package.json",
+      "./policy": "./dist/dsh-kicad/lib/policy.js",
+      "./policy/icon": "./dist/dsh-kicad/icon.svg",
+      "./policy/locale/*.json": "./dist/dsh-kicad/locale/policy/*.json",
+      "./presets/*.yml": "./dist/dsh-kicad/presets/*.yml",
+      "./skills": "./dist/dsh-kicad/lib/skills.js",
+      "./skills/icon": "./dist/dsh-kicad/icon.svg",
+      "./skills/locale/*.json": "./dist/dsh-kicad/locale/skills/*.json",
+      "./tools": "./dist/dsh-kicad/lib/tools.js",
+      "./tools/icon": "./dist/dsh-kicad/icon.svg",
+      "./tools/locale/*.json": "./dist/dsh-kicad/locale/tools/*.json"
+    },
+    "main": "./dist/dsh-kicad/lib/index.js",
+    "name": "dsh-kicad",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/cbc7ca606b7f631b9a7e3c34ddbe36c0128cfeb65da41652da3deab05cabb2e0/LuYanFCP/dsh-kicad",
+    "coverUrl": "https://opengraph.githubassets.com/86dd9f7b7e862fbd7efda45d655468742573d8c81cfd913eb6031198fb54e808/LuYanFCP/dsh-kicad",
     "description": "A DeepSeek Harness plugin for AI-driven PCB design in KiCad. A plugin that lets DeepSeek Harness design PCBs with KiCad."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "KiCad for DeepSeek Harness (dsh): a native dsh plugin bundle that lets the agent read, edit and check KiCad schematics, with KiCad itself (kicad-cli) deciding whether the design is correct."
   },
   "schemaVersion": 1,
   "scripts": {
