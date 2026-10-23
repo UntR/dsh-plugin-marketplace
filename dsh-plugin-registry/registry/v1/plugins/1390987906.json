@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-22T09:23:15.329Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-23T09:15:30.404Z",
+    "enrichmentStatus": "ok",
     "headSha": "a12bbb94f66829e092cd7e3b6431c8a23d357fe5"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1390987906",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@240xu/dsh-session-search",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@240xu/dsh-session-search@0.1.11",
+    "version": "0.1.11"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.11",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./indexer": "./src/indexer.js",
+      "./package.json": "./package.json",
+      "./session-file": "./src/session-file.js"
+    },
+    "main": "src/index.js",
+    "name": "@240xu/dsh-session-search",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.11"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9146bb4a8f2aaaf40ea5a543601020e405ea05ccab4545ec5b003ec0e5345187/240xu/dsh-session-search",
     "description": "DSH web plugin: cross-session full-text search — incremental index of all session logs, fenced API, agent tool session_search, standalone panel. 跨会话全文搜索（增量索引+信任围栏+agent 工具+独立面板）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH web 插件：跨会话全文搜索。对 /.dsh/sessions 下全部会话日志（多帧 zstd，v3 格式）建立消息级全文索引，一条关键词查回所有历史会话的命中位置 （sessionId + seq ±60 字符窗口摘录）。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-22T09:23:15.329Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-23T09:15:30.404Z",
+    "enrichmentStatus": "ok",
     "headSha": "86008c2df0ffc49115037aef0f6194697b68951b"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1389945615",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@240xu/dsh-message-ops",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@240xu/dsh-message-ops@0.11.1",
+    "version": "0.11.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.11.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./src/client.js",
+      "./ops-core": "./src/ops-core.js",
+      "./package.json": "./package.json",
+      "./session-file": "./src/session-file.js"
+    },
+    "main": "src/index.js",
+    "name": "@240xu/dsh-message-ops",
+    "status": "valid",
+    "type": "module",
+    "version": "0.11.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2d736159afd7a5636d060ca382ac01dd526867d2c42ac2a5163904388ac55579/240xu/dsh-message-ops",
     "description": "DSH web plugin: message rollback + delete + branch in one. 消息回滚/删除/分支三合一（surface replace 语义，磁盘级分支 fork，零 npm 依赖，Windows/Termux 双端）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH web 插件：消息回滚 + 删除 + 恢复。只补 dsh 官方没有的能力。"
   },
   "schemaVersion": 1,
   "scripts": {
