@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "2f37862499c912449b7ff7e36c4e7d5c3965a0c9"
   },
   "github": {
@@ -45,27 +45,44 @@
   },
   "id": "gh:1429164226",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@zengshuaishuai/dsh-mcp-manager-web",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zengshuaishuai/dsh-mcp-manager-web#2f37862499c912449b7ff7e36c4e7d5c3965a0c9",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@zengshuaishuai/dsh-mcp-manager-web",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/604b8052139545f79dbee8bd13aee596d9056c6e49ce633b922a248a1d51836b/zengshuaishuai/dsh-mcp-manager-web",
     "description": "DeepSeek Harness 的 MCP 可视化管理器：列表 + 详情页，查看工具 schema / 提示 / 资源，支持增删启停与连接测试"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的 MCP 可视化管理器：在 设置 → MCP 里查看、添加、编辑、启停 MCP 服务器，并且能点进单个服务，看到它注册了哪些工具、每个工具的参数结构，以及服务端提供的提示（prompts）和资源（resources）。"
   },
   "schemaVersion": 1,
   "scripts": {

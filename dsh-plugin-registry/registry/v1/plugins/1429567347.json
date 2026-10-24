@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "9c497d23ce2818149a8001892d13372cb110a3ab"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1429567347",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-topic-for-each-turn",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Pandasywithfantasy/dsh-topic-for-each-turn#9c497d23ce2818149a8001892d13372cb110a3ab",
+    "version": "0.1.0-experimental.17"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-topic-for-each-turn",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-experimental.17"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ee84b1ac8e833d85c1d4b3fd056969e30c88baf1a1c9e7202fa93e8cf2f31593/Pandasywithfantasy/dsh-topic-for-each-turn",
     "description": "Per-turn topic and conclusion outline plugin for DeepSeek Harness (DSH): native right-sidebar topics, fork inheritance, up to 3 concurrent sessions."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "适用于 DeepSeek Harness（0.2.0-rc.2 及同系列 0.2.1-rc.1）的 Host + Client 插件。为每个已结束的真实用户轮次自动或手动提炼 8–15 字主题标题、一句话结论详情、稳定事项标签（最多 2 项）及可选历史轮次关联（接着 / 回到 / 另探），并在原生右侧轮次刻度浮层与官方右侧栏面板中展示与管理。模型直接复用当前 DSH 已配置的服务商与凭证，插件不保存密钥。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "7975253a4f5606f8df48afc9569eff4e87694c39"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1428278019",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/browser-use-native",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:AythyaCrispus/dsh-browser-use-native#7975253a4f5606f8df48afc9569eff4e87694c39",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "index.js",
+    "name": "@local/browser-use-native",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ca0776bd0496e1a2d14a0ca22374e9965ac721f4747a3391765ca073a4d69958/AythyaCrispus/dsh-browser-use-native",
     "description": "DSH Host plugin: 17 Playwright browser tools driven by stable accessibility-tree uids (snapshot, click, fill, drag, download)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "@local/browser-use-native 是 DSH（DeepSeek Harness）的 Host 侧浏览器插件： 在 Host 进程内通过 Playwright 驱动真实 Chromium，向模型暴露 17 个 browser 工具。 工具通过 ctx.tools 注册，配置只包含浏览器参数，Playwright 负责发现可用的 Chromium。"
   },
   "schemaVersion": 1,
   "scripts": {

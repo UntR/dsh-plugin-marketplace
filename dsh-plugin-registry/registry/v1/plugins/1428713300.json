@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "6c5c9cca4e01c9bc050f86bccbb97d9b311b0a30"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1428713300",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-auto-update",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Wonderow666/dsh-auto-update#6c5c9cca4e01c9bc050f86bccbb97d9b311b0a30",
+    "version": "0.2.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-auto-update",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/467cbedb8555c2564299df5540b18f134b1fe850d7d091471ff0add347e85da0/Wonderow666/dsh-auto-update",
     "description": "Check, install and roll back DeepSeek Harness CLI updates from the web settings page - with health-checked restart and automatic rollback."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）CLI 装一个能安全升级自己的插件：检查 @deepseek-ai/dsh 新版本、后台安装到独立目录、切换启动指针、健康检查失败自动回滚。网页端设置页里点按钮就行，安装目录（版本装在哪块盘）也能在同一个卡片里改。"
   },
   "schemaVersion": 1,
   "scripts": {

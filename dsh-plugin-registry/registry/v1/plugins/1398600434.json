@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "591fa721d84c143d3c2fa15b371f7395f8f15949"
   },
   "github": {
@@ -48,27 +48,44 @@
   },
   "id": "gh:1398600434",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-llm-codebuddy",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-plugin-llm-codebuddy@1.2.0",
+    "version": "1.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": {
+        "default": "./dist/client.js"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "dist/index.js",
+    "name": "dsh-plugin-llm-codebuddy",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f979500cbf745575b23edecbb31c849b580e17389b3876b158cc0ea3db2d1d4e/minglo/dsh-plugin-llm-codebuddy",
     "description": "Tencent CodeBuddy LLM adapter for DeepSeek Harness (dsh)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "腾讯 CodeBuddy 的 DeepSeek Harness（dsh）适配插件。"
   },
   "schemaVersion": 1,
   "scripts": {

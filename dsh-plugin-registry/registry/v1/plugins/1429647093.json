@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "ac5a687a2f204889c636816c9ca6169999ea5003"
   },
   "github": {
@@ -43,27 +43,40 @@
   },
   "id": "gh:1429647093",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@gongfpp/dsh-novel-fish",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:gongfpp/dsh-novel-fish#ac5a687a2f204889c636816c9ca6169999ea5003",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./assets/icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@gongfpp/dsh-novel-fish",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fe2bbcb90275510006d6a6a70396381bf80d94c1ddcc13d359533f7fe8fda5d7/gongfpp/dsh-novel-fish",
     "description": "Read local novels only when expanding selected real DSH reasoning steps. Local-only; no model requests."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "只在真实聊天中选中的思考步骤里阅读本地小说。主动展开一处读一段；重复展开不跳段，另一处首次展开才继续。小说不混入模型思考、不写入会话、不发送给模型。"
   },
   "schemaVersion": 1,
   "scripts": {

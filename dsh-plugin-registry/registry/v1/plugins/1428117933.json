@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "611b2d97aad15866ae630e48f09e7a26e1a74d3e"
   },
   "github": {
@@ -48,27 +48,39 @@
   },
   "id": "gh:1428117933",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-radeon-capacity",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lcy362/dsh-radeon-capacity#611b2d97aad15866ae630e48f09e7a26e1a74d3e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host/index.js",
+      "./catalog": "./src/shared/catalog.js",
+      "./client": "./src/client/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/host/index.js",
+    "name": "dsh-radeon-capacity",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e676421e50055d0607230c5a250e955c06464611b532319125784d38336ea1cb/lcy362/dsh-radeon-capacity",
     "description": "AMD Radeon Cloud model capacity (AI Capacity) readout for DeepSeek Harness — shows per-model concurrency headroom in the model picker, on the same row as the model name"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的独立插件：在选模型之前，就能看到 AMD Radeon Cloud（Token Factory）每个模型现在忙不忙。"
   },
   "schemaVersion": 1,
   "scripts": {

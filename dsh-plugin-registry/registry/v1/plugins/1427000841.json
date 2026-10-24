@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "9af4d277dee87943eb0b7ce5c1130acf77081b09"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1427000841",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-macos-notifications",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ihodorchenko/dsh-macos-notifications#9af4d277dee87943eb0b7ce5c1130acf77081b09",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.4",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "index.js",
+    "name": "dsh-macos-notifications",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/dc7df1bf6b6ca8e7ee314495c673ad46ae70c1c9b81f9013556879a095a33731/ihodorchenko/dsh-macos-notifications",
     "description": "Плагин нотификаций для DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A Host plugin for DeepSeek Harness that posts native macOS notifications through Notification Center. It fills the gap where the app only notifies about its own updates, not about the agent's work."
   },
   "schemaVersion": 1,
   "scripts": {

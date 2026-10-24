@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "4c66ab112d361f9a4b71279b3c6069f70bee2c5e"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1429165194",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mp-catalog-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dingchenhui0618-arch/dsh-mp-catalog-guard#4c66ab112d361f9a4b71279b3c6069f70bee2c5e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-mp-catalog-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8fae6b46105a39448f9b75739c024ba656f640850f696efc63849e06dd417db5/dingchenhui0618-arch/dsh-mp-catalog-guard",
     "description": "WeChat mini-program content catalog guard for DSH: integer amountFen, money()-only rendering, required fields, duplicate copy, image paths — issues plus an applyable unified diff (dry-run by default)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "微信小程序内容目录的守卫：一个 DSH 插件 + 一个同源的命令行工具，检查 catalog.json 里的金额是不是整数分、页面上的价格是不是都走了 money()、必填字段/重复文案/图片路径有没有问题，输出一份问题清单和一份可直接应用的 unified diff。默认 dry-run，不写文件。"
   },
   "schemaVersion": 1,
   "scripts": {

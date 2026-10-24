@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "bbab87f40446928af597fa74353715628ceb7948"
   },
   "github": {
@@ -48,27 +48,41 @@
   },
   "id": "gh:1427901254",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-jev-progress",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-jev-progress@0.5.5",
+    "version": "0.5.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.5",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./core": "./src/core/index.js",
+      "./hidden": "./src/host-hidden.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/host.js",
+    "name": "dsh-jev-progress",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c2ccfa91ed20a66ca7b5fb985ca64691711e6910d18066f808e5859d04f734bc/Han-1413141/dsh-jev-thinkout",
     "description": "JeV 思维链外显：将 DeepSeek 长思考中的任务规划、执行进度与阶段小结呈现为聊天正文，支持 DSH 原生翻译、轻量摘要和父子任务流程图，保持主模型上下文不变。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "JeV 思维链外显，让 DeepSeek 的任务进展看得见。"
   },
   "schemaVersion": 1,
   "scripts": {

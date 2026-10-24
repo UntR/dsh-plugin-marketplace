@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "4397b2dfffb33f92e7f0225d976a5dd9e47232b4"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1428582868",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-curate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:111222cjyq/dsh-curate#4397b2dfffb33f92e7f0225d976a5dd9e47232b4",
+    "version": "0.5.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-curate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/aa55e01bd426955a48ea8adde5c750ba4853b8477db25fdb6dcd2df0c2da1e5a/111222cjyq/dsh-curate",
     "description": "Human-in-the-loop context curation workbench for DeepSeek Harness: triage turns, rewrite messages, then compress the session history in place with model-written summaries or the official /compact. Every write is backed up locally."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English: a human-in-the-loop context curation workbench for DeepSeek Harness. It lists the model-visible session as turns, lets you mark whole turns or single messages Important (keep verbatim) / Normal / Minor (summarize) and rewrite user, assistant, tool-result and injected-con"
   },
   "schemaVersion": 1,
   "scripts": {

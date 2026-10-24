@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "ffeb4f8bb4f758b434ceabd9d1412df15eeb7610"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1429447451",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-restart-control",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:androidly/dsh-restart-control#ffeb4f8bb4f758b434ceabd9d1412df15eeb7610",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-restart-control",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e6d88c1ee74729d2ec0a720f18ee2fffc41f55dc91ff6ead6344434a599d9e90/androidly/dsh-restart-control",
     "description": "DSH Web sidebar restart control: graceful host exit, supervisor-aware replacement, pid-verified status notice."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DSH Web plugin that restarts the running host from the sidebar, and keeps reporting until a new process answers."
   },
   "schemaVersion": 1,
   "scripts": {

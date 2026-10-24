@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "56022044764dfe1cfd9cc2934d9f139537fd3613"
   },
   "github": {
@@ -43,27 +43,40 @@
   },
   "id": "gh:1428211955",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-quote-annotate-pro",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:DoggyHU/dsh-quote-annotate-pro-standalone#56022044764dfe1cfd9cc2934d9f139537fd3613",
+    "version": "0.3.10"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.15",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-quote-annotate-pro",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.10"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f82a29278e21309301a3e463d0477f1d59f6a9b7eeffffc94b4cee8f7fde63cf/DoggyHU/dsh-quote-annotate-pro-standalone",
     "description": "本地 fork（MIT）：上游 dsh-quote-annotate-pro + 文档预览划词时引用块带上来源文件路径"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "划词 → 批注 → 引用；发送之后，引用块仍然看得见，点一下就能回到原文。"
   },
   "schemaVersion": 1,
   "scripts": {

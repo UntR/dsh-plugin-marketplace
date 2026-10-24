@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "4cd06ef2e44097a1c054ba599c9af2e6e230249f"
   },
   "github": {
@@ -49,27 +49,37 @@
   },
   "id": "gh:1429478680",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-medical-literature",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-plugin-medical-literature@0.6.1",
+    "version": "0.6.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.6.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-medical-literature",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/010ea375e5a0e771418700b358053fc25dfecf0c025da73b0ddeb1e633e4adb7/leexrisy/dsh-plugin-medical-literature",
     "description": "Medical literature search, citation formatting, and open-access full text for DeepSeek Harness (PubMed, Europe PMC, arXiv, bioRxiv, medRxiv)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "项目想法来源于本人之前想做的deepresearch，好像目前没有做医学文献检索的就用deepseek改了一版适配dsh的插件。简单用gemini 4 argon测试了一下检索skill，可以下载之后让agent根据用户习惯来修改不同检索源的检索skill，以下为插件介绍："
   },
   "schemaVersion": 1,
   "scripts": {

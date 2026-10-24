@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "5c554347d45b31f2450f38207fd3631a6ca85d0f"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1429103083",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-integration-settings",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:2384418321/dsh-integration-settings#5c554347d45b31f2450f38207fd3631a6ca85d0f",
+    "version": "0.2.10-dsh.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-integration-settings",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.10-dsh.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/dd5bea3dc5358e85dad2fe449a997a5a793c287b229f80f8df012496922d353e/2384418321/dsh-integration-settings",
     "description": "DSH 设置页：MCP 管理与思考档位解锁（本地分叉版）— 思考档位与可用模型清单分离，先预览差异再写入。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）设置里补上两个可视化菜单：MCP 管理 与 思考解锁。后者把平时只能手改文件的事变成点选操作——自动识别每个 OpenAI 兼容网关真正支持的思考档位并写回模型选择器，也能设成定时自动更新。"
   },
   "schemaVersion": 1,
   "scripts": {

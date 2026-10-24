@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "965b58403c154d19925187b48a5c1452409f27cf"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1429463069",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-branch-flow",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:crystal-hang/dsh-branch-flow#965b58403c154d19925187b48a5c1452409f27cf",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-branch-flow",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/21b01fd6db87b74f06eea6b54ec965da142a4f1955699c9c48070c2b766db0fd/crystal-hang/dsh-branch-flow",
     "description": "DSH Web GUI plugin: rule-checked branches from production6, convention-checked commits, AI branch names, one-click merge into stage."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A branch-flow panel for the DSH Web GUI. A status chip sits inside the composer; click it to open the full branch / commit / merge panel."
   },
   "schemaVersion": 1,
   "scripts": {

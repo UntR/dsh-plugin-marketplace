@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "bd6f2015931d192be0a7e4f2d9c56faabf3b2775"
   },
   "github": {
@@ -42,27 +42,42 @@
   },
   "id": "gh:1429613949",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-preset-inspector",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:anonamerjaxon-dev/dsh-preset-inspector#bd6f2015931d192be0a7e4f2d9c56faabf3b2775",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-preset-inspector",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e96ba74844c9efcbf8caf910adf0499fe0b4fbce15095aa168e0374f82516835/anonamerjaxon-dev/dsh-preset-inspector",
     "description": "Live preset inventory for DeepSeek Harness: which preset holds which tools, MCP servers and skills, in the Web GUI and from the CLI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A read-only panel in the DeepSeek Harness Web GUI that answers \"what is actually inside preset X?\" — and a pair of CLIs that answer the same question from a terminal, plus one that moves a plugin between presets."
   },
   "schemaVersion": 1,
   "scripts": {

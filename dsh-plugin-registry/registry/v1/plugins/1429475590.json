@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "f48ef2e11739f75007de1055494518c2c88445e0"
   },
   "github": {
@@ -47,27 +47,43 @@
   },
   "id": "gh:1429475590",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@sovlookup/dsh-mise",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:SOVLOOKUP/dsh-mise#f48ef2e11739f75007de1055494518c2c88445e0",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": "./dist/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "./dist/index.js",
+    "name": "@sovlookup/dsh-mise",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/373b1d7e59cbfbfa70a52661c8f21d1097ad2aa25e77008d31da0452494a7e5e/SOVLOOKUP/dsh-mise",
     "description": "Toolchain manager for DeepSeek Harness (backed by mise): a settings page for installed and available versions, .mise.toml-driven install / use / uninstall / prune, PATH activation, and nine agent tools."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Toolchain manager for DeepSeek Harness (dsh), backed by mise. One settings page shows what is installed and what is available, and installs, pins, uninstalls and prunes by directory (.mise.toml-driven). Nine agent tools expose the same surface to the model, so an agent can see th"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "08f8398c28acb692222baf04a5b109ab7240322f"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1429316873",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@zyfgood/dsh-mobile",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@zyfgood/dsh-mobile@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@zyfgood/dsh-mobile",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/578e2fc7cdb2c250f2d88d538477d6b6b0bc1d525b32b21af1ebc7c2e2d92dca/zyfgood/dsh-mobile",
     "description": "DSH mobile web UI: browse all sessions and continue conversations from a phone on the same LAN. ??? Web UI ???"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "这不是把桌面 Web GUI 简单缩小的响应式页面，而是一个独立的、为手机重写的轻量客户端：会话列表、聊天记录、流式输出、工具调用折叠、历史翻页、新建会话和停止回复都针对触屏重新设计。宿主端直接复用 DSH 的 ctx.sessionController，不直接读写 session JSONL，也不修改会话内容。"
   },
   "schemaVersion": 1,
   "scripts": {

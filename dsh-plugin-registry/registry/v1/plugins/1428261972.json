@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
-    "headSha": "39825c62c5ca8189b6366cb79965b766e3709d10"
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
+    "headSha": "7c5981fbe24339910cdf6cbb4af424ccf7f7a263"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-21T11:05:53Z",
     "databaseId": 1428261972,
     "defaultBranch": "main",
-    "description": "Lock DSH sessions so they cannot be archived | DSH 会话锁插件（由 DeepSeek Harness 维护）",
+    "description": "Add a per-session lock to the DSH Web sidebar; archiving a locked session through the client is refused | DSH 会话锁插件（由 DeepSeek Harness 维护）",
     "fork": false,
     "forks": 0,
-    "headSha": "39825c62c5ca8189b6366cb79965b766e3709d10",
+    "headSha": "7c5981fbe24339910cdf6cbb4af424ccf7f7a263",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVSGMVA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/751f7ccec1ff37b7c7b6879ebeb1a6df4d824e4a302f88ee63a2ef7cfc19aa84/Setsuna-Kitahara/dsh-session-lock",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/760b218f388fd96d93798767e34b0102ed7d29638cc007a708660930ecf315ff/Setsuna-Kitahara/dsh-session-lock",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/33174519?u=bd410f622e64608d1bcebb3eee0a9545f6b77043&v=4",
       "login": "Setsuna-Kitahara"
     },
-    "pushedAt": "2026-10-21T15:58:00Z",
+    "pushedAt": "2026-10-24T08:23:51Z",
     "slug": "Setsuna-Kitahara/dsh-session-lock",
     "stars": 0,
     "topics": [
@@ -39,32 +39,47 @@
       "dsh-plugin",
       "session-management"
     ],
-    "updatedAt": "2026-10-21T15:52:59Z",
+    "updatedAt": "2026-10-24T08:24:14Z",
     "url": "https://github.com/Setsuna-Kitahara/dsh-session-lock"
   },
   "id": "gh:1428261972",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-lock",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Setsuna-Kitahara/dsh-session-lock#7c5981fbe24339910cdf6cbb4af424ccf7f7a263",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-lock",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/751f7ccec1ff37b7c7b6879ebeb1a6df4d824e4a302f88ee63a2ef7cfc19aa84/Setsuna-Kitahara/dsh-session-lock",
-    "description": "Lock DSH sessions so they cannot be archived | DSH 会话锁插件（由 DeepSeek Harness 维护）"
+    "coverUrl": "https://opengraph.githubassets.com/760b218f388fd96d93798767e34b0102ed7d29638cc007a708660930ecf315ff/Setsuna-Kitahara/dsh-session-lock",
+    "description": "Add a per-session lock to the DSH Web sidebar; archiving a locked session through the client is refused | DSH 会话锁插件（由 DeepSeek Harness 维护）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）的会话上一把锁：锁住的会话，浏览器侧的归档入口都动不了它。"
   },
   "schemaVersion": 1,
   "scripts": {

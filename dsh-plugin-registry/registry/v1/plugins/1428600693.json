@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "234de7188552bc598e2789f506f74e36520f3271"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1428600693",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-quick-prompt",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-quick-prompt@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-quick-prompt",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ecd54c662b3c2bfecaa16661aed512d3c008fac431ad7b3079bd1e1317e90c87/SouthernSibyl/dsh-quick-prompt",
     "description": "DSH composer button that rewrites the current draft into a precise prompt in place, in one click, with revert."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 已经有 /promptify，流程是「敲指令 → 等模型回完 → 复制 → 粘回输入框」。 这个插件把整条链路压成一个动作：点一下按钮，当前草稿原地变成一条精确、可直接执行的提示词，不满意一键恢复原文。"
   },
   "schemaVersion": 1,
   "scripts": {

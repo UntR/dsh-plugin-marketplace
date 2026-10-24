@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "54458c51adad46289240433fe69ac3d6ef1aa3e5"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1429387536",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-req-search",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:K1tor/dsh-req-search#54458c51adad46289240433fe69ac3d6ef1aa3e5",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/host.js",
+    "name": "dsh-req-search",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/afe260aad6b5ed8e1ad1e15878da5fe9543e5603db27118ba82a900e8e805e3b/K1tor/dsh-req-search",
     "description": "DSH 后台项目研究引擎：说出需求即自动在后台调研并把结果交给 Agent"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的全局项目研究引擎：挂在 agent/pre-step 这一个公共执行层上，任何入口提出的开发任务都会按任务类型自动决定是否后台调研，并把结论注入当前 Agent 的上下文。"
   },
   "schemaVersion": 1,
   "scripts": {

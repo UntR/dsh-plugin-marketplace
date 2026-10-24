@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "8eded61beb48529642f21a74802f508bd8839848"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVTBMNA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/03746c63009e4addf1645eff25a7bd68c93c394fe7ddffc192d74e4ed72a4676/kx121/dsh-github-digest",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f92099b7feb6775f4b3ec9d5d1bd3f3c45950bd2f42f55e6e59595b0869db0a9/kx121/dsh-github-digest",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/187082746?u=11e61d73079030ef031bf1618a24a44b64725322&v=4",
       "login": "kx121"
     },
     "pushedAt": "2026-10-23T04:46:35Z",
     "slug": "kx121/dsh-github-digest",
-    "stars": 1,
+    "stars": 2,
     "topics": [
       "automation",
       "deepseek-harness",
@@ -40,32 +40,44 @@
       "dsh-plugin",
       "github"
     ],
-    "updatedAt": "2026-10-23T04:46:39Z",
+    "updatedAt": "2026-10-24T07:16:38Z",
     "url": "https://github.com/kx121/dsh-github-digest"
   },
   "id": "gh:1429228596",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-github-digest",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kx121/dsh-github-digest#8eded61beb48529642f21a74802f508bd8839848",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-github-digest",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/03746c63009e4addf1645eff25a7bd68c93c394fe7ddffc192d74e4ed72a4676/kx121/dsh-github-digest",
+    "coverUrl": "https://opengraph.githubassets.com/f92099b7feb6775f4b3ec9d5d1bd3f3c45950bd2f42f55e6e59595b0869db0a9/kx121/dsh-github-digest",
     "description": "到点叫醒 DSH 会话，翻你关注的 GitHub 仓库和主题，挑出值得跟的变化，写日报、记判重表。只读。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness（dsh）插件。定时唤醒一个会话，去扫你关注的仓库，挑出值得看的变更写成日报。 只读，不碰 GitHub 的任何写操作。"
   },
   "schemaVersion": 1,
   "scripts": {

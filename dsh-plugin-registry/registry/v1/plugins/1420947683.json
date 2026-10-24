@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "35b6768368fc9dc8b2a56d9763d37d29d57822e2"
   },
   "github": {
@@ -41,27 +41,43 @@
   },
   "id": "gh:1420947683",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-humanize",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Lry722/dsh-humanize#35b6768368fc9dc8b2a56d9763d37d29d57822e2",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./types.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-humanize",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/973a562d0c772f51a6b75a7f7a9b8cd0af067e27bd78e7be6431bac1a2d96f77/Lry722/dsh-humanize",
-    "description": ""
+    "description": "dsh-humanize is a plugin for deepseek-harness. It targets the machine-sounding jargon that coding-specialized models produce on complex tasks."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-humanize is a plugin for deepseek-harness. It targets the machine-sounding jargon that coding-specialized models produce on complex tasks."
   },
   "schemaVersion": 1,
   "scripts": {

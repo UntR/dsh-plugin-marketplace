@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "a1c9725b83b56de48f684a876f0ea997cfabaad1"
   },
   "github": {
@@ -48,27 +48,40 @@
   },
   "id": "gh:1428147033",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-notification-desktop",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Adingo001/dsh-notification-desktop#a1c9725b83b56de48f684a876f0ea997cfabaad1",
+    "version": "0.3.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-notification-desktop",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/482deb6bdc916a0f4c7bb0f4dcc63ad84def5ff462fe45efe04e77e03f553278/Adingo001/dsh-notification-desktop",
     "description": "Turn-finished desktop notifications for DeepSeek Harness 0.2.x · DSH 完成提醒（宿主投影 + WinRT toast）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 0.2.x 用的「一轮跑完就弹系统通知」插件。上游 omdsh-dev/dsh-notification 只覆盖 0.1.1 / 0.1.2 的客户端布局，这个包是它的 0.2.x 移植版。"
   },
   "schemaVersion": 1,
   "scripts": {

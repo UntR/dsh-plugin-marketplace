@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "ac3767dbc50fe7a98a84ef5c08afedb78795dd1d"
   },
   "github": {
@@ -47,27 +47,41 @@
   },
   "id": "gh:1428450473",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-hub",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:awawuming/dsh-model-hub#ac3767dbc50fe7a98a84ef5c08afedb78795dd1d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./entry.js",
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "entry.js",
+    "name": "dsh-model-hub",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/63ec721368556278e9638676150db6c4c01ad6c2c7f29ade653142ac7ed0f517/awawuming/dsh-model-hub",
     "description": "DeepSeek Harness 模型选择器：先按 API 通道、再按模型家族分组的下拉菜单，中转站几百个模型也能秒找。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把模型列表从「一长条平铺」变成「通道 → 家族」两层目录：DeepSeek 账号 / DeepSeek 官方 / 自建中转站 / 本地 Ollama 各占一行，进入通道后再按 DeepSeek、OpenAI GPT、Anthropic Claude、Google Gemini、Qwen、Kimi、GLM … 分组。OpenRouter 这类中转站动辄 400+ 个模型时，比原生列表好找一个数量级。"
   },
   "schemaVersion": 1,
   "scripts": {

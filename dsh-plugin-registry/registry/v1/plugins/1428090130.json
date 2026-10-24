@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "6066190b743b01ea864c9608e46ef745ddef1174"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1428090130",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/live-narrator",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yinque91/dsh-live-narrator#6066190b743b01ea864c9608e46ef745ddef1174",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/live-narrator",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/480ae9a1ccffadcbb2dfabf594f9591380e5d781aa865bff199a2a4d19fe4af0/yinque91/dsh-live-narrator",
     "description": "小嘴 · 实时解说 —— DeepSeek Harness 输入框下方的语音解说插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "这是一个 DeepSeek Harness（DSH） 的 Web 客户端插件。它不做任何模型调用——只是把 agent 正在做的事（思考、调用工具、读文件、跑命令）翻译成一句人话，用浏览器自带的语音合成念出来。"
   },
   "schemaVersion": 1,
   "scripts": {

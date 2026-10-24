@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "7e4326c7ffc90e861d31fcbeccd96474b3614c7e"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1429667157",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-hark-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xieyh2002/dsh-hark-bridge#7e4326c7ffc90e861d31fcbeccd96474b3614c7e",
+    "version": "0.9.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-hark-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e3776ac03620538eb316225486e93c845e2721f9689b9f8c7c8fca8cc4b8c840/xieyh2002/dsh-hark-bridge",
     "description": "让 DeepSeek Harness 把需求和代码交给 Hark：Hark 出方案 → DSH 派子代理实现 → 代码回 Hark 审查。通过 ego-browser 驱动你已登录的 ego 浏览器。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 遇到大需求时容易一头扎进代码里，缺少「先想清楚再动手」和「写完再审一遍」的环节。这个插件把这两步外包给 Hark：它在你正在用的浏览器里打开 Hark 对话页，替你问、替你读回复，再把结果作为工具结果交回 DSH。"
   },
   "schemaVersion": 1,
   "scripts": {

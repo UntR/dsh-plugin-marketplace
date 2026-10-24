@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "d4c595917651d1aa17f87aa699a82e1e6ebff0e1"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1429249997",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-hindsight-memory",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:meisijiya/dsh-hindsight-memory#d4c595917651d1aa17f87aa699a82e1e6ebff0e1",
+    "version": "0.7.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./src/ui-client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-hindsight-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8a7f2ecbaa44bf98578bdc2894c353aff89dcf4d0a1c53d57a9a1c05e21ed293/meisijiya/dsh-hindsight-memory",
     "description": "DSH 插件：把 Hindsight 记忆服务接到 DeepSeek Harness，与 omp 共用同一记忆库/同一套标签语义（单库 + 全局层/项目层双层标签），模型只看见封装后的语义化工具"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH ⇄ omp 记忆行为对齐插件（中间层）"
   },
   "schemaVersion": 1,
   "scripts": {

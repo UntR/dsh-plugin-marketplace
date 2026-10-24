@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "c5b0bd51d24e90495220a2d5d65e37bc7207206e"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVS6LiA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/42987b33b8f56f18c2c37ba423a68ab7a2a8bcacc736e84111dd1a1b65cfab32/kemomimi12/dsh-auto-continue",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b869875a29e1f873ce417a0a057f41a97798b776745679235427d74c8b0e91ea/kemomimi12/dsh-auto-continue",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/137080166?u=b594385f80914cfae55fe772dc2ce69055265663&v=4",
       "login": "kemomimi12"
@@ -34,34 +34,50 @@
     "slug": "kemomimi12/dsh-auto-continue",
     "stars": 0,
     "topics": [
-      "dsh-plugin"
+      "cordis",
+      "deepseek-harness",
+      "dsh",
+      "dsh-plugin",
+      "fault-tolerance",
+      "llm-agents"
     ],
-    "updatedAt": "2026-10-22T09:17:03Z",
+    "updatedAt": "2026-10-23T11:13:00Z",
     "url": "https://github.com/kemomimi12/dsh-auto-continue"
   },
   "id": "gh:1429113736",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@xfufu/dsh-auto-continue",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@xfufu/dsh-auto-continue@1.0.1",
+    "version": "1.0.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@xfufu/dsh-auto-continue",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/42987b33b8f56f18c2c37ba423a68ab7a2a8bcacc736e84111dd1a1b65cfab32/kemomimi12/dsh-auto-continue",
+    "coverUrl": "https://opengraph.githubassets.com/b869875a29e1f873ce417a0a057f41a97798b776745679235427d74c8b0e91ea/kemomimi12/dsh-auto-continue",
     "description": "Automatic turn-level resume for DeepSeek Harness: continues after transient model-request failures, merges provider outages into one storm, and always yields to a manual stop.DeepSeek Harness 自动续行插件：模型请求临时失败导致轮次中断后自动接着做；同一次网关故障只重试一次；手动停止永远优先。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "会话因为一次模型请求失败而结束轮次后，自动排队一条续行提示词接着做。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
-    "headSha": "234e302605e4dcc8d2aaced797ae07f180c9d451"
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
+    "headSha": "95676238f104c54419c5d6bf2c3e6c6ea34e9d74"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Dots-style always-on agent for DeepSeek Harness (dsh): its own computer, reachable over IM, scheduled work, hard budget limits",
     "fork": false,
     "forks": 0,
-    "headSha": "234e302605e4dcc8d2aaced797ae07f180c9d451",
+    "headSha": "95676238f104c54419c5d6bf2c3e6c6ea34e9d74",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "AGPL-3.0"
     },
     "nodeId": "R_kgDOVNea_A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/fb477c624f5bbc97e10a56944e35be0f393d2f631d403e933adde06c08fa8184/Kevinwu901113/dsh-dot",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e6da3f4d72b28d27e8122f6253592f154f94f4af44f23988e16d051c81658983/Kevinwu901113/dsh-dot",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/52094566?u=43067c2a3fa28b5668fb4c8b0f747d336c34a8e1&v=4",
       "login": "Kevinwu901113"
     },
-    "pushedAt": "2026-10-23T09:02:17Z",
+    "pushedAt": "2026-10-23T15:16:22Z",
     "slug": "Kevinwu901113/dsh-dot",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "ai-agent",
       "always-on-agent",
@@ -43,18 +43,18 @@
       "dsh-plugin",
       "personal-agent"
     ],
-    "updatedAt": "2026-10-23T09:02:22Z",
+    "updatedAt": "2026-10-23T15:16:26Z",
     "url": "https://github.com/Kevinwu901113/dsh-dot"
   },
   "id": "gh:1423416060",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose a ready package entry point.",
+    "available": true,
+    "packageName": "dsh-dot",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Kevinwu901113/dsh-dot#95676238f104c54419c5d6bf2c3e6c6ea34e9d74",
+    "version": "0.6.0"
   },
   "npm": {
     "latestVersion": "0.0.1",
@@ -63,22 +63,32 @@
   },
   "package": {
     "exports": {
-      "./core": "./src/core.js",
-      "./package.json": "./package.json"
+      ".": "./src/computer/ui-host.js",
+      "./client": "./lib/client.js",
+      "./computer": "./src/computer/vm.js",
+      "./core": "./src/dot/core.js",
+      "./dot": "./src/dot/core.js",
+      "./gate": "./src/computer/gate.js",
+      "./interlude": "./src/interlude/core.js",
+      "./package.json": "./package.json",
+      "./phone": "./src/phone/phone.js",
+      "./qq": "./src/qq/qq.js",
+      "./subprocess": "./src/computer/subprocess.js",
+      "./vm": "./src/computer/vm.js"
     },
     "main": null,
     "name": "dsh-dot",
     "status": "valid",
     "type": "module",
-    "version": "0.2.0"
+    "version": "0.6.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/fb477c624f5bbc97e10a56944e35be0f393d2f631d403e933adde06c08fa8184/Kevinwu901113/dsh-dot",
+    "coverUrl": "https://opengraph.githubassets.com/e6da3f4d72b28d27e8122f6253592f154f94f4af44f23988e16d051c81658983/Kevinwu901113/dsh-dot",
     "description": "Dots-style always-on agent for DeepSeek Harness (dsh): its own computer, reachable over IM, scheduled work, hard budget limits"
   },
   "readme": {
     "available": true,
-    "excerpt": "Turn DeepSeek Harness (dsh) into a Dots / Grok-Bot-style always-on agent: it has its own computer, you talk to it over Feishu / WeChat / DingTalk / QQ / Telegram…, it works on a schedule, tells you only when there is something worth telling, and stops itself when the day's budget"
+    "excerpt": "A character who lives on her own phone, for DeepSeek Harness (dsh). She has her own Android phone (this plugin installs and runs it), her own accounts, her own days: between your conversations she keeps living — writes what happened, goes to look at things she is curious about on"
   },
   "schemaVersion": 1,
   "scripts": {

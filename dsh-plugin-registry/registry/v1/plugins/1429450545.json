@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "047d37bdafc694070870af7e5bcbf0b8143afce1"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1429450545",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-delete-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:stushansusu/dsh-delete-guard#047d37bdafc694070870af7e5bcbf0b8143afce1",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "2.2.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-delete-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cad3abf617cc1b3cd854558bde890e65b6d084be2f7e680e6dbd889f3d02a8ce/stushansusu/dsh-delete-guard",
     "description": "DSH plugin: meters AI deletions per session, terminates the call once the cumulative size passes a threshold, then asks the user with the list of files already deleted."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 里的 AI 装一道删除总闸。 按会话累计 AI 通过 shell 删掉多少字节， 一旦要越过阈值（默认 300 MB），这一次删除在执行前就被强制终止，并弹出对话框把 AI 已经删掉的文件摆给你看， 由你选择「继续删除（重置计数）」还是「停止并保持阻止」。"
   },
   "schemaVersion": 1,
   "scripts": {

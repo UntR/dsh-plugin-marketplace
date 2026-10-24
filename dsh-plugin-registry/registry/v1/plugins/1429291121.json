@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "1f8bda07ea98e8ca3240b75b4a72d2f753ece4f4"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1429291121",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-garmin-health",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:huangxicheng1/dsh-garmin-health#1f8bda07ea98e8ca3240b75b4a72d2f753ece4f4",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-garmin-health",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/56b7c783e467e90095114a17bc4b50ba9b54e2f6cd06bc9f109c5e9d4cab607a/huangxicheng1/dsh-garmin-health",
     "description": "Garmin Connect dashboard for DeepSeek Harness: left-sidebar panel entry, full-page charts, direct Garmin REST API, reuses a local Garmin token. No MCP, no npm dependencies."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "左侧面板列表里的 Garmin Connect 看板（和「插件 / 上下文洞察 / MCP 连接器」同一列）： 心率、HRV、Body Battery / 压力、睡眠结构、步数、训练负荷、最近运动。 服务端直接调用 Garmin Connect REST API，不走 MCP，复用本机已有的 Garmin token， 因此可以定时刷新、自定义图表、离线缓存。"
   },
   "schemaVersion": 1,
   "scripts": {

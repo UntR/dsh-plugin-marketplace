@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "6986469888f2133617a89608e8bb914cad13f2c2"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1428287823",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-notify-sfx",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:XA-anjiu/dsh-notify-sfx#6986469888f2133617a89608e8bb914cad13f2c2",
+    "version": "0.6.5"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-notify-sfx",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5d0ed2a4e9584c48c7bb8434be772efec37e525d9e640bda0be10ec04dc7c1f9/XA-anjiu/dsh-notify-sfx",
     "description": "Windows toast notifications with selectable opencode sound packs for DeepSeek Harness; click a notification to open the matching session."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 用的 Windows 桌面通知插件：一轮对话结束、需要你批准、需要你回答时，弹一条带 DSH 图标的 Windows 通知，同时播放 opencode 音效包里的提示音；点通知直接跳到对应会话。"
   },
   "schemaVersion": 1,
   "scripts": {

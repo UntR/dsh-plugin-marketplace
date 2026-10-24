@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./plugin/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "5fcda9cb1f02b73764f831218ba657ea754788db"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1429171182",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-appdata-scanner",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-appdata-scanner@0.7.0",
+    "version": "0.7.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.7.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./plugin/index.js",
+      "./client": "./plugin/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "plugin/index.js",
+    "name": "dsh-appdata-scanner",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f0b2576aa59011a0736ad661ac3ad57535b456ec3251e20896b087fc21638003/twoweeks1995/dsh-appdata-scanner",
     "description": "DSH 只读 AppData 分析插件：资源管理器式下钻浏览，显示每个目录的体积、来源软件、用途与可删建议，支持按需联网查询"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness（DSH）客户端插件：只读分析 Windows 的 AppData 目录，回答三个问题——"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "b23d5fa9c54b74fedc8c66a91812abee842c1b1e"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1428742149",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-story-party",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-story-party@0.1.48",
+    "version": "0.1.48"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.48",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./client/client.js",
+      "./package.json": "./package.json",
+      "./room-server": "./src/room-server.js",
+      "./standalone": "./src/standalone.js"
+    },
+    "main": "src/index.js",
+    "name": "dsh-story-party",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ebdfa68451ad8165da895f07a04dcdd24b570ccb5fb3359a1ae09b61c9e19aaf/miaonuo-lingran/dsh-story-party",
     "description": "DSH 多人联机剧情房间：AI 主持、共享故事线，支持 Galgame / 海龟汤 / 剧本杀，可导入剧情包、子代理与地图。 Multiplayer story-party plugin for DeepSeek Harness — shared AI-driven rooms for galgame, turtle soup and mystery, with story packs, sub-agents and maps."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "联机 Galgame：房间 API + 房间独立 LLM 会话 + 广播 + 可直接打开的网页房间。 阶段 1（服务端）与阶段 2（房间页）已完成；阶段 3（与 galgame 舞台结合）未开始。 v0.2.0 起支持：剧本杀（角色本 + 私聊 + 阶段机）、海龟汤私有汤底、主代理自动点名子代理、舞台场景同步与选项投票、AI 画我猜（单人）。"
   },
   "schemaVersion": 1,
   "scripts": {

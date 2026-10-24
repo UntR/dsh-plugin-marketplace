@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "4d085b1d2aebec357be8256300975be984a132c9"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1429545354",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-path-lockbox",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:thson-xue/dsh-path-lockbox#4d085b1d2aebec357be8256300975be984a132c9",
+    "version": "0.1.14"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-path-lockbox",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.14"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8f01db1c30cbf6a25ccc4f024ab46948d49f3819ae18cf320c1c6ff1ed03c202/thson-xue/dsh-path-lockbox",
     "description": "DeepSeek Harness (dsh) plugin: lock files/folders/drives against agent access - monotonic guard deny works even under danger-full-access. Config UI under Settings > 文件锁."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（dsh）插件：把指定的文件 / 文件夹 / 硬盘分区对 agent 彻底锁死—— 就算会话开了 danger-full-access（完全访问）也动不了。UI 为卡片式，适配宿主主题， 按三类分卡片管理，功能布局对应 Windows「索引选项」的交互模型 （列表 + 添加 / 添加自定义 / 移除 / 立即重扫描 / 重扫描全部 + 每条目「索引子文件夹」「尝试监控变化」）。"
   },
   "schemaVersion": 1,
   "scripts": {

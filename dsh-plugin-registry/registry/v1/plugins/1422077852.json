@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "368a242f8523c555c6d77a9120fae50b37448d2d"
   },
   "github": {
@@ -44,27 +44,40 @@
   },
   "id": "gh:1422077852",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-wsl-workspace-enhanced",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yaelysia/dsh-wsl-workspace#368a242f8523c555c6d77a9120fae50b37448d2d",
+    "version": "0.7.9"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./fs": "./lib/fs.js",
+      "./package.json": "./package.json",
+      "./shell": "./lib/shell.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-wsl-workspace-enhanced",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.9"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/80031d8151ca08fdb92f79aca3825a3b2aefcdb0700445d5a743e5498815ceb8/yaelysia/dsh-wsl-workspace",
     "description": "WSL workspace support for DeepSeek Harness——无缝的 WSL 工作区使用体验，无需在 WSL 之中再安装一个dsh，安装该插件后在 GUI 里直接添加 WSL 工作区即可。WSL workspace support for DeepSeek Harness — Enjoy a seamless WSL workspace experience without needing to install dsh inside WSL. Once this plugin is installed, you can dire"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Run DeepSeek Harness on Windows. Work on your code in WSL."
   },
   "schemaVersion": 1,
   "scripts": {

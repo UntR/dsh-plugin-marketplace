@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "3d7bd1fca2d2576a06997c4b2cad6ecedb8e59d8"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1429604745",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-vision",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hunyu-feng/dsh-vision#3d7bd1fca2d2576a06997c4b2cad6ecedb8e59d8",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./core": "./lib/vision.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./mcp": "./bin/mcp-server.js"
+    },
+    "main": "./index.js",
+    "name": "dsh-vision",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f6e30b5e9c0f1b69e86a53f78e145cc8bf4efce1c99f92e5eefd1587cb4eb875/hunyu-feng/dsh-vision",
     "description": "Vision for DSH agents and MCP clients: analyze_image over local files or URLs using Doubao models on Volcano Ark, with model fallback."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH Agent（以及任意 MCP 客户端）装上「看图」能力：新增一个 analyzeimage 工具，把本地图片或图片 URL 交给视觉模型，返回文字回答。默认走本机 Ollama，不花钱、不需要账号；愿意接云端时，火山方舟（豆包） 作为第二候选自动兜底，任何一项都可以通过配置或环境变量换掉。"
   },
   "schemaVersion": 1,
   "scripts": {

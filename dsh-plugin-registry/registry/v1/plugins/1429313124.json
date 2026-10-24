@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "dac283f2ad0c7293ecfead90d50c72ad2fdb5bc2"
   },
   "github": {
@@ -41,27 +41,44 @@
   },
   "id": "gh:1429313124",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-codex-hooks",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:matata2017/dsh-codex-hooks#dac283f2ad0c7293ecfead90d50c72ad2fdb5bc2",
+    "version": "0.5.9"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./client.js"
+      },
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-codex-hooks",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.9"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/39c1a86a196d88c28c381815b8e757994b972cf4ccd719cbe5583a9ab0c333a3/matata2017/dsh-codex-hooks",
-    "description": "Codex-compatible lifecycle hooks for DeepSeek Harness: discover hooks.json from config, plugins and projects, review each hook's sha256 trust fingerprint, run the trusted ones, and manage them from a Hooks settings section."
+    "description": "Codex-style hook management for DeepSeek Harness: hooks.json from config, plugins and projects, each hook pinned to a sha256 fingerprint you approve before it runs, a review dialog in the composer, a Hooks settings page, a /hooks command and per-turn run stats."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Codex's hook management, ported to DeepSeek Harness (dsh)."
   },
   "schemaVersion": 1,
   "scripts": {

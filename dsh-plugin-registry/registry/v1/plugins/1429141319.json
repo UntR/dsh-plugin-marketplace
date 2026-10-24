@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "9c2817a3d2733974ffc7fce51651bfc66352924b"
   },
   "github": {
@@ -50,27 +50,39 @@
   },
   "id": "gh:1429141319",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-os",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:john-walks-slow/dsh-os#9c2817a3d2733974ffc7fce51651bfc66352924b",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-os",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e2c8031516c5c3973875ce88707df667850c03bc7d99f5c0dc65e4515ed94e0c/john-walks-slow/dsh-os",
-    "description": "DeepSeek Harness OS: turn the DSH Web home page into a cyberpunk terminal desktop — ASCII backgrounds, boot POST sequence, live system/Harness telemetry HUD."
+    "description": "DeepSeek Harness OS: a whole-GUI theme for the DSH Web interface — conversation, sidebar, code blocks, dialogs and composer repainted in light/dark via the official theme-token layer, plus a home terminal desktop and an in-session telemetry strip."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness OS：一套覆盖整个 DSH Web GUI 的主题 —— 会话流、侧边栏、代码块、工具卡、弹窗、菜单、输入框与设置页一起换墨，深浅两套；首页（blank-session hero）则进一步变身为一台带真实监控的赛博终端桌面。干活时它安静地用一条会话遥测条告诉你上下文压力、用量与解码速度；停手时它把字符雨、开机自检、整机 HUD 与 按模型聚合的 Token 账本摆出来。"
   },
   "schemaVersion": 1,
   "scripts": {

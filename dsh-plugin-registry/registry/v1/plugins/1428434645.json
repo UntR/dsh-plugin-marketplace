@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "801aba0668c659fd7d5d1dad90db194e16e2069a"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1428434645",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-desktop-menu",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:YOGEMOW/dsh-desktop-menu#801aba0668c659fd7d5d1dad90db194e16e2069a",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "index.js",
+    "name": "dsh-desktop-menu",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b59d853b59e72f92c916e62f939d2aa55fe7f69404ea7c4c07a0e02debe59b77/YOGEMOW/dsh-desktop-menu",
     "description": "把「刷新页面 / 重启应用与 Host」写进 DSH 桌面端「应用」原生菜单的补丁插件：11 字节等长改写 app.asar，附完整 recipe 与独立脚本。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把「刷新页面 / 重启应用与 Host」写进 DSH 桌面端左上角「应用」原生菜单的补丁插件。 没有 UI、不往页面注入任何东西；它带的是补丁本身 + 完整思路，换台电脑也能照着做。"
   },
   "schemaVersion": 1,
   "scripts": {

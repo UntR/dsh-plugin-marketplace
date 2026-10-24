@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "395e102c1c992d09f30c7905279055fe3c52a555"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1428205333",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "agy2dsh",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wanzdoan/agy2dsh#395e102c1c992d09f30c7905279055fe3c52a555",
+    "version": "0.9.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "agy2dsh",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4e9b87d93375f04f52e3c55f534a26ad83d89358d61df3baa3d71c1c70001c23/wanzdoan/agy2dsh",
     "description": "DeepSeek Harness plugin: use your Antigravity (Gemini/Claude) and Codex subscriptions as LLM providers, with self-refreshing OAuth and accurate quota."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that turns two consumer AI subscriptions into ordinary DSH LLM providers: Google Antigravity (agy, serving Gemini and Claude models) and ChatGPT/Codex. It registers both with the host's llm service, refreshes their OAuth tokens itself, spreads requests a"
   },
   "schemaVersion": 1,
   "scripts": {

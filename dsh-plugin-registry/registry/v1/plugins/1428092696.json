@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "7e479369f1b1827ad0b2cf14dce659da3fa0c537"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1428092696",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-sync-xxg",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-session-sync-xxg@0.9.5",
+    "version": "0.9.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.9.5",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-sync-xxg",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e586e648a73c924eb5db53772c695f498d54c5c6cf86761ff1630ed5ec1a57e8/XXGxiaoyu/dsh-session-sync",
     "description": "LAN session sync for DSH: auto-discover devices running this plugin, browse/pull/push sessions over HTTP with SHA-256 verification, and keep a local-only nickname per device. ｜ DSH 局域网会话同步：自动发现装了本插件的设备、仅存本机的设备命名、浏览/拉取/推送会话，带 SHA-256 校验。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "LAN session sync for DSH. Every DSH that has this plugin discovers the others on the local network, lists their sessions, and can pull or push conversations over plain HTTP. The nickname you give a device lives only on your machine — the peer can go offline, reboot, or change IP "
   },
   "schemaVersion": 1,
   "scripts": {

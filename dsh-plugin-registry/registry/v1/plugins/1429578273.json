@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
-    "headSha": "7526582277feadddd83a6ae593ffdeee73a88fcd"
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
+    "headSha": "ea291cc64514b44681a1f45ba0df06e41f8f84e9"
   },
   "github": {
     "archived": false,
@@ -17,20 +17,20 @@
     "description": "模型代理：按模型/提供方精准路由模型 API 流量（走代理或直连），其余请求不受影响 —— Route model-API traffic per provider through proxies, everything else stays direct.",
     "fork": false,
     "forks": 0,
-    "headSha": "7526582277feadddd83a6ae593ffdeee73a88fcd",
+    "headSha": "ea291cc64514b44681a1f45ba0df06e41f8f84e9",
     "homepageUrl": null,
-    "language": "TypeScript",
+    "language": "JavaScript",
     "license": {
       "name": "Other",
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOVTWiIQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a93a7a9c8c22c8f159c95fbd9c59cc4fd873b88107b040b837c8d1c68e89721e/guhanfei-ai/dsh-model-http-proxy",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e6093da5ff58fa502075a2844424323f4c40c8fc8f72fadf23e9039f8c3661b0/guhanfei-ai/dsh-model-http-proxy",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/317775632?v=4",
       "login": "guhanfei-ai"
     },
-    "pushedAt": "2026-10-23T08:11:02Z",
+    "pushedAt": "2026-10-23T11:05:22Z",
     "slug": "guhanfei-ai/dsh-model-http-proxy",
     "stars": 0,
     "topics": [
@@ -38,32 +38,49 @@
       "dsh-plugin",
       "proxy"
     ],
-    "updatedAt": "2026-10-23T08:11:05Z",
+    "updatedAt": "2026-10-23T11:05:26Z",
     "url": "https://github.com/guhanfei-ai/dsh-model-http-proxy"
   },
   "id": "gh:1429578273",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-http-proxy",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-model-http-proxy@0.1.3",
+    "version": "0.1.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-model-http-proxy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a93a7a9c8c22c8f159c95fbd9c59cc4fd873b88107b040b837c8d1c68e89721e/guhanfei-ai/dsh-model-http-proxy",
+    "coverUrl": "https://opengraph.githubassets.com/e6093da5ff58fa502075a2844424323f4c40c8fc8f72fadf23e9039f8c3661b0/guhanfei-ai/dsh-model-http-proxy",
     "description": "模型代理：按模型/提供方精准路由模型 API 流量（走代理或直连），其余请求不受影响 —— Route model-API traffic per provider through proxies, everything else stays direct."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）加「按域名选择代理，其余使用本机默认网络」的能力，不修改任何 DSH 官方代码。"
   },
   "schemaVersion": 1,
   "scripts": {

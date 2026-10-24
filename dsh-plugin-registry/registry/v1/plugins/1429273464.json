@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
-    "headSha": "891feba6735378d1b57442131d7fc850b34641fd"
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
+    "headSha": "28b721bfc5f156ff87cb586465b666089ace1d24"
   },
   "github": {
     "archived": false,
@@ -17,20 +17,20 @@
     "description": "DSH independent right-panel Markdown live preview: edit + render side by side, auto-refresh on file change, send selection back to chat.",
     "fork": false,
     "forks": 0,
-    "headSha": "891feba6735378d1b57442131d7fc850b34641fd",
+    "headSha": "28b721bfc5f156ff87cb586465b666089ace1d24",
     "homepageUrl": null,
-    "language": null,
+    "language": "TypeScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVTD7eA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d2a29432298ca6cf38a01c8b86097d6b829c39f2cda34e9c78cabc20906abc8b/lg114/dsh-md-live",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b05045e9f8d3c853c2e09de428a2aa22ca0543d4c30a20cb5bbab8dcfdae80ee/lg114/dsh-md-live",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/92200217?u=1742c64cf0952f6bc7db78a72f7d9eb94cf36e74&v=4",
       "login": "lg114"
     },
-    "pushedAt": "2026-10-22T05:14:46Z",
+    "pushedAt": "2026-10-24T03:15:39Z",
     "slug": "lg114/dsh-md-live",
     "stars": 0,
     "topics": [
@@ -39,7 +39,7 @@
       "dsh-plugin",
       "markdown"
     ],
-    "updatedAt": "2026-10-22T05:17:58Z",
+    "updatedAt": "2026-10-24T03:15:43Z",
     "url": "https://github.com/lg114/dsh-md-live"
   },
   "id": "gh:1429273464",
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.cjs",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-md-live",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d2a29432298ca6cf38a01c8b86097d6b829c39f2cda34e9c78cabc20906abc8b/lg114/dsh-md-live",
+    "coverUrl": "https://opengraph.githubassets.com/b05045e9f8d3c853c2e09de428a2aa22ca0543d4c30a20cb5bbab8dcfdae80ee/lg114/dsh-md-live",
     "description": "DSH independent right-panel Markdown live preview: edit + render side by side, auto-refresh on file change, send selection back to chat."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 独立右侧面板 Markdown 实时预览插件"
   },
   "schemaVersion": 1,
   "scripts": {

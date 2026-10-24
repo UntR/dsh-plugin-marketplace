@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "1000f3893f86bfddbb88b1c94c98c61494550a76"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1428246246",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-memory-vault",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xying-lm/dsh-memory-vault#1000f3893f86bfddbb88b1c94c98c61494550a76",
+    "version": "0.12.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.5",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-memory-vault",
+    "status": "valid",
+    "type": "module",
+    "version": "0.12.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6a70843465d5c6466ee115d659622e266e1eacc665bf882a9aacae2f668a2950/xying-lm/dsh-memory-vault",
-    "description": ""
+    "description": "给 DeepSeek Harness 加一个跨会话的本地长期记忆库：把你说过的话、助手答过的要点自动沉淀进 D 盘的一个 SQLite 文件里，每轮对话前按需检索一小段相关历史注入提示词，并用一个 Web 面板让你看到它到底占了多少空间。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 加一个跨会话的本地长期记忆库：把你说过的话、助手答过的要点自动沉淀进 D 盘的一个 SQLite 文件里，每轮对话前按需检索一小段相关历史注入提示词，并用一个 Web 面板让你看到它到底占了多少空间。"
   },
   "schemaVersion": 1,
   "scripts": {

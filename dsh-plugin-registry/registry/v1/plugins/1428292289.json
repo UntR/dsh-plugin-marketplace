@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "0ca359e979c242409551d6522b9b1a04f2054b00"
   },
   "github": {
@@ -42,27 +42,40 @@
   },
   "id": "gh:1428292289",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-plugin-backup",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:DaJiang07/dsh-plugin-backup#0ca359e979c242409551d6522b9b1a04f2054b00",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@local/dsh-plugin-backup",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a567e0da2c865268db66c26ea722a25db1035bb19efc728fb01a674c19f18736/DaJiang07/dsh-plugin-backup",
     "description": "Back up every DSH plugin and all profile settings into one portable JSON file, then restore them on another machine in one click."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DSH 插件：把「你装了哪些插件」和「你把设置调成了什么样」打包成一个 JSON 文件，换电脑后装上本插件、选中那个文件，就能一键恢复。打开打包全部，连本地插件源码和插件数据一起走。"
   },
   "schemaVersion": 1,
   "scripts": {

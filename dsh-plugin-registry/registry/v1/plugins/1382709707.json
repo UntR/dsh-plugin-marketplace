@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
     "enrichmentStatus": "ok",
-    "headSha": "9ab7ee16b92550014359538dd3bde6a7c785488e"
+    "headSha": "a51d7a4cdf8b77f81c2f7767bcca759da3222d8c"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-23T03:56:24Z",
     "databaseId": 1382709707,
     "defaultBranch": "main",
-    "description": "Asks System One models for yes/no, choice, score, and image-box judgments with probabilities, via an agent tool or a plugin service | 调用 System One 模型做是非、选择、评分和图片定位判断并返回概率，提供 agent 工具和插件服务",
+    "description": "Connect TypeSafe/Jev, Cloudflare/Clef, Nace/Drex, self-hosted Laya, and custom decision providers through one interface. Agents and plugins can classify, filter, score, or locate objects in images with structured results. | 通过同一接口连接 TypeSafe/Jev、Cloudflare/Clef、Nace/Drex、本地 Laya 与自定义决策提供商；Agent 和插件可分类、筛选、评分或定位图片目标，并获得结构化结果。",
     "fork": false,
     "forks": 0,
-    "headSha": "9ab7ee16b92550014359538dd3bde6a7c785488e",
+    "headSha": "a51d7a4cdf8b77f81c2f7767bcca759da3222d8c",
     "homepageUrl": "https://www.npmjs.com/package/dsh-system1",
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOUmp5yw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d4a39039c206b3d8038b5e64244eece7f9997b09169b185ee621f92b03b3a88c/exoticknight/dsh-system1",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/45531aa1cb694f403e264bab663742aa2950bb1fb12f054e27f8ddfa092ae56b/exoticknight/dsh-system1",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/1171407?v=4",
       "login": "exoticknight"
     },
-    "pushedAt": "2026-10-23T05:48:58Z",
+    "pushedAt": "2026-10-24T06:00:47Z",
     "slug": "exoticknight/dsh-system1",
     "stars": 0,
     "topics": [
@@ -46,7 +46,7 @@
       "typesafe",
       "typescript"
     ],
-    "updatedAt": "2026-10-21T17:10:25Z",
+    "updatedAt": "2026-10-24T06:14:18Z",
     "url": "https://github.com/exoticknight/dsh-system1"
   },
   "id": "gh:1382709707",
@@ -56,11 +56,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-system1@0.3.2",
-    "version": "0.3.2"
+    "spec": "dsh-system1@0.4.0",
+    "version": "0.4.0"
   },
   "npm": {
-    "latestVersion": "0.3.2",
+    "latestVersion": "0.4.0",
     "published": true,
     "repositoryMatches": true
   },
@@ -96,6 +96,12 @@
       },
       "./providers/laya/icon": "./assets/provider-icons/laya.png",
       "./providers/laya/locale/*.json": "./locale/providers/laya/*.json",
+      "./providers/nace": {
+        "import": "./lib/providers/nace/index.js",
+        "types": "./lib/providers/nace/index.d.ts"
+      },
+      "./providers/nace/icon": "./assets/provider-icons/nace.svg",
+      "./providers/nace/locale/*.json": "./locale/providers/nace/*.json",
       "./providers/typesafe": {
         "import": "./lib/providers/typesafe/index.js",
         "types": "./lib/providers/typesafe/index.d.ts"
@@ -112,15 +118,15 @@
     "name": "dsh-system1",
     "status": "valid",
     "type": "module",
-    "version": "0.3.2"
+    "version": "0.4.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d4a39039c206b3d8038b5e64244eece7f9997b09169b185ee621f92b03b3a88c/exoticknight/dsh-system1",
-    "description": "Asks System One models for yes/no, choice, score, and image-box judgments with probabilities, via an agent tool or a plugin service | 调用 System One 模型做是非、选择、评分和图片定位判断并返回概率，提供 agent 工具和插件服务"
+    "coverUrl": "https://opengraph.githubassets.com/45531aa1cb694f403e264bab663742aa2950bb1fb12f054e27f8ddfa092ae56b/exoticknight/dsh-system1",
+    "description": "Connect TypeSafe/Jev, Cloudflare/Clef, Nace/Drex, self-hosted Laya, and custom decision providers through one interface. Agents and plugins can classify, filter, score, or locate objects in images with structured results. | 通过同一接口连接 TypeSafe/Jev、Cloudflare/Clef、Nace/Drex、本地 Laya "
   },
   "readme": {
     "available": true,
-    "excerpt": "Ask System One models for yes/no, choice, score, and image-box judgments with probabilities. The agent can call the built-in system1decide tool, and plugins can call ctx.system1.decide(). Results come back per question instead of as generated text; the caller decides what to do n"
+    "excerpt": "Connect to multiple decision providers and models through one interface: Jev via TypeSafe, Clef via Cloudflare, Drex via Nace, self-hosted Laya, and compatible custom providers. Agents and plugins can classify content, filter candidates, score against criteria, or locate objects "
   },
   "schemaVersion": 1,
   "scripts": {

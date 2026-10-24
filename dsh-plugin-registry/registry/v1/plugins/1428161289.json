@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "b9c8fb76635573ce410fa5a56c6852be9c0dde9c"
   },
   "github": {
@@ -48,27 +48,40 @@
   },
   "id": "gh:1428161289",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-local-voice",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:R0tten-Git/dsh-plugin-local-voice#b9c8fb76635573ce410fa5a56c6852be9c0dde9c",
+    "version": "1.6.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.6.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./scripts/prepare_model.py": "./scripts/prepare_model.py"
+    },
+    "main": null,
+    "name": "dsh-plugin-local-voice",
+    "status": "valid",
+    "type": "module",
+    "version": "1.6.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0d26355d97ee706d41d260f58998f624319a0d69d66025e0fbeb011c8d05c87a/R0tten-Git/dsh-plugin-local-voice",
     "description": "DeepSeek Harness 的本地实时语音转写：右下角浮窗，边说边出字，Qwen3-ASR 本地推理，完全离线。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 里做本地实时语音转写：右下角一个浮窗，边说边出字，可存成 markdown 纪要。识别引擎是本机的 Qwen3-ASR-1.7B-8bit（MLX），音频不出机器。"
   },
   "schemaVersion": 1,
   "scripts": {

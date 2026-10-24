@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "31497a3ff5056d2b35072bbafedb851a6a0a5ffa"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1429322936",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-default-workspace",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Subwoofer91/dsh-default-workspace#31497a3ff5056d2b35072bbafedb851a6a0a5ffa",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-default-workspace",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/26a4e0cadc8d1b6e658626ee420d5447c55e9c15e142f1d30ea805a23af562bc/Subwoofer91/dsh-default-workspace",
     "description": "DSH 插件：点击新对话页工作区前的文件夹图标，一键切回默认工作区"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 新对话页的工作区选择器上增加一个快捷动作：点工作区名称前的小文件夹图标，直接切回默认工作区。不新增按钮，不改变原有菜单；点文字或右侧箭头仍然打开原来的工作区菜单。"
   },
   "schemaVersion": 1,
   "scripts": {

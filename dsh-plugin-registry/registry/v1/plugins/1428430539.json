@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "bbc95a6e6fb4fc5d4b2c4fa1656df5f8486e27eb"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1428430539",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-link-plugin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:maximdx/dsh-link-plugin#bbc95a6e6fb4fc5d4b2c4fa1656df5f8486e27eb",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-link-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3f8dd584b4d222862db788e7bf8e9acdf2670de424299de0ac9f3beda65ddc78/maximdx/dsh-link-plugin",
     "description": "DSH (DeepSeek Harness) plugin: CodeMirror Markdown composer with paste-URL-as-link, plus brand-icon link rendering in sent user messages"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "One DSH browser plugin that gives the composer Codex-style link behaviour and renders Markdown links in sent user messages."
   },
   "schemaVersion": 1,
   "scripts": {

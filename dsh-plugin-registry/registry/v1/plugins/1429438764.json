@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
-    "headSha": "abfe8a4bb1adf40a496998e7ed9c48d026d26d51"
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
+    "headSha": "e05446f07d10583c7f6422c22a3e19168524fd27"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Unofficial DeepSeek Harness plugin fixing OpenCode's MissingSessionID in Auto review by attaching the reviewed agent's session identity. | 非官方 DSH 插件：为 reviewer 请求补上被审查会话身份，修复 OpenCode MissingSessionID 拒绝；目标 DSH 0.2.1-rc.2。",
     "fork": false,
     "forks": 0,
-    "headSha": "abfe8a4bb1adf40a496998e7ed9c48d026d26d51",
+    "headSha": "e05446f07d10583c7f6422c22a3e19168524fd27",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOVTOBLA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e4a78cd16d0ec7f1c8589596e122b4dc5bab3f76a2bd89a632cca9f9d50840ec/DrScorpio/dsh-opencode-auto-review",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/0fbfcc34a256a3d1e7a8285637fbeb5eb22cf5ce779a9fd01650e0f19736dd4d/DrScorpio/dsh-opencode-auto-review",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/43337608?u=592286bbe9b75e2e36e0e5fd5fe8b4241a38a209&v=4",
       "login": "DrScorpio"
     },
-    "pushedAt": "2026-10-23T05:25:42Z",
+    "pushedAt": "2026-10-23T11:53:43Z",
     "slug": "DrScorpio/dsh-opencode-auto-review",
     "stars": 0,
     "topics": [
@@ -40,32 +40,46 @@
       "dsh-plugin-desktop",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-10-23T05:25:46Z",
+    "updatedAt": "2026-10-23T11:53:46Z",
     "url": "https://github.com/DrScorpio/dsh-opencode-auto-review"
   },
   "id": "gh:1429438764",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-opencode-auto-review",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-opencode-auto-review@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-opencode-auto-review",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e4a78cd16d0ec7f1c8589596e122b4dc5bab3f76a2bd89a632cca9f9d50840ec/DrScorpio/dsh-opencode-auto-review",
+    "coverUrl": "https://opengraph.githubassets.com/0fbfcc34a256a3d1e7a8285637fbeb5eb22cf5ce779a9fd01650e0f19736dd4d/DrScorpio/dsh-opencode-auto-review",
     "description": "Unofficial DeepSeek Harness plugin fixing OpenCode's MissingSessionID in Auto review by attaching the reviewed agent's session identity. | 非官方 DSH 插件：为 reviewer 请求补上被审查会话身份，修复 OpenCode MissingSessionID 拒绝；目标 DSH 0.2.1-rc.2。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DSH Auto review 在 DSH 0.2.1-rc.1 与 0.2.1-rc.2 上通过 OpenCode 网关正常工作。"
   },
   "schemaVersion": 1,
   "scripts": {

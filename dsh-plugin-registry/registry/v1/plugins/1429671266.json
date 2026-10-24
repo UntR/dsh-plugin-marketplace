@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "ee6edd916c005c92b180531e7d406dd4aef0335f"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1429671266",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-sillytavern-presets",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Xxsttb/dsh-sillytavern-presets#ee6edd916c005c92b180531e7d406dd4aef0335f",
+    "version": "1.0.7"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-sillytavern-presets",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.7"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/75bf76ea0ef08416a85c7e2f0b86e79952c6bb5e3993d713cda97c4a02292e99/Xxsttb/dsh-sillytavern-presets",
     "description": "[AI 制作] 在 DeepSeek Harness 中导入、编辑、切换 SillyTavern AI 预设，支持 JSON 导入导出、提示词顺序编辑与归档/删除。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 SillyTavern 的 AI 预设（AI Response Configuration / Preset JSON）导入 DeepSeek Harness，作为可编辑、可切换、可持久保存的提示词层使用。每次导入都会保留，直到你在管理页主动删除。"
   },
   "schemaVersion": 1,
   "scripts": {

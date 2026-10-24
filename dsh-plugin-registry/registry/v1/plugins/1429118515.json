@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "4d7953bf38d06155db92684f201005d78131a44a"
   },
   "github": {
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,20 +60,49 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./packages/status/lib/index.js",
+        "types": "./packages/status/lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./packages/status/lib/client.js",
+        "types": "./packages/status/lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./packages/status/lib/typert.remote-client.js",
+        "types": "./packages/status/lib/typert.remote-client.d.ts"
+      },
+      "./typert": {
+        "default": "./packages/status/lib/typert.host.js",
+        "types": "./packages/status/lib/typert.host.d.ts"
+      },
+      "./types": {
+        "default": "./packages/status/lib/types/types.js",
+        "types": "./packages/status/lib/types/types.d.ts"
+      }
+    },
+    "main": "packages/status/lib/index.js",
+    "name": "dsh-mcp-mcp-status",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/79f9e502ee227b824623b6ef6e95e4852bc176d771b2ace641cd261069ec62d8/Mr-Maidong/dsh-mcp-mcp-status",
     "description": "MCP server inventory for the DSH Web Settings dialog: status, transport, target, tools, and enable/disable for every configured MCP server"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "An installable DeepSeek Harness plugin that adds an MCP section to the Web Settings dialog, listing every MCP server the active profile configures with its derived status, transport, target, registered tools, and an enable/disable switch."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

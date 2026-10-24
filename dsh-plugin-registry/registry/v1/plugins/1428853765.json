@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "d1d2293c922cf0692332657d49cd8d38175f9701"
   },
   "github": {
@@ -44,27 +44,40 @@
   },
   "id": "gh:1428853765",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-telegram",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:EndPB/dsh-telegram#d1d2293c922cf0692332657d49cd8d38175f9701",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "@local/dsh-telegram",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1a2dd690f5370ba90aa09a2f2df67f3b4e870c5a3f1db1d6f22d83c208099e4b/EndPB/dsh-telegram",
     "description": "Telegram user-account (MTProto) plugin for DeepSeek Harness: channels, messages, in-chat search, comments, links, whitelisted sending, a DSH bot chat and a Telegram-to-DSH bridge, managed from a mobile-friendly Settings page."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "用你自己的 Telegram 账号（userbot / MTProto，不是 Bot API）给 DeepSeek Harness 提供频道与消息能力。 Bot API 看不到你账号里的频道；这个插件直接以你的会话登录，能看到的和你手机/桌面端完全一致。"
   },
   "schemaVersion": 1,
   "scripts": {

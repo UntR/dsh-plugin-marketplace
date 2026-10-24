@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
-    "headSha": "31bf0f768d1986b43d61588aa029ee04b94bc947"
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
+    "headSha": "9b0265fb79153216761df909f421235ec40d9297"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH 桌面端/Web 端插件：编辑初始系统提示词，按需屏蔽 runtime 上下文、工具 schema、AGENTS.md 等系统侧注入，支持普通 / 仅聊天 / 自定义模式切换与实时生效。",
     "fork": false,
     "forks": 0,
-    "headSha": "31bf0f768d1986b43d61588aa029ee04b94bc947",
+    "headSha": "9b0265fb79153216761df909f421235ec40d9297",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,44 +25,57 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVSBvRg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/10ffd8e096f4a53edc698874eaa606096496ec97e21178fc219bf34766f28df7/irislilymoon/dsh-prompt-studio",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/0adaa1293e5002e3e5744840128434f2384da74e2a6ca6cf51f343781e16de7c/irislilymoon/dsh-prompt-studio",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/242427373?v=4",
       "login": "irislilymoon"
     },
-    "pushedAt": "2026-10-21T15:46:16Z",
+    "pushedAt": "2026-10-23T09:51:20Z",
     "slug": "irislilymoon/dsh-prompt-studio",
     "stars": 0,
     "topics": [
       "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-22T08:04:23Z",
+    "updatedAt": "2026-10-23T09:51:23Z",
     "url": "https://github.com/irislilymoon/dsh-prompt-studio"
   },
   "id": "gh:1428188998",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-prompt-studio",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:irislilymoon/dsh-prompt-studio#9b0265fb79153216761df909f421235ec40d9297",
+    "version": "0.4.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-prompt-studio",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/10ffd8e096f4a53edc698874eaa606096496ec97e21178fc219bf34766f28df7/irislilymoon/dsh-prompt-studio",
+    "coverUrl": "https://opengraph.githubassets.com/0adaa1293e5002e3e5744840128434f2384da74e2a6ca6cf51f343781e16de7c/irislilymoon/dsh-prompt-studio",
     "description": "DSH 桌面端/Web 端插件：编辑初始系统提示词，按需屏蔽 runtime 上下文、工具 schema、AGENTS.md 等系统侧注入，支持普通 / 仅聊天 / 自定义模式切换与实时生效。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 桌面端 / Web 端插件，用来编辑初始系统提示词，并按需撤掉 DSH 注入的 runtime 上下文、工具 schema、AGENTS.md、时间读数等系统侧输入。普通模式、仅聊天和自定义模式可以在输入框上方切换；仅聊天支持记忆，以及按单项放行或屏蔽。新对话使用设置页选定的默认模式。"
   },
   "schemaVersion": 1,
   "scripts": {

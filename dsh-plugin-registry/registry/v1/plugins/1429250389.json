@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "a4dc151ada11906ab55dae8ba32fd1680809f662"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1429250389",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-client-ui-branch-map",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:AnichHaveatry/dsh-client-ui-branch-map#a4dc151ada11906ab55dae8ba32fd1680809f662",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-client-ui-branch-map",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7b9b5f4c62985a8ffd22cd21e96d608170d8e09108c316be91367cd3a7187659/AnichHaveatry/dsh-client-ui-branch-map",
     "description": "DSH 会话视图「分支图」：把当前工作区的对话画成一张图——每条消息是一个节点，每个 Session 是节点上的分支引用，可以像 git 分支一样从任意节点切出去；归档的对话不进图。 DeepSeek Harness conversation view: the current workspace as a branch map, with Sessions as branch refs you can fork from."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "分支图 / Branch Map — 把当前工作区的对话画成一张图：每条消息是一个节点，每个 Session 是节点上的一个分支引用，可以像 git 分支一样从任意节点切出去。"
   },
   "schemaVersion": 1,
   "scripts": {

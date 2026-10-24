@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "8b31c78cf7d3de8be2572c87b4cc28664718da3a"
   },
   "github": {
@@ -44,27 +44,41 @@
   },
   "id": "gh:1429164395",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mask-pixel-lock",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dingchenhui0618-arch/dsh-mask-pixel-lock#8b31c78cf7d3de8be2572c87b4cc28664718da3a",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-mask-pixel-lock",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e1df378c3f943901ec58c1ed0f2f0d626076a5255da372215d9bb937b23e05c7/dingchenhui0618-arch/dsh-mask-pixel-lock",
     "description": "Prove a local image edit left every pixel outside the mask untouched: per-pixel comparison, difference heatmap and a SHA-256 proof report. DSH plugin + zero-dependency CLI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "这是 DeepSeek Harness 的插件，同时也带一个零依赖 CLI。全部在本地完成：不调用模型、不联网、不上传图片。"
   },
   "schemaVersion": 1,
   "scripts": {

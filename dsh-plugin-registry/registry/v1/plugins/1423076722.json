@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "e381d733a1d6125a786c86428a514bc41e72e3c9"
   },
   "github": {
@@ -52,27 +52,37 @@
   },
   "id": "gh:1423076722",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-agent-notify",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Ssupervipuser/dsh-agent-notify#e381d733a1d6125a786c86428a514bc41e72e3c9",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-agent-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c71dbd3892389f00a04224daa2eef1b5c7c3d4f7238d3d2c0d0cdb067af3ac7d/Ssupervipuser/dsh-agent-notify",
     "description": "DSH plugin: real Windows notifications (WinRT toast) when the agent finishes a run, needs approval, or asks you a question."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：Agent 需要你的时候，发一条真正的 Windows 系统通知（WinRT Toast，右下角横幅 + Windows 通知中心，来源显示 “DeepSeek Harness”，点击可回到应用）。"
   },
   "schemaVersion": 1,
   "scripts": {

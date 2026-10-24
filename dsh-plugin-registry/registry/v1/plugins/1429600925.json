@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "84ffacafcffa797129cd0fe1965750ca01b4ce4c"
   },
   "github": {
@@ -53,7 +53,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -63,14 +63,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.ts",
+      "./client": "./src/client.js",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "src/index.ts",
+    "name": "dsh-balance-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/11bda8258c8deb23be3a8452b0433faad6884f2d0befbb6291a10cb131ef0490/marksimZ/dsh-balance-guard",
     "description": "DSH plugin: your DeepSeek account balance as a colour-banded bar on the right edge, with per-turn cost prediction and a quiet low-balance warning."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that pins your DeepSeek account balance to the right edge of the GUI as a quiet colour-coded rail, and projects what the current task will cost before the balance runs out."
   },
   "schemaVersion": 1,
   "scripts": {

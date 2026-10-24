@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "7875f6d382263413a9eced0ee4dbc743b9f70874"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1428718397",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "orchestrator2-region-switch",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zueston/orchestrator2-region-switch#7875f6d382263413a9eced0ee4dbc743b9f70874",
+    "version": "2.4.5"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "orchestrator2-region-switch",
+    "status": "valid",
+    "type": "module",
+    "version": "2.4.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/35daf52d7ed401b52f90d0d40297841a30ac48ec1480a7473ca228113a01af55/zueston/orchestrator2-region-switch",
     "description": "DSH 插件：给「自动开发调度器2.0」用的场景化主备模型切换（场景 TAB、三角色 A/B 两侧模型、失效自动切换顺序、模型变更管控）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH（the assistant framework）的「自动开发调度器2.0」（dsh-orchestrator2）用的场景化模型切换插件：侧边栏一行按钮 + 一个设置弹窗，把三个子代理角色（研究员 / 审核员 / 开发员）的主 / 备模型做成若干「场景」，点一下就在场景的两侧之间互换。"
   },
   "schemaVersion": 1,
   "scripts": {

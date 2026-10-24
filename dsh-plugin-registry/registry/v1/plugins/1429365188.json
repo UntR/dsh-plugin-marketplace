@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "da8e8eacc272df95ed531e23775ac705ba269b61"
   },
   "github": {
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./server/*.mjs": "./server/*.mjs"
+    },
+    "main": null,
+    "name": "dsh-unity-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a043d2c0f359f7dc4d41b6357989b276b8ba3e69b05c7301000256bcba464cd5/pixelsoyo/dsh-unity-bridge",
-    "description": ""
+    "description": "一个纯配置的 DSH bundle 插件：给当前 profile 插入一个 @deepseek-ai/dsh-mcp-client 实例， 把 Unity 编辑器接进 DSH。装上之后让DSH里的模型可以调用 34 个 mcpunity 工具 （读写场景层级、增删改 GameObject / 组件、材质、预制体、场景、Play Mode、跑测试、 看 Console、执行菜单项等），所有操作都发生在你正在运行的 Unity 编辑器里。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个纯配置的 DSH bundle 插件：给当前 profile 插入一个 @deepseek-ai/dsh-mcp-client 实例， 把 Unity 编辑器接进 DSH。装上之后让DSH里的模型可以调用 34 个 mcpunity 工具 （读写场景层级、增删改 GameObject / 组件、材质、预制体、场景、Play Mode、跑测试、 看 Console、执行菜单项等），所有操作都发生在你正在运行的 Unity 编辑器里。"
   },
   "schemaVersion": 1,
   "scripts": {

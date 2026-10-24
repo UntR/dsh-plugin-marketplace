@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "118d17bfeba615b0e099df70991d874103ec516a"
   },
   "github": {
@@ -44,33 +44,50 @@
   },
   "id": "gh:1428617774",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@goodandready/dsh-ollama-cloud-provider",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "@goodandready/dsh-ollama-cloud-provider@0.1.7",
+    "version": "0.1.7"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.7",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@goodandready/dsh-ollama-cloud-provider",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.7"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5c33e49be6b443b8b9370c2b5388f818ed0dcce0d663f4c6292871d8c94f10aa/GooDAnDReaDY/dsh-ollama-cloud-provider",
     "description": "Ollama Cloud LLM provider plugin for DeepSeek Harness (dsh)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "⭐ If you like this plugin, please star it on GitHub — it shows me that the plugin is useful to you and motivates me to keep developing it. 🐛 If you find a bug or would like to request a feature, open a GitHub issue in any language — I will review your proposal and implement usefu"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "86142447fce713229ad7c87feabf3627232e6090"
   },
   "github": {
@@ -41,33 +41,45 @@
   },
   "id": "gh:1427911842",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-claude-video-slider",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:Ledas-as/dsh-claude-video-slider#86142447fce713229ad7c87feabf3627232e6090",
+    "version": "1.0.25"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-claude-video-slider",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.25"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/273257645b1ed33d4dab31809eaefeec6bd33ae251b87a31427928c2544c306c/Ledas-as/dsh-claude-video-slider",
     "description": "模仿 Claude UI 的 DSH 滑块插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "这是一个模仿 Claude UI 和滑块动效的非官方 DeepSeek Harness 插件。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

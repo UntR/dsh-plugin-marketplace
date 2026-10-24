@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "57ac2a44ccfa02d75f8a7c4f12b0f3a1b036f1f0"
   },
   "github": {
@@ -46,27 +46,37 @@
   },
   "id": "gh:1428087873",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-claude-code-sdk",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wanwulizhi/dsh-claude-code-sdk#57ac2a44ccfa02d75f8a7c4f12b0f3a1b036f1f0",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-claude-code-sdk",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/341891cac90552edc02d1b5eea544ba76b66f76e19dfde6bbe05e18a3054b9da/wanwulizhi/dsh-claude-code-sdk",
     "description": "DSH tool plugin that delegates a self-contained coding task to the local Claude Code agent through the Claude Agent SDK, and injects the current DSH conversation history into the task."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把自包含的编码任务委派给本机 Claude Code 执行，结果回传给 DSH。DSH 当 leader，Claude Code 当 worker。"
   },
   "schemaVersion": 1,
   "scripts": {

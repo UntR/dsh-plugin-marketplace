@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "b29a542cdb08e88a92fe90dc4e556828d9c623bb"
   },
   "github": {
@@ -45,17 +45,17 @@
   "id": "gh:1422282443",
   "install": {
     "available": true,
-    "packageName": "dsh-zcode-cli-proxy",
-    "preferred": "github",
+    "packageName": "dsh-zcode-plan-bridge",
+    "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:tangyixiao/dsh-zcode-plan-bridge#aeaf820584b7a6dea5b3c4e5909809c7f4ed1626",
-    "version": "0.3.2"
+    "spec": "dsh-zcode-plan-bridge@0.4.2",
+    "version": "0.4.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.2",
+    "published": true,
+    "repositoryMatches": true
   },
   "package": {
     "exports": {
@@ -65,18 +65,18 @@
       "./package.json": "./package.json"
     },
     "main": "lib/index.js",
-    "name": "dsh-zcode-cli-proxy",
+    "name": "dsh-zcode-plan-bridge",
     "status": "valid",
     "type": "module",
-    "version": "0.3.2"
+    "version": "0.4.2"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f7588dc649904a7c0e4a3bf9342a77dea902156cc52389e1cf0b078369d293e9/tangyixiao/dsh-zcode-plan-bridge",
-    "description": "DSH 插件：把模型请求经 ZCode 客户端 app-server 反代到 Start Plan 额度（GLM 系列，真流式）。kyle123740/dsh-zcode-cli-proxy 衍生版，默认清单补上 GLM-5.3。"
+    "description": "DSH plugin: serves model requests through the ZCode CLI's account-backed agent over its own app-server protocol (real streaming, image input, per-session reuse). The model list is read from the CLI, not hard-coded. Derived from kyle123740/dsh-zcode-cli-proxy."
   },
   "readme": {
     "available": true,
-    "excerpt": "把 DeepSeek Harness（DSH） 的模型请求转交给 ZCode 客户端自带的 agent 执行的本地插件： provider zcode-cli 走 GUI 同款的常驻 app-server 会话，插件把 ZCode Start Plan 账户注入 agent 并在每次请求前提供 OAuth 鉴权 —— 直接烧 ZCode Start Plan / Coding Plan 的额度， 无需任何 API Key，也不需要自建网关。"
+    "excerpt": "把 DeepSeek Harness（DSH） 的模型请求转交给 ZCode CLI 自带的 agent 执行的本地插件。"
   },
   "schemaVersion": 1,
   "scripts": {

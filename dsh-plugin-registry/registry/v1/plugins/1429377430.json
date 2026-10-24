@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-23T09:15:30.404Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-24T08:46:41.746Z",
+    "enrichmentStatus": "ok",
     "headSha": "255477410338fd433afa6445bba687ce1dccbc24"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1429377430",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@lim324/dsh-layout-persist",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Limsanity/dsh-layout-persist#255477410338fd433afa6445bba687ce1dccbc24",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@lim324/dsh-layout-persist",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/037df953a16240a86c1f40b13e8d93f2a327c5235f6e46d3ed8402796338a040/Limsanity/dsh-layout-persist",
     "description": "Persist the DeepSeek Harness Web frame's left sidebar and right panel widths across restarts."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DSH Web 的左、右两侧栏宽度在重启 dsh 后仍然保留。"
   },
   "schemaVersion": 1,
   "scripts": {
