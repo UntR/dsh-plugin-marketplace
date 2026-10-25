@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "f867e1d98f88a1f0f4afc5c8048f3b916aecd75b"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-peak-brief",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cd5aac8c62b90cebd105b0e851cc0c3125e103d43719a59dd767cd60ec5e73ac/wenzhaoxu/dsh-peak-brief",
     "description": "DSH（DeepSeek Harness）峰谷调度插件：高峰前 N 分钟自动生成仅供 AI 恢复用的简报并停自动续跑，高峰硬挡模型请求（带一键逃生），闲时自动注入简报继续任务。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "上游 README（2026-10-13 起）写着「本项目无限期搁置，该项目功能已被官方harness正式版取代」。 复核结论：没有找到任何官方通知，也没有找到支持该说法的实物证据。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "abfb868762b815536d21aeecd7d8ce28f8b26da8"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1431736881",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-sidebar-organizer",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:godcide/dsh-sidebar-organizer#abfb868762b815536d21aeecd7d8ce28f8b26da8",
+    "version": "0.2.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-sidebar-organizer",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/72188f2b839e6a528edaea7f906a9e7370e96bcd288e343669dd06c7f03e10c8/godcide/dsh-sidebar-organizer",
     "description": "本插件用于将 DSH 左侧栏工作区上方和下方的按钮/面板折叠成可展开分组，并允许手动调整排序；特定按钮/面板可通过「显示 / 摘要 / 悬浮」方式避免折叠，（预期）能对复合条目与图表整块生效。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 侧栏做整理的插件：把上下两片\"插件堆\"折叠起来、条目太多时变成滑动窗口、任意条目可以变成可拖动的悬浮窗、还能自己调先后顺序。"
   },
   "schemaVersion": 1,
   "scripts": {

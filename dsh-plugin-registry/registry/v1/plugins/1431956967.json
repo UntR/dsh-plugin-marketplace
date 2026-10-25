@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "fe0544e19d5f8d7298714e0ff67e7ee5e8a81915"
   },
   "github": {
@@ -48,27 +48,39 @@
   },
   "id": "gh:1431956967",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-gen",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Idun/dsh-gen#fe0544e19d5f8d7298714e0ff67e7ee5e8a81915",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-gen",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bf46b5d2263f358690e31e97172eac512f2e38907e1d9fcbde6d25e4e6043412/Idun/dsh-gen",
     "description": "DeepSeek Harness 的技能（Gem）管理器：把可复用的指令与本地知识文档打包成模型可调用的技能，并提供设置面板里的 Dsh-Gen 页面。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 用的「技能 / 预设」管理器，思路类似 Gemini 的 Gems。"
   },
   "schemaVersion": 1,
   "scripts": {

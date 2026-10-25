@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "410bc8967c415cb9400f59a8b58f2a016fe78bee"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1431447140",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-auto-restart",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:meng-lx/dsh-auto-restart#410bc8967c415cb9400f59a8b58f2a016fe78bee",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-auto-restart",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8d0783b4ec14afb0646c9e0a9747e4bedb66b03be33d0a49bd7ebee67f676d59/meng-lx/dsh-auto-restart",
     "description": "等整个 DSH 都空闲下来再安全地重启它，重启完成后自动回到原会话说一句话。Restart DSH only when idle, then wake the original session."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "等整个 DSH 都空闲下来再安全地重启它，重启完成后自动回到原会话说一句话。"
   },
   "schemaVersion": 1,
   "scripts": {

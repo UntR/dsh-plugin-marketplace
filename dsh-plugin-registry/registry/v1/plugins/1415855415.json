@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "a16dda7e244dc4f78fdd50e648e0a89571fd6273"
   },
   "github": {
@@ -43,27 +43,37 @@
   },
   "id": "gh:1415855415",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-codemode",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-codemode@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-codemode",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9c38a044e43177dc8ad5d4e88b1433722098544b46405250d6eea7c56c9ca328/MuWinds/dsh-codemode",
     "description": "新增 codemode 模式，更好、更高效地调用复杂工具"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个面向 DeepSeek Harness（DSH）的 Code Mode 智能体预设：标准工具照常原生调用，本预设清单以外的工具（MCP 工具、 profile 级插件、按 agent 注册的工具集）被挡在模型上下文之外，只由一个额外的 coderun 工具从程序内部按需发现与调用。"
   },
   "schemaVersion": 1,
   "scripts": {

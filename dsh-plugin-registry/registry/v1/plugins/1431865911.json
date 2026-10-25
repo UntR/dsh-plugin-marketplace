@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "5db0cdd598a477a8174c1c280d6014bb8af89b12"
   },
   "github": {
@@ -14,7 +14,7 @@
     "createdAt": "2026-10-24T05:58:07Z",
     "databaseId": 1431865911,
     "defaultBranch": "main",
-    "description": "Throw tomatoes at the model: the send key becomes a tomato key while a task runs. A DSH plugin.",
+    "description": "让你在模型发癫时不再手足无措——dsh-throwtomatoes-plugin By DeepSeek-V4.1-flash1017的53,973,006tokens",
     "fork": false,
     "forks": 0,
     "headSha": "5db0cdd598a477a8174c1c280d6014bb8af89b12",
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVViKNw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/bdc21e0fca931cd5b274e8aedc6d986336f4f919c1a3b13b6663ea96f4b97d4f/hj9178/dsh-throwtomatoes-plugin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/15014b815b8d73dfacb9ee6976f3ebf1374e0e52a745c8b10ce75b1b4e72ed04/hj9178/dsh-throwtomatoes-plugin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/344211765?v=4",
       "login": "hj9178"
@@ -39,32 +39,44 @@
       "dsh-plugin",
       "throw-tomatoes"
     ],
-    "updatedAt": "2026-10-24T07:16:51Z",
+    "updatedAt": "2026-10-24T11:13:49Z",
     "url": "https://github.com/hj9178/dsh-throwtomatoes-plugin"
   },
   "id": "gh:1431865911",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-throwtomatoes-plugin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hj9178/dsh-throwtomatoes-plugin#5db0cdd598a477a8174c1c280d6014bb8af89b12",
+    "version": "0.2.8"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-throwtomatoes-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.8"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/bdc21e0fca931cd5b274e8aedc6d986336f4f919c1a3b13b6663ea96f4b97d4f/hj9178/dsh-throwtomatoes-plugin",
-    "description": "Throw tomatoes at the model: the send key becomes a tomato key while a task runs. A DSH plugin."
+    "coverUrl": "https://opengraph.githubassets.com/15014b815b8d73dfacb9ee6976f3ebf1374e0e52a745c8b10ce75b1b4e72ed04/hj9178/dsh-throwtomatoes-plugin",
+    "description": "让你在模型发癫时不再手足无措——dsh-throwtomatoes-plugin By DeepSeek-V4.1-flash1017的53,973,006tokens"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "朝模型扔番茄。当模型正在跑任务、而你的输入框是空的时候，输入框右下角的发送/停止键会变成番茄键。按下去不会发送任何东西——它扔出一个番茄砸向对话区，并让模型反省刚才哪里做错了：轻扔等这一轮跑完再说，猛扔当场打断。提醒是宿主侧直接注入给模型的，对话流里看不到任何多出来的消息。"
   },
   "schemaVersion": 1,
   "scripts": {

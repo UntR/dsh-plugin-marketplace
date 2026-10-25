@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "787298557c784aacdb77caff339d8ce41658b031"
   },
   "github": {
@@ -44,27 +44,40 @@
   },
   "id": "gh:1431705684",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-official-reasoning-effort",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Ayowait/dsh-official-reasoning-effort#787298557c784aacdb77caff339d8ce41658b031",
+    "version": "0.3.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./plan": "./lib/plan.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-official-reasoning-effort",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/125df5455ee3d94d35e809b0a343c3db3498481df9b2c3ad83e0e56730b84ae3/Ayowait/dsh-official-reasoning-effort",
     "description": "Official-style model + reasoning-effort control for the DeepSeek Harness composer: Off/Low/High/Max."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Many gateway APIs (e.g. deepseek-v4.1-flash on a relay) expose no reasoning effort knob of their own, yet the request still succeeds upstream. The official composer only renders the Effort row when the model declares reasoning levels — so gateways without a declaration show no su"
   },
   "schemaVersion": 1,
   "scripts": {

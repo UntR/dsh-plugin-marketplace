@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "3305bfe7e6483378eced94f2cf55f023ecfaa7fd"
   },
   "github": {
@@ -49,27 +49,41 @@
   },
   "id": "gh:1431774842",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-penpot",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:AlbertZJ/dsh-penpot#3305bfe7e6483378eced94f2cf55f023ecfaa7fd",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./*": "./lib/*.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/en.json": "./locale/en.json",
+      "./locale/zh.json": "./locale/zh.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-penpot",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e58719afff535556ffed3eaf34ba12f91532d44e83dca4d2669ed92200e3143a/AlbertZJ/dsh-penpot",
     "description": "Penpot inside DeepSeek Harness as a native plugin — REST/RPC tools (no MCP) + design-review and handoff skills"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Penpot inside DeepSeek Harness as a native plugin — no MCP. The plugin registers model-facing tools that call Penpot's backend command API directly, plus two bundled skills (design review and design handoff) written against those tools."
   },
   "schemaVersion": 1,
   "scripts": {

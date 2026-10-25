@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "27b7d3c7662015785c69709485ee75818a777ec6"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1431885581",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-memory-keeper",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:WU079/dsh-memory-keeper#27b7d3c7662015785c69709485ee75818a777ec6",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-memory-keeper",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/365e207ee57f88e7f06b71a2e3ae4e6b15651dbd0ad9d3e25de5b6cf425d9d5d/WU079/dsh-memory-keeper",
     "description": "Cross-session memory for DSH: exports every session to readable Markdown with provenance, keeps a MEMORY.md you curate, and gives the agent mem_wake / mem_search / mem_write — memory that survives windows."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-memory-keeper gives an agent a memory that survives windows. It reads DSH's own session files (read-only), turns each conversation into plain Markdown with every message tagged by provenance, keeps a long-term MEMORY.md that the agent writes to, and assembles a small \"wake up"
   },
   "schemaVersion": 1,
   "scripts": {

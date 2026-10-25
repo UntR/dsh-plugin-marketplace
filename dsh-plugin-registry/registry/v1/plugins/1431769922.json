@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./plugin/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "45ea51fa44df5482be625541e1278fa2e8775579"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1431769922",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-cradle",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:toyangshome/dsh-cradle#45ea51fa44df5482be625541e1278fa2e8775579",
+    "version": "1.4.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./plugin/index.js",
+      "./client": "./plugin/client.js",
+      "./icon": "./plugin/icon.svg",
+      "./locale/*.json": "./plugin/locale/*.json"
+    },
+    "main": "./plugin/index.js",
+    "name": "@local/dsh-cradle",
+    "status": "valid",
+    "type": "module",
+    "version": "1.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e448994300319eb99129b5eddf4855862d54c1e054d21371785b79a26aa99cb2/toyangshome/dsh-cradle",
     "description": "Cradle — sovereign agent diplomacy with a pixel room and agency: DSH plugin (host + web), the dsh-net/1.0 Discovery Server in Go, a multi-agent simulator and tests."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Install Cradle and this DeepSeek Harness gets two things at once:"
   },
   "schemaVersion": 1,
   "scripts": {

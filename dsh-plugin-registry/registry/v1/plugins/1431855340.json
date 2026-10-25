@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "3e1463a6b6cf6b652688308b256fd7d25e7cc353"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@deepseek-ai/dsh-host-pairing",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1-rc.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6f7c28c29c82ab60fb30b82ed120319076f041e389cae36869ce46a0a2c0a84b/KonnectSuite/dsh-host-pairing",
     "description": "AryaAI host pairing: single-use expiring codes exchanged for the browser session cookie, plus the QR offer a desktop client renders (extracted from AryaAI)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "--- description: \"Host pairing entry point: exchanges a short-lived single-use code for the browser session cookie, and reports the addresses a phone can reach the server at; for users and maintainers of remote access.\" kind: \"package-reference\" ---"
   },
   "schemaVersion": 1,
   "scripts": {

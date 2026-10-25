@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "b655a69c02889cab386751d18448cfb8b129fef3"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1431514443",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-import-models",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vit-cerny/dsh-model-manager#b655a69c02889cab386751d18448cfb8b129fef3",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-import-models",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/dd69d08b5ef7f0e3b2f1d90a8dc93678e91f6b1740c25dc25a6f4e01ddd67be2/vit-cerny/dsh-model-manager",
     "description": "Import the models, providers, API keys and OAuth logins that other agent harnesses keep on your machine (opencode, Codex/ChatGPT, Claude Code, Gemini, Qwen, .env) into DeepSeek Harness, with a clean Settings page to manage them."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Import the models, providers, API keys and OAuth logins that other agent harnesses keep on this machine into DeepSeek Harness, then enable, disable and remove them from a Settings → Model Manager page."
   },
   "schemaVersion": 1,
   "scripts": {

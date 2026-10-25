@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "c3ffcb31a1e6193d6500a3b7fbdcec573a5c2852"
   },
   "github": {
@@ -30,7 +30,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/60508267?u=a4c4dd9c045fcc1ce78ea7d11d848d392f6da09e&v=4",
       "login": "Gorkaseto"
     },
-    "pushedAt": "2026-10-24T08:20:19Z",
+    "pushedAt": "2026-10-24T10:49:29Z",
     "slug": "Gorkaseto/dsh-plugin-updater",
     "stars": 0,
     "topics": [
@@ -44,27 +44,40 @@
   },
   "id": "gh:1431944242",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-updater",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Gorkaseto/dsh-plugin-updater#c3ffcb31a1e6193d6500a3b7fbdcec573a5c2852",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-plugin-updater",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a4c6a54540f1f47072e52ed59e3be298eee4147124fbecffda22f519a2f5f8ce/Gorkaseto/dsh-plugin-updater",
     "description": "A plugin updater for DSH. It finds the plugins in your profile that were installed from GitHub, compares versions and updates them — one at a time or all at once."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A plugin updater for DSH. It finds the plugins in your profile that were installed from GitHub, compares each one's installed version with the version in package.json on the latest commit of its repository's main branch, and updates them — one at a time or all at once."
   },
   "schemaVersion": 1,
   "scripts": {

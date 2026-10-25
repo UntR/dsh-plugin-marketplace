@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
-    "headSha": "997e0d5fa99614174a0233037ca96bab40c0ed42"
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
+    "headSha": "d621ab00417e76bb0f39d76499517e2302e87cce"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Unattended mode for DSH Auto review: reviewer denials become final with no human approval prompt",
     "fork": false,
     "forks": 0,
-    "headSha": "997e0d5fa99614174a0233037ca96bab40c0ed42",
+    "headSha": "d621ab00417e76bb0f39d76499517e2302e87cce",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVVkxPQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f4c272ef3ce9f54a3f51d27916a477fe64d5ac71cd9da8489ba371ceee6418de/JHees/dsh-unattended",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/6ff9db337173fc70f19d0d67ad9bb7071cf42d3b4747a49f678454e2d143a221/JHees/dsh-unattended",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/41167831?u=dbc8b791d7975ac4a69d1024d614ecba53cc75a2&v=4",
       "login": "JHees"
     },
-    "pushedAt": "2026-10-24T06:58:40Z",
+    "pushedAt": "2026-10-25T06:51:35Z",
     "slug": "JHees/dsh-unattended",
     "stars": 0,
     "topics": [
@@ -40,32 +40,44 @@
       "dsh-plugin",
       "unattended"
     ],
-    "updatedAt": "2026-10-24T06:58:49Z",
+    "updatedAt": "2026-10-25T06:51:38Z",
     "url": "https://github.com/JHees/dsh-unattended"
   },
   "id": "gh:1431908669",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-unattended",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:JHees/dsh-unattended#d621ab00417e76bb0f39d76499517e2302e87cce",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "index.js",
+    "name": "dsh-unattended",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f4c272ef3ce9f54a3f51d27916a477fe64d5ac71cd9da8489ba371ceee6418de/JHees/dsh-unattended",
+    "coverUrl": "https://opengraph.githubassets.com/6ff9db337173fc70f19d0d67ad9bb7071cf42d3b4747a49f678454e2d143a221/JHees/dsh-unattended",
     "description": "Unattended mode for DSH Auto review: reviewer denials become final with no human approval prompt"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 的 自动审查（Auto review） 预设加一个「无人值守」开关：审查拒绝的调用直接拒绝，不再弹人工审批；审查同意的调用照常执行。人不在电脑前时，审批面板不会再一直挂着。"
   },
   "schemaVersion": 1,
   "scripts": {

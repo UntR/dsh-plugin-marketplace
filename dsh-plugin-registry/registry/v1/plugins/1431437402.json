@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "6b0b8287c5f3bf9dbdb5c242cc049345c62ca5cb"
   },
   "github": {
@@ -47,27 +47,40 @@
   },
   "id": "gh:1431437402",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-turn-cost",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:YuGaN525/DSH-token-admin#6b0b8287c5f3bf9dbdb5c242cc049345c62ca5cb",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.6.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-turn-cost",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2395083f356883e61f88d9d49c88dde2c9ee80dab4eea85581ae42f94d4a895b/YuGaN525/DSH-token-admin",
     "description": "DSH plugin: show per-turn token usage, estimated cost, and DeepSeek balance under every completed turn."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-turn-cost — 在 DSH 每条已完成的对话下方显示 本轮 token 用量、估算费用、当前余额。"
   },
   "schemaVersion": 1,
   "scripts": {

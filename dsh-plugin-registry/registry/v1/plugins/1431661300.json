@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "5aa29f1106b92626a9105780fc62693f6877653a"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1431661300",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-your-balance",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:LzdqesjG/dsh-your-balance#5aa29f1106b92626a9105780fc62693f6877653a",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "index.js",
+    "name": "dsh-your-balance",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4560ea23b98253b45eba5dc4a149af8695678c5bbc44515ce9bc830153ebb0eb/LzdqesjG/dsh-your-balance",
     "description": "AI查余额 — a balance-checking tool and per-turn balance-aware power-saving policy for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "AI查余额 is a DeepSeek Harness plugin that lets the model see the signed-in DeepSeek account balance while it works. It gives the model an explicit balance tool, appends a compact balance snapshot to every model step, and turns the configured balance thresholds into a concrete outpu"
   },
   "schemaVersion": 1,
   "scripts": {

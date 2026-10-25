@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
-    "headSha": "b459417e3301df797870bedb1a7f86244509190a"
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
+    "headSha": "b85f3e30aefd81846ab8a98f707a2270a21b8c0e"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "用于DeepSeekHarness的启动动画插件",
     "fork": false,
     "forks": 0,
-    "headSha": "b459417e3301df797870bedb1a7f86244509190a",
+    "headSha": "b85f3e30aefd81846ab8a98f707a2270a21b8c0e",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,44 +25,56 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVVML0A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e85c574f598a6ca268a83e8bb54ff82bd8fac20f23f42de2c364de4b749cfc17/KurohaneKaoruko/DSH-START",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/251f13a25682fc8cf2cd28024328193cfb4d9b70e6cf2b4d2ad35f29afc29e10/KurohaneKaoruko/DSH-START",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/101451942?u=08ab9b05b6f0e521c85019a219e4e3ba7e602755&v=4",
       "login": "KurohaneKaoruko"
     },
-    "pushedAt": "2026-10-23T20:56:00Z",
+    "pushedAt": "2026-10-24T09:48:38Z",
     "slug": "KurohaneKaoruko/DSH-START",
     "stars": 1,
     "topics": [
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-23T20:56:03Z",
+    "updatedAt": "2026-10-24T09:48:41Z",
     "url": "https://github.com/KurohaneKaoruko/DSH-START"
   },
   "id": "gh:1431505872",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-boot-sequence",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:KurohaneKaoruko/DSH-START#b85f3e30aefd81846ab8a98f707a2270a21b8c0e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-boot-sequence",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e85c574f598a6ca268a83e8bb54ff82bd8fac20f23f42de2c364de4b749cfc17/KurohaneKaoruko/DSH-START",
+    "coverUrl": "https://opengraph.githubassets.com/251f13a25682fc8cf2cd28024328193cfb4d9b70e6cf2b4d2ad35f29afc29e10/KurohaneKaoruko/DSH-START",
     "description": "用于DeepSeekHarness的启动动画插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "打开 DSH 时先来一段约 4 秒的「安全启动」过场：白色字符雨铺满整屏，左边一台终端逐行打印自检日志，进度条一路解压到 100%，最后 ACCESS GRANTED 一闪，整屏淡出，进入正常界面。"
   },
   "schemaVersion": 1,
   "scripts": {

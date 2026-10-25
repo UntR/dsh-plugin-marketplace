@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "93be72ba6e06f73094dff63a1618e8c5219d30d2"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1431733017",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-chrome-only",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:SeekAfterSeek/dsh-chrome-only#93be72ba6e06f73094dff63a1618e8c5219d30d2",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./scripts/Install-WebProfile.ps1": "./scripts/Install-WebProfile.ps1",
+      "./scripts/Open-DshChrome.ps1": "./scripts/Open-DshChrome.ps1"
+    },
+    "main": "./index.js",
+    "name": "@local/dsh-chrome-only",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4e464bc1bf7f62b134742b890415d1ff7e817abcf85da3302013ef5f6b511a29/SeekAfterSeek/dsh-chrome-only",
     "description": "DeepSeek Harness bundle: every browser navigation goes to Google Chrome - tools, guard, prompt rule, and a Chrome handoff so dsh web never opens the OS default browser."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "强制 DSH 里所有浏览器跳转只走 Google Chrome。 无论系统默认浏览器是什么，DSH 自己去开网页时只能是 Chrome；没人提浏览器就默认 Chrome，只有用户明确点名才允许例外。"
   },
   "schemaVersion": 1,
   "scripts": {

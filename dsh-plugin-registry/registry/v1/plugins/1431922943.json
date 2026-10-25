@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
-    "headSha": "30f76d13b9fd1234eb302012a9001949e18aa5bd"
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
+    "headSha": "95599124dfac0f8fce5414c5089de4e404e60c0f"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-24T07:18:32Z",
     "databaseId": 1431922943,
     "defaultBranch": "main",
-    "description": "Mount remote SSH/SFTP servers as DeepSeek Harness workspaces - a VS Code Remote-SSH style remote workspace panel for DSH.",
+    "description": "Mount remote SSH/SFTP servers as DeepSeek Harness workspaces: browse, read, write and edit remote files from the DSH sidebar, plus remote_exec and remote_search tools for agents.",
     "fork": false,
     "forks": 0,
-    "headSha": "30f76d13b9fd1234eb302012a9001949e18aa5bd",
+    "headSha": "95599124dfac0f8fce5414c5089de4e404e60c0f",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVVlo_w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/da094b5f0f7bd520d6087c1b4d6ee268fb620d2f490a7f7b0e5e4258d3cba8ee/MingTXin/dsh-remote-workstation",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a17e3188f21144ee200abeae130427b391f35340032998bff10fb17ced5ef87b/MingTXin/dsh-remote-workstation",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/85914094?u=f55b275eab646986524702e4ab4aedd27f8b3fab&v=4",
       "login": "MingTXin"
     },
-    "pushedAt": "2026-10-24T07:19:12Z",
+    "pushedAt": "2026-10-25T09:02:14Z",
     "slug": "MingTXin/dsh-remote-workstation",
     "stars": 0,
     "topics": [
@@ -47,32 +47,47 @@
       "ssh",
       "workspace"
     ],
-    "updatedAt": "2026-10-24T07:19:15Z",
+    "updatedAt": "2026-10-25T09:02:16Z",
     "url": "https://github.com/MingTXin/dsh-remote-workstation"
   },
   "id": "gh:1431922943",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-remote-workstation",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:MingTXin/dsh-remote-workstation#95599124dfac0f8fce5414c5089de4e404e60c0f",
+    "version": "0.5.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-remote-workstation",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/da094b5f0f7bd520d6087c1b4d6ee268fb620d2f490a7f7b0e5e4258d3cba8ee/MingTXin/dsh-remote-workstation",
-    "description": "Mount remote SSH/SFTP servers as DeepSeek Harness workspaces - a VS Code Remote-SSH style remote workspace panel for DSH."
+    "coverUrl": "https://opengraph.githubassets.com/a17e3188f21144ee200abeae130427b391f35340032998bff10fb17ced5ef87b/MingTXin/dsh-remote-workstation",
+    "description": "Mount remote SSH/SFTP servers as DeepSeek Harness workspaces: browse, read, write and edit remote files from the DSH sidebar, plus remote_exec and remote_search tools for agents."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Remote SSH workspaces for DeepSeek Harness — mount a server directory into the DSH sidebar and work on it like a local workspace."
   },
   "schemaVersion": 1,
   "scripts": {

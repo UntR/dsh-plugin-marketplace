@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "e488db8986a21d9518ae59d38a864cd840fec8b2"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1431950709",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-restart",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:JiuRiWu/dsh-restart#e488db8986a21d9518ae59d38a864cd840fec8b2",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-restart",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0ea9627c051976467fd380ca52ed984f26e3c53e18a09b4bf00ca92a950d67c8/JiuRiWu/dsh-restart",
     "description": "Restart button for DSH Desktop. Requires the companion shell patch in this repository.DSH桌面的重启按钮。需要此仓库中的配套shell补丁"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给官方 DSH Desktop 的侧边栏底部加一个重启按钮。点下去看到的是托盘「退出 DeepSeek Harness」那个原生确认框（「还有对话在运行吗」那一套），确认后旧进程优雅退出、完全停稳，再重新拉起。"
   },
   "schemaVersion": 1,
   "scripts": {

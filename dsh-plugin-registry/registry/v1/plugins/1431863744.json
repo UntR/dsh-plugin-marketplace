@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "3c8c8ded6f4f5e2b3ed947d6a9c2c6de71206168"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1431863744",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-default-workspace-session-dir",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yangstarkone/dsh-default-workspace-session-dir#3c8c8ded6f4f5e2b3ed947d6a9c2c6de71206168",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-default-workspace-session-dir",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/45d565f827b0826bf7f1a1689a1f16782eae4c0e99d560f2fa9c70a8820bf0b6/yangstarkone/dsh-default-workspace-session-dir",
     "description": "DeepSeek Harness plugin: one timestamped output folder per session in the default workspace, removed when the session is archived."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）用的 Host 插件：默认工作区里每个真正开始干活的会话，自动获得一个以 年-月-日-时-分 命名的输出目录；会话被归档时删除该目录；退出应用不删。"
   },
   "schemaVersion": 1,
   "scripts": {

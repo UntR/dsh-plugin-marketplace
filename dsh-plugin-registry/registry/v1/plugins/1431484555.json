@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
-    "headSha": "9424608f3188c01cc11bfabab7f9f09a647b128c"
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
+    "headSha": "d16dda6ad4ecaf02e9514ee007b210c589d2dc44"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness plugin: the main conversation dispatches work into real thread sessions and gets short summaries back.",
     "fork": false,
     "forks": 0,
-    "headSha": "9424608f3188c01cc11bfabab7f9f09a647b128c",
+    "headSha": "d16dda6ad4ecaf02e9514ee007b210c589d2dc44",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,45 +25,58 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVVK4iw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e48ec2a3e154c6c288ee033193e9215e261cb9c5a154899a39c7a36d99a3e516/Kyf-eng/dsh-threads",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/54cf9ebe28d078dd9e540ca16915afbcbf9e97ee98e2912b5f4ae191752b10bc/Kyf-eng/dsh-threads",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/184144413?v=4",
       "login": "Kyf-eng"
     },
-    "pushedAt": "2026-10-24T05:15:55Z",
+    "pushedAt": "2026-10-25T05:30:24Z",
     "slug": "Kyf-eng/dsh-threads",
-    "stars": 0,
+    "stars": 2,
     "topics": [
       "deepseek-harness",
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-24T05:15:57Z",
+    "updatedAt": "2026-10-25T08:25:36Z",
     "url": "https://github.com/Kyf-eng/dsh-threads"
   },
   "id": "gh:1431484555",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@kyf-eng/dsh-threads",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@kyf-eng/dsh-threads@0.1.0-rc.8",
+    "version": "0.1.0-rc.8"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0-rc.8",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/index.js",
+      "./client": "./dist/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "@kyf-eng/dsh-threads",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-rc.8"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e48ec2a3e154c6c288ee033193e9215e261cb9c5a154899a39c7a36d99a3e516/Kyf-eng/dsh-threads",
+    "coverUrl": "https://opengraph.githubassets.com/54cf9ebe28d078dd9e540ca16915afbcbf9e97ee98e2912b5f4ae191752b10bc/Kyf-eng/dsh-threads",
     "description": "DeepSeek Harness plugin: the main conversation dispatches work into real thread sessions and gets short summaries back."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness 插件，照着 Claude 的\"项目 + 讨论串\"做。项目的主对话当调度员：遇到能独立完成的任务，就开一个讨论串——一个你能点进去接着聊的真实会话；讨论串做完后，把简短的回报发回主对话。"
   },
   "schemaVersion": 1,
   "scripts": {

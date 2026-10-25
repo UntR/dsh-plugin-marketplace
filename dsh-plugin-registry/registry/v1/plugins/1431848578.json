@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-24T08:46:41.746Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichmentStatus": "ok",
     "headSha": "da9d8766a5f468e6315ed1c96f1a016ba34ee528"
   },
   "github": {
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@deepseek-ai/dsh-tool-images",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1-rc.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e2c43ab5a230041a323f469382811127f367e439155a7cbdf20f663e17edbf26/KonnectSuite/dsh-tool-images",
     "description": "AryaAI model-facing ComfyUI tools: image generation, video workflows and film assembly (extracted from AryaAI)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "--- description: \"The model-facing image and video generation tool (imagesgenerate) over ctx.comfyImagesController: how deployments mount it and what the model sees when it submits a ComfyUI workflow.\" kind: \"package-reference\" ---"
   },
   "schemaVersion": 1,
   "scripts": {
