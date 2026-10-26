@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "e36efd92a4cea332d5b758589d121b9463b54cdc"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1432325806",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-watch-history",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:H-Y-1-1/dsh-watch-history#e36efd92a4cea332d5b758589d121b9463b54cdc",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./schema": "./schema/history.schema.json",
+      "./server": "./src/server.mjs",
+      "./store": "./src/store.mjs"
+    },
+    "main": "./index.js",
+    "name": "dsh-watch-history",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/eca563111fcada27709a4ff8d98c5c61e5c259dcb45b7b451446e46a84d7d7f9/H-Y-1-1/dsh-watch-history",
     "description": "跨平台观看历史 DSH 插件：把 Agent 看过的内容记成本地账本，在设置页用卡片墙回看；支持任意平台、Provider/声明式元数据补全和本地 token 鉴权。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "适合谁：用 DSH Agent 刷视频、读帖子，想留下「看过什么、看没看完、一句话感受」的人。"
   },
   "schemaVersion": 1,
   "scripts": {

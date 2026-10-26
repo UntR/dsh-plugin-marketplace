@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "e472b883552c9105e8d3672eb183e48bdc6de800"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1432868642",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-notifier",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:LeeeWM/dsh-session-notifier#e472b883552c9105e8d3672eb183e48bdc6de800",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "index.js",
+    "name": "dsh-session-notifier",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8a11b5cc8008fae7df168a866d8f896bf966250c65ce4f5f9d8d384193a934fa/LeeeWM/dsh-session-notifier",
     "description": "Windows 11 toast notification when a DSH session turn finishes, with focus-aware suppression."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 宿主侧插件：每当一轮会话回复结束，在 Windows 11 右下角弹出系统通知，作用类似 Claude Code / Codex 的完成提示。默认只有 DSH 不在前台时才提示，避免盯着屏幕时被打扰。"
   },
   "schemaVersion": 1,
   "scripts": {

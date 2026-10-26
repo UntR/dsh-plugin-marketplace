@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "cadc4e670cba913c45539baff34c67802bf0d3d9"
   },
   "github": {
@@ -46,27 +46,41 @@
   },
   "id": "gh:1432340237",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-radio",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:CXZAAA/dsh-radio#cadc4e670cba913c45539baff34c67802bf0d3d9",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-radio",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5fe5abb440a7638cfe7c4a4b22a22c25040877a03fbb3a64532119cc88cd92e4/CXZAAA/dsh-radio",
     "description": "Ambient internet radio for the DeepSeek-Harness Web GUI"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH Web GUI 里边工作边听的网络电台。 一条 24px 的胶囊嵌在 composer 状态行里，和轮次、token 那些状态并排；点一次出声，切台、暂停、音量、曲目都在它自己的面板里。"
   },
   "schemaVersion": 1,
   "scripts": {

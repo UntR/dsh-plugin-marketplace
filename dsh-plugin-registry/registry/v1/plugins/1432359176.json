@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "8d2ad9827643189e8b142b21526463b8ed68528d"
   },
   "github": {
@@ -49,27 +49,41 @@
   },
   "id": "gh:1432359176",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-long-term-memory",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Yang-Yin734/dsh-long-term-memory#8d2ad9827643189e8b142b21526463b8ed68528d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-long-term-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/935d42482c10ce53b3e902cd0801fba7452b10d2cc5eddb8edd2d8915dda5fbe/Yang-Yin734/dsh-long-term-memory",
     "description": "Long-term memory box for DeepSeek Harness settings — text typed here is injected into the system prompt of every new session, in every workspace. · DSH 设置页的「长时记忆」输入框"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个给 DeepSeek Harness（DSH） 用的双半插件（host + browser），补上 DSH 原生的一个缺口：跨会话的长期偏好没有地方填。"
   },
   "schemaVersion": 1,
   "scripts": {

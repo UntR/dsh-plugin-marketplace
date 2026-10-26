@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "1e630deda015f6a39c3520833e964891195ed526"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1432757397",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-harness-restart",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:KiiiiiG/dsh-harness-restart#1e630deda015f6a39c3520833e964891195ed526",
+    "version": "1.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./helper": "./helper.mjs",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-harness-restart",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/317835884257fdaee15fcb7728ad041a285183559d77fddaca2c44f997f7bd6c/KiiiiiG/dsh-harness-restart",
     "description": "One-click restart for DeepSeek Harness: a sidebar entry plus an out-of-process helper that quits and relaunches the desktop app."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在左侧栏的全局面板列表（Plugins、Market、Schedules 那一列）里加一个「重启」入口： 点一下，整个 DeepSeek Harness（桌面端是完整的 Electron 应用，CLI 是当前 dsh 进程） 会退出并自动重新启动。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "0dff2c2af950b246f43b408eb3832e81ad98d782"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1432620653",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-copy-document",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ionaryu/dsh-copy-document#0dff2c2af950b246f43b408eb3832e81ad98d782",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-copy-document",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1582fdbf86bd5dac700e2673a0c82ee919771e588fab3706b8b29cc4fdfc0927/ionaryu/dsh-copy-document",
     "description": "Adds a whole-document copy button to the DeepSeek Harness sidebar editor header, right of Save"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "The right sidebar's file editor shows a document one screen at a time; getting the whole thing into another tool means selecting past the viewport or scrolling to load every page. This plugin adds one control to that editor's header, immediately right of Save: it copies the docum"
   },
   "schemaVersion": 1,
   "scripts": {

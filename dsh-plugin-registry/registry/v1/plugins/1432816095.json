@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "28d793a8e564f44d3d95a05b39e2fa2721cb5ad5"
   },
   "github": {
@@ -42,27 +42,39 @@
   },
   "id": "gh:1432816095",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-crash-backup",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:2000HINA/dsh-crash-backup#28d793a8e564f44d3d95a05b39e2fa2721cb5ad5",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-crash-backup",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/57aff1bf4e35941ce4839c61abec70d372b60fe3e4a619558b981bc02cb0d60b/2000HINA/dsh-crash-backup",
     "description": "Directory-copy DSH environment backups with a crash-safe restore script."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Desktop 的崩溃备份插件：手动把当前环境保存成一个目录快照，DSH 崩溃或无法启动后，直接双击存档里的 RESTORE.cmd 就能回档。"
   },
   "schemaVersion": 1,
   "scripts": {

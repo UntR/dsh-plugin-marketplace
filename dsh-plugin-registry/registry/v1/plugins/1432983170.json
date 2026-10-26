@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
-    "headSha": "12453d653f15611a4918f0066c9edce8a8fb6028"
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
+    "headSha": "453d4c712460b81f502f55e1570be37f5eef2650"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness 任务看板插件 — 自动任务、kanban_* 原生工具、飞书同步",
     "fork": false,
     "forks": 0,
-    "headSha": "12453d653f15611a4918f0066c9edce8a8fb6028",
+    "headSha": "453d4c712460b81f502f55e1570be37f5eef2650",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,18 +25,18 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVWmWgg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/05b7a0ad6e3263897e69c55980ecb9b08450d9d55cefcfca6b094c83e560f9a1/15217814598/dsh-kanban",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/32bc1190faffdc2db16115fcf45b3ebadd688a7e4b3bcbc53047e1e21a5a441a/15217814598/dsh-kanban",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/50586235?v=4",
       "login": "15217814598"
     },
-    "pushedAt": "2026-10-25T09:02:16Z",
+    "pushedAt": "2026-10-25T17:19:11Z",
     "slug": "15217814598/dsh-kanban",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-25T09:02:20Z",
+    "updatedAt": "2026-10-25T17:19:15Z",
     "url": "https://github.com/15217814598/dsh-kanban"
   },
   "id": "gh:1432983170",
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-kanban-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/05b7a0ad6e3263897e69c55980ecb9b08450d9d55cefcfca6b094c83e560f9a1/15217814598/dsh-kanban",
+    "coverUrl": "https://opengraph.githubassets.com/32bc1190faffdc2db16115fcf45b3ebadd688a7e4b3bcbc53047e1e21a5a441a/15217814598/dsh-kanban",
     "description": "DeepSeek Harness 任务看板插件 — 自动任务、kanban_* 原生工具、飞书同步"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness Web GUI 的热插拔任务看板插件，提供任务管理、拖拽排序、状态跟踪和持久化存储。"
   },
   "schemaVersion": 1,
   "scripts": {

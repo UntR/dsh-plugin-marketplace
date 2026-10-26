@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "632d9bf6a9d5041b7149cfbceec739a8501bd155"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,20 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": "./lib/index.js",
+    "name": "dsh-pdf-toolbox",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e4f785cf3a77b7a0ce9b2a99a1aec77d68c5b601103fe1f1e8ff99f7c4e789b1/glentao-dev/dsh-pdf-toolbox",
     "description": "PDF 结构操作 DSH 插件：合并/拆分/压缩/加水印/提取-删除-旋转-插入页面/元数据/加密检测/文本提取（9 个工具 14 项操作，纯本地 pdf-lib + pdfjs-dist）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "PDF 结构操作 DSH 插件，9 个工具覆盖 14 项操作：合并、拆分、压缩、加水印、提取/删除/旋转/插入页面、元数据、加密检测、文本提取、文档信息。 纯本地运行，无 API key，无上传，无 token 成本。 底层依赖 pdf-lib（结构操作）+ pdfjs-dist（文本层读取）。"
   },
   "schemaVersion": 1,
   "scripts": {

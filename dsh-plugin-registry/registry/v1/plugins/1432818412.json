@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "acdc16fdd08cfa4c4e4dc91ed4a72a9fff18efc7"
   },
   "github": {
@@ -43,27 +43,40 @@
   },
   "id": "gh:1432818412",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-startup-animation",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:davidLi17/dsh-startup-animation#acdc16fdd08cfa4c4e4dc91ed4a72a9fff18efc7",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "3.5.4",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./assets/*": "./lib/assets/*",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-startup-animation",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/104fd9c9b1208fdd76bbc25c1e389881da6af0e58227cba8a7d439ab64cc2503/davidLi17/dsh-startup-animation",
     "description": "DeepSeek Harness 开机启动动画插件：shell.overlay 覆盖层，3 秒，支持自定义开场"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的开机启动动画插件：黑底上鲸鱼点亮 → 人物淡入 → 竖向扫描线 → 环形光轨 → 三条横幅展开 → DeepSeek 字标由模糊转清晰 → HARNESS → 停留 → 淡出进主界面。约 3 秒，点任意处或 Esc 可以跳过。"
   },
   "schemaVersion": 1,
   "scripts": {

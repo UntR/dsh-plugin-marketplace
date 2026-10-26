@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "aa21c7b876dd2bce1eebf80c358448487b7e86ad"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1432447196",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-private-remote",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:MikyWang/dsh-private-remote#aa21c7b876dd2bce1eebf80c358448487b7e86ad",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-private-remote",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/18b4165e6d888a2a7779faf5d86dd5018e6c4f731b1f130e35899470df86903f/MikyWang/dsh-private-remote",
     "description": "DeepSeek Harness remote plugin: continue a paired Harness Host's workspaces, sessions, streaming replies and approvals in the official Desktop UI"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在另一台电脑的官方 DeepSeek Harness 界面里，通过 Tailscale 使用本机 Host 的工作区、会话、模型和工具。保留官方界面，不复制会话数据库，不另做网页。"
   },
   "schemaVersion": 1,
   "scripts": {

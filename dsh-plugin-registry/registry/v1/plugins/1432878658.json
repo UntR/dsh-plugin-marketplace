@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "9d61ebf276cc175f4e9cd515040993f7785c7ed1"
   },
   "github": {
@@ -42,27 +42,36 @@
   },
   "id": "gh:1432878658",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-vision-all",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:GGBound-1229/dsh-vision-all#9d61ebf276cc175f4e9cd515040993f7785c7ed1",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js"
+    },
+    "main": "index.js",
+    "name": "dsh-vision-all",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2a89702b3b1d03f4a145e93cba36862dbedf60c3c400bc8a034ec8fae3a70a78/GGBound-1229/dsh-vision-all",
     "description": "dsh添加三方API后，配置默认没有image参数，安装插件后，已有的三方和后续添加到三分都会自动配置好"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一刀切视觉声明：给 DSH 里所有 llm provider（包括以后新增的）自动补上 defaultInput: [\"text\", \"image\"]。"
   },
   "schemaVersion": 1,
   "scripts": {

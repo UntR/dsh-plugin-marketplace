@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
-    "headSha": "4473c6ace842514828335125ad8fe510783405e1"
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
+    "headSha": "0458422ab076d5ab4bbc5c68594c613d6af66926"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-25T02:59:26Z",
     "databaseId": 1432780670,
     "defaultBranch": "main",
-    "description": "DSH 插件：写记忆时只检查一件事——这条有没有写「什么情况下它是错的」，没写就不许写。回溯性重构（retcon）。",
+    "description": "DSH 插件：写记忆时只检查一件事——这条有没有写「什么情况下它是错的」，没写就不许写。自动生成封存格式、回访补记、列未结案。",
     "fork": false,
     "forks": 0,
-    "headSha": "4473c6ace842514828335125ad8fe510783405e1",
+    "headSha": "0458422ab076d5ab4bbc5c68594c613d6af66926",
     "homepageUrl": null,
     "language": "Python",
     "license": {
@@ -25,15 +25,17 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVWZ_fg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/df939850a9f94fcd1bde72558056bd4db1b13c64f6bcdb0cc4e93d4e6a540bff/QiDouZu/dsh-retcon",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d3c4079f5da2237dd099ad01aee1cc705604e2826f2bff8a4dcb8880cfb235e2/QiDouZu/dsh-retcon",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/343584133?v=4",
       "login": "QiDouZu"
     },
-    "pushedAt": "2026-10-25T05:59:42Z",
+    "pushedAt": "2026-10-25T10:01:25Z",
     "slug": "QiDouZu/dsh-retcon",
     "stars": 0,
     "topics": [
+      "context-management",
+      "deepseek",
       "deepseek-harness",
       "dsh-plugin",
       "falsifiable",
@@ -41,32 +43,38 @@
       "retrospective",
       "seal"
     ],
-    "updatedAt": "2026-10-25T05:59:45Z",
+    "updatedAt": "2026-10-25T10:09:33Z",
     "url": "https://github.com/QiDouZu/dsh-retcon"
   },
   "id": "gh:1432780670",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-retcon",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:QiDouZu/dsh-retcon#0458422ab076d5ab4bbc5c68594c613d6af66926",
+    "version": "0.2.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": "index.js",
+    "name": "dsh-retcon",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/df939850a9f94fcd1bde72558056bd4db1b13c64f6bcdb0cc4e93d4e6a540bff/QiDouZu/dsh-retcon",
-    "description": "DSH 插件：写记忆时只检查一件事——这条有没有写「什么情况下它是错的」，没写就不许写。回溯性重构（retcon）。"
+    "coverUrl": "https://opengraph.githubassets.com/d3c4079f5da2237dd099ad01aee1cc705604e2826f2bff8a4dcb8880cfb235e2/QiDouZu/dsh-retcon",
+    "description": "DSH 插件：写记忆时只检查一件事——这条有没有写「什么情况下它是错的」，没写就不许写。自动生成封存格式、回访补记、列未结案。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "它是一份封存格式 + 一把尺子。 核心只有一句：写下判断时，必须写清「什么情况下它是错的」。没写，就不算数。"
   },
   "schemaVersion": 1,
   "scripts": {

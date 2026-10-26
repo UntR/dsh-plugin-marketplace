@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "fe5b946eae5db14a2a0bb8a4ad4c94e89c477ee1"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1432344022",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-chat-manager",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kzzzt/dsh-chat-manager#fe5b946eae5db14a2a0bb8a4ad4c94e89c477ee1",
+    "version": "1.5.18"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.5.18",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/index.js",
+    "name": "dsh-chat-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "1.5.18"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b85d4bbd14c8372039ddc9a3603ed460e31c934e796726eed767a025347e37d4/kzzzt/dsh-chat-manager",
     "description": "Personal fork of WSL043/dsh-chat-manager v1.5.18 - compatible with DeepSeek Harness 0.2.1-rc.3 (DSH chat history & session manager)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 原生侧边栏中搜索、恢复和安全清理会话。"
   },
   "schemaVersion": 1,
   "scripts": {

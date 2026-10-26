@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "2000fa742b5ca7177e04e74dfd5904f6cd667b35"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1432389376",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-dashboard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:blanit/dsh-session-dashboard#2000fa742b5ca7177e04e74dfd5904f6cd667b35",
+    "version": "0.4.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-dashboard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.3"
+  },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1432389376/616ea0c9-a12a-4279-b8bf-03b06ebd9383",
     "description": "An always-visible session card in the DSH sidebar: see which sessions need you, are running, or completed unread — one click to jump in."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness Web GUI plugin: an always-visible session status card in the left sidebar (above Settings), so recent session activity is visible without opening a page."
   },
   "schemaVersion": 1,
   "scripts": {

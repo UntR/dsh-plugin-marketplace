@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "c617a52a622769a6d4dd050e161d67f46f2afde2"
   },
   "github": {
@@ -50,27 +50,39 @@
   },
   "id": "gh:1432364499",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-beforewrite",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:caishengshuo/beforewrite#c617a52a622769a6d4dd050e161d67f46f2afde2",
+    "version": "5.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-beforewrite",
+    "status": "valid",
+    "type": "module",
+    "version": "5.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a84e68ab8c1cd876636efe6e6da5b7a1a4acdb2f1b5f721a0f86afa7597ad48c/caishengshuo/beforewrite",
     "description": "Every file, one version before it breaks. A DSH plugin: snapshots a file the instant before an agent rewrites it, with a per-session GUI timeline where any point can be restored in one click."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "每次写盘之前，先把「上一版」留下来。"
   },
   "schemaVersion": 1,
   "scripts": {

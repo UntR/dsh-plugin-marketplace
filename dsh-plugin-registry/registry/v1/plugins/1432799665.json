@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "c5d623269938ae5014c92ec7cca05eb591862147"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1432799665",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ctx-meter",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ecbob/dsh-ctx-meter#c5d623269938ae5014c92ec7cca05eb591862147",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-ctx-meter",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/320b6cb0edfda135b8f5fbc4d47421c32b297e46f811eb7cada791f69db5e37d/ecbob/dsh-ctx-meter",
     "description": "DSH plugin: a /ctx slash command that prints session context occupancy for zero model tokens, plus one collapsed notice each time occupancy crosses 25% / 50% / 75%. Host-only, zero runtime dependencies."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A context-occupancy readout for DSH sessions: /ctx prints the numbers on demand (zero model tokens), and occupancy crossing 25% / 50% / 75% posts one short report per band. Host-only plugin — no client.js, so it occupies no UI slot."
   },
   "schemaVersion": 1,
   "scripts": {

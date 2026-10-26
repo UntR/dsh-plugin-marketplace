@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "4f651d4a12b74f60177dc079a6d3c03933221643"
   },
   "github": {
@@ -45,27 +45,45 @@
   },
   "id": "gh:1432950333",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-prompt-brief",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ly14278/dsh-prompt-brief#4f651d4a12b74f60177dc079a6d3c03933221643",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json",
+      "./typert": {
+        "default": "./lib/typert.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-prompt-brief",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a32c88ce5c07a24db6a5161ecf8b1685944e80544431c1f78dae88a46d58896d/ly14278/dsh-prompt-brief",
     "description": "给 DeepSeek Harness 输入框加「优化」按钮：口语需求 → 结构化产品需求（定位 / 核心功能 / 视觉参考 / 设计规范）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "点一下按钮 → 弹出「原文 / 优化结果」左右对比 → 接受（回填输入框）/ 重新生成 / 取消。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "5288ed1ba5c6ed87cc8a3a38394e88f257ce7e4f"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1432902445",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-explain-note",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Plyhi/dsh-explain-note#5288ed1ba5c6ed87cc8a3a38394e88f257ce7e4f",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-explain-note",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/221c97d37241e1cf4f56a3feb1167c6f9bba1f8a153593c3db1b7edb7c652c9b/Plyhi/dsh-explain-note",
     "description": "选中 AI 回答里的词，右键「解释」，在侧栏与会话之间开一张可拖拽/折叠/固定的便利贴。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 的 AI 回答里选中一个词，右键点「解释」，就会在会话区与左侧栏之间的空隙里开一张便签：可拖拽、可折叠成一条栏、可关闭、可固定，字号能单独放大缩小。解释由当前配置的模型生成，会结合选区所在的段落、整段回答和用户的问题，而不是查百科。菜单、便签标签和解释正文都会跟随 DSH 当前界面语言（中文 / English）。"
   },
   "schemaVersion": 1,
   "scripts": {

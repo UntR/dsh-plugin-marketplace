@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "1556bee06e831f0b300f194b5434537fc17e4ed9"
   },
   "github": {
@@ -48,27 +48,39 @@
   },
   "id": "gh:1432475340",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-suggested-task",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:littepointR/dsh-suggested-task#1556bee06e831f0b300f194b5434537fc17e4ed9",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "./index.js",
+    "name": "@local/dsh-suggested-task",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b3a6667088615ed55c0cb950ec315922783db0c96a8c7c3b9326ad6eff96ab30/littepointR/dsh-suggested-task",
     "description": "Suggested follow-up tasks after each completed DeepSeek Harness turn, launched as child sessions in isolated Git worktrees"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A resident plugin for DeepSeek Harness (DSH) that suggests actionable follow-up tasks at the end of each completed turn—just like Claude Desktop's Suggested Tasks—and lets you start any single task or Start All at once in isolated Git worktrees (.agents/worktrees/) as independent"
   },
   "schemaVersion": 1,
   "scripts": {

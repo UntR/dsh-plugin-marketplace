@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
     "enrichmentStatus": "ok",
-    "headSha": "cdb3f82bb7dcca06514ccabc1988651fdd2a5a4c"
+    "headSha": "1317af145f90ad9e0bc3f175fd1151dc33e44717"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "让DSH能够支持远程访问Web的插件，可指定WebToken进行认证",
     "fork": false,
     "forks": 0,
-    "headSha": "cdb3f82bb7dcca06514ccabc1988651fdd2a5a4c",
+    "headSha": "1317af145f90ad9e0bc3f175fd1151dc33e44717",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,18 +25,18 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT8Nvfg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a5540172229a77cf40cb189f8d1456227c7c55a721d52f72344d7e15a6c4cd2c/studyzy/dsh-web-remote-access",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/bc7d9b78ed0cea76bdd54e913bccc32542b2a849f943b8b85502cd7b1b9437fa/studyzy/dsh-web-remote-access",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/1635408?u=49f8ca714c4bf53ea4104d0378f73c2558f56b87&v=4",
       "login": "studyzy"
     },
-    "pushedAt": "2026-10-19T17:36:28Z",
+    "pushedAt": "2026-10-26T03:44:58Z",
     "slug": "studyzy/dsh-web-remote-access",
     "stars": 7,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-15T05:15:54Z",
+    "updatedAt": "2026-10-26T03:44:32Z",
     "url": "https://github.com/studyzy/dsh-web-remote-access"
   },
   "id": "gh:1338208126",
@@ -46,11 +46,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "@studyzy/dsh-web-remote-access@1.0.1",
-    "version": "1.0.1"
+    "spec": "@studyzy/dsh-web-remote-access@2.0.0",
+    "version": "2.0.0"
   },
   "npm": {
-    "latestVersion": "1.0.1",
+    "latestVersion": "2.0.0",
     "published": true,
     "repositoryMatches": true
   },
@@ -77,25 +77,21 @@
       "./url": {
         "default": "./lib/url.js",
         "types": "./lib/url.d.ts"
-      },
-      "./webserver": {
-        "default": "./lib/webserver.js",
-        "types": "./lib/webserver.d.ts"
       }
     },
     "main": "lib/index.js",
     "name": "@studyzy/dsh-web-remote-access",
     "status": "valid",
     "type": "module",
-    "version": "1.0.2"
+    "version": "2.0.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a5540172229a77cf40cb189f8d1456227c7c55a721d52f72344d7e15a6c4cd2c/studyzy/dsh-web-remote-access",
+    "coverUrl": "https://opengraph.githubassets.com/bc7d9b78ed0cea76bdd54e913bccc32542b2a849f943b8b85502cd7b1b9437fa/studyzy/dsh-web-remote-access",
     "description": "让DSH能够支持远程访问Web的插件，可指定WebToken进行认证"
   },
   "readme": {
     "available": true,
-    "excerpt": "一个开箱即用的 DeepSeek Harness (dsh) 插件:解锁 dsh web 的远程访问能力(--host 0.0.0.0),并让对外暴露的 Web UI 始终处于访问令牌(web token)保护之下——页面、/api RPC、WebSocket 下行全部在门卫之后;回环访问则无需令牌,本地使用零打扰。"
+    "excerpt": "一个开箱即用的 DeepSeek Harness (dsh) 插件:解锁 dsh web 的远程访问能力(--host 0.0.0.0)。上游出于安全考虑直接拒绝通配绑定(会把远程代码执行能力暴露到网络上),本插件把 0.0.0.0 解析成本机的具体网卡地址再绑定,远程浏览器仍由 harness 自己的会话令牌(?token= 换取的 Cookie)把关——页面、/api RPC、WebSocket 下行全部在门禁之后。"
   },
   "schemaVersion": 1,
   "scripts": {

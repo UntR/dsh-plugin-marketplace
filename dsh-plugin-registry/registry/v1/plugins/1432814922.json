@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "e851751fdd3ab3fe27ec5ae514250e1c62d8c550"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1432814922",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dongasai/dsh-debug-web",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dongasai/dsh_debug_web#e851751fdd3ab3fe27ec5ae514250e1c62d8c550",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@dongasai/dsh-debug-web",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/49b572ccae7eb3cfdd85da5c21db8ec0d30bd33b79a6447ac5bf93fed292d01d/dongasai/dsh_debug_web",
     "description": "让 DSH 的 agent 在页面里执行 JS、读控制台 —— 一个模型工具 dsh_debug_web，走既有 Cordis Host→Client Inspect 通道 | Let the agent run JS inside the live DSH web page and read its console, over the existing inspect channel"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 官方给模型的客户端感知只有只读 Inspect：能读槽位树、主题令牌、Service/Event 契约，读不到 DOM、读不到控制台、不能执行代码。本插件补的就是这一半：一个模型工具 dshdebugweb，请求浏览器页面执行 JavaScript 并取回结果，同时把页面自己捕获的 console/异常缓冲交给模型。"
   },
   "schemaVersion": 1,
   "scripts": {

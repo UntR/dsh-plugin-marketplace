@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
     "enrichmentStatus": "ok",
-    "headSha": "0e9fe2e3ac7bd05299ee3612736316f90a91518e"
+    "headSha": "08ccbb82e1fe94c64eafa5dbb49d6563be4b2667"
   },
   "github": {
     "archived": false,
@@ -17,17 +17,20 @@
     "description": "A plugin implemented for namespace-based tool calls for DeepSeek Harness.",
     "fork": false,
     "forks": 0,
-    "headSha": "0e9fe2e3ac7bd05299ee3612736316f90a91518e",
+    "headSha": "08ccbb82e1fe94c64eafa5dbb49d6563be4b2667",
     "homepageUrl": null,
     "language": "TypeScript",
-    "license": null,
+    "license": {
+      "name": "Apache License 2.0",
+      "spdxId": "Apache-2.0"
+    },
     "nodeId": "R_kgDOVVWfsA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/1d64123eb75ec6c3ceba55230458b262366cd5796f40c5f1259d2cda86f0256b/aldveylor/dsh-intellisense",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/204dcdfce5408deb57ad8e079e5986aa7931a1b098c652a804fcb7c6eedd97a9/aldveylor/dsh-intellisense",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/30283620?v=4",
       "login": "aldveylor"
     },
-    "pushedAt": "2026-10-24T13:44:31Z",
+    "pushedAt": "2026-10-26T09:29:14Z",
     "slug": "aldveylor/dsh-intellisense",
     "stars": 1,
     "topics": [
@@ -35,23 +38,23 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-25T02:00:28Z",
+    "updatedAt": "2026-10-26T09:28:42Z",
     "url": "https://github.com/aldveylor/dsh-intellisense"
   },
   "id": "gh:1431674800",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose a ready package entry point.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@aldveylor/dsh-intellisense",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "@aldveylor/dsh-intellisense@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
+    "latestVersion": "0.2.1",
     "published": true,
-    "repositoryMatches": false
+    "repositoryMatches": true
   },
   "package": {
     "exports": {
@@ -64,43 +67,48 @@
         "types": "./dist/management/client.d.ts"
       },
       "./client/icon": "./docs/icon.svg",
+      "./client/locale/en.json": "./src/metadata/plugin/en.json",
       "./icon": "./docs/icon.svg",
+      "./locale/en.json": "./src/metadata/plugin/en.json",
       "./namespace": {
-        "default": "./dist/integration/namespace_plugin.js",
-        "types": "./dist/integration/namespace_plugin.d.ts"
+        "default": "./dist/namespace/plugin.js",
+        "types": "./dist/namespace/plugin.d.ts"
       },
       "./namespace/icon": "./docs/icon.svg",
+      "./namespace/locale/en.json": "./src/metadata/namespace/en.json",
       "./package.json": "./package.json",
       "./presentation": {
         "default": "./dist/integration/presentation.js",
         "types": "./dist/integration/presentation.d.ts"
       },
       "./presentation/icon": "./docs/icon.svg",
+      "./presentation/locale/en.json": "./src/metadata/presentation/en.json",
       "./preset": {
         "default": "./dist/integration/preset.js",
         "types": "./dist/integration/preset.d.ts"
       },
-      "./preset/icon": "./docs/icon.svg"
+      "./preset/icon": "./docs/icon.svg",
+      "./preset/locale/en.json": "./src/metadata/preset/en.json"
     },
     "main": "dist/index.js",
-    "name": "dsh-intellisense",
+    "name": "@aldveylor/dsh-intellisense",
     "status": "valid",
     "type": "module",
-    "version": "0.1.1"
+    "version": "0.2.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/1d64123eb75ec6c3ceba55230458b262366cd5796f40c5f1259d2cda86f0256b/aldveylor/dsh-intellisense",
+    "coverUrl": "https://opengraph.githubassets.com/204dcdfce5408deb57ad8e079e5986aa7931a1b098c652a804fcb7c6eedd97a9/aldveylor/dsh-intellisense",
     "description": "A plugin implemented for namespace-based tool calls for DeepSeek Harness."
   },
   "readme": {
     "available": true,
-    "excerpt": "dsh-intellisense 为 DeepSeek Harness 提供命名空间工具管理、可复用的 Profile 配置和按需工具查询。管理界面支持工具分组、别名、排序与提示固定级别，Profile 可保存并在会话间复用。"
+    "excerpt": "dsh-intellisense 为 DeepSeek Harness 提供命名空间工具管理、可复用的 Profile 配置和按需工具查询。管理界面支持工具分组、挂载路径、排序与提示固定级别，Profile 可保存并在会话间复用。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

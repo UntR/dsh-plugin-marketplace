@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "f3bdbf3e39f2229b3fc5946aa0263cd2fa122d32"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1432386485",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-proxy-port",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Acr1mony/dsh-proxy-port#f3bdbf3e39f2229b3fc5946aa0263cd2fa122d32",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-proxy-port",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/679428df141518991614416c293b590df3711e0c516ac2368d5314bc243f5531/Acr1mony/dsh-proxy-port",
     "description": "DSH plugin: switch the local HTTP proxy port at runtime with /proxy <port>; routes the agent's in-process fetches and child processes"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Route DeepSeek Harness's own network calls — webfetch, fetch(), anything that goes through undici — through a local HTTP proxy, chosen from the composer instead of a config file."
   },
   "schemaVersion": 1,
   "scripts": {

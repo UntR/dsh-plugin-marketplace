@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "02160e82aba91340081df60017f625f10d999f15"
   },
   "github": {
@@ -14,7 +14,7 @@
     "createdAt": "2026-10-25T05:30:01Z",
     "databaseId": 1432861881,
     "defaultBranch": "main",
-    "description": "QQ 群聊/私聊机器人插件（DeepSeek Harness，macOS/Windows 开箱即用）：OneBot v11/NapCat、人设、表情包、工具白名单与联网搜索、对话巡检、关键词规则、定时消息、记忆管理、ASR/TTS/生图。基于 ezoiLZH/QQ-bot，经原作者许可发布。",
+    "description": "QQ 群聊/私聊机器人插件（DeepSeek Harness，macOS/Windows 开箱即用）：OneBot v11/NapCat、人设、表情包、工具白名单与联网搜索、对话巡检、关键词规则、定时消息、记忆管理。基于 ezoiLZH/QQ-bot，经原作者许可发布。",
     "fork": false,
     "forks": 0,
     "headSha": "02160e82aba91340081df60017f625f10d999f15",
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVWe8uQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/1fd3a7d81e2fb0cb8ce2f2eb68ab5f0bd51b80f83123b53150f0d77f290ceaff/wufa-cat/dsh-qq-bot",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ee0e5a717b86af47b35400c07590cfaf7a997066516fd31f09719790987c8219/wufa-cat/dsh-qq-bot",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/302436221?v=4",
       "login": "wufa-cat"
@@ -50,32 +50,44 @@
       "web-search",
       "windows"
     ],
-    "updatedAt": "2026-10-25T08:56:01Z",
+    "updatedAt": "2026-10-25T09:51:56Z",
     "url": "https://github.com/wufa-cat/dsh-qq-bot"
   },
   "id": "gh:1432861881",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-qq-bot",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wufa-cat/dsh-qq-bot#02160e82aba91340081df60017f625f10d999f15",
+    "version": "1.4.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-qq-bot",
+    "status": "valid",
+    "type": "module",
+    "version": "1.4.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/1fd3a7d81e2fb0cb8ce2f2eb68ab5f0bd51b80f83123b53150f0d77f290ceaff/wufa-cat/dsh-qq-bot",
-    "description": "QQ 群聊/私聊机器人插件（DeepSeek Harness，macOS/Windows 开箱即用）：OneBot v11/NapCat、人设、表情包、工具白名单与联网搜索、对话巡检、关键词规则、定时消息、记忆管理、ASR/TTS/生图。基于 ezoiLZH/QQ-bot，经原作者许可发布。"
+    "coverUrl": "https://opengraph.githubassets.com/ee0e5a717b86af47b35400c07590cfaf7a997066516fd31f09719790987c8219/wufa-cat/dsh-qq-bot",
+    "description": "QQ 群聊/私聊机器人插件（DeepSeek Harness，macOS/Windows 开箱即用）：OneBot v11/NapCat、人设、表情包、工具白名单与联网搜索、对话巡检、关键词规则、定时消息、记忆管理。基于 ezoiLZH/QQ-bot，经原作者许可发布。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 QQ 变成 DeepSeek Harness 的聊天入口：OneBot v11（NapCat）收消息，Harness 的模型回消息。 macOS 与 Windows 都能开箱即用——装好插件，在界面里点几下就能跑起来，不需要命令行、不需要 clone 任何仓库。"
   },
   "schemaVersion": 1,
   "scripts": {

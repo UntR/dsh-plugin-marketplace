@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "8b355eb1db20d434699a12095446967b49b84f33"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1432845498",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@nomxy/dsh-balance",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:nomxy/dsh-balance#8b355eb1db20d434699a12095446967b49b84f33",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@nomxy/dsh-balance",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/37030b81fded879de66c6a1cec76b43546008211b02dd3b35fac371b2023ef79/nomxy/dsh-balance",
     "description": "DeepSeek Harness 侧栏账号后余额与峰谷胶囊"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 侧边栏余额胶囊：把 DeepSeek 官方账户余额 和 峰谷时段 做成一个 20px 高的小胶囊，贴在侧栏页脚「名字那一行」的右侧，不占一整块地方。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "3d3dfbb436ec6ac5bf15aa8389e1460f9595b6fb"
   },
   "github": {
@@ -50,27 +50,40 @@
   },
   "id": "gh:1432774902",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-proxy-failover",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:PILIHU2022/dsh-proxy-failover#3d3dfbb436ec6ac5bf15aa8389e1460f9595b6fb",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-proxy-failover",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b0eef77632e349e21c4242291eea8fb7e0e9f623a70deb7371891a63a16d5ea2/PILIHU2022/dsh-proxy-failover",
     "description": "DSH plugin: a loopback failover relay becomes the process-wide proxy route, so web_fetch works under Mihomo/Clash TUN fake-ip and falls back to direct inside the same request when the local proxy stops. / DSH 插件：把容错 relay 装成进程级代理路由，修复 TUN fake-ip 下的 web_fetch；本地代理关闭时同一请求内改走直连。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "开着 Mihomo/Clash 的 TUN + fake-ip 打开 DSH 后，webfetch 报："
   },
   "schemaVersion": 1,
   "scripts": {

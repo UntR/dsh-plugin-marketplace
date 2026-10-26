@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "c76aee5dab6041b68d5d151a54c205d54f6cf3b9"
   },
   "github": {
@@ -30,7 +30,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/88696221?u=cfbca70dbcdd41402aaa872ede98ae9c3be568a3&v=4",
       "login": "Dax233"
     },
-    "pushedAt": "2026-10-25T05:31:32Z",
+    "pushedAt": "2026-10-25T18:22:21Z",
     "slug": "Dax233/dsh-provider-aliases",
     "stars": 0,
     "topics": [
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,18 +59,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@deepseek-ai/dsh-llm-pi-ai",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1-rc.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c89f3c1da0e5706a306af98f10e94556944f602e6422f8b6f15ed583882bc816/Dax233/dsh-provider-aliases",
     "description": "DeepSeek Harness pi-ai route aliases: multiple credential routes over one installed catalog (e.g. several OpenCode Go plans) plus a Model aliases settings page."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）的 模型目录别名 插件：让一个已安装的 pi-ai catalog provider 同时挂多条凭据路由（例如两个 OpenCode Go 套餐、同一厂商的多个账号）， 并在 设置 → 模型别名 提供一个可视化面板管理它们。"
   },
   "schemaVersion": 1,
   "scripts": {
-    "install": false,
+    "install": true,
     "postinstall": false,
     "preinstall": false,
     "prepare": false

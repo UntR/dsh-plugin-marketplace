@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "01115b169e2c6eea53eb3e05f2f8f5d1818193ac"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1432989237",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-comfy-imagegen",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:maerd610/dsh-comfy-imagegen#01115b169e2c6eea53eb3e05f2f8f5d1818193ac",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-comfy-imagegen",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/623a6a4fac0f6daf42af1547d1a0acf65e4af676e1cce5b8deaa9d1c5bc4f11b/maerd610/dsh-comfy-imagegen",
     "description": "Conversational image generation for DeepSeek Harness, backed by your local ComfyUI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）用的生图插件： 你说想画什么，agent 把提示词写完整，插件在你本机的 ComfyUI 上跑图，出图直接回到对话里。"
   },
   "schemaVersion": 1,
   "scripts": {

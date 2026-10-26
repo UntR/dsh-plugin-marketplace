@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "a687885f18682d87663c659e50d79bba8241ffb9"
   },
   "github": {
@@ -42,27 +42,37 @@
   },
   "id": "gh:1432690756",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-prompt-slim",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wsxuyue/dsh-prompt-slim#a687885f18682d87663c659e50d79bba8241ffb9",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-prompt-slim",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fda1325e77f93f2c3a8bc9abeace88f0c0f5589807bad9b7506f308b0976ad37/wsxuyue/dsh-prompt-slim",
     "description": "DSH plugin: shrink the tool-definition block sent on every request (~39% fewer tokens) without changing tool behaviour"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "压缩「每一步都重发给模型的工具定义」——不改工具行为，只砍说明文字。"
   },
   "schemaVersion": 1,
   "scripts": {

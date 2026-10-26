@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "9631fa2793b333c022a1615cdc1992cb56a84343"
   },
   "github": {
@@ -47,27 +47,46 @@
   },
   "id": "gh:1432369525",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-pet",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yhm0619/dsh-pet-read#9631fa2793b333c022a1615cdc1992cb56a84343",
+    "version": "0.3.8-read.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.8",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-pet",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.8-read.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ec609f82857e9bfe09b093c4e032b0c401f04ce6fa0a53b7e3948b85002c9cc3/yhm0619/dsh-pet-read",
     "description": "基于 dsh-pet 的互动碎碎念：每 30 秒识屏，用视觉模型在宠物头顶随口吐槽（不需要回复、不带表情包）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "本仓库是 PC2005-cloud/dsh-pet 的 fork，遵循 MIT 许可；原始版权归 PC2005-cloud 所有，修改部分版权归 yhm0619。包名仍是 dsh-pet，安装本仓库会替换同名的上游包。"
   },
   "schemaVersion": 1,
   "scripts": {

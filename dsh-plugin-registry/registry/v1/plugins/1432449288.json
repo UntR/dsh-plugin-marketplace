@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "8c4b0607e8adf09da877449fe607923080dff5eb"
   },
   "github": {
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./api": "./lib/api.js",
+      "./client": "./lib/client.js",
+      "./kinds": "./lib/host/kinds/index.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@comecaramelos/dsh-mcp-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ebd3b46e666d3c485d6824679a48e5a286be0127e4af59a1733ec11c333ad223/ComeCaramelos/dsh-mcp-manager",
     "description": "Manage several external MCP connections from the Web GUI"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Gestor de conexiones MCP para DeepSeek Harness. Desde la GUI Web declaras varios servidores MCP —stdio y Streamable HTTP, más Chrome y el MCP Toolkit de Docker Desktop— y los enciendes o apagas uno por uno sin reiniciar el perfil."
   },
   "schemaVersion": 1,
   "scripts": {

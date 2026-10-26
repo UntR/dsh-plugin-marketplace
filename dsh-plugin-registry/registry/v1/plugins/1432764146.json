@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-25T09:04:43.832Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichmentStatus": "ok",
     "headSha": "fc004ebf4e42b0ad5209cbf9e1dc833aa18d7b12"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1432764146",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dshm-keep-screen-on",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yinghan-123/dshm-keep-screen-on#fc004ebf4e42b0ad5209cbf9e1dc833aa18d7b12",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dshm-keep-screen-on",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/94e30e83fb708bca37da0edc977561ac7b62a9a1250aa079345117e9e28a3e27/yinghan-123/dshm-keep-screen-on",
     "description": "DSHM 屏幕常亮桥：有 agent / 后台任务在跑时，ArkWeb 页面持有 Screen Wake Lock，让 HarmonyOS 不自动熄屏。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "这是「纯插件方案」：不碰 ArkTS、不改客户端，靠页面里标准的 navigator.wakeLock.request(\"screen\") 实现。已在真机验证 ArkWeb 支持该 API （support=ok，申请成功）。"
   },
   "schemaVersion": 1,
   "scripts": {
