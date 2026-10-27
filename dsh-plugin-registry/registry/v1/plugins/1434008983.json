@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "fa60604f44c3a1c3ac30c4fd4cf9becdabca3b67"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1434008983",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-remote-access",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:0xshawn/dsh-remote-access#fa60604f44c3a1c3ac30c4fd4cf9becdabca3b67",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.11",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-remote-access",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d20f5747c97fd3b32c5a44404dbdc4f3dccdf57908a758a75926b10851416475/0xshawn/dsh-remote-access",
     "description": "Serve the DeepSeek Harness (dsh) Web UI through a non-localhost authority: trusted hosts, loopback page parity, pinned launch token, no patching."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Serve the DeepSeek Harness (dsh) Web UI through a non-localhost authority — a reverse proxy, SSH tunnel, or LAN address — without patching the installed dsh."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "812d5cdff033564c4bb98aedba82897fb0924fe6"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@xuce/dsh-gpu-governor",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f290e2d76861ea8c3f12d1803ec2b3513f619a1bd6c680f13a200894cf34b6f3/xmdxzy/dsh-gpu-governor",
     "description": "GPU governor plugin for DSH: per-process VRAM attribution grouped into projects, a top-5 board with budgets, and guarded suspend/resume/kill control"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "AI 任务一多，显存就成了公共资源。ComfyUI、推理服务、游戏、还有几个忘了关的旧进程一起分，谁也说不清自己还剩多少。Windows 自带的工具不告诉你谁在占，nvidia-smi 在 WDDM 驱动下那张表的 per-process 显存一列永远显示 [N/A]，只剩一个总数。想知道「刚才那 20G 是谁吃掉的」，只能自己去翻驱动暴露的性能计数器。"
   },
   "schemaVersion": 1,
   "scripts": {

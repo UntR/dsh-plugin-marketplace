@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "2cd8c45f4c49bd80d0afaba7c19aca11ca8b9e4b"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-tool-result-pruner-plus",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0d0a745dffb007aee5ce4e2eb06d8c6c8b1ea16be61994e24846600c517e0746/MathieuPortmann/dsh-tool-result-pruner-plus",
     "description": "DSH plugin: pruned tool results start with a notice saying what is missing and exactly how to read it back (drop-in replacement for the stock pruner)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Drop-in replacement for DSH's tool-result pruner (@deepseek-ai/dsh-compaction-tool-result-pruner). When a long tool result is cut to save context, the result now starts with a notice that says it is incomplete, what is missing, and exactly how to read it back."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "c85c8ec0b20f89a4c9c207cdee3de2eed64cabfc"
   },
   "github": {
@@ -45,27 +45,41 @@
   },
   "id": "gh:1433847301",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-web-tool-provider",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:nhhc-lxr/dsh-web-tool-provider#c85c8ec0b20f89a4c9c207cdee3de2eed64cabfc",
+    "version": "0.12.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-web-tool-provider",
+    "status": "valid",
+    "type": "module",
+    "version": "0.12.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/84d5912740bc495e900fd25655898ccc95d55be866765d53df3f8dd74e7206eb/nhhc-lxr/dsh-web-tool-provider",
     "description": "Tavily, Exa and Firecrawl as interchangeable ctx.web backends for DeepSeek Harness. Switch the engine behind web_search/web_fetch from a settings page, keys in the credential store, credential-free local fetch fallback."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的 websearch / webfetch 与 Tavily / Exa / Firecrawl 之间的归一化中间层。"
   },
   "schemaVersion": 1,
   "scripts": {

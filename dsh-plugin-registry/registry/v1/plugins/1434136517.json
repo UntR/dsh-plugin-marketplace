@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "b9936b79de303e387d6772f9638e0748e958eeda"
   },
   "github": {
@@ -44,27 +44,40 @@
   },
   "id": "gh:1434136517",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-bundle-session-move",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:PanChengN/dsh-plugin-session-move#b9936b79de303e387d6772f9638e0748e958eeda",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@local/dsh-bundle-session-move",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f8688ce0d9c052c5ff945d16d223f94b6e9395c4faef0c642827a4eb39d5d4f6/PanChengN/dsh-plugin-session-move",
     "description": "DSH plugin: move a conversation to another workspace (sidebar menu + full session-log/workspace migration)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的侧栏会话菜单加一项 「移动到工作区…」：把对话连同磁盘上的会话日志、工作区归属和工作目录一起迁移到另一个工作区。"
   },
   "schemaVersion": 1,
   "scripts": {

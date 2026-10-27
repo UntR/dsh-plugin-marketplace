@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "8bcbe37bae2274ef7cf8795dd8c9b081589d420d"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1433902948",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-preset-hotswitch",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Dax233/dsh-preset-hotswitch#8bcbe37bae2274ef7cf8795dd8c9b081589d420d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@local/dsh-preset-hotswitch",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1c62d6bf9596447c9d43ee61a2041e6e7742058fa9e0922a8e12bf3fadad9547/Dax233/dsh-preset-hotswitch",
     "description": "DSH plugin: hot-switch the calling session to another agent preset after it has started (experimental; uses agentPresets.recompose) and keep the choice across restarts."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个只做一件事的 DeepSeek Harness 插件：让已经聊到一半的会话热切换到另一个 Agent 预设 （比如 cordis 创造模式），不用新开会话。"
   },
   "schemaVersion": 1,
   "scripts": {

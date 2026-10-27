@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
-    "headSha": "671a0b60c8d3ee1f06082aa08afd7fad50126fcf"
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
+    "headSha": "69957f1a5a847c208af0414297c75dc1a19adba4"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH plugin extracted from dsh-ops: publishes ops_bash over a resolved bash with the host sandbox, spill and job semantics.",
     "fork": false,
     "forks": 0,
-    "headSha": "671a0b60c8d3ee1f06082aa08afd7fad50126fcf",
+    "headSha": "69957f1a5a847c208af0414297c75dc1a19adba4",
     "homepageUrl": "https://github.com/null0xfff/dsh-bash",
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVXsLWA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b03345e19f1fb4d79e18f165d2f6ea57104a929ef6c5a9e5fa14fd3c622d2dbd/null0xfff/dsh-bash",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/6924d576c74d6f4b919a7f84eb42b5371d40f0bb8c116e29ae2caf686be858c1/null0xfff/dsh-bash",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/276485297?v=4",
       "login": "null0xfff"
     },
-    "pushedAt": "2026-10-26T09:07:21Z",
+    "pushedAt": "2026-10-26T11:22:22Z",
     "slug": "null0xfff/dsh-bash",
     "stars": 0,
     "topics": [
@@ -40,32 +40,51 @@
       "dsh-plugin",
       "ops"
     ],
-    "updatedAt": "2026-10-26T09:05:11Z",
+    "updatedAt": "2026-10-26T11:22:27Z",
     "url": "https://github.com/null0xfff/dsh-bash"
   },
   "id": "gh:1434127192",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-bash",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:null0xfff/dsh-bash#69957f1a5a847c208af0414297c75dc1a19adba4",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./shell": {
+        "default": "./lib/components/shell/index.js"
+      },
+      "./shell/icon": "./lib/components/shell/icon.png",
+      "./shell/locale/*.json": "./lib/components/shell/locale/*.json",
+      "./shell/package.json": "./lib/components/shell/package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-bash",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b03345e19f1fb4d79e18f165d2f6ea57104a929ef6c5a9e5fa14fd3c622d2dbd/null0xfff/dsh-bash",
+    "coverUrl": "https://opengraph.githubassets.com/6924d576c74d6f4b919a7f84eb42b5371d40f0bb8c116e29ae2caf686be858c1/null0xfff/dsh-bash",
     "description": "DSH plugin extracted from dsh-ops: publishes ops_bash over a resolved bash with the host sandbox, spill and job semantics."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "从 T-Auto/dsh-ops 0.4.1（commit dfafddc，MIT）中单独抽出的 bash 组件： 只做一件事——把 opsbash 发布成一个具备宿主管辖（sandbox / 审批 / 输出溢出 / 后台 job）语义的 shell 工具。 file / PTC / discovery / panel / TUI / hide-official 这六条组件行全部没有移植。"
   },
   "schemaVersion": 1,
   "scripts": {

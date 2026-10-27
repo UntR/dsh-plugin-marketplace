@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "cc5ebba9c86b010cb1ec382f9186ba906d8fc7aa"
   },
   "github": {
@@ -46,33 +46,46 @@
   },
   "id": "gh:1433451635",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-runtime-env-watch",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:ZachT11/dsh-runtime-env-watch#cc5ebba9c86b010cb1ec382f9186ba906d8fc7aa",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-runtime-env-watch",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/63b29d1f96197137968344dfca31cb5248ea18ac0ca72ef4db5b9279caad2a4b/ZachT11/dsh-runtime-env-watch",
     "description": "Periodic AI runtime, hardware, and remote-device status checks for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH） 的定时状态巡检插件：不只检查模型的工作环境（cwd、Git、关键文件、工具链），还可以定时检查电脑硬件（CPU、内存、磁盘、电池、GPU、进程、端口、温度）和远程设备/机器人（HTTP JSON、SSH/命令、TCP、文件心跳）。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

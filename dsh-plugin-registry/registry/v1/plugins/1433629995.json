@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "5feeb6f8a04bfc42f59cd7c9bee32529a74cfd73"
   },
   "github": {
@@ -45,27 +45,44 @@
   },
   "id": "gh:1433629995",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-computer-use-en",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ALAMBICCO/dsh-computer-use-en#5feeb6f8a04bfc42f59cd7c9bee32529a74cfd73",
+    "version": "0.8.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-computer-use-en",
+    "status": "valid",
+    "type": "module",
+    "version": "0.8.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2cbf7d6d3cfbe7bdacaac4553a545dd794fcbb62cadfaa38b33d7c6ec0444151/ALAMBICCO/dsh-computer-use-en",
     "description": "English Windows Computer Use for DeepSeek Harness: screenshot, mouse, keyboard, UI Automation, clipboard, window management, per-app access, and an orange control overlay with Esc pause/resume."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English port of @copylee/dsh-computer-use with DSH 0.2.1 unpacked koffi.node auto-discovery."
   },
   "schemaVersion": 1,
   "scripts": {

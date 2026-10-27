@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "3881ab4ebd70ac5ac905e94134f0b3fb96708e34"
   },
   "github": {
@@ -47,27 +47,40 @@
   },
   "id": "gh:1433493821",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tavily",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:mimoxh/dsh-tavily#3881ab4ebd70ac5ac905e94134f0b3fb96708e34",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-tavily",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/005faaaa2214aa6f2b72c1bb5bc27e9613677d582cedfb3613f0c130a38228ea/mimoxh/dsh-tavily",
     "description": "Tavily search and extract providers for DSH (DeepSeek Harness): runs the built-in web_search and web_fetch through Tavily. Zero dependencies, no build step."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DSH 内置的 websearch 和 webfetch 改走 Tavily，替代随附的 DeepSeek 搜索通道与本地 HTTP 抓取通道。"
   },
   "schemaVersion": 1,
   "scripts": {

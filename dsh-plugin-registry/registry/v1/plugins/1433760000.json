@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "7e9dafd5e2550ea6fe67edfb8fc617604b5c1dd5"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1433760000",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-firebird-connector",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:long18229425025/dsh-firebird-connector#7e9dafd5e2550ea6fe67edfb8fc617604b5c1dd5",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/index.js",
+    "name": "dsh-firebird-connector",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b553535965422023f31e67c62d226b9fb5bfe165d5721b4e4e18f7787dca421e/long18229425025/dsh-firebird-connector",
     "description": "Safe Firebird 2.5-5.0 connector for DeepSeek Harness (dsh): named connections, read-only/read-write/admin modes, parameter binding, object whitelists, confirmation gates, and JSONL audit logs. Install from npm as dsh-firebird-connector."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（dsh）的 Firebird 数据库连接器 bundle 插件。让 dsh agent 在明确的权限边界内查询、写入和维护 Firebird 2.5 / 3.0 / 4.0 / 5.0 数据库。"
   },
   "schemaVersion": 1,
   "scripts": {

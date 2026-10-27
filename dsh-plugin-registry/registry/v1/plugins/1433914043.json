@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "239fc5344d6880161ef5e99506e7a3fc3b509eb6"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1433914043",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-stop-that-shit",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hua2003-liu/dsh-stop-that-shit#239fc5344d6880161ef5e99506e7a3fc3b509eb6",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.cjs",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.cjs",
+    "name": "dsh-stop-that-shit",
+    "status": "valid",
+    "type": "commonjs",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c7fff38cea59ef1a3197faf39840483804cddf25ced4ebbedc03cd4714f679be/hua2003-liu/dsh-stop-that-shit",
     "description": "Unofficial DeepSeek Harness (DSH) adapter for Stop That Shit: two skills, /sts, and a per-session tool-call contract (deny/ask)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 Stop That Shit 的判定引擎接进 DeepSeek Harness： 两个 Skill、一个 /sts 命令、以及每次工具调用前的契约检查（deny / ask / 放行）。"
   },
   "schemaVersion": 1,
   "scripts": {

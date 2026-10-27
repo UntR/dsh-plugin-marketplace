@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "d2ecfdb256fab89bb3b6e9cf8dddaee2841ca22d"
   },
   "github": {
@@ -49,27 +49,42 @@
   },
   "id": "gh:1433605452",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workbuddy-oauth",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:muhib-karim/dsh-workbuddy-oauth#d2ecfdb256fab89bb3b6e9cf8dddaee2841ca22d",
+    "version": "0.0.4-fix.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workbuddy-oauth",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.4-fix.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/645462bf687267b5e985589123991684ec65dd3aab9606592667ebfc8b53aada/muhib-karim/dsh-workbuddy-oauth",
     "description": "DeepSeek Harness (DSH) plugin: WorkBuddy / CodeBuddy models with built-in OAuth login. Maintained fork with the fix for 400 / code 11128 (missing X-Conversation-* headers)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) plugin that brings WorkBuddy / CodeBuddy models into the DSH model picker. It signs in with its own OAuth device-code flow, so you don't need the WorkBuddy desktop app, and it works with both the China (copilot.tencent.com) and international (www.workbudd"
   },
   "schemaVersion": 1,
   "scripts": {

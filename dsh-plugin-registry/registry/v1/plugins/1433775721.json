@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
-    "headSha": "e19dcd0e379b5fab80e22227c30cfc4b3f5c8a06"
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
+    "headSha": "cad0c98a5477f148b480f7789d3eb4e509638bf2"
   },
   "github": {
     "archived": false,
@@ -16,8 +16,8 @@
     "defaultBranch": "main",
     "description": "Group-aware fail-fast tool batches for DeepSeek Harness: parallel-safe calls in a group still overlap, but once a call fails every call that has not started yet is skipped with a synthesized \"not executed\" result.",
     "fork": false,
-    "forks": 0,
-    "headSha": "e19dcd0e379b5fab80e22227c30cfc4b3f5c8a06",
+    "forks": 1,
+    "headSha": "cad0c98a5477f148b480f7789d3eb4e509638bf2",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVXWuaQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/906af0caf6c9f8f8f4c756930cdc67f1b9620f719d6a4121db38a96a7e86275b/x402/dsh-fail-fast",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/90b3eb2e1c2443aa78f0366696f6f2c5529a65f1d0e88d4cd235cc786f206023/x402/dsh-fail-fast",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/75256484?u=ac5d18e450b5bc595dedf73808a04e558543c7c3&v=4",
       "login": "x402"
     },
-    "pushedAt": "2026-10-26T01:23:52Z",
+    "pushedAt": "2026-10-26T14:27:49Z",
     "slug": "x402/dsh-fail-fast",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "deepseek-harness",
       "dsh",
@@ -40,32 +40,44 @@
       "fail-fast",
       "tool-batch"
     ],
-    "updatedAt": "2026-10-26T01:24:00Z",
+    "updatedAt": "2026-10-26T14:27:54Z",
     "url": "https://github.com/x402/dsh-fail-fast"
   },
   "id": "gh:1433775721",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-fail-fast",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-fail-fast@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./icon": "./docs/assets/icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/index.js",
+    "name": "dsh-fail-fast",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/906af0caf6c9f8f8f4c756930cdc67f1b9620f719d6a4121db38a96a7e86275b/x402/dsh-fail-fast",
+    "coverUrl": "https://opengraph.githubassets.com/90b3eb2e1c2443aa78f0366696f6f2c5529a65f1d0e88d4cd235cc786f206023/x402/dsh-fail-fast",
     "description": "Group-aware fail-fast tool batches for DeepSeek Harness: parallel-safe calls in a group still overlap, but once a call fails every call that has not started yet is skipped with a synthesized \"not executed\" result."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DSH（DeepSeek Harness）插件：把「模型一次返回的多个工具调用」当作一个批次，实现组内并行、组间顺序、失败即停 —— 并行安全的只读调用照常并发；一旦某个调用失败，所有尚未开始的调用不再执行，并为它们合成 iserror: true 的「未执行」结果返回给模型。"
   },
   "schemaVersion": 1,
   "scripts": {

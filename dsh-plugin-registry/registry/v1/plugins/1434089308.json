@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
-    "headSha": "2341748e44ccf2ea5e0a64931c36b8e983071862"
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
+    "headSha": "b0a00fbcff4acd0518aca48769adae0c6434f1f6"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "消息编辑铅笔：编辑助手回复并从该回合分叉出新版本会话 / Edit assistant replies by forking a new session version",
     "fork": false,
     "forks": 0,
-    "headSha": "2341748e44ccf2ea5e0a64931c36b8e983071862",
+    "headSha": "b0a00fbcff4acd0518aca48769adae0c6434f1f6",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOVXp3XA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/8e52962f0c970365f0f657899e6ecadaff3664d3248478fdfd6e0d2f6c7550be/Branwen050/dsh-pencil",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/db3b57292fef1e66218741236ac8660718c9f52229662c5c750f491c62dde9b3/Branwen050/dsh-pencil",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/347899753?u=d50c73e02da27771670396bfbb6eba0490af1f54&v=4",
       "login": "Branwen050"
     },
-    "pushedAt": "2026-10-26T08:32:50Z",
+    "pushedAt": "2026-10-26T13:57:54Z",
     "slug": "Branwen050/dsh-pencil",
     "stars": 0,
     "topics": [
@@ -40,32 +40,44 @@
       "message-edit",
       "session-fork"
     ],
-    "updatedAt": "2026-10-26T08:32:54Z",
+    "updatedAt": "2026-10-26T13:57:57Z",
     "url": "https://github.com/Branwen050/dsh-pencil"
   },
   "id": "gh:1434089308",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-pencil",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-pencil@0.1.3",
+    "version": "0.1.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.mjs",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.mjs",
+    "name": "dsh-pencil",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/8e52962f0c970365f0f657899e6ecadaff3664d3248478fdfd6e0d2f6c7550be/Branwen050/dsh-pencil",
+    "coverUrl": "https://opengraph.githubassets.com/db3b57292fef1e66218741236ac8660718c9f52229662c5c750f491c62dde9b3/Branwen050/dsh-pencil",
     "description": "消息编辑铅笔：编辑助手回复并从该回合分叉出新版本会话 / Edit assistant replies by forking a new session version"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-pencil 是 DSH（DeepSeek Harness）桌面端的客户端插件。DSH 的会话日志采用 append-only 机制，无法原地修改已生成的模型回复。该插件在助手回复底部添加编辑按钮，用户修改回复正文并保存后，会从当前回合分叉（fork）出一个新的会话版本，并将修改后的文本写入新会话历史，原会话则完整保留。"
   },
   "schemaVersion": 1,
   "scripts": {

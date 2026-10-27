@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "e320461dba3a7e99845f83c7bd106a2f1889dc7f"
   },
   "github": {
@@ -41,33 +41,53 @@
   },
   "id": "gh:1434033251",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dshmarket",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:vb2250158/dsh-market#e320461dba3a7e99845f83c7bd106a2f1889dc7f",
+    "version": "1.70.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.71.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./update-api-v1": {
+        "default": "./lib/update-api-v1.js",
+        "types": "./lib/types/update-api-v1.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dshmarket",
+    "status": "valid",
+    "type": "module",
+    "version": "1.70.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9a560807b5a7565a4f7ae960523d552851c58cec1c49dffdaa60d6fd82c69ca3/vb2250158/dsh-market",
     "description": "The plugin market inside DeepSeek Harness — browse, search, one-click install · DSH 可视化插件市场"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "The plugin market inside DeepSeek Harness. On dsh 0.2.1+ it is a tab on the Plugins page, right next to Installed; on older hosts open Settings → Plugin Market. Browse, search, one-click install."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

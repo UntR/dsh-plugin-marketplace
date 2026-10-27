@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
     "enrichmentStatus": "ok",
-    "headSha": "d33ec403c3b9dbe8d7d9c95e05509c4e4b1016e6"
+    "headSha": "9a73f85ca0f4b09f10ef24cc2b17cb8fe7d6cb14"
   },
   "github": {
     "archived": false,
@@ -17,20 +17,20 @@
     "description": null,
     "fork": false,
     "forks": 0,
-    "headSha": "d33ec403c3b9dbe8d7d9c95e05509c4e4b1016e6",
+    "headSha": "9a73f85ca0f4b09f10ef24cc2b17cb8fe7d6cb14",
     "homepageUrl": null,
-    "language": "Shell",
+    "language": "TypeScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOT_9tWQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/057d745f4ea7710f0d311eec012eea0ee6fc066f10e397ec697117c50ec990b9/Khorsheed/dsh-basic",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7ac255899d2c2457cb16da8b5897036559970712d3171c91415998751b09a851/Khorsheed/dsh-basic",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/6565923?u=3ca2414bed7ad2cf25f96f04b4f33a7beb1ec1fb&v=4",
       "login": "Khorsheed"
     },
-    "pushedAt": "2026-09-30T11:58:10Z",
+    "pushedAt": "2026-10-26T19:50:23Z",
     "slug": "Khorsheed/dsh-basic",
     "stars": 0,
     "topics": [
@@ -39,7 +39,7 @@
       "dsh-plugin-market",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-09-30T11:58:14Z",
+    "updatedAt": "2026-10-26T19:50:27Z",
     "url": "https://github.com/Khorsheed/dsh-basic"
   },
   "id": "gh:1342139737",
@@ -47,30 +47,39 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
   "package": {
-    "main": null,
-    "name": "dsh-profile-basic",
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "@khorsheed/dsh-basic",
     "status": "valid",
-    "type": null,
-    "version": null
+    "type": "module",
+    "version": "0.1.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/057d745f4ea7710f0d311eec012eea0ee6fc066f10e397ec697117c50ec990b9/Khorsheed/dsh-basic",
-    "description": "一组日常高频的体验插件，让你的 DSH 变得更好用、更自由。 发出去的消息可以改、可以撤；会话标题一键修改；后台任务一目了然、自由中止；上下文压缩提醒自由配置；聊天过程中随时让 Agent 帮你画预览卡片，明确 UI 效果再动手，避免重复返工；自由管理所有的 Skill 和工具，并配置到不同的 preset；任务完成有提示音；移动端快速接入；开发插件安全重启，从此不怕小鲸鱼自杀……——大多数用户最先想要的那层体验，一次装齐。"
+    "coverUrl": "https://opengraph.githubassets.com/7ac255899d2c2457cb16da8b5897036559970712d3171c91415998751b09a851/Khorsheed/dsh-basic",
+    "description": "一组日常高频的体验插件，让你的 DSH 变得更好用、更自由。 发出去的消息可以改、可以撤；会话标题一键修改；后台任务一目了然、自由中止；上下文压缩提醒自由配置；聊天过程中随时让 Agent 帮你画预览卡片，明确 UI 效果再动手，避免重复返工；自由管理所有的 Skill 和工具，并配置到不同的 preset；任务完成有提示音；移动端快速接入……——大多数用户最先想要的那层体验，一次装齐。"
   },
   "readme": {
     "available": true,
-    "excerpt": "一组日常高频的体验插件，让你的 DSH 变得更好用、更自由。 发出去的消息可以改、可以撤；会话标题一键修改；后台任务一目了然、自由中止；上下文压缩提醒自由配置；聊天过程中随时让 Agent 帮你画预览卡片，明确 UI 效果再动手，避免重复返工；自由管理所有的 Skill 和工具，并配置到不同的 preset；任务完成有提示音；移动端快速接入；开发插件安全重启，从此不怕小鲸鱼自杀……——大多数用户最先想要的那层体验，一次装齐。"
+    "excerpt": "一组日常高频的体验插件，让你的 DSH 变得更好用、更自由。 发出去的消息可以改、可以撤；会话标题一键修改；后台任务一目了然、自由中止；上下文压缩提醒自由配置；聊天过程中随时让 Agent 帮你画预览卡片，明确 UI 效果再动手，避免重复返工；自由管理所有的 Skill 和工具，并配置到不同的 preset；任务完成有提示音；移动端快速接入……——大多数用户最先想要的那层体验，一次装齐。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "328a9b3fbbae36f7eedbbb9df1c1b7a9d10cea66"
   },
   "github": {
@@ -48,27 +48,40 @@
   },
   "id": "gh:1433806137",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "openai-codex-image",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kkczx5428/dsh-openai-codex-image#328a9b3fbbae36f7eedbbb9df1c1b7a9d10cea66",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "openai-codex-image",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5f18c0e70c7c2a0648d246573c3d6ddbd9233c0405079f3b7d71a03caddc9e29/kkczx5428/dsh-openai-codex-image",
     "description": "DSH plugin: ChatGPT (Codex OAuth) authorization + image generation with your ChatGPT subscription quota (gpt-image-2)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) plugin that signs in with a ChatGPT account (Codex OAuth) and generates images through the ChatGPT subscription quota instead of a paid API key."
   },
   "schemaVersion": 1,
   "scripts": {

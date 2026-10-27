@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "71d77caa3c5a2ff070e8afe786434e30edc8fae9"
   },
   "github": {
@@ -45,27 +45,41 @@
   },
   "id": "gh:1434096828",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-prompt-enricher",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:msciu/dsh-prompt-enricher#71d77caa3c5a2ff070e8afe786434e30edc8fae9",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-prompt-enricher",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2868905c88cdc1d5eb51a46b256e19e7ac398b11e9adcd62ab1c734aa44a6bad/msciu/dsh-prompt-enricher",
     "description": "Prompt workbench for DeepSeek Harness: drafts, full-log sent history, and grill-based prompt elicitation."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）的输入框适合快速发一句话，不适合推敲一段长提示词。这个插件在输入框上方加了一块提示词工作台：草稿、历史、Markdown 编辑、技能补全，以及一条「先追问、再定稿」的澄清流程。"
   },
   "schemaVersion": 1,
   "scripts": {

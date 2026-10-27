@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "2de89e067fdfea4b1cacb50c188acb4647161aba"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1433749303",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-secret-vault",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yuloop/dsh-secret-vault#2de89e067fdfea4b1cacb50c188acb4647161aba",
+    "version": "4.4.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-secret-vault",
+    "status": "valid",
+    "type": "module",
+    "version": "4.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6b53c641923ab73601e0f1ef8c14d46e5afbeb69fef3f9c161294e0e992c0164/yuloop/dsh-secret-vault",
     "description": "DSH plugin: hand secrets to the agent without them entering the context"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把密钥、API key、身份证、手机号这类东西粘进 DSH 网页的私密面板，让 agent 拿着它干活，却读不到它。 插件把正文落在本机一个随机名文件里，只交给模型一个不透明句柄和一份不含值的摘要； 任何点名私密目录的工具调用一律拒绝。"
   },
   "schemaVersion": 1,
   "scripts": {

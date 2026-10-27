@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
-    "headSha": "18e24979835c7a901536c4cdf2aca05bc9ad839a"
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
+    "headSha": "a6758567e898260fb55d1898d044f9208705b670"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-26T08:39:05Z",
     "databaseId": 1434113400,
     "defaultBranch": "main",
-    "description": "Compact DSH agent activity with actual models, current / previous turns, and an optional DS execution switch. English / Chinese.",
+    "description": "DSH 主从协作：主代理规划、决策与验收，支持通用 API 子代理执行、活动视图和安全模型接入。",
     "fork": false,
     "forks": 0,
-    "headSha": "18e24979835c7a901536c4cdf2aca05bc9ad839a",
+    "headSha": "a6758567e898260fb55d1898d044f9208705b670",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,13 +25,13 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVXrVeA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/0d1ec39fc0e0aa628fcfb3f5e61ec7800d27c0d63604750c1c9d0cee05164006/O-OII/dsh-agent-activity",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a0d87a3aa1a146d45c383c2a23b5f9703e2c4ba9dc0242fd1963ca132ef96af3/O-OII/dsh-planner-executor",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/54269515?u=98432223891612cc4712724044f0897f45f5c61b&v=4",
       "login": "O-OII"
     },
-    "pushedAt": "2026-10-26T08:39:12Z",
-    "slug": "O-OII/dsh-agent-activity",
+    "pushedAt": "2026-10-27T07:32:42Z",
+    "slug": "O-OII/dsh-planner-executor",
     "stars": 0,
     "topics": [
       "deepseek-harness",
@@ -39,32 +39,45 @@
       "i18n",
       "subagents"
     ],
-    "updatedAt": "2026-10-26T08:39:16Z",
-    "url": "https://github.com/O-OII/dsh-agent-activity"
+    "updatedAt": "2026-10-27T07:32:46Z",
+    "url": "https://github.com/O-OII/dsh-planner-executor"
   },
   "id": "gh:1434113400",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-agent-activity",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:O-OII/dsh-planner-executor#a6758567e898260fb55d1898d044f9208705b670",
+    "version": "0.3.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./routing": "./routing.mjs"
+    },
+    "main": "./index.mjs",
+    "name": "dsh-agent-activity",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/0d1ec39fc0e0aa628fcfb3f5e61ec7800d27c0d63604750c1c9d0cee05164006/O-OII/dsh-agent-activity",
-    "description": "Compact DSH agent activity with actual models, current / previous turns, and an optional DS execution switch. English / Chinese."
+    "coverUrl": "https://opengraph.githubassets.com/a0d87a3aa1a146d45c383c2a23b5f9703e2c4ba9dc0242fd1963ca132ef96af3/O-OII/dsh-planner-executor",
+    "description": "DSH 主从协作：主代理规划、决策与验收，支持通用 API 子代理执行、活动视图和安全模型接入。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "简体中文 · Setup · Routing contract"
   },
   "schemaVersion": 1,
   "scripts": {

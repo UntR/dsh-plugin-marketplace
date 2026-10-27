@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "826addf7a96cafc1d5e011e8578ff5c63e65ceba"
   },
   "github": {
@@ -46,27 +46,37 @@
   },
   "id": "gh:1433789862",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@skyline/dsh-chinese-thinking",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:helix-byte/dsh-chinese-thinking#826addf7a96cafc1d5e011e8578ff5c63e65ceba",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml"
+    },
+    "main": "./index.mjs",
+    "name": "@skyline/dsh-chinese-thinking",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f7495de82e31921a4ea42013c22707258116b6542b760790aeef5fcf50f48797/helix-byte/dsh-chinese-thinking",
     "description": "DSH 插件：五层冗余机制强制模型使用中文推理"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "模型在给出中文回答时，内部 reasoning（思维链）经常仍以英文进行，导致："
   },
   "schemaVersion": 1,
   "scripts": {

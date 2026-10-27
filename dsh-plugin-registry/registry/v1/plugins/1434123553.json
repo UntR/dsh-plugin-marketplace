@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "a424cf7a1b1bcbd05f8ac5d58aefa8958a3b0c6f"
   },
   "github": {
@@ -48,27 +48,39 @@
   },
   "id": "gh:1434123553",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-plugin-image2",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Mr-Maidong/dsh-plugin-image2#a424cf7a1b1bcbd05f8ac5d58aefa8958a3b0c6f",
+    "version": "1.5.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "index.js",
+    "name": "@local/dsh-plugin-image2",
+    "status": "valid",
+    "type": "module",
+    "version": "1.5.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3bca02584c51b9b372f379fe93057b10de51957fd9998796d2566bcc530679a0/Mr-Maidong/dsh-plugin-image2",
     "description": "Image studio plugin for DeepSeek Harness: connect an image API endpoint and key, generate and edit pictures from the Web UI, and expose image2_generate / image2_edit tools to the agent."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DSH Harness 插件：在 Web UI 左侧栏新增「图像生成」页面，填写接口地址与 API Key 后， 输入提示词即可调用生图接口，图片会保存到本地并进入页面右侧的画廊。"
   },
   "schemaVersion": 1,
   "scripts": {

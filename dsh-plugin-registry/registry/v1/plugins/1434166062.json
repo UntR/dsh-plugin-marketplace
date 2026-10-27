@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "2df40d108ea7cbed57f2c1fd3717d27911ed149c"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1434166062",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-project-board",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:sunzhiyueaa/dsh-project-board#2df40d108ea7cbed57f2c1fd3717d27911ed149c",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/host/index.js",
+    "name": "@local/dsh-project-board",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b8796c01b879d8dedd25fe358fb1657c0aacf65880f84f193920718cf039666d/sunzhiyueaa/dsh-project-board",
     "description": "DSH Web 的原生项目进度看板：五列按状态分，天数只读机器时间，拖动改状态写回 yaml，单击进项目继续开发。A native project board plugin for DSH Web."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Web 侧边栏里的原生项目看板：五列按状态分，天数只读机器时间，拖动改状态直接写回 projects.yaml，单击就进那个项目继续开发。"
   },
   "schemaVersion": 1,
   "scripts": {

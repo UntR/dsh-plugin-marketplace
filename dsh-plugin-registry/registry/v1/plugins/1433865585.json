@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "b59497459e974953dea816d923a5085c1f4a9338"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1433865585",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-token-cost",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:BigFatFish4Wm/dsh-token-cost#b59497459e974953dea816d923a5085c1f4a9338",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.5",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-token-cost",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b55575dbcb20209e18e19e21fbd7a2d9f5a211c06e24d4672328d938c809bbac/BigFatFish4Wm/dsh-token-cost",
     "description": "DSH plugin: per-turn token usage, cost, session totals and account balance in the Harness Web UI, with a workspace-local ledger."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 Harness Web UI 的每一轮已完成对话下方显示本轮 token 用量、费用、会话累计和当前余额。数据按“会话 + 轮次”持久化到工作区内的 JSON 账本，后续对话不会覆盖旧记录；刷新页面、重开 Harness 或重新打开历史会话后仍可还原。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "7ebe3a3c351468015c5843d28679c90cee7bd5e0"
   },
   "github": {
@@ -45,27 +45,43 @@
   },
   "id": "gh:1399787149",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-prompt-hub",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:tang-coder-hub/dsh-prompt-hub#7ebe3a3c351468015c5843d28679c90cee7bd5e0",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-prompt-hub",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/dae0c213dfec5eaccc4dace431ed7364599d90d227052975ca39e45f4978354c/tang-coder-hub/dsh-prompt-hub",
     "description": "提示词仓库 (Prompt Hub) for DeepSeek Harness：在输入框「完全权限」chip 旁加入口，存储/检索/插入提示词，支持草稿提示词优化（本地结构化 + AI 改写），带设置页管理面板几何、优化模型与数据。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 的对话框工具行里、紧挨着「完全权限」右侧增加一个「提示词」入口， 点开是提示词仓库面板：保存 / 搜索 / 标签 / 收藏 / 插入提示词，外加提示词优化（AI 优化 + 本地整理）。 设置 →「提示词仓库」另有一页管理界面，用来调浮层边框尺寸、换优化模型和做数据管理。"
   },
   "schemaVersion": 1,
   "scripts": {

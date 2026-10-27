@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "b7c259ba0528a27b1460973638651a4d023958d4"
   },
   "github": {
@@ -38,27 +38,39 @@
   },
   "id": "gh:1434096240",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-prompt-enhance",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zzyyun/dsh-prompt-enhance#b7c259ba0528a27b1460973638651a4d023958d4",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/dsh-prompt-enhance",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ef34a5cb813912621593b8f7dd40af74aa59c4b6ab55a7ab0155c7668bf6debf/zzyyun/dsh-prompt-enhance",
     "description": "A DeepSeek Harness (DSH) plugin that enhances composer drafts with project code and conversation context."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个独立的 DeepSeek Harness（DSH）插件。它在输入框底部的工具行中、模型选择器左侧加入一个提示词增强按钮。点击后，插件读取当前会话的项目代码与对话上下文，调用当前模型把草稿改写成更明确、可执行的提示词；结果直接替换输入框内容，但不会自动发送。"
   },
   "schemaVersion": 1,
   "scripts": {

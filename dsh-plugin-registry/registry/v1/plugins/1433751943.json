@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
     "headSha": "027d2dd0877216f87f7194efcb6702c4a91f8532"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1433751943",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-law-workbench",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:violin-i/dsh-plugin-law-workbench#027d2dd0877216f87f7194efcb6702c4a91f8532",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-law-workbench",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6d258d5ea918f27e2b4f216f03e07084c4bc38c298809a8b9af835b7b8f96fd0/violin-i/dsh-plugin-law-workbench",
     "description": "工作台面板 for DeepSeek Harness：右侧停靠栏的文献库可视化面板（列表/检索/阅读）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "工作台面板，面向 DeepSeek Harness (dsh)。仿照 dsh-context（上下文洞察）的形态：在右侧停靠栏注册\"工作台\"标签页，提供本地文献库的可视化面板——文献列表、概念扩展全文检索、分段阅读、笔记与阅读进度。"
   },
   "schemaVersion": 1,
   "scripts": {

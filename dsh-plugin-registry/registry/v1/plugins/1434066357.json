@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
-    "enrichmentStatus": "failed",
-    "headSha": "3bd32fa53caf6f8954d29561364bb9186383bb49"
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichmentStatus": "ok",
+    "headSha": "2dfba48e87fd03d8c2d1409bb5c4a7dfdf4a1b01"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Windows commit-memory watchdog for DSH Desktop: commit attribution, configurable thresholds, a fail-closed restart gate, read-only pagefile advice, a 7-day crash timeline, and opt-in automatic restart / crash-resume.",
     "fork": false,
     "forks": 0,
-    "headSha": "3bd32fa53caf6f8954d29561364bb9186383bb49",
+    "headSha": "2dfba48e87fd03d8c2d1409bb5c4a7dfdf4a1b01",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVXodtQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/ac27f2347ae08fb1ea4ccd48381207a0acfe2d0ba8373dab2a86e629e0729698/elegant01/dsh-memory-watchdog",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7a3a07f276b30f211613b514d85119d10f218a3be56260a04904e74535b3e9b2/elegant01/dsh-memory-watchdog",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/28000601?u=ebe93f88ee4e59c1b3797a124e400c79621b4006&v=4",
       "login": "elegant01"
     },
-    "pushedAt": "2026-10-26T09:22:15Z",
+    "pushedAt": "2026-10-27T05:56:09Z",
     "slug": "elegant01/dsh-memory-watchdog",
     "stars": 0,
     "topics": [
@@ -41,32 +41,44 @@
       "watchdog",
       "windows"
     ],
-    "updatedAt": "2026-10-26T09:22:15Z",
+    "updatedAt": "2026-10-27T05:56:09Z",
     "url": "https://github.com/elegant01/dsh-memory-watchdog"
   },
   "id": "gh:1434066357",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-memory-watchdog",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-memory-watchdog@0.3.1",
+    "version": "0.3.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-memory-watchdog",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/ac27f2347ae08fb1ea4ccd48381207a0acfe2d0ba8373dab2a86e629e0729698/elegant01/dsh-memory-watchdog",
+    "coverUrl": "https://opengraph.githubassets.com/7a3a07f276b30f211613b514d85119d10f218a3be56260a04904e74535b3e9b2/elegant01/dsh-memory-watchdog",
     "description": "Windows commit-memory watchdog for DSH Desktop: commit attribution, configurable thresholds, a fail-closed restart gate, read-only pagefile advice, a 7-day crash timeline, and opt-in automatic restart / crash-resume."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Windows 版 DSH Desktop 的提交内存（commit charge）看门狗。它持续采样系统提交内存，给出谁在吃内存的归因、分页文件只读建议与最近 7 天的崩溃时间线，并在进入预警或危险区间时给出页面内提示；自动重启默认关闭，崩溃后自动续接默认关闭。"
   },
   "schemaVersion": 1,
   "scripts": {

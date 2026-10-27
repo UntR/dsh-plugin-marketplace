@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-26T09:41:50.501Z",
+    "enrichedAt": "2026-10-27T09:53:24.843Z",
     "enrichmentStatus": "ok",
-    "headSha": "291ba4fd1f373f1df7b2931cebcd670341689b9c"
+    "headSha": "957c33893f0196ccf547d791419c869640eac31f"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Research-first model-behavior and reverse-engineering evaluation foundation with independent assessment and bilingual documentation",
     "fork": false,
     "forks": 0,
-    "headSha": "291ba4fd1f373f1df7b2931cebcd670341689b9c",
+    "headSha": "957c33893f0196ccf547d791419c869640eac31f",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVW3Xyg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/023d27efc0707b9f8b483e397885d1a478fd51b63b69be602eaefcab22b5628c/QwQBiG/dsh-re-lab",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c3ad23bfa1b7088ab068871698efd75ae19ba057795010c1f5a200c47dd23b0d/QwQBiG/dsh-re-lab",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/243683403?u=bec349a304e906a653bc8707a40665d3e991b9c9&v=4",
       "login": "QwQBiG"
     },
-    "pushedAt": "2026-10-26T08:46:04Z",
+    "pushedAt": "2026-10-26T09:49:00Z",
     "slug": "QwQBiG/dsh-re-lab",
     "stars": 0,
     "topics": [
@@ -39,7 +39,7 @@
       "red-teaming",
       "reverse-engineering"
     ],
-    "updatedAt": "2026-10-26T08:46:07Z",
+    "updatedAt": "2026-10-26T09:49:04Z",
     "url": "https://github.com/QwQBiG/dsh-re-lab"
   },
   "id": "gh:1433262026",
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,20 @@
     "repositoryMatches": null
   },
   "package": {
-    "main": null,
+    "exports": {
+      ".": "./dist/adapters/dsh/plugin.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/adapters/dsh/plugin.js",
     "name": "dsh-re-lab",
     "status": "valid",
     "type": "module",
-    "version": "0.0.0"
+    "version": "0.1.0-alpha.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/023d27efc0707b9f8b483e397885d1a478fd51b63b69be602eaefcab22b5628c/QwQBiG/dsh-re-lab",
+    "coverUrl": "https://opengraph.githubassets.com/c3ad23bfa1b7088ab068871698efd75ae19ba057795010c1f5a200c47dd23b0d/QwQBiG/dsh-re-lab",
     "description": "Research-first model-behavior and reverse-engineering evaluation foundation with independent assessment and bilingual documentation"
   },
   "readme": {
