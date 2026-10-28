@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "e9fb1cf9401b755b9909d005a1d5fada5939219d"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1435203813",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-real-ip",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-real-ip@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./allow": "./src/allow.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-real-ip",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b57a55853291548ee52d276d05f5d3a6eaa58dc1671457e47337a00cb891bc49/NingYuanLee/dsh-real-ip",
     "description": "When web fetch is handed a Clash/sing-box fake-ip, pin the real public address."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "When Clash or sing-box answers with a fake-ip, DSH pins the real public address instead of refusing the lookup or connecting to the fake-ip."
   },
   "schemaVersion": 1,
   "scripts": {

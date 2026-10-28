@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "0535e22ecaf4b3c5459651036f041dde3c953477"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./fanqie": "./lib/fanqie.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-novel-buddy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6ae8a813557235141f5774bc8cc392a30905c078548a179db6e6dcd6dbb06323/Wildmess/dsh-novel-buddy",
     "description": "番茄小说陪读吐槽插件：抓正文（自动破解字体反爬）+ 剧情整理 + 毒舌点评，让 DSH 里的鱼陪你追书"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）里的鱼加一个\"陪读\"器官：你在番茄小说网页版追书， 鱼负责整理剧情（滚动摘要）+ 毒舌点评（逻辑硬伤 / 人物降智 / 水字数 / 烂套路）， 每章自动维护一份≤800 字的前情提要，追更轮询开着时主动来报\"更新了\"。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "62e58073bb20903aa5171be13ba46f9a494cc569"
   },
   "github": {
@@ -44,27 +44,56 @@
   },
   "id": "gh:1434495635",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "ggb-plugins-dsh",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Jack7510/ggb-plugins-dsh#62e58073bb20903aa5171be13ba46f9a494cc569",
+    "version": "0.8.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.8.5",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cli": "./dist/src/cli.js",
+      "./delivery-contract": "./dist/src/delivery-contract.js",
+      "./drafts": {
+        "default": "./dist/src/draft-requests.js",
+        "types": "./dist/src/draft-requests.d.ts"
+      },
+      "./execution-schemas": {
+        "default": "./dist/src/execution-contract.js",
+        "types": "./dist/src/execution-contract.d.ts"
+      },
+      "./executor": "./dsh/executor.js",
+      "./installation": "./dsh/installation.js",
+      "./package.json": "./package.json",
+      "./runtime-compatibility": "./dist/src/runtime-compatibility.js",
+      "./schemas": {
+        "default": "./dist/src/host-protocol.js",
+        "types": "./dist/src/host-protocol.d.ts"
+      },
+      "./server": "./dsh/server.js",
+      "./server.patch.yml": "./dsh/server.patch.yml"
+    },
+    "main": null,
+    "name": "ggb-plugins-dsh",
+    "status": "valid",
+    "type": "module",
+    "version": "0.8.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/19ebbed417f845f3cad33472d467beedb61a0fe510501308016f1b40c839a48a/Jack7510/ggb-plugins-dsh",
     "description": "dsh plugins release bundle"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Turn a 2D math problem — given as text or an image — into an interactive GeoGebra file. A host agent (Codex or DeepSeek Harness) reads the problem and writes a native Algebra/CAS program; this project runs it locally, verifies every stated condition, exports the .ggb, reloads it,"
   },
   "schemaVersion": 1,
   "scripts": {

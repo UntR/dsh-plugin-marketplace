@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "312cbfb56e040360d384286738bf91e16b727433"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1435532445",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-skill-radar",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dingchenhui0618-arch/dsh-skill-radar#312cbfb56e040360d384286738bf91e16b727433",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-skill-radar",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1313ae981fbb9da22816cdd74a5ba7cf6ed0973ce65d8c63053ca562fbb73de3/dingchenhui0618-arch/dsh-skill-radar",
     "description": "Skill usage radar for DeepSeek Harness: records every skill hit, ranks by the last 7 days, and suggests archiving skills that never fire."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的技能面板加一列命中记录：每一个技能最近被谁、在哪个会话、用什么词触发过；按最近 7 天的命中数排序；零命中的技能灰显并标「建议归档」。"
   },
   "schemaVersion": 1,
   "scripts": {

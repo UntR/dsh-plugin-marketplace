@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
-    "headSha": "b461284a05e7c6a446343b45d860f190a9a781b0"
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
+    "headSha": "076cadf663e75cb5a6e374f1f6f0dde61f39e9a4"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness 的工作链插件（只保留团队模式）：当前会话当 leader，多个可配置模型成员作为常驻 Agent Teams 队友并行干活，成员名默认取模型名（重名自动 -2、-3）。另附只评审不改文件的审美顾问 aesthetic_advice。",
     "fork": false,
     "forks": 0,
-    "headSha": "b461284a05e7c6a446343b45d860f190a9a781b0",
+    "headSha": "076cadf663e75cb5a6e374f1f6f0dde61f39e9a4",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVY48KQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/94b22fb38ae9e92541200a2b9b3a9ce15e34ecae0305990fa810cc7de818be99/Mutsum1-WY/dsh-work-chain",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b2aa1c6d5a1d6d48d1eaa4db336f5dd28bf5403ae7f2facdb366b8133129054b/Mutsum1-WY/dsh-work-chain",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/311736318?u=601f0b87f269ab6e659ac6168754ac8fda193d6d&v=4",
       "login": "Mutsum1-WY"
     },
-    "pushedAt": "2026-10-27T08:27:48Z",
+    "pushedAt": "2026-10-27T12:15:41Z",
     "slug": "Mutsum1-WY/dsh-work-chain",
     "stars": 0,
     "topics": [
@@ -43,32 +43,45 @@
       "work-chain",
       "workflow"
     ],
-    "updatedAt": "2026-10-27T08:28:16Z",
+    "updatedAt": "2026-10-27T11:30:40Z",
     "url": "https://github.com/Mutsum1-WY/dsh-work-chain"
   },
   "id": "gh:1435384873",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-work-chain",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Mutsum1-WY/dsh-work-chain#076cadf663e75cb5a6e374f1f6f0dde61f39e9a4",
+    "version": "0.7.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-work-chain",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/94b22fb38ae9e92541200a2b9b3a9ce15e34ecae0305990fa810cc7de818be99/Mutsum1-WY/dsh-work-chain",
+    "coverUrl": "https://opengraph.githubassets.com/b2aa1c6d5a1d6d48d1eaa4db336f5dd28bf5403ae7f2facdb366b8133129054b/Mutsum1-WY/dsh-work-chain",
     "description": "DeepSeek Harness 的工作链插件（只保留团队模式）：当前会话当 leader，多个可配置模型成员作为常驻 Agent Teams 队友并行干活，成员名默认取模型名（重名自动 -2、-3）。另附只评审不改文件的审美顾问 aesthetic_advice。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 当前会话当 leader、把多个指定模型的成员当手下，靠内置 Agent Teams（任务板/名册）做协调的 fan-out 工作流插件。适合「让几个不同模型并行干活、leader 汇总」的场景，比如：并行调研/多视角 review/分工写代码。"
   },
   "schemaVersion": 1,
   "scripts": {

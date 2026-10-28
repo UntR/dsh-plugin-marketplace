@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "8ac9235fd96b90366f7eb1b047d3cfbc549cb1ba"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1435188017",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-sofa-monitor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:LZM2023/dsh-sofa-monitor#8ac9235fd96b90366f7eb1b047d3cfbc549cb1ba",
+    "version": "0.1.50"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.mjs",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.mjs",
+    "name": "dsh-sofa-monitor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.50"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e820633df7d1b8752469ae690b1b1a0f1d47e8139fd31701637cfcb9f7e05f30/LZM2023/dsh-sofa-monitor",
     "description": "dsh-京东沙发爬取 —— DSH 插件：京东沙发商品采集、详情图 AI 核对与产品规格卡（PNG + 可编辑 PPTX）自动归档"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DSH（DeepSeek Harness）插件：把京东沙发商品页上的标题、品牌、型号、官方规格参数和商品图采集下来，用 AI 图片模型逐张核对详情图，再自动排成 1920×1080 的产品规格卡（PNG + 可编辑 PPTX）并按日期归档。"
   },
   "schemaVersion": 1,
   "scripts": {

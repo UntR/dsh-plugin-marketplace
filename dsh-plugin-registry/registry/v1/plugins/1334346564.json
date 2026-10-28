@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
     "enrichmentStatus": "ok",
-    "headSha": "d43fac4cb6c58eb2a28475219190cdfa1663f54c"
+    "headSha": "d8c1f215cc44d5b0fed6414ecb8668126335031c"
   },
   "github": {
     "archived": false,
@@ -16,8 +16,8 @@
     "defaultBranch": "main",
     "description": "DSH Codex UI — 为 DeepSeek Harness Web 提供 Codex 风格侧栏、工作区会话树、全局搜索和轮次导航 · A Codex-style sidebar, workspace session tree, global search, and turn navigation for DSH Web",
     "fork": false,
-    "forks": 18,
-    "headSha": "d43fac4cb6c58eb2a28475219190cdfa1663f54c",
+    "forks": 19,
+    "headSha": "d8c1f215cc44d5b0fed6414ecb8668126335031c",
     "homepageUrl": "https://dsh-codex-desktop.micheng.dev/",
     "language": "TypeScript",
     "license": {
@@ -30,9 +30,9 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/18638322?u=a2a5eea751bf6a07741ca4063b08e625de9bea11&v=4",
       "login": "MichengAI"
     },
-    "pushedAt": "2026-10-26T13:28:57Z",
+    "pushedAt": "2026-10-28T03:35:15Z",
     "slug": "MichengAI/dsh-codex-ui",
-    "stars": 220,
+    "stars": 223,
     "topics": [
       "deepseek",
       "deepseek-harness",
@@ -40,7 +40,7 @@
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-10-27T05:50:13Z",
+    "updatedAt": "2026-10-28T09:03:09Z",
     "url": "https://github.com/MichengAI/dsh-codex-ui"
   },
   "id": "gh:1334346564",
@@ -67,13 +67,33 @@
       "./client": {
         "default": "./lib/client.js"
       },
+      "./composer": {
+        "default": "./lib/composer-plugin.mjs",
+        "types": "./lib/composer-plugin.d.mts"
+      },
+      "./composer/locale/*.json": "./locale/composer/*.json",
       "./locale/*.json": "./locale/*.json",
       "./package.json": "./package.json",
       "./session-title": {
         "default": "./lib/session-title-plugin.mjs",
         "types": "./lib/session-title-plugin.d.mts"
       },
-      "./session-title/locale/*.json": "./locale/session-title/*.json"
+      "./session-title/locale/*.json": "./locale/session-title/*.json",
+      "./settings-skin": {
+        "default": "./lib/settings-skin-plugin.mjs",
+        "types": "./lib/settings-skin-plugin.d.mts"
+      },
+      "./settings-skin/locale/*.json": "./locale/settings-skin/*.json",
+      "./sidebar": {
+        "default": "./lib/sidebar-plugin.mjs",
+        "types": "./lib/sidebar-plugin.d.mts"
+      },
+      "./sidebar/locale/*.json": "./locale/sidebar/*.json",
+      "./theme": {
+        "default": "./lib/theme-plugin.mjs",
+        "types": "./lib/theme-plugin.d.mts"
+      },
+      "./theme/locale/*.json": "./locale/theme/*.json"
     },
     "main": "lib/index.mjs",
     "name": "@michengai/dsh-codex-ui",

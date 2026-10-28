@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "19fb2a418b73d393d8b319b07cc824023ab5c035"
   },
   "github": {
@@ -40,20 +40,32 @@
   },
   "id": "gh:1434566109",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "luna-plugin-army",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:43aquarius/luna-plugin-army#19fb2a418b73d393d8b319b07cc824023ab5c035",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dsh/index.js",
+      "./client": "./dsh/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "luna-plugin-army",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5313e6e57ff8adc8b4ac85ddcede0d4c96239a528049ecaaff24aa9ebf705140/43aquarius/luna-plugin-army",
     "description": "鲸鱼娘插件军团总账 —— 面板 UI 直接看双 profile（headless 54 + web 19）全部插件：名字/版本/在位/bundle 注册/市场描述。数据走同源 /api/dsh/plugins。"

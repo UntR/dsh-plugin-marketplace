@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "d445e456326624df71133d66cd5f500cba6bd0f5"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1435373042",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-price-badge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:cypher-yht/dsh-plugins-price-badge#d445e456326624df71133d66cd5f500cba6bd0f5",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/dsh-price-badge",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e8e1b9f276b2097c98100f1a5439fb3c65f03718b9e02a27aa414b5ea4a78a49/cypher-yht/dsh-plugins-price-badge",
     "description": "DeepSeek 价格时段徽标：右下角常驻显示高峰/空闲（5 折）时段，倒计时下次切换并显示账户余额。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）Web 界面右下角常驻的一个胶囊徽标：实时显示 DeepSeek API 当前处于高峰还是空闲（5 折）时段， 并倒计时到下一次切换；徽标右侧同时显示账户余额。"
   },
   "schemaVersion": 1,
   "scripts": {

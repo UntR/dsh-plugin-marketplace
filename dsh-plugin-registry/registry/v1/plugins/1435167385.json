@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "a27635500163fc556202dca3be20bda845ec4bd0"
   },
   "github": {
@@ -41,27 +41,41 @@
   },
   "id": "gh:1435167385",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-relink",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ytsu-ki/dsh-relink#a27635500163fc556202dca3be20bda845ec4bd0",
+    "version": "0.6.0-beta.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/memory-team.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.jpg",
+      "./legacy-stream-guard": "./lib/legacy/stream-guard.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/memory-team.js",
+    "name": "dsh-relink",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.0-beta.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/11c61e15a0a734fc91b409dc5575c317d1c1343674965dc00a95b4d2e79ad25c/ytsu-ki/dsh-relink",
     "description": "鱼的记忆（dsh-relink）：面向 DeepSeek Harness 的项目记忆与原生子智能体协作插件。默认本地 SQLite，可选 Obsidian 兼容的 Markdown 知识库，按项目召回相关记录，无常驻后台服务。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Project memory and native subagent coordination for DeepSeek Harness"
   },
   "schemaVersion": 1,
   "scripts": {

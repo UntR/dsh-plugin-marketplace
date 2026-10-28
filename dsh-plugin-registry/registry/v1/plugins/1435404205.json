@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "ef18c9be67754fc39841773751be0a79e10a7c2e"
   },
   "github": {
@@ -47,27 +47,40 @@
   },
   "id": "gh:1435404205",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-jev-highlight",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Zorien-ai/dsh-jev-highlight#ef18c9be67754fc39841773751be0a79e10a7c2e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/dsh-jev-highlight",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a2fbaa031ce251613488c301bd440706f64853403f7d147bf0463b3f53c39cc4/Zorien-ai/dsh-jev-highlight",
     "description": "DSH plugin that highlights the most important AI answer content with StartLux/Jev decision models, using the CSS Custom Highlight API without touching the agent DOM."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "起因是因为我在逛github的weekly时看到了它,看完后我突然想到我和他的经历有相同的地方:agent生成的长篇大论我一句都不想看.看完ai发的报告真的很需要精力,不仅有很多我没见过的内容,还不知道什么是重点(一般我只看最后的需要你确认的事).因此我就想用jev来标注重点信息,而且对应插件生态最好的是DeepSeek Harness.理论成立,ai也认为可行,即刻开始.."
   },
   "schemaVersion": 1,
   "scripts": {

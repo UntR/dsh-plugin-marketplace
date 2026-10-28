@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "c48d5a9c7d0d723e74b54c0d588b1f23ab2bf214"
   },
   "github": {
@@ -42,27 +42,39 @@
   },
   "id": "gh:1435193157",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-websocket2http",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wlyzqm/DSH-WebSocket2HTTP#c48d5a9c7d0d723e74b54c0d588b1f23ab2bf214",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-websocket2http",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c9073d25253cd270b696ebab4d3103c532f2b7a8abe2a33dd9906fffcdb5cedf/wlyzqm/DSH-WebSocket2HTTP",
     "description": "魔改DSH链路传输协议层从Websocket到HTTP，解决部分网络环境无法使用Websocket的问题。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-websocket2http 是 DeepSeek Harness（DSH）的 Web 传输插件。它把原生界面的 WebSocket 实时链路转换为 HTTP 长轮询，让禁止 WebSocket 的代理网络也能承载实时更新、双向流和断线恢复。"
   },
   "schemaVersion": 1,
   "scripts": {

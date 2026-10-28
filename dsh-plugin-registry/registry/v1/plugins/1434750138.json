@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
-    "headSha": "4c9f18dd157bef2b2df46471002e25f4d3333322"
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
+    "headSha": "532014f345c017ff37e261044e882e5389e208f0"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH plugin: WorkBuddy credits-to-tokens capsule for the current model x period (read-only)",
     "fork": false,
     "forks": 0,
-    "headSha": "4c9f18dd157bef2b2df46471002e25f4d3333322",
+    "headSha": "532014f345c017ff37e261044e882e5389e208f0",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVYSMug",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/8f16533f92e7542419f41b8b49a9ec8eb8554d58a80988da62db20c56dcbf3f7/xsdao/dsh-workbuddy-token",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/98d25afb98d6c7abaca4ca448109bc12067d5e151bb546ec35a28753f465ad22/xsdao/dsh-workbuddy-token",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/223213975?u=1926ef4a6ff2d6f07f1b6f015249eab7cf2ae1e2&v=4",
       "login": "xsdao"
     },
-    "pushedAt": "2026-10-26T18:05:06Z",
+    "pushedAt": "2026-10-27T18:11:59Z",
     "slug": "xsdao/dsh-workbuddy-token",
     "stars": 0,
     "topics": [
@@ -39,7 +39,7 @@
       "dsh-plugin",
       "workbuddy"
     ],
-    "updatedAt": "2026-10-26T18:05:10Z",
+    "updatedAt": "2026-10-27T18:12:03Z",
     "url": "https://github.com/xsdao/dsh-workbuddy-token"
   },
   "id": "gh:1434750138",
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,30 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workbuddy-token",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/8f16533f92e7542419f41b8b49a9ec8eb8554d58a80988da62db20c56dcbf3f7/xsdao/dsh-workbuddy-token",
+    "coverUrl": "https://opengraph.githubassets.com/98d25afb98d6c7abaca4ca448109bc12067d5e151bb546ec35a28753f465ad22/xsdao/dsh-workbuddy-token",
     "description": "DSH plugin: WorkBuddy credits-to-tokens capsule for the current model x period (read-only)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH(DeepSeek Harness)插件:在输入框旁显示 WorkBuddy 剩余积分按「当前模型 × 当前时段」折后倍率换算的 token 估算。"
   },
   "schemaVersion": 1,
   "scripts": {

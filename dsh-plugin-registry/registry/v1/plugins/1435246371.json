@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "0ebe3336a554ef8960bff51c64adb985bb95014b"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1435246371",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-input-optimize",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:DaYePython/dsh-input-optimize#0ebe3336a554ef8960bff51c64adb985bb95014b",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./client/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-input-optimize",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3f814300823bda1f37c36d6ab570f07a0844cccdf02523db602c6b1e47c987c1/DaYePython/dsh-input-optimize",
     "description": "DSH 输入框提示词优化按钮：一键调用当前选中模型改写草稿，保留 @引用 chip，发送即撤销、空输入隐藏"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH） 的输入框加一个「一键优化提示词」按钮：点击后调用你当前选中的模型，把草稿改写成更清晰、更具体的提示词，再写回输入框。"
   },
   "schemaVersion": 1,
   "scripts": {

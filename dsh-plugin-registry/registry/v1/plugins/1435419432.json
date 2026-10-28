@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "65b9a81f0ef14dedcd88f86002e2e8ecd20a3b7a"
   },
   "github": {
@@ -41,27 +41,45 @@
   },
   "id": "gh:1435419432",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-sidenote",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:TaoCultivator/dsh-sidenote#65b9a81f0ef14dedcd88f86002e2e8ecd20a3b7a",
+    "version": "0.7.6-fork.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.7.6",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-sidenote",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.6-fork.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2ae47d6e4351a79a18afa781a731df8c0c0ce11acbae3e8140e1735956c4e3c1/TaoCultivator/dsh-sidenote",
     "description": "Follow the tangent. Keep the thread. Annotate, explore on the side, and bring answers back to DeepSeek Harness. / 思路可以分岔，主线始终向前。划选注释、侧边追问，再把结论带回正在推进的任务。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness 加上侧边聊天与划选注释。 读到一个疑问，就在旁边聊透；有了结论，再带回正在推进的任务。"
   },
   "schemaVersion": 1,
   "scripts": {

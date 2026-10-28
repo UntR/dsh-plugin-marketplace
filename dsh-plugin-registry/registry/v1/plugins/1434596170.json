@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "fa9ca661ed143fe137bf94b1c5bb9a40377dc5fd"
   },
   "github": {
@@ -25,46 +25,56 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVYIzSg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/058a028a36327456ff0587b4220752d78ad7f3dbdf33dd09eb942657519458ac/fzuleo/dsh-github-reuse",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/4a7d124dd3aaf39e35b3d578a772c74aa2f16749ed145996b7587cd240fb6bb7/fzuleo/dsh-github-reuse",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/312214281?v=4",
       "login": "fzuleo"
     },
     "pushedAt": "2026-10-26T16:09:32Z",
     "slug": "fzuleo/dsh-github-reuse",
-    "stars": 1,
+    "stars": 2,
     "topics": [
       "deepseek-harness",
       "deepseek-harness-plugin",
       "deepseek-harness-plugins",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-27T06:52:03Z",
+    "updatedAt": "2026-10-27T12:24:01Z",
     "url": "https://github.com/fzuleo/dsh-github-reuse"
   },
   "id": "gh:1434596170",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-github-reuse",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:fzuleo/dsh-github-reuse#fa9ca661ed143fe137bf94b1c5bb9a40377dc5fd",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-github-reuse",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/058a028a36327456ff0587b4220752d78ad7f3dbdf33dd09eb942657519458ac/fzuleo/dsh-github-reuse",
+    "coverUrl": "https://opengraph.githubassets.com/4a7d124dd3aaf39e35b3d578a772c74aa2f16749ed145996b7587cd240fb6bb7/fzuleo/dsh-github-reuse",
     "description": "DSH 插件：让 agent 先检索 GitHub 开源项目，再用成熟实现拼装功能（零克隆、不占磁盘）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "全程只走 HTTP（GitHub REST API + raw 文件通道），不 clone 任何仓库，几乎不占磁盘。"
   },
   "schemaVersion": 1,
   "scripts": {

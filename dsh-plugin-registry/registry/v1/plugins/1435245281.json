@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
-    "headSha": "f1dc462ad8869cae602a1c55fcc573b83740d9a4"
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
+    "headSha": "455188e3eade6679aa23041a6e8ae49e034631c5"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-27T04:29:26Z",
     "databaseId": 1435245281,
     "defaultBranch": "main",
-    "description": null,
+    "description": "DeepSeek Harness（DSH）插件：按闲置天数自动归档会话，补齐 DSH 只有手动 Archive 的缺口。支持演练模式、置顶保护、排除清单、审计日志与逐条撤销，归档走原生状态，不删任何数据。A DSH plugin that auto-archives idle sessions after a configurable number of days — dry-run mode, pinned-session protection, exclusion list, audit log and per-item undo, using DSH native archive state.",
     "fork": false,
     "forks": 0,
-    "headSha": "f1dc462ad8869cae602a1c55fcc573b83740d9a4",
+    "headSha": "455188e3eade6679aa23041a6e8ae49e034631c5",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,43 +25,62 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVYwa4Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3ec3b661de250ba302d66c707230c518f6e0ba4d9a9f1563e1456281604f7dad/xiao-hans/dsh-session-auto-archive",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/78f72da749284ad26572bb2c8d37cc285192fb717a78d2ee1890659943e887ad/xiao-hans/dsh-session-auto-archive",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/220336042?u=25d717592e82985b9cd2f53083d628411b5332f3&v=4",
       "login": "xiao-hans"
     },
-    "pushedAt": "2026-10-27T04:35:07Z",
+    "pushedAt": "2026-10-28T10:19:38Z",
     "slug": "xiao-hans/dsh-session-auto-archive",
     "stars": 0,
     "topics": [
-      "dsh-plugin"
+      "automation",
+      "coding-agent",
+      "deepseek-harness",
+      "dsh",
+      "dsh-plugin",
+      "javascript",
+      "session-archive",
+      "session-management"
     ],
-    "updatedAt": "2026-10-27T06:00:54Z",
+    "updatedAt": "2026-10-28T10:19:42Z",
     "url": "https://github.com/xiao-hans/dsh-session-auto-archive"
   },
   "id": "gh:1435245281",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-auto-archive",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-session-auto-archive@0.1.3",
+    "version": "0.1.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-session-auto-archive",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3ec3b661de250ba302d66c707230c518f6e0ba4d9a9f1563e1456281604f7dad/xiao-hans/dsh-session-auto-archive",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/78f72da749284ad26572bb2c8d37cc285192fb717a78d2ee1890659943e887ad/xiao-hans/dsh-session-auto-archive",
+    "description": "DeepSeek Harness（DSH）插件：按闲置天数自动归档会话，补齐 DSH 只有手动 Archive 的缺口。支持演练模式、置顶保护、排除清单、审计日志与逐条撤销，归档走原生状态，不删任何数据。A DSH plugin that auto-archives idle sessions after a configurable number of days — dry-run mode, pinned-session protection, exclusion list, audit log and per-item undo, using DS"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）插件：按闲置天数自动归档会话。DSH 原生只有手动的 Archive 按钮，本插件补上自动触发器：定时扫描全部会话，把长期不活跃的会话归档掉，侧栏立刻清爽；误归档可随时单条撤销。"
   },
   "schemaVersion": 1,
   "scripts": {

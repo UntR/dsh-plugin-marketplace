@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "e9e36520887ff239be765784d4b776d8fea40c99"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1435210463",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-workspace-discovery",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:2001Y/dsh-plugin-workspace-discovery#e9e36520887ff239be765784d4b776d8fea40c99",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-workspace-discovery",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ebdca72987f75c597a181fadbb1c92c32c1e0fda3297dfb8057ba3416cc5bd13/2001Y/dsh-plugin-workspace-discovery",
     "description": "Discover local git repositories and register them as DeepSeek Harness workspaces"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Discover local git repositories and register them as DeepSeek Harness (DSH) workspaces — all of them, at once, instead of adding folders one by one."
   },
   "schemaVersion": 1,
   "scripts": {

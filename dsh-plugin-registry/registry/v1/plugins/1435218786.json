@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "146641d0f454c8f74f8429bce06a61d8387b8602"
   },
   "github": {
@@ -49,27 +49,39 @@
   },
   "id": "gh:1435218786",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-session-attachment-repair",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:chenkui-luo/dsh-session-attachment-repair#146641d0f454c8f74f8429bce06a61d8387b8602",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-session-attachment-repair",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/573a8702b7204b40a3a8aeb28c3a95df31969e840dc6d1f482006d00a995f122/chenkui-luo/dsh-session-attachment-repair",
     "description": "Repair DSH sessions whose requests fail because historical attachment objects are missing from the local attachment store."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "修复 DSH（DeepSeek Harness）会话\"能打开、历史也能看，但每次发消息都失败\"的一类特定故障：会话历史引用过的图片或文件附件，其内容对象已经从本地附件库消失。"
   },
   "schemaVersion": 1,
   "scripts": {

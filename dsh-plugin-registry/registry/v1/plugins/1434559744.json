@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "68e071082d19d8f38d3766b72c06b465536d81b9"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./lib/client.js"
+    },
+    "main": "index.js",
+    "name": "dsh-copy-md",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0d2cbc8228a806a40c31267a892eaa5fbbff9d65a5855bc22a789c645f7dd59c/2927683690myn-rgb/dsh-copy-md",
     "description": "DeepSeek Harness 插件（测试版）：给每张 .md 文件卡片加「复制」按钮，一键把全文写进剪贴板"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的网页端加一键复制：每张 .md 文件卡片上多一颗「复制」按钮，点一下就把这份文件的全文写进剪贴板。"
   },
   "schemaVersion": 1,
   "scripts": {

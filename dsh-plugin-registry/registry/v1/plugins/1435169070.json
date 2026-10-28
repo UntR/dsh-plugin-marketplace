@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "0a033b2a5bc591aad2244069b5376b1f209a8c39"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1435169070",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-webchat-anchor-fix",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dhdkfkfkf/dsh-webchat-anchor-fix#0a033b2a5bc591aad2244069b5376b1f209a8c39",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-webchat-anchor-fix",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/030eed9232a98a09d4d70a77d5d0ee968727439fbb223ff9c22ebf8d347c3080/dhdkfkfkf/dsh-webchat-anchor-fix",
     "description": "Keep the dsh-webchat guest overlay glued to its panel with CSS anchor positioning, so fullscreen and window toggles cannot leave stale geometry."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A one-rule fix for a geometry bug in @jaychang1989/dsh-webchat: after a fullscreen/windowed toggle the DeepSeek panel can keep the size and position of the window state it came from, until the guest is reloaded or reopened."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "026dcd6166e751e8b5fdb91bfe0cd1184922658f"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1434526758",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-bark-notify",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Lloydly007/dsh-bark-notify#026dcd6166e751e8b5fdb91bfe0cd1184922658f",
+    "version": "1.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-bark-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e2d0bb5bf87933e797dc90c8851aad228bba6fdf674f263979c4a0095b353290/Lloydly007/dsh-bark-notify",
     "description": "Bark push notifications for DeepSeek Harness (DSH): turn completion, waiting prompts, and optional background-job cards, configured in Settings."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）的 Bark 推送插件：对话回合结束时给手机推一张卡片；可选在 agent 等你选择 / 批准、以及后台任务结束时推。"
   },
   "schemaVersion": 1,
   "scripts": {

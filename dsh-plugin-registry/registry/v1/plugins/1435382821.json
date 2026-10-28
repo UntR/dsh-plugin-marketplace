@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "6eb9b6d2284d858ecbad555c0e6a3ec411020bb9"
   },
   "github": {
@@ -45,27 +45,37 @@
   },
   "id": "gh:1435382821",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-compact-receipt",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:cty-09/dsh-compact-receipt#6eb9b6d2284d858ecbad555c0e6a3ec411020bb9",
+    "version": "0.4.0-beta.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "dist/index.js",
+    "name": "dsh-compact-receipt",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0-beta.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/57cb45f99fb7d5c46f75c326899e36a1fd4a23adacee3b250c232a8ff86271dd/cty-09/dsh-compact-receipt",
     "description": "[BETA] 上下文压缩收据 for DeepSeek Harness：审计压缩丢了你哪几条要求，并（实验性）接管压缩逐字保留。实验性部分尚未经真实压缩验证。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Context compaction in DSH is silent and lossy: a range of history is replaced by one summary, and from then on that summary is all the model can see. The \"don't touch tests/\" you said 40 turns ago may have vanished in a compaction — with nothing to indicate it."
   },
   "schemaVersion": 1,
   "scripts": {

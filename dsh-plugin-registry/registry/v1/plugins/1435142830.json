@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "59bf612f1b8d49638af20a753a439fb09e44b51d"
   },
   "github": {
@@ -41,27 +41,57 @@
   },
   "id": "gh:1435142830",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-prompt-improver",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Yocaihua8/dsh-prompt-improver#59bf612f1b8d49638af20a753a439fb09e44b51d",
+    "version": "0.2.6"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/typert.host.d.ts"
+      },
+      "./types": {
+        "default": "./lib/shared/types.js",
+        "types": "./lib/types/shared/types.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-prompt-improver",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/06dda89f684669e80b5026e17b56f47ed4bb5a5efd154b80ae5a42faf5091a89/Yocaihua8/dsh-prompt-improver",
     "description": "DSH 提示词增强：按需结合对话、记忆和项目片段增强草稿，支持预览、专用模型与安全撤销。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "简体中文 · English"
   },
   "schemaVersion": 1,
   "scripts": {

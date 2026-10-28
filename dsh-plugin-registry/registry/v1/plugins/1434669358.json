@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "80b4a2582712dd2177b93032cf5521c26c124198"
   },
   "github": {
@@ -42,27 +42,39 @@
   },
   "id": "gh:1434669358",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@littleplus/dsh-toolbox",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@littleplus/dsh-toolbox@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@littleplus/dsh-toolbox",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e80ec9a2ad807e5248d5b9e18522609ba12921cacdcb20536bba0d9a0ec45fb8/littleplus/dsh-toolbox",
     "description": "DeepSeek Harness 工具箱，管理插件、MCP引入的工具(tools)，减少上下文不必要的损耗，提供渐进式的工具获取"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "按正则把全局注册的工具分组，并用三种状态控制它们在模型上下文里的存在方式。左侧栏提供一个面板，可以直接增删改分组——写的是 profile 的 cordis.patch.yml。"
   },
   "schemaVersion": 1,
   "scripts": {

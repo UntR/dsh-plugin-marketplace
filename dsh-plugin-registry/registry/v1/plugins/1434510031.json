@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "087424fb48023f8213ff574358bf7aa6faf3bc2e"
   },
   "github": {
@@ -42,27 +42,39 @@
   },
   "id": "gh:1434510031",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-active-workspace-top",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dongkid/dsh-active-workspace-top#087424fb48023f8213ff574358bf7aa6faf3bc2e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-active-workspace-top",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/236e095a71fdc3208bd3ec2dcc3cd340b5cf09ac486debf118310845e4e72621/dongkid/dsh-active-workspace-top",
     "description": "DSH plugin: keeps the workspace you last messaged at the top of the workspace list. 把最近发过消息的工作区自动排到最前面。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 的工作区列表加一条自动规则：最近一次发送过用户消息的工作区，自动排到最前面。"
   },
   "schemaVersion": 1,
   "scripts": {

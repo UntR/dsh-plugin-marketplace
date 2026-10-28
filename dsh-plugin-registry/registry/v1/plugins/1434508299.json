@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "468be5f6fafb8038dc6e2d01dc73015df7201c1d"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1434508299",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-market-publish",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ggxx001/dsh-market-publish#468be5f6fafb8038dc6e2d01dc73015df7201c1d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/dsh-market-publish",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0723eb655cfc68fbd3799ef86ff2c91638ec5b264c4511ca39dcdbb3448d6a58/ggxx001/dsh-market-publish",
     "description": "Publish local plugins to GitHub from the Plugin Market: preflight, repository creation, push, and the dsh-plugin topic."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在「设置 → 插件」页加一个 发布 标签页，把当前 Profile 里以 link: / file: 安装的本地插件推送成公开 GitHub 仓库，并加上 dsh-plugin 话题——1024store 会自动收录这类仓库。"
   },
   "schemaVersion": 1,
   "scripts": {

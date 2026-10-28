@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "034198c4ba29815892bae13668f869ad442735f9"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1407386133",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tool-discovery",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-tool-discovery@0.5.0",
+    "version": "0.5.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./plugin/adapters/dsh/index.mjs",
+      "./client": "./plugin/client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./domain": "./plugin/domain/index.mjs",
+      "./package.json": "./package.json"
+    },
+    "main": "./plugin/adapters/dsh/index.mjs",
+    "name": "dsh-tool-discovery",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2dfae0c313228fe21beffa7ba9e214a7cad9e42bfb8b792fe5aed604250aa289/KouzakiUmi/dsh-tool-discovery",
     "description": "Progressive tool discovery for DSH: a three-entry control protocol (tool_list / tool_search / tool_load) with a host-independent domain kernel and a DSH adapter."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "三个小入口与初始工具集合在前，其它工具的真实 schema 按需到场。"
   },
   "schemaVersion": 1,
   "scripts": {

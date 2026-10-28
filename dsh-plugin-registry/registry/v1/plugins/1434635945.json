@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "cafd363d6beb7365ce3a78bc06835cacba2f5971"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1434635945",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mcd-mcp",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:4KAForever11/dsh-mcd-mcp#cafd363d6beb7365ce3a78bc06835cacba2f5971",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-mcd-mcp",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3ff3e0f638d98d674840c313f79a25e8c6d00ecb0f06a350c95ba80f369889ff/4KAForever11/dsh-mcd-mcp",
     "description": "接入麦当劳mcp实现大肥鱼的麦当劳功能"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把麦当劳中国 MCP(https://mcp.mcd.cn)接进 DeepSeek Harness: 粘一次自己的 Token,远端全部工具自动变成 DSH 原生工具(mcd 前缀),模型可以直接下单、查券、点餐。"
   },
   "schemaVersion": 1,
   "scripts": {

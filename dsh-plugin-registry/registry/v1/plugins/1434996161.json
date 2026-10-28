@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "8535e2be0099bd21dbd08416aaaa09967b8797fe"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1434996161",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-fs-observation-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:iBobbyTS/dsh-fs-observation-bridge#8535e2be0099bd21dbd08416aaaa09967b8797fe",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-fs-observation-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b3a17543a714279c1d8453d2775397811e88c88f08018edfdc13cb4bb87058a1/iBobbyTS/dsh-fs-observation-bridge",
     "description": "Bridges external code-reading tools into DeepSeek Harness's native file observation system, allowing agents to edit files without redundant read calls after inspecting source code. 将第三方代码读取工具接入DSH原生文件观察机制，使 Agent 读取源码后无需重复调用 read 即可编辑文件。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Bridges external code-reading tools into DeepSeek Harness (DSH)'s native file observation system, allowing agents to edit files without redundant read calls after inspecting source code."
   },
   "schemaVersion": 1,
   "scripts": {

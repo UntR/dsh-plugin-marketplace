@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "8f0a8a507cd1357e370c34dce0eba84d832743f7"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1435040867",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-memory-console",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Reyzhiai/dsh-memory-console#8f0a8a507cd1357e370c34dce0eba84d832743f7",
+    "version": "0.5.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-memory-console",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/54167717d0e378026ede8f2b4eb4b78642706af5f6f9151cb2d648a47b90e612/Reyzhiai/dsh-memory-console",
     "description": "Memory console for DeepSeek Harness: browse, edit, search and health-check Markdown memory files in the Web UI, with an editable required-files list injected into the system prompt every turn."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 做的一个记忆管理插件：把一堆 Markdown 记忆文件变成能点、能改、能搜的网页，并把「每轮必读的文件」当成一段提示词，稳定地注入每次对话。"
   },
   "schemaVersion": 1,
   "scripts": {

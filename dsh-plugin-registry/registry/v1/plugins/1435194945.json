@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "0e5a3536ca016f0aebdc242c0daa34c304ab91e2"
   },
   "github": {
@@ -45,27 +45,46 @@
   },
   "id": "gh:1435194945",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-pet-chat",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lintwosix-beep/dsh-pet-chat#0e5a3536ca016f0aebdc242c0daa34c304ab91e2",
+    "version": "0.3.9"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-pet-chat",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.9"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6f98b9f14d1fff5166549d18444b6c0ea5a8f3f6318f915ceb216ef703ada3a4/lintwosix-beep/dsh-pet-chat",
     "description": "桌宠「宠物聊天」：基于 dsh-pet 的二次修改版，QQ 风格对话面板、分支合并转发、面板停靠与八向缩放"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 桌面宠物，基于 dsh-pet（MIT）的二次修改版。 原项目的动画、素材、桌面窗口全部保留，这里多了「能好好聊天」的一层。"
   },
   "schemaVersion": 1,
   "scripts": {

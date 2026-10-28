@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "cc4fa0cf1636cd084e84d19b0462e28dbe3cb200"
   },
   "github": {
@@ -51,27 +51,39 @@
   },
   "id": "gh:1435381194",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-local-llm",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:umerkhalid204/dsh-plugin-local-llm#cc4fa0cf1636cd084e84d19b0462e28dbe3cb200",
+    "version": "0.2.7"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-plugin-local-llm",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.7"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/63519b69ac7196cd37b570ad2ffda2b33e799d8a724f95364dca3d2a5b01d5a3/umerkhalid204/dsh-plugin-local-llm",
     "description": "DeepSeek Harness plugin: run the agent on local engines - LM Studio, Ollama, Strata, Lemonade Server, or any OpenAI-compatible endpoint - as provider routes you pick in the model selector."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Run the agent on models served by your own machine. The plugin registers local inference engines as ordinary Harness provider routes, so a local model is picked in the composer's model selector exactly like a hosted one, and each engine is declared as a configurable third-party p"
   },
   "schemaVersion": 1,
   "scripts": {

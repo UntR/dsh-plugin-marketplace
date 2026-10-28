@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "a50aa5e177714b0c7e016e9bb6097bea097290b9"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1434819088",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-purge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Shihang-Hu/dsh-session-purge#a50aa5e177714b0c7e016e9bb6097bea097290b9",
+    "version": "0.5.8"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.5",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-purge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.8"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0e2079f43d13df5b4fce1865534c596eebea6fed870ae86c60d519ddc2e79c24/Shihang-Hu/dsh-session-purge",
     "description": "Unofficial DeepSeek Harness plugin: permanently purge sessions (disk logs, projection cache, workspace accounting, temp outputs, subagent cascade) and redact secrets in place in zstd session logs."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "管理 DeepSeek Harness 会话数据的两个操作："
   },
   "schemaVersion": 1,
   "scripts": {

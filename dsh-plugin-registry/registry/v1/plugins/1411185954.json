@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "1443ebd7b4c79315ac148fca75193ea7aed08424"
   },
   "github": {
@@ -42,27 +42,52 @@
   },
   "id": "gh:1411185954",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@whybebabo/dsh-file-review-tab",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@whybebabo/dsh-file-review-tab@0.7.1",
+    "version": "0.7.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.7.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/remote.js",
+        "types": "./lib/types/remote.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/types/typert.host.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "@whybebabo/dsh-file-review-tab",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f06c2c626bda151350be08be25e2eea23003ff1fa3c30d0c50333babd78e4486/whybebabo/dsh-file-review-tab",
     "description": "dsh-better-sidebar sidebar tab for reviewing agent-produced file changes: line-level red/green diff + undo, chat turn-tail deep link (fork/mirror of Lzh3070/dsh-file-review-tab, DSH 0.2.0-rc.2 compatible, v0.7.0)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 dsh-file-review（作者 left0ver）的\"改动审查\"能力移植为 dsh-better-sidebar 的侧边栏 Tab，并保留对话尾部的审查行——两个入口同源，互不干扰。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "1189a4f54c8c3f49c9f1a2474166544e6e82e66a"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1435277188",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-live-browser",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:c347087870/dsh-live-browser#1189a4f54c8c3f49c9f1a2474166544e6e82e66a",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-live-browser",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b6b7563eec0ece5ac319d50342e9d0defd83cb83fd0a753f43dffb7d09d72d64/c347087870/dsh-live-browser",
     "description": "Drive DSH's own sidebar browser: real webview rendering plus an injected command surface so the agent can click, type, read and scroll the page the human is looking at."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 agent 操作 DSH 自带的那个浏览器 —— 就在 DSH 里，什么都不离开窗口。"
   },
   "schemaVersion": 1,
   "scripts": {

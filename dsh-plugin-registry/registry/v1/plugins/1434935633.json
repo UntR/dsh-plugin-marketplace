@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "2e69feec24cf424f625b200036d9d3c078ca67e5"
   },
   "github": {
@@ -44,27 +44,37 @@
   },
   "id": "gh:1434935633",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-claude-pilot",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Dobo233/dsh-claude-pilot#2e69feec24cf424f625b200036d9d3c078ca67e5",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-claude-pilot",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/28fea98714b0a82474cab15677cd6e4bd3a14bdce88780c499f75211bfddaaf3/Dobo233/dsh-claude-pilot",
     "description": "DSH plugin: drive the Claude Code CLI from DeepSeek Harness (run/resume/probe, --json-schema) + standalone bridge"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把本机 Claude Code CLI 接成 DeepSeek Harness 的原生工具。与 dsh-codex-pilot 是一对：同一套 run / resume / probe 语义，按你手上有哪个 CLI 选哪个。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "e9d64da5b9bb6dd89de459048f6b12f3e26d8b65"
   },
   "github": {
@@ -48,27 +48,39 @@
   },
   "id": "gh:1435199654",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-command-centre",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:BadCalna/dsh-plugin-command-centre#e9d64da5b9bb6dd89de459048f6b12f3e26d8b65",
+    "version": "0.9.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-plugin-command-centre",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/83b999a88788b1a8b44d74e032825fac4b34d97734c4071f8577017b580ea4ca/BadCalna/dsh-plugin-command-centre",
     "description": "Command Centre for DeepSeek Harness: a cyberpunk mission-control board for every task's progress, subagent tree and output (read-only V1a)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的 Web UI 加一个整页「Command Centre」： 一屏看所有对话任务的进度、subagent 关系和产出，替代「左列表 / 中对话 / 右输出」那种 \"一次只能看一个对话\"的视角。"
   },
   "schemaVersion": 1,
   "scripts": {

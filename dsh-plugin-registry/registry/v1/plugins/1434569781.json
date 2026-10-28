@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "3a85dfb61a878942ca8f235c13c60ac8ee92f693"
   },
   "github": {
@@ -38,27 +38,39 @@
   },
   "id": "gh:1434569781",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@ggxx/dsh-plugin-studio",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ggxx001/dsh-plugin-studio#3a85dfb61a878942ca8f235c13c60ac8ee92f693",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@ggxx/dsh-plugin-studio",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/df850bf23cee1892dfed7b403acc1741b4667e75e73803df73379c070bd68dcf/ggxx001/dsh-plugin-studio",
     "description": "插件会话工坊：为已安装插件开一个带上下文的修改会话，点开插件即可在对话里继续改它。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给已安装插件开一个带上下文的修改会话：在「设置 → 插件」里点开 会话工坊 标签页，点任意插件，就会带着它的源码目录、插件行和补丁路径开一个会话；之后一直在同一个会话里继续改它。"
   },
   "schemaVersion": 1,
   "scripts": {

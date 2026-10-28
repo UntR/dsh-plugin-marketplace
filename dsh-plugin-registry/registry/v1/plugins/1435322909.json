@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-27T09:53:24.843Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-28T10:31:16.080Z",
+    "enrichmentStatus": "ok",
     "headSha": "8cabcec566a4a903ba58f712275a20b607222c3f"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1435322909",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-todo-panel",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:DavidLee2026/dsh-plugin-todo-panel#8cabcec566a4a903ba58f712275a20b607222c3f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-todo-panel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d94027471a9d9f8e5f2c2e7dbf388719cc82d986c8dd82ed957cb4df66a5ef2f/DavidLee2026/dsh-plugin-todo-panel",
     "description": "DSH 右侧栏待办面板：把 markdown 待办清单显示成面板，勾选、打标签、删除都写回文件 | A markdown todo panel for the DeepSeek Harness sidebar"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把一份 markdown 待办清单，在 DSH（DeepSeek Harness）右侧栏里显示成面板：还剩几件、每件放了多少天、按标签筛，勾选和删除都直接改回那个文件。"
   },
   "schemaVersion": 1,
   "scripts": {
