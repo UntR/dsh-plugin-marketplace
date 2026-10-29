@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-28T10:31:16.080Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-10-29T10:49:27.869Z",
+    "enrichmentStatus": "ok",
     "headSha": "36a83c9db3a20dedd34f6603388937b4faacac36"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1402136368",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-anthropic-request-size-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:noahchalifour/dsh-anthropic-request-size-guard#36a83c9db3a20dedd34f6603388937b4faacac36",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json",
+      "./shrink": "./lib/shrink.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-anthropic-request-size-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/21b1309981e7498b38f9f45a9aef46fb59a1ecad4a5a5e13f64a434d0d22614d/noahchalifour/dsh-anthropic-request-size-guard",
     "description": "DeepSeek Harness plugin: shrink oversized Claude requests so they never fail with HTTP 413 request_too_large"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Stops this Claude error in DeepSeek Harness:"
   },
   "schemaVersion": 1,
   "scripts": {

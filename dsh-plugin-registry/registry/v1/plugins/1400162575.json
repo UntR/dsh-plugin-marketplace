@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-28T10:31:16.080Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-29T10:49:27.869Z",
+    "enrichmentStatus": "ok",
     "headSha": "29b1fa6f2676c3625c882d106ed2ca27cd7f68c7"
   },
   "github": {
@@ -45,27 +45,43 @@
   },
   "id": "gh:1400162575",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mcp-hub",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:tang-coder-hub/dsh-mcp-hub#29b1fa6f2676c3625c882d106ed2ca27cd7f68c7",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-mcp-hub",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/35300387ba436d566200cb6f025e7a582f70da514421721d2969bfe92371c3dc/tang-coder-hub/dsh-mcp-hub",
     "description": "通用 MCP 服务器管理页（仅官方组件）：在 DSH 设置里增删改任意 MCP 服务（stdio / streamable-http），一键写入 profile 注册块，可探测连通性与工具列表。内置 GitHub 官方 MCP Server 预设。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 的「设置 → MCP 服务器」里增删改任意 MCP 服务（stdio 或 streamable-http）， 校验通过后一键写入 profile 的注册块，重启后即可在会话里使用。"
   },
   "schemaVersion": 1,
   "scripts": {

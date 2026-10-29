@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-28T10:31:16.080Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-29T10:49:27.869Z",
+    "enrichmentStatus": "ok",
     "headSha": "f7e35685fedff0bf03e4d1b0debe9ffc6fd2e6ac"
   },
   "github": {
@@ -49,8 +49,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:O-OII/dsh-native-taskbar-badge#372163d1d66ec31af4a8c9f46551723d65d70d8c",
-    "version": "0.2.2"
+    "spec": "github:O-OII/dsh-session-alerts#f7e35685fedff0bf03e4d1b0debe9ffc6fd2e6ac",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
@@ -61,23 +61,25 @@
     "exports": {
       ".": "./index.mjs",
       "./client": "./client.js",
+      "./completion": "./completion.mjs",
       "./icon": "./icon.svg",
       "./locale/*.json": "./locale/*.json",
-      "./package.json": "./package.json"
+      "./package.json": "./package.json",
+      "./sidebar-client": "./sidebar-client.js"
     },
     "main": null,
     "name": "dsh-native-taskbar-badge",
     "status": "valid",
     "type": "module",
-    "version": "0.2.2"
+    "version": "0.3.0"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/69d57798382c2258df8b3a97edd3e33db606d52b602099c9a7ae1c81be52d7ce/O-OII/dsh-session-alerts",
-    "description": "DSH Windows 原生任务栏数字角标：后台提醒、主会话去重、回窗清零，不改 ASAR；支持中英文。"
+    "description": "DSH 会话提醒：逐会话未读角标与原生侧栏已完成会话筛选，帮助快速找回已结束的主会话。"
   },
   "readme": {
     "available": true,
-    "excerpt": "0.2.2 artwork: original rounded Bezier numerals, dark circular/capsule backgrounds and transparent antialiased edges. Each ICO includes 16/24/32/48/64 px artwork; no system or bundled font is used. The verified unread/RPC behavior is unchanged."
+    "excerpt": "There is no window-wide clear or bulk acknowledgement of every false unread flag. Hidden/unfocused pages, inactive or unretained sessions, and unknown/not-ready native states do not authorize the current-session synchronization. Reconnecting or refreshing does not invent a global"
   },
   "schemaVersion": 1,
   "scripts": {
