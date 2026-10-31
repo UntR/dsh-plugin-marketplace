@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-30T10:52:18.176Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-31T10:23:43.510Z",
+    "enrichmentStatus": "ok",
     "headSha": "358a45731d0dff1156dc38198c4f9ed53b2cbab7"
   },
   "github": {
@@ -41,27 +41,41 @@
   },
   "id": "gh:1430753485",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-claude-codex-mode",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hotheat/dsh-claude-codex-mode#358a45731d0dff1156dc38198c4f9ed53b2cbab7",
+    "version": "0.5.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-claude-codex-mode",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7137ffa86e4c3b35caf2a3c78340877ef251a17000a246d6b3984244479cefb0/hotheat/dsh-claude-codex-mode",
     "description": "DSH bundle: Claude discusses (API key or Claude Code CLI), Codex edits repository code. Mode switch with preflight checks on the Plugins page."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Discuss / Execute Split is a DeepSeek Harness (DSH) bundle that splits the work in two: discussion stays read-only, and every repository code edit goes to Codex."
   },
   "schemaVersion": 1,
   "scripts": {

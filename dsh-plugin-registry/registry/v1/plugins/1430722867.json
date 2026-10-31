@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-30T10:52:18.176Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-31T10:23:43.510Z",
+    "enrichmentStatus": "ok",
     "headSha": "9ea9bf45054a538d2f3bb7d17ad93e00ed608a25"
   },
   "github": {
@@ -56,28 +56,32 @@
     "packageName": "@morehao/dsh-skills-console",
     "preferred": "npm",
     "reason": null,
-    "requiresBuildApproval": false,
-    "spec": "@morehao/dsh-skills-console@0.5.3",
-    "version": "0.5.3"
+    "requiresBuildApproval": true,
+    "spec": "@morehao/dsh-skills-console@0.7.3",
+    "version": "0.7.3"
   },
   "npm": {
-    "latestVersion": "0.5.3",
+    "latestVersion": "0.7.3",
     "published": true,
     "repositoryMatches": true
   },
   "package": {
     "exports": {
-      ".": "./lib/index.js",
+      ".": "./dist/index.js",
+      "./api": {
+        "default": "./dist/api.js",
+        "types": "./dist/api.d.ts"
+      },
       "./client": "./client.js",
       "./icon": "./icon.svg",
       "./locale/*.json": "./locale/*.json",
       "./package.json": "./package.json"
     },
-    "main": "lib/index.js",
+    "main": "dist/index.js",
     "name": "@morehao/dsh-skills-console",
     "status": "valid",
     "type": "module",
-    "version": "0.5.3"
+    "version": "0.7.3"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/912981e216b42ed6b2e39fd60e8dfceb4cd812ffcde4c081bd7e4fbf2931ed52/morehao/dsh-skills-console",
@@ -92,6 +96,6 @@
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

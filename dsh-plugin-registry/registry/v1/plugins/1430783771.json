@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-30T10:52:18.176Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-31T10:23:43.510Z",
+    "enrichmentStatus": "ok",
     "headSha": "9efc0d0f6ca201f1fc9f0673322714bde409e41f"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1430783771",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-media-viewer",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:feigo313/dsh-media-viewer#9efc0d0f6ca201f1fc9f0673322714bde409e41f",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": {
+        "default": "./client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-media-viewer",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2df7e47f01716730cd9965e87aef06d760f7030bdad75317554b06fd0997a63b/feigo313/dsh-media-viewer",
     "description": "DSH 侧栏（dsh-better-sidebar）的音视频预览插件：注册一个文件查看器，用 /sidebar/file + Blob 播放，侧栏升级不会被覆盖"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A plugin-of-a-plugin: it adds the one thing dsh-better-sidebar cannot do — playing video and audio in the side card."
   },
   "schemaVersion": 1,
   "scripts": {

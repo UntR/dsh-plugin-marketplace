@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-30T10:52:18.176Z",
-    "enrichmentStatus": "stale",
-    "headSha": "f65b64a4fb298696279bf670de9b6ba4a49c23e6"
+    "enrichedAt": "2026-10-31T10:23:43.510Z",
+    "enrichmentStatus": "ok",
+    "headSha": "15de5512d83bee615e78033e2fc1d511abc0e29b"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "为 DSH 添加 Xiaomi MiMo TTS、豆包 Seed TTS，浏览器语音；音频下载、 UI 音效、桌宠联动、QQBot 语音；",
     "fork": false,
     "forks": 2,
-    "headSha": "f65b64a4fb298696279bf670de9b6ba4a49c23e6",
+    "headSha": "15de5512d83bee615e78033e2fc1d511abc0e29b",
     "homepageUrl": "https://ppy-web.github.io/dsh-plugin-xiaomi-mimo-tts/",
     "language": "TypeScript",
     "license": {
@@ -30,7 +30,7 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/45627506?u=55d646122638a16f9e01187902f4aa27a2c18570&v=4",
       "login": "ppy-web"
     },
-    "pushedAt": "2026-10-30T09:50:56Z",
+    "pushedAt": "2026-10-31T04:10:50Z",
     "slug": "ppy-web/dsh-plugin-xiaomi-mimo-tts",
     "stars": 38,
     "topics": [
@@ -38,7 +38,7 @@
       "dsh-plugin",
       "xiaomi-mimo-tts"
     ],
-    "updatedAt": "2026-10-30T09:50:59Z",
+    "updatedAt": "2026-10-31T04:10:54Z",
     "url": "https://github.com/ppy-web/dsh-plugin-xiaomi-mimo-tts"
   },
   "id": "gh:1340497731",
@@ -48,11 +48,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": true,
-    "spec": "dsh-xiaomi-tts@4.2.2",
-    "version": "4.2.2"
+    "spec": "dsh-xiaomi-tts@4.2.8",
+    "version": "4.2.8"
   },
   "npm": {
-    "latestVersion": "4.2.2",
+    "latestVersion": "4.2.8",
     "published": true,
     "repositoryMatches": true
   },
@@ -71,8 +71,30 @@
         "types": "./lib/client-api.d.ts"
       },
       "./cordis.patch.yml": "./cordis.patch.yml",
+      "./host": {
+        "default": "./lib/speech-host.js",
+        "types": "./lib/speech-host.d.ts"
+      },
+      "./host-api": {
+        "default": "./lib/host-api.js",
+        "types": "./lib/host-api.d.ts"
+      },
       "./locale/*.json": "./locale/*.json",
       "./package.json": "./package.json",
+      "./qqbot": {
+        "default": "./lib/qqbot.js",
+        "types": "./lib/qqbot.d.ts"
+      },
+      "./qqbot-agent": {
+        "default": "./lib/qqbot-agent.js",
+        "types": "./lib/qqbot-agent.d.ts"
+      },
+      "./qqbot/icon": "./assets/plugin-icons/qqbot.webp",
+      "./qqbot/locale/*.json": "./locale/qqbot/*.json",
+      "./speech-agent": {
+        "default": "./lib/speech-agent.js",
+        "types": "./lib/speech-agent.d.ts"
+      },
       "./whale-girl": {
         "default": "./lib/whale-girl.js",
         "types": "./lib/whale-girl.d.ts"
@@ -84,15 +106,15 @@
     "name": "dsh-xiaomi-tts",
     "status": "valid",
     "type": "module",
-    "version": "4.2.2"
+    "version": "4.3.0-alpha.2"
   },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1340497731/6deebbdd-468d-45e9-ae60-e4d41e14993e",
-    "description": "给DSH接入免费的 Xiaomi MiMo TTS API，支持使用预置/自定义/浏览器内置声音朗读正文"
+    "description": "为 DSH 添加 Xiaomi MiMo TTS、豆包 Seed TTS，浏览器语音；音频下载、 UI 音效、桌宠联动、QQBot 语音；"
   },
   "readme": {
     "available": true,
-    "excerpt": "在 DSH 桌面端或 Web 端的插件管理面板搜索 dsh-xiaomi-tts 安装。"
+    "excerpt": "需要 DSH 0.2.2 以上、Node.js 24.9+，当前适配目标为 DSH 0.2.2-alpha.2。"
   },
   "schemaVersion": 1,
   "scripts": {

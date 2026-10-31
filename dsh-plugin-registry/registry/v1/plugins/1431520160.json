@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-30T10:52:18.176Z",
-    "enrichmentStatus": "stale",
-    "headSha": "cf5154fe41f86feb45f25e32abe5f5671768cd47"
+    "enrichedAt": "2026-10-31T10:23:43.510Z",
+    "enrichmentStatus": "ok",
+    "headSha": "40b364de7f8b4ccc266a756add812de6615aa37e"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Type `!` in the composer to run a real shell command in the dsh session's working directory.",
     "fork": false,
     "forks": 0,
-    "headSha": "cf5154fe41f86feb45f25e32abe5f5671768cd47",
+    "headSha": "40b364de7f8b4ccc266a756add812de6615aa37e",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVVNDoA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/971bec645ed1fdaa92686f581930acf8b2ed95783764f25632e28253215844c7/Mooling0602/dsh-hint-shell",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/0c6894f62706a36c95fc247755eaf4d6cc34e1a482f459b3078419a77e8cef28/Mooling0602/dsh-hint-shell",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/147964268?v=4",
       "login": "Mooling0602"
     },
-    "pushedAt": "2026-10-24T13:41:42Z",
+    "pushedAt": "2026-10-31T08:48:37Z",
     "slug": "Mooling0602/dsh-hint-shell",
     "stars": 0,
     "topics": [
@@ -43,7 +43,7 @@
       "plugin",
       "shell"
     ],
-    "updatedAt": "2026-10-24T13:41:45Z",
+    "updatedAt": "2026-10-31T08:48:40Z",
     "url": "https://github.com/Mooling0602/dsh-hint-shell"
   },
   "id": "gh:1431520160",
@@ -52,8 +52,8 @@
     "packageName": "dsh-hint-shell",
     "preferred": "github",
     "reason": null,
-    "requiresBuildApproval": false,
-    "spec": "github:Mooling0602/dsh-hint-shell#cf5154fe41f86feb45f25e32abe5f5671768cd47",
+    "requiresBuildApproval": true,
+    "spec": "github:Mooling0602/dsh-hint-shell#40b364de7f8b4ccc266a756add812de6615aa37e",
     "version": "0.1.0"
   },
   "npm": {
@@ -63,19 +63,25 @@
   },
   "package": {
     "exports": {
-      ".": "./index.js",
-      "./client": "./client.js",
+      ".": {
+        "default": "./dist/index.js"
+      },
+      "./client": {
+        "default": "./dist/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
       "./icon": "./icon.svg",
-      "./locale/*.json": "./locale/*.json"
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
     },
-    "main": null,
+    "main": "dist/index.js",
     "name": "dsh-hint-shell",
     "status": "valid",
     "type": "module",
     "version": "0.1.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/971bec645ed1fdaa92686f581930acf8b2ed95783764f25632e28253215844c7/Mooling0602/dsh-hint-shell",
+    "coverUrl": "https://opengraph.githubassets.com/0c6894f62706a36c95fc247755eaf4d6cc34e1a482f459b3078419a77e8cef28/Mooling0602/dsh-hint-shell",
     "description": "Type `!` in the composer to run a real shell command in the dsh session's working directory."
   },
   "readme": {
@@ -87,6 +93,6 @@
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

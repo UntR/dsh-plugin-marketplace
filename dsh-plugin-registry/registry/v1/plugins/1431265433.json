@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-30T10:52:18.176Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-10-31T10:23:43.510Z",
+    "enrichmentStatus": "ok",
     "headSha": "bc39a7bf90df2cc1ea0d446752d357ae8dd78a7c"
   },
   "github": {
@@ -25,18 +25,18 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVU9gmQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/4eec4b46434b4975232416d1c42459f573758ca25bc3c2e0af53d142387d3fb5/sunxiuguo/dsh-a2ui",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/335f6f337c4e29d17f2fd017336bb2bcb56fb6021b562e620714d049f279f3da/sunxiuguo/dsh-a2ui",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/32354149?u=41be5a5687b7ad24275448f198dc9625c7b0e949&v=4",
       "login": "sunxiuguo"
     },
     "pushedAt": "2026-10-30T05:59:51Z",
     "slug": "sunxiuguo/dsh-a2ui",
-    "stars": 2,
+    "stars": 1,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-30T07:47:42Z",
+    "updatedAt": "2026-10-30T19:08:23Z",
     "url": "https://github.com/sunxiuguo/dsh-a2ui"
   },
   "id": "gh:1431265433",
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-a2ui",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-alpha.13"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/4eec4b46434b4975232416d1c42459f573758ca25bc3c2e0af53d142387d3fb5/sunxiuguo/dsh-a2ui",
+    "coverUrl": "https://opengraph.githubassets.com/335f6f337c4e29d17f2fd017336bb2bcb56fb6021b562e620714d049f279f3da/sunxiuguo/dsh-a2ui",
     "description": "A2UI for DeepSeek Harness: official schemas and renderer, bounded actions and non-executing replay. Native Web-host synthetic workflow and restart verified; live models and full protocol coverage remain unverified."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH A2UI is an independent plugin for rendering standard, agent-generated interfaces inside DeepSeek Harness conversations. An agent presents an interface, the user interacts, and that action becomes the next agent turn."
   },
   "schemaVersion": 1,
   "scripts": {
