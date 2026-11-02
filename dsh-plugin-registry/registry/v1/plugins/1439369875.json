@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
-    "headSha": "83d6b40717be513c8feea7c26bf6802645312aee"
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
+    "headSha": "56b0efd4babd94bc9f5efdb0811ff7b9184e1577"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Work todo reminders for DeepSeek Harness: four stage views plus recurring/paused filters, derived priority, recurrence, one-off start/end alerts, weekly/monthly reports, and natural-language quick add.",
     "fork": false,
     "forks": 0,
-    "headSha": "83d6b40717be513c8feea7c26bf6802645312aee",
+    "headSha": "56b0efd4babd94bc9f5efdb0811ff7b9184e1577",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,43 +25,55 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVcsKkw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/edc2bafea38dd6da7b25004965b90b967611c591525cc48be34dce30af441fb8/huningsong/dsh-todos-diy",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b22c8579cc95bf50e70a9166fd4194ffcb85986060c41c8ba0c155d03f306dd9/huningsong/dsh-todos-diy",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/107565080?v=4",
       "login": "huningsong"
     },
-    "pushedAt": "2026-10-31T07:32:21Z",
+    "pushedAt": "2026-11-02T09:32:40Z",
     "slug": "huningsong/dsh-todos-diy",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-31T07:32:29Z",
+    "updatedAt": "2026-11-02T09:32:40Z",
     "url": "https://github.com/huningsong/dsh-todos-diy"
   },
   "id": "gh:1439369875",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-todos-diy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:huningsong/dsh-todos-diy#56b0efd4babd94bc9f5efdb0811ff7b9184e1577",
+    "version": "0.7.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-todos-diy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/edc2bafea38dd6da7b25004965b90b967611c591525cc48be34dce30af441fb8/huningsong/dsh-todos-diy",
+    "coverUrl": "https://opengraph.githubassets.com/b22c8579cc95bf50e70a9166fd4194ffcb85986060c41c8ba0c155d03f306dd9/huningsong/dsh-todos-diy",
     "description": "Work todo reminders for DeepSeek Harness: four stage views plus recurring/paused filters, derived priority, recurrence, one-off start/end alerts, weekly/monthly reports, and natural-language quick add."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness 插件：按工作日/每周/每月/自定义 cron 循环提醒工作待办。0.2.0 起采用 v1.3 / D-25 任务时间与状态模型：删除 dueDate，单次任务 startAt 可选（默认创建时间、不发开始提醒）、endAt 必填且是唯一截止；主面板提供「未开始 / 进行中 / 已超期 / 已完成」四阶段页签 + 循环/暂停独立筛选，stage 与优先级按当前时间实时派生（不再有每日 00:05 重算），统计给出六类互斥计数、byKind 与 totalDone；提醒以 shell.overlay 页面浮层呈现，可选"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "69687a1ad765d4518209697bf1735286d38dd440"
   },
   "github": {
@@ -46,38 +46,36 @@
   "id": "gh:1436437413",
   "install": {
     "available": true,
-    "packageName": "dsh-context-date-pruner",
-    "preferred": "github",
+    "packageName": "dsh-context-drawer",
+    "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:yue7ye/dsh-Context-Drawer#11dd04c5f7abe31cb9d1949278d3f4addb69b744",
-    "version": "1.2.0"
+    "spec": "dsh-context-drawer@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": "1.2.0",
+    "latestVersion": "0.1.0",
     "published": true,
-    "repositoryMatches": false
+    "repositoryMatches": true
   },
   "package": {
     "exports": {
-      ".": "./index.js",
-      "./client": "./client.js",
-      "./icon": "./icon.svg",
-      "./locale/*.json": "./locale/*.json"
+      ".": "./index.mjs",
+      "./core": "./core.mjs"
     },
-    "main": null,
-    "name": "dsh-context-date-pruner",
+    "main": "index.mjs",
+    "name": "dsh-context-drawer",
     "status": "valid",
     "type": "module",
-    "version": "1.2.0"
+    "version": "0.1.0"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4a326f19ad9a31c2e6356c24bd20fb9bf653992711ad7697e77e2adebcce88b0/yue7ye/dsh-Context-Drawer",
-    "description": "DeepSeek Harness plugin: pick calendar dates and remove the finished turns of those dates from the model-visible context. The chat transcript and the append-only session log stay untouched."
+    "description": "DeepSeek Harness plugin with exactly one job: when the conversation context reaches a threshold (default 50%), move older messages into a folder associated with that conversation, then release the oldest finished turns from the model-visible context. The transcript and the append"
   },
   "readme": {
     "available": true,
-    "excerpt": "给 DeepSeek Harness (DSH) 用的上下文编辑插件：在会话里逐轮查看完整的聊天记录，再按时间段挑出已经结束的轮次，把选中的那几条从模型上下文中移走。"
+    "excerpt": "A DeepSeek Harness (DSH) plugin with exactly one job:"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "9b77811aa4ffe739bd820c865f1f46248b38b4f3"
   },
   "github": {
@@ -49,27 +49,39 @@
   },
   "id": "gh:1439802253",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-user-code-block",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-user-code-block@0.4.0",
+    "version": "0.4.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-user-code-block",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/530a6c3498cb8a0a44132b05326db58b99c46c1c9ff3a1ab13f9103c1c5bc236/VictorKozachek/dsh-user-code-block",
     "description": "Syntax highlighting, copy button and monochrome mode for code blocks in DeepSeek Harness Desktop (DSH) chat user messages. No dependencies, no build step."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A plugin for DeepSeek Harness Desktop (DSH) that renders fenced code blocks in user messages: frame, language banner, syntax highlighting and a copy button. The rest of the message stays plain text."
   },
   "schemaVersion": 1,
   "scripts": {

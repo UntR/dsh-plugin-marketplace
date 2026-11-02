@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
-    "headSha": "02af2710815cfbf6df69b405507db754c32118a5"
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
+    "headSha": "071d2a66e201159e0f19301992ca0b310e89f5be"
   },
   "github": {
     "archived": false,
@@ -17,23 +17,23 @@
     "description": null,
     "fork": false,
     "forks": 0,
-    "headSha": "02af2710815cfbf6df69b405507db754c32118a5",
+    "headSha": "071d2a66e201159e0f19301992ca0b310e89f5be",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": null,
     "nodeId": "R_kgDOUL_U2g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/642b1be12e4e558d3fc25028021ad5098cf976c398298735603245fbc08565c1/IKEASven69/dsh-sensenova-image",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/56231fa4ddf98d034a04f61f278eab0c584955e0ea517a50e11b33c184301c9a/IKEASven69/dsh-sensenova-image",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/73433709?u=eb4e073054d1aa17a0b54730ac26276f7e0496ff&v=4",
       "login": "IKEASven69"
     },
-    "pushedAt": "2026-10-31T08:39:23Z",
+    "pushedAt": "2026-11-01T09:33:06Z",
     "slug": "IKEASven69/dsh-sensenova-image",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-10-31T08:39:26Z",
+    "updatedAt": "2026-11-01T09:58:47Z",
     "url": "https://github.com/IKEASven69/dsh-sensenova-image"
   },
   "id": "gh:1354749146",
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,14 +51,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": "./client/client-v4.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "dist/index.js",
+    "name": "dsh-sensenova-image",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/642b1be12e4e558d3fc25028021ad5098cf976c398298735603245fbc08565c1/IKEASven69/dsh-sensenova-image",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/56231fa4ddf98d034a04f61f278eab0c584955e0ea517a50e11b33c184301c9a/IKEASven69/dsh-sensenova-image",
+    "description": "商汤 SenseNova U1 / U1.5 生图插件 for DeepSeek Harness (dsh)：一个住在 dsh 右栏的生图工作台（无限画布 / 并发队列 / 画廊管理 / 蒙版重绘 / 对比 / 版本树），外加 5 个 agent 工具和聊天里的生图工具卡片。本文档以 src/index.ts 与 client/client-v4.js 的实际实现为准，同步至 v11 全面优化后的状态（修复清单见 DESIGN-SPEC-v10.md 文末附录）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "商汤 SenseNova U1 / U1.5 生图插件 for DeepSeek Harness (dsh)：一个住在 dsh 右栏的生图工作台（无限画布 / 并发队列 / 画廊管理 / 蒙版重绘 / 对比 / 版本树），外加 5 个 agent 工具和聊天里的生图工具卡片。本文档以 src/index.ts 与 client/client-v4.js 的实际实现为准，同步至 v11 全面优化后的状态（修复清单见 DESIGN-SPEC-v10.md 文末附录）。"
   },
   "schemaVersion": 1,
   "scripts": {

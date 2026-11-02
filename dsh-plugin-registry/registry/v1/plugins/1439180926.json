@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "edbff3272fd39a92ed0152956c0520e23333f10d"
   },
   "github": {
@@ -56,27 +56,36 @@
   },
   "id": "gh:1439180926",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "home-monitor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lowspecai/dsh-home-monitor#edbff3272fd39a92ed0152956c0520e23333f10d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js"
+    },
+    "main": "./lib/index.js",
+    "name": "home-monitor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5c3c009ef8a0ea156f9db9124e7f454b2741bd17bc25d2e76293f9fa8ce3fd91/lowspecai/dsh-home-monitor",
     "description": "Read-only health checks for a small self-hosted setup. HTTP, TCP, SSL and Docker probes as DSH tools, or as a standalone MCP stdio server. One config.json."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Built for dsh 0.2.0-rc.2. Also runs standalone as an MCP stdio server."
   },
   "schemaVersion": 1,
   "scripts": {

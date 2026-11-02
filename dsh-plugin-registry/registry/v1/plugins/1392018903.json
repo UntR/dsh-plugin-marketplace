@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "d38ca8dba3f5e695b3cdaaff904a957878e85b90"
   },
   "github": {
@@ -45,27 +45,46 @@
   },
   "id": "gh:1392018903",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@z-y-q/dsh-mcp-apps",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:z-y-q/dsh-mcp-apps#d38ca8dba3f5e695b3cdaaff904a957878e85b90",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./remote": {
+        "default": "./lib/typert.remote-client.js",
+        "types": "./lib/typert.remote-client.d.ts"
+      },
+      "./typert": {
+        "default": "./lib/typert.host.js",
+        "types": "./lib/typert.host.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "@z-y-q/dsh-mcp-apps",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/559ca5c3ae0735ae9286e1a19754325c5fdbdc1c447c803acd39541d6d3e2734/z-y-q/dsh-mcp-apps",
-    "description": ""
+    "description": "MCP Apps display for DeepSeek Harness: renders the ui:// App resources an MCP server attaches to its tools inside the tool-call rows of the dsh web GUI, using the official @modelcontextprotocol/ext-apps AppBridge and the double-iframe sandbox architecture from the MCP Apps specif"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "MCP Apps display for DeepSeek Harness: renders the ui:// App resources an MCP server attaches to its tools inside the tool-call rows of the dsh web GUI, using the official @modelcontextprotocol/ext-apps AppBridge and the double-iframe sandbox architecture from the MCP Apps specif"
   },
   "schemaVersion": 1,
   "scripts": {

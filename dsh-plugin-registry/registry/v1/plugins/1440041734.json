@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "dab2a22f270b7eb74d4576f0281d7e39cb728b9e"
   },
   "github": {
@@ -41,27 +41,43 @@
   },
   "id": "gh:1440041734",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-worklog",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vogtersea/dsh-worklog#dab2a22f270b7eb74d4576f0281d7e39cb728b9e",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./service": "./lib/service.js",
+      "./store": "./lib/store.js",
+      "./views": "./lib/views.js"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-worklog",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/747bcca92a6d362716ad4dabaf1f29ba4d875c714419dd87470be2c0cef840ef/vogtersea/dsh-worklog",
     "description": "Personal work tracking panel for DSH, with local SQLite storage and five agent tools."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 里直接可用的「工作志」——个人工作跟踪面板。"
   },
   "schemaVersion": 1,
   "scripts": {

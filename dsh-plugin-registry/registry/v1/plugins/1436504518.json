@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "87c6ed9a4d6ca85ccd0134e9e31b7b23eb239525"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1436504518",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-task-clarifier",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Sun-0306/dsh-task-clarifier#87c6ed9a4d6ca85ccd0134e9e31b7b23eb239525",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-task-clarifier",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c97dbed3eb8fb5b8dde7639cc6b362c932254a4d86fb49ecfc5ef8afcb9cf67e/Sun-0306/dsh-task-clarifier",
     "description": "Turn one sentence into a precise task brief through a short guided Q&A. · 一句话变成精准任务书：左侧栏任务澄清器，少问几轮、少烧 token。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 发一句「帮我做个插件」这类模糊指令，通常要来回追问好几轮：目标是什么、给谁用、 范围多大、怎么算完成。每一轮追问都要花 token，猜错还要返工。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
-    "headSha": "d16bef77f0c000f57097d4f8b732981b916ad301"
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
+    "headSha": "465b544e8a33de50dcba9d2d6b588bca6740daf9"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH 本地长期记忆库：把会话知识沉淀成不可变事实卡，骨架树做分类、关系图做脉络、FTS5 中文 bigram 检索。零外部依赖（node:sqlite + node:zlib）。",
     "fork": false,
     "forks": 0,
-    "headSha": "d16bef77f0c000f57097d4f8b732981b916ad301",
+    "headSha": "465b544e8a33de50dcba9d2d6b588bca6740daf9",
     "homepageUrl": "https://github.com/MyRemme/dsh-kb",
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVdX34A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/315ab9585d0072cfc73751caa3a36226b5c033133b8b22242758f1dd717b76b4/MyRemme/dsh-kb",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/63a39592c81f668ed8d2114fbaa1bbf782d92cebf542e4b86b66ea0bcd72d67e/MyRemme/dsh-kb",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/134785674?u=71b633569cf41d11baabe52eadf4f1c93248cf6a&v=4",
       "login": "MyRemme"
     },
-    "pushedAt": "2026-10-31T10:20:13Z",
+    "pushedAt": "2026-10-31T17:38:19Z",
     "slug": "MyRemme/dsh-kb",
     "stars": 0,
     "topics": [
@@ -44,32 +44,48 @@
       "nodejs",
       "sqlite"
     ],
-    "updatedAt": "2026-10-31T10:20:16Z",
+    "updatedAt": "2026-10-31T17:38:22Z",
     "url": "https://github.com/MyRemme/dsh-kb"
   },
   "id": "gh:1440085984",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@myremme/dsh-kb",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:MyRemme/dsh-kb#465b544e8a33de50dcba9d2d6b588bca6740daf9",
+    "version": "0.8.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/entry.js"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./export": "./lib/export.js",
+      "./index": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/entry.js",
+    "name": "@myremme/dsh-kb",
+    "status": "valid",
+    "type": "module",
+    "version": "0.8.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/315ab9585d0072cfc73751caa3a36226b5c033133b8b22242758f1dd717b76b4/MyRemme/dsh-kb",
+    "coverUrl": "https://opengraph.githubassets.com/63a39592c81f668ed8d2114fbaa1bbf782d92cebf542e4b86b66ea0bcd72d67e/MyRemme/dsh-kb",
     "description": "DSH 本地长期记忆库：把会话知识沉淀成不可变事实卡，骨架树做分类、关系图做脉络、FTS5 中文 bigram 检索。零外部依赖（node:sqlite + node:zlib）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "本地长期记忆库 for DeepSeek Harness. 把每次会话里\"想明白的事\"沉淀成不可变的事实卡，让下一次会话不必从零开始。"
   },
   "schemaVersion": 1,
   "scripts": {

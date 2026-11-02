@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
-    "headSha": "258b2feddcd8ec23a7b00b847d7e19abce391497"
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
+    "headSha": "12a687f2a2c0bb64d207b062925f7d15b125a476"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "白饭鱼的 Our Free Model 接入核心：渠道主备、额度冷却、任务档位、阶段计时与安全重试，附离线演示",
     "fork": false,
     "forks": 0,
-    "headSha": "258b2feddcd8ec23a7b00b847d7e19abce391497",
+    "headSha": "12a687f2a2c0bb64d207b062925f7d15b125a476",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,46 +25,61 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVcmG4Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7fac0a29db39fbae4467a78e5add6031ab200db4c4b73f5efedd9785c9acc963/tasuma-qwq/baifanyu-ofm-bridge",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/251615a9f85e087935f91a767ddbd1305e0449167cfec35feab4961dcbab5fdf/tasuma-qwq/baifanyu-ofm-bridge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/221238469?u=e2ed768e655b9267a3719fa87263fb88f5e0f66f&v=4",
       "login": "tasuma-qwq"
     },
-    "pushedAt": "2026-10-31T03:50:02Z",
+    "pushedAt": "2026-11-01T05:35:54Z",
     "slug": "tasuma-qwq/baifanyu-ofm-bridge",
-    "stars": 3,
+    "stars": 5,
     "topics": [
       "deepseek-harness",
       "dsh-plugin",
       "model-routing",
       "ofm"
     ],
-    "updatedAt": "2026-10-31T03:50:06Z",
+    "updatedAt": "2026-11-02T10:52:14Z",
     "url": "https://github.com/tasuma-qwq/baifanyu-ofm-bridge"
   },
   "id": "gh:1439270625",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "baifanyu-ofm",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "baifanyu-ofm@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./src/dsh-client.js",
+      "./inference-audit": "./src/inference-audit.js",
+      "./model-lanes": "./src/model-lanes.js",
+      "./plugin": "./src/plugin.js",
+      "./runner": "./src/runner.js",
+      "./turn-stall-guard": "./src/turn-stall-guard.js"
+    },
+    "main": "./src/index.js",
+    "name": "baifanyu-ofm",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7fac0a29db39fbae4467a78e5add6031ab200db4c4b73f5efedd9785c9acc963/tasuma-qwq/baifanyu-ofm-bridge",
+    "coverUrl": "https://opengraph.githubassets.com/251615a9f85e087935f91a767ddbd1305e0449167cfec35feab4961dcbab5fdf/tasuma-qwq/baifanyu-ofm-bridge",
     "description": "白饭鱼的 Our Free Model 接入核心：渠道主备、额度冷却、任务档位、阶段计时与安全重试，附离线演示"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DSH 中的 OFM 免费公开池及用户自有账号渠道设置主备顺序、额度冷却和任务档位，并验证真实模型回答。首次接入默认使用免费公开池。"
   },
   "schemaVersion": 1,
   "scripts": {

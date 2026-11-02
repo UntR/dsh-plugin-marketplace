@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
-    "headSha": "2a5950aabf1485a2e1cd6d8983a5614b36c3f78c"
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
+    "headSha": "0b7fe7e29b2278216310c9554fc4485029af07bd"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-28T00:32:02Z",
     "databaseId": 1436428877,
     "defaultBranch": "main",
-    "description": "将api连接到桌宠上，并且允许桌宠查看你的电脑屏幕。             在本项目中，桌宠会读取你的桌面信息，并自行决定是否和你交流。            交流方面，桌宠可以选择直接发消息或者做动作；你对桌宠的互动也会被桌宠读取到，她可能会对你的互动做出反应。            记忆方面，项目采取本地文件夹存放记忆(桌宠自行决定哪些值得存放)，并采用短期记忆直接读取，长期记忆索引读取的方式，缓解上下文过长的问题。",
+    "description": "这是一个能聊天、做动作，也能陪你看屏幕的桌宠插件。连接自己的 AI API 后，你可以和她聊天，也可以点击、拖动她。她会收到这些互动，并自行决定用文字、动作回应，或暂时保持安静。  你还可以选择一个应用窗口或整个屏幕共享给她，让她根据看到的内容与你交流。屏幕共享需要你手动开启并授权，画面会发送给你配置的 API 服务商，你可以随时暂停或结束共享。  开启记忆功能后，她可以把值得记住的事情保存在本机文件夹中。聊天时会直接读取近期记忆，需要回忆更早的事情时再按主题查找，减少一次带入过多内容。把这些记忆发送给 AI 使用，需要你另外同意。",
     "fork": false,
     "forks": 0,
-    "headSha": "2a5950aabf1485a2e1cd6d8983a5614b36c3f78c",
+    "headSha": "0b7fe7e29b2278216310c9554fc4485029af07bd",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVZ4qTQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f739607333450720bc5dda7f8b89096602301d98609ee626591ececf241219b8/steady-sakura/dsh-friend",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/315cd6eb5c3730e174a49f8e56ca2bb6e61d5f60cea811fc6a0d51bb22836f8f/steady-sakura/dsh-friend",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/242106915?v=4",
       "login": "steady-sakura"
     },
-    "pushedAt": "2026-10-30T17:20:16Z",
+    "pushedAt": "2026-10-31T10:56:55Z",
     "slug": "steady-sakura/dsh-friend",
     "stars": 1,
     "topics": [
@@ -41,32 +41,43 @@
       "llm",
       "screen-capture"
     ],
-    "updatedAt": "2026-10-30T17:20:20Z",
+    "updatedAt": "2026-10-31T10:56:59Z",
     "url": "https://github.com/steady-sakura/dsh-friend"
   },
   "id": "gh:1436428877",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-friend",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:steady-sakura/dsh-friend#0b7fe7e29b2278216310c9554fc4485029af07bd",
+    "version": "0.7.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/plugin.mjs",
+      "./client": "./web/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "src/plugin.mjs",
+    "name": "dsh-friend",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.4"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f739607333450720bc5dda7f8b89096602301d98609ee626591ececf241219b8/steady-sakura/dsh-friend",
-    "description": "将api连接到桌宠上，并且允许桌宠查看你的电脑屏幕。 在本项目中，桌宠会读取你的桌面信息，并自行决定是否和你交流。 交流方面，桌宠可以选择直接发消息或者做动作；你对桌宠的互动也会被桌宠读取到，她可能会对你的互动做出反应。 记忆方面，项目采取本地文件夹存放记忆(桌宠自行决定哪些值得存放)，并采用短期记忆直接读取，长期记忆索引读取的方式，缓解上下文过长的问题。"
+    "coverUrl": "https://opengraph.githubassets.com/315cd6eb5c3730e174a49f8e56ca2bb6e61d5f60cea811fc6a0d51bb22836f8f/steady-sakura/dsh-friend",
+    "description": "这是一个能聊天、做动作，也能陪你看屏幕的桌宠插件。连接自己的 AI API 后，你可以和她聊天，也可以点击、拖动她。她会收到这些互动，并自行决定用文字、动作回应，或暂时保持安静。 你还可以选择一个应用窗口或整个屏幕共享给她，让她根据看到的内容与你交流。屏幕共享需要你手动开启并授权，画面会发送给你配置的 API 服务商，你可以随时暂停或结束共享。 开启记忆功能后，她可以把值得记住的事情保存在本机文件夹中。聊天时会直接读取近期记忆，需要回忆更早的事情时再按主题查找，减少一次带入过多内容。把这些记忆发送给 AI 使用，需要你另外同意。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在桌边放一个会动、能聊天的小伙伴。你可以拖动它、双击打开聊天，也可以让它看看你选中的窗口。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "360769c68ffc476829857cfbaf19aa281d0dceb7"
   },
   "github": {
@@ -45,27 +45,41 @@
   },
   "id": "gh:1439937446",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-template",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:longyi-0x0/dsh-plugin-template#360769c68ffc476829857cfbaf19aa281d0dceb7",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./target/index.js",
+      "./client": "./target/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./target/index.js",
+    "name": "dsh-plugin-template",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/963d9e505e7698ab6e38f323e0a03b765ebeedf9a84c1a81ccac6df6f510605e/longyi-0x0/dsh-plugin-template",
     "description": "DSH 插件模板：宿主 HTTP 路由 + 设置页 + 双语 + 测试，纯 JS 无构建。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件骨架：TypeScript 宿主入口 + React TSX 空设置页 + 中英双语 + esbuild 构建 + vitest。没有业务接口，也没有示例业务逻辑——只保留一个可安装、可构建、可测试的最小插件。"
   },
   "schemaVersion": 1,
   "scripts": {

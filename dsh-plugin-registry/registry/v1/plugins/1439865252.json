@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "6e09e0d1ec26fff89935eb53a47ada32e758b761"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,34 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./acp-guard": "./presets/acp/acp-guard.mjs",
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-ntr-plus",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cb3eb9508a3c3027757b80acce8e9b291adcb2ae39c3b9da5aa0d0339f96d37d/Feiyu180/dsh-ntr-plus",
     "description": "dsh-ntr 0.1.5 的个人构建版：普通对话可直接切到 CodeBuddy / Claude Code 等 ACP agent 的模型，首次切换自动带上会话历史。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH（DeepSeek Harness） 的网页/桌面端里，用你习惯的界面，直接和任意一个 ACP agent（CodeBuddy、Pi、Oh My Pi、Claude Code、OpenCode、Qoder 等）对话。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./dsh-bundle.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "a1cdc5812138e819a477b68475d41406399710a4"
   },
   "github": {
@@ -55,27 +55,43 @@
   },
   "id": "gh:1439804149",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/subagent-switch",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wld12314/dsh-subagent-switch#a1cdc5812138e819a477b68475d41406399710a4",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/apply.js",
+      "./client": "./lib/ui/client.js",
+      "./lib/models": "./lib/models.js",
+      "./lib/quota": "./lib/quota.js",
+      "./lib/router": "./lib/router.js",
+      "./lib/tags": "./lib/tags.js",
+      "./lib/ui/panel": "./lib/ui/panel.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/apply.js",
+    "name": "@local/subagent-switch",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6c005f4ed6e664abdca3f4db585a2c0749f4c7143fce18632b1b54796ffc95ae/wld12314/dsh-subagent-switch",
     "description": "DSH plugin: routes each subagent to the best local model — free-first, quota-aware, capability-matched — with a control panel."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）的子代理自动挑模型的插件。 每次 spawn 子代理时，它会先看一眼你本机所有接入的模型，然后按「便宜优先 + 能力匹配 + 额度够不够」替这次任务选一个，再把结果写进子代理的会话配置里。默认只花订阅里已经付过的钱；便宜档确实没人擅长这件事时，才允许升到付费档。"
   },
   "schemaVersion": 1,
   "scripts": {

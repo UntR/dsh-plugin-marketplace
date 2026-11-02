@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
     "enrichmentStatus": "ok",
-    "headSha": "5c47a3226006a6ca3ebda0f074cd56478f429a51"
+    "headSha": "cced0c496d72bcd4ea9bd4bf9237bc7563c20425"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "As One 的 DSH 插件：把 As One 网关的调度/路由/面板挂进 DeepSeek Harness，提供 OpenAI 兼容的 /v1/models 与 /v1/chat/completions，面板页面直接内嵌",
     "fork": false,
     "forks": 0,
-    "headSha": "5c47a3226006a6ca3ebda0f074cd56478f429a51",
+    "headSha": "cced0c496d72bcd4ea9bd4bf9237bc7563c20425",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVd4tzQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/79eebd5c71aa59fb6cf7d5104a5fab578f3e56bd8c3876fcb67cfd55d54c8c27/bvbhu/dsh-as-one",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/96709b3d3148a9bad36ce8eec9dbbd37e90521a7129802a610517918d2598608/bvbhu/dsh-as-one",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/175571290?u=a926e7a009a6a1025a06da599e1ee38bfe87e50c&v=4",
       "login": "bvbhu"
     },
-    "pushedAt": "2026-10-31T07:37:20Z",
+    "pushedAt": "2026-11-02T11:30:06Z",
     "slug": "bvbhu/dsh-as-one",
     "stars": 0,
     "topics": [
@@ -42,18 +42,18 @@
       "openai-compatible",
       "typescript"
     ],
-    "updatedAt": "2026-10-31T07:40:31Z",
+    "updatedAt": "2026-11-02T11:30:11Z",
     "url": "https://github.com/bvbhu/dsh-as-one"
   },
   "id": "gh:1440624077",
   "install": {
-    "available": true,
-    "packageName": "@as-one/plugin",
-    "preferred": "github",
-    "reason": null,
+    "available": false,
+    "packageName": null,
+    "preferred": null,
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
-    "spec": "github:bvbhu/dsh-as-one#5c47a3226006a6ca3ebda0f074cd56478f429a51",
-    "version": "0.1.0"
+    "spec": null,
+    "version": null
   },
   "npm": {
     "latestVersion": null,
@@ -74,15 +74,15 @@
     "name": "@as-one/plugin",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.4.17"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/79eebd5c71aa59fb6cf7d5104a5fab578f3e56bd8c3876fcb67cfd55d54c8c27/bvbhu/dsh-as-one",
+    "coverUrl": "https://opengraph.githubassets.com/96709b3d3148a9bad36ce8eec9dbbd37e90521a7129802a610517918d2598608/bvbhu/dsh-as-one",
     "description": "As One 的 DSH 插件：把 As One 网关的调度/路由/面板挂进 DeepSeek Harness，提供 OpenAI 兼容的 /v1/models 与 /v1/chat/completions，面板页面直接内嵌"
   },
   "readme": {
     "available": true,
-    "excerpt": "As One 网关的 DSH(Cordis)宿主半插件。把 @as-one/core(纯 TS 核心包,零 Electron/React 依赖)以真正的 Cordis 插件形态装进 DSH:启动时读取 as-one.providers.json 与 as-one.credentials.json、打开 SQLite(as-one.db)、 构造 Scheduler + Router,并把 OpenAI 兼容网关面挂在 ctx.webServer 上 (不是自建 http.Server)。"
+    "excerpt": "As One 网关的 DSH(Cordis)插件 —— 宿主半 + client 半同一个包。它把 @as-one/core(纯 TS 核心,零 Electron 依赖)、@as-one/panel(面板方法)、 @as-one/panel-ui(React 页面)装进 DSH:打开 SQLite、构造 Scheduler + Router, 把 OpenAI 兼容网关面挂在 ctx.webServer(不是自建 http.Server),把面板页 挂进 DSH 侧栏,并且通过 LLM adapter 把模型列表直接嵌进 DSH 原生模型选择器。"
   },
   "schemaVersion": 1,
   "scripts": {

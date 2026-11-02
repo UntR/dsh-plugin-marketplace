@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "3661353ccb43a53c2fc66d3d080a6fee874424e7"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1440011908",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/github-oauth",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:MFCJ45681/github-oauth-plugin#3661353ccb43a53c2fc66d3d080a6fee874424e7",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@local/github-oauth",
+    "status": "valid",
+    "type": "commonjs",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/395edf122088e08822d8f6910cb5904094055398f11e1fd2a9fe7f595f2948f5/MFCJ45681/github-oauth-plugin",
     "description": "DSH plugin: GitHub OAuth (web callback) with an AES-256-GCM credential vault, 12 github_* agent tools, a right-sidebar panel and a Settings page."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：用 GitHub OAuth（authorization code + 网页回调） 连接 GitHub，把 clientsecret 与 access token AES-256-GCM 加密后落盘，并同时提供："
   },
   "schemaVersion": 1,
   "scripts": {

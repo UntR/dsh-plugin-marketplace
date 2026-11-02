@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "95414669528e04c5d961018530b6d03424165bee"
   },
   "github": {
@@ -48,27 +48,41 @@
   },
   "id": "gh:1439775622",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-rea",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yin1895/dsh-rea#95414669528e04c5d961018530b6d03424165bee",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./bridge": "./bridge/index.mjs",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./core": "./lib/core.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-rea",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6bb0212825bf91e925ad89ec5f3501272cc2df7276ba3a74f9cede08e8844c51/yin1895/dsh-rea",
     "description": "REA（Reverse Engineer Anything）的 DeepSeek Harness 插件：一个 bundle 同时挂载 MCP 服务器、渐进式披露桥接和设置面板配置页，REA 配置只留一份文件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "REA（Reverse Engineer Anything）的 DeepSeek Harness 插件： 安装一次，就同时得到 REA 的 MCP 服务器、渐进式披露桥接，以及设置面板里的 REA 配置页。 REA 的全部配置集中在一份文件里（/config/rea.env.json），不再散落到各个客户端。"
   },
   "schemaVersion": 1,
   "scripts": {

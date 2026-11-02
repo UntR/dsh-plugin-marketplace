@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "c6c4d52ee8f12e95d784a4404d3fcbcecf82865c"
   },
   "github": {
@@ -46,27 +46,43 @@
   },
   "id": "gh:1439749470",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cheerful",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Mika-Maki/dsh-cheerful#c6c4d52ee8f12e95d784a4404d3fcbcecf82865c",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-cheerful",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7bd2103c33ca1eb1f7d45682ff74cb2a77e4174a7c9e8959202e83bca9d23f0e/Mika-Maki/dsh-cheerful",
     "description": "DSH 插件：cheer 工具 + 礼炮彩带效果（V0.1-Unstable，实验性）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（dsh）加一个 cheer 工具：模型一调用，Web 界面左右两侧的礼炮就同时向中间喷出彩带。纯画面，不显示任何文字。"
   },
   "schemaVersion": 1,
   "scripts": {

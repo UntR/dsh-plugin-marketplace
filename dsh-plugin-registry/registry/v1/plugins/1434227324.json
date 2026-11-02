@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "9ea18a1106f95bf1eabfd5a57442e7ddf8ebf6d3"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1434227324",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-search-audit",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-search-audit@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-search-audit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b695d8c64b9a3001a058fe4cf469ec2cdc2ba8d8bb84859050dc9d2a399f836b/WhAIthere/dsh-search-audit",
     "description": "Read-only observer for native DeepSeek Search calls in DeepSeek Harness (dsh): appends each call's token usage to ~/.dsh/search-usage.jsonl so accounting plugins can price it. Requests and responses are untouched."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "用途：旁路观测官方 DeepSeek 搜索的模型调用开销。 官方 @deepseek-ai/dsh-web-search-deepseek 自己 fetch 打 api.deepseek.com/anthropic/v1/messages （原生 server tool websearch20250305），响应里的 usage 被直接丢弃、也不进会话日志 —— 所以任何统计都看不到这笔钱。本插件包一层 globalThis.fetch，把那些响应的 usage 落盘， 供 dsh-turn-cost 等消费者读取。"
   },
   "schemaVersion": 1,
   "scripts": {

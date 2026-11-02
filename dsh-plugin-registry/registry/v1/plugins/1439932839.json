@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "0d16fa06cf3659eaad1a74f14cb1405968a3c40d"
   },
   "github": {
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,35 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/host/index.js",
+        "types": "./dist/host/index.d.ts"
+      },
+      "./client": {
+        "default": "./dist/client.js",
+        "types": "./dist/client/index.d.ts"
+      },
+      "./contracts": {
+        "default": "./dist/shared/contracts.js",
+        "types": "./dist/shared/contracts.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/host/index.js",
+    "name": "dsh-composer-extension",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a9d9d2f0f7f3a3afedf6a4955ada9e6bad2f1ee737a7eb0599a3df4a62f26439/Mulibaixi/dsh-composer-extension",
     "description": "连接 DeepSeek Harness 主聊天与翻译工作区，提供材料递交、背景信息传递与任务协作能力，并自动维护所需的联动组件。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Provides linked material submission and task coordination for the main chat input in DeepSeek Harness (DSH), with the goal of gradually supporting collaboration between the main conversation and different plugins."
   },
   "schemaVersion": 1,
   "scripts": {

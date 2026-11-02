@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "2afbc17b17b46e1836f80add7a7c21efb66701a4"
   },
   "github": {
@@ -47,27 +47,37 @@
   },
   "id": "gh:1439991255",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-think-zh",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:2503455457-max/dsh-reasoning-translate-zh#2afbc17b17b46e1836f80add7a7c21efb66701a4",
+    "version": "0.2.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-think-zh",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e09718f900efcaed3fb686b7015a02106070777c4d7fa3adf694e96514ac5d8a/2503455457-max/dsh-reasoning-translate-zh",
     "description": "把模型思考过程（reasoning）在显示层翻译成中文：折叠显示中文摘要，展开显示中文正文 + 英文原文。不注入提示词、不改变模型行为；可完全用本地 Ollama，零成本。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把模型的思考过程（reasoning）实时翻译成中文显示：折叠显示中文摘要，展开显示中文正文 + 英文原文。 只作用于显示层 —— 会话记录、Trajectory、导出文件里的推理文本一个字节都不改。"
   },
   "schemaVersion": 1,
   "scripts": {

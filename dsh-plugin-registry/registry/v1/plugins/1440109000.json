@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "1c3783a8942ecfd44f741b47934c735b875eebef"
   },
   "github": {
@@ -44,27 +44,44 @@
   },
   "id": "gh:1440109000",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-sap-ai-core",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:solstice621/dsh-sap-ai-core#1c3783a8942ecfd44f741b47934c735b875eebef",
+    "version": "0.1.0-rc.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./diagnostic-host": {
+        "default": "./dist/diagnostics/host.js",
+        "types": "./dist/diagnostics/host.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-sap-ai-core",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-rc.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/39e47427dc4913ba943135bd172390b45aa64d9c1ee4017091bd7c5dbbcda57b/solstice621/dsh-sap-ai-core",
     "description": "SAP AI Core Chat Completions provider for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "SAP AI Core 的独立 DSH 模型插件。共用一份 OAuth 认证，在 DSH 中直接选择模型；插件处理 Token、部署路由、流式响应和工具协议，DSH 负责 Agent 循环与工具执行。"
   },
   "schemaVersion": 1,
   "scripts": {

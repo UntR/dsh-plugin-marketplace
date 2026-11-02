@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "cdf573fa038b1d01a5e6f216e6002d759a0efdd5"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1434231778",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-turn-usage",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-turn-usage@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-turn-usage",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5673a8e4ce7fb06ed130dc6d785b3a39e9d2c0106af50a5a37a728e28d186eff/WhAIthere/dsh-turn-usage",
     "description": "Per-turn cost in CNY plus 本轮/今日/会话 totals for DeepSeek Harness (dsh). Prices tokens by model and time (peak hours & holidays), serves the totals route from the host half, and can fold in native DeepSeek search spend."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Web 插件：在每条回复的操作行里显示这一轮花了多少钱；另在输入框上方常驻一条居中的 本轮 0.0123 ¥ · 今日 0.0456 ¥ · 会话 0.7890 ¥（带半透明底衬与描边；只统计当前打开的会话，切走不渲染、切回来即为最新）。"
   },
   "schemaVersion": 1,
   "scripts": {

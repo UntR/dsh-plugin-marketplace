@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "73a1e55ba0df8b78e16797245eefbd8f8d032ea1"
   },
   "github": {
@@ -51,7 +51,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,14 +61,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-namecheap-mcp",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a7e4c2e8f63d94a30b4cb70501c10e7e8cbdedd150da9664ee0fe7bffcae36d4/2000lla/dsh-namecheap-mcp",
     "description": "Namecheap MCP connector for DeepSeek Harness: domains, DNS records, nameservers and contacts as native agent tools."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Namecheap 官方 MCP 的 DeepSeek Harness 连接器。装上之后，域名、DNS 记录、Nameserver、联系人都变成 mcpnamecheap 原生工具，可以直接在对话里查和改。"
   },
   "schemaVersion": 1,
   "scripts": {

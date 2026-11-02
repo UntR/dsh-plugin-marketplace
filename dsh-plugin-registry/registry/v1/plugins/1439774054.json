@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "62ecec69f82c29443c8e67efabc312b323f16927"
   },
   "github": {
@@ -43,27 +43,40 @@
   },
   "id": "gh:1439774054",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-default-model",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:LFELKEEA/dsh-default-model#62ecec69f82c29443c8e67efabc312b323f16927",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-default-model",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c85b8ba2ce16bafa068ead86810ed6f3fc1d425adbb2468519d5fb23949f9fb7/LFELKEEA/dsh-default-model",
     "description": "Pin the DeepSeek Harness default model from settings — new chats, restarts and in-chat model switches leave it alone."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 设置 → 默认模型 里把 DeepSeek Harness 的默认模型（provider / model / 推理档位）固定下来： 新建的对话、重启之后的对话、以及 SurfCore 的 QQ 工作区，都用你在这里选的那一个。"
   },
   "schemaVersion": 1,
   "scripts": {

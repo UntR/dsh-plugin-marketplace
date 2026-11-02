@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "22fd7fcfeb1950ef8ad486406e83b3d82a9992d9"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1439742715",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-public-edge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ArtificialAngels/dsh-public-edge#22fd7fcfeb1950ef8ad486406e83b3d82a9992d9",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-public-edge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9df6f91b9012bc16a7c48142ceefd39ed768ab240e87a459b0ec918863eea6ce/ArtificialAngels/dsh-public-edge",
     "description": "DSH 公网访问插件：设置页一键启停 Cloudflare 隧道、复制带 token 的公网链接与二维码，内置局域网桥（Host 改写/剥 Origin/WebSocket 透传），cloudflared 自动下载。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH） 的「公网访问」标准插件：在设置里一键启停 Cloudflare 隧道，拿到带 token 的公网链接和二维码；内置局域网桥，手机/别的电脑也能连。支持 Windows / macOS / Linux，cloudflared 缺失时自动下载。"
   },
   "schemaVersion": 1,
   "scripts": {

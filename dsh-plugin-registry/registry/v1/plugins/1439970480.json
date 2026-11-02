@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "cb447c5ea08a8481d5dfe18e6fb21d04efb1e065"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1439970480",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-typo-check",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kviiinh/dsh-plugin-typo-check#cb447c5ea08a8481d5dfe18e6fb21d04efb1e065",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-typo-check",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8d0a73a36d32bf486b7789872e1ebcaf2b8f001de251416627162d0530269f8e/kviiinh/dsh-plugin-typo-check",
     "description": "DSH 输入框查错插件：只找错别字并标黄，可一键替换；支持任意 OpenAI 兼容来源、多来源回退、每行可配提示词/max_tokens/思考模式"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 的输入框加一个「查错」按钮：点一下，把当前草稿交给任意 OpenAI 兼容的模型，只找错别字（错字、别字、多字、漏字、同音/形近误用），在输入框里标黄，并在下方浮动卡片里逐条列出，点「替换」一键改掉。不做润色、不改文风、不动标点风格。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "6ca0ae45bf16d947f5731b414d75722277ddda93"
   },
   "github": {
@@ -48,27 +48,39 @@
   },
   "id": "gh:1440143628",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-dock-attention",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ihodorchenko/dsh-dock-attention#6ca0ae45bf16d947f5731b414d75722277ddda93",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./lib/*.js": "./lib/*.js",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "index.js",
+    "name": "dsh-dock-attention",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5484240caee7f5199e1eeb07ff20a10a503974bb3e9f3f72947686956ecbb975/ihodorchenko/dsh-dock-attention",
     "description": "Bounce a Dock icon when DeepSeek Harness needs your attention and the window is in the background — a DSH Host plugin with a native macOS beacon."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A Host plugin for DeepSeek Harness that bounces a Dock icon when the agent needs you and the Harness window is not frontmost."
   },
   "schemaVersion": 1,
   "scripts": {

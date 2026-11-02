@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "4fb7a559a9b681fc0450c227e3c7b59c7d24d5d7"
   },
   "github": {
@@ -50,42 +50,42 @@
     "packageName": "dsh-loop-recover",
     "preferred": "github",
     "reason": null,
-    "requiresBuildApproval": false,
-    "spec": "github:terry2010/dsh-loop-recover#cc412f369a2d5f1ac73919a8252a4fee7613e793",
-    "version": "0.3.0"
+    "requiresBuildApproval": true,
+    "spec": "github:terry2010/dsh-loop-recover#4fb7a559a9b681fc0450c227e3c7b59c7d24d5d7",
+    "version": "0.3.4"
   },
   "npm": {
-    "latestVersion": "0.3.0",
+    "latestVersion": "0.3.4",
     "published": true,
     "repositoryMatches": false
   },
   "package": {
     "exports": {
-      ".": "./src/index.ts",
+      ".": "./lib/index.js",
       "./client": "./client/client.js",
-      "./detector": "./src/detector.ts",
-      "./intent": "./src/intent.ts",
+      "./detector": "./lib/detector.js",
+      "./intent": "./lib/intent.js",
       "./package.json": "./package.json"
     },
-    "main": "src/index.ts",
+    "main": "lib/index.js",
     "name": "dsh-loop-recover",
     "status": "valid",
     "type": "module",
-    "version": "0.3.0"
+    "version": "0.3.4"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/61d9234c61850352342789c5789db226372025cd251064c627c143196c660b8b/terry2010/dsh-loop-recover",
-    "description": "A DeepSeek Harness plugin that rescues agents stuck in repetition loops:"
+    "description": "A guard for DeepSeek Harness: stops model repeat loops mid-stream, prunes and compacts context, then resumes the task."
   },
   "readme": {
     "available": true,
-    "excerpt": "A DeepSeek Harness plugin that rescues agents stuck in repetition loops:"
+    "excerpt": "---"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "0ce7ca0cbaf2945fce7dd10a72ef0f1378e9957b"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,20 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": "./lib/index.js",
+    "name": "dsh-peak-valley",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3bf1769f6b6d15b97a8458d2ec4432ed6ae78ddf4af53d8e1fdf45d35547e2c7/LFELKEEA/dsh-peak-valley",
     "description": "DSH 峰谷调度插件：北京时间工作日 9-12 / 14-18 峰时自动停止 SnowLuma 与语音服务，谷时自动拉起。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness (DSH) 用的峰谷调度插件：按北京时间的工作日峰时自动停掉本机的 SnowLuma 与语音服务，谷时再自动拉起。适合把「大肥鱼」常驻在 DSH 里、但不想在上班时段占用显卡/显存的人。"
   },
   "schemaVersion": 1,
   "scripts": {

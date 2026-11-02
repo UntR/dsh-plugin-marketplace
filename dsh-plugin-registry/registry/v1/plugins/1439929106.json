@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "4e059e1d8b22cd4735e71a88d82ebebebaf35f28"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1439929106",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@zarpyk/dsh-mcp-manager",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@zarpyk/dsh-mcp-manager@1.5.2",
+    "version": "1.5.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.5.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@zarpyk/dsh-mcp-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "1.5.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9b8193207db5ca898f10ff5eb65310cddc93a09fa05eff1f38cfcdafada3730e/Zarpyk/dsh-mcp-manager",
     "description": "Inspect, probe and manage MCP servers across every AI client on your machine — real handshake tests, one settings page. A DeepSeek Harness plugin."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that puts every MCP server definition on your machine in one place: it scans the config files of the clients you already use, normalises them, verifies that each server actually answers the MCP handshake, and keeps a small editable pool of its own."
   },
   "schemaVersion": 1,
   "scripts": {

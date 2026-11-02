@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "b30ef149ca8337d626ed3400d803b58806c19c14"
   },
   "github": {
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/index.js",
+      "./client": "./dist/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "dist/index.js",
+    "name": "dsh-plugin-harmony",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6863ec84781054f2f914f20c0ca279758b5a52bb1adba26a0988d1737de85155/kexijiang/dsh-harmony",
     "description": "HarmonyOS device workbench for DSH NEXT: Better Sidebar tab, native floating mirror, and agent device tools."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "将 Piora 的鸿蒙设备工作台与 Agent 操作能力带到 DSH NEXT 桌面版。通过 Better Sidebar 注册右侧“鸿蒙设备”Tab，同时支持独立悬浮投屏。"
   },
   "schemaVersion": 1,
   "scripts": {

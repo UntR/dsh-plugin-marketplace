@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "ee5341ec20b90b71a61f85bc0d80cce7bf954557"
   },
   "github": {
@@ -47,27 +47,42 @@
   },
   "id": "gh:1439608445",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-provider-hub",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xuanbaon/dsh-provider-hub#ee5341ec20b90b71a61f85bc0d80cce7bf954557",
+    "version": "1.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./paths": "./lib/paths.js",
+      "./scan": "./lib/scan.js",
+      "./store": "./lib/store.js"
+    },
+    "main": "lib/host.js",
+    "name": "dsh-provider-hub",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/eed0ef161eed79da46819c112413362ae624c21877795c646651a9a7dcc1d15d/xuanbaon/dsh-provider-hub",
     "description": "DeepSeek Harness 插件：设置页里的「供应商中心」——看清会话在用谁、配置引用了谁、谁缺定义，并一键补齐（消除 NO_ADAPTER）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（dsh）加一页设置：看清「模型提供商」这三个真相，并把不一致补齐。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "c48e1bc65ce46d4ea08cd778360a408863198fc8"
   },
   "github": {
@@ -41,27 +41,45 @@
   },
   "id": "gh:1435117871",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "ai-agent-engine-deepseek",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:YaoGUanquan/ai-agent-engine-deepseek#c48e1bc65ce46d4ea08cd778360a408863198fc8",
+    "version": "0.2.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./engineering": {
+        "default": "./lib/engineering.js",
+        "types": "./lib/engineering.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "ai-agent-engine-deepseek",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b57d4160439bea606b3ce9ce3e6fbd075a5af5632ecb96d4977ac1c0d8a33d42/YaoGUanquan/ai-agent-engine-deepseek",
     "description": "面向 DeepSeek Harness 的工程技能集"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DeepSeek Harness 按需组织前端、后端和测试工程师协作，并支持右键永久删除对话。"
   },
   "schemaVersion": 1,
   "scripts": {

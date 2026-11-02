@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "fc6deac9bd5c34cb00315b71b812a497d6c6f75c"
   },
   "github": {
@@ -49,8 +49,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:dxc-dxc/dsh-mcp-session-catalog#4031bcbe16b3eb7c43eb062fd25881d242814a80",
-    "version": "2.4.0"
+    "spec": "github:dxc-dxc/dsh-mcp-session-catalog#fc6deac9bd5c34cb00315b71b812a497d6c6f75c",
+    "version": "2.5.0"
   },
   "npm": {
     "latestVersion": null,
@@ -60,17 +60,23 @@
   "package": {
     "exports": {
       ".": "./index.mjs",
+      "./hub-gate": "./hub-gate.mjs",
+      "./hub-gate/icon": "./icon.svg",
+      "./hub-gate/locale/*.json": "./locale/*.json",
       "./icon": "./icon.svg",
       "./locale/*.json": "./locale/*.json",
       "./v2_4": "./runtime-v2.4.mjs",
       "./v2_4/icon": "./icon.svg",
-      "./v2_4/locale/*.json": "./locale/*.json"
+      "./v2_4/locale/*.json": "./locale/*.json",
+      "./v2_5": "./runtime-v2.5.mjs",
+      "./v2_5/icon": "./icon.svg",
+      "./v2_5/locale/*.json": "./locale/*.json"
     },
     "main": null,
     "name": "@dxc-dxc/dsh-mcp-session-catalog",
     "status": "valid",
     "type": "module",
-    "version": "2.4.0"
+    "version": "2.5.0"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f7313fd200094090788a0575becd96a3b80737ff0d7f0bc72dc74e189db22ff4/dxc-dxc/dsh-mcp-session-catalog",
@@ -78,7 +84,7 @@
   },
   "readme": {
     "available": true,
-    "excerpt": "DSH 原生的 MCP 客户端会在启动时拉起所有已配置的服务器，并向全部会话暴露全部工具。本插件将这一行为改造为按需模式：服务常态休眠，仅在会话显式请求时冷启动；相同服务跨会话复用同一底层连接，工具仅注入调用方上下文，并在持续空闲后自动释放。"
+    "excerpt": "DeepSeek Harness（DSH）会话级按需 MCP 管理插件。独立 stdio 服务按需启动、同 Host 复用连接，并按会话轮次回收；v2.5 增加 Magpie Hub 兼容，将 Hub 逻辑服务的工具按需授予当前会话。"
   },
   "schemaVersion": 1,
   "scripts": {

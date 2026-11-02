@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "ef961fd8bedd0a39c7ee7197029a5e45f6b771cc"
   },
   "github": {
@@ -54,7 +54,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -64,14 +64,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/patch.js",
+      "./snippet": "./src/snippet.js"
+    },
+    "main": null,
+    "name": "dsh-pet-sound",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c705b9725fa0b4c8e69d8253163f3494bce66c7ba3565948caad5fc2f8b01d19/LY3LY333/dsh-pet-sound",
     "description": "DeepSeek Harness (dsh) desktop pet click sound patcher - idempotent apply/revert CLI, zero dependencies."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 桌面桌宠（dsh-pet） 加上点击音效的小工具。幂等、可回滚、不改任何 DSH 配置。"
   },
   "schemaVersion": 1,
   "scripts": {

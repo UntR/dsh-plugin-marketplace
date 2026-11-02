@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "d1df68cafbc5499f91742063a772ffdd2d9f47f8"
   },
   "github": {
@@ -54,7 +54,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -64,14 +64,29 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./fs-ops": "./fs-ops.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-session-menu-plus",
+    "status": "valid",
+    "type": "module",
+    "version": "1.6.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8b83902869ccbbe38eb18051f42a7d905068e2cb08222b602be07b20f0a22406/Long-Alex/dsh-session-menu-plus",
     "description": "DeepSeek Harness plugin: right-click the sidebar Session menu, export a Session as Markdown, and delete one with confirmation"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Three additions to the DeepSeek Harness sidebar Session list: a Session menu on right-click, a read/unread mark, and Session deletion behind a confirmation."
   },
   "schemaVersion": 1,
   "scripts": {

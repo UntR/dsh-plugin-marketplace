@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "042b71b1a70bc56eb12d4ac329b1ab690068d544"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1439674727",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-openbot-artist-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:shiyoungwoo/dsh-openbot-artist-bridge#042b71b1a70bc56eb12d4ac329b1ab690068d544",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/dsh-openbot-artist-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ffd449f21cf48f57db09f5f3eee45d68e3c8843b6af00bb0214c41f01523266f/shiyoungwoo/dsh-openbot-artist-bridge",
     "description": "Connect OpenBot ACP conversations to an existing DS Bot inside DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Connect an OpenBot chat to an existing DS Bot inside DeepSeek Harness (DSH). OpenBot drives the Bot over the Agent Client Protocol (ACP); this bridge forwards that conversation into a DS Bot session you already run in DSH, so the Bot keeps one identity, one memory, and one worksp"
   },
   "schemaVersion": 1,
   "scripts": {

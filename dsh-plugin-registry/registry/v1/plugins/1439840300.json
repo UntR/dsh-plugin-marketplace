@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "1f1c6a46b3214f8ae9b2a354d51389e0a3a7033b"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1439840300",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-usage-stats",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:aooyoo/dsh-usage-stats#1f1c6a46b3214f8ae9b2a354d51389e0a3a7033b",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.16",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-usage-stats",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/53b69b69edd55e398d7670a86eeeff6afb7fa3bf6b5709f74c48639aa5107a1d/aooyoo/dsh-usage-stats",
     "description": "Token usage statistics for DeepSeek Harness: sidebar entry + panel with daily, per-model and per-session totals (unofficial community plugin)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在左侧栏加一个入口，把本机所有会话日志里的 Token 用量汇总成每日 / 按模型 / 按会话三个视角。"
   },
   "schemaVersion": 1,
   "scripts": {

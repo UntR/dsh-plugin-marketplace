@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
-    "headSha": "6b0fdf274d1ce62a36422f930fab2e95204c6f5c"
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
+    "headSha": "0d8677adfd119d1cb8748a708a7b1743c1a7dfc5"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "面向 DeepSeek Harness 的翻译与润色工作区，结合主题记忆、主模型协作与译文修订，支持从翻译到审阅定稿的完整工作流。",
     "fork": false,
     "forks": 0,
-    "headSha": "6b0fdf274d1ce62a36422f930fab2e95204c6f5c",
+    "headSha": "0d8677adfd119d1cb8748a708a7b1743c1a7dfc5",
     "homepageUrl": "https://github.com/Mulibaixi/dsh-translation-plugin#readme",
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVdOsvw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/9f3106b2e674407d9b6e28cd5539e61919beb3b35b040e64149824dccfda69ef/Mulibaixi/dsh-translation-plugin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a0b665b1c0cd06780d53b577bc5ca0ff52e8a228bba7321f7f8837c45d372c16/Mulibaixi/dsh-translation-plugin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/152011574?u=3b0408a4234d030b0058e44fd09734f462f96af1&v=4",
       "login": "Mulibaixi"
     },
-    "pushedAt": "2026-10-30T16:07:43Z",
+    "pushedAt": "2026-11-01T17:01:51Z",
     "slug": "Mulibaixi/dsh-translation-plugin",
     "stars": 0,
     "topics": [
@@ -38,7 +38,7 @@
       "dsh-plugin",
       "translation"
     ],
-    "updatedAt": "2026-10-31T09:51:16Z",
+    "updatedAt": "2026-11-01T17:01:55Z",
     "url": "https://github.com/Mulibaixi/dsh-translation-plugin"
   },
   "id": "gh:1439935679",
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/host/index.js",
+        "types": "./dist/host/index.d.ts"
+      },
+      "./client": {
+        "default": "./dist/client.js",
+        "types": "./dist/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/host/index.js",
+    "name": "dsh-translation-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.26.9"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/9f3106b2e674407d9b6e28cd5539e61919beb3b35b040e64149824dccfda69ef/Mulibaixi/dsh-translation-plugin",
+    "coverUrl": "https://opengraph.githubassets.com/a0b665b1c0cd06780d53b577bc5ca0ff52e8a228bba7321f7f8837c45d372c16/Mulibaixi/dsh-translation-plugin",
     "description": "面向 DeepSeek Harness 的翻译与润色工作区，结合主题记忆、主模型协作与译文修订，支持从翻译到审阅定稿的完整工作流。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Keep long translations moving, and give every revision something to build on."
   },
   "schemaVersion": 1,
   "scripts": {

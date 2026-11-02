@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./bundle/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
-    "headSha": "a609baab678520a0005737fee5920fb2f62bfe2a"
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
+    "headSha": "f1bd1876954102f89202287356b793105d6ac6a9"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Provider-level model pool for DSH — virtual ModelPool provider with Auto and named pools, chain failover a→b→c→d, per-source cooldown bench, reasoning-effort aware.",
     "fork": false,
     "forks": 0,
-    "headSha": "a609baab678520a0005737fee5920fb2f62bfe2a",
+    "headSha": "f1bd1876954102f89202287356b793105d6ac6a9",
     "homepageUrl": null,
     "language": null,
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVc9a5w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/007ceb16de112da438060a0be220db6ad73e22f3645765eeecb2ca9212deeab5/JiahaoXxX/dsh-model-pool",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e62925c672b589cac4f1efe09570d85e7902cba0ce5c70ec111b4125c7f55eb6/JiahaoXxX/dsh-model-pool",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/114121058?u=a5130fb6ed91e271136a8f7d51ed4eaf5ae4c626&v=4",
       "login": "JiahaoXxX"
     },
-    "pushedAt": "2026-10-30T11:53:39Z",
+    "pushedAt": "2026-11-02T07:26:20Z",
     "slug": "JiahaoXxX/dsh-model-pool",
     "stars": 1,
     "topics": [
@@ -43,32 +43,51 @@
       "plugin",
       "provider-routing"
     ],
-    "updatedAt": "2026-10-30T13:11:23Z",
+    "updatedAt": "2026-11-02T07:26:22Z",
     "url": "https://github.com/JiahaoXxX/dsh-model-pool"
   },
   "id": "gh:1439652583",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-pool",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:JiahaoXxX/dsh-model-pool#f1bd1876954102f89202287356b793105d6ac6a9",
+    "version": "0.2.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./bundle/cordis.patch.yml": "./bundle/cordis.patch.yml",
+      "./client": {
+        "default": "./dist/client/index.js",
+        "types": "./dist/client/index.d.ts"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-model-pool",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.4"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/007ceb16de112da438060a0be220db6ad73e22f3645765eeecb2ca9212deeab5/JiahaoXxX/dsh-model-pool",
+    "coverUrl": "https://opengraph.githubassets.com/e62925c672b589cac4f1efe09570d85e7902cba0ce5c70ec111b4125c7f55eb6/JiahaoXxX/dsh-model-pool",
     "description": "Provider-level model pool for DSH — virtual ModelPool provider with Auto and named pools, chain failover a→b→c→d, per-source cooldown bench, reasoning-effort aware."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Automatic provider/model fallback chains for dsh (DeepSeek Harness): when an agent's LLM requests keep failing — retries exhausted, auth errors, quota exceeded, rate limiting (429) — the plugin switches provider/model along the fallback chain for the current role, and the current"
   },
   "schemaVersion": 1,
   "scripts": {

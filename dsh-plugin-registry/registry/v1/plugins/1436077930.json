@@ -5,19 +5,19 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "stale",
-    "headSha": "0f8b4e6e3cfc7810bc8ab4cc2396b2f7efc52cfd"
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
+    "headSha": "87bcd8a63fdf7d6cfda2c7ff798c180750acf43a"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-10-27T17:44:21Z",
     "databaseId": 1436077930,
     "defaultBranch": "main",
-    "description": "Open-source Deep PTC mode agent preset for DeepSeek Harness: PTC's tool surface plus visible progress, confident tool use, early clarification, and DeepSeek's unlimited token budget.",
+    "description": "Deep PTC mode for DeepSeek Harness: no token rationing (unlimited DeepSeek budget), code-enforced no-sleep (long commands move to background, user messages interrupt waits), plans by task size with approval only for long tasks, asks instead of guessing intent, and selectable WSL / PowerShell / Zsh / Bash execution.",
     "fork": false,
     "forks": 0,
-    "headSha": "0f8b4e6e3cfc7810bc8ab4cc2396b2f7efc52cfd",
+    "headSha": "87bcd8a63fdf7d6cfda2c7ff798c180750acf43a",
     "homepageUrl": "https://github.com/lishize20040802-rgb/dsh-deep-ptc-mode#readme",
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVZjPag",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/6d16e7990bc01401da71a92eac094b7ee3b22e17d7d15b821bb39c13551ffaac/lishize20040802-rgb/dsh-deep-ptc-mode",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/cc2efeb9686b1d4356a387b6b436d5f64a27bad8765326e8f3264ae0ba4c3b92/lishize20040802-rgb/dsh-deep-ptc-mode",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/291358123?v=4",
       "login": "lishize20040802-rgb"
     },
-    "pushedAt": "2026-10-30T19:34:40Z",
+    "pushedAt": "2026-10-31T18:51:17Z",
     "slug": "lishize20040802-rgb/dsh-deep-ptc-mode",
     "stars": 0,
     "topics": [
@@ -40,10 +40,12 @@
       "dsh",
       "dsh-plugin",
       "open-source",
+      "powershell",
       "prompt-engineering",
-      "ptc"
+      "ptc",
+      "wsl"
     ],
-    "updatedAt": "2026-10-30T19:34:40Z",
+    "updatedAt": "2026-10-31T18:52:08Z",
     "url": "https://github.com/lishize20040802-rgb/dsh-deep-ptc-mode"
   },
   "id": "gh:1436077930",
@@ -53,28 +55,39 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-deep-ptc-mode@1.1.0",
-    "version": "1.1.0"
+    "spec": "dsh-deep-ptc-mode@1.5.0",
+    "version": "1.5.0"
   },
   "npm": {
-    "latestVersion": "1.1.0",
+    "latestVersion": "1.5.0",
     "published": true,
     "repositoryMatches": true
   },
   "package": {
-    "main": null,
+    "exports": {
+      ".": "./lib/index.mjs",
+      "./ask-user": "./lib/ask-user.mjs",
+      "./client": "./lib/client.js",
+      "./environment": "./lib/environment.mjs",
+      "./executor": "./lib/executor.mjs",
+      "./guard": "./lib/guard.mjs",
+      "./jobs-tool": "./lib/jobs-tool.mjs",
+      "./package.json": "./package.json",
+      "./terminal": "./lib/terminal.mjs"
+    },
+    "main": "lib/index.mjs",
     "name": "dsh-deep-ptc-mode",
     "status": "valid",
     "type": "module",
-    "version": "1.1.0"
+    "version": "1.5.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/6d16e7990bc01401da71a92eac094b7ee3b22e17d7d15b821bb39c13551ffaac/lishize20040802-rgb/dsh-deep-ptc-mode",
-    "description": "Open-source Deep PTC mode agent preset for DeepSeek Harness: PTC's tool surface plus visible progress, confident tool use, early clarification, and DeepSeek's unlimited token budget."
+    "coverUrl": "https://opengraph.githubassets.com/cc2efeb9686b1d4356a387b6b436d5f64a27bad8765326e8f3264ae0ba4c3b92/lishize20040802-rgb/dsh-deep-ptc-mode",
+    "description": "Deep PTC mode for DeepSeek Harness: no token rationing (unlimited DeepSeek budget), code-enforced no-sleep (long commands move to background, user messages interrupt waits), plans by task size with approval only for long tasks, asks instead of guessing intent, and selectable WSL "
   },
   "readme": {
     "available": true,
-    "excerpt": "简体中文"
+    "excerpt": "中文 · MIT · 1.5.0"
   },
   "schemaVersion": 1,
   "scripts": {

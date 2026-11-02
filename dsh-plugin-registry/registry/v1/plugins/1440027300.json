@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-10-31T10:23:43.510Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichmentStatus": "ok",
     "headSha": "01ca7de313e9c501d2bbc39ee939d4589a0ddd08"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1440027300",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-simple-search",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:luicarstar/dsh-simple-search#01ca7de313e9c501d2bbc39ee939d4589a0ddd08",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-simple-search",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6d3655ba31f7281290a1d5edc3e4aaf1719497fdf5a2fbff1b6daa11322fd88c/luicarstar/dsh-simple-search",
     "description": "Content-only session search for DeepSeek Harness: one header button, one query box, jump to the hit."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的一个极小插件：只做内容搜索。会话头部一个 🔍 按钮，输入关键词，搜全部会话正文，点结果直接跳到命中位置。"
   },
   "schemaVersion": 1,
   "scripts": {
