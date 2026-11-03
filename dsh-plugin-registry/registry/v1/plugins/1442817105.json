@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-02T12:01:15.648Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-03T11:51:10.675Z",
+    "enrichmentStatus": "ok",
     "headSha": "375dac963d70fd3c7499153b181a17ec550248a8"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1442817105",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-gfm-alerts",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:NEVSTOP-LAB/dsh-gfm-alerts#375dac963d70fd3c7499153b181a17ec550248a8",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-gfm-alerts",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/474f2e6539d57541eb9f329a4ce9956cf6b181cc149e11d8821e3b2c4aae0989/NEVSTOP-LAB/dsh-gfm-alerts",
     "description": "DSH GitHub 提示块插件：把回复里的 > [!NOTE] / [!TIP] / [!IMPORTANT] / [!WARNING] / [!CAUTION] 渲染成 GitHub 风格。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的 GitHub 提示块插件：把回复里的 GitHub Markdown 提示块渲染成 GitHub 的提示框——圆角底、左侧色条、图标加本地化标题，浅色/深色主题跟随宿主。"
   },
   "schemaVersion": 1,
   "scripts": {

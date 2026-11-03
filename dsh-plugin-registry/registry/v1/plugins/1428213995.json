@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-02T12:01:15.648Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-03T11:51:10.675Z",
+    "enrichmentStatus": "ok",
     "headSha": "955a90ea351814fcbcbeb9c2a90ea26eb3ce0cf3"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1428213995",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-mcp-rea",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kkk-yoyo/dsh-mcp-rea#955a90ea351814fcbcbeb9c2a90ea26eb3ce0cf3",
+    "version": "1.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "./index.js",
+    "name": "@local/dsh-mcp-rea",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e0cf9c48abc584c654169be8d2aa129dd245cc966caf05edcc5b3ad9796c4544/kkk-yoyo/dsh-mcp-rea",
     "description": "A DeepSeek Harness bundle that makes the rea reverse-engineering MCP server switchable."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "rea 的 MCP server 一次会暴露两百多个工具（6.5.0 是 207 个，6.8.0 已是 229 个）。Harness 每一轮请求都要把这些工具定义完整发给模型。实测 6.5.0 那 207 个工具的 name + description + inputSchema 约 780 KB，按常见分词估算约 20 万 token："
   },
   "schemaVersion": 1,
   "scripts": {

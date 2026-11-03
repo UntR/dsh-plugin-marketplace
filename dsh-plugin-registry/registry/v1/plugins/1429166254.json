@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-02T12:01:15.648Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-03T11:51:10.675Z",
+    "enrichmentStatus": "ok",
     "headSha": "36d479f955076d418ad4bcde483956fba9f8bfbc"
   },
   "github": {
@@ -45,27 +45,42 @@
   },
   "id": "gh:1429166254",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-figmark",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-figmark@1.2.3",
+    "version": "1.2.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.2.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-figmark",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/123e987bb7b8b7d2fbf526fdbafa34b19e800a58a4848473d45d39ed83bc00f9/KafukaTree/dsh-figmark",
     "description": "DSH 插件：在右侧栏预览里圈画批注科研配图（图片 / SVG / PDF / HTML），批注写进侧车文件并可一键交给智能体改生成源"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件：在右侧栏的文档预览里直接圈画批注科研配图，然后把批注当作一条用户消息交给智能体——让它按你圈的位置去改生成源（Python 脚本、DOT、SVG），而不是靠你打字描述「左边第二条曲线的图例要挪上去」。"
   },
   "schemaVersion": 1,
   "scripts": {

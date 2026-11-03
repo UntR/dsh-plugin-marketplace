@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-02T12:01:15.648Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-03T11:51:10.675Z",
+    "enrichmentStatus": "ok",
     "headSha": "63cae73e7516221a9365ceefcd583c8ac8f42156"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1442833736",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-token-spend",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xiaobaga281/dsh-token-spend#63cae73e7516221a9365ceefcd583c8ac8f42156",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@local/dsh-token-spend",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8b62541cf1e7d341c7a1486c7ca01b99fe84fcae1e5a5c6bd1b1e538c70f5ef3/xiaobaga281/dsh-token-spend",
     "description": "花费 · DSH 设置页插件：按全部 token（输入 + 缓存读 + 缓存写 + 输出）统计用量，按消息 ID 去重，日账本保留已删除会话的花费"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "每一笔 token 都算清楚。 在设置里加一页「花费」：直接读本机已提交的会话日志，把每日全部用量做成热力图、构成图、14 天趋势和当天明细——不联网、不读账单、不另建数据库。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-02T12:01:15.648Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-03T11:51:10.675Z",
+    "enrichmentStatus": "ok",
     "headSha": "6cba9f0310bbdaf82cc3d9d8e9e95e56f78c4038"
   },
   "github": {
@@ -43,27 +43,44 @@
   },
   "id": "gh:1387737377",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-proxy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ycm50/dsh-proxy#6cba9f0310bbdaf82cc3d9d8e9e95e56f78c4038",
+    "version": "0.7.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-proxy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f243c7d8d234c8bb18c0e41203e95527d74a49ce7ffe767d73ece03d5ab9e1ad/ycm50/dsh-proxy",
-    "description": ""
+    "description": "给 DeepSeek Harness（DSH）加代理能力，不改任何 DSH 官方代码。它要解决的问题不是「把请求塞进代理」，而是按域名决定每条请求走哪条通道，并让反复出现的握手成本从首字里消失："
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）加代理能力，不改任何 DSH 官方代码。它要解决的问题不是「把请求塞进代理」，而是按域名决定每条请求走哪条通道，并让反复出现的握手成本从首字里消失："
   },
   "schemaVersion": 1,
   "scripts": {

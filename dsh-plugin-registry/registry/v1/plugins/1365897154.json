@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-02T12:01:15.648Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-03T11:51:10.675Z",
+    "enrichmentStatus": "ok",
     "headSha": "f0d51dccbedcccf15677f04434150b9d0f0a2e07"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1365897154",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-idle-watchdog",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-idle-watchdog@1.2.0",
+    "version": "1.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-idle-watchdog",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1365897154/f68eafbf-9ec7-4b48-8b5b-150ca33d6d76",
-    "description": "DSH plugin: auto-prompt opted-in chats after an idle window (personalised prompts, per-chat on/off, settings UI) plus a secret-protected HTTP API to prompt any chat from outside."
+    "description": "DSH plugin: idle-chat nudges for opted-in chats plus an authenticated HTTP API that posts a prompt into any chat, on DSH 0.1.5 and 0.2.x"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Nudges chats that fall silent and posts prompts into any chat through a small authenticated HTTP API."
   },
   "schemaVersion": 1,
   "scripts": {

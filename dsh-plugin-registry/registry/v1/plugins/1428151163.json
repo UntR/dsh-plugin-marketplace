@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-02T12:01:15.648Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-03T11:51:10.675Z",
+    "enrichmentStatus": "ok",
     "headSha": "01fc7814d0dbc3e917997609c30390cfc95f7132"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1428151163",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-visibility",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:TZYCeng/dsh-model-visibility#01fc7814d0dbc3e917997609c30390cfc95f7132",
+    "version": "1.6.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-model-visibility",
+    "status": "valid",
+    "type": "module",
+    "version": "1.6.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bc30f9f1ee770488ff51ce166ba6616456a84711054001ff1d967d30bec3601b/TZYCeng/dsh-model-visibility",
     "description": "DeepSeek Harness plugin: choose which models appear in the chat model menu, with per-model capability tags (reasoning, effort levels, context window, modalities, kind) merged from adapter, relay and catalog. / DSH 插件：管理模型菜单里显示哪些模型，并标注推理、思考强度、上下文窗口、模态与类型。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 的设置里管理「哪些模型出现在聊天输入框的模型菜单中」，按 Provider 分组一键显示/隐藏，并在每个模型下面标注它的真实能力：是否支持推理、思考强度档位、上下文窗口、输入/输出模态，以及它是对话模型还是生图 / 生视频 / 嵌入 / 重排 / 音频 / 审核 / 翻译模型。生图、生视频等类型用不同颜色标注；厂商文档能证明目录写错的行会显示 官方校正。插件还能把「显示为多模态」变成「输入框真的能发图」：对中转站路由做内存态能力对齐，不修改任何配置文件。"
   },
   "schemaVersion": 1,
   "scripts": {

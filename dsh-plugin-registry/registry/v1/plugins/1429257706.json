@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-02T12:01:15.648Z",
-    "enrichmentStatus": "stale",
-    "headSha": "1b9b70e2d264a1f3226966860f6f85334c574290"
+    "enrichedAt": "2026-11-03T11:51:10.675Z",
+    "enrichmentStatus": "ok",
+    "headSha": "8a3b6c1c6458b30c2d03a700c6950ddefe0daeba"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "OMP-style HTTP 429 retry policy for the DeepSeek Harness",
     "fork": false,
     "forks": 0,
-    "headSha": "1b9b70e2d264a1f3226966860f6f85334c574290",
+    "headSha": "8a3b6c1c6458b30c2d03a700c6950ddefe0daeba",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVTC96g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e6f63a735b15c3f8e8d18a15bee099e2f5865d9df7466c059bd4c2f3b63acea0/Rinai-R/dsh-omp-retry",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d8913fced7ceba98421c3fd2e42e7d60460a8a3a63ea87a5319b2cdb6f0b9344/Rinai-R/dsh-omp-retry",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/185916106?u=3db7e5abce763bc95faf394a8f0bec86e4fcb4ee&v=4",
       "login": "Rinai-R"
     },
-    "pushedAt": "2026-11-02T02:42:50Z",
+    "pushedAt": "2026-11-03T01:56:41Z",
     "slug": "Rinai-R/dsh-omp-retry",
     "stars": 1,
     "topics": [
@@ -40,7 +40,7 @@
       "rate-limit",
       "retry"
     ],
-    "updatedAt": "2026-11-02T02:42:41Z",
+    "updatedAt": "2026-11-03T01:56:39Z",
     "url": "https://github.com/Rinai-R/dsh-omp-retry"
   },
   "id": "gh:1429257706",
@@ -49,9 +49,9 @@
     "packageName": "dsh-omp-retry",
     "preferred": "github",
     "reason": null,
-    "requiresBuildApproval": false,
-    "spec": "github:Rinai-R/dsh-omp-retry#f0da24d0b10c50f5722a69ad98b5e755634b888e",
-    "version": "0.1.0"
+    "requiresBuildApproval": true,
+    "spec": "github:Rinai-R/dsh-omp-retry#8a3b6c1c6458b30c2d03a700c6950ddefe0daeba",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
@@ -60,28 +60,31 @@
   },
   "package": {
     "exports": {
-      ".": "./index.js",
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
       "./package.json": "./package.json"
     },
-    "main": "index.js",
+    "main": "./dist/index.js",
     "name": "dsh-omp-retry",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.2.2"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e6f63a735b15c3f8e8d18a15bee099e2f5865d9df7466c059bd4c2f3b63acea0/Rinai-R/dsh-omp-retry",
+    "coverUrl": "https://opengraph.githubassets.com/d8913fced7ceba98421c3fd2e42e7d60460a8a3a63ea87a5319b2cdb6f0b9344/Rinai-R/dsh-omp-retry",
     "description": "OMP-style HTTP 429 retry policy for the DeepSeek Harness"
   },
   "readme": {
     "available": true,
-    "excerpt": "An OMP-style retry policy for HTTP 429 responses in the DeepSeek Harness."
+    "excerpt": "OMP-style retry policies for two DeepSeek Harness failures that the built-in executor leaves terminal:"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }
