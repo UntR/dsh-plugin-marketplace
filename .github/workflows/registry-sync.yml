@@ -34,7 +34,7 @@ jobs:
           GH_TOKEN: ${{ secrets.REGISTRY_GITHUB_TOKEN || github.token }}
         run: |
           set -o pipefail
-          pnpm --filter dsh-plugin-registry sync | tee /tmp/dsh-registry-summary.txt
+          pnpm --filter dsh-plugin-registry sync 2>&1 | tee /tmp/dsh-registry-summary.txt
       - name: Publish job summary
         if: always()
         run: test ! -f /tmp/dsh-registry-summary.txt || cat /tmp/dsh-registry-summary.txt >> "$GITHUB_STEP_SUMMARY"

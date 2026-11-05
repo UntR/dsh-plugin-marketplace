@@ -1,7 +1,8 @@
 import { mkdtemp, readFile, readdir, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
+import { GitHubClient } from '../src/github.js'
 import type { GraphqlRequest } from '../src/discovery.js'
 import type { RepositoryEnrichmentClient } from '../src/enrich.js'
 import { syncRegistry } from '../src/sync.js'
@@ -198,4 +199,31 @@ describe('registry sync', () => {
     await expect(syncRegistry({ directory, graphql: graphql([node(1)]), enrichment })).rejects.toThrow()
     expect(await readFile(join(root, 'marker'), 'utf8')).toBe('kept')
   })
+
+  it('recovers malformed discovery pages and preserves the registry if retries are exhausted', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'dsh-registry-'))
+    const directory = join(root, 'v1')
+    await syncRegistry({ directory, graphql: graphql([node(1), node(2)]), enrichment })
+    const page = (nodes: unknown[], hasNextPage: boolean) => Response.json({ data: {
+      topic: { repositories: { pageInfo: { hasNextPage, endCursor: hasNextPage ? 'page-2' : null }, nodes } },
+    } })
+    const fetch = vi.fn<typeof globalThis.fetch>()
+      .mockResolvedValueOnce(page([node(1)], true))
+      .mockResolvedValueOnce(new Response(''))
+      .mockResolvedValueOnce(page([node(2)], false))
+    const client = new GitHubClient({ token: 'secret-token', fetch, sleep: async () => {} })
+    await expect(syncRegistry({ directory, graphql: client.graphql, enrichment }))
+      .resolves.toMatchObject({ discovered: 2, removed: 0 })
+    expect(fetch).toHaveBeenCalledTimes(3)
+    const files = ['index.json', 'meta.json', 'plugins/1.json', 'plugins/2.json']
+    const before = await Promise.all(files.map(file => readFile(join(directory, file), 'utf8')))
+    fetch.mockReset()
+      .mockImplementation(async () => new Response('{'))
+      .mockResolvedValueOnce(page([node(1)], true))
+    await expect(syncRegistry({ directory, graphql: client.graphql, enrichment }))
+      .rejects.toThrow('POST https://api.github.com/graphql failed after 5 attempts')
+    expect(fetch).toHaveBeenCalledTimes(6)
+    expect(await Promise.all(files.map(file => readFile(join(directory, file), 'utf8')))).toEqual(before)
+  })
+
 })

@@ -25,6 +25,8 @@ Run a live sync with a GitHub Actions token or a personal token that can read pu
 GH_TOKEN=... pnpm --filter dsh-plugin-registry sync
 ```
 
+GitHub and npm requests retry network failures, timeouts, retryable HTTP statuses, and unreadable or invalid JSON bodies up to five attempts. Each timeout covers both headers and body reading. Exhausted requests report the method, endpoint, last HTTP status (when available), and failure type; GraphQL application errors still fail discovery without replacing the last-good Registry. The Actions job summary includes stderr so these diagnostics remain visible.
+
 Tokens are used only by the sync process and are never written to Registry output.
 
 To protect the last-good Registry, sync refuses to replace a populated Registry with an empty discovery, or to remove more than half of a Registry containing at least 100 repositories. After verifying an intentional mass removal, rerun once with `REGISTRY_ALLOW_LARGE_REMOVAL=1`.
