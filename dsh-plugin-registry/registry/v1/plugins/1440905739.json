@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "0ac0462d88754d632d94c52605b548655684d86a"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1440905739",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-zcode-native",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ORIOW/dsh-zcode-native#0ac0462d88754d632d94c52605b548655684d86a",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-zcode-native",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fd43ce586c6568c9a17e60c17b43708c07211e0c9e22d34710b0d2a9eb0ea6e6/ORIOW/dsh-zcode-native",
     "description": "DSH 原生插件：把 ZCode(Z.ai) 桌面端接成状态看板 + CDP 派活闭环 + 原生子代理 subagent_zcode"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 ZCode 桌面 app 变成 DSH（DeepSeek Harness）的子代理后端 / 派活通道：DSH 里的模型可以直接把一个完整任务派给 ZCode，等它做完并把答案取回来。实现方式是走 ZCode 的 CDP 调试端口读写界面 DOM，不依赖 ZCode 的 CLI、stdio 或任何其他通道——只要桌面上开着 ZCode 就能干活。"
   },
   "schemaVersion": 1,
   "scripts": {

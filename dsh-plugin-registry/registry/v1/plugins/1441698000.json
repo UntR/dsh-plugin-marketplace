@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "178c71c7cf74648447988b501e74978668d2c6e8"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1441698000",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-keil",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wimi996123/dsh-keil#178c71c7cf74648447988b501e74978668d2c6e8",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cli": "./bin/keil.mjs",
+      "./client": "./client/index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-keil",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/583fb9c25eb01cfcca95cb586a6dfa49b661e7cff38ea06913c478501ef06dff/wimi996123/dsh-keil",
     "description": "DSH plugin for Keil MDK/uVision: user-selected .uvprojx, incremental build/rebuild/clean/download via UV4, byte-safe project edits, JSON CLI and agent tool. Optional sidebar UI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Keil MDK/uVision workbench for DeepSeek Harness (DSH). The model can inspect, build and flash an embedded project through one tool, a JSON CLI and a small HTTP API — with an optional sidebar panel for the human."
   },
   "schemaVersion": 1,
   "scripts": {

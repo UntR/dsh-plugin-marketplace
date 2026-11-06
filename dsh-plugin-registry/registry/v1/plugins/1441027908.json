@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
-    "headSha": "a9e67ab8e5a9610c966f3cb48323eb586d1181b5"
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
+    "headSha": "96d66564597a8a7260fa7bcd57a1eba5be44cf74"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH 插件：密钥、Cookie、个人信息在发给模型前自动脱敏，回复里还原。装上即用，覆盖所有模型。 / A DSH plugin: keys, cookies and personal data are redacted before they reach the model, and restored in the reply. Install once, covers every model.",
     "fork": false,
     "forks": 0,
-    "headSha": "a9e67ab8e5a9610c966f3cb48323eb586d1181b5",
+    "headSha": "96d66564597a8a7260fa7bcd57a1eba5be44cf74",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVeRXRA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/eaad76764e33d89090f28ad86aea97cdb731d215fb8222ae557d621f945a976a/xbzbing/dsh-privacy-gateway",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/9f276db8857cb63f94a37b1d8d5e67d740b4714efed4aeaa54ce58dbd9866a5b/xbzbing/dsh-privacy-gateway",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/1829426?v=4",
       "login": "xbzbing"
     },
-    "pushedAt": "2026-11-03T08:13:14Z",
+    "pushedAt": "2026-11-05T11:59:25Z",
     "slug": "xbzbing/dsh-privacy-gateway",
     "stars": 1,
     "topics": [
@@ -39,32 +39,45 @@
       "dsh-plugins",
       "privacy-protection"
     ],
-    "updatedAt": "2026-11-03T08:12:39Z",
+    "updatedAt": "2026-11-05T11:59:02Z",
     "url": "https://github.com/xbzbing/dsh-privacy-gateway"
   },
   "id": "gh:1441027908",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-privacy-gateway",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-privacy-gateway@0.1.6",
+    "version": "0.1.6"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.6",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-privacy-gateway",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.6"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/eaad76764e33d89090f28ad86aea97cdb731d215fb8222ae557d621f945a976a/xbzbing/dsh-privacy-gateway",
+    "coverUrl": "https://opengraph.githubassets.com/9f276db8857cb63f94a37b1d8d5e67d740b4714efed4aeaa54ce58dbd9866a5b/xbzbing/dsh-privacy-gateway",
     "description": "DSH 插件：密钥、Cookie、个人信息在发给模型前自动脱敏，回复里还原。装上即用，覆盖所有模型。 / A DSH plugin: keys, cookies and personal data are redacted before they reach the model, and restored in the reply. Install once, covers every model."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在宿主进程的 undici 全局 dispatcher 上装一层脱敏网关。出站把模型请求体里的密钥换成占位符，入站把回流里的占位符换回真值。对 agent、adapter、provider 都无感，一处拦截覆盖所有走 fetch() 的 provider，包括插件提供的 adapter。"
   },
   "schemaVersion": 1,
   "scripts": {

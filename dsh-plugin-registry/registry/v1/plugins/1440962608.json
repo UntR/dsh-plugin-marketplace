@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "3575a36464b0890ec9c45ddf7feb7bcb2be36848"
   },
   "github": {
@@ -43,27 +43,43 @@
   },
   "id": "gh:1440962608",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-project-atlas",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ruide92/dsh-project-atlas#3575a36464b0890ec9c45ddf7feb7bcb2be36848",
+    "version": "1.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./assets/*": "./assets/*",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./runtime": "./runtime.js"
+    },
+    "main": "index.js",
+    "name": "dsh-project-atlas",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/79a544612af9ef8c4a8b561778147e7402f9ab09a53563c2985d0176f3ce29d8/ruide92/dsh-project-atlas",
     "description": "Project Atlas — a local-first visual workbench for DeepSeek Harness: projects, skills, sessions, runtimes, and artifacts in one calm map."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Project Atlas 是一个 DeepSeek Harness（DSH）插件：把本机的 AI 项目、技能、Codex / DSH 会话、运行状态与产出，收进一个可缩放的项目工作台。它默认只读，不会替你改写项目；是否把项目交给 Agent，由你在项目页里明确操作。"
   },
   "schemaVersion": 1,
   "scripts": {

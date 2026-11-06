@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "ba803b54327a440d39b912b95ba6bb24d3d3a0a9"
   },
   "github": {
@@ -52,27 +52,43 @@
   },
   "id": "gh:1440598455",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-codeflow-canvas",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:TheLiudawei/dsh-codeflow-canvas#ba803b54327a440d39b912b95ba6bb24d3d3a0a9",
+    "version": "1.4.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-codeflow-canvas",
+    "status": "valid",
+    "type": "module",
+    "version": "1.4.2"
+  },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1440598455/50df23c0-175a-41be-8690-c267693749e3",
     "description": "ComfyUI-style coding workflow canvas for DSH (DeepSeek Harness): nodes are agent-executable coding tasks, links are dataflow dependencies. Dual views, live execution traces, per-run undo."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "---"
   },
   "schemaVersion": 1,
   "scripts": {

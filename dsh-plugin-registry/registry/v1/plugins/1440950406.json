@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "794e183364c046580752e5b458d4c0267647aa64"
   },
   "github": {
@@ -44,27 +44,44 @@
   },
   "id": "gh:1440950406",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-recent-files",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:msongw-design/dsh-plugin-recent-files#794e183364c046580752e5b458d4c0267647aa64",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-recent-files",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fcd0a2ebdea046390110518e0aeaeae6a8e07878f13a5d806d618c1c286b0c0f/msongw-design/dsh-plugin-recent-files",
     "description": "A DeepSeek Harness plugin: a \"最近浏览\" sidebar entry listing recently opened file artifacts"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 左侧栏「自动化任务」下方加一个「最近浏览」，把你在右侧栏打开过的文件产物按时间排下来，点一下就能回到那个文件。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "8208cdffec511e41e3af9c2d2bdf29f71bf628b5"
   },
   "github": {
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,23 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-auto-full-permission",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2e485a0b9dfef4fd1e62dea76e1a522cde6d286010025c388d1c3efb7ae7b111/amd47802574/dsh-auto-full-permission",
     "description": "DSH 插件：每个新创建的会话自动切换到指定权限预设（默认完全权限）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "每个新创建的会话自动切换到指定权限预设（默认 danger-full-access：完全权限、无需审批）。适用于 DeepSeek Harness（DSH） 的 cordis 插件体系。"
   },
   "schemaVersion": 1,
   "scripts": {

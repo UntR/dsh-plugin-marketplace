@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
-    "headSha": "faef75bbc57301fc43ab64f05b816de2d4dda2ca"
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
+    "headSha": "ce68d7ec1d6b031b13f310f481ed021086637ed2"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Wayland的控制电脑，screenshot、带坐标的 OCR、按文字点击、批量动作",
     "fork": false,
     "forks": 0,
-    "headSha": "faef75bbc57301fc43ab64f05b816de2d4dda2ca",
+    "headSha": "ce68d7ec1d6b031b13f310f481ed021086637ed2",
     "homepageUrl": null,
     "language": "Python",
     "license": {
@@ -25,43 +25,53 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVf84KQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/85ffa072109aa72ea6672cce73d6e86406d1bf5b56e4446b4c78fc5feaa014a1/Ganglith/dsh-wayland-use",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/610fe59b25e60ea0ca493c5e930f1942bba612c88a0311bd00e61fc4d724ca86/Ganglith/dsh-wayland-use",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/307132159?u=0447758c810a29aae11fbeae5358d2066395d76e&v=4",
       "login": "Ganglith"
     },
-    "pushedAt": "2026-11-02T13:10:28Z",
+    "pushedAt": "2026-11-05T13:43:41Z",
     "slug": "Ganglith/dsh-wayland-use",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-11-02T13:10:31Z",
+    "updatedAt": "2026-11-05T13:43:46Z",
     "url": "https://github.com/Ganglith/dsh-wayland-use"
   },
   "id": "gh:1442789417",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-wayland-use",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Ganglith/dsh-wayland-use#ce68d7ec1d6b031b13f310f481ed021086637ed2",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-wayland-use",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/85ffa072109aa72ea6672cce73d6e86406d1bf5b56e4446b4c78fc5feaa014a1/Ganglith/dsh-wayland-use",
+    "coverUrl": "https://opengraph.githubassets.com/610fe59b25e60ea0ca493c5e930f1942bba612c88a0311bd00e61fc4d724ca86/Ganglith/dsh-wayland-use",
     "description": "Wayland的控制电脑，screenshot、带坐标的 OCR、按文字点击、批量动作"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 用的 Wayland 原生桌面控制插件。不走 xdotool / uinput / X11， 直接用 Mutter 的 RemoteDesktop + ScreenCast 两个 D-Bus 会话读写桌面，所以点击、 按键、截图在纯 Wayland 会话下是真的生效，而不是只动 XWayland 的光标。"
   },
   "schemaVersion": 1,
   "scripts": {

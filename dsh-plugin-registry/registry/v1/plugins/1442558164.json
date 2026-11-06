@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "dae8143c04520c5de885fb5f75bf4f6efec07583"
   },
   "github": {
@@ -44,33 +44,46 @@
   },
   "id": "gh:1442558164",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@alanzhao/dsh-web-search-gemini",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:alanzhao0128/dsh-web-search-gemini#dae8143c04520c5de885fb5f75bf4f6efec07583",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@alanzhao/dsh-web-search-gemini",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9138261fa92f8595f3e5bf56060bb1e6fca6b7e6aea19536aaa61a7408c21706/alanzhao0128/dsh-web-search-gemini",
     "description": "DeepSeek Harness web_search provider: Gemini Google Search grounding via CLIProxyAPI, with grounding redirect links resolved to real URLs"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的联网搜索提供方（provider id：cpa-gemini）。它把 DSH 自带的 websearch 工具的后端换成 Gemini 的 Google 搜索（grounding），经由 CLIProxyAPI 的 Anthropic 兼容 /v1/messages 端点调用。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

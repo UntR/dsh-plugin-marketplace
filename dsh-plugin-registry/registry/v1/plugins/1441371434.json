@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./plugin/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "5175baf2f3375318a8738fe1339739b544173593"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1441371434",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-otel",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lengrufeng2008/dsh-otel#5175baf2f3375318a8738fe1339739b544173593",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./plugin/index.js",
+      "./icon": "./icon.svg",
+      "./otlp": "./src/otlp.mjs",
+      "./plugin": "./plugin/index.js"
+    },
+    "main": null,
+    "name": "dsh-otel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c6a5b66c5305aa474a726018102b4e9e4cf93c771145264a7f392207c4fe9cbf/lengrufeng2008/dsh-otel",
     "description": "Export dsh-token-audit JSON summaries as OTLP/JSON metrics."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "It is a summary exporter: cost, tokens, sessions, calls, projected monthly, idle/peak, and per-model totals. It does not produce per-turn or per-tool spans."
   },
   "schemaVersion": 1,
   "scripts": {

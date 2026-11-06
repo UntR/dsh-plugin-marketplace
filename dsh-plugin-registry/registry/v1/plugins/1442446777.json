@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "23a92eb4bd29405ff4648afd5261bb619293957b"
   },
   "github": {
@@ -44,33 +44,44 @@
   },
   "id": "gh:1442446777",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-wetflow",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:c4i890/dsh-wetflow#23a92eb4bd29405ff4648afd5261bb619293957b",
+    "version": "0.1.0-alpha.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-wetflow",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-alpha.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/78123b761cf24240319f0a7c3572ce4369e54bd06d65800974f88bc1eb65840c/c4i890/dsh-wetflow",
     "description": "A biological research workbench plugin for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH–WetFlow 是一个面向生物研究的 DeepSeek Harness 社区插件。它把项目资料、实验流程、测量记录、研究者审批和分子动力学工具放进同一工作台，Agent 也能在对话中使用这些能力。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "4478e3ced6a89fcc847558f4b37c26d91153692e"
   },
   "github": {
@@ -45,7 +45,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -55,14 +55,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "@lightjunction/dsh-rewind",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3af867c1e2e8ee39559bfd75bf3c281dc3a0239652a4ebfd8aa1ab7d348e79ab/LIghtJUNction/dsh-rewind",
     "description": "Non-destructive Git checkpoints and file rewind for DSH"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为明确选定的本地文件保存 Git 对象检查点，预览后恢复，并在覆盖前持久保存 redo 检查点。它不会 reset/checkout/clean，也不修改 HEAD、分支或用户 index。"
   },
   "schemaVersion": 1,
   "scripts": {

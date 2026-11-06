@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "c902227911af36b815e74b5e395d310f16e11320"
   },
   "github": {
@@ -48,32 +48,54 @@
   },
   "id": "gh:1440898037",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-lazy-toolbox",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:anyi-520/dsh-lazy-toolbox#c902227911af36b815e74b5e395d310f16e11320",
+    "version": "0.7.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./lib/tool-groups.js": {
+        "default": "./lib/tool-groups.js"
+      },
+      "./package.json": "./package.json",
+      "./tool-groups": {
+        "default": "./lib/tool-groups.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-lazy-toolbox",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6ce8bff95eac079d269669b36c8a2dec2e0db80f7e604e550374dd46b32f67fe/anyi-520/dsh-lazy-toolbox",
     "description": "DeepSeek Harness 插件：把 skill 与 MCP 从默认工具定义里抽出来，改成按需热加载的懒工具箱（skill / mcp 分开列出，一句话说明用途，用时注入、用完卸载）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）默认会把所有 skill、所有 MCP 服务的完整工具定义（名字 + 描述 + 参数 schema） 推进每一次请求。装的 skill / MCP 越多，每轮对话要付的 token 越大、模型挑工具的噪声越高。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
-    "postinstall": false,
+    "postinstall": true,
     "preinstall": false,
     "prepare": false
   }

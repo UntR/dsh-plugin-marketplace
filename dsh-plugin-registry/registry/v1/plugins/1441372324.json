@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./plugin/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "f2d1977adad7f0f9a6a7f4b41b8f098a03933683"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1441372324",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-sbom",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lengrufeng2008/dsh-sbom#f2d1977adad7f0f9a6a7f4b41b8f098a03933683",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./plugin/index.js",
+      "./icon": "./icon.svg",
+      "./plugin": "./plugin/index.js",
+      "./sbom": "./src/sbom.mjs"
+    },
+    "main": null,
+    "name": "dsh-sbom",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/298db6550f899fd5a6e57b68f775d98b16c5f302f444c01ce25c85e5b09bffa5/lengrufeng2008/dsh-sbom",
     "description": "Generate a CycloneDX 1.5 SBOM from a DSH plugin package and its top-level installed dependencies."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "In DSH:"
   },
   "schemaVersion": 1,
   "scripts": {

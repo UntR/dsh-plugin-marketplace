@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./plugin/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "failed",
-    "headSha": "4ce67c1f0da4fa931df0f1e828f3c46c0e6e262a"
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
+    "headSha": "1479aba441b5cd0361d480f2d39f78f6dc416a7b"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Fixes DSH's silent failure where a tool call never runs and its markup (bare invoke/parameter tags, antml:-prefixed, or a stray 'court') leaks into the reply as text: blocks damaged calls, self-heals in-turn, and after a fork voids the damaged output on the model-visible surface. Zero deps.",
     "fork": false,
     "forks": 0,
-    "headSha": "4ce67c1f0da4fa931df0f1e828f3c46c0e6e262a",
+    "headSha": "1479aba441b5cd0361d480f2d39f78f6dc416a7b",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVcBMLA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/60b13dc96b7171ca6d610c307ffb61bf0f17ef11a22a99f2400c04c8f29c55c2/IRwDONE/dsh-tool-call-leak-fix",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/0af4b488fd39a0ed7f94e16762f62007e18ef7586fb570cb106679326539f86a/IRwDONE/dsh-tool-call-leak-fix",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/217953311?v=4",
       "login": "IRwDONE"
     },
-    "pushedAt": "2026-11-02T19:07:24Z",
+    "pushedAt": "2026-11-03T18:14:17Z",
     "slug": "IRwDONE/dsh-tool-call-leak-fix",
     "stars": 2,
     "topics": [
@@ -45,32 +45,43 @@
       "silent-failure",
       "tool-calling"
     ],
-    "updatedAt": "2026-11-03T08:01:47Z",
+    "updatedAt": "2026-11-03T18:14:21Z",
     "url": "https://github.com/IRwDONE/dsh-tool-call-leak-fix"
   },
   "id": "gh:1438665772",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@irwdone/dsh-tool-call-leak-fix",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@irwdone/dsh-tool-call-leak-fix@0.5.1",
+    "version": "0.5.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./plugin/index.js",
+      "./icon": "./plugin/icon.svg",
+      "./locale/*.json": "./plugin/locale/*.json"
+    },
+    "main": null,
+    "name": "@irwdone/dsh-tool-call-leak-fix",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/60b13dc96b7171ca6d610c307ffb61bf0f17ef11a22a99f2400c04c8f29c55c2/IRwDONE/dsh-tool-call-leak-fix",
+    "coverUrl": "https://opengraph.githubassets.com/0af4b488fd39a0ed7f94e16762f62007e18ef7586fb570cb106679326539f86a/IRwDONE/dsh-tool-call-leak-fix",
     "description": "Fixes DSH's silent failure where a tool call never runs and its markup (bare invoke/parameter tags, antml:-prefixed, or a stray 'court') leaks into the reply as text: blocks damaged calls, self-heals in-turn, and after a fork voids the damaged output on the model-visible surface."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DSH（DeepSeek Harness）宿主插件，治一种静默失败：工具调用没有执行，调用标记（invoke / parameter，antml: 前缀或赤裸形式）却泄漏成正文，而 turn 像\"已完成\"一样正常关闭。"
   },
   "schemaVersion": 1,
   "scripts": {

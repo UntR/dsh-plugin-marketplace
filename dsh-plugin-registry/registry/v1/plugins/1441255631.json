@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "81edb5a3d8fd1c500c81d23fa212230fdca65963"
   },
   "github": {
@@ -49,27 +49,39 @@
   },
   "id": "gh:1441255631",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-remote-automation",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:knight8818/dsh-remote-automation#81edb5a3d8fd1c500c81d23fa212230fdca65963",
+    "version": "0.4.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/host.js",
+    "name": "dsh-remote-automation",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f21655b134c6a762d42883e49b8a15f12321c51e71ebb14c72bd6b76192f8e25/knight8818/dsh-remote-automation",
     "description": "Cloud automation tasks for DeepSeek Harness: run scheduled scripts on a remote Aliyun ECS through Cloud Assistant, with a dedicated sidebar page and agent tools."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 里把定时任务放到远程云服务器上跑：阿里云 ECS、腾讯云 CVM、AWS EC2。"
   },
   "schemaVersion": 1,
   "scripts": {

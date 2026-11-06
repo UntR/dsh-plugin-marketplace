@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "c8233e9f5c1877c98529e04547cf96a056a4ec4d"
   },
   "github": {
@@ -47,27 +47,40 @@
   },
   "id": "gh:1442765148",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-system-view",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ice-ai-lab/dsh-system-view#c8233e9f5c1877c98529e04547cf96a056a4ec4d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-system-view",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5846cdc8b2b6999dc97014154853bba9371d1441dd022eea0899be124c65be75/ice-ai-lab/dsh-system-view",
     "description": "DSH 插件：在会话区新增「系统」Tab，聚合展示系统提示词、生效工具列表、Skills、请求配置及其变更历史"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 会话区的「对话」「轨迹」旁新增一个 「系统」Tab，聚合展示当前会话的上下文生效情况：系统提示词、请求实际携带的工具列表、可用 Skills 和请求配置。参考 dsh-mcp-lazy 的插件形态，是一个双面 bundle（Node 半 inert 占位 + 浏览器客户端半承载全部能力）。"
   },
   "schemaVersion": 1,
   "scripts": {

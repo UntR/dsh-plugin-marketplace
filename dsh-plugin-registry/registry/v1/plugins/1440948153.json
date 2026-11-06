@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "b55e50c8de06f6186e959650ef40bbe9d67a684d"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVeMfuQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/63843da1a0c4c6fb354587f53ac39600b297e6a7575e4650219e256c22c6224b/Evil-Wideplain/kanbanniang",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/6acf1e8601b310eafe8395bb43089383333299c11e1d0d40f341e7f3d65edeca/Evil-Wideplain/kanbanniang",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/44184669?v=4",
       "login": "Evil-Wideplain"
     },
     "pushedAt": "2026-10-31T15:09:30Z",
     "slug": "Evil-Wideplain/kanbanniang",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "deepseek-harness",
       "desktop-pet",
@@ -45,7 +45,7 @@
       "model-context-protocol",
       "tauri"
     ],
-    "updatedAt": "2026-10-31T15:09:33Z",
+    "updatedAt": "2026-11-03T14:55:50Z",
     "url": "https://github.com/Evil-Wideplain/kanbanniang"
   },
   "id": "gh:1440948153",
@@ -53,24 +53,34 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.12",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/host.js",
+    "name": "kanbanniang",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/63843da1a0c4c6fb354587f53ac39600b297e6a7575e4650219e256c22c6224b/Evil-Wideplain/kanbanniang",
+    "coverUrl": "https://opengraph.githubassets.com/6acf1e8601b310eafe8395bb43089383333299c11e1d0d40f341e7f3d65edeca/Evil-Wideplain/kanbanniang",
     "description": "DSH 插件（DeepSeek Harness）：Tauri 2 + Live2D 桌面看板娘，内置 MCP 服务（11 个工具，Streamable HTTP）。安装后自动拉起看板娘，并把工具注入为 mcp__kanbanniang__*；兼容 Claude Desktop 等任意 MCP 客户端。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Tauri 2 + Live2D 桌面看板娘，内置 MCP 服务（Streamable HTTP）。 Agent 通过 11 个 MCP 工具操作她的动作、表情、台词、窗口位置与模型；本仓库同时是一个 DSH 插件包，安装后 DSH 启动时自动拉起看板娘，并把工具注入为 mcpkanbanniang。"
   },
   "schemaVersion": 1,
   "scripts": {

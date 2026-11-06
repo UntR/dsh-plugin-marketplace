@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "e4535bdb44036f5f219599deaa17b9058bf5245a"
   },
   "github": {
@@ -53,27 +53,39 @@
   },
   "id": "gh:1442457551",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-token-usage",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:fuchen9/dsh-token-usage#e4535bdb44036f5f219599deaa17b9058bf5245a",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./lib/locale/*.json"
+    },
+    "main": "lib/index.js",
+    "name": "@local/dsh-token-usage",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/01f74e9f440979d83352c846b904227511c90866d7a6fc8a04e8bdd19c3762b6/fuchen9/dsh-token-usage",
     "description": "Token-usage panel for DeepSeek Harness: totals every stored session's token spend, broken down per model, provider, session type and time window. Offline, zero dependencies."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的 Token 用量统计插件 —— 汇总本机全部已存会话的 token 消耗，并按模型分别记录。"
   },
   "schemaVersion": 1,
   "scripts": {

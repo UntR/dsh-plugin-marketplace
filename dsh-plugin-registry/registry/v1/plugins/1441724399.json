@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "bceee3a2bdd6cafef08bd17a557f95c1b7fab4df"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1441724399",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-context-effort",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:striver8/dsh-context-effort#bceee3a2bdd6cafef08bd17a557f95c1b7fab4df",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-context-effort",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2a208bd49bbdbc4ecd622aa94bb425b7ae32f65cad0adac23931c99201997132/striver8/dsh-context-effort",
     "description": "DeepSeek Harness (DSH) plugin: composer context meter + one-click reasoning effort switcher"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness Web 插件：在对话输入区显示当前模型的上下文长度与已用长度， 并可一键切换思考等级（reasoning effort）、直接编辑并保存模型上下文长度。"
   },
   "schemaVersion": 1,
   "scripts": {

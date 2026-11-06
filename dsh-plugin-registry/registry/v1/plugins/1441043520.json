@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "35361c0fd854c61f3697dc4c935880b702bf4faa"
   },
   "github": {
@@ -44,27 +44,41 @@
   },
   "id": "gh:1441043520",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-egm",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:643048695/dsh-egm#35361c0fd854c61f3697dc4c935880b702bf4faa",
+    "version": "0.10.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-egm",
+    "status": "valid",
+    "type": "module",
+    "version": "0.10.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/87a86ab6b8b4882d23d603b683d3426d99b96bd5a17d2a8de4c8d296bbe717ef/643048695/dsh-egm",
     "description": "Design-review gate for DSH: Elephant drafts, zero-context Goldfish reviewers attack, you approve before implementation"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Where things stand (read this first): the upstream material is saved and byte-verified against the pinned upstream commit (in the source tree; npm package contents differ slightly, see below), but the full upstream workflow, read-only isolation, and end-to-end runs have not been "
   },
   "schemaVersion": 1,
   "scripts": {

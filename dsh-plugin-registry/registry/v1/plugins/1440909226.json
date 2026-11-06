@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "94ec8266479c68b7069d3a5299e97252d5b630f4"
   },
   "github": {
@@ -48,27 +48,37 @@
   },
   "id": "gh:1440909226",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-retry-policy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:User-Clb/dsh-retry-policy#94ec8266479c68b7069d3a5299e97252d5b630f4",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-retry-policy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/aa7570c5ddd3cf0f45980b0107003c90dcddea99fe1a1fc9d476908c148fa1ab/User-Clb/dsh-retry-policy",
     "description": "DSH 模型请求重试策略统一覆盖插件：包装 ctx.llm.prepareCall，把所有 provider 通道的 retryPolicy 换成同一套参数（默认 20 次 / 10s 固定退避 / 0 抖动），不改 DSH 客户端文件。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）模型请求重试策略统一覆盖插件。"
   },
   "schemaVersion": 1,
   "scripts": {

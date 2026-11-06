@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "ad0faa6902afcbfbd1bb1f612339f543a206576d"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1441935820",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-live2dwaifu",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:bailiyyds/dsh-live2dwaifu#ad0faa6902afcbfbd1bb1f612339f543a206576d",
+    "version": "2.3.1-fish.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "2.3.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-live2dwaifu",
+    "status": "valid",
+    "type": "module",
+    "version": "2.3.1-fish.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d8d8dee02e46bf1aacc1d8c01a11319656902d0049c296f38940b0d7e20021bd/bailiyyds/dsh-live2dwaifu",
     "description": "给 DSH 网页右下角请一个 Live2D 角色：星空壁纸底、本地语音包朗读、聊天回复自动念。基于 FujiwaraReisen/dsh-live2dwaifu（MIT）的改版。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "或者手动：克隆到 $DSHHOME/plugins/dsh-live2dwaifu，在 profile 的 package.json 里加 \"dsh-live2dwaifu\": \"link:\"，并把 \"dsh-live2dwaifu\" 加进 dsh.profile.bundles。"
   },
   "schemaVersion": 1,
   "scripts": {

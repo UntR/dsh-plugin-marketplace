@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "e2a0c5e0d8f4356c70d85f56c7b16f440cae964a"
   },
   "github": {
@@ -57,27 +57,38 @@
   },
   "id": "gh:1442459621",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-loopscope",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hanranCode/dsh-loopscope#e2a0c5e0d8f4356c70d85f56c7b16f440cae964a",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/host.js",
+    "name": "dsh-loopscope",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/254796fc1f2e888fe323865d5c61392c36d208ef0e69a3da8e05c54a46c4a963/hanranCode/dsh-loopscope",
     "description": "LOOPScope — agent loop & trajectory visualization for DeepSeek Harness (DSH): interactive LOOP cards, phase rings, waterfall timing, token accounting, tool-call inspection and agent observability in the web UI. 中文：DeepSeek Harness 轨迹可视化 / 循环观察插件。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DeepSeek Harness（DSH）会话的执行轨迹变成可交互的图表。 在 Web GUI 右侧栏里，用 「LOOP 循环卡片 + 瀑布耗时 + Token 账本 + 工具调用明细」看清 agent 每一轮循环里 模型看到了什么、决定了什么、调用了什么、结果如何。"
   },
   "schemaVersion": 1,
   "scripts": {

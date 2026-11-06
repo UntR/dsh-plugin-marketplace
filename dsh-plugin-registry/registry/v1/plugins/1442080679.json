@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "67c4bc4dc5fba504130e6190ef7fbb3f222d8d9f"
   },
   "github": {
@@ -45,27 +45,37 @@
   },
   "id": "gh:1442080679",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@lucagiftzek/dsh-fs-reobserve",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@lucagiftzek/dsh-fs-reobserve@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@lucagiftzek/dsh-fs-reobserve",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1442080679/31def313-f34b-414e-bfd7-7195bfab11ed",
     "description": "DSH plugin: after an agent's own bash or shell command, refresh the file observations it made stale, so FS_STALE_VERSION only fires on writes by others"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Ends self-inflicted stale-file errors after an agent's own shell commands."
   },
   "schemaVersion": 1,
   "scripts": {

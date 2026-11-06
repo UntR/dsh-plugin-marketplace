@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "11fe6c21728696f750cb3d101aa51de66e4cc1c3"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1442758135",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@kissblank/dsh-session-manager",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@kissblank/dsh-session-manager@1.0.1",
+    "version": "1.0.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./assets/icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@kissblank/dsh-session-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e6fa1a41d8a7439e77413d3e49ade8fa0352041203729f00a88af3ed06d233c7/KissBlank/dsh-session-manager",
     "description": "Purge DSH Sessions for good and manage them from one console: five-step deletion, bulk cleanup with force/interrupt guards. DSH 会话彻底删除 + 会话管理控制台。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DSH（DeepSeek Harness）补上会话的「彻底删除」和一份集中管理的控制台。DSH 自带的「归档」只是把会话从列表里藏起来；这个插件把残留一起清掉，并提供一个可以筛选、排序、批量清理的页面。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "77a98339234430165636dc08850cbe50bd485053"
   },
   "github": {
@@ -43,27 +43,43 @@
   },
   "id": "gh:1441955307",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mem",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:cyanxi-eb/dsh-mem#77a98339234430165636dc08850cbe50bd485053",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./client": "./lib/client.js",
+      "./core": "./lib/core.mjs",
+      "./embed": "./lib/embed.mjs",
+      "./package.json": "./package.json",
+      "./panel-routes": "./lib/panel-routes.mjs",
+      "./portable": "./lib/portable.mjs",
+      "./settings-schema": "./lib/settings-schema.js"
+    },
+    "main": "index.mjs",
+    "name": "dsh-mem",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/962d3261747b92299aa16104a7472fb38cd8c4718db4c9d1553f2054a78c0403/cyanxi-eb/dsh-mem",
     "description": "为你的DSH部署一个零依赖本地记忆层，只回指针 + 原文切片，不摘要、不转述、不开端口、不常驻、不调 API。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "零依赖本地记忆层：只回指针 + 原文切片，不摘要、不转述、不开端口、不常驻、不调 API。 一个索引库（SQLite FTS5 trigram）从 DSH 自己的会话日志里派生出可复核的 #seq= 指针；外加 NDJSON 迁移与入库前隐私闸。"
   },
   "schemaVersion": 1,
   "scripts": {

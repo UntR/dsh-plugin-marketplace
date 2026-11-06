@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
-    "headSha": "a8be287877c15c04af0ae2457df5eb4cf6378b24"
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
+    "headSha": "88fd9faa1c56c70bb594f42465016f33918162cb"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DeepSeek Harness plugin: checks the answer against tool output before a turn ends (unreported tool failures, numbers with no source)",
     "fork": false,
     "forks": 0,
-    "headSha": "a8be287877c15c04af0ae2457df5eb4cf6378b24",
+    "headSha": "88fd9faa1c56c70bb594f42465016f33918162cb",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVf4zKQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/fd8e59de36e92410e5d60591e79a05c8507b45e69fc301adc66484abea761510/KrimsonSun/dsh-result-check",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/6d665a13b58d4c2fc29a69a737d0b411d935a7be4102f541be3f3f474ba4d79a/KrimsonSun/dsh-result-check",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/235012652?u=f46843436f495a59b55ce87cb8f3d297b35cba9f&v=4",
       "login": "KrimsonSun"
     },
-    "pushedAt": "2026-11-02T21:14:21Z",
+    "pushedAt": "2026-11-04T23:04:32Z",
     "slug": "KrimsonSun/dsh-result-check",
     "stars": 0,
     "topics": [
@@ -39,38 +39,48 @@
       "hallucination-detection",
       "llm-agents"
     ],
-    "updatedAt": "2026-11-02T21:14:25Z",
+    "updatedAt": "2026-11-04T23:04:36Z",
     "url": "https://github.com/KrimsonSun/dsh-result-check"
   },
   "id": "gh:1442722601",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-result-check",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:KrimsonSun/dsh-result-check#88fd9faa1c56c70bb594f42465016f33918162cb",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-result-check",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/fd8e59de36e92410e5d60591e79a05c8507b45e69fc301adc66484abea761510/KrimsonSun/dsh-result-check",
+    "coverUrl": "https://opengraph.githubassets.com/6d665a13b58d4c2fc29a69a737d0b411d935a7be4102f541be3f3f474ba4d79a/KrimsonSun/dsh-result-check",
     "description": "DeepSeek Harness plugin: checks the answer against tool output before a turn ends (unreported tool failures, numbers with no source)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that checks the agent's final answer against what its tools actually returned, before the turn ends. When the two disagree, it sends the model back once with a short note saying what to fix."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

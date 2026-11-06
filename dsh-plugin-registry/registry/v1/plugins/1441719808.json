@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "f5e152629aa86ba61835bb48c716489c16a3f6c8"
   },
   "github": {
@@ -48,27 +48,37 @@
   },
   "id": "gh:1441719808",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-llm-pi-ai-image-offload",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ender-candle/dsh-llm-pi-ai-image-offload#f5e152629aa86ba61835bb48c716489c16a3f6c8",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-llm-pi-ai-image-offload",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7e1c9d8a2386fdbcd47342d2af1e03f4fcc2619c25a0da36f1f38a9d461c0824/ender-candle/dsh-llm-pi-ai-image-offload",
     "description": "Fixes image offload for DSH pi-ai routes: restores the missing imageRequestPricing so oversized base64 images stop eating the context window.为 DeepSeek Harness 的 pi-ai 路由补上图片 token 计量，让 dsh-spill-policy 能把超大 base64 图片移出请求，避免撑爆上下文窗口。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "中文文档：README.zh-CN.md"
   },
   "schemaVersion": 1,
   "scripts": {

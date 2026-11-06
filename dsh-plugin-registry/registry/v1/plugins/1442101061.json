@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "899ee6da13aa4aa87d3b84c988cca6f7ad091e2d"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1442101061",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-preview-extra",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:LeiYuXingZhou/dsh-preview-extra#899ee6da13aa4aa87d3b84c988cca6f7ad091e2d",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-preview-extra",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0255240be7b7529f5b3265c7d148a4977213a21ed0b6571731bafb8ead49dd51/LeiYuXingZhou/dsh-preview-extra",
     "description": "DSH right-sidebar previews for 3D models, archives, media, fonts, subtitles, TOML, Intel HEX, JCAMP-DX, VCD, KiCad and DFU."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH（DeepSeek Harness 0.2.0-rc.2）右侧栏的文档预览增加这些格式： 3D 模型（STL/OBJ/PLY/glTF/GLB）、压缩包（zip/tar/gz）、音视频、字体、字幕、 TOML、Intel HEX、JCAMP-DX、VCD、KiCad 原理图/电路板、DFU。 纯客户端插件、零第三方依赖、无网络请求；所有预览都注册进内置的 @deepseek-ai/dsh-client-ui-sidebar-documentpreview 文档 tab，与内置的 Markdown / 代码 / 图片 / PDF / Office"
   },
   "schemaVersion": 1,
   "scripts": {

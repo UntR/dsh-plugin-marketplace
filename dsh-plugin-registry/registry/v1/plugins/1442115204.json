@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "b7d9dbbfac1362fe62946340b1b3b55ac412b093"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1442115204",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workspace-pins",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:junjundesk/dsh-workspace-pins#b7d9dbbfac1362fe62946340b1b3b55ac412b093",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-workspace-pins",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/90d0585656f9a8c2a00739da37d1289136625a734df69c5beeb0232fbd78d1d4/junjundesk/dsh-workspace-pins",
     "description": "dsh 插件：把常用工作区固定在侧边栏顶部（固定顺序不乱），并可连同对话记录永久删除工作区"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "跑 pnpm 之前就拒绝安装（清单检查），不会留下装了一半的 profile。"
   },
   "schemaVersion": 1,
   "scripts": {

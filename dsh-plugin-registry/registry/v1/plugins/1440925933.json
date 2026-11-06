@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "563cc96a1316f5adae95508285e6e5fa8c1a1cb8"
   },
   "github": {
@@ -47,27 +47,44 @@
   },
   "id": "gh:1440925933",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ccf",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-ccf@0.80.1",
+    "version": "0.80.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.80.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./catalog": "./lib/catalog.js",
+      "./client": "./client/client.js",
+      "./core": "./lib/core.js",
+      "./miner": "./lib/miner.js",
+      "./package.json": "./package.json",
+      "./sync": "./lib/sync.js",
+      "./ui": "./lib/ui.js",
+      "./yaml": "./lib/yaml.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-ccf",
+    "status": "valid",
+    "type": "module",
+    "version": "0.80.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e8d0e26ca0e22848bcfaaea4acbd0632f964426d48f23fb85bc38b2155a2c951/xwtxbzz/dsh-ccf",
     "description": "DeepSeek Harness 插件：同步 CCF 会议截稿数据，按等级/方向查\"下一个截稿还有几天\"，并把最近 30 天常驻进系统提示"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：把 CCF 会议的截稿时间变成 agent 真正知道的事实——工具能查、命令能筛、系统提示里常驻最近 30 天的截稿，桌面端右侧还有一块常驻面板把每个会议的截稿 / 审稿决定 / rebuttal / 开会时间与地点一次列清。"
   },
   "schemaVersion": 1,
   "scripts": {

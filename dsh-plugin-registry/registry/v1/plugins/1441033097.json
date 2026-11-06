@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "7537cf15556c216c6fefb93e1b235772f0aedf07"
   },
   "github": {
@@ -45,27 +45,51 @@
   },
   "id": "gh:1441033097",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@nex-assistant/media-sense",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xhznAI/media-sense#7537cf15556c216c6fefb93e1b235772f0aedf07",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./api": {
+        "default": "./lib/api.js",
+        "types": "./lib/types/api/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/en.json": "./locale/en.json",
+      "./locale/zh.json": "./locale/zh.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@nex-assistant/media-sense",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/74865aa4f084c25b831961ab1de7d1e434bb1d6db64c8e8c38936eba64c6a75a/xhznAI/media-sense",
     "description": "Audio and video understanding for DeepSeek Harness, with configurable models and FFmpeg setup."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "录音太长？视频懒得拖？交给 DSH 听一听、看一看。 DeepSeek Harness 的音视频理解插件 · Web / Desktop"
   },
   "schemaVersion": 1,
   "scripts": {

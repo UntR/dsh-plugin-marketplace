@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "bedb7f29620e8011fa49114b2d81047a174aedd8"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1440888021",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cookie-sweep",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ALingStudio/dsh-cookie-sweep#bedb7f29620e8011fa49114b2d81047a174aedd8",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-cookie-sweep",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5f7983f034bd84bd8322b4eb80559131f33f3bd92b20977e21815c4ef7aa61d4/ALingStudio/dsh-cookie-sweep",
     "description": "DSH desktop plugin: sweeps leftover login-cookie files on every start so they cannot pile up past the 16KB request-header limit (HTTP 431 / \"Web authentication failed\")."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "每次启动自动清掉 DSH 桌面端网络目录里残留的登录 cookie 文件，避免它们越攒越多、把请求头撑过 16KB， 被服务端 431 退回，界面永久停在 “Web authentication failed”。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "d8df3f6fe2e44f469d22bbab7dfb930f9122350a"
   },
   "github": {
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,30 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/plugin.js",
+        "types": "./lib/plugin.d.ts"
+      },
+      "./core": {
+        "default": "./lib/core/index.js",
+        "types": "./lib/core/index.d.ts"
+      }
+    },
+    "main": "./lib/plugin.js",
+    "name": "dsh-waymark",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0-alpha.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/701e7c426017eae508ede33e3082b038ac341db3fee4c46f110521a576a7f6d9/ZhSM27/dsh-waymark",
     "description": "Local agent workflow diagnostics and opt-in live reminders for DeepSeek Harness. Alpha — feedback welcome."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的本地 Agent 工作流程优化插件：从已保存会话中定位重复尝试、重复读取、大输出与用户纠偏，给出带证据的复盘和可审核的 AGENTS.md 候选规则。"
   },
   "schemaVersion": 1,
   "scripts": {

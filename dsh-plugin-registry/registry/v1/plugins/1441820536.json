@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "862269e225b6cbc003be6955c2ddcdc10f9248c2"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1441820536",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-finish-sound",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:mkpoli/dsh-finish-sound#862269e225b6cbc003be6955c2ddcdc10f9248c2",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./lib/sounds.js": "./lib/sounds.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-finish-sound",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a2155edb6ee18ed9f9f4d6b49c00120253b2a81c3af4828b3566b133bc9ae537/mkpoli/dsh-finish-sound",
     "description": "DSH Web UI plugin: a generated cue when a turn finishes and a different cue when the agent asks a question, with a composer mute, preview and volume control."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Web UI plugin that plays a short cue when a turn finishes, and a different cue when the agent asks you something."
   },
   "schemaVersion": 1,
   "scripts": {

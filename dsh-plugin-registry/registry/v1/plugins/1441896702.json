@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "c4c0ff104607cbcf74d85292465ef6e55f90f3c2"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1441896702",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-plugin-sync",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ltfysl/dsh-plugin-sync#c4c0ff104607cbcf74d85292465ef6e55f90f3c2",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg"
+    },
+    "main": null,
+    "name": "@local/dsh-plugin-sync",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/48f5bf658e1b6a0073b61cf626967925c11fe20c8f809312d6db94c889c03c83/ltfysl/dsh-plugin-sync",
     "description": "Sync linked local DeepSeek Harness plugins through a secret GitHub gist."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Plugin Sync keeps linked local DSH plugins in one secret GitHub gist. Push from one machine, pull them into another existing DSH profile, or let auto-push keep the gist current while DSH is running."
   },
   "schemaVersion": 1,
   "scripts": {

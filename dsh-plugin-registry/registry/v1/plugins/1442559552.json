@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "37b10eb6e9e4a89a75240d471bd1ed40cc48ea45"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1442559552",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-message-branch",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yoinchen23-oss/dsh-message-branch#37b10eb6e9e4a89a75240d471bd1ed40cc48ea45",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-message-branch",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c58bed157515d8d0b04d7c5222a931b19b86f95f157e63f451feddd0c9a7bcc7/yoinchen23-oss/dsh-message-branch",
     "description": "Inline editing of text prompts into new DSH conversation branches."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "预览版 / Preview。在 DeepSeek Harness 的用户消息复制按钮旁添加铅笔入口，原位修改纯文本提问，并从该消息之前创建新分支重新发送。原会话保留，不改写历史日志。"
   },
   "schemaVersion": 1,
   "scripts": {

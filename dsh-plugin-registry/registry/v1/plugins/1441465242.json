@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "8bfb702f1aa5d53fdc452103c64e35b92df32bc7"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1441465242",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-qq-shell-commands",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:EviMing/dsh-qq-shell-commands#8bfb702f1aa5d53fdc452103c64e35b92df32bc7",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-qq-shell-commands",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8500b74eef642d80f89602d3f0bcbfecb41f7402c64f10d71db80f4846bc7389/EviMing/dsh-qq-shell-commands",
     "description": "目的是能远程运行 Shell 命令，而不是让 DSH 运行，适用于需要重复工作或托管行为但不能直接给权限到 DSH 的情况。原理是通过 NapCat 进程与 QQ 进行交互，当 QQ 发送特定消息，判断是否完全相等与哪个键的字符串，并执行对应的 Shell 命令。执行 Shell=\"执行 Shell 命令：\\n文本\"。添加新的键值对=\"增加 Shell 命令：\\n{\"文本\": [\"Shell 命令\", \"使用哪个 Shell (例如 cmd，或 PowerShell) 运行 Shell 命令\"]}\"，最终会被拼接为 \"Shell 命令\" 的格式被系统运行"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "这是一个 DSH Host 插件。它的目的不是让 DSH 去执行命令，而是让命令运行在 DSH 宿主机当前用户 的权限下；QQ 只是触发器。适合需要重复工作、托管行为，但不想把 DSH 的执行权限直接交出去的情况。"
   },
   "schemaVersion": 1,
   "scripts": {

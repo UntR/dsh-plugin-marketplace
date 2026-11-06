@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "15cbe70e68a24ce13bb106ff9c01613ae30fc5a6"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1442518784",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-scheduled-send",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wangjiaxi/dsh-scheduled-send#15cbe70e68a24ce13bb106ff9c01613ae30fc5a6",
+    "version": "0.2.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-scheduled-send",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/53685ba9b71b96def4356605dfcd869ddac90549d2b71bc3fdbc6e03058620ee/wangjiaxi/dsh-scheduled-send",
     "description": "在 DSH 输入框里定时发送消息：发送按钮旁的箭头 → 选时间 → 由宿主到点投递一条真实的用户消息（关掉页面、重启宿主都照发）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 的输入框里，把一条消息排到将来的某个时刻。"
   },
   "schemaVersion": 1,
   "scripts": {

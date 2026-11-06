@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "96334e41895acf767c0c24c7e7332f8fb33233cd"
   },
   "github": {
@@ -60,27 +60,40 @@
   },
   "id": "gh:1441593496",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-rank",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Jingxuan-WH/dsh-model-rank#96334e41895acf767c0c24c7e7332f8fb33233cd",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./pipeline": "./lib/pipeline.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-model-rank",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/16515fd6460a816657d34164d1c6c7f7fb89a91910d00aec4e0c28ee9741a8c5/Jingxuan-WH/dsh-model-rank",
     "description": "Sidebar LLM leaderboard for DeepSeek Harness (DSH): LMArena blind-test ratings, Artificial Analysis intelligence index, LiveBench 2.0 capability, OpenRouter usage & market share — plus a local token-usage dashboard, detail drawers and CSV export. Daily snapshot, instant open, no "
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "你接了一堆模型，到底该用哪个？侧栏开一眼就知道。 这是一个给 DeepSeek Harness（DSH） 用的侧栏插件：装上之后，你的 DSH 左侧栏会多一个 「模型排行」入口——点开就能对比主流大模型的人类盲测评分、综合智能指数、任务级能力、真实用量与价格速度， 同时看到你自己接入了哪些模型、实际用了多少。渠道太多、模型太多、每次选模型都要开好几个网页对比？ 这个插件就是为这个场景做的（DSH 桌面版和 dsh web 都能用）。"
   },
   "schemaVersion": 1,
   "scripts": {

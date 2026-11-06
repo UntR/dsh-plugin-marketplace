@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "bfaaaeae60f96f1d22f7dced49b8b3b93759a473"
   },
   "github": {
@@ -55,7 +55,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -65,14 +65,32 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./manager": {
+        "default": "./dist/PSSManager.js",
+        "types": "./dist/PSSManager.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "dist/index.js",
+    "name": "dsh-pss",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e153e238d6def5184a691ca6ee1d17c4d604f103576cafc162c135bef3fcb814/LFLmLXY/dsh-pss",
     "description": "PSS 参数化会话状态记忆：把会话历史压成一组 LoRA 权重，O(1) 恒定存储 + 参数化意图 + 实时可视化脑图（DSH 插件）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Parameterized Session State —— 用一组 LoRA 权重，替掉一整段对话历史。 给 AI 装上会「记」的脑子，再给它一面能看进脑子里的镜子。"
   },
   "schemaVersion": 1,
   "scripts": {

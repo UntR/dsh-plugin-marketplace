@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
-    "headSha": "4ad92761ff430117ecdcd734d1221a9cf7a42677"
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
+    "headSha": "3ec2b4ae7d437e88851a59d05a75a84a4506f3c8"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "为 DeepSeek Harness 接入可视化 Grok 主搜索与 Tavily、Exa、TinyFish、Firecrawl 自动回退，复用 grok-search-rs。",
     "fork": false,
     "forks": 1,
-    "headSha": "4ad92761ff430117ecdcd734d1221a9cf7a42677",
+    "headSha": "3ec2b4ae7d437e88851a59d05a75a84a4506f3c8",
     "homepageUrl": "https://github.com/Lain-in-coding/dsh-grok-search",
     "language": "JavaScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVfqcwg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/8e8282c8a3206f8dd0bf9155a1bc8f23a5ad26222670d40c0215155c7aebd5c6/Lain-in-coding/dsh-grok-search",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/511508f297cd42cb872c42782e003f8a392e3f10b28993dfe0f76bf50424b652/Lain-in-coding/dsh-grok-search",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/188779683?u=cba72ad2d943f9628f5a7b27072d1731fb1ef036&v=4",
       "login": "Lain-in-coding"
     },
-    "pushedAt": "2026-11-02T14:17:53Z",
+    "pushedAt": "2026-11-06T11:34:22Z",
     "slug": "Lain-in-coding/dsh-grok-search",
-    "stars": 8,
+    "stars": 12,
     "topics": [
       "deepseek-harness",
       "dsh",
@@ -42,32 +42,54 @@
       "mcp",
       "web-search"
     ],
-    "updatedAt": "2026-11-03T01:20:30Z",
+    "updatedAt": "2026-11-06T11:34:27Z",
     "url": "https://github.com/Lain-in-coding/dsh-grok-search"
   },
   "id": "gh:1442487490",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-grok-search",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-grok-search@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/bundle.mjs",
+      "./bundle": "./src/bundle.mjs",
+      "./client": "./src/client.js",
+      "./control": "./src/control.mjs",
+      "./control-intent": "./src/core/control-intent-store.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./recovery": "./src/recovery.mjs",
+      "./release-transaction": "./src/core/release-transaction.mjs",
+      "./route-verifier": "./src/route-verifier.mjs",
+      "./search-core": "./src/index.mjs",
+      "./settings-ui": "./src/settings-ui.mjs",
+      "./startup-recovery": "./src/core/startup-recovery.mjs",
+      "./typert": "./src/typert.host.mjs"
+    },
+    "main": "src/bundle.mjs",
+    "name": "dsh-grok-search",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/8e8282c8a3206f8dd0bf9155a1bc8f23a5ad26222670d40c0215155c7aebd5c6/Lain-in-coding/dsh-grok-search",
+    "coverUrl": "https://opengraph.githubassets.com/511508f297cd42cb872c42782e003f8a392e3f10b28993dfe0f76bf50424b652/Lain-in-coding/dsh-grok-search",
     "description": "为 DeepSeek Harness 接入可视化 Grok 主搜索与 Tavily、Exa、TinyFish、Firecrawl 自动回退，复用 grok-search-rs。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在原来的 DSH 聊天里使用多来源搜索，一家出错，自动尝试下一家。"
   },
   "schemaVersion": 1,
   "scripts": {

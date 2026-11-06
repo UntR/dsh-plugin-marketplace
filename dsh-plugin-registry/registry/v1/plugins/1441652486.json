@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "cee80cfff82cc8e59b1e9145ccf4d593ec0f9884"
   },
   "github": {
@@ -44,27 +44,37 @@
   },
   "id": "gh:1441652486",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-resource-monitor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:XiaoLuoMin/dsh-resource-monitor#cee80cfff82cc8e59b1e9145ccf4d593ec0f9884",
+    "version": "1.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-resource-monitor",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d13600f9f3f5f4e1051e77afc8164527ea20c3c968098a8d65ef020c51d42ecb/XiaoLuoMin/dsh-resource-monitor",
     "description": "DSH sidebar resource monitor (CPU/memory/frequency trends with 24h/7d history)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (dsh) sidebar plugin that samples your Windows machine once a minute, keeps a 30-day history, and tells you when sustained CPU load, memory pressure, or frequency throttling actually happened — instead of showing a live gauge you have to stare at."
   },
   "schemaVersion": 1,
   "scripts": {

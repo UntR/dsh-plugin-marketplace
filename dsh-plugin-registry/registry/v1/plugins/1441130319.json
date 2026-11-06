@@ -5,9 +5,9 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
-    "headSha": "1f491889fdf2a94d43a630c026b0be69f805ae33"
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
+    "headSha": "bd70886a40d7e9a5248a92304a70df76b1da7d96"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Router/Worker super-agent for DeepSeek Harness (DSH): autonomous project dispatch, durable triggers, reusable Worker context, cross-project sessions, watchdog, and a native web panel.",
     "fork": false,
     "forks": 0,
-    "headSha": "1f491889fdf2a94d43a630c026b0be69f805ae33",
+    "headSha": "bd70886a40d7e9a5248a92304a70df76b1da7d96",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVeXnTw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/90f102d79e0b77afbf0050de232b08a44523352027ab6a5b741d2941428ad037/TianzeLuo/dsh-super-agent",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/1bc730d8d4be587ecd81335246683eab9520ff373a039b685a1288f4a261586d/TianzeLuo/dsh-super-agent",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/226628884?v=4",
       "login": "TianzeLuo"
     },
-    "pushedAt": "2026-11-01T06:55:20Z",
+    "pushedAt": "2026-11-06T08:50:45Z",
     "slug": "TianzeLuo/dsh-super-agent",
     "stars": 0,
     "topics": [
@@ -43,7 +43,7 @@
       "super-agent",
       "web-ui"
     ],
-    "updatedAt": "2026-11-01T09:02:41Z",
+    "updatedAt": "2026-11-06T08:50:49Z",
     "url": "https://github.com/TianzeLuo/dsh-super-agent"
   },
   "id": "gh:1441130319",
@@ -51,7 +51,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,14 +61,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json",
+      "./protocol": "./lib/protocol.js"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-super-agent",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/90f102d79e0b77afbf0050de232b08a44523352027ab6a5b741d2941428ad037/TianzeLuo/dsh-super-agent",
+    "coverUrl": "https://opengraph.githubassets.com/1bc730d8d4be587ecd81335246683eab9520ff373a039b685a1288f4a261586d/TianzeLuo/dsh-super-agent",
     "description": "Router/Worker super-agent for DeepSeek Harness (DSH): autonomous project dispatch, durable triggers, reusable Worker context, cross-project sessions, watchdog, and a native web panel."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的 Super-agent 控制面：自然语言入口 + Router/Worker 双层调度 + 多实例 Web 面板。Router 负责判断与分派，Worker 负责执行；面板复用 DSH 官方会话， 不是另一套聊天 UI。"
   },
   "schemaVersion": 1,
   "scripts": {

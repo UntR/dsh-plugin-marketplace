@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "failed",
-    "headSha": "84aea93c228abfa1c56bdc5fef58b04dabbef256"
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
+    "headSha": "f5a43de90873dddde8888807e5fc6efbbb79e10d"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "dsh-superagent 的本地改造版：每个工作区一个主会话，需求来自本机操作者而不是 GitHub/飞书（fork of dsh-superagent）",
     "fork": false,
     "forks": 0,
-    "headSha": "84aea93c228abfa1c56bdc5fef58b04dabbef256",
+    "headSha": "f5a43de90873dddde8888807e5fc6efbbb79e10d",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,50 +25,68 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVe9_yA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/2927c65ab56f56b921e2034d2a420201779927057e48ce46526517a44b2f1e3a/mengzhongjie/dsh-superagent-local",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d751e9d5aeb9492aa21a0c758c0ded50ddc4d8ea4d724aa89f6bdaa2d5310d74/mengzhongjie/dsh-superagent-local",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/136910452?u=a0736b20328ad334a24c284f25f6a72bc58a6d19&v=4",
       "login": "mengzhongjie"
     },
-    "pushedAt": "2026-11-03T09:03:42Z",
+    "pushedAt": "2026-11-04T06:01:37Z",
     "slug": "mengzhongjie/dsh-superagent-local",
-    "stars": 0,
+    "stars": 2,
     "topics": [
       "deepseek-harness",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-11-03T09:04:28Z",
+    "updatedAt": "2026-11-06T10:12:01Z",
     "url": "https://github.com/mengzhongjie/dsh-superagent-local"
   },
   "id": "gh:1441759176",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-superagent",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:mengzhongjie/dsh-superagent-local#f5a43de90873dddde8888807e5fc6efbbb79e10d",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./feishu-watch": "./lib/feishu-watch.js",
+      "./github-watch": "./lib/github-watch.js",
+      "./local-watch": "./lib/local-watch.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-superagent",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/2927c65ab56f56b921e2034d2a420201779927057e48ce46526517a44b2f1e3a/mengzhongjie/dsh-superagent-local",
+    "coverUrl": "https://opengraph.githubassets.com/d751e9d5aeb9492aa21a0c758c0ded50ddc4d8ea4d724aa89f6bdaa2d5310d74/mengzhongjie/dsh-superagent-local",
     "description": "dsh-superagent 的本地改造版：每个工作区一个主会话，需求来自本机操作者而不是 GitHub/飞书（fork of dsh-superagent）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-superagent is a proactive coding agent for one GitHub repository, packaged as a bundle for DeepSeek Harness. It listens to GitHub and, optionally, Feishu. When someone allowed asks the agent for work, it opens a work item, works on it in its own agent session and directory, a"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "ac4a4e41227ad0a5abf6ea23537e1f001fc6b5b7"
   },
   "github": {
@@ -50,27 +50,40 @@
   },
   "id": "gh:1441563476",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-speech-to-text-ru",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:almaziphone/dsh-speech-to-text-ru#ac4a4e41227ad0a5abf6ea23537e1f001fc6b5b7",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./icon.svg": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./worker": "./lib/worker.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-speech-to-text-ru",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/661cf578ced4122c1dc776b1270173a502cc940c60f8835d20e8328f5e3a10a7/almaziphone/dsh-speech-to-text-ru",
     "description": "Local Russian speech recognition (GigaAM-v3) for DeepSeek Harness voice input — offline, CPU, MIT"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Local Russian speech recognition for DeepSeek Harness voice input. Adds a second, fully offline recognizer — GigaAM-v3 e2e CTC int8 — next to the shipped SenseVoice provider, which understands only Chinese, English, Cantonese, Japanese and Korean. Audio never leaves the machine."
   },
   "schemaVersion": 1,
   "scripts": {

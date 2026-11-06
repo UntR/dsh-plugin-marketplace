@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "8d093e8ba56c408b8c84a28a5ddcf9992b00bc7a"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,30 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./data/*": "./data/*",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-locale-es",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e1c9d02b18a7797a5e09ebeea0b11d9b508c06df3c6a7cd9253408c6d44c558e/zeus300/dsh-locale-es",
     "description": "Paquete de idioma espanol (es) para DeepSeek Harness: 62 namespaces, 2879 cadenas de UI y 165 mensajes del shell nativo"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Paquete de idioma español (es) para DeepSeek Harness (DSH): convierte la interfaz en español neutro de Latinoamérica y añade Español al selector de idioma de Ajustes → General → Idioma."
   },
   "schemaVersion": 1,
   "scripts": {

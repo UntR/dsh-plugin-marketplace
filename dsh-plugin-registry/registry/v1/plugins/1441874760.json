@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
-    "headSha": "b96a4f2156c67df792fefb85bc3bf07a05f6baec"
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
+    "headSha": "d46869102c7e33c0d02cbec5132a13a11ef65eae"
   },
   "github": {
     "archived": false,
@@ -17,23 +17,23 @@
     "description": "DSH 会话头部环境/分支 chip：本机切换检出，Worktree 在 .agents/worktrees 创建隔离工作区，支持合并、压缩提交、删除与自动清理。",
     "fork": false,
     "forks": 0,
-    "headSha": "b96a4f2156c67df792fefb85bc3bf07a05f6baec",
+    "headSha": "d46869102c7e33c0d02cbec5132a13a11ef65eae",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": null,
     "nodeId": "R_kgDOVfFDSA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/6d58ece5939b38addb785d4091c9d0c816cba4978734f2d63acf560cf7d14a90/G-Grant/dsh-worktree-manager",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b5c8807ed0ce98c6ddff23eb0bf3aeca2393739c22df857c01ba757203d512c0/G-Grant/dsh-worktree-manager",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/19200700?u=0984c95a917b80760d5e3f8c30c6e92bfb1c7c41&v=4",
       "login": "G-Grant"
     },
-    "pushedAt": "2026-11-02T03:20:32Z",
+    "pushedAt": "2026-11-03T23:41:22Z",
     "slug": "G-Grant/dsh-worktree-manager",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-11-02T03:20:36Z",
+    "updatedAt": "2026-11-05T02:11:43Z",
     "url": "https://github.com/G-Grant/dsh-worktree-manager"
   },
   "id": "gh:1441874760",
@@ -41,7 +41,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -51,14 +51,35 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./wire": {
+        "default": "./lib/wire.js",
+        "types": "./lib/wire.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-worktree-manager",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/6d58ece5939b38addb785d4091c9d0c816cba4978734f2d63acf560cf7d14a90/G-Grant/dsh-worktree-manager",
+    "coverUrl": "https://opengraph.githubassets.com/b5c8807ed0ce98c6ddff23eb0bf3aeca2393739c22df857c01ba757203d512c0/G-Grant/dsh-worktree-manager",
     "description": "DSH 会话头部环境/分支 chip：本机切换检出，Worktree 在 .agents/worktrees 创建隔离工作区，支持合并、压缩提交、删除与自动清理。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件：在空白会话里选择本机或 Worktree。Worktree 会在仓库里建一个隔离目录，并在会话头部合并、删除和自动清理。"
   },
   "schemaVersion": 1,
   "scripts": {

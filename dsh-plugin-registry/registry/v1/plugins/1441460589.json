@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "3ba95e09aee4f3c50c7cbeb0fc5bf6364227be9d"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1441460589",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-global-rules-panel",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-global-rules-panel@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-global-rules-panel",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/58b1afac058ffda53c9ecd5182495c64ccf6a0871345211e10704cfc1d3e501e/kanmanJO/dsh-global-rules-panel",
     "description": "全局规则面板：在侧边栏写一次长期规则，之后每次请求（含子代理与新会话）都自动带上。Sidebar rules panel for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 的左侧边栏加一个入口，点开就能写下长期有效的规则；保存后，每一次模型请求 都自动带上这段规则——主会话、子代理、以及之后新开的所有会话，都不用再每次手动交代。"
   },
   "schemaVersion": 1,
   "scripts": {

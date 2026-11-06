@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "d8a4ffc02094fb64635681bdce7671577a963ad3"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1442678405",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-subscription-sim",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-subscription-sim@1.0.1",
+    "version": "1.0.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-subscription-sim",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/81f3bcf83714874979777304eb8c1fcf3f6a0f65a734cdb4972e8d947754577f/wjlfish/dsh-subscription-sim",
     "description": "Claude/ChatGPT-style subscription quota simulator for the DeepSeek Harness Web UI"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek 假装一个「订阅制」，并且把 OpenAI ChatGPT 和 Anthropic Claude 两家的档位分开模拟： 每家一套独立订阅档位，额度用完之后模型请求会真的报错；你可以给自己派发「重置卡」立刻恢复。"
   },
   "schemaVersion": 1,
   "scripts": {

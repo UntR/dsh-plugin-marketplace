@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "e97e75755a530d4678a8606f578d77d83f005871"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1441933037",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-qwen-asr",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wsdfgf/dsh-qwen-asr#e97e75755a530d4678a8606f578d77d83f005871",
+    "version": "1.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-qwen-asr",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e7315f73fe6916824c98a1421c311e6d314f69459b695ea37b703a21ea0136ec/wsdfgf/dsh-qwen-asr",
     "description": "Qwen speech-to-text plugin for DeepSeek Harness: async DashScope filetrans for long recordings, sync ASR for short clips, raw API output preserved."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "千问语音转文字 DSH 插件。上传音频文件后自动调用千问官方 DashScope 接口转写，并把 转写文本加入本轮对话；同时提供 qwentranscribeaudio 工具，返回转写文本与千问接口的 原始 JSON 输出。"
   },
   "schemaVersion": 1,
   "scripts": {

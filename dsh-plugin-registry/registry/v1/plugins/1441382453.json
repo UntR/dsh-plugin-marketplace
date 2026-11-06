@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "6251c4428e413d796c885117c65ddc0dc662ad79"
   },
   "github": {
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,33 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./feishu-watch": "./lib/feishu-watch.js",
+      "./github-watch": "./lib/github-watch.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./worker-shell-bash": "./lib/worker-shell-bash.js",
+      "./worker-shell-pwsh": "./lib/worker-shell-pwsh.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-superagent",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ec8f4f94bd3433008a854eb5871c558130a2f63f8f47eee9044e48fe07df3613/buyou-claw/dsh-superagent-win",
     "description": "Windows port of DeepSeek Harness's dsh-superagent research prototype: runs as a DSH bundle, with the agent's identity scoped to each worker command instead of the whole DSH process."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "---"
   },
   "schemaVersion": 1,
   "scripts": {

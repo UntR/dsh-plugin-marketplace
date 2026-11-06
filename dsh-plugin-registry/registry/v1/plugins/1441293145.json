@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "38edbfb4cf2b9fd98e14e911296d05a13dcc5222"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1441293145",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-event-bus",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xushilianzhuren/dsh-event-bus#38edbfb4cf2b9fd98e14e911296d05a13dcc5222",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-event-bus",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9f6d8a100801da58326cb667d23f899dde060efc8e0358702a35adadb473fc2a/xushilianzhuren/dsh-event-bus",
     "description": "事件总线插件：Host 内定时轮询事件源，命中白名单规则即派发（无 shell），台账与失败回流原生写。替代写死旧根的 事件触发器.py。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "宪法写「自动执行只有两态：事件触发／令文触发，禁 cron」。但旧执行件 事件触发器.py 把根写死 （本机无此目录），事件台账 89021 条停在 2026-10-18——总线事实上已停摆 11 天。"
   },
   "schemaVersion": 1,
   "scripts": {

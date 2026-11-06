@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
-    "headSha": "0c49e37bab7a717ff786f444961ee796911846e7"
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
+    "headSha": "7e6ed37688f4cae4ac440b96a7d415cc28eb253b"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Towards a More Autonomous Agent System",
     "fork": true,
     "forks": 0,
-    "headSha": "0c49e37bab7a717ff786f444961ee796911846e7",
+    "headSha": "7e6ed37688f4cae4ac440b96a7d415cc28eb253b",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,18 +25,18 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVeyr2g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/48c082e423020c91bf31328fc5d86ce875d06e6f4ddd2e66072cfe124639b3b0/samanhappy/dsh-superagent",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/78f420264d05f3e534b5da6b95c0b732567e8579691b8068bdf854c55c2fc786/samanhappy/dsh-superagent",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/2755122?u=82a339f1d7f6e7e3b8af5fff5498da10acb15203&v=4",
       "login": "samanhappy"
     },
-    "pushedAt": "2026-11-03T11:02:38Z",
+    "pushedAt": "2026-11-06T04:19:44Z",
     "slug": "samanhappy/dsh-superagent",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-11-03T11:06:21Z",
+    "updatedAt": "2026-11-06T04:14:07Z",
     "url": "https://github.com/samanhappy/dsh-superagent"
   },
   "id": "gh:1441573850",
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,35 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./feishu-watch": "./lib/feishu-watch.js",
+      "./github-watch": "./lib/github-watch.js",
+      "./gitlab-watch": "./lib/gitlab-watch.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./pingcode-watch": "./lib/pingcode-watch.js",
+      "./wecom-watch": "./lib/wecom-watch.js",
+      "./weixin-watch": "./lib/weixin-watch.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-superagent",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/48c082e423020c91bf31328fc5d86ce875d06e6f4ddd2e66072cfe124639b3b0/samanhappy/dsh-superagent",
+    "coverUrl": "https://opengraph.githubassets.com/78f420264d05f3e534b5da6b95c0b732567e8579691b8068bdf854c55c2fc786/samanhappy/dsh-superagent",
     "description": "Towards a More Autonomous Agent System"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-superagent is a proactive coding agent for the repositories a team watches, packaged as a bundle for DeepSeek Harness. It listens to GitHub and, optionally, GitLab, Feishu, PingCode, WeCom and WeChat. When someone allowed asks the agent for work, it opens a work item, works o"
   },
   "schemaVersion": 1,
   "scripts": {

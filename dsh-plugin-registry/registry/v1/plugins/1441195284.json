@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "1dcc7b76aaa432f41b47a6396ef019f3c57d2f62"
   },
   "github": {
@@ -46,27 +46,37 @@
   },
   "id": "gh:1441195284",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/qq-approval-notify",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:EviMing/dsh-qq-approval-notify#1dcc7b76aaa432f41b47a6396ef019f3c57d2f62",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@local/qq-approval-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2b3995103eb63b358fa226b6ba8b2b61d172fb341815a9e819e70ad2674a744c/EviMing/dsh-qq-approval-notify",
     "description": "让 DSH 申请权限前先发 QQ 私信，失败则 Windows 通知，再失败放弃通知"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的「需要你处理」QQ 通知插件：当 DSH 弹出审批（包括沙箱提权、命令执行、文件写入等），或者 askuserquestion / 计划审核在等你在界面上回答时，通过本机 NapCat 给主人发一条 QQ 消息；如果找不到可用的 NapCat，就退回 Windows 通知。"
   },
   "schemaVersion": 1,
   "scripts": {

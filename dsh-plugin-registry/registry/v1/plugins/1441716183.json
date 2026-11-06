@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "9a24e5f126aefec83cdcbacd863691307d686d6b"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,19 +59,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": null,
+    "name": "@deepseek-ai/dsh-root",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.6-alpha.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/02a7fb436f8f289296df92f5a80c4abcde94c89efd165e9c833d3aa3f2ef0c74/touzi0/dsh-jianxiang-v2",
     "description": "坚祥数字助理 v2 —— 基于 DeepSeek Harness(MIT) 的定制发行版：24 个自制模组、集中化插件机制、无需记忆机制的「数字助理」理念。开源作交流参考。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "这是基于 DeepSeek Harness（下称 DSH）做的一套定制发行版。先泼盆冷水：它的基线是当时刚开源出来的最新版（v0.1.6-alpha.2），现在看已经很旧了，后面的新版本我没有再跟进用过，所以这里面绝大部分东西并没有「马上拿来用」的价值。把它放出来，是因为里面有几套我觉得挺有意思的思路——插件怎么跟原生共存、为什么不做记忆机制、压缩怎么分层——也许能给同样在做 agent 定制的人一点参考。社区嘛，本来就是互相看看对方是怎么踩坑的。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
-    "postinstall": false,
+    "postinstall": true,
     "preinstall": false,
     "prepare": false
   }

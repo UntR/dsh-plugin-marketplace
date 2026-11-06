@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "3f362fde135762f55f664c2774a6255d6f64a643"
   },
   "github": {
@@ -43,27 +43,36 @@
   },
   "id": "gh:1440931603",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-av-sync-gate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xushilianzhuren/dsh-av-sync-gate#3f362fde135762f55f664c2774a6255d6f64a643",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js"
+    },
+    "main": "./index.js",
+    "name": "dsh-av-sync-gate",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f498ff1ac0bd315f9abc83e049bc0ea83a40cfce9d7e9325342b0bdc27524e1e/xushilianzhuren/dsh-av-sync-gate",
     "description": "声画同步闸：解说视频的画面对音轨漂移终结核——输入各段配音实测时长，输出逐段帧计划（段长=配音+0.25秒呼吸位·基址/帧数/跨度），另带帧号空洞检测（ffmpeg遇缺号即停·成片腰斩的头号元凶）；拼接视频前过闸，话没说完图先跳这种病出厂前死掉。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Audio-visual sync gate for narrated slideshow videos. The #1 failure mode: picture cuts while the voice is still talking, and it drifts worse every segment. Root cause: visual segments ignore the tail silence between voice clips. This gate computes the exact frame plan so picture"
   },
   "schemaVersion": 1,
   "scripts": {

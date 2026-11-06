@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "71c2f93be2645351424d2730998f3fa88f432f3f"
   },
   "github": {
@@ -40,27 +40,42 @@
   },
   "id": "gh:1441395507",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-early-stop-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:pf-sjtu/dsh-early-stop-guard#71c2f93be2645351424d2730998f3fa88f432f3f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-early-stop-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/19abdfb8d63cceb2546d5cd1669850df0b028efccf00bca1096887d5dc231cbb/pf-sjtu/dsh-early-stop-guard",
     "description": "DSH plugin: keep an agent turn open when the model only narrated its next action instead of calling a tool"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）插件：当模型只叙述「接下来要做什么」而没有真的发出工具调用时，把同一个回合继续推进一步，避免任务做到一半就被判定完成。"
   },
   "schemaVersion": 1,
   "scripts": {

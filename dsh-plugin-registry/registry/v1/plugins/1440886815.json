@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "8a939943aa934dfc257f5bae345a6882fbe504a5"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1440886815",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-fix",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:CalamitySpiritKite/dsh-session-fix#8a939943aa934dfc257f5bae345a6882fbe504a5",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-session-fix",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4ab38cbcc68d266203c77067eb305e1650de1d50471f4fc03e6ab6e982795443/CalamitySpiritKite/dsh-session-fix",
     "description": "DSH 会话修复：一键扫描并修复 tool_use/tool_result 配对的会话记录"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "修 DSH 里坏掉的会话记录。装好之后在 设置 → 会话修复 里一键扫描、选中、修复，不用退 DSH、不用手工搬文件。"
   },
   "schemaVersion": 1,
   "scripts": {

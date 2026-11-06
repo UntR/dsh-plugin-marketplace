@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "1833e66fd22fd097e7ddca258c4ceb3d7be83cac"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1442033301",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-per-session-folder",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hhuapen/dsh-per-session-folder#1833e66fd22fd097e7ddca258c4ceb3d7be83cac",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-per-session-folder",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c3a2382a4d50063a88916a073eab49c5feee0204be4f5b5ea456f3a0e635b6cd/hhuapen/dsh-per-session-folder",
     "description": "Create an isolated folder for every new DSH session and keep it synchronized with the session title."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "One isolated folder per new conversation, with names that stay in sync with the session title."
   },
   "schemaVersion": 1,
   "scripts": {

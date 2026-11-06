@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "4a3f6e4c71ad88f28a61a17fc5342279fa51cff3"
   },
   "github": {
@@ -45,27 +45,43 @@
   },
   "id": "gh:1441654627",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "deepclean-mydisk",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "deepclean-mydisk@0.12.1",
+    "version": "0.12.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.12.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "deepclean-mydisk",
+    "status": "valid",
+    "type": "module",
+    "version": "0.12.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/76fde9232b196ab459d814b42945d608793dd582e104fd053dd33f74e2be6093/huangxiaoliang/deepclean-mydisk-plugin",
-    "description": "DeepClean MyDisk — DSH 原生侧边栏磁盘清理插件（只读体检 + 可撤销清理 + 空间可视化 + 相似照片 + 跨盘搬家）"
+    "description": "DeepClean MyDisk — DSH 侧边栏磁盘工具：只读体检、可撤销清理（移入废纸篓/隔离区）、空间分析、相似照片、跨盘移动、AI 辅助；支持 macOS 与 Windows。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：macOS / Windows 原生侧边栏磁盘工具。扫描只读，清理只移动——文件先移入废纸篓（macOS）或隔离区（Windows），可撤销；永久删除必须二次确认，且只限本插件移入的批次。提供实时容量、空间可视化、相似照片、跨盘移动、恢复中心，以及只读的 AI 体检解读、条目解释、清理前复核与失败诊断。"
   },
   "schemaVersion": 1,
   "scripts": {

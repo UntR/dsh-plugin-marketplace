@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "d8670456eb50bac1d378fffb10de0ed3d59ab914"
   },
   "github": {
@@ -46,27 +46,37 @@
   },
   "id": "gh:1442431964",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-trigger-hub",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vaniawang/dsh-trigger-hub#d8670456eb50bac1d378fffb10de0ed3d59ab914",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg"
+    },
+    "main": "index.js",
+    "name": "dsh-trigger-hub",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9690850fe0e5d216ce094ad21aeddf49ea1aaa41c4eb2be9db6199285c1cc877/vaniawang/dsh-trigger-hub",
     "description": "Event sources for DeepSeek Harness agents: cron/interval schedules, authenticated webhooks, file watchers and deterministic procedures — one ledger, one console, one concurrency limit."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-trigger-hub is a small, dependency-free DSH bundle. It is an event source, not a workflow engine: it turns one external event into one agent run and records what happened. The agent itself decides what the run means."
   },
   "schemaVersion": 1,
   "scripts": {

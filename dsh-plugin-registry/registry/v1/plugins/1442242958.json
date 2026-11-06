@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "05009873f467354091f4b2d39a259ae6a940c963"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1442242958",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-rag-memory",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Yslehui/dsh-rag-memory#05009873f467354091f4b2d39a259ae6a940c963",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-rag-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/505ee37a2e9e1ef7e2bb5d7d3eb8c94f409375ba0e8b41b03af84e0fee4c9067/Yslehui/dsh-rag-memory",
     "description": "Local RAG long-term memory for DSH QQ bots: SQLite storage, Chinese-friendly BM25 + embedding retrieval with optional rerank, served over local HTTP."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 QQ 机器人用的本地 RAG 长期记忆插件：把群聊/私聊消息、事实、摘要存进 SQLite，检索时用「中文分词 BM25 + Embedding 向量召回」混合排序，再可选 Rerank 精排，最后通过 HTTP 提供给机器人调用。"
   },
   "schemaVersion": 1,
   "scripts": {

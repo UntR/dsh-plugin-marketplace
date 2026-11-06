@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "b9ef7bfc8f1a6fd149f6f4f3c0a7b1b3ed4afcfe"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1437198253",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ext-master",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:maxid/dsh-ext-master#b9ef7bfc8f1a6fd149f6f4f3c0a7b1b3ed4afcfe",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-ext-master",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/06078cdad1cdec7c2a11a460e8df0c37135a1b4e0937b603d4211df6b4d1badf/maxid/dsh-ext-master",
     "description": "Deepseek Harness 文件预览扩展名管理"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的文档预览扩展名管理插件。当前支持 Markdown 后缀（默认把 .mdc 当作 Markdown），配置结构按预览类型分组，后续可继续加 html、code 等预览类型。"
   },
   "schemaVersion": 1,
   "scripts": {

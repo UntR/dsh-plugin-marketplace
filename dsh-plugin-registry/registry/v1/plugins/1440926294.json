@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
-    "headSha": "dae70a6aa1393a1a5a1f073bf1411739d874b252"
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
+    "headSha": "4f1293002026154beb8a41957a2a5851bd98c335"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Per-session Agent inference concurrency controls for DeepSeek Harness. A native composer slider with serial parent/child handoff.",
     "fork": false,
     "forks": 0,
-    "headSha": "dae70a6aa1393a1a5a1f073bf1411739d874b252",
+    "headSha": "4f1293002026154beb8a41957a2a5851bd98c335",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,43 +25,54 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVeLKVg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e72cd6c1cf5e684b53c78027f06f728a060bd82948269a6eeacc61e45b5255a6/MingoYung/dsh-session-concurrency",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/480cad43c8678a468cb74248206a2a27e4c219c4f86271fe3f63c5b15eb43c1d/MingoYung/dsh-session-concurrency",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/342064773?v=4",
       "login": "MingoYung"
     },
-    "pushedAt": "2026-11-02T09:43:16Z",
+    "pushedAt": "2026-11-05T05:11:12Z",
     "slug": "MingoYung/dsh-session-concurrency",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-11-02T09:41:10Z",
+    "updatedAt": "2026-11-05T05:10:37Z",
     "url": "https://github.com/MingoYung/dsh-session-concurrency"
   },
   "id": "gh:1440926294",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/session-concurrency",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:MingoYung/dsh-session-concurrency#4f1293002026154beb8a41957a2a5851bd98c335",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "@local/session-concurrency",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e72cd6c1cf5e684b53c78027f06f728a060bd82948269a6eeacc61e45b5255a6/MingoYung/dsh-session-concurrency",
+    "coverUrl": "https://opengraph.githubassets.com/480cad43c8678a468cb74248206a2a27e4c219c4f86271fe3f63c5b15eb43c1d/MingoYung/dsh-session-concurrency",
     "description": "Per-session Agent inference concurrency controls for DeepSeek Harness. A native composer slider with serial parent/child handoff."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness 原生插件：在输入框左侧加入小按钮，通过 1–10 滑杆为当前会话设置模型推理并发。主 Agent 与子孙 Agent 共用额度，其他主会话独立运行。重点面向本地部署、当前配置下只能高效处理单路推理的模型服务，减少多 Agent 同时请求造成的排队、通道堵塞和输出降速问题。"
   },
   "schemaVersion": 1,
   "scripts": {

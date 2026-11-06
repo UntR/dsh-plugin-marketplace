@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "68edd4a93dc819f4ed466891f75a46a9e72d0502"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1441615419",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-report-fix",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:JohnnnSinaaa/dsh-report-fix#68edd4a93dc819f4ed466891f75a46a9e72d0502",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.mjs",
+    "name": "dsh-report-fix",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ff305c7a32d8e970b37ff00ac7c79b7822cf7510e00c8bb28b035feab3fd9206/JohnnnSinaaa/dsh-report-fix",
     "description": "DSH plugin: a session_call task_dispatch turn cannot close until it replies with task_report to its caller."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DSH plugin: a session whose turn was started by sessioncall(taskdispatch) cannot close that turn until it has sent a taskreport back to the caller."
   },
   "schemaVersion": 1,
   "scripts": {

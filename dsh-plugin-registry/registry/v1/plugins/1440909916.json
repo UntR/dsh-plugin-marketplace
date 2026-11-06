@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "07781d85a8691f31d24115757e4d001749ca0de7"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1440909916",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-background-compaction",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-background-compaction@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host/index.js",
+      "./client": "./src/client/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/host/index.js",
+    "name": "dsh-background-compaction",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/821d2c2f006067a0797bc5f95f9abc2f6bc17d6b5bf21c305f452167c683568b/OZONGO/dsh-background-compaction",
     "description": "Background context compaction for DeepSeek Harness: summarize ahead of the threshold, swap in on the next turn."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）插件。它接管压缩的触发时机：在阈值 85% 处用一次几乎全缓存的模型调用，把\"截至上一轮\"的历史在后台总结成摘要；摘要就绪后的下一个回合边界，用 0 次模型调用把它提交成 checkpoint。用户全程可以继续对话。"
   },
   "schemaVersion": 1,
   "scripts": {

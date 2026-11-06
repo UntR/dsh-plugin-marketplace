@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "8dfa9971b9389ebde00b883c8c5aa1d34d033417"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1441429158",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-disk-cleaner",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lvyue1314/dsh-disk-cleaner#8dfa9971b9389ebde00b883c8c5aa1d34d033417",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.6.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-disk-cleaner",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0d9b0c8c6b4f2886d336670760d0e200b3a3c187876eed683684d91f21c890eb/lvyue1314/dsh-disk-cleaner",
     "description": "DeepSeek Harness plugin that frees space on a full Windows drive: scan with WizTree, delete regenerable junk, move folders to another volume behind a junction. Dry-run by default."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给塞满的 Windows 系统盘腾空间：定位 → 判断 → 清理 → 搬迁，全程不动你的个人文件。"
   },
   "schemaVersion": 1,
   "scripts": {

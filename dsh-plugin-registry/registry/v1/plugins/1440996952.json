@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "520ac1f47445f92fab3558168d05e7c60ef56368"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1440996952",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "token-usage-statistic",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "token-usage-statistic@1.0.2",
+    "version": "1.0.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "token-usage-statistic",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/286a3d19cfcce5abb7acb74cec7e599397d2ebfff2f63a6f8747240c82be6c09/zhiwuli0228/token-usage-statistic",
     "description": "DeepSeek Harness plugin: token usage statistics for every model call, with a sidebar panel for the Desktop and Web UI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）插件：统计本机所有模型调用的 token 用量与按事件时间估算的费用，提供历史回填、账户余额/订阅额度、日/月预算与无凭据导出，并在侧边栏面板中呈现。同时适配 DSH Desktop 与 DSH Web —— 两者加载同一份 Web 客户端包和同一套 Host 插件图，因此只有一份实现。"
   },
   "schemaVersion": 1,
   "scripts": {

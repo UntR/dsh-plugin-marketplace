@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-02T12:01:15.648Z",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
     "enrichmentStatus": "ok",
-    "headSha": "ed404e5b8db0010ff57ec8486ec8749421072545"
+    "headSha": "fed8eef43cae56fadd47d0cec0438fb4105c5194"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Normify · DSH 插件：把项目架构写成归一化的分形模块树，三层校验（写时 / 校验 / 冻结回执）、30 个 normify_* 工具 + normify-gen 技能，一键渲染单文件交互式架构图；支持伴随式开发（change_open → brief → check → 实施 → refresh → change_close）。",
     "fork": false,
     "forks": 17,
-    "headSha": "ed404e5b8db0010ff57ec8486ec8749421072545",
+    "headSha": "fed8eef43cae56fadd47d0cec0438fb4105c5194",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUP7NLg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/ab94c3370c2d4860637f4e880a5ecfadbc97ac32317cfc325d27e19a1c05ee88/yan-mc/dsh-normify",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ae1d71e926e080a0e19d50a68453394fa7fd97299a69bdb22bc9aaf32e7e6190/yan-mc/dsh-normify",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/183068810?u=adedea88f7f6e50199fd163e47e15c5569872225&v=4",
       "login": "yan-mc"
     },
-    "pushedAt": "2026-09-13T06:01:54Z",
+    "pushedAt": "2026-11-03T14:21:37Z",
     "slug": "yan-mc/dsh-normify",
-    "stars": 123,
+    "stars": 126,
     "topics": [
       "ai-agent",
       "architecture",
@@ -47,18 +47,18 @@
       "static-analysis",
       "typescript"
     ],
-    "updatedAt": "2026-11-02T20:40:40Z",
+    "updatedAt": "2026-11-06T09:40:02Z",
     "url": "https://github.com/yan-mc/dsh-normify"
   },
   "id": "gh:1358875950",
   "install": {
-    "available": true,
-    "packageName": "@dsh-external/dsh-normify",
-    "preferred": "github",
-    "reason": null,
+    "available": false,
+    "packageName": null,
+    "preferred": null,
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
-    "spec": "github:yan-mc/dsh-normify#ed404e5b8db0010ff57ec8486ec8749421072545",
-    "version": "0.5.4"
+    "spec": null,
+    "version": null
   },
   "npm": {
     "latestVersion": null,
@@ -66,14 +66,29 @@
     "repositoryMatches": null
   },
   "package": {
-    "main": "./lib/index.js",
+    "exports": {
+      ".": {
+        "default": "./lib/dsh/index.js",
+        "types": "./lib/types/dsh/index.d.ts"
+      },
+      "./cli": "./lib/cli/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./core": {
+        "default": "./lib/core/index.js",
+        "types": "./lib/types/core/index.d.ts"
+      },
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/dsh/index.js",
     "name": "@dsh-external/dsh-normify",
     "status": "valid",
     "type": "module",
-    "version": "0.5.4"
+    "version": "0.7.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/ab94c3370c2d4860637f4e880a5ecfadbc97ac32317cfc325d27e19a1c05ee88/yan-mc/dsh-normify",
+    "coverUrl": "https://opengraph.githubassets.com/ae1d71e926e080a0e19d50a68453394fa7fd97299a69bdb22bc9aaf32e7e6190/yan-mc/dsh-normify",
     "description": "Normify · DSH 插件：把项目架构写成归一化的分形模块树，三层校验（写时 / 校验 / 冻结回执）、30 个 normify_* 工具 + normify-gen 技能，一键渲染单文件交互式架构图；支持伴随式开发（change_open → brief → check → 实施 → refresh → change_close）。"
   },
   "readme": {

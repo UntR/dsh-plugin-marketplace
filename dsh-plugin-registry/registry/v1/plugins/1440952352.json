@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "45549f25b44132faef0c1d8b6b5b06332c6b07cb"
   },
   "github": {
@@ -42,27 +42,42 @@
   },
   "id": "gh:1440952352",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-fail-guard",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-fail-guard@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-fail-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0ff8e8aea88ca2cfd172c36ca5c74c7c8140504f527c2d412f142fe0e7eb163e/FenrirCait/dsh-fail-guard",
     "description": "DSH plugin: stop the agent after N consecutive failures on the same tool, pushing a four-part stop instruction instead of another retry."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Stops the agent when it keeps failing on the same tool: after N consecutive failures it pushes a four-part stop instruction (what it tried / the full error text / the first guess at why / what you need to do) so it reports instead of trying a fourth way to spell the same command."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "5be4031930b6e71152daad65e4b9fa5878a55de4"
   },
   "github": {
@@ -45,27 +45,43 @@
   },
   "id": "gh:1442652336",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-chatgpt-subscription",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:qiubai-di/dsh-chatgpt-subscription#5be4031930b6e71152daad65e4b9fa5878a55de4",
+    "version": "0.1.8"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": {
+        "default": "./dist/client.js",
+        "types": "./dist/client/index.d.ts"
+      }
+    },
+    "main": null,
+    "name": "dsh-chatgpt-subscription",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.8"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6095e1bf53fdad6bc7ae7cf02f1d3d897473affb664c0eedf0acce7811b345e3/qiubai-di/dsh-chatgpt-subscription",
     "description": "OAuth-only ChatGPT subscription model provider for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Use your own ChatGPT subscription as a main-model provider in DeepSeek Harness (DSH). DSH keeps control of sessions, history and local tool execution. The plugin reuses DSH’s PiAiAdapter for message conversion and uses Sign in with ChatGPT (SIWC) OAuth for the Responses API. It d"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "46dd01b6dc19e8316cc7450f204b7904b09caf7f"
   },
   "github": {
@@ -47,7 +47,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -57,14 +57,23 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js"
+    },
+    "main": "index.js",
+    "name": "dsh-proxy-switch",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/857bccf0208e223edcc3e9d9c372726214008caa25584b0ee7b72032d56d29c3/k-ying/dsh-proxy-switch",
     "description": "在 DeepSeek Harness 运行中切换出站代理的插件与 CLI：/proxy on / off，不用重启"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（下称 DSH）用的代理开关：一条命令在「直连」和「走代理」之间切换，不用重启进程。"
   },
   "schemaVersion": 1,
   "scripts": {

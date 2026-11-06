@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
-    "headSha": "adfc0735bacbcf5e8a265cacb4e32b8f1e356607"
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
+    "headSha": "ae2661ab5c2e25bfbff17bacf938cfa712075eb2"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Verifiable completion for DeepSeek Harness: the plugin runs your real project checks, pins results to the working-tree state, expires stale evidence, and gates turn completion until proof exists. | 插件自己执行验收命令、把结果钉在工作区指纹上、证据随代码变化自动过期，收尾时先取证再宣称完成。",
     "fork": false,
     "forks": 0,
-    "headSha": "adfc0735bacbcf5e8a265cacb4e32b8f1e356607",
+    "headSha": "ae2661ab5c2e25bfbff17bacf938cfa712075eb2",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVeUcHA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/85a3e32f633f71a25a7297394b2a9eaefc471be84cd4e9ab02cbffd4547c0f78/Daphne999/dsh-claimcheck",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/067e90bf5a606f37e456d41a893265b5253cdcf86a7bb2ccbc796458bf6ae6fc/Daphne999/dsh-claimcheck",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/312923142?v=4",
       "login": "Daphne999"
     },
-    "pushedAt": "2026-10-31T17:14:23Z",
+    "pushedAt": "2026-11-06T02:06:52Z",
     "slug": "Daphne999/dsh-claimcheck",
     "stars": 0,
     "topics": [
@@ -44,32 +44,44 @@
       "evidence",
       "verification"
     ],
-    "updatedAt": "2026-10-31T17:13:51Z",
+    "updatedAt": "2026-11-06T02:06:53Z",
     "url": "https://github.com/Daphne999/dsh-claimcheck"
   },
   "id": "gh:1441078300",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-claimcheck",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Daphne999/dsh-claimcheck#ae2661ab5c2e25bfbff17bacf938cfa712075eb2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-claimcheck",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/85a3e32f633f71a25a7297394b2a9eaefc471be84cd4e9ab02cbffd4547c0f78/Daphne999/dsh-claimcheck",
+    "coverUrl": "https://opengraph.githubassets.com/067e90bf5a606f37e456d41a893265b5253cdcf86a7bb2ccbc796458bf6ae6fc/Daphne999/dsh-claimcheck",
     "description": "Verifiable completion for DeepSeek Harness: the plugin runs your real project checks, pins results to the working-tree state, expires stale evidence, and gates turn completion until proof exists. | 插件自己执行验收命令、把结果钉在工作区指纹上、证据随代码变化自动过期，收尾时先取证再宣称完成。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）插件：由插件自己执行项目的验收命令，捕获真实退出码与输出，把结果钉在 当前工作区指纹上，写入带 digest 的证据文件；工作区一变，旧证据自动过期。收尾时如果改了东西却拿不出 新鲜证据，插件会把这一轮\"拦一下\"，提示先取证再宣称完成。"
   },
   "schemaVersion": 1,
   "scripts": {

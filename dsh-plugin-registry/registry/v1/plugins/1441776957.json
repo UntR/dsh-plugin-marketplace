@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "baaf5755623942f3a33eb7877b777f909794633b"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,23 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      "./guard": "./lib/guard.js"
+    },
+    "main": null,
+    "name": "@local/dsh-chat-preset",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/601014d18a92490552bef2f0a40dae9c05b29a9b8e6c4012a6a048b09a544e8c/ThomasTZh/dsh-chat-preset",
     "description": "DeepSeek Harness bundle that adds a chat preset with web tools, skill loading, and no filesystem or shell access."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness bundle that registers a chat agent preset: a plain helpful assistant with web access and local skills, and no way to touch the filesystem or run a command."
   },
   "schemaVersion": 1,
   "scripts": {

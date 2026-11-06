@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "00f444c439ea072df0197ec354dadef9d7a4c16c"
   },
   "github": {
@@ -38,33 +38,47 @@
   },
   "id": "gh:1441961123",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-qoder-worktree",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:jamen-jiang/dsh-qoder-worktree#00f444c439ea072df0197ec354dadef9d7a4c16c",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./build-out/lib/index.js",
+      "./client": "./build-out/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/en.json": "./locale/en.json",
+      "./locale/zh.json": "./locale/zh.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./build-out/lib/index.js",
+    "name": "dsh-qoder-worktree",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7e66af7ee45f114627b3584ccb158e5d39f91502e3fc2663328f01948dde90aa/jamen-jiang/dsh-qoder-worktree",
-    "description": ""
+    "description": "Qoder-style workspace mode & branch chips for DeepSeek Harness (DSH)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Qoder-style workspace mode & branch chips for DeepSeek Harness (DSH)."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

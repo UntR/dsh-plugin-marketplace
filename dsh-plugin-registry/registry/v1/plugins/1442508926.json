@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "d6239a37116cb66fae161e305466ac404932b28b"
   },
   "github": {
@@ -50,27 +50,39 @@
   },
   "id": "gh:1442508926",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-web-search-brave",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:thomasly/dsh-web-search-brave#d6239a37116cb66fae161e305466ac404932b28b",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.4",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-web-search-brave",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3923b5cd682375f367d59bd1f9f478fa45bde4c7a00fc0523898e0b896a0de66/thomasly/dsh-web-search-brave",
     "description": "Brave Search provider for DeepSeek Harness (dsh): model-agnostic web_search on the official ctx.web seam. 零依赖，复用你自己的 Brave key。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 Brave Search API 接进 DeepSeek Harness（dsh）的网页搜索插件。 它注册在 dsh 官方 ctx.web 搜索接缝上，provider id 是 brave-search，因此所有模型都能 通过 dsh 自带的 websearch 工具搜索，不需要某个特定模型，也不额外消耗模型 token 去让模型自己上网。"
   },
   "schemaVersion": 1,
   "scripts": {

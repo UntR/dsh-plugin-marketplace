@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "0c95279d1ca8479f9e8113c650d8a2cc01d8c021"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1441997518",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-diary",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:qzuser/dsh-diary#0c95279d1ca8479f9e8113c650d8a2cc01d8c021",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-diary",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7d1b51acc67fe0cba2583f50f095852d0fd4efb090e400efd2354d1963402179/qzuser/dsh-diary",
     "description": "DSH plugin: makes the agent write its own diary twice a day, one public and one private. 每天定时给自己写两篇日记的 DSH 插件。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "每天晚上到点，让 DSH 里的 agent 给自己写两篇日记：一篇公开、一篇私密。"
   },
   "schemaVersion": 1,
   "scripts": {

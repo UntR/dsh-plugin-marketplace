@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "b1c4f561709791c63f43d68e375d47423168220a"
   },
   "github": {
@@ -45,27 +45,37 @@
   },
   "id": "gh:1441621726",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cookie-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kongbaiwin/dsh-cookie-guard#b1c4f561709791c63f43d68e375d47423168220a",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js"
+    },
+    "main": null,
+    "name": "dsh-cookie-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2307bd922879be2ee1f23e172d9d0ccd2af917644325f3a7f31a317271b8c02f/kongbaiwin/dsh-cookie-guard",
     "description": "DeepSeek Harness 桌面版（Windows）插件：定时清理堆积的 dsh-auth cookie，避免请求头超 16 KB 触发 431「Web 认证失败」｜ DSH desktop (Windows) plugin that cleans stale dsh-auth cookies to prevent 431 Web auth failures."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 桌面版每次启动，本地服务的端口都是随机的；会话 cookie 的名字是 dsh-auth- 拼上 authority（127.0.0.1:端口）算出来的哈希。"
   },
   "schemaVersion": 1,
   "scripts": {

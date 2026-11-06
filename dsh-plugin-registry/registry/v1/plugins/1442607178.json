@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "bdef802edceb6a22d6a1cd0e6c94218507affead"
   },
   "github": {
@@ -44,27 +44,43 @@
   },
   "id": "gh:1442607178",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-persona-slot",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Zylog82568/dsh-persona-slot#bdef802edceb6a22d6a1cd0e6c94218507affead",
+    "version": "1.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./config": "./lib/config.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./http": "./lib/http.js",
+      "./package.json": "./package.json",
+      "./resolve": "./lib/resolve.js",
+      "./store": "./lib/store.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-persona-slot",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/353b541af14577c8cc11c5bc690fdb21657e6cb4a4e626c5ecd43a502a179de1/Zylog82568/dsh-persona-slot",
     "description": "Per-session persona slot for DeepSeek Harness: one persona per session, a global persona every session inherits, a /persona command and an Installed-page panel."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Per-session persona slot for DeepSeek Harness. Every session holds exactly one persona — writing a new one replaces the old instead of layering — and one global persona covers every session that has no persona of its own. Persona length is unbounded. Edit either from the conversa"
   },
   "schemaVersion": 1,
   "scripts": {

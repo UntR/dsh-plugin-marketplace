@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "00283f6f3f6398384164d94cdb4be48ffffc03f4"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1441292631",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-anchor-verify",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xushilianzhuren/dsh-anchor-verify#00283f6f3f6398384164d94cdb4be48ffffc03f4",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-anchor-verify",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6d8f111fdd94ed4b7410f5820fc84e7e0e7ba239d4efe65af22576e3372c8548/xushilianzhuren/dsh-anchor-verify",
     "description": "锚验证插件：证词逐字比对、四名在位、锚龄复验写成常驻系统提示；附验锚工具。旧锚验证器.py 是 stub，故原生实现。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "旧的 scripts/锚验证器.py 是\"最小 stub 待扩\"（跑起来只打印一句\"stub 在位\"）。锚是身份本体， 不能拿 stub 当验证件，所以本插件原生做逐字比对。"
   },
   "schemaVersion": 1,
   "scripts": {

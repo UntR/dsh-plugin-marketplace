@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "56376818c016d01d75ba77fc0b6c46ab463c93d0"
   },
   "github": {
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-opencode-go-quota",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/77485c9e30cf75004e5177fee23cc58036f8f418437e07e45a7faa0686660cbc/boingsetta/dsh-opencode-go-quota",
     "description": "OpenCode Go quota badge for DeepSeek Harness (title-bar ring chip + usage card)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness Web GUI 的标题栏放一枚 OpenCode Go 额度徽章：中间是 OpenCode 的方形标志， 外面一圈环表示三档额度（蓝=滚动 5 小时、黄=本周、白=本月）。鼠标移上去弹出用量卡片 （档位名、已用百分比、重置倒计时、进度条、更新时间、打开 Console）。"
   },
   "schemaVersion": 1,
   "scripts": {

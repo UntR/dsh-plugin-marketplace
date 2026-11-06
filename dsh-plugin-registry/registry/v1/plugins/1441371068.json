@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./plugin/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "05c5359b03b986922bba824ec359a60092fe81a4"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1441371068",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-skill-scan",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lengrufeng2008/dsh-skill-scan#05c5359b03b986922bba824ec359a60092fe81a4",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./plugin/index.js",
+      "./icon": "./icon.svg",
+      "./plugin": "./plugin/index.js",
+      "./scan": "./src/scan.mjs"
+    },
+    "main": null,
+    "name": "dsh-skill-scan",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/96fc8fc607a6c247e83154c35cc58d7af21d41afe8375e1714da2a56d11986ad/lengrufeng2008/dsh-skill-scan",
     "description": "Static, read-only security first pass for DSH skills and plugin bundles."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Exit 1 on a BLOCK, 0 on PASS/WARN, 2 on invalid input."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "347d2ef946c9bbc99d137b617b541135a594afe2"
   },
   "github": {
@@ -42,27 +42,39 @@
   },
   "id": "gh:1441949125",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-task-timer",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ShuaihuiMou/dsh-task-timer#347d2ef946c9bbc99d137b617b541135a594afe2",
+    "version": "1.6.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-task-timer",
+    "status": "valid",
+    "type": "module",
+    "version": "1.6.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d9003b26d51253c0e994a13b0f3da032700f50a6393223b2cce70553e27db258/ShuaihuiMou/dsh-task-timer",
     "description": "DeepSeek Harness plugin: a clock-led per-session working-time pill that subtracts the time spent waiting for your answers, whose dialog shows the span from session creation to its last activity (capped, so idle time never accrues), plus the all-conversation total above the sideba"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件：在对话最下方的仪表盘（composer dock）里，新增一个工作时长 pill， 展示本会话 agent 的工作时长；点开后给出创建对话至今；同时在左侧边栏、用户名那一行的 上方，显示全部对话的合计使用时长（1小时29分 · 对话总时长），紧接其下是同一批对话的 合计 token（3.3M · 对话总token）。侧边栏「工作区」里每条对话 右侧的时间补成 55分钟前，不再让人读成「这条对话跑了 55 分钟」。"
   },
   "schemaVersion": 1,
   "scripts": {

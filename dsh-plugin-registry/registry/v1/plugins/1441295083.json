@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "a2bfcde6820fb2f710cde1f1dcaebaeaf5349789"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1441295083",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-upload-gate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xushilianzhuren/dsh-upload-gate#a2bfcde6820fb2f710cde1f1dcaebaeaf5349789",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-upload-gate",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/544954ab2d13200b58b01f0ea5b21d345909b45a9487a11f29b3027b34d3ce41/xushilianzhuren/dsh-upload-gate",
     "description": "上载闸插件：护栏前置、出厂三检（存在/机密/体量）、凭据面盘点写成常驻提示；只预检不代传，杜绝无护栏的强能力出口。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "护栏前置令：任何出口会产生不可回滚后果的强能力，出口前先铸护栏（限额／指纹／回滚位）。 本插件只做出厂预检与凭据面盘点——不代传、不读密钥值、不发网络请求。"
   },
   "schemaVersion": 1,
   "scripts": {

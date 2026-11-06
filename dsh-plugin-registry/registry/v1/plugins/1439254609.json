@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "f01c92a9ecad0bb36e5a97775a04733da02781a8"
   },
   "github": {
@@ -41,27 +41,42 @@
   },
   "id": "gh:1439254609",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-search-order",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Breeze-04/dsh-search-order#f01c92a9ecad0bb36e5a97775a04733da02781a8",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/index.js"
+      },
+      "./client": {
+        "default": "./src/client/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-search-order",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2d2a82606fcad0b672f18b1c5c13f36865eefb8bb07c67f56986fe6983509d22/Breeze-04/dsh-search-order",
     "description": "把DSH 的 web_search 搜索来源进行可视化的插件。可以通过插件直观的配置API_KEY和自由排序，按序尝试 DeepSeek 官方搜索、Messages、Exa、Tavily、Perplexity、Brave，失败自动切换。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English · 中文"
   },
   "schemaVersion": 1,
   "scripts": {

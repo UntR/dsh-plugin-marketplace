@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "3e6859a200d805d2af73d23ee7e6d3f3eed29fff"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1441601209",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-video-gate",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:PoiFlos/dsh-video-gate#3e6859a200d805d2af73d23ee7e6d3f3eed29fff",
+    "version": "0.9.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-video-gate",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4b1bda306250289d2f861642ad06cd0dd9eb395478689ffb4152bf46df42ac62/PoiFlos/dsh-video-gate",
     "description": "Video gate for DeepSeek Harness: local files only by default, Bilibili only after you approve, ASR runs locally."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "视频通道阀门插件：默认只读本地文件；Bilibili 站点通道默认关闭，读取前必须由你在弹窗里放行。YouTube、小红书、Netflix 都不在列表里（前两个要额外程序和 cookie，第三个是 DRM）。"
   },
   "schemaVersion": 1,
   "scripts": {

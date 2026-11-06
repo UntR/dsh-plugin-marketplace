@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
     "enrichmentStatus": "ok",
-    "headSha": "687a45bbf9a6794efd33b7997135eaf4c4bce10b"
+    "headSha": "2bfe1b054f7d7534e4665fca69703a26f9593415"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "A dot-matrix pill above the DSH composer that reads and writes the session real reasoning effort, with a particle field that stretches into scan lines as the effort climbs.",
     "fork": false,
     "forks": 0,
-    "headSha": "687a45bbf9a6794efd33b7997135eaf4c4bce10b",
+    "headSha": "2bfe1b054f7d7534e4665fca69703a26f9593415",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVhNXQA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/1afb4e97cdc14d4f10fc3fb6679e3cea7c0db4124d84118077f85b505deda5be/BenedictTom/dsh-thinking-intensity",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/be9e4d7efb1196fe70dcc6a91ab15829a4e45df791fee3dc9bdf070b84873b83/BenedictTom/dsh-thinking-intensity",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/65377976?u=482764628865c5db49934fcbf8265e2cd6e827e6&v=4",
       "login": "BenedictTom"
     },
-    "pushedAt": "2026-11-03T10:18:40Z",
+    "pushedAt": "2026-11-04T08:25:26Z",
     "slug": "BenedictTom/dsh-thinking-intensity",
     "stars": 0,
     "topics": [
@@ -39,18 +39,18 @@
       "reasoning-effort",
       "ui"
     ],
-    "updatedAt": "2026-11-03T10:18:46Z",
+    "updatedAt": "2026-11-04T08:25:30Z",
     "url": "https://github.com/BenedictTom/dsh-thinking-intensity"
   },
   "id": "gh:1444108096",
   "install": {
     "available": true,
-    "packageName": "dsh-thinking-intensity",
+    "packageName": "dsh-thinking-pill",
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:BenedictTom/dsh-thinking-intensity#687a45bbf9a6794efd33b7997135eaf4c4bce10b",
-    "version": "0.2.0"
+    "spec": "github:BenedictTom/dsh-thinking-intensity#2bfe1b054f7d7534e4665fca69703a26f9593415",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
@@ -59,24 +59,29 @@
   },
   "package": {
     "exports": {
-      ".": "./index.js",
-      "./client": "./client.js",
-      "./icon": "./icon.svg",
-      "./locale/*.json": "./locale/*.json"
+      ".": {
+        "default": "./lib/host.js"
+      },
+      "./client": {
+        "default": "./lib/client/index.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
     },
-    "main": null,
-    "name": "dsh-thinking-intensity",
+    "main": "lib/host.js",
+    "name": "dsh-thinking-pill",
     "status": "valid",
     "type": "module",
-    "version": "0.2.0"
+    "version": "1.0.1"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/1afb4e97cdc14d4f10fc3fb6679e3cea7c0db4124d84118077f85b505deda5be/BenedictTom/dsh-thinking-intensity",
+    "coverUrl": "https://opengraph.githubassets.com/be9e4d7efb1196fe70dcc6a91ab15829a4e45df791fee3dc9bdf070b84873b83/BenedictTom/dsh-thinking-intensity",
     "description": "A dot-matrix pill above the DSH composer that reads and writes the session real reasoning effort, with a particle field that stretches into scan lines as the effort climbs."
   },
   "readme": {
     "available": true,
-    "excerpt": "A pill-shaped thinking-intensity control that floats at the top-right of the DSH composer. A dot-matrix label shows the session's current reasoning effort, and a particle field to its right grows with that effort — sparse floating dots at the low end, dense horizontal scan lines "
+    "excerpt": "DeepSeek Harness（DSH）Web Profile 插件：把输入框里的模型入口换成一枚思考强度胶囊——左边是用光点画的档位名（OFF / LOW / MED / HIGH…），右边是一道随档位铺开的粒子洪流。"
   },
   "schemaVersion": 1,
   "scripts": {

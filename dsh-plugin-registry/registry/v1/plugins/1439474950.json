@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "196305bd6f83825850d97647126a0a8eca8cee7f"
   },
   "github": {
@@ -48,27 +48,39 @@
   },
   "id": "gh:1439474950",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-intent-recognition",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-intent-recognition@0.7.0",
+    "version": "0.7.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.7.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-intent-recognition",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/78418a23baa16be19e3f8bcb4a929a2cebf96e7fc2dcf2904bbb792d4a76acb5/lilixinsniper/dsh-intent-recognition",
     "description": "Five-layer intent recognition pipeline (rules, pgvector retrieval, Jev scoring, fine-tuned arbitration, LLM fallback) with scenario management UI, PostgreSQL storage and distributable API services"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) plugin: five-layer intent recognition pipeline + scenario/intent management UI + dual-edition storage (basic = zero-config local file, advanced = PostgreSQL + pgvector) + distributable API services + DSH-native routing (agent tools / workflows / subagents"
   },
   "schemaVersion": 1,
   "scripts": {

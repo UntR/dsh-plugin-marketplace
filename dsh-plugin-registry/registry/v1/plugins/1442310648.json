@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "4c431b35581180353371230f5aa40cd9cdb10ab4"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1442310648",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-summary-index",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:TLNing260310/dsh-summary-index#4c431b35581180353371230f5aa40cd9cdb10ab4",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.mjs",
+      "./core": "./src/core.mjs",
+      "./package.json": "./package.json",
+      "./store": "./src/store.mjs"
+    },
+    "main": "src/index.mjs",
+    "name": "dsh-summary-index",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/baf0254750b6b804c69c86155f95be4122f5fc76534123958fc79ad3b4d84a57/TLNing260310/dsh-summary-index",
     "description": "Non-invasive structured compaction index, deterministic anchor guard, and probe tools for DeepSeek Harness (DSH). AI-assisted alpha/demo."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-summary-index 是一个宿主侧 DSH 插件。它不实现 ctx.compaction，不替换 dsh-context-zip、dsh-minimal-context 或任何压缩后端，也不注册裸的 search / read 工具。它只做四件事："
   },
   "schemaVersion": 1,
   "scripts": {

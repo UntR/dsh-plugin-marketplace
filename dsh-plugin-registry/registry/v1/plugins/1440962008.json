@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "a86070b5617e1469b34c596dc051180f3dfe8026"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1440962008",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cross-session-ref",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-cross-session-ref@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-cross-session-ref",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c73ede0e451f7af5c342da7b751f81522fb1a4d439c5445c8876d48afd6308eb/kanmanJO/dsh-cross-session-ref",
     "description": "跨会话引用：把问答卡片拖到另一个会话，并在提问时注入 Prompt。Cross-session reference cards for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的一个会话只能看见自己的上下文。当你需要「把 A 会话里已经问清楚的结论，拿到 B 会话里继续用」时，通常只能复制粘贴，附件还要手动重传。"
   },
   "schemaVersion": 1,
   "scripts": {

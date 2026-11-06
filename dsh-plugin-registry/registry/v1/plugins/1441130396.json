@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "55c4a9ac36d927222fbb10e4039808a39e5118bf"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1441130396",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tool-session-message",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:BigBugy/dsh-tool-session-message#55c4a9ac36d927222fbb10e4039808a39e5118bf",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-tool-session-message",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d41fc988dd035565d6a9718269039996f4bf4243925f1236e46f1d94e44974ad/BigBugy/dsh-tool-session-message",
     "description": "Cross-session messaging tool for DeepSeek Harness (DSH): session_send with sender session id envelope"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Cross-session messaging for DeepSeek Harness (DSH): send a user message to another session by its session id — ask a separate window what it is doing, or hand it new facts."
   },
   "schemaVersion": 1,
   "scripts": {

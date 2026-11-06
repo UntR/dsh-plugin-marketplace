@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
-    "headSha": "a3ea3f43df7dc4eb3956290a6e0f7b6a1f511cd5"
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
+    "headSha": "410d17f47f57c7d35ba22683b0e38228917c82ff"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Agent 行为回归实验台：把会话录成运行记录，并排对比两次运行的工具序列、参数、结果与用量",
     "fork": false,
     "forks": 0,
-    "headSha": "a3ea3f43df7dc4eb3956290a6e0f7b6a1f511cd5",
+    "headSha": "410d17f47f57c7d35ba22683b0e38228917c82ff",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVf7AzQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/960db6c1af721c5d2d282d8fe4c88698729d3751741da2df2a0ecc7ba12c4f23/Limtide/dsh-agent-lab",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a4d49c565ea54bb164f91873ae34a3e0a3d58f266c3fece12c898a7dc21dd86f/Limtide/dsh-agent-lab",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/84656587?u=87b3aee44aab92a3b5972d2d057e6a5dcf0d4c4d&v=4",
       "login": "Limtide"
     },
-    "pushedAt": "2026-11-02T09:27:45Z",
+    "pushedAt": "2026-11-03T17:40:15Z",
     "slug": "Limtide/dsh-agent-lab",
     "stars": 0,
     "topics": [
@@ -40,32 +40,44 @@
       "dsh-plugin",
       "regression-testing"
     ],
-    "updatedAt": "2026-11-02T09:27:54Z",
+    "updatedAt": "2026-11-03T17:40:20Z",
     "url": "https://github.com/Limtide/dsh-agent-lab"
   },
   "id": "gh:1442758861",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-agent-lab",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Limtide/dsh-agent-lab#410d17f47f57c7d35ba22683b0e38228917c82ff",
+    "version": "0.4.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "index.js",
+    "name": "dsh-agent-lab",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/960db6c1af721c5d2d282d8fe4c88698729d3751741da2df2a0ecc7ba12c4f23/Limtide/dsh-agent-lab",
+    "coverUrl": "https://opengraph.githubassets.com/a4d49c565ea54bb164f91873ae34a3e0a3d58f266c3fece12c898a7dc21dd86f/Limtide/dsh-agent-lab",
     "description": "Agent 行为回归实验台：把会话录成运行记录，并排对比两次运行的工具序列、参数、结果与用量"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把一次真实会话录成运行（run），再和另一次运行并排对比：工具选择、参数、结果、成败与用量到底变了什么。从同一个任务重放一次（换模型或改提示词，在隔离副本里真实重跑），把结果聚合成任务 × 变体矩阵，最后给任务加断言，用退出码把回归门禁接进 CI。"
   },
   "schemaVersion": 1,
   "scripts": {

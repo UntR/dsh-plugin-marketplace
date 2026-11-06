@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "1bc372726acf000fe9d46c37fb8ff18aaacdaa9b"
   },
   "github": {
@@ -44,27 +44,40 @@
   },
   "id": "gh:1441089836",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-prompt-predict",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:rusliksu/dsh-prompt-predict#1bc372726acf000fe9d46c37fb8ff18aaacdaa9b",
+    "version": "0.2.10-ruslan.8"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.13",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-prompt-predict",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.10-ruslan.8"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4e9b8e8f7bffb931f5c1d3431b5ff97cb8c99bb2e4d4a220c1a6905147ddd885/rusliksu/dsh-prompt-predict",
     "description": "Форк dsh-prompt-predict для DeepSeek Harness: предзагрузка подсказки, свой системный промпт, режим «только по Tab», принятие по Enter/Tab/→ и отправка вторым нажатием, русский интерфейс. Fork of ferrisching/dsh-prompt-predict (MIT)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Codex-style composer predictions for DeepSeek Harness After each reply, your next prompt is ghosted right into the composer — Enter / Tab / → to accept, press again to send, Esc to dismiss, start typing and it's gone"
   },
   "schemaVersion": 1,
   "scripts": {

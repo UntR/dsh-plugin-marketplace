@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "d9a1bf92f232ccb3429b32921290545d7555e69b"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1441908094",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-active-sessions",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-active-sessions@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.mjs",
+    "name": "dsh-active-sessions",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/520609d07d24980a8ad5aeda3369f2b5c7c24b66c910288d648f835281a9d04b/DEVbyQIN/dsh-active-sessions",
     "description": "Active sessions bell for DeepSeek Harness with running task indicators and recent session filters"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness (DSH) 侧边栏「工作区」标题旁添加活跃会话铃铛按钮。支持后台正在执行任务的呼吸绿点提醒，并可一键呼出悬浮面板，快速筛选「正在进行中」与「最近三天」的会话并直接切换。无运行时依赖，零打包，原生设计令牌对齐。"
   },
   "schemaVersion": 1,
   "scripts": {

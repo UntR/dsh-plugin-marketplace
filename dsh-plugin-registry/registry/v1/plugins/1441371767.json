@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./plugin/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "404de57868d2d4c5e30d05f319fcd9bcf43ab54e"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1441371767",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-preflight",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lengrufeng2008/dsh-preflight#404de57868d2d4c5e30d05f319fcd9bcf43ab54e",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./plugin/index.js",
+      "./icon": "./icon.svg",
+      "./plugin": "./plugin/index.js",
+      "./preflight": "./src/preflight.mjs"
+    },
+    "main": null,
+    "name": "dsh-preflight",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2cdb60189049f9d4e5d5f8bcae9c3618ac3bf1a4aa633d9874fc5673b9b1185e/lengrufeng2008/dsh-preflight",
     "description": "Static package-surface preflight for DSH plugin bundles."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "The tarball mode checks the actual npm pack output: required files, bundle patch, lifecycle scripts, unsupported entries, and test//dist/ residue."
   },
   "schemaVersion": 1,
   "scripts": {

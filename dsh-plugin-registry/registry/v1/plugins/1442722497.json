@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "bed8a4ca2a25334912f807e616e383ad7c3eb699"
   },
   "github": {
@@ -51,7 +51,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,14 +61,33 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "body-of-fish",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e4894c9595e646892c367a2c7340ddcdbdde0a230dcea3425e1b73796260ff42/ZhongYiSS/body-of-fish",
     "description": "本鱼陪伴 · 身体：一只住在 Windows 桌面上的蓝色大肥鱼（Electron 独立小窗，可接 DeepSeek Harness）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一只吃白饭的蓝色大肥鱼。她原本住在 DeepSeek Harness 的网页里，现在有自己的桌面小窗：透明、置顶、会呼吸、会说话、会念你刚打完的那句话。"
   },
   "schemaVersion": 1,
   "scripts": {

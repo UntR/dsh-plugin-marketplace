@@ -5,9 +5,9 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
-    "headSha": "acb18528ab8003f92deec8db3fa038e2d0fe1df2"
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
+    "headSha": "1b629bd2ea6e9c602b3a65b70b0b7164b9ed6812"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Desktop pet for DSH: a model-driven companion with affection, inner voice and chat, installed as a dsh plugin.",
     "fork": false,
     "forks": 0,
-    "headSha": "acb18528ab8003f92deec8db3fa038e2d0fe1df2",
+    "headSha": "1b629bd2ea6e9c602b3a65b70b0b7164b9ed6812",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,18 +25,18 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVedwzg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7407d02d71c97ac2f195e0e893aa91eb07d9f08074582573f67e643b7a422e57/beyondgjc/dsh-agentic-pet",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a671fdc01c6c771f78b1a6c299a01fd35d5f573f245e2bb6b1611050415ac525/beyondgjc/dsh-agentic-pet",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/37578705?u=4534ea9e516372e445da346620b6ae111ddb86d9&v=4",
       "login": "beyondgjc"
     },
-    "pushedAt": "2026-11-03T06:29:33Z",
+    "pushedAt": "2026-11-06T09:21:43Z",
     "slug": "beyondgjc/dsh-agentic-pet",
     "stars": 0,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-11-03T06:29:37Z",
+    "updatedAt": "2026-11-06T09:21:47Z",
     "url": "https://github.com/beyondgjc/dsh-agentic-pet"
   },
   "id": "gh:1441231054",
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,32 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./client/pet-settings.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./presets/*.patch.yml": "./presets/*.patch.yml",
+      "./src/*": "./src/*",
+      "./tools": "./lib/tools.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-agentic-pet",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.11"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7407d02d71c97ac2f195e0e893aa91eb07d9f08074582573f67e643b7a422e57/beyondgjc/dsh-agentic-pet",
+    "coverUrl": "https://opengraph.githubassets.com/a671fdc01c6c771f78b1a6c299a01fd35d5f573f245e2bb6b1611050415ac525/beyondgjc/dsh-agentic-pet",
     "description": "Desktop pet for DSH: a model-driven companion with affection, inner voice and chat, installed as a dsh plugin."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "--- description: \"The dsh desktop pet: an agentic pet plugin that serves the pet renderer over the web composition, drives it from in-process dsh events, and answers approvals and questions from the desktop.\" kind: \"package-bundle\" ---"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "462e8eb1a7c7e809eb58b6174603babb90221202"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1441615998",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-preflight",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:NingZhenPeng/dsh-plugin-preflight#462e8eb1a7c7e809eb58b6174603babb90221202",
+    "version": "0.15.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.15.4",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json",
+      "./policy.json": "./policy.json"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-preflight",
+    "status": "valid",
+    "type": "module",
+    "version": "0.15.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d6b29664d9f6b75338bc7b304ea9f7a5f9f0c92214c5746cbfd0fb08f6a572c7/NingZhenPeng/dsh-plugin-preflight",
     "description": "DSH 插件安装预检闸门：装之前跑九项预检，拒绝即拦截，并留下审计日志"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）的插件安装预检闸门。装插件之前先核一遍规则，判定为「拒绝」就中止安装，并把每次尝试写进审计日志。"
   },
   "schemaVersion": 1,
   "scripts": {

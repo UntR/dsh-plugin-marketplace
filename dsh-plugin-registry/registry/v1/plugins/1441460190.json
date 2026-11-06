@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
-    "headSha": "9116c291e1ec72483aa1326421da2c0f6cced7e0"
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
+    "headSha": "dbc755744e7eab6aad7874c6c42531011603ab96"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Native DSH browser_* tools in TypeScript on a zero-dependency CDP core; drives any logged-in Chromium-based browser and groups harness-created tabs per task.",
     "fork": false,
     "forks": 0,
-    "headSha": "9116c291e1ec72483aa1326421da2c0f6cced7e0",
+    "headSha": "dbc755744e7eab6aad7874c6c42531011603ab96",
     "homepageUrl": "https://github.com/Xumi0920/dsh-browser-harness/tree/main/docs",
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVerv3g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/8e1252f5e511267f0031ff7d4569fbfeb5284aa9ce26d44824b454f18087461c/Xumi0920/dsh-browser-harness",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a3235e267a17a0ba9bcb0e05a23468e264ee02208457c92d68e54fb148e9e774/Xumi0920/dsh-browser-harness",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/49862709?u=0fc9b746549a3b5901edfc393ff3238822070b0f&v=4",
       "login": "Xumi0920"
     },
-    "pushedAt": "2026-11-03T11:48:57Z",
+    "pushedAt": "2026-11-04T15:13:01Z",
     "slug": "Xumi0920/dsh-browser-harness",
     "stars": 0,
     "topics": [
@@ -53,7 +53,7 @@
       "web-automation",
       "zero-dependencies"
     ],
-    "updatedAt": "2026-11-03T11:48:56Z",
+    "updatedAt": "2026-11-04T15:13:03Z",
     "url": "https://github.com/Xumi0920/dsh-browser-harness"
   },
   "id": "gh:1441460190",
@@ -61,7 +61,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -71,14 +71,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/lib/index.js",
+      "./core": "./dist/src/index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/lib/index.js",
+    "name": "@xumi0920/dsh-browser-harness",
+    "status": "valid",
+    "type": "module",
+    "version": "1.10.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/8e1252f5e511267f0031ff7d4569fbfeb5284aa9ce26d44824b454f18087461c/Xumi0920/dsh-browser-harness",
+    "coverUrl": "https://opengraph.githubassets.com/a3235e267a17a0ba9bcb0e05a23468e264ee02208457c92d68e54fb148e9e774/Xumi0920/dsh-browser-harness",
     "description": "Native DSH browser_* tools in TypeScript on a zero-dependency CDP core; drives any logged-in Chromium-based browser and groups harness-created tabs per task."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）原生浏览器工具。 零依赖 CDP 内核 + 13 个 browser 工具，直连专用、已登录的 Chromium 内核浏览器，提供 e1/e2 引用快照，并按任务给自建标签页分组。"
   },
   "schemaVersion": 1,
   "scripts": {

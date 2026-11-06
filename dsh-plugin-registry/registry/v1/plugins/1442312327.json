@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-03T11:51:10.675Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichmentStatus": "ok",
     "headSha": "ca2513f31603a15556f14fc2fc309fe1c3166209"
   },
   "github": {
@@ -49,27 +49,42 @@
   },
   "id": "gh:1442312327",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-tts",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:LotusPrimeUmbra/dsh-plugin-tts#ca2513f31603a15556f14fc2fc309fe1c3166209",
+    "version": "0.4.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": {
+        "default": "./client.js"
+      },
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-tts",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/565f7dc4258947d431f6d807efe21d97016e7762c1798ed39d5e3499ca9fdaf7/LotusPrimeUmbra/dsh-plugin-tts",
     "description": "DeepSeek Harness 的 TTS 语音合成插件：小米 MiMo / Breeze 双协议合成、试听、克隆音色、唱歌，并可直接通过 OneBot 发 QQ 语音。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness 插件，把 TTS 语音合成做进 DSH 里：小米 MiMo / Breeze 双协议、预设音色 / 音色设计 / 语音克隆、唱歌、自定义请求模板、参考音频管理，合成后可直接发 QQ 语音。"
   },
   "schemaVersion": 1,
   "scripts": {
