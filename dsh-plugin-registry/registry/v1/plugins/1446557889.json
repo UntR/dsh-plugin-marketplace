@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "13d6bbed15a8fa85c08abc94640f6acdfd7190c9"
   },
   "github": {
@@ -45,27 +45,41 @@
   },
   "id": "gh:1446557889",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-offpeak-guard",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-offpeak-guard@0.3.2",
+    "version": "0.3.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-offpeak-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c6061a71707cd4ab570a11bc2fdb24c62c4fc2c63548afabb80529f493919d70/HATO-24/dsh-offpeak-guard",
     "description": "DeepSeek peak/off-peak pricing guard for DSH: pauses running tasks at peak, resumes automatically when off-peak begins, and plans work for the next off-peak window."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "已发布到 npm：在 DSH 的插件页搜索 dsh-offpeak-guard 安装，或运行 dsh plugin --profile add dsh-offpeak-guard。"
   },
   "schemaVersion": 1,
   "scripts": {

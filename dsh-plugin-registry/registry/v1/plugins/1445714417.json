@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "ea33bbaf2497ad69dc4c4797b96a21af7c61ceec"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1445714417",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cookie-janitor",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-cookie-janitor@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-cookie-janitor",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ded88c2530a5f8cde2cb8c27b046cd40c0b75d33db7a4b337ff0ce27e344c4e4/07-dot/dsh-cookie-janitor",
     "description": "Expire stale dsh-auth cookies before the 16 KiB header limit (HTTP 431)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that expires stale dsh-auth- sign-in cookies before the Cookie request header can reach Node's 16 KiB header limit — the point where the HTTP parser answers 431 Request Header Fields Too Large before any route, handler, or plugin runs."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "1fffb1551d7f82ded95271ab72aa4707ee7c2705"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1447935600",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mineru",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Mu-scorpio/dsh-mineru#1fffb1551d7f82ded95271ab72aa4707ee7c2705",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.15",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./engine.js",
+      "./client": "./ui.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "./engine.js",
+    "name": "dsh-mineru",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/71ec1b56649411cf76680aa3062af5d255bfaf9a0f2af32da3275d6c1459ceb5/Mu-scorpio/dsh-mineru",
     "description": "MinerU PDF parsing plugin for DeepSeek Harness (DSH): extract formulas, tables, and text into Markdown with smart chunking and interactive UI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "适用于 DeepSeek Harness (DSH) 的全功能 MinerU PDF 智能提取与解析插件。 集成左侧交互面板与 Agent Tool，支持数学公式、复杂表格、扫描件 OCR 高保真解析为 Markdown，内置超长文档智能分片与断点重试。"
   },
   "schemaVersion": 1,
   "scripts": {

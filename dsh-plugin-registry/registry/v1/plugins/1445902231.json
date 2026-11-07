@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "6e736129e56911aa9109eb2bd37f574060d92edf"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1445902231",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "cg-shell-janitor",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "cg-shell-janitor@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "cg-shell-janitor",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/be1a1db6bc1701962b99284ba15bc4df885f974a52eca4011be628606381ebd4/DonGeeo87/cg-shell-janitor",
     "description": "Closes DeepSeek Harness runner processes that stay alive after their shell command finished, reclaiming ~140 MB each. Windows only."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin for Windows that closes the runner processes DSH leaves behind after a shell command finished. Each one holds about 140 MB of RAM."
   },
   "schemaVersion": 1,
   "scripts": {

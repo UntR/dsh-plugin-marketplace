@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "fcb2eccc0269c1870d92e3c40e4c47c4b429d0f3"
   },
   "github": {
@@ -41,27 +41,41 @@
   },
   "id": "gh:1445572246",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-neptune",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:JiepengLab/dsh-neptune#fcb2eccc0269c1870d92e3c40e4c47c4b429d0f3",
+    "version": "1.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./neptune-core.mjs": "./core/neptune-core.mjs",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-neptune",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/557306f744910b2407effcd407675360e7646116866bd32afc2075d3ee908b0b/JiepengLab/dsh-neptune",
     "description": "尼普顿充电：取 openId、查状态、续充"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把尼普顿充电桩接进 DeepSeek Harness：查余额、看插座空不空、起明早六点的续充任务。"
   },
   "schemaVersion": 1,
   "scripts": {

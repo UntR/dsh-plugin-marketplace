@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
-    "headSha": "d198e3bf9212118715687516c89b504e557bdbbc"
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
+    "headSha": "7cd34550750dc8540e97517c88f53c39321d003a"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Copilot-style inline diffs for every file edit in DeepSeek Harness: +A/-R per edit row, per-turn summary with Keep and Undo, single-edit undo.",
     "fork": false,
     "forks": 0,
-    "headSha": "d198e3bf9212118715687516c89b504e557bdbbc",
+    "headSha": "7cd34550750dc8540e97517c88f53c39321d003a",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVk7aeQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/dd007fff158b781f6fc0c098dc78b848d4791dbbf37f74fb3a3533fdbf08c141/huieric/dsh-copilot-diff",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/cc38eb5ca4321d3d666a8478e28bdb6e7848e5194f600e7e4bb7b11960940d3e/huieric/dsh-copilot-diff",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/16113041?u=658d539f1541e69c4d9c74e9eaf84ccb3c792b0e&v=4",
       "login": "huieric"
     },
-    "pushedAt": "2026-11-06T11:02:46Z",
+    "pushedAt": "2026-11-07T10:36:10Z",
     "slug": "huieric/dsh-copilot-diff",
     "stars": 0,
     "topics": [
@@ -40,32 +40,47 @@
       "dsh-plugin",
       "undo"
     ],
-    "updatedAt": "2026-11-06T11:02:51Z",
+    "updatedAt": "2026-11-07T10:36:07Z",
     "url": "https://github.com/huieric/dsh-copilot-diff"
   },
   "id": "gh:1448008313",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-copilot-diff",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-copilot-diff@0.8.1",
+    "version": "0.8.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.8.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-copilot-diff",
+    "status": "valid",
+    "type": "module",
+    "version": "0.8.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/dd007fff158b781f6fc0c098dc78b848d4791dbbf37f74fb3a3533fdbf08c141/huieric/dsh-copilot-diff",
+    "coverUrl": "https://opengraph.githubassets.com/cc38eb5ca4321d3d666a8478e28bdb6e7848e5194f600e7e4bb7b11960940d3e/huieric/dsh-copilot-diff",
     "description": "Copilot-style inline diffs for every file edit in DeepSeek Harness: +A/-R per edit row, per-turn summary with Keep and Undo, single-edit undo."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness Web 插件。文件工具保留逐调用 diff；新的逐轮工作区快照按磁盘实际变化识别 sed、Python replace、脚本及其它命令行修改，提供轮级净改动和持久化检查点。它不调用模型。快照范围和排除项会显示在检查点处；超出覆盖范围的文件不会假装可以恢复。"
   },
   "schemaVersion": 1,
   "scripts": {

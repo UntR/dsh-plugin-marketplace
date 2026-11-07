@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "f49afa4a22814a291e39808dd9cca83a4d5f83a2"
   },
   "github": {
@@ -41,27 +41,38 @@
   },
   "id": "gh:1446416190",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-incognito-chat",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:shinji00222/dsh-incognito-chat#f49afa4a22814a291e39808dd9cca83a4d5f83a2",
+    "version": "0.1.0-preview.10"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host/plugin.js",
+      "./client": "./src/client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/host/plugin.js",
+    "name": "dsh-incognito-chat",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-preview.10"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3b273ba4cf8ddf6e615fdf5aefb4f5b49e31aca66f856d5abf0e41bdd71dac79/shinji00222/dsh-incognito-chat",
     "description": "DeepSeek Harness 无痕对话插件：会话只在内存里，不写盘、不进历史"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 加一个无痕对话，用起来跟 Claude 的无痕模式差不多。"
   },
   "schemaVersion": 1,
   "scripts": {

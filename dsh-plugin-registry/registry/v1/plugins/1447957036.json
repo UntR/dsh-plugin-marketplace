@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "c717fa3b9307bcdbc5e7a2bff029ad5ab9790cb4"
   },
   "github": {
@@ -48,27 +48,40 @@
   },
   "id": "gh:1447957036",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-phone",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-phone@0.1.5",
+    "version": "0.1.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.5",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-phone",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/66d011f1c293d91bea18cd7cb48c07f0c3b93ff5b184bae1f2dd75c037449409/opentandem/dsh-phone",
     "description": "Use DeepSeek Harness (dsh) from your phone: a dsh plugin that pairs your computer with OpenTandem through a QR code."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Use DeepSeek Harness (dsh) from your phone. Scan a QR code in dsh web, sign in to OpenTandem on the phone, tap Allow, and send tasks to the computer that runs dsh. Your existing dsh sessions show up on the phone, and the phone and the computer continue the same session."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "eae6fb56a53fd4fb17b0a3d6a445ae773235c2bf"
   },
   "github": {
@@ -41,27 +41,42 @@
   },
   "id": "gh:1446592640",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-handy",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-handy@0.8.1",
+    "version": "0.8.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.8.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-handy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.8.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9e4491f2b1879e2acfe7a79f58c0920b6ff94b22938e5efd7c6ce7f367a4b866/dayutech/dsh-handy",
     "description": "DeepSeek Harness Web plugin with per-session notes, a draggable key-information panel, fork inheritance of notes and key information, workspace-scoped session groups, highlighting, running-workspace prioritization, and bulk close actions for every right-sidebar tab."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-handy 是一个 DeepSeek Harness Web 增强插件，集中提供会话笔记本、可拖动关键信息面板、指定轮次分叉与分叉继承、工作区会话组、会话高亮、运行工作区置顶，以及右侧边栏任意标签的批量关闭。笔记本、星标、会话组与关键信息默认只保存在本机浏览器；只有点击「再次注入」时，关键信息才会进入当前会话上下文。"
   },
   "schemaVersion": 1,
   "scripts": {

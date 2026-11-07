@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "0e106e1d2b8d8eae96c5283f4d01343d3c4fa894"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,33 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client.d.ts"
+      },
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-paper-desk",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5d40bf988539fb1178b3a60ce51d1bf4f9b68430e9716b00bb198cae50f671cd/ZhexuanZhou/dsh-paper-desk",
     "description": "PaperDesk: a Mendeley-style paper library plugin for DeepSeek Harness — import PDFs, annotate, take notes, ask the agent to read papers in-panel, sync via your cloud drive."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个把「普通目录」变成 Mendeley 式论文库的 DeepSeek Harness 插件：左边栏一个「论文库」图标，打开就是原生工作台 —— 导入 PDF、自动补全元数据、记笔记与高亮、一键让 Agent 精读论文；整个论文库就是一堆普通文件，放进 iCloud / Dropbox / 坚果云等网盘目录即可多设备同步。"
   },
   "schemaVersion": 1,
   "scripts": {

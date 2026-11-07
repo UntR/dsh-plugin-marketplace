@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "fbc81a769bf6e8dd1785d2b1a22411a2bd96e4e4"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./worker": {
+        "default": "./lib/worker.js",
+        "types": "./lib/types/worker.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-speech-whisper",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5327ecf638b978897cabf5254f3cf9262eb6cf0669c41d66f41e82c874ee7285/XtremXpert/dsh-speech-whisper",
     "description": "Whisper speech-to-text provider plugin for DeepSeek Harness (French and 90+ languages, local)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A local Whisper speech-to-text provider plugin for DeepSeek Harness."
   },
   "schemaVersion": 1,
   "scripts": {

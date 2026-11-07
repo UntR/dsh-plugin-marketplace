@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "fdf2b1a78307e5a50efe4261390a74d323356346"
   },
   "github": {
@@ -48,27 +48,42 @@
   },
   "id": "gh:1448140551",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-token-ledger",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:6600788/dsh-token-ledger#fdf2b1a78307e5a50efe4261390a74d323356346",
+    "version": "1.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-token-ledger",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5a1efdbd279dcf48e1444c35f1a2fc5ee8b12fde9e8d65880a6504cf5fb9acae/6600788/dsh-token-ledger",
     "description": "DSH sidebar plugin: a local token-usage ledger with two independent books (before / after), exact per-bucket accounting, and week/month/day filters."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A sidebar plugin for DeepSeek Harness (DSH) that keeps a fully local token-usage ledger. It adds a 「Token 账本」 entry to the left sidebar and opens a full statistics page."
   },
   "schemaVersion": 1,
   "scripts": {

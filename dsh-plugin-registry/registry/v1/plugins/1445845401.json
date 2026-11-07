@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "ca3842369cfdec9bd694138e73d66492b952b071"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1445845401",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/winpilot",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wodaimnd/winpilot#ca3842369cfdec9bd694138e73d66492b952b071",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/winpilot",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4fa0014e41452debe194d9c2554a4b7106c30519f2c9a21d61d8d8b03de4cf06/wodaimnd/winpilot",
     "description": "微信小程序控制台：把 winpilot CLI 暴露成模型工具，并提供连接、项目、截图与诊断的配置面板。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 winpilot CLI 注册成一个模型工具 winpilot，用于在 Windows 上驱动微信开发者工具； 同时提供一块微信小程序控制台面板（侧栏入口「小程序」），用于配置、看状态、按需截一张图。"
   },
   "schemaVersion": 1,
   "scripts": {

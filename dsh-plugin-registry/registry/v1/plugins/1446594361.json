@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "4443f04db13c98fccdc91fce62f99ae9453090c9"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1446594361",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-brain-hub",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xxwjxx-1210/dsh-brain-hub#4443f04db13c98fccdc91fce62f99ae9453090c9",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js"
+      },
+      "./client": {
+        "default": "./dist/client.cjs"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.js",
+    "name": "dsh-brain-hub",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2ea21f66d4e6f51c4ce21b336c62b4edadd9cbea77497c92e5b48c090dd69414/xxwjxx-1210/dsh-brain-hub",
     "description": "Second brain for DeepSeek Harness: Markdown memory + git sync, reviewed card capture, cloud/local split."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 用的「第二大脑」：Markdown 当数据库，git 当同步。不用数据库、不用云服务，记忆就是你磁盘上的一堆 .md 文件。"
   },
   "schemaVersion": 1,
   "scripts": {

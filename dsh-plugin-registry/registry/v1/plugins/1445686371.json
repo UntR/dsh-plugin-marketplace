@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "5497aecab318558d5f7ecfd8abb3e2350a46b5f9"
   },
   "github": {
@@ -47,27 +47,33 @@
   },
   "id": "gh:1445686371",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-grep",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:abwp2/dsh-session-grep#5497aecab318558d5f7ecfd8abb3e2350a46b5f9",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": "lib/index.js",
+    "name": "dsh-session-grep",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8226e62058003838d76713a5a02ee2da692b8eabd7d948933f83234466bee38b/abwp2/dsh-session-grep",
     "description": "Read DeepSeek Harness session transcripts (multi-frame zstd): list, title, find, dump, around by seq."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "读 DeepSeek Harness 的会话原话。 DSH 把会话写成多帧 zstd（每次追加压一帧）， zstdDecompressSync 只解第一帧，grep / Select-String 也搜不到正文—— 所以「查某轮到底怎么说的」这件事，用系统自带工具做不到。这个包把它做掉。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "1051faf01b433999652cc95134abc01e4b4e2f96"
   },
   "github": {
@@ -48,27 +48,47 @@
   },
   "id": "gh:1447831581",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@shamcleren/dsh-security-scan",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@shamcleren/dsh-security-scan@0.18.0",
+    "version": "0.18.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.18.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./cli": "./lib/cli.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./preset": "./lib/preset.js",
+      "./report": "./lib/report.js",
+      "./scanner": "./lib/scanner.js",
+      "./workflow": "./lib/workflow.js"
+    },
+    "main": "lib/index.js",
+    "name": "@shamcleren/dsh-security-scan",
+    "status": "valid",
+    "type": "module",
+    "version": "0.18.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/61de1d020aaa6ca33a69f3e51136bde097956c5c7ad065b7d8374125e8f59aac/shamcleren/dsh-security-scan",
     "description": "DSH plugin: local Python/Go/JS/TS security scanning with offline reports, optional runtime baseline and evidence-based AI review"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）加一个安全扫描工作台：扫描 Python、Go、JavaScript/TypeScript 项目，生成可离线打开的中文报告；选中问题交给 DSH 会话修复，修完再复扫确认。规则扫描在本机运行，不消耗模型 Token；需要更深入的判断时，再让 AI 沿调用链复核。"
   },
   "schemaVersion": 1,
   "scripts": {

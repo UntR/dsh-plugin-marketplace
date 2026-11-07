@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "5e737786e8addda04d96fd024e4abfac8d833809"
   },
   "github": {
@@ -51,33 +51,45 @@
   },
   "id": "gh:1445546936",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "@lvxianchao/dsh-web-guard",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "@lvxianchao/dsh-web-guard@3.0.0",
+    "version": "3.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "3.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@lvxianchao/dsh-web-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "3.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/34268259604b880f05a2e2196c9bfec49140bde5b328f7acdc27e789dd08ae6d/lvxianchao/dsh-web-guard",
     "description": "Password gate for the DeepSeek Harness Web UI that also fixes the /api 403 behind NPM/Caddy: one password, revocable sessions, an admin page and TLS. Zero dependencies."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A password gate for the DeepSeek Harness Web UI — one plugin that fixes four deployment problems at once and adds a native settings page."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

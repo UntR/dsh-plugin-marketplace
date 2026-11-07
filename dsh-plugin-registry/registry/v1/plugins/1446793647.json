@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "cefd9d33d6a5d580af8d87f12bc23bce0143aa05"
   },
   "github": {
@@ -48,33 +48,46 @@
   },
   "id": "gh:1446793647",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-gulu-diary",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:TheCarey/Dsh-GuLu-diary#cefd9d33d6a5d580af8d87f12bc23bce0143aa05",
+    "version": "0.9.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/plugin.js",
+      "./cli": "./src/cli.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/plugin.js",
+    "name": "dsh-gulu-diary",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8aff984127d1b16c83434b517c8c1346c0dd4f5d92c197f0da9ad8b81bc42d85/TheCarey/Dsh-GuLu-diary",
     "description": "A DSH diary plugin that only writes on days worth remembering."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个跑在 DSH（DeepSeek Harness）里的独立情感日记插件：每天在自己设定的日界（默认 04:00）之后读一个「04:00 → 次日 04:00」窗口里的会话，先判断这天值不值得写，值得才用完整人格 + 只读记忆写一篇给自己看的日记，存进独立的 diary.db，并导出一份可以直接双击打开的 Markdown。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

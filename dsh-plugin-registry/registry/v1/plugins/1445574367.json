@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "351a9337c900bc019f7844e71e8ac610cce0e6b4"
   },
   "github": {
@@ -43,27 +43,38 @@
   },
   "id": "gh:1445574367",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "malo-browser",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Lumos-789/malo-browser#351a9337c900bc019f7844e71e8ac610cce0e6b4",
+    "version": "0.1.7"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "malo-browser",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.7"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5188db1edd9a1059024d8eefe62720efdedf995bc03befb130bb1a71bb5a6e08/Lumos-789/malo-browser",
     "description": "Scripted browser demo tool: scene-driven Electron stage, headless 1080p30 recording with evidence, director console and loopback control API."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A browser for scripted demos. It is built on Electron + Chromium and splits a web demo into a Stage (what the audience sees) and a Recorder (fixed-spec capture) without forking the browser engine; demo flows are written as scene scripts, with a Director console and a loopback con"
   },
   "schemaVersion": 1,
   "scripts": {

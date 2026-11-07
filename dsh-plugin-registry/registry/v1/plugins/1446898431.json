@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "465240690b23e7a8f3627098eba960bd5f3892b3"
   },
   "github": {
@@ -44,27 +44,41 @@
   },
   "id": "gh:1446898431",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-packs",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:mmmmlp-cloud/dsh-plugin-packs#465240690b23e7a8f3627098eba960bd5f3892b3",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-plugin-packs",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a0f210e98c3b1d825e32c1e21aa8bb27a343cebe0ce83c151b91cf809eba51eb/mmmmlp-cloud/dsh-plugin-packs",
     "description": "插件包管理器 for DeepSeek Harness: Minecraft resource-pack-style two columns (enabled / disabled) with custom tags stored in a hand-editable packs.json instead of localStorage."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "插件装到几十个之后，问题不再是\"哪个插件叫什么\"，而是\"我现在到底在跑什么\"——官方插件页是一张平铺的已安装清单，启用和停用的混在一起，靠记忆区分。"
   },
   "schemaVersion": 1,
   "scripts": {

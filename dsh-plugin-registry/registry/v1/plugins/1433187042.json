@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "37c6d3ab89b16c63c3f960952d687952ef177bd1"
   },
   "github": {
@@ -54,9 +54,9 @@
     "packageName": "dsh-reme-lite",
     "preferred": "github",
     "reason": null,
-    "requiresBuildApproval": false,
-    "spec": "github:Nobodyanonymou-s/dsh-reme-lite#e2eade9f13af63c768bc942ca96de3670e79f562",
-    "version": "0.1.0"
+    "requiresBuildApproval": true,
+    "spec": "github:Nobodyanonymou-s/dsh-reme-lite#37c6d3ab89b16c63c3f960952d687952ef177bd1",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
@@ -65,16 +65,19 @@
   },
   "package": {
     "exports": {
-      ".": "./src/plugin.js",
-      "./client": "./client/client.js",
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
       "./package.json": "./package.json",
-      "./store": "./src/store.js"
+      "./store": "./lib/store.js"
     },
-    "main": "./src/plugin.js",
+    "main": "./lib/index.js",
     "name": "dsh-reme-lite",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.3.0"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/93cf19e3d5d15fccc3a1a42c60c08453f0cdd18039c03bd9be78eb7bbbdbdbab/Nobodyanonymou-s/dsh-reme-lite",
@@ -82,13 +85,13 @@
   },
   "readme": {
     "available": true,
-    "excerpt": "DeepSeek Harness 的长期记忆插件 —— 形状取自 ReMe，整个跑在宿主进程里。"
+    "excerpt": "DeepSeek Harness 的长期记忆插件 —— ReMe 的形状，没有 Python 边车。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

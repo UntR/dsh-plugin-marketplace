@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "153142dea3f1213fd4ab6e1fc112c6f407fe5228"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1446821884",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dyapple/dsh-restart",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:dengnianchen/dsh-restart#153142dea3f1213fd4ab6e1fc112c6f407fe5228",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@dyapple/dsh-restart",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c1477a3820cf2015a3347261f119ff6254c95085115c86c69853c74e3c91774a/dengnianchen/dsh-restart",
     "description": "DeepSeek Harness plugin: restart the Host from Settings → General or the sidebar account menu (systemd user service, with a standalone fallback)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Restart the DeepSeek Harness Host from the Web GUI — one row in Settings → General and one entry in the sidebar account menu. Both surfaces restart the Host through its systemd user service when the process runs under one, and fall back to relaunching its own command line otherwi"
   },
   "schemaVersion": 1,
   "scripts": {

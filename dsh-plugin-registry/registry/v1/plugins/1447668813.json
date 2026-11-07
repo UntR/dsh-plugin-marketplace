@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "a275f5774fce8d3320569cf23d4ee642e6641120"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1447668813",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/opencode-usage",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:webmanufaktur/dsh-opencode-usage-plugin#a275f5774fce8d3320569cf23d4ee642e6641120",
+    "version": "1.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/opencode-usage",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6eda7f5082f6ebac6887d3de04c156ec3b53a968365b1c18904039aaa46f0fe0/webmanufaktur/dsh-opencode-usage-plugin",
     "description": "DeepSeek Harness plugin: live opencode usage statistics as a Settings page"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin bundle that shows live opencode usage in the Harness Web UI: sessions, prompts, tokens, estimated cost, and per-tool reliability, read on demand from the local opencode CLI."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "f21bb43dfbba67ade91117ca95df83eddd8862f2"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1446457904",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-multi-root-changes",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:SoulZhou/dsh-multi-root-changes#f21bb43dfbba67ade91117ca95df83eddd8862f2",
+    "version": "0.3.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-multi-root-changes",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5fb058d49c3ae9ae7b952e98223888469a85444c8eb2fe905993b856f1d1e0a7/SoulZhou/dsh-multi-root-changes",
     "description": "Multi-root changes panel for DeepSeek Harness: one read-only Git changes view covering the session workspace root and every additional root registered through multi-root-workspace."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的侧栏加一个 多根改动 页签：一个面板里同时看到会话主工作目录 以及所有已登记的附加工作目录的 Git 改动与提交历史。"
   },
   "schemaVersion": 1,
   "scripts": {

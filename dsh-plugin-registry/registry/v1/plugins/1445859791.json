@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "27e66db4ea0ad5b45c69fa2dbff0ad52bab03770"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1445859791",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/model-quota",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zhangmin510/dsh-model-quota#27e66db4ea0ad5b45c69fa2dbff0ad52bab03770",
+    "version": "1.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host/index.js",
+      "./client": "./src/client/index.js",
+      "./icon": "./assets/icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/model-quota",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/22e3eb0eb75484958861aa16730ca745c79b667da0844ca857a10aa294d02810/zhangmin510/dsh-model-quota",
     "description": "DeepSeek Harness model balances and subscription quota panel, including Alibaba Token Plan"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件，在 设置 → 模型余量 集中查看当前已配置服务商的余额、套餐窗口剩余百分比和重置时间。支持中文／英文及宿主浅色／深色主题；按需刷新，不轮询、不发送推理请求、不修改模型配置。"
   },
   "schemaVersion": 1,
   "scripts": {

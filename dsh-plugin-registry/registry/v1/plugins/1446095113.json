@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "760fe73e5d17cdd1651146b27d1651695e7434b0"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1446095113",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-thick-scrollbar",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ThEmbrace/dsh-thick-scrollbar#760fe73e5d17cdd1651146b27d1651695e7434b0",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-thick-scrollbar",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/50a6623dd0e01dbeade01c5f01bef689e68354b95febc2b75e675bdba78b2cf3/ThEmbrace/dsh-thick-scrollbar",
     "description": "Hover-thickening scrollbars for the DeepSeek Harness Web GUI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Web GUI 的小插件：滚动条默认保持原样（细条、低对比、该隐藏的地方照样隐藏），只有鼠标移到滚动槽附近时临时加粗到 10px，离开立刻恢复；加粗过程不改变滚动槽宽度，正文不会横向抖动或位移。"
   },
   "schemaVersion": 1,
   "scripts": {

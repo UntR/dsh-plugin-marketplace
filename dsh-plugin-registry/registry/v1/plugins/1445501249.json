@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "95625dd35465dc932b519ec57644caa52d1d9a2c"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1445501249",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-gold-price",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:eastbadman/dsh-gold-price#95625dd35465dc932b519ec57644caa52d1d9a2c",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-gold-price",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cb6b3295c0d65dcbb063777d5b107adcfda535dc6646e2b76ab314305094f457/eastbadman/dsh-gold-price",
     "description": "Draggable floating panel with live China gold quotes (SGE Au99.99 / Au T+D / 100g bar + London spot) for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness（dsh）插件：在 dsh 页面里加一个可拖动的悬浮窗，实时显示国内黄金行情。"
   },
   "schemaVersion": 1,
   "scripts": {

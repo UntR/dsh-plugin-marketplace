@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "85f7bb9fbe7f44ae6436ee3341f65bd912a97cf6"
   },
   "github": {
@@ -48,27 +48,46 @@
   },
   "id": "gh:1433133985",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-coding-agents",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-coding-agents@0.2.3",
+    "version": "0.2.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./manager": {
+        "default": "./lib/manager.js",
+        "types": "./lib/types/manager.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-coding-agents",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/df74f9e4ee5058dafffacc0d44f50880e9f61f855ef99be5e2c0c9293fec2070/WilShi/dsh-coding-agents",
     "description": "DSH control center for locally installed Codex and Claude Code"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Drive your local Codex and Claude Code from DeepSeek Harness — sessions, config and run state, from one settings page and six agent tools."
   },
   "schemaVersion": 1,
   "scripts": {

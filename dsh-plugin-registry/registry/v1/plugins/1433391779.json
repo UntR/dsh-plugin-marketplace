@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "29cc77277cde4936c365bd5667394c801352e408"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1433391779",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-zcode-cli",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-zcode-cli@0.3.1",
+    "version": "0.3.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./dist/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-zcode-cli",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0291ffafe4e641767ddec1556ad4bd03e6eda97f61415f9909e7c99acb594dba/Gaudi-XIX/dsh-zcode-cli",
-    "description": "Safe-provider bridge: run the locally installed ZCode CLI as a DeepSeek Harness model route — official-binary-only transport, zero forged traffic, zero token extraction"
+    "description": "模型接入层，只回答一个问题：这套运行调度归谁——工具怎么执行、多步循环怎么走、上下文怎么管。流量由官方 ZCode 二进制签名，不伪造客户端、不提取令牌；工具执行通过 MCP 桥交回 DSH。197 项测试把契约锁死；准入与环境契约两层是 fail-closed，兑现不了的请求在起进程前就拒绝。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的 safe provider：把本机 ZCode CLI（zcode.cjs，ZCode 0.17.0）作为一个 zcode 路由接进 DSH 的 LLM 层。一个 LlmAdapter，无运行时依赖（dependencies 为空），Node ≥ 22。"
   },
   "schemaVersion": 1,
   "scripts": {

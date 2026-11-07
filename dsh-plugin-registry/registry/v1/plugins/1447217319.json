@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "b837ef79dc9ca49c8a7f0c0b29eed40568f951ca"
   },
   "github": {
@@ -41,27 +41,37 @@
   },
   "id": "gh:1447217319",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-memory-archiver",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:imaused/dsh-memory-archiver#b837ef79dc9ca49c8a7f0c0b29eed40568f951ca",
+    "version": "0.2.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-memory-archiver",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d9b458bd0e9cfa0a91c45b059b0222847b637c6662767fbae6ff2deab252d3be/imaused/dsh-memory-archiver",
     "description": "Approval-free memory archiving for DSH: backup before overwrite, one-call supersede, auto-pruned backups (30 days by default). Companion to dsh-kb-lite, which indexes these memory files for retrieval."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 加四个免审批的记忆归档工具，把可写范围硬限制在记忆目录内。"
   },
   "schemaVersion": 1,
   "scripts": {

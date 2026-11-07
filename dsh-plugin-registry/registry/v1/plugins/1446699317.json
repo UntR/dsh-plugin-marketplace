@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "c6527091e15cc2e280c6ad239f4a431d242cab83"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1446699317",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-playbook",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yangyiqun747/dsh-plugin-playbook#c6527091e15cc2e280c6ad239f4a431d242cab83",
+    "version": "0.4.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-playbook",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/44cbf251ab8d638991c76b04ccd4072b20cdb3818ae41fd67cc6bfa90a5d4b7c/yangyiqun747/dsh-plugin-playbook",
     "description": "Playbook for DeepSeek Harness: turn a successful task into a reusable SOP + pitfall list, then replay it on similar tasks as native DSH skills."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的经验复用 + 交付闸门插件：一次任务成功跑完后，把「可复用的 SOP + 踩过的坑」沉淀成一条 playbook；下次遇到同质任务时，它作为原生 Skill 出现在技能目录里，模型按需加载并照着做。 同一个任务族累计到足够样本后，SOP 可以升级成交付闸门：执行前必须让用户 review， 交付前必须逐项拿到客观证据，否则写文件的动作会被硬拦截。"
   },
   "schemaVersion": 1,
   "scripts": {

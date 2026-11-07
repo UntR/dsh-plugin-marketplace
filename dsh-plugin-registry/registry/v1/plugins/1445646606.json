@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
-    "headSha": "8a49ac8b075ecbdf5fed263f891f44e38e15793e"
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
+    "headSha": "916529e7ecb2da0158fe69b29dfb300468df93d3"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH（DeepSeek Harness）插件：把远端机器当本地用 —— 文件树、终端、SFTP 断点续传、按方向镜像的编辑同步，以及 -L / -D / -R 三种转发。",
     "fork": false,
     "forks": 0,
-    "headSha": "8a49ac8b075ecbdf5fed263f891f44e38e15793e",
+    "headSha": "916529e7ecb2da0158fe69b29dfb300468df93d3",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,13 +25,13 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVirRDg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/af1309fd5046c872ac6874b4b8eac6a576dbcb90c757545e5f05ad70c9862fe2/LinHao100076/dsh-ssh-remote",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5ad9b8d41870f040cf20ad51acb1f11c69f853edddc2939016ce1c7d8e733667/LinHao100076/dsh-remote-ssh",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/198456672?u=5a1573623eb3d1ab4b18ca99bc4b44cc0099400a&v=4",
       "login": "LinHao100076"
     },
-    "pushedAt": "2026-11-06T08:47:12Z",
-    "slug": "LinHao100076/dsh-ssh-remote",
+    "pushedAt": "2026-11-06T13:44:56Z",
+    "slug": "LinHao100076/dsh-remote-ssh",
     "stars": 3,
     "topics": [
       "deepseek-harness",
@@ -47,32 +47,43 @@
       "terminal",
       "xterm"
     ],
-    "updatedAt": "2026-11-06T08:47:16Z",
-    "url": "https://github.com/LinHao100076/dsh-ssh-remote"
+    "updatedAt": "2026-11-06T13:26:38Z",
+    "url": "https://github.com/LinHao100076/dsh-remote-ssh"
   },
   "id": "gh:1445646606",
   "install": {
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/server.mjs",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/server.mjs",
+    "name": "dsh-remote-ssh",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/af1309fd5046c872ac6874b4b8eac6a576dbcb90c757545e5f05ad70c9862fe2/LinHao100076/dsh-ssh-remote",
+    "coverUrl": "https://opengraph.githubassets.com/5ad9b8d41870f040cf20ad51acb1f11c69f853edddc2939016ce1c7d8e733667/LinHao100076/dsh-remote-ssh",
     "description": "DSH（DeepSeek Harness）插件：把远端机器当本地用 —— 文件树、终端、SFTP 断点续传、按方向镜像的编辑同步，以及 -L / -D / -R 三种转发。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）的远程 SSH 插件：在侧边栏里看远端文件系统、开远端终端、把远端服务映射到本机，本地改动自动上传、远端文件可下载，并与 dsh-better-sidebar 联动。"
   },
   "schemaVersion": 1,
   "scripts": {

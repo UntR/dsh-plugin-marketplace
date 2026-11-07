@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "43e5959796386c6f923c87cf45dbc3b0927df850"
   },
   "github": {
@@ -48,27 +48,39 @@
   },
   "id": "gh:1446394319",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mol-structure",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Masterchiefm/dsh-mol-structure#43e5959796386c6f923c87cf45dbc3b0927df850",
+    "version": "0.5.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-mol-structure",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ffce94f9319e7d9ae63046718b832efdb17db6cd1eca5a4fe8d20742d3df8611/Masterchiefm/dsh-mol-structure",
     "description": "DeepSeek Harness plugin: Mol* structure viewer with agent tools"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个让 DeepSeek Harness (dsh) 能够进行结构生物学信息分析、展示的插件：在 dsh 右侧 边栏内嵌本地 Mol\\ v5 结构查看器，让你在对话里直接加载、渲染、 标注和分析分子结构（PDB/mmCIF 等），AI 可以将结构生物学分析的图像直接展示给你。"
   },
   "schemaVersion": 1,
   "scripts": {

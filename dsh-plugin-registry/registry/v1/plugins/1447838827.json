@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "262a76f1787690ebe42735e7a0d3f7b6c7cc6b74"
   },
   "github": {
@@ -51,7 +51,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,14 +61,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/dsh-super-ptc-mode",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/514034683680c0f75614aaf3fdf56a7317b2cd80c3ee66afba9af336340961c8/zouyuanqing/dsh-super-ptc-mode",
     "description": "Super PTC Mode for DeepSeek Harness: PTC tool presentation + an aggressive Agent Teams delegation doctrine, shipped as an agent-preset bundle (super-ptc)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "@local/dsh-super-ptc-mode is a configuration-only DSH profile bundle. Installing it adds one agent preset, Super PTC Mode (id super-ptc): the shipped ptc composition — PTC tool presentation — plus a preset-scoped persona suffix that carries the SUPER PTC Agent Teams delegation do"
   },
   "schemaVersion": 1,
   "scripts": {

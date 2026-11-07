@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "942cd5428b4536c493d828c0bb42405f93929000"
   },
   "github": {
@@ -38,27 +38,38 @@
   },
   "id": "gh:1446326019",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-chat-lanes",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hellmage/dsh-chat-lanes#942cd5428b4536c493d828c0bb42405f93929000",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-chat-lanes",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/95c8a82ddf7d0481b3c8840e3015f87964cf90cb8f5a97b61ab8acd1fa02b9f8/hellmage/dsh-chat-lanes",
     "description": "DSH 对话窗口两列分屏：我说的常驻左栏、可点击跳转，模型的话在右侧流动，还带回车触发的会话内搜索。Splits the DSH chat window in two: your messages pinned in a clickable left rail, the model's replies flowing on the right, with Enter-to-search across the conversation."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DSH 对话窗口切成两列：我说的常驻左栏，模型的话在右侧单轴流动。"
   },
   "schemaVersion": 1,
   "scripts": {

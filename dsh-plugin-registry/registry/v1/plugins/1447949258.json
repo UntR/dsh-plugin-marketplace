@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "8596800e60ff7298a46b3dd7f68217e2acf38ee1"
   },
   "github": {
@@ -41,27 +41,44 @@
   },
   "id": "gh:1447949258",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-webchat-right",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ibz13145210/dsh-webchat-right-publish#8596800e60ff7298a46b3dd7f68217e2acf38ee1",
+    "version": "0.7.8-local.13"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-webchat-right",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.8-local.13"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5fc8381a042972eed52a9a907cb410d309fc8211b04a86b9c0129b4f70905397/ibz13145210/dsh-webchat-right-publish",
     "description": "魔改的网页版DeepSeek，左右结构布局，保登录，不遮挡会话，DSH更新后简单处理即可用"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "@jaychang1989/dsh-webchat 0.7.8 的本地改造分支：把「Chat DeepSeek」从左侧图标栏 搬到侧栏底部（Settings 旁、账户头像上方），页面渲染改到右侧栏标签页， 不再占用主栏会话视图。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "d68ce5e26e6496e1004db58283be964430eb8d3d"
   },
   "github": {
@@ -45,27 +45,37 @@
   },
   "id": "gh:1445823760",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-supergroup",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:LXS652/dsh-supergroup#d68ce5e26e6496e1004db58283be964430eb8d3d",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/plugin2.mjs",
+      "./client": "./client/client.js"
+    },
+    "main": null,
+    "name": "dsh-supergroup",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0ef9a05fb574433ec24ff45cf9c665f1cc8f9aed16a359d6deda504462b27998/LXS652/dsh-supergroup",
     "description": "解放你的注意力，给 DSH 装上「整体」：一个主会话带若干执行会话，按会话 ID 派工、按 rpcId 精确回收结果，重启后自动对账自愈。（Multi-session orchestration for DSH: group sessions into teams, dispatch by session ID, collect results by rpcId, and self-reconcile after restart.）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-supergroup 是 DeepSeek Harness 的一组会话编排插件。它把一个主会话和若干执行会话组成一个「整体」：主会话负责拆解与派工，执行会话各干各的，结果按投递时生成的 rpcId 精确回到主会话，不会把别人的输出误当成自己的结果。"
   },
   "schemaVersion": 1,
   "scripts": {

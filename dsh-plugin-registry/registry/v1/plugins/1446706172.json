@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "9d3020b3d698fa66d62fd60f1e1309d4dce7315d"
   },
   "github": {
@@ -45,27 +45,37 @@
   },
   "id": "gh:1446706172",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-secret-ask",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zayyehtut/dsh-secret-ask#9d3020b3d698fa66d62fd60f1e1309d4dce7315d",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js"
+    },
+    "main": null,
+    "name": "dsh-secret-ask",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8f76c90538ae82dcb6b8c0a7a30d41a6214569da817ac87fc392d76f2c215159/zayyehtut/dsh-secret-ask",
     "description": "Agent-asked secrets for DeepSeek Harness: a masked card stores API keys and tokens in the local credential store without them entering the chat, then injects them into one command."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Your agent needs an API key, token or password. Instead of asking you to paste it into the chat, it calls asksecret and a masked card appears in the conversation. You type the value once; it goes straight into the local credential store through a loopback request and never appear"
   },
   "schemaVersion": 1,
   "scripts": {

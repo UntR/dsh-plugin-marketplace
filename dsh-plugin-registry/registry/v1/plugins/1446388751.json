@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "82276c615238e95547d4e12216a65ebf0d323a06"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1446388751",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workbuddy-model",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:a404855501/dsh-workbuddy-model#82276c615238e95547d4e12216a65ebf0d323a06",
+    "version": "0.1.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workbuddy-model",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b32110ee798b57d18f92e45cf5abedbc2a9f3f14b13b7681ddb1c2c9f1f523cd/a404855501/dsh-workbuddy-model",
     "description": "把workbuddy国内版和国际版的模型自动接入dsh"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 WorkBuddy / WorkBuddy AI 桌面 App 里已登录的模型接入 DeepSeek Harness。国内版与国际版各自显示自己的模型分组，各用各自的账号与积分。"
   },
   "schemaVersion": 1,
   "scripts": {

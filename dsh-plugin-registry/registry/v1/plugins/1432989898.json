@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "b6862b54d82a1fc7ccd4ec6765454fbdbb974259"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1432989898",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-feishu-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:erty3244/dsh-feishu-bridge#b6862b54d82a1fc7ccd4ec6765454fbdbb974259",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.4",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-feishu-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2cdf4e06f2c41038e3c688357c3c45dcc83adcb7569ceb3d7aece721b86a725d/erty3244/dsh-feishu-bridge",
     "description": "DSH plugin: Feishu (Lark) long-connection bridge — webhook, threaded reply, optional self-trigger"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把飞书（Lark）自建机器人接到 DeepSeek Harness：手机上发一条飞书消息，DSH 里就开一轮；这一轮的回复自动回到飞书。走飞书自建应用的长连接，不需要公网 IP、不需要内网穿透、不需要回调地址。"
   },
   "schemaVersion": 1,
   "scripts": {

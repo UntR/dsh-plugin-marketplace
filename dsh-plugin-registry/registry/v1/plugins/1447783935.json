@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "6a86c33ae5e6ac8eae89ef2b49bbc62903c16c91"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1447783935",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-openrouter-guardrails",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:EamonnLiu/dsh-openrouter-guardrails#6a86c33ae5e6ac8eae89ef2b49bbc62903c16c91",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-openrouter-guardrails",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e7b0935d53736d6d46db4bfbc8deaa0fa7fcd99632b32061dfc5176c3359e1f9/EamonnLiu/dsh-openrouter-guardrails",
     "description": "DeepSeek Harness plugin: show only the OpenRouter models your API key may use (guardrails), via GET /models/user"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that makes the OpenRouter model picker show only the models your API key may use, the way Claude Code and pi do."
   },
   "schemaVersion": 1,
   "scripts": {

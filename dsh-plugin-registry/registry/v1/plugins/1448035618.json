@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "aa1c9e48ae07ad5bbb7924185fe5480e65a81aaa"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1448035618",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@vlln/dsh-listen",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vlln/dsh-listen#aa1c9e48ae07ad5bbb7924185fe5480e65a81aaa",
+    "version": "0.1.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.5",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.mjs",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/index.mjs",
+    "name": "@vlln/dsh-listen",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/15628f96099af72fc6e3c0436979930b394095927871d76c51249a732003e397/vlln/dsh-listen",
     "description": "让文本 Agent 听懂声音：dsh 插件提供 listen 工具，返回转写、声谱图、电平、频谱、音高和节奏"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "装完重启 dsh web；Plugins 页里填同一个包名。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "1a621f9dc6a80782494904ba83cb7dd3d5cc77aa"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1432498269",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-3d-director-desk",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Haitang-Hub/dsh-3d-director-desk#1a621f9dc6a80782494904ba83cb7dd3d5cc77aa",
+    "version": "0.3.6"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dsh/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./dsh/index.js",
+    "name": "dsh-3d-director-desk",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bc83eaaaa1173a4113c3fdffb42e952d0a254bc5ff98a3f6a786f53269c7a6e0/Haitang-Hub/dsh-3d-director-desk",
     "description": "3D 导演台 —— DSH 桌面端插件，把 3D 场景编排（摆角色、设镜头、时间轴预演、导出视频）暴露为 MCP 工具，供 AI Agent 直接调用，本地数据落盘、开箱即用。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 3D 导演台接入 DeepSeek Harness（DSH Desktop）的插件包。本仓库就是插件包本身： npm pack 直接出可安装的 .tgz。main 分支 bridge/ 与 site/ 产物已入库，克隆即打包； full 分支（全量源码）上这两目录由 npm run sync 生成（gitignore 排除），先 build 再打包。"
   },
   "schemaVersion": 1,
   "scripts": {

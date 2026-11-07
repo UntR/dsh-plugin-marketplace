@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "b9522e5f99160fbd2d21f7f975824940a0854172"
   },
   "github": {
@@ -55,33 +55,47 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-qqbot-muu@0.1.2",
-    "version": "0.1.2"
+    "spec": "dsh-qqbot-muu@0.1.5",
+    "version": "0.1.5"
   },
   "npm": {
-    "latestVersion": "0.1.2",
+    "latestVersion": "0.1.5",
     "published": true,
     "repositoryMatches": true
   },
   "package": {
     "exports": {
-      ".": "./index.js",
-      "./cordis.patch.yml": "./cordis.patch.yml",
-      "./package.json": "./package.json"
+      ".": {
+        "import": "./entry.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./channel-tools": {
+        "import": "./dist/channel-tools.js",
+        "types": "./dist/channel-tools.d.ts"
+      },
+      "./client": "./client/qqbot-settings.js",
+      "./schedule-store": {
+        "import": "./dist/features/schedule-store.js",
+        "types": "./dist/features/schedule-store.d.ts"
+      },
+      "./sticker-store": {
+        "import": "./dist/features/sticker-store.js",
+        "types": "./dist/features/sticker-store.d.ts"
+      }
     },
-    "main": "index.js",
+    "main": "./entry.js",
     "name": "dsh-qqbot-muu",
     "status": "valid",
     "type": "module",
-    "version": "0.1.2"
+    "version": "0.1.5"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c92ce8720275158ddd1a00053bb358c094339775d15a63569c20b922a4c66941/wuwo1979/dsh-qqbot-muu",
-    "description": "DSH / @zaofan dsh-qqbot 的扩展包与补丁集：统一记忆库、按会话隔离、群分级省 token、历史印象卡、表情包视觉打标、B站卡片分享、浮窗 UI 整理"
+    "description": "独立的 QQ 机器人 DSH 插件：双层记忆·人格养成·四形态桌宠·公网陪玩网关·表情包·视频创作 | Standalone QQ-bot plugin for DeepSeek Harness"
   },
   "readme": {
     "available": true,
-    "excerpt": "---"
+    "excerpt": "一只跑在你自己机器上的 QQ 桌宠助手——独立完整插件，零第三方插件依赖。"
   },
   "schemaVersion": 1,
   "scripts": {

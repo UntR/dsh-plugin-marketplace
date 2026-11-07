@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "aea0240fbdc0832376713aebd2cbb7147282a504"
   },
   "github": {
@@ -48,27 +48,42 @@
   },
   "id": "gh:1445611118",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-stats-panel",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-session-stats-panel@2.2.2",
+    "version": "2.2.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "2.2.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-stats-panel",
+    "status": "valid",
+    "type": "module",
+    "version": "2.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f79d82e9c264e622359c8fb385cf0a617e55d6e5367cde8b00b89e98b0222ee4/Oblivionis7999/dsh-session-stats-panel",
     "description": "DSH（DeepSeek Harness）Web 侧栏「会话统计」插件：Token/成本估算（按各厂商原厂官方价目）、DSH 运行状态实时采样、按模型分色的每日堆叠柱与环形图。零第三方依赖。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个零第三方依赖的本地 DSH Web 插件：在左侧栏「自动化任务」下面新增一个独立的 「会话统计」页面（不是设置页、不是弹窗），复刻会话用量看板："
   },
   "schemaVersion": 1,
   "scripts": {

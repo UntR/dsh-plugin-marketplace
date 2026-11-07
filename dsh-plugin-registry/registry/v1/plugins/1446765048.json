@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": false
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "e312be9eb04746b8e70c24eae2f119b610c0a4ce"
   },
   "github": {
@@ -51,7 +51,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,14 +61,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-tia-mcp-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "2.7.8-5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/66eb8d81a58af9ab1a5ab9dbbc9e8e63d3b0bdfb257b31bcc2d76689778f7803/leiyiqi070630-arch/dsh-tia-mcp-plugin",
     "description": "DeepSeek Harness plugin wiring Siemens TIA Portal V21 + V16 Openness MCP engines, with a host-side write guard."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 Siemens TIA Portal（博途） 接进 DeepSeek Harness（dsh）的插件：一个插件同时挂 V21 与 V16 两台 Openness MCP 引擎，模型侧直接得到 mcptia-portal / mcptia-portal-v16 工具，可以建工程、加硬件、生成 PLC/HMI、编译诊断、回读校验、保存。"
   },
   "schemaVersion": 1,
   "scripts": {

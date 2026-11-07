@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "8fe0a880b3f46cc3ceda83673a6c24f61e0250be"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1447130271",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-quota-takeover",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:puppy-bai/dsh-quota-takeover#8fe0a880b3f46cc3ceda83673a6c24f61e0250be",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-quota-takeover",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fc92fd87e714bae5cd493647ad81058db12555949335ec637c51ece4d5dc06db/puppy-bai/dsh-quota-takeover",
     "description": "额度接力：平台额度用完自动换下一个平台，缺该模型则跳过，全无则换档重遍历；额度或限流中断后自动补一条「继续」。Our Free Model 之上的一层接力。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "设计文档（含需求分析、失败分类表、风险对策、能力边界、终局兜底）： docs/quota-takeover-plugin-design.md 上架市场的步骤：docs/SUBMISSION.md"
   },
   "schemaVersion": 1,
   "scripts": {

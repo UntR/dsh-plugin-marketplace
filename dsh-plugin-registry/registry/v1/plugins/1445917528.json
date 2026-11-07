@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
-    "headSha": "1a0b4be765b344d992f7c277da3fb3f8f18491d4"
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
+    "headSha": "bdfc14e8e515f2e2525b91f71fb83e8fc8aadba4"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "修复 DeepSeek Harness 桌面端（Windows）每次启动都会新增一条 dsh-auth-* 登录 Cookie、从不清理，攒到约 70 条后 Cookie 请求头超过 16KB 被回 431（Web authentication failed）打不开的问题。插件在 DSH 启动时挂一个后台清理器，DSH 退出即清掉上一轮及更早的 Cookie；只删 dsh-auth-*，其他 Cookie 不动。",
     "fork": false,
     "forks": 0,
-    "headSha": "1a0b4be765b344d992f7c277da3fb3f8f18491d4",
+    "headSha": "bdfc14e8e515f2e2525b91f71fb83e8fc8aadba4",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVi7zWA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/2d9bfcee2eeab18ded25290eeb949fb73473897232152021fb45d22854c41871/M0Yun/dsh-cookie-guard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/bac228abaa4391c37b0aa7dcf095a7dc62b8943b756eab55aadbeb59d98c1618/M0Yun/dsh-cookie-guard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/190382715?u=06a956b7847df2357f83348cad06bee7087e5476&v=4",
       "login": "M0Yun"
     },
-    "pushedAt": "2026-11-04T16:55:55Z",
+    "pushedAt": "2026-11-06T16:31:23Z",
     "slug": "M0Yun/dsh-cookie-guard",
     "stars": 1,
     "topics": [
@@ -41,32 +41,43 @@
       "dsh-plugin",
       "windows"
     ],
-    "updatedAt": "2026-11-04T18:03:38Z",
+    "updatedAt": "2026-11-06T16:31:28Z",
     "url": "https://github.com/M0Yun/dsh-cookie-guard"
   },
   "id": "gh:1445917528",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cookie-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:M0Yun/dsh-cookie-guard#bdfc14e8e515f2e2525b91f71fb83e8fc8aadba4",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-cookie-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/2d9bfcee2eeab18ded25290eeb949fb73473897232152021fb45d22854c41871/M0Yun/dsh-cookie-guard",
+    "coverUrl": "https://opengraph.githubassets.com/bac228abaa4391c37b0aa7dcf095a7dc62b8943b756eab55aadbeb59d98c1618/M0Yun/dsh-cookie-guard",
     "description": "修复 DeepSeek Harness 桌面端（Windows）每次启动都会新增一条 dsh-auth-* 登录 Cookie、从不清理，攒到约 70 条后 Cookie 请求头超过 16KB 被回 431（Web authentication failed）打不开的问题。插件在 DSH 启动时挂一个后台清理器，DSH 退出即清掉上一轮及更早的 Cookie；只删 dsh-auth-*，其他 Cookie 不动。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English · 原理 · 怎么工作 · 用法 · 局限"
   },
   "schemaVersion": 1,
   "scripts": {

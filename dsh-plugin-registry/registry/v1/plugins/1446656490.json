@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "ddc258fe5d84fba14adfa08112c7a43ea6196acf"
   },
   "github": {
@@ -47,27 +47,37 @@
   },
   "id": "gh:1446656490",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-opencode-session",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:FFFengMJL/dsh-opencode-session#ddc258fe5d84fba14adfa08112c7a43ea6196acf",
+    "version": "0.2.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-opencode-session",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5be648d4411aaa239a6d0b5c65b438d79659fb6c75d13ceccea8563bf1d49aba/FFFengMJL/dsh-opencode-session",
     "description": "Per-session x-opencode-session header for custom OpenCode Go routes in DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给自定义的 OpenCode Go 路由（默认 opencode-go-extra）注入每会话稳定的 x-opencode-session，让不同 DSH 会话在 OpenCode 侧拿到不同的路由 / 缓存 ID。"
   },
   "schemaVersion": 1,
   "scripts": {

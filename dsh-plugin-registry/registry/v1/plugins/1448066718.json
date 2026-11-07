@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "813974a421931e29a288e62fca9a928955ef38b0"
   },
   "github": {
@@ -51,27 +51,43 @@
   },
   "id": "gh:1448066718",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-configandplugin-sync",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:alfredhuang211/dsh-configandplugin-sync#813974a421931e29a288e62fca9a928955ef38b0",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./icon": "./assets/icon.png",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-configandplugin-sync",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1f4aa128d58014b50d59b042f3978b381f5b5ec00df17b3e6081066b41c26446/alfredhuang211/dsh-configandplugin-sync",
     "description": "DSH 配置与插件同步 — 跨设备同步 DSH 配置、模型 provider、插件清单与配置、密钥、MCP；支持 Git/WebDAV/S3 兼容存储，永不存储插件代码。 / Sync DSH config, providers, plugin inventory & configs, secrets and MCP servers over Git, WebDAV or S3-compatible storage, without storing plugin code."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "换一台机器，DSH 里\"重建起来最烦\"的东西从来不是插件本身（那些能重新装），而是："
   },
   "schemaVersion": 1,
   "scripts": {

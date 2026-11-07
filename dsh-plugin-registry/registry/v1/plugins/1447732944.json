@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "dc2758e446525ea2428637f35e7cbac1eb5cb872"
   },
   "github": {
@@ -42,27 +42,40 @@
   },
   "id": "gh:1447732944",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-gpt-api",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wildbyteai/dsh-gpt-api#dc2758e446525ea2428637f35e7cbac1eb5cb872",
+    "version": "1.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-gpt-api",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6aac3b56efdd3be394fa9c7d6f085ca7a04a9cbef67386aac5507a1f8d99719f/wildbyteai/dsh-gpt-api",
     "description": "GPT API plugin for DeepSeek Harness: text calls, image generation and searchable model selection."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 对话中调用 GPT、文生图或参考图生图，并通过弹窗选择接口提供的模型。当前版本为 1.2.0。"
   },
   "schemaVersion": 1,
   "scripts": {

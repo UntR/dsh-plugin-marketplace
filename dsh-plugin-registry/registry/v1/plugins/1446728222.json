@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "35d2140522ca3d29c0e420075dea6ba2878000e6"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1446728222",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-review",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:miiy/dsh-review#35d2140522ca3d29c0e420075dea6ba2878000e6",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-review",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cab3b4cd82fe1d64d420b0eec1650bbbab16409e5b4766553a92dba22f385f7b/miiy/dsh-review",
     "description": "A review-first Git panel for the DSH Web GUI."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A review-first Git panel for the DSH Web GUI. It adds one tab to the right Sidebar that answers the questions a code review actually asks: what is dirty in my work tree, what does this commit change, how does my branch compare to another one, and which branch am I on — without a "
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "e8bede150bd46bc80d8d9cfcec468e43a5f72a45"
   },
   "github": {
@@ -43,27 +43,40 @@
   },
   "id": "gh:1446667205",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workspace-purge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xuenann/dsh-workspace-purge#e8bede150bd46bc80d8d9cfcec468e43a5f72a45",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-workspace-purge",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2b2c63ccef0caef636398caefb4754cc1acf4580f32f0753eb5996731eb00399/xuenann/dsh-workspace-purge",
     "description": "DSH next 插件，真正删除左侧的对话与工作区：会话日志与投影缓存移入回收站，工作区目录也可一并删除。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Really delete conversations and workspaces from the DeepSeek Harness sidebar."
   },
   "schemaVersion": 1,
   "scripts": {

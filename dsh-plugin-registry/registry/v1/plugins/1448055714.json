@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "2a795fc57ec14cb4766d74a733b1d3206f1c0ec9"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1448055714",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-paper-reader",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:SpBs2004/dsh-paper-reader#2a795fc57ec14cb4766d74a733b1d3206f1c0ec9",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.5.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-paper-reader",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8ca3b5806fc33eafcbe270a7ead6bbc8ea47f0e9c3178327b153f69ffe7afb9f/SpBs2004/dsh-paper-reader",
     "description": "Paper reading plugin for DeepSeek Harness: paper library, outline, KaTeX/PDF page reader, selection-to-chat, notes and review material."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 装一个「论文」页：论文库 → 章节大纲 → 正文（TeX 走 KaTeX，PDF 走页面渲染）→ 中英对照 → 笔记， 选中原文可以直接把它连同出处发进当前对话；同时给模型一套 paper 工具，让它按章节读、检索、写笔记、出审稿材料。"
   },
   "schemaVersion": 1,
   "scripts": {

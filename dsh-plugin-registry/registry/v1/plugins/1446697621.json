@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "45ac4c24e9701e7e48cc0ee75ab2789fb3c63875"
   },
   "github": {
@@ -47,27 +47,43 @@
   },
   "id": "gh:1446697621",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-restart-desktop",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-plugin-restart-desktop@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-restart-desktop",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/774a8fc95e2ce70be77ed29d6210544a7a705df998e450d6c32ebaf4fe75bf71/railgun20001/dsh-plugin-restart-desktop",
     "description": "DSH 桌面版一键重启插件：保留窗口位置/大小/最大化状态/所在显示器，可选重启后自动续上被打断的会话"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 桌面版（DeepSeek Harness Electron 壳）的一键重启插件：保留窗口位置、大小、最大化状态与所在显示器，可选在重启后自动续上被打断的会话（不只是你当前打开的那个）。"
   },
   "schemaVersion": 1,
   "scripts": {

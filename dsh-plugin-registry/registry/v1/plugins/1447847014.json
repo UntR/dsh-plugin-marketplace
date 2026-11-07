@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "67f6fd9e7aa5ef7cb8efc563e05a8e5fea62c173"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1447847014",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ai-journal",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-ai-journal@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-ai-journal",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1f4aa128d58014b50d59b042f3978b381f5b5ec00df17b3e6081066b41c26446/vc1235-ui/dsh-ai-journal",
     "description": "AI 日报/周报面板：从 DSH 会话日志生成按目标归类的工作总结、交付物与未完成待办（DSH Web 插件）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "用你本机的 DSH 会话日志，自动生成每日 / 每周 AI 日报：今天/本周做了什么、归属哪个目标、结果和交付物是什么、还有哪些没完成。在 DSH 左侧栏提供入口，面板按「目标 → 行动 → 结果 → 待办」分块展示，顶部是图形化摘要。"
   },
   "schemaVersion": 1,
   "scripts": {

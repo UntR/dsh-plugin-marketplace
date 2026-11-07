@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "c1cf0d1f15aba304782e3ef9f210d55749a6cf2f"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1432516895",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-baleen",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-baleen@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-baleen",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d5eba5f7c7efe920c106d93e10a02806387d6ea3aee0de22fddfada56e0cc634/slow-stack/baleen",
     "description": "信息源聚合 DSH 插件：定时摄取 RSS / B 站 / YouTube，读正文与字幕做本地预筛和三档判断，每轮出一份增量汇报。彻底不做平台互动。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "当前状态：M0–M5 全部完成并已装载进 DSH 真机验收。 摄取（RSS / B 站 / YouTube 三通道，读正文与字幕）→ 本地预筛 → 面板六格导航与收藏页 → 判断轮（五个只读工具 + 唯一写工具 saveverdicts，三档枚举锁死）→ 每轮增量汇报 → 设置页四页签，全链路真机跑过。小红书通道未做（需先做代码审查）。"
   },
   "schemaVersion": 1,
   "scripts": {

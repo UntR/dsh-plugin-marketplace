@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "ec3a1225aa184d0daefa57aee2c11317b665e1bb"
   },
   "github": {
@@ -47,27 +47,40 @@
   },
   "id": "gh:1445834022",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cookie-janitor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yan3536/dsh-cookie-janitor#ec3a1225aa184d0daefa57aee2c11317b665e1bb",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-cookie-janitor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3e53837ee807c10750854e0100ee9901cc83509ccda8cf425c166ecca732588a/yan3536/dsh-cookie-janitor",
     "description": "DeepSeek Harness plugin: stops stale dsh-auth-* cookies from overflowing the request header and causing HTTP 431 / blank screen"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 启动越来越慢、最后白屏或直接起不来？多半是浏览器里堆积了几十条过期的登录 cookie。"
   },
   "schemaVersion": 1,
   "scripts": {

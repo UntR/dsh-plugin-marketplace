@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "bdb1eebaf5835961a739387184b7501c7d356961"
   },
   "github": {
@@ -49,27 +49,39 @@
   },
   "id": "gh:1445449865",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-auto-proxy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ender-candle/dsh-auto-proxy#bdb1eebaf5835961a739387184b7501c7d356961",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-auto-proxy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/cb32565e493b9d1adaa56f5c8d9e4144c0675c520334d46adcfb2ae6a058b136/ender-candle/dsh-auto-proxy",
     "description": "DeepSeek Harness 自动网络代理插件：自动识别系统代理，搜索 / LLM / 网页三类流量独立开关。Auto network proxy for DSH: Automatic identification system proxy. Toggle for search, LLM and web traffic independently."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "三个开关的网络代理插件：搜索走代理、LLM 走代理、网页走代理，各自独立； 统一前提是——系统代理开着才可能走代理，系统代理一关立刻全部直连（绝不回退到手填地址）。"
   },
   "schemaVersion": 1,
   "scripts": {

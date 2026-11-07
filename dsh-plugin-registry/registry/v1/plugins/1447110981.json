@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "f1b0b5c5ae34ed1ea87f033ec3cb08f5754328c6"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1447110981",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-writing-discipline",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:oobitoooo/dsh-writing-discipline#f1b0b5c5ae34ed1ea87f033ec3cb08f5754328c6",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json",
+      "./rules": "./lib/rules.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-writing-discipline",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6fe21219ec37250b8cfaa4f673b6687a1920e2bdaf5b949911bd2121f6462366/oobitoooo/dsh-writing-discipline",
     "description": "DSH plugin: defensive-writing gate with fact-conservation lock (zero network, zero LLM)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "零网络、零 LLM、纯本地正则 + 统计。五个工具，全部确定性：同样的输入永远给同样的输出，可进 CI、可写进 pre-commit。"
   },
   "schemaVersion": 1,
   "scripts": {

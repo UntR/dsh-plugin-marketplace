@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
-    "headSha": "6c5e7a038a937a8273d5e7430ee76c395a73e971"
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
+    "headSha": "615fb781604bcd22604ec23bf53132340321c7f1"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Super Chat panel and super-chat Source for DeepSeek Harness: one tagged message stream, topic views, SQLite storage, a WeChat bridge, and dsh-superagent integration.",
     "fork": false,
     "forks": 0,
-    "headSha": "6c5e7a038a937a8273d5e7430ee76c395a73e971",
+    "headSha": "615fb781604bcd22604ec23bf53132340321c7f1",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVkubEw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a2188aad05348616914bb15da77fe5eab10a8e083f00f0faaabb03b5e803f555/gekailin/dsh-super-chat",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/fceb15d0103ce7dfb445fc1368a853097c9552161f69bc324c14dd0a2d145ea4/gekailin/dsh-super-chat",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/1251407?v=4",
       "login": "gekailin"
     },
-    "pushedAt": "2026-11-06T10:12:05Z",
+    "pushedAt": "2026-11-06T12:38:42Z",
     "slug": "gekailin/dsh-super-chat",
     "stars": 0,
     "topics": [
@@ -44,38 +44,55 @@
       "typescript",
       "wechat"
     ],
-    "updatedAt": "2026-11-06T10:12:11Z",
+    "updatedAt": "2026-11-06T12:13:04Z",
     "url": "https://github.com/gekailin/dsh-super-chat"
   },
   "id": "gh:1447795475",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-super-chat",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:gekailin/dsh-super-chat#615fb781604bcd22604ec23bf53132340321c7f1",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-super-chat",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a2188aad05348616914bb15da77fe5eab10a8e083f00f0faaabb03b5e803f555/gekailin/dsh-super-chat",
+    "coverUrl": "https://opengraph.githubassets.com/fceb15d0103ce7dfb445fc1368a853097c9552161f69bc324c14dd0a2d145ea4/gekailin/dsh-super-chat",
     "description": "Super Chat panel and super-chat Source for DeepSeek Harness: one tagged message stream, topic views, SQLite storage, a WeChat bridge, and dsh-superagent integration."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A Super Chat panel for DeepSeek Harness: one general chat stream where messages can carry several topic tags. With dsh-superagent-prototype installed, topics act as task-dispatch cues and untagged messages are left for Superagent to decide."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

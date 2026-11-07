@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "50733ccad9224914eabef5e80e405edb08772a27"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1447386949",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-codex-workbench",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-codex-workbench@0.1.6",
+    "version": "0.1.6"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.6",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-codex-workbench",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/829c08e7798ff6a6221cad104e3f5c863e843d8b34a27bb6e7c9752f2cbbd4d2/Vlad1108/dsh-codex-workbench",
     "description": "Codex sign-in, quota and search for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Codex Workbench adds ChatGPT sign-in and subscription quota display to DSH Web. It uses the existing openai-codex provider in DSH 0.2.1-rc.5, so each user signs in with their own account."
   },
   "schemaVersion": 1,
   "scripts": {

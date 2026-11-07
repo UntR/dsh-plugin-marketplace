@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "8b9d400b12f86935ca974946ad11d8f318b17579"
   },
   "github": {
@@ -46,27 +46,37 @@
   },
   "id": "gh:1447170916",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-stateful-responses",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zhexuany/dsh-stateful-responses#8b9d400b12f86935ca974946ad11d8f318b17579",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-stateful-responses",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2064c45a2afcebef344c84c421ec04303e9403df1aacdbf13374f5e04cd96136/zhexuany/dsh-stateful-responses",
     "description": "dsh plugin: use the stateful OpenAI Responses API (previous_response_id + delta input) instead of replaying the full conversation"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 dsh 调用 GPT 模型时使用有状态的 Responses API：每一步只把新增的 input item 和上一轮的 previousresponseid 发给上游，而不是把整段会话重放一遍。"
   },
   "schemaVersion": 1,
   "scripts": {

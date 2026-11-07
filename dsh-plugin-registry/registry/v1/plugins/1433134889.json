@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "fb8e07c3d730f97bcd8b4eee6260684414cfd94e"
   },
   "github": {
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-connector-builder",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/55144c149471401e2d4bc59c71c7a4525d2e552d359a244a09e77f39d368c949/WilShi/dsh-connector-builder",
     "description": "Guardrailed connector design, validation, registration, and sharing Skill for DSH"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "面向 DSH 0.1.5-rc.2 的连接器（Connector）设计、校验、注册与分享工具。把\"让 DSH 接入一个外部系统/API\"这件事，交付为标准、安全、可分享的 .dsh-connector.json。"
   },
   "schemaVersion": 1,
   "scripts": {

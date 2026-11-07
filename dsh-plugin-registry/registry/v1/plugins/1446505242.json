@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "e218fdd0f375d800119b56bf07bf2d7981d9222f"
   },
   "github": {
@@ -16,7 +16,7 @@
     "defaultBranch": "main",
     "description": "DeepSeek Harness 插件：把本机微信 4.x 聊天记录导出为 HTML/CSV/TXT（左侧栏入口 + agent 工具）",
     "fork": false,
-    "forks": 0,
+    "forks": 1,
     "headSha": "e218fdd0f375d800119b56bf07bf2d7981d9222f",
     "homepageUrl": null,
     "language": "JavaScript",
@@ -48,27 +48,39 @@
   },
   "id": "gh:1446505242",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/wechat-archive",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:qiuleec/DSH-wechat-export#e218fdd0f375d800119b56bf07bf2d7981d9222f",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/wechat-archive",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/094f10ae7a714d04e5922677fe2e48078a71b3ac06a6297327f0326df5d4171a/qiuleec/DSH-wechat-export",
     "description": "DeepSeek Harness 插件：把本机微信 4.x 聊天记录导出为 HTML/CSV/TXT（左侧栏入口 + agent 工具）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness 插件：在 左侧栏 加一个入口，把本机 微信 4.x（Windows）的聊天记录解密导出为 网页时间线（HTML）、CSV 表格 与 纯文本（TXT）。 同一套能力同时注册为 agent 工具 wechatarchive，可以直接让 agent 帮你列出、筛选、预览、导出。"
   },
   "schemaVersion": 1,
   "scripts": {

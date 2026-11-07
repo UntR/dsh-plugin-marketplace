@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "8f7befd734fc200e22fe6b7f9392e466a9c46423"
   },
   "github": {
@@ -39,27 +39,38 @@
   },
   "id": "gh:1446408459",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-model-news-radar",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:805808786/dsh-plugin-model-news-radar#8f7befd734fc200e22fe6b7f9392e466a9c46423",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-model-news-radar",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4d39d6142bcbb8e7682da3d314617d21b0872b7747196835895b9ca5cc2503c5/805808786/dsh-plugin-model-news-radar",
     "description": "模型资讯雷达"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）插件。按一份「厂商官方资讯来源清单」定时采集各大模型厂商的发布资讯，去重后写成 Markdown 日报 / 周报 / 月报，并在 DSH 里起一个会话用你当前的默认模型写摘要。"
   },
   "schemaVersion": 1,
   "scripts": {

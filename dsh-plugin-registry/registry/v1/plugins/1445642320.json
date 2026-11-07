@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "7a7733f1cc8bdccac81aa7bfe70fcfd9cde99467"
   },
   "github": {
@@ -45,27 +45,42 @@
   },
   "id": "gh:1445642320",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "_turn-sound",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Buir5/_turn-sound#7a7733f1cc8bdccac81aa7bfe70fcfd9cde99467",
+    "version": "0.3.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./client/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "_turn-sound",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b2b682c740d21d1fb720885de5181283d12e478c541a0b9cda236c63487eedea/Buir5/_turn-sound",
     "description": "DSH 插件：回合结束提示音 + 可拖动额度浮层（人民币扣费/余额）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness（DSH）插件。宿主半区跑在 Node 里负责记账与发音频，客户端半区是一个 38px 的金色铃铛，点开是设置面板。"
   },
   "schemaVersion": 1,
   "scripts": {

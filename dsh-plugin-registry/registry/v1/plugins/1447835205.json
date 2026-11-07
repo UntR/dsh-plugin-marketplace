@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "8661767ea7e26b762236e539924669f0f97b97b6"
   },
   "github": {
@@ -47,27 +47,41 @@
   },
   "id": "gh:1447835205",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ima-ragplugin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:RayJitan/dsh-ima-ragplugin#8661767ea7e26b762236e539924669f0f97b97b6",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/host.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/host.js",
+    "name": "dsh-ima-ragplugin",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5c8edd73cd8a39d3c84eb4ee6f4f4bb8f73adf36029415ec9a57fc79629ba959/RayJitan/dsh-ima-ragplugin",
     "description": "DeepSeek Harness 插件：把 IMA 账号可访问/订阅的知识库接入 DSH，提供 ima_kb_list / ima_kb_search / ima_kb_ask 原生工具，并支持检索条数设置与每日签到自动化。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）插件：把 IMA 账号里可访问 / 已订阅的知识库读出来，在侧边栏里勾选要接入的库， 再让模型通过原生工具直接检索这些知识库的原文。"
   },
   "schemaVersion": 1,
   "scripts": {

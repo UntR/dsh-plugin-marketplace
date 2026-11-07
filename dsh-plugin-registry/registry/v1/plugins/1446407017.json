@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "e8548d25aaea013f00d94c51caaba4ae4d805875"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1446407017",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-opencode-client",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yhuan416/dsh-opencode-client#e8548d25aaea013f00d94c51caaba4ae4d805875",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-opencode-client",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8debd02ad6ab74b953cef2298daa1f290237178c551c266883e2cdd7d83c0620/yhuan416/dsh-opencode-client",
-    "description": ""
+    "description": "A DeepSeek Harness plugin that acts as an OpenCode client: it connects to one or more remote opencode serve instances and exposes their projects, sessions and messages to dsh, delegates tasks into them, and registers OpenCode as a native dsh subagent backend."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that acts as an OpenCode client: it connects to one or more remote opencode serve instances and exposes their projects, sessions and messages to dsh, delegates tasks into them, and registers OpenCode as a native dsh subagent backend."
   },
   "schemaVersion": 1,
   "scripts": {

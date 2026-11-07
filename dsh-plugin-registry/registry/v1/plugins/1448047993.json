@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "8530218c726859e2df1526628f44f3cc24e3bc24"
   },
   "github": {
@@ -42,27 +42,39 @@
   },
   "id": "gh:1448047993",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-interruption-notifier",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:MeirinRuan/dsh-model-interruption-notifier#8530218c726859e2df1526628f44f3cc24e3bc24",
+    "version": "1.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./host.mjs",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-model-interruption-notifier",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/21d908b411e80c99b72e0a38bef1959758a245e7086d2a63600e05d862a00051/MeirinRuan/dsh-model-interruption-notifier",
     "description": "DSH 模型运行失败后自动继续，也可切换为应用内提醒并手动确认。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Continue a DSH conversation after a failed model run, automatically or after confirmation in a corner reminder. Automatic continuation is enabled by default and submits the exact text 继续 through the original conversation's normal prompt path."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "7c5c2c57d64693b9773881ac080b0fdd9aa03841"
   },
   "github": {
@@ -52,27 +52,38 @@
   },
   "id": "gh:1446682036",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-distfit",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:stormx-u/dsh-easydistfit#7c5c2c57d64693b9773881ac080b0fdd9aa03841",
+    "version": "0.6.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-distfit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/72f019adb3f1e5edda346983816654b3e9dac93e6356afa17ed28ef164625586/stormx-u/dsh-easydistfit",
     "description": "一个用于做一些分布拟合的小工具，科研用。DistFit — DeepSeek Harness (DSH) 分布拟合插件：23 个分布族、K-S/A-D/CvM/chi2 检验、AIC 排名、AI 解读、论文/PPT 出图导出。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把一份数值表变成「分布拟合报告」的 DSH 插件：多列数据 → 同时拟合 23 个分布族 → 多准则拟合优度检验（K-S / A-D / CvM / χ²）→ AIC 排名与交互图表 → AI 解读 → 导出 CSV / Markdown / JSON；图表可按论文 / PPT 模板调整样式后导出 SVG / PNG / JPG / PDF，也能用一句话让 AI 改图。"
   },
   "schemaVersion": 1,
   "scripts": {

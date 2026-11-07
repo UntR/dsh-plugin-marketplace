@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "0f3da3964e39468289fa497200bf7913205fa829"
   },
   "github": {
@@ -42,27 +42,41 @@
   },
   "id": "gh:1447216451",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-daily-checkin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:top10xiaowangzi-byte/dsh-daily-checkin#0f3da3964e39468289fa497200bf7913205fa829",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-daily-checkin",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/672da1ebb5e391c53031e01472c2c76ad20ddf682d451f24fac1ff37994c5ae2/top10xiaowangzi-byte/dsh-daily-checkin",
     "description": "DeepSeek Harness 插件：启动时自动完成 WorkBuddy / WPS 灵犀 / Qoder 每日签到，标题栏面板显示结果并支持失败重试，面板挂 shell.overlay。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个只装进 DeepSeek Harness 的签到插件：DSH 启动时自动完成 WorkBuddy、WPS 灵犀、Qoder 三家的每日签到， 并在会话标题栏显示签到入口与结果面板（失败项可重试）。"
   },
   "schemaVersion": 1,
   "scripts": {

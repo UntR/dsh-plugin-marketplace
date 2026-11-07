@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "128eb892efd98b6916159c67f3f360a977f417de"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1446663551",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-access-gateway",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:miiy/dsh-access-gateway#128eb892efd98b6916159c67f3f360a977f417de",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-access-gateway",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/054a7ae9a17817fbd0be5fdfaf706dba8fd7760f172e2447a8eeb7edb9e8147e/miiy/dsh-access-gateway",
     "description": "Access the DSH Web GUI from your LAN."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Access the DSH Web GUI from your LAN. On the same Wi-Fi, a phone, a tablet or another computer opens http://192.168.0.10:3081 and types the password once. Set the address to 0.0.0.0 and every interface answers — Wi-Fi, VPN, wired."
   },
   "schemaVersion": 1,
   "scripts": {

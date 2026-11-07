@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "aa5a8cc395bf2d44e823d45966740381d70b9376"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1448052887",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-quota-autoresume",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:shuijhu/dsh-quota-autoresume#aa5a8cc395bf2d44e823d45966740381d70b9376",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/dsh-quota-autoresume",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8ff754725a2ec00d817251037053a3f0fd1cfeb0f7bdf5479964969df7b5f202/shuijhu/dsh-quota-autoresume",
     "description": "DeepSeek Harness plugin that resumes tasks stopped by plan-quota exhaustion, right after the next quota reset (05:00/10:00/15:00/20:00/24:00)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin that keeps a task alive across a plan-quota reset."
   },
   "schemaVersion": 1,
   "scripts": {

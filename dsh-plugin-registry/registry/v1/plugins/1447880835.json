@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "e87c638e8eb8b6d0b1b88cbc5968c8606352fa67"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1447880835",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-claude-code-delegate",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-claude-code-delegate@1.2.0",
+    "version": "1.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-claude-code-delegate",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e359b452657f3ad20343defe9c50f841b65dcf0a973ca0f4056427de8d5f6972/lidaqi001/dsh-claude-code-delegate",
     "description": "DeepSeek Harness agent preset that delegates every task to a Claude Code subagent"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Claude Code 委托 —— DeepSeek Harness 的 Agent preset 插件：新建会话时选择这个模式， 会话就只做调度，每个实际任务都通过 subagentclaudecode 交给 Claude Code 子代理执行， 主代理负责理解需求、组织任务说明、转交和汇报结果。"
   },
   "schemaVersion": 1,
   "scripts": {

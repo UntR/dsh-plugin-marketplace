@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "079b8bfb3ff0723048f1337ed2e6572a5a88ace0"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1432874947",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-um-proxy-ondemand",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-um-proxy-ondemand@1.5.4",
+    "version": "1.5.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.5.4",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-um-proxy-ondemand",
+    "status": "valid",
+    "type": "module",
+    "version": "1.5.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b973ee0be8746ff99fe45179a61946140a16b3ded324d3b9116b7cad48ce5de2/TINGOD2006/dsh-um-proxy-ondemand",
     "description": "On-demand local proxy for the University of Macau GenAI gateway: wakes only when DSH uses the um-genai provider, renews the token on a renewal clock, logs in on a hidden desktop, and is managed from a DSH settings page."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "讓 UM GenAI 本機代理（http://127.0.0.1:8788）只在你真的用到它的時候才活著。"
   },
   "schemaVersion": 1,
   "scripts": {

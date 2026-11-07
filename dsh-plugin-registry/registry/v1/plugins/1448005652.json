@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "a707ec9147ee12a7d2e3bc0678e16a1d3372e83a"
   },
   "github": {
@@ -47,27 +47,42 @@
   },
   "id": "gh:1448005652",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-doc-ledger",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:LuoShanHui/dsh-doc-ledger#a707ec9147ee12a7d2e3bc0678e16a1d3372e83a",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./index.js"
+      },
+      "./client": {
+        "default": "./client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-doc-ledger",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1448005652/32b15016-6acd-41b8-8488-86b5a7589aea",
     "description": "DSH 会话文档台账插件：记录每个会话使用/创建/修改过哪些文档，支持时间排序、类型分组、搜索、预览与跨会话汇总。 A DSH sidebar plugin: per-session document ledger — which documents a session read, created or modified — with time ordering, type grouping, search, two preview modes and a cross-session view. Windows only."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "每个会话一份文档台账：这个会话用过哪些文档、创建 / 修改了哪些，带时间排序、类型分组、搜索、跨会话汇总，以及两种预览入口。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "889b6897fc815f120ee61e83cda442a71e126b22"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1446835491",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-macos-notify",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Chanceux-L/dsh-macos-notify#889b6897fc815f120ee61e83cda442a71e126b22",
+    "version": "1.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-macos-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/30a74b9cffa844ae29836b1aa6ecb359b234ac3b96a1ca83ee6d06c6d6f83e90/Chanceux-L/dsh-macos-notify",
     "description": "DeepSeek Harness 插件：以应用自身身份发出 macOS 原生通知，点击通知跳转对应会话"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English summary: Native macOS notifications for DeepSeek Harness, emitted by the app's own GUI process (not an external osascript process), so they are never silently dropped by macOS signature attribution and clicking one jumps straight to the originating session."
   },
   "schemaVersion": 1,
   "scripts": {

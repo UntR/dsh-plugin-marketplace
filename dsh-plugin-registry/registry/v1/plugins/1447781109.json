@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "b4bc131853cebde7d1315f93946fee7023241523"
   },
   "github": {
@@ -45,27 +45,42 @@
   },
   "id": "gh:1447781109",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-archive-delete",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ZenithJoyH/dsh-archive-delete#b4bc131853cebde7d1315f93946fee7023241523",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-archive-delete",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b5b31e4de206a1b72f15bae38a038252623e6b41d1d5e1ec4cdb8ebb058c0736/ZenithJoyH/dsh-archive-delete",
     "description": "DSH Web 插件：在侧栏永久删除已归档会话 / Permanently delete archived DSH sessions"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的官方设计是「会话只能归档，永不删除」：归档只是把会话从列表里隐藏，日志仍然占着磁盘，也仍然能被搜索到。dsh-archive-delete 补上这一个缺口："
   },
   "schemaVersion": 1,
   "scripts": {

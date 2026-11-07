@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "219f11c6ed97a167ffb69bbe6da4e84c9229c4f5"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1446458327",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-hotspot",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:swiftdo/dsh-hotspot#219f11c6ed97a167ffb69bbe6da4e84c9229c4f5",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/plugin.js",
+      "./client": "./src/client.js",
+      "./core": "./src/core/pipeline.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/plugin.js",
+    "name": "dsh-hotspot",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/11a1deac36ebc65883270d70a37f7c901cd1230a75ec1d499fe0e21360929edf/swiftdo/dsh-hotspot",
     "description": "DeepSeek Harness (DSH) 插件：热点采集、去重、确定性打分与草稿落地，支持侧边栏入口与控制面板"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "热点采集 → 去重 → 确定性排序 → 草稿落地。当前只适配 VitePress 博客，同时是一个 DeepSeek Harness 插件。"
   },
   "schemaVersion": 1,
   "scripts": {

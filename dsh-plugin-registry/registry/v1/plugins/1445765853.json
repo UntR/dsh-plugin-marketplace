@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "c4fd2b11537eb88c57c314b493a1e5d8499daf27"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1445765853",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cache-probe",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-cache-probe@0.5.7",
+    "version": "0.5.7"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.7",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-cache-probe",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.7"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/699b4aa8dd02e7ac7cf29dc38a8527432e488d6622713ffbcb158bc5d358e1aa/xymy666/dsh-cache-probe",
     "description": "DSH channel test page: prompt-cache hit rate, streaming speed, and a pelican SVG test."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH Web GUI 里打开一个独立的 渠道测试 页面，测试任意已配置渠道的提示词缓存命中率、响应速度，并用「鹈鹕测试」检验模型能否画出可用的 SVG。"
   },
   "schemaVersion": 1,
   "scripts": {

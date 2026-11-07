@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
-    "headSha": "89059db50375688837af82ffe72f5d2f98039da2"
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
+    "headSha": "00b3b91fa1c72821c62ef7fe5bd4722c9b2144e8"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Prevent your DSH from experiencing memory loss!",
     "fork": false,
     "forks": 0,
-    "headSha": "89059db50375688837af82ffe72f5d2f98039da2",
+    "headSha": "00b3b91fa1c72821c62ef7fe5bd4722c9b2144e8",
     "homepageUrl": null,
     "language": "HTML",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVk-TnA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d3dbdba22a628655a6f51be4f707d0dc9b21b6d64c2539168495fdaf88830cad/Samanthara726/DSH-Brain-Memory",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d911352a25371a6dc96051f37e62389eb3c35261aad07a2a5a74b92ad293855d/Samanthara726/DSH-Brain-Memory",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/310132640?v=4",
       "login": "Samanthara726"
     },
-    "pushedAt": "2026-11-06T09:21:13Z",
+    "pushedAt": "2026-11-07T10:17:09Z",
     "slug": "Samanthara726/DSH-Brain-Memory",
     "stars": 0,
     "topics": [
@@ -38,32 +38,43 @@
       "dsh-plugin",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-11-06T09:21:59Z",
+    "updatedAt": "2026-11-07T10:17:13Z",
     "url": "https://github.com/Samanthara726/DSH-Brain-Memory"
   },
   "id": "gh:1448055708",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-brain-memory",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Samanthara726/DSH-Brain-Memory#00b3b91fa1c72821c62ef7fe5bd4722c9b2144e8",
+    "version": "2.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-brain-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "2.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d3dbdba22a628655a6f51be4f707d0dc9b21b6d64c2539168495fdaf88830cad/Samanthara726/DSH-Brain-Memory",
+    "coverUrl": "https://opengraph.githubassets.com/d911352a25371a6dc96051f37e62389eb3c35261aad07a2a5a74b92ad293855d/Samanthara726/DSH-Brain-Memory",
     "description": "Prevent your DSH from experiencing memory loss!"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 接一套「模拟人脑」记忆：FSRS-5 遗忘曲线 + 性格权重 + 中文 2-gram + 可选本地向量。 记忆存在独立的 SQLite 库里（不是 DSH 自己的 session 存储），每轮对话自动召回 3 段塞进上下文， 回合结束自动把这一问一答落库；聊得越久，越像跟同一个老朋友说话。"
   },
   "schemaVersion": 1,
   "scripts": {

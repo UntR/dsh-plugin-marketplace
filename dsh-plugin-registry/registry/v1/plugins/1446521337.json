@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "4969b833717b9d3ce2d38a1eb266def737ce40a0"
   },
   "github": {
@@ -47,27 +47,44 @@
   },
   "id": "gh:1446521337",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-breeze-voice",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kingcharleslzy-ai/dsh-breeze-voice#4969b833717b9d3ce2d38a1eb266def737ce40a0",
+    "version": "0.4.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-breeze-voice",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2fc411f6e38ae23355880ebc27346c31b8003dce1625bd7ec62da8a70bb929b7/kingcharleslzy-ai/dsh-breeze-voice",
     "description": "Continuous voice conversations in your current DeepSeek Harness chat · self-hosted Breeze TTS, speech recognition and interruption"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给现有 DSH 会话增加连续语音交流：本机检测人声、停顿后识别、送入当前会话、按句流式播放回答。继续使用该会话的模型、上下文、工具与审批。"
   },
   "schemaVersion": 1,
   "scripts": {

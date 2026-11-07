@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "7b314dfbd55e74ae5f80f670a589d4d0abd6cab5"
   },
   "github": {
@@ -57,27 +57,40 @@
   },
   "id": "gh:1447334098",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/global-radio",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zeelinkCN/dsh-global-radio#7b314dfbd55e74ae5f80f670a589d4d0abd6cab5",
+    "version": "1.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./assets/icon-256.png",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@local/global-radio",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/874f9822ffdca7e3516eaf52afd3c4701681e54812afe90e7ab901c976cf7d2c/zeelinkCN/dsh-global-radio",
     "description": "DeepSeek Harness 全球电台插件（MIT）：网易云风格发现页、20 个国内城市地方台、FM/AM 频率、全屏频谱可视化、底部大播放条、侧栏迷你条与网易云互斥；支持 HLS、备用信号源与 Agent 对话点播；macOS / Windows。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 里直接收听全球实时电台。左侧栏入口 → 网易云风格的发现页（大 banner + 分类卡 + 横滑列表）， 点分类卡会随机挑一台该类型的电台开始播放；也可以在对话框直接说「播放上海的某个电台」「随便来点电台」「来点新闻电台」「听 FM 97.4」，Agent 会调用插件工具直接开播；底部常驻大播放条随时控制；进入播放页看物理频率（FM / AM）、 台标与实时频谱；回到对话继续工作时播放器收进左侧栏，与网易云音乐的迷你条上下堆叠，同一时刻只有一条音频在发声。"
   },
   "schemaVersion": 1,
   "scripts": {

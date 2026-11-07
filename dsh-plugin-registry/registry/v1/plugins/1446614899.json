@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "6d575c0b2896ec6d9f821e753436e40cdc5ad5a4"
   },
   "github": {
@@ -47,27 +47,53 @@
   },
   "id": "gh:1446614899",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@zaofan/dsh-qqbot",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:RrOrange/dsh-qqbot#6d575c0b2896ec6d9f821e753436e40cdc5ad5a4",
+    "version": "1.11.36"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.12.8",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./entry.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./channel-tools": {
+        "import": "./dist/channel-tools.js",
+        "types": "./dist/channel-tools.d.ts"
+      },
+      "./client": "./client/qqbot-settings.js",
+      "./schedule-store": {
+        "import": "./dist/features/schedule-store.js",
+        "types": "./dist/features/schedule-store.d.ts"
+      },
+      "./session-registry": "./dist/features/session-registry.js",
+      "./sticker-store": {
+        "import": "./dist/features/sticker-store.js",
+        "types": "./dist/features/sticker-store.d.ts"
+      }
+    },
+    "main": "./entry.js",
+    "name": "@zaofan/dsh-qqbot",
+    "status": "valid",
+    "type": "module",
+    "version": "1.11.36"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1ec845e1ecebeddd069f8097b69eab47baa6aa14c3943ff519bebe46f9de2b33/RrOrange/dsh-qqbot",
     "description": "DeepSeek Harness QQ 机器人插件（个人修改版）— 流式输出、出站健壮性、事件订阅与设置面板重做"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DeepSeek Harness（dsh）接到 QQ 上的插件：群里能聊、能发图/文件、有定时任务、有多人格、有可视化设置面板。"
   },
   "schemaVersion": 1,
   "scripts": {

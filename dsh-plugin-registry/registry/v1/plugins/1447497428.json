@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "2a4421f0af723f0fbdaab0201fe624506dbd181b"
   },
   "github": {
@@ -43,33 +43,42 @@
   },
   "id": "gh:1447497428",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-session-doctor",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:aturzone/dsh-session-doctor#2a4421f0af723f0fbdaab0201fe624506dbd181b",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/index.mjs"
+    },
+    "main": "./dist/index.mjs",
+    "name": "dsh-session-doctor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5844a7d971922930a21e522c5756c37800be95b14b55cea4bff556e822347e27/aturzone/dsh-session-doctor",
     "description": "Read-only diagnostics for DeepSeek Harness session data: finds stored log generations the reader would reject before it opens them."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Read-only diagnostics for DeepSeek Harness (dsh) session logs whose stored events violate the reader's turn/step/scope rules. This is the failure class behind Discussions #11971, #11981, and #11121 (adjacent lifecycle issues): one bad event coordinate makes a whole stored session"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

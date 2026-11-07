@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "d295e156c02b8206d9f0e9d0891180ceaf6149c0"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1447382849",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-client-ui-token-usage",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Mercer08572/dsh-plugin-token-usage#d295e156c02b8206d9f0e9d0891180ceaf6149c0",
+    "version": "0.3.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-client-ui-token-usage",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5fade085984e4b363e10741e7b18c05cbfa637364b5cb325059d77b3cc3208c1/Mercer08572/dsh-plugin-token-usage",
     "description": "Token usage plugin for dsh"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 装一块 token 看板：今天用掉多少、花在哪个模型、缓存命中多少，一眼看完。 数据全部来自本机会话日志，不联网、不上报。"
   },
   "schemaVersion": 1,
   "scripts": {

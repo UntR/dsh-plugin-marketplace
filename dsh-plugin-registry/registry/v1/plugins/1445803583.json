@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "bd54ab260fe80008a503776fbf4e7aac74418086"
   },
   "github": {
@@ -16,7 +16,7 @@
     "defaultBranch": "master",
     "description": "dsh-purge 优化版（衍生分支）：在上游 1.1.90 基础上恢复技能库 23 个技能、POC/EXP 知识库与本地靶场白名单，并补齐 nuclei 模板类目筛选与翻页。Derivative of dsh-purge — restores the skill library, knowledge base and local-lab allowlist.",
     "fork": false,
-    "forks": 2,
+    "forks": 3,
     "headSha": "bd54ab260fe80008a503776fbf4e7aac74418086",
     "homepageUrl": null,
     "language": "JavaScript",
@@ -25,51 +25,68 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOVi02Pw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/096be1f392d2f7432590cc0f20748e393c31873d4958f6ca39dcd3c25c05b842/lzzzz666888/dsh-purge-optimized",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/3fe411f33dfbf4d2b9c3c39f2ec86c8831b3ba8b0457477ffee5aa6673928ea8/lzzzz666888/dsh-purge-optimized",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/129394764?v=4",
       "login": "lzzzz666888"
     },
     "pushedAt": "2026-11-06T04:50:21Z",
     "slug": "lzzzz666888/dsh-purge-optimized",
-    "stars": 2,
+    "stars": 3,
     "topics": [
       "deepseek-harness",
       "dsh-plugin",
       "jailbreak",
       "red-team"
     ],
-    "updatedAt": "2026-11-06T04:47:52Z",
+    "updatedAt": "2026-11-07T09:46:10Z",
     "url": "https://github.com/lzzzz666888/dsh-purge-optimized"
   },
   "id": "gh:1445803583",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-purge",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:lzzzz666888/dsh-purge-optimized#bd54ab260fe80008a503776fbf4e7aac74418086",
+    "version": "1.1.91-opt.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.0-stage",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client.js",
+      "./package.json": "./package.json",
+      "./redteam": "./lib/redteam/index.js",
+      "./redteam/store": "./lib/redteam/store.js",
+      "./redteam/tools": "./lib/redteam/tools.js",
+      "./redteam/ui": "./lib/redteam/ui.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-purge",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.91-opt.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/096be1f392d2f7432590cc0f20748e393c31873d4958f6ca39dcd3c25c05b842/lzzzz666888/dsh-purge-optimized",
+    "coverUrl": "https://opengraph.githubassets.com/3fe411f33dfbf4d2b9c3c39f2ec86c8831b3ba8b0457477ffee5aa6673928ea8/lzzzz666888/dsh-purge-optimized",
     "description": "dsh-purge 优化版（衍生分支）：在上游 1.1.90 基础上恢复技能库 23 个技能、POC/EXP 知识库与本地靶场白名单，并补齐 nuclei 模板类目筛选与翻页。Derivative of dsh-purge — restores the skill library, knowledge base and local-lab allowlist."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-purge was originally developed by its author as an independent project. It is now maintained by the dsh-purge maintainers team, which handles the codebase, documentation, releases, and security response. All historical commits, issues, and releases are preserved and links rem"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
-    "postinstall": false,
+    "postinstall": true,
     "preinstall": false,
     "prepare": false
   }

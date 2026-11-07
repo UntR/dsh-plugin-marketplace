@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "1777a885619ef73e41a2f1d8a972c32ea35f46de"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1446925465",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-hygiene",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-session-hygiene@0.1.4",
+    "version": "0.1.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.4",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-session-hygiene",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/86003cd1fb673c1f315a528d927d57cba2bcbd247298d1f4061a8f507c330f87/liudapeng0311/dsh-session-hygiene",
     "description": "Delete sessions into a recoverable trash, clean up sessions orphaned by deleted workspaces, and group workspaces into categories. A DSH plugin."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Three gaps in the shipped DSH sidebar, closed by one plugin:"
   },
   "schemaVersion": 1,
   "scripts": {

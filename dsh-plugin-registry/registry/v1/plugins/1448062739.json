@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "10c8027733023554955a8146923fe835ce1bebfa"
   },
   "github": {
@@ -45,27 +45,40 @@
   },
   "id": "gh:1448062739",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-xhs-evaluator",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:SenhoiBot/dsh-xhs-evaluator#10c8027733023554955a8146923fe835ce1bebfa",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@local/dsh-xhs-evaluator",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e8d41452c73ef05c664e7f046ab13ab802037f764ba45e541b377f542a69935e/SenhoiBot/dsh-xhs-evaluator",
     "description": "小红书笔记评估悬浮球（DSH 插件）：多模型预测阅读/点赞/收藏，仅在小红书与创作平台页面显示"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DSH 右侧内置浏览器里打开小红书（www.xiaohongshu.com）或小红书创作平台 （creator.xiaohongshu.com）时，左下角会出现一个红色悬浮球；其他网页不会出现。 点它，填入你打算发的图文，插件会调用 N 个 DSH 宿主模型并行评估："
   },
   "schemaVersion": 1,
   "scripts": {

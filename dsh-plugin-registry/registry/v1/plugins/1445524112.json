@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "18c718c103d3cdcbad76e4547f3211be319c1f42"
   },
   "github": {
@@ -45,27 +45,41 @@
   },
   "id": "gh:1445524112",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-delete",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Sakurasign/dsh-session-delete#18c718c103d3cdcbad76e4547f3211be319c1f42",
+    "version": "1.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client.js",
+      "./package.json": "./package.json",
+      "./paths": "./lib/paths.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-delete",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/97dafef0b62af2aff32adb92b34b291bff4dd518f63b00a6ff7c39452e982677/Sakurasign/dsh-session-delete",
     "description": "DeepSeek Harness 插件：彻底删除会话（含子智能体会话）的日志目录、投影缓存与工作区记账。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) plugin that adds a genuinely destructive \"Delete session\" action to the sidebar session row. After you confirm, it removes that session — and every subagent session spawned from it — from disk: the log directory, the projection cache, and the workspace ac"
   },
   "schemaVersion": 1,
   "scripts": {

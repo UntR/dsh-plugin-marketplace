@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "c126ec69ae7956389b2538d66f67238064d1d092"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1446367479",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-doctor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:buguoshixc/dsh-doctor#c126ec69ae7956389b2538d66f67238064d1d092",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/plugin.mjs",
+      "./doctor_core/*": "./doctor_core/*",
+      "./icon": "./icon.svg",
+      "./lib/*": "./lib/*",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./presets/*": "./presets/*"
+    },
+    "main": "./lib/plugin.mjs",
+    "name": "dsh-doctor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/712ea49c30070f5c63e59458ddb86cb630093d8dcb9eca0d6e87554a98b17f56/buguoshixc/dsh-doctor",
     "description": "AI Code Doctor for DeepSeek Harness: zero-dependency judge core (doctor_judge/doctor_gate) + 「诊断模式」 agent preset + Socratic skill. MIT."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 桌面端加一个诊断模式： 学生贴代码求助时，模型不再直接给答案，而是先跑代码拿到证据、再用苏格拉底式提问带他自己修。 答案由工具挡，不由自律挡。"
   },
   "schemaVersion": 1,
   "scripts": {

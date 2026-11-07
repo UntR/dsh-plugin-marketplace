@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "4ef79bc1be754c0ac37407eb32d0ee07798d6263"
   },
   "github": {
@@ -44,27 +44,41 @@
   },
   "id": "gh:1447801350",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-aihot",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:liunianlh/dsh-aihot#4ef79bc1be754c0ac37407eb32d0ee07798d6263",
+    "version": "1.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-aihot",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d983fb05eb2c277ce1d0ec132e62681436bd5cad8395115932f02ccf6def52aa/liunianlh/dsh-aihot",
     "description": "AI news panel for DeepSeek Harness: 24-hour picks, recent stories, trending topics, the daily digest and search from AIHOT, with category filters, date grouping and endless scroll."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) client plugin. It adds a AI trending row to the left sidebar and a full page with five tabs backed by the public AIHOT JSON API. No API key, no server half, no build step."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "da613abb9cdec32fbe005fe52b727025d28adad2"
   },
   "github": {
@@ -47,27 +47,46 @@
   },
   "id": "gh:1433135171",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-builder",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-plugin-builder@0.2.3",
+    "version": "0.2.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./client-helper": {
+        "default": "./lib/client-helper.js",
+        "types": "./lib/types/helper/skill-draft.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-builder",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5bd273087a61e6489f30edc1591159d43eaaa199293059d50c4f4b07c5a49522/WilShi/dsh-plugin-builder",
     "description": "Guardrailed DSH plugin-development Skill bundle"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A guarded, in-editor plugin workshop for DeepSeek Harness — a settings tab plus the cordis-plugin-development skill it hands to your agent."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "f9a2b02653d65c2de32c333253628705a23c3754"
   },
   "github": {
@@ -41,27 +41,40 @@
   },
   "id": "gh:1447741344",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-reader",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:guiyuan77/dsh-reader#f9a2b02653d65c2de32c333253628705a23c3754",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-reader",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5fe653f302487d9d088aa6b635900d66fe4011d7314959527bd540f51729207f/guiyuan77/dsh-reader",
     "description": "在右侧栏标签里读取工作区内的 EPUB、TXT、Markdown 与 HTML，并记住上次阅读位置。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的右侧栏阅读器：在 dsh 的 Web GUI 里注册一个 reader 标签，点开就在右侧栏里读书——不跳页、不弹新窗口。文件取自 dsh 自己注册的工作区，渲染 EPUB / TXT / Markdown / HTML，PDF 交给浏览器原生查看器。"
   },
   "schemaVersion": 1,
   "scripts": {

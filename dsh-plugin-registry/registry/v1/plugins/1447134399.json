@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "0e3a4cfe60e408853c30abbc9aa9b05aa95fa17d"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1447134399",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-pc-bridge",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-pc-bridge@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-pc-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a4af1caac2d5eede8986ce490026bcd688e9b57a165d87d608647d7f8c23b288/QIC-9821/dsh-pc-bridge",
     "description": "A loopback HTTP bridge for DeepSeek Harness: ping and run shell commands on this PC from a trusted peer, plus an optional ssh reverse tunnel. 让远端通过回环 HTTP 桥在电脑上执行命令。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件：在电脑上开一个只监听回环的小 HTTP 桥，让对端（例如云端的 QQ 机器人）能 ping 这台电脑、并按需执行 shell 命令；可选同时维持一条 ssh 反向隧道，让远端能访问到这台电脑的回环端口。"
   },
   "schemaVersion": 1,
   "scripts": {

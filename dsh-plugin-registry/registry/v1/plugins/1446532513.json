@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "48e0cb21235691c165cad67b6e11999e9cd7f3fa"
   },
   "github": {
@@ -48,27 +48,39 @@
   },
   "id": "gh:1446532513",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-requirement",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:sunlei1214/dsh-session-requirement#48e0cb21235691c165cad67b6e11999e9cd7f3fa",
+    "version": "1.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-session-requirement",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9f387f97dcc36a8b26df895bd39b12d83ea5168247a0fd4008f824b2726aa1be/sunlei1214/dsh-session-requirement",
     "description": "Per-conversation requirement / constraint box for DeepSeek Harness - title-row field, @-skill picker, injected into every message of that conversation."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Per-conversation session requirement / constraint box for DeepSeek Harness. It lives in the conversation title row and lets you write one standing requirement for this conversation, plus pick skills with @, and have all of it attached to every message you send."
   },
   "schemaVersion": 1,
   "scripts": {

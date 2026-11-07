@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "b39b84ab8279a26b338e01d82bf51b48a291d629"
   },
   "github": {
@@ -55,25 +55,29 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-skill-station@0.1.0",
-    "version": "0.1.0"
+    "spec": "dsh-skill-station@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": "0.1.0",
+    "latestVersion": "0.2.1",
     "published": true,
     "repositoryMatches": true
   },
   "package": {
     "exports": {
-      ".": "./lib/index.js",
-      "./client": "./client/client.js",
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
       "./package.json": "./package.json"
     },
     "main": "lib/index.js",
     "name": "dsh-skill-station",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.2.1"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a8641eea32b037b9a02d85167cc17560269507d78ea2d8346aeec4efec6fd6ec/WilShi/dsh-skill-station",
@@ -81,7 +85,7 @@
   },
   "readme": {
     "available": true,
-    "excerpt": "Agent 技能（Skill）生态正在爆发，但各家框架的技能散落在不同目录和格式里："
+    "excerpt": "Skill library, importer, and public skill market for DeepSeek Harness."
   },
   "schemaVersion": 1,
   "scripts": {

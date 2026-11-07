@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "a83ffe39798ba686583d7a8968e1891459074220"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1446893391",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-wait",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:A-2788553793/dsh-wait#a83ffe39798ba686583d7a8968e1891459074220",
+    "version": "0.1.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-wait",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/77d1d6e50b3e60f94ad0d4047f5608c90e11bded7e96d3abcf73a3b53d2371b2/A-2788553793/dsh-wait",
     "description": "Confirm before sending a chat message in DeepSeek Harness Web UI"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在输入框里按 Enter 或点击发送按钮，消息会立即发出。dsh-wait 会在真正发送之前弹出一个确认窗口，完整展示即将发送的内容，确认后才发送；取消则保留草稿，继续编辑。"
   },
   "schemaVersion": 1,
   "scripts": {

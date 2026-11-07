@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "a216c2e4c148d82de2696f668291c88269513d53"
   },
   "github": {
@@ -42,27 +42,39 @@
   },
   "id": "gh:1446455024",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@garinz/dsh-handoff",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@garinz/dsh-handoff@0.6.1",
+    "version": "0.6.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.6.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "@garinz/dsh-handoff",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5e281e0fce38231459862ad431a4e901e28a3d8921a27abeed100ba5f82a834f/GarinZ/dsh-handoff",
     "description": "Model-facing session handoff for DeepSeek Harness: copy a session's full history into another workspace with a written brief. 让 Agent 在对话里把当前会话完整交接给另一个工作区。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）的会话交接插件：Agent 在对话里就能把当前会话交接到另一个工作区。新会话在目标工作区里热创建（不重启、不刷新），并带着一份交接简报。"
   },
   "schemaVersion": 1,
   "scripts": {

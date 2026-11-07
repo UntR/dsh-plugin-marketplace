@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "e50193f69cdcfc474d40ee64c00fb86e8e07c4a1"
   },
   "github": {
@@ -48,27 +48,74 @@
   },
   "id": "gh:1433135009",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-external-api",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-external-api@0.2.4",
+    "version": "0.2.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.4",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./auth": {
+        "default": "./lib/auth.js",
+        "types": "./lib/types/auth.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./config": {
+        "default": "./lib/config.js",
+        "types": "./lib/types/config.d.ts"
+      },
+      "./controller-host": {
+        "default": "./lib/controller-host.js",
+        "types": "./lib/types/controller-host.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./event-projector": {
+        "default": "./lib/event-projector.js",
+        "types": "./lib/types/event-projector.d.ts"
+      },
+      "./listener": {
+        "default": "./lib/listener.js",
+        "types": "./lib/types/listener.d.ts"
+      },
+      "./ownership-store": {
+        "default": "./lib/ownership-store.js",
+        "types": "./lib/types/ownership-store.d.ts"
+      },
+      "./package.json": "./package.json",
+      "./router": {
+        "default": "./lib/router.js",
+        "types": "./lib/types/router.d.ts"
+      },
+      "./run-registry": {
+        "default": "./lib/run-registry.js",
+        "types": "./lib/types/run-registry.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-external-api",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f71181ba00bb30dfd0de731eff78291a5c144a426c24a11c5214fa1b3f010c40/WilShi/dsh-external-api",
     "description": "Opt-in authenticated HTTP API for local and trusted-LAN DSH Desktop integrations"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH Desktop 的可选外部 HTTP API。服务默认关闭；启用后默认只监听 127.0.0.1（仅本机可访问），需要局域网/其他设备访问时把「监听地址」显式改成 0.0.0.0 或这台电脑的局域网 IPv4，并使用 Bearer Token 鉴权。"
   },
   "schemaVersion": 1,
   "scripts": {

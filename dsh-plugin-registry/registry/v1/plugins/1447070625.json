@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "7700cc5a6c13d1c4343e90e2db4dfcf140db2ab5"
   },
   "github": {
@@ -45,27 +45,45 @@
   },
   "id": "gh:1447070625",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@ostapyrih/dsh-google-vertex",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@ostapyrih/dsh-google-vertex@0.16.4",
+    "version": "0.16.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.16.4",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@ostapyrih/dsh-google-vertex",
+    "status": "valid",
+    "type": "module",
+    "version": "0.16.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/296185383e4be5647541bd5ec7111dcc77436e70e2a2f9281f7f182b14c0d77c/ostapyrih/dsh-google-vertex",
     "description": "Google Vertex AI provider for DeepSeek Harness: service-account auth for Google-hosted Claude and Gemini models"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "One Google service-account JSON file unlocks Claude, Gemini, and DeepSeek models inside DeepSeek Harness: Claude Opus 4.6, Sonnet 4.6, Opus 4.5, Sonnet 4.5, Haiku 4.5, Gemini 3.5 Flash, 3.1 Pro Preview, 3 Flash Preview, 2.5 Pro, 2.5 Flash, 2.5 Flash-Lite, and DeepSeek models on V"
   },
   "schemaVersion": 1,
   "scripts": {

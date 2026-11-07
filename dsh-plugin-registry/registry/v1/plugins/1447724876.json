@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
-    "headSha": "b221f3958fe31d6f04263fc711f91862398dc042"
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
+    "headSha": "c9a1d74b6328c9d85eae408f918fce014ed3ad5e"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "PRD Generator for DeepSeek Harness: clarification → PRD → ralph-compatible prd.json → acceptance checklist.",
     "fork": false,
     "forks": 0,
-    "headSha": "b221f3958fe31d6f04263fc711f91862398dc042",
+    "headSha": "c9a1d74b6328c9d85eae408f918fce014ed3ad5e",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOVkqHTA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a1d1a063dbd44b4f44a6cd4048c86496829d7712bb07fd8f0a1fbf9abdc547e0/rubyzhao666/dsh-prd-generator",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/743404ed09310f9920dc26ac646eb81585d5e9ad0e73f4826c0c7410c6c48449/rubyzhao666/dsh-prd-generator",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/260799154?u=e2fd0bc5e0e87a400bd41c85f33f06ae02753f58&v=4",
       "login": "rubyzhao666"
     },
-    "pushedAt": "2026-11-06T07:21:37Z",
+    "pushedAt": "2026-11-06T14:16:32Z",
     "slug": "rubyzhao666/dsh-prd-generator",
     "stars": 0,
     "topics": [
@@ -42,32 +42,44 @@
       "ralph",
       "requirements"
     ],
-    "updatedAt": "2026-11-06T07:21:37Z",
+    "updatedAt": "2026-11-06T14:16:32Z",
     "url": "https://github.com/rubyzhao666/dsh-prd-generator"
   },
   "id": "gh:1447724876",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-prd-generator",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:rubyzhao666/dsh-prd-generator#c9a1d74b6328c9d85eae408f918fce014ed3ad5e",
+    "version": "0.5.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-prd-generator",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a1d1a063dbd44b4f44a6cd4048c86496829d7712bb07fd8f0a1fbf9abdc547e0/rubyzhao666/dsh-prd-generator",
+    "coverUrl": "https://opengraph.githubassets.com/743404ed09310f9920dc26ac646eb81585d5e9ad0e73f4826c0c7410c6c48449/rubyzhao666/dsh-prd-generator",
     "description": "PRD Generator for DeepSeek Harness: clarification → PRD → ralph-compatible prd.json → acceptance checklist."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "基于 rubyzhao666/prd-generator（MIT）改造成 DSH 插件： 上游提供 PRD 方法论、模板与提示词；本插件把它们变成会话模型 + 两个确定性工具的 DSH 工作流——模型负责分析、写作和拍判断，工具负责严格校验与落盘。"
   },
   "schemaVersion": 1,
   "scripts": {

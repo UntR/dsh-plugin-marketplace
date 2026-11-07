@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "27509615f733f6c545254d3eb4942db1c651d63f"
   },
   "github": {
@@ -43,27 +43,43 @@
   },
   "id": "gh:1445430042",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-server-connector",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-server-connector@0.2.3",
+    "version": "0.2.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./audit": "./lib/audit.js",
+      "./client": "./lib/client.js",
+      "./known-hosts": "./lib/known-hosts.js",
+      "./package.json": "./package.json",
+      "./policy": "./lib/policy.js",
+      "./pool": "./lib/pool.js",
+      "./registry": "./lib/registry.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-server-connector",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b61176cf9871844c78aafe8511363c8ae06995567d33fe9fd22265392435e9da/niechao136/dsh-server-connector",
-    "description": ""
+    "description": "DSH（DeepSeek Harness）插件：在本机配置好可运维的 SSH 服务器后，让 Harness 里的 agent 用 srv 工具直接在那些机器上执行命令；内置高危命令策略、逐条审批、执行审计与两段式危险操作确认。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）插件：在本机配置好可运维的 SSH 服务器后，让 Harness 里的 agent 用 srv 工具直接在那些机器上执行命令；内置高危命令策略、逐条审批、执行审计与两段式危险操作确认。"
   },
   "schemaVersion": 1,
   "scripts": {

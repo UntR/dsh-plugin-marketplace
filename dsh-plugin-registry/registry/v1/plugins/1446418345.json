@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "74992ca3318094c0505c2f978fcd4aa2d920bc6c"
   },
   "github": {
@@ -48,27 +48,41 @@
   },
   "id": "gh:1446418345",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-workbuddy-checkin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:cl2458228286-creator/dsh-plugin-workbuddy-checkin#74992ca3318094c0505c2f978fcd4aa2d920bc6c",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-workbuddy-checkin",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/076b1c3c5271c22cd8cb7cd9a5799bec04e4e7e8e536e3fdb5c1cbfea748f50d/cl2458228286-creator/dsh-plugin-workbuddy-checkin",
     "description": "WorkBuddy daily auto check-in and credit claiming for DeepSeek Harness. Three agent tools (status / claim / login), bundled Chrome-driven engine, no tokens required."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "WorkBuddy 每日自动签到 / 领积分，做成一个 DeepSeek Harness (DSH) 插件。"
   },
   "schemaVersion": 1,
   "scripts": {

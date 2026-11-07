@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "e86b0234874ea47243c4073e98559f766a03bc1f"
   },
   "github": {
@@ -44,27 +44,38 @@
   },
   "id": "gh:1445687618",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-home-assistant-panel",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hotkong/dsh-home-assistant-panel#e86b0234874ea47243c4073e98559f766a03bc1f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-home-assistant-panel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/33c9333c235a681fa9abdb0bca3d91a0b07c002e041f4e7fb99c1dc7d1f2c891/hotkong/dsh-home-assistant-panel",
     "description": "Home Assistant panel for DeepSeek Harness: read-only status overview, prompt injection, ha_status, and browser notifications."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness 插件：在 设置 → Home Assistant 里填好地址、令牌和 1–6 个「要看的值」，插件会把环境基线注入系统提示词，并提供一个只读的 hastatus 工具和一张实时状态卡。"
   },
   "schemaVersion": 1,
   "scripts": {

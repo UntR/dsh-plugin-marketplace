@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "228bf2a0f91bf5fd9b8f16af94bf49935624231c"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1445747770",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-outlast",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:NormalAorii/dsh-plugin-outlast#228bf2a0f91bf5fd9b8f16af94bf49935624231c",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-plugin-outlast",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c19adc5d824918117afe20f080a3a56599fa6bf5eac35e843314157fc55f04f6/NormalAorii/dsh-plugin-outlast",
     "description": "《逃生：试炼》(The Outlast Trials) QQ 查询机器人插件 · DeepSeek Harness 原生插件（Cordis bundle），提供关卡攻略/敌人图鉴/道具/机制/实时资讯/图文卡片 9 个工具"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 用的原生 Cordis 插件（纯 ESM，无构建、无运行时依赖）， 把《逃生：试炼》(The Outlast Trials) 的攻略资料库和 Steam 实时公告接入成 9 个模型可调用工具， 配合已接入的 QQ 官方机器人（@tencent-connect/dsh-qqbot）即可在 QQ 群聊/私聊里直接问答。"
   },
   "schemaVersion": 1,
   "scripts": {

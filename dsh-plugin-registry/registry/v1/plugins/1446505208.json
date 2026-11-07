@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "556ee8928da56ad0e802b52527c64f2636b25df7"
   },
   "github": {
@@ -47,27 +47,38 @@
   },
   "id": "gh:1446505208",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-task-map",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xiaohui-zhangxh/dsh-task-map#556ee8928da56ad0e802b52527c64f2636b25df7",
+    "version": "1.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/dsh-task-map",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/aedf60f4c0d9e40bde62346a185167fcc8fcc7b14499bd07165d95f544f54cc0/xiaohui-zhangxh/dsh-task-map",
     "description": "DeepSeek Harness task map plugin: replay a session as an SVG task flow + Gantt timeline, with wait analysis, plan-vs-execution changes and display-only task relations."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把一次 DeepSeek Harness 会话变成可回放的任务地图：任务流程图、甘特时间轴、导航式回放、等待拆解、计划/变更流、任务关系支线。只读派生，不改任务状态、不写会话日志、不联网。"
   },
   "schemaVersion": 1,
   "scripts": {

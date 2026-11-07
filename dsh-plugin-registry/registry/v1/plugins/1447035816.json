@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "32790c51ce5ca336f6f9b19fca9ca70d06ff40f3"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1447035816",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-rotation",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Chrono-rigger/dsh-model-rotation#32790c51ce5ca336f6f9b19fca9ca70d06ff40f3",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.8.2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-model-rotation",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/39333ab4a57991b75e100631969d07ffe0a1d8b3d31a0b9a899ba9a453515723/Chrono-rigger/dsh-model-rotation",
     "description": "Ordered model rotation with automatic failover for DeepSeek Harness: rate-limit/timeout failover, a retest round for timed-out models, and a sticky DSH platform fallback."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "自定义模型自动切换 / Custom model rotation with automatic failover — for DeepSeek Harness."
   },
   "schemaVersion": 1,
   "scripts": {

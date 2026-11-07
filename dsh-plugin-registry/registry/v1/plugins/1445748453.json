@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
-    "headSha": "a392437c27bd3faab95b9add05a8a66206c7fba5"
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
+    "headSha": "37f1d2d5a3af875042699128a9c3f7f164e34c48"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Sync DSH session logs from non-official model channels (ollama-local, pi-ai, OpenAI-compatible) to DeepSeek, sharing the built-in watermark. Ships a settings row, a manual upload button, and byte-parity tests against the core plugin.",
     "fork": false,
     "forks": 0,
-    "headSha": "a392437c27bd3faab95b9add05a8a66206c7fba5",
+    "headSha": "37f1d2d5a3af875042699128a9c3f7f164e34c48",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,43 +25,57 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVixe5Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7362772d9bbe57953062f4f1026a391a4aa05a642dc051db86a7b16fc95b8b9e/3418244301q-star/dsh-session-log-upload",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/52223cefbc0c8a043229d16d2e31f1fc39a49547904408793fc0d05281dde68f/3418244301q-star/dsh-session-log-upload",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/305502112?v=4",
       "login": "3418244301q-star"
     },
-    "pushedAt": "2026-11-06T11:17:50Z",
+    "pushedAt": "2026-11-06T13:09:52Z",
     "slug": "3418244301q-star/dsh-session-log-upload",
     "stars": 3,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-11-06T11:17:45Z",
+    "updatedAt": "2026-11-06T13:09:51Z",
     "url": "https://github.com/3418244301q-star/dsh-session-log-upload"
   },
   "id": "gh:1445748453",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-log-upload",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-session-log-upload@1.1.7",
+    "version": "1.1.7"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.1.7",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./assets/*": "./assets/*",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-session-log-upload",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.7"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7362772d9bbe57953062f4f1026a391a4aa05a642dc051db86a7b16fc95b8b9e/3418244301q-star/dsh-session-log-upload",
+    "coverUrl": "https://opengraph.githubassets.com/52223cefbc0c8a043229d16d2e31f1fc39a49547904408793fc0d05281dde68f/3418244301q-star/dsh-session-log-upload",
     "description": "Sync DSH session logs from non-official model channels (ollama-local, pi-ai, OpenAI-compatible) to DeepSeek, sharing the built-in watermark. Ships a settings row, a manual upload button, and byte-parity tests against the core plugin."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "内置插件 @deepseek-ai/dsh-session-log-deepseek 只搭官方适配器的便车：dshsessionlog 作为顶层字段挂在官方 chat 请求上。第三方渠道（ollama-local / pi-ai / OpenAI 兼容）不走那条 适配器，日志永远上不去。本插件自己发一次最小请求承载同一个字段，并用同一个水位事件 落盘，所以和内置插件共存、不重复。"
   },
   "schemaVersion": 1,
   "scripts": {

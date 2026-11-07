@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "27a102fedf90daed748ff28cbd63f0136d62ca4e"
   },
   "github": {
@@ -49,27 +49,40 @@
   },
   "id": "gh:1432020754",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository does not expose an installable DSH bundle.",
+    "available": true,
+    "packageName": "dsh-2sidebar",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-2sidebar@0.1.4",
+    "version": "0.1.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.4",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-2sidebar",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/37761a0f5f10571712aba1d38566914baba09aaf194f1fb0604d0e2e0f13946a/SyaJask/dsh-2sidebar",
     "description": "Split-pane file browser for the DeepSeek Harness (DSH) right sidebar: directory tree + file preview side by side. 为 DSH 右侧栏提供左目录树 + 右文件内容的并排视图。"
   },
   "readme": {
     "available": true,
-    "excerpt": "A split-pane file browser for the DeepSeek Harness (DSH) right sidebar: directory tree on the left, the selected file on the right — both visible at once, so switching files never moves the tree."
+    "excerpt": "A split-pane file browser for the DeepSeek Harness (DSH) right sidebar: the directory tree and the selected file side by side in one tab — both visible at once, so switching files never moves the tree. The tree starts on the left and can be switched to the right."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "27861be9bc8ecf58b99a016b8a68d3ed60495629"
   },
   "github": {
@@ -47,27 +47,40 @@
   },
   "id": "gh:1447032909",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-sensitive-guard",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-sensitive-guard@0.5.0",
+    "version": "0.5.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-sensitive-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bff248a43dc08f93fde47a02f59984b480e146ccd824119c3de5c41615a7f610/wangxy496/dsh-sensitive-guard",
     "description": "为 DeepSeek Harness 提供敏感信息保护：密钥、令牌、密码（含 JSON / 配置字段）在进入模型上下文前替换为 <SG_> 占位符，明文以 AES-256-GCM 加密存在本地保管库。0.5.0 接入 gitleaks 官方 221 条规则（可搜索、逐条开关）、手动录入敏感数据与持久关闭保护；点小锁或复制按钮可看真值，模型通过导出文件取用凭据。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）的插件，只做一件事：把密钥、令牌、密码挡在模型上下文之外。用户消息和工具结果里的凭证，在进入上下文之前就被换成 占位符，明文加密留在本机。模型拿到的是代号，你点一下能看到真值。"
   },
   "schemaVersion": 1,
   "scripts": {

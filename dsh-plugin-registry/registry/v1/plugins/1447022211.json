@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "e9689c62e59e09279958201660d63fbf49da0789"
   },
   "github": {
@@ -44,27 +44,42 @@
   },
   "id": "gh:1447022211",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-via-workbuddy",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:qbclex/dsh-via-workbuddy#e9689c62e59e09279958201660d63fbf49da0789",
+    "version": "0.7.9"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-via-workbuddy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.9"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e25a115fb0d713e3d4dbe6b541d5180acbcc2f64b9ab42e19048e8ced8f4aaba/qbclex/dsh-via-workbuddy",
     "description": "把 WorkBuddy 桌面 App 里已登录的模型接入 DeepSeek Harness，修复上游 WAF 11128 对系统提示词的拦截（基于 corrinehu/dsh-workbuddy-connect）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "将已登录的 WorkBuddy / WorkBuddy AI 桌面应用中可用的模型接入 DeepSeek Harness；两版分别显示各自的模型分组，并沿用各自的账号登录与积分。"
   },
   "schemaVersion": 1,
   "scripts": {

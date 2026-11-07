@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "50a85520005be963cda09eb5fcac8e7ae5eb4a49"
   },
   "github": {
@@ -42,27 +42,44 @@
   },
   "id": "gh:1445732131",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-attention-inbox",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-attention-inbox@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./api": {
+        "default": "./lib/core.js",
+        "types": "./lib/api.d.ts"
+      },
+      "./client": "./client.js",
+      "./host": "./host.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-attention-inbox",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0-rc.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/323f0c9137ef6b20068ce7cd0a0082a511e663a77d324d12aca71d968a3a68eb/QingJ01/dsh-attention-inbox",
     "description": "Release candidate: cross-session attention inbox for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "面向个人的 DeepSeek Harness 插件，把跨 Session、跨 Workspace 的待处理事项集中到一个队列：审批、问题、计划审阅、受阻 goal、自主运行待验收、最终轮次失败和账户登录失效。"
   },
   "schemaVersion": 1,
   "scripts": {

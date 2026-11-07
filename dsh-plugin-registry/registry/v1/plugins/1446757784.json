@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "2af1c75428c594afb36ba5edbf3e70852ff75347"
   },
   "github": {
@@ -16,7 +16,7 @@
     "defaultBranch": "master",
     "description": "把 Matt Pocock 技能套件编成六阶段带前置条件的开发工作流：拷问、规范、任务、实现、评审、收尾。含输入框工具行的阶段胶囊与决策卡片。A six-stage gated development workflow preset for DSH: grill, spec, tickets, implement, review, wrap-up. Adds a stage chip in the composer and decision cards. Built on the Matt Pocock skill suite.",
     "fork": false,
-    "forks": 0,
+    "forks": 1,
     "headSha": "2af1c75428c594afb36ba5edbf3e70852ff75347",
     "homepageUrl": null,
     "language": "JavaScript",
@@ -45,27 +45,40 @@
   },
   "id": "gh:1446757784",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-matt-flow",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yuwang/dsh-matt-flow#2af1c75428c594afb36ba5edbf3e70852ff75347",
+    "version": "0.7.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-matt-flow",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/51e72f8b3416645a985444d15763fef5cc447a09988b6d49a6af27d744810da9/yuwang/dsh-matt-flow",
     "description": "把 Matt Pocock 技能套件编成六阶段带前置条件的开发工作流：拷问、规范、任务、实现、评审、收尾。含输入框工具行的阶段胶囊与决策卡片。A six-stage gated development workflow preset for DSH: grill, spec, tickets, implement, review, wrap-up. Adds a stage chip in the composer and decision cards. Built on the Matt Pocock skill suite."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 Matt Pocock Agent Skills 套件编成一条带前置条件的开发工作流，作为 DSH 的一个 agent 预设。技能从 /.agents/skills 读取，缺了会自动安装。"
   },
   "schemaVersion": 1,
   "scripts": {

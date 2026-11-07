@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./dsh.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "0acc39feb1374787dd9b4beed8c68f431fe611fc"
   },
   "github": {
@@ -45,33 +45,47 @@
   },
   "id": "gh:1447077665",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-plugin-xianshou",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:yu1842/xianshou-plugin#0acc39feb1374787dd9b4beed8c68f431fe611fc",
+    "version": "0.5.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/plugin.js",
+        "types": "./dist/plugin.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/plugin.js",
+    "name": "dsh-plugin-xianshou",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/59dc8920570d5666f9159ce096ee924433d2dbca7fbf087fdf4a4b65c0bca753/yu1842/xianshou-plugin",
     "description": "DeepSeek Harness 插件：先手协议 · 防认知债 —— 不限制 AI 用量，只规定它在什么时点介入 (dsh >=0.2.1-rc.1 <0.3.0)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "---"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

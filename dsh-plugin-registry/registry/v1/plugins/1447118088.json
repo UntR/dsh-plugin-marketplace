@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "f9826ce99beeb6a0371f31dad1f9c9c4690f060f"
   },
   "github": {
@@ -49,27 +49,44 @@
   },
   "id": "gh:1447118088",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-serial-sifarcrt",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-serial-sifarcrt@1.0.3",
+    "version": "1.0.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-serial-sifarcrt",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/32ba347de14cd9180fcb25daf1ed2f51cc4685bd447c1bf3704f0841ae5257ae/xf3193/dsh-serial-sifarCRT",
     "description": "Windows serial debug console in the DSH right sidebar: COM ports, ANSI logs, in-log Linux terminal, command buttons, multi-port tabs."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A SecureCRT-style Windows serial debug console that lives in the DeepSeek Harness (DSH) right sidebar. Configure a COM port from a dialog, connect, watch hardware debug output with ANSI colors, and type Linux commands directly into the log window — with several serial ports open "
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "111bd4890123df20eabfc61e467e269f99c40322"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1448031711",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-codex-claude-pipeline",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-codex-claude-pipeline@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-codex-claude-pipeline",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c31af51e1783e4b706c5d4e1f47914c7fc94864f27628fbee323a549e0ab44eb/lidaqi001/dsh-codex-claude-pipeline",
     "description": "DeepSeek Harness agent preset: Codex plans and decomposes, Claude Code executes each work item."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Codex 规划 + Claude Code 执行 —— DeepSeek Harness 的 Agent preset 插件。新建会话时选择这个模式， 会话主代理只做调度：先让 Codex 子代理分析任务、拆出工作项，再把每个工作项交给 Claude Code 子代理实际执行，最后核对结果并向你汇报。"
   },
   "schemaVersion": 1,
   "scripts": {

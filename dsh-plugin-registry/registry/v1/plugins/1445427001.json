@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "54d21c78f7207fcb415ee894b88a982f6b11446a"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1445427001",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-push-to-talk",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-push-to-talk@0.6.0",
+    "version": "0.6.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.6.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./client.js",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-push-to-talk",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6e264f4dca3fceeb876fd7138e9fa6a70858ea890811690c4ad7f3635bafd29e/wengyingjian/dsh-push-to-talk",
     "description": "按住一个键说话、松开自动转写（push-to-talk）：驱动 DSH 官方语音输入插件的麦克风，按住键可在插件设置页里按平台选。Hold a key to dictate, release to transcribe."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "按住一个键说话（macOS 默认 Option ⌥，Windows 默认 Alt），松开自动停止并转写成草稿，不用再点麦克风。 按住键可在 设置 → 插件 → 按键语音输入 里改，立即生效、重启后保留。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "0614f1ab383fd2afea3574a6c385351fa6652f69"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1446763007",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-net-dashboard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:foreee/dsh-net-dashboard#0614f1ab383fd2afea3574a6c385351fa6652f69",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-net-dashboard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/6da291f339e385e24d9b352df0daf985801c1c9a2a7b38e48c33b8db1e6acc93/foreee/dsh-net-dashboard",
     "description": "网络巡检看板：DSH 侧边栏实时呈现本机网络质量（IP/MAC、流量速率、会话数、延迟曲线），3 秒自动刷新｜Live network inspection dashboard for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A live network inspection dashboard in the DeepSeek Harness sidebar: interfaces and IP/MAC, traffic rates, TCP/UDP sessions, and latency curves, all read from this machine at request time and refreshed every 3 seconds."
   },
   "schemaVersion": 1,
   "scripts": {

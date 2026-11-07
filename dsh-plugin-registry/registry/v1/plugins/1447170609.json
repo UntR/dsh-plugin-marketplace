@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "7fc2f39a0c2674c75c807a19ed07c6bfe0ad0c79"
   },
   "github": {
@@ -41,27 +41,41 @@
   },
   "id": "gh:1447170609",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-deleter",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zhaokejin/dsh-session-deleter#7fc2f39a0c2674c75c807a19ed07c6bfe0ad0c79",
+    "version": "0.5.5"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./entry.js",
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "entry.js",
+    "name": "dsh-session-deleter",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.5"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/77ad23de55ffc4d5e8521caa93191e27d2a54d87ed77e1cb316af1b1602f5435/zhaokejin/dsh-session-deleter",
     "description": "DeepSeek Harness 插件：真正物理删除会话记录，而不是只归档（跨 macOS/Windows/Linux）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（桌面端 / Web 端）加一个手动删除会话的功能：直接从磁盘物理删除， 不像 dsh 自带的那样只是「归档」（记录永远留在磁盘上）。"
   },
   "schemaVersion": 1,
   "scripts": {

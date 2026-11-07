@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./packages/bundle/cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "7987557c59599030f32b1f708b4e101c5a341a3d"
   },
   "github": {
@@ -55,7 +55,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -65,14 +65,20 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "main": null,
+    "name": "dsh-plugin-dbgraph-root",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/f27ce2898ce6383b3a64cd59fba92549b5df8224ba803116726856af902c6021/CC19990113/dsh-plugin-dbgraph",
     "description": "Database structure for DeepSeek Harness — indexes a database catalog into a local store so the agent knows every table and column before it writes a query, then answers with one tool call"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Database structure the agent already knows, so it answers with one tool call instead of five."
   },
   "schemaVersion": 1,
   "scripts": {

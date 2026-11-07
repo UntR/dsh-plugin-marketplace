@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "1bc294f3f115cb75c80712eef64e846e68064576"
   },
   "github": {
@@ -49,27 +49,38 @@
   },
   "id": "gh:1445866889",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cost-meter",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xiaobaijunya/dsh-cost-meter#1bc294f3f115cb75c80712eef64e846e68064576",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.9.58",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-cost-meter",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/086266f69847fb1ce7b85cc16e665a183f8a68c1471c657e4fb90a124af9f76b/xiaobaijunya/dsh-cost-meter",
     "description": "Estimated CNY cost for DSH token usage: per-turn and session cost with DeepSeek peak/off-peak and per-model pricing, plus a separate subagent breakdown."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Estimated CNY API cost for a DeepSeek Harness conversation, with per-model and peak/off-peak pricing and a separate subagent breakdown."
   },
   "schemaVersion": 1,
   "scripts": {

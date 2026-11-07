@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "976f6e921ad9b7341f70fa70f9ad5c161562a862"
   },
   "github": {
@@ -47,27 +47,40 @@
   },
   "id": "gh:1445572465",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-kube-lens",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:atticuswx/dsh-kube-lens#976f6e921ad9b7341f70fa70f9ad5c161562a862",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@local/dsh-kube-lens",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bd11fa9f458919436b658dbce36d78afbac7f7d99f8f8eab343af8766cb242f7/atticuswx/dsh-kube-lens",
     "description": "Kubernetes cluster browser panel and agent tools for DeepSeek Harness (DSH) — read-only by default."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "通过 kubeconfig 访问集群的 DSH 插件。左侧栏多一个 Kubernetes 图标，主区是一个资源浏览器；同一套操作也暴露成 Agent 工具，用来排查问题。"
   },
   "schemaVersion": 1,
   "scripts": {

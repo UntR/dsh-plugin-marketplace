@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "ecea45772a86c197a8d842b31efe227e862e27e5"
   },
   "github": {
@@ -44,27 +44,50 @@
   },
   "id": "gh:1446486281",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-codex-coding",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-plugin-codex-coding@0.2.2-rc.1",
+    "version": "0.2.2-rc.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.2-rc.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./preset": {
+        "default": "./lib/preset.js",
+        "types": "./lib/types/preset.d.ts"
+      }
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-plugin-codex-coding",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2-rc.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1bcecc167e5aaadc316054a2d79dae7136026beb3dff7a9642832731dd6500d6/ygzhang-lab/dsh-plugin-codex-coding",
     "description": "一个面向 DeepSeek Harness 的 Codex 风格 Coding 预设 + 工作流 + 交付契约，自动切换推理等级/工作流模式"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个面向 DeepSeek Harness 的 Codex 风格 Coding 预设 + 交付契约，自动切换推理等级/工作流模式，并支持推理等级自动切换、本地 Skill 开关和 DSH 插件工具开关。"
   },
   "schemaVersion": 1,
   "scripts": {

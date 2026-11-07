@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "2fa91a9355facc6f737c117a90b9635788e8038c"
   },
   "github": {
@@ -46,27 +46,42 @@
   },
   "id": "gh:1445777450",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tray-flash",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-tray-flash@0.5.2",
+    "version": "0.5.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.5.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-tray-flash",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0a69d116497e9e8c4c1bad0cfff6ead58b758064b03782ea67de324e21c03a10/xymy666/dsh-tray-flash",
     "description": "Blinks the Windows notification-area icon and flashes the taskbar button while a DSH session still shows an unread or waiting dot."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "任务完成、或有人在等你审批/回答时，让 DeepSeek Harness 的托盘图标像 QQ、微信收到消息那样隐显闪烁、任务栏按钮同时闪。只要侧边栏还挂着黄点/绿点就一直闪，点全部消失才停；窗口本来就在前台时没有点可等，则闪到你动一下鼠标或切换会话。"
   },
   "schemaVersion": 1,
   "scripts": {

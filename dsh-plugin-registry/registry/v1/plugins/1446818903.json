@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "c719653155648847e4ff1917ff4e3f9b799f64c2"
   },
   "github": {
@@ -46,27 +46,40 @@
   },
   "id": "gh:1446818903",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-sidebar-nav-scroll",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Ghostdu-AI/dsh-sidebar-nav-scroll#c719653155648847e4ff1917ff4e3f9b799f64c2",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-sidebar-nav-scroll",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e199d1997f13a7d5e8d1e87f327fb9116827a3b38e101ab03297b4e03a071208/Ghostdu-AI/dsh-sidebar-nav-scroll",
     "description": "DSH plugin: caps the sidebar global-panel list at a fraction of its natural height, scrolls it, and gives the freed space to the workspace below."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DSH 侧边栏顶部的「全局面板」列表限制为自身自然高度的一半，并给溢出的部分加滚动条； 省下来的高度自动让给下方的工作区（sidebar 的面板列表是 flex: none，工作区是 flex: 1， 所以不需要任何额外的布局补丁）。"
   },
   "schemaVersion": 1,
   "scripts": {

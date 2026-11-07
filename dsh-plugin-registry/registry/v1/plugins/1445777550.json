@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "b92578f2f468e106933122b6f8d3f428a82fa0ec"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1445777550",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-git-blame",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-plugin-git-blame@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-plugin-git-blame",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/366bdaa6e18c6e01746e0e83c950ba01209b740a53691bc54768414dd64bc04f/badpx/dsh-plugin-git-blame",
     "description": "DeepSeek Harness 插件：在右侧栏文件预览的行号前注入 Git Blame 列，悬停显示提交信息（DSH plugin）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin. When a text or source file is opened in the right sidebar's file preview, hovering a line shows a small card with that line's git blame information (author, short commit hash, date, and commit summary)."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "36155e441c2ef738307742f40a41c94161308ca9"
   },
   "github": {
@@ -43,27 +43,36 @@
   },
   "id": "gh:1447748530",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-external-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Jason25417/dsh-external-bridge#36155e441c2ef738307742f40a41c94161308ca9",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js"
+    },
+    "main": "index.js",
+    "name": "dsh-external-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ff6f292891abf685e4898b62589eef393e1180f98d92f55f3f84c2fd3f867de6/Jason25417/dsh-external-bridge",
     "description": "Local HTTP bridge for DeepSeek Harness Desktop: external processes create real sessions, send prompts, long-poll replies."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在本机 127.0.0.1:39217 开一个 HTTP 口子，让外部进程（终端里的 Claude Code 等）指挥桌面版 DSH 主进程干活：建会话（可选 agent preset / 模型）、发消息、查状态、长轮询等回复。"
   },
   "schemaVersion": 1,
   "scripts": {

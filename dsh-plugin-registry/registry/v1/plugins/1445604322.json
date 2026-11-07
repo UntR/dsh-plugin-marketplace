@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "39ac137dfd5d94450542f6c6308c8aeb1ee69bc6"
   },
   "github": {
@@ -18,14 +18,14 @@
     "fork": false,
     "forks": 0,
     "headSha": "39ac137dfd5d94450542f6c6308c8aeb1ee69bc6",
-    "homepageUrl": null,
+    "homepageUrl": "https://deepwhale.org.cn/plugins.html",
     "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVior4g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b02d03d14d2a8497686fd838157965e3f96240b9c9ca5c53f04422dbb810b024/feely0208/dsh-release-guard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/aad454041bf53fa6429b2401df95f0ba3ffd321b6dd5e50d4d20ba39a6dc2345/feely0208/dsh-release-guard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/286251768?u=0d72e00f036a10e56e53ae6507d82222d753272f&v=4",
       "login": "feely0208"
@@ -38,32 +38,44 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-11-04T12:04:31Z",
+    "updatedAt": "2026-11-07T01:26:23Z",
     "url": "https://github.com/feely0208/dsh-release-guard"
   },
   "id": "gh:1445604322",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@deepwhale-cn/dsh-release-guard",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@deepwhale-cn/dsh-release-guard@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@deepwhale-cn/dsh-release-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b02d03d14d2a8497686fd838157965e3f96240b9c9ca5c53f04422dbb810b024/feely0208/dsh-release-guard",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/aad454041bf53fa6429b2401df95f0ba3ffd321b6dd5e50d4d20ba39a6dc2345/feely0208/dsh-release-guard",
+    "description": "发版前靠人肉核对：package.json 改了、锁文件忘了；CHANGELOG 还是上一版；下载页写着旧版本号； 流水线里 RELEASEVERSION=0.9.0 还硬编码着。等到用户装上发现版本对不上、商店页写着上个月的号，已经发出去了。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "发版前靠人肉核对：package.json 改了、锁文件忘了；CHANGELOG 还是上一版；下载页写着旧版本号； 流水线里 RELEASEVERSION=0.9.0 还硬编码着。等到用户装上发现版本对不上、商店页写着上个月的号，已经发出去了。"
   },
   "schemaVersion": 1,
   "scripts": {

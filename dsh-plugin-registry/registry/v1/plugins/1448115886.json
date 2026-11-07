@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "7c5cf50648f08dd57500ac0f0ed496416e157490"
   },
   "github": {
@@ -42,27 +42,38 @@
   },
   "id": "gh:1448115886",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workspace-drop",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:MeirinRuan/dsh-workspace-drop#7c5cf50648f08dd57500ac0f0ed496416e157490",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./host.mjs",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dsh-workspace-drop",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/452c044b36e6837b8db8b4a032d9fd980527c5c2cea8615a193ce295e2d33dd2/MeirinRuan/dsh-workspace-drop",
     "description": "将本地文件夹拖入 DSH 桌面工作区列表或选择器，注册为工作区。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Drag local folders onto the DSH workspace list or the new-conversation workspace picker to register their existing paths as workspaces. Requires the DSH desktop path bridge."
   },
   "schemaVersion": 1,
   "scripts": {

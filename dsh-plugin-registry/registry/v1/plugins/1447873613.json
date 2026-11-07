@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "b9eef86c718791dd5b722d888660554e59f29031"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1447873613",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-multi-session",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vegetable86/dsh-multi-session#b9eef86c718791dd5b722d888660554e59f29031",
+    "version": "0.6.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/dsh-multi-session",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/59c5d7f79dbb909ddd7b57c0b7774da6470afa70522d43115e87e2c44c99d361/vegetable86/dsh-multi-session",
     "description": "A multi-session workspace for DeepSeek Harness: view and drive many conversations side by side."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 里把多个会话并排看：一个独立的「多会话」主面板，格子数量不设上限，每格绑定一个已有会话，每格都是完整的原生对话（消息流 + 输入框）。所有格子不重叠地平铺，拖动分隔条就能像 tmux 那样调整相邻格子的长宽。"
   },
   "schemaVersion": 1,
   "scripts": {

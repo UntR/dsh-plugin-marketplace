@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "80b8db07897ea1d058a834829268aaf9b95747ef"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1445797316",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-goal-board",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Little-Mostima/dsh-goal-board#80b8db07897ea1d058a834829268aaf9b95747ef",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-goal-board",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4e52420ded548f0add0ebeedde7c5cd6b49f15e51782c1f741e466f59c443bde/Little-Mostima/dsh-goal-board",
     "description": "跨会话目标清单：项目 → 目标 → 条目，每轮自动提醒 agent 该做什么、做到哪了，完成后归档。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的「目标清单」插件：给人和 agent 共用一块看板，按 项目 → 目标 → 条目 三层组织，每轮把当前工作注入给 agent，任务做完由 agent 核对产出后自动归档。"
   },
   "schemaVersion": 1,
   "scripts": {

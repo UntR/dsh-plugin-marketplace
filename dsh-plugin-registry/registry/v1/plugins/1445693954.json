@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "c29e7e1b78c0bded5e496ee45a5afdfbb2cd4b20"
   },
   "github": {
@@ -43,27 +43,43 @@
   },
   "id": "gh:1445693954",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-split-panel",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:CsBpRd/dsh-split-view#c29e7e1b78c0bded5e496ee45a5afdfbb2cd4b20",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-split-panel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/93a1ce489fd71dfdef2cab3fd4978998b438064d0ada4b53aaaeea9c47cf5b09/CsBpRd/dsh-split-view",
     "description": "DeepSeek Harness 分屏插件：把并行任务并排显示，每屏一个会话的实时对话，另有极简进度视图。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 分屏面板：把并行的多个任务并排显示，每屏一个任务的实时对话；另有只报进度的一条条极简视图。"
   },
   "schemaVersion": 1,
   "scripts": {

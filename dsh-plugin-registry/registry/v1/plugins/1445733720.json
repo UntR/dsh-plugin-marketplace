@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "809ddb1fa0a5d297a3ee2a75dcf53993b77d1503"
   },
   "github": {
@@ -42,27 +42,40 @@
   },
   "id": "gh:1445733720",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-skills-management",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:JayC-L/dsh-skills-management#809ddb1fa0a5d297a3ee2a75dcf53993b77d1503",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-skills-management",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/eca363131a0b73860a1df549fbf0298d1a7d6f0d0181601223e7edc6ea8e2b52/JayC-L/dsh-skills-management",
     "description": "DSH Skill catalog with file-backed model and user manual invocation controls and live source reads."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness (DSH) Skill catalog and invocation-policy plugin. Skills from every Provider remain visible, while file-backed Skills support independent model and user manual invocation controls. The plugin reads current source files without modifying SKILL.md, frontmatter, r"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,23 +1,23 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
-    "headSha": "446619841b91d5b7d1a0ca7072a2240cb5bbc3b0"
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
+    "headSha": "d75b7a814484f83edcba89cd675cd167f25d9770"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-11-04T17:18:00Z",
     "databaseId": 1445970051,
     "defaultBranch": "main",
-    "description": "Intranet container-log triage for DeepSeek Harness: a model-callable log_triage tool that pulls docker logs over SSH, clusters errors into fingerprints, extracts stack root causes, and reads only the evidence it needs.",
+    "description": "内网容器日志巡检与根因定位插件（DSH / DeepSeek Harness）。只读：SSH 拉 docker logs，聚类错误指纹、抽最深根因，只回摘要——全量日志从不进上下文。",
     "fork": false,
     "forks": 0,
-    "headSha": "446619841b91d5b7d1a0ca7072a2240cb5bbc3b0",
+    "headSha": "d75b7a814484f83edcba89cd675cd167f25d9770",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVi_Agw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/ae803101751ef29af8cc96489837c255ca63f8051ece08296444014d91392283/xinstart-1/dsh-log-triage",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a25bfcd2cd23dbd7489320dc867092036da8b35cb88a47fe46902ef80dd4da31/xinstart-1/dsh-log-triage",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/230812757?u=2fed4d42a32eb1e6f7a2fbe5a398993186294818&v=4",
       "login": "xinstart-1"
     },
-    "pushedAt": "2026-11-05T04:51:21Z",
+    "pushedAt": "2026-11-06T14:04:51Z",
     "slug": "xinstart-1/dsh-log-triage",
     "stars": 0,
     "topics": [
@@ -43,32 +43,43 @@
       "observability",
       "ssh"
     ],
-    "updatedAt": "2026-11-05T04:51:25Z",
+    "updatedAt": "2026-11-06T14:39:17Z",
     "url": "https://github.com/xinstart-1/dsh-log-triage"
   },
   "id": "gh:1445970051",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-log-triage",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xinstart-1/dsh-log-triage#d75b7a814484f83edcba89cd675cd167f25d9770",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-log-triage",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/ae803101751ef29af8cc96489837c255ca63f8051ece08296444014d91392283/xinstart-1/dsh-log-triage",
-    "description": "Intranet container-log triage for DeepSeek Harness: a model-callable log_triage tool that pulls docker logs over SSH, clusters errors into fingerprints, extracts stack root causes, and reads only the evidence it needs."
+    "coverUrl": "https://opengraph.githubassets.com/a25bfcd2cd23dbd7489320dc867092036da8b35cb88a47fe46902ef80dd4da31/xinstart-1/dsh-log-triage",
+    "description": "内网容器日志巡检与根因定位插件（DSH / DeepSeek Harness）。只读：SSH 拉 docker logs，聚类错误指纹、抽最深根因，只回摘要——全量日志从不进上下文。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "内网容器日志巡检与根因定位插件（DSH 0.2.1 线）。只读：只跑 docker ps/inspect/logs/stats、dmesg、df、free 与 systemctl 状态查询，不重启、不改配置、不写服务器。"
   },
   "schemaVersion": 1,
   "scripts": {

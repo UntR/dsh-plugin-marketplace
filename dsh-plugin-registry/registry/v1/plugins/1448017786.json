@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "7a60cfc6774a301c23e1a762bcad2e3c43720d25"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1448017786",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/printer-warden",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wu777wu/printer-warden#7a60cfc6774a301c23e1a762bcad2e3c43720d25",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/printer-warden",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bbf8d2d57dbd93c43cb7e55b40cb4452518eb4331e2f2616f0d3e07b8a531adc/wu777wu/printer-warden",
     "description": "DSH 左侧栏插件：发现局域网共享打印机、绑定为默认、断电换 IP 自愈"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "左侧栏的打印机管理插件：找到局域网里的共享打印机，把 Windows 打印队列绑到它、设为默认，并让它在打印机断电换 IP 后继续能打。"
   },
   "schemaVersion": 1,
   "scripts": {

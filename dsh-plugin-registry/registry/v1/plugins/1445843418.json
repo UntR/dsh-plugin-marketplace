@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "4beafb84ec268e095034666962ca34751e2f090f"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1445843418",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-about-me",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:thawline/dsh-about-me#4beafb84ec268e095034666962ca34751e2f090f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-about-me",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7df52c16f63ea0c6bb34c3918b6f90ed4033f576c0f5960741a636fb8edb1ed9/thawline/dsh-about-me",
     "description": "关于我：把你的硬资料、AI 从聊天里攒的印象、以及标着「猜的」的判断收进一个设置页；每天定时自己校对一次；可检查更新。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 用的「关于我」插件：把你的硬资料、AI 从聊天里攒的印象、以及它标着「猜的」的判断，收进一个设置页里；AI 每天到点会自己开一轮，翻一遍这份东西，看有没有哪条该改。"
   },
   "schemaVersion": 1,
   "scripts": {

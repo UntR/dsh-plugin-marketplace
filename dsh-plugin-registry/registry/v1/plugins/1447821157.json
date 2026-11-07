@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "cd9b2fa140e10a2ab46644942c0ff24f6acc830e"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1447821157",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-deferred-approvals",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Hao0311/dsh-deferred-approvals#cd9b2fa140e10a2ab46644942c0ff24f6acc830e",
+    "version": "0.3.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-deferred-approvals",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/b864e5bd3efbf5934f543185e384ab37af032e85e064d927ddb731452d41db8c/Hao0311/dsh-deferred-approvals",
     "description": "Non-blocking approvals and timed questions for DeepSeek Harness: permission requests park as pending items while the model keeps working, and ask_user_question runs in timed mode."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "审批不再阻塞模型：需要用户授权的工具调用会立即得到“已挂起、未执行”的结果并记为一个待办 （编号如 #A1），模型同一回合继续做其它工作；你随时回来在输入框位置（原生审批样式）的 「待处理审批」卡片里允许 / 拒绝。允许过的调用重试时由宿主自动放行（一次性授权）， 也可以选择「本对话允许同类」不再反复问。会话列表里对应对话旁会出现原生审批那样的橙色小点。"
   },
   "schemaVersion": 1,
   "scripts": {

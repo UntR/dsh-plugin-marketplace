@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "aa14a084ce49962e8a8129fc450b205827c1ca24"
   },
   "github": {
@@ -57,27 +57,42 @@
   },
   "id": "gh:1446683342",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-session-sidebar",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:QuentinCrane/dsh-session-sidebar#aa14a084ce49962e8a8129fc450b205827c1ca24",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "./index.js",
+    "name": "dsh-session-sidebar",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/293464e3deaa6713ee42e1f31e435e34b3767bf04422fc73529179d9dc6285b3/QuentinCrane/dsh-session-sidebar",
     "description": "Codex-style session sidebar for DeepSeek Harness (DSH) 适用于 DeepSeek Harness（DSH）的 Codex 风格会话侧边栏：采用收件箱式活动视图（Activity View），分类管理运行中、待处理和未读会话；支持独立置顶空间、工作区内置顶、工作区树状结构、拖拽排序以及会话全文搜索。适用于 DSH 网页版和桌面版。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness（DSH）里同时开很多会话时，原生侧边栏只按工作区把列表铺开，哪个还在后台跑、哪个卡在审批等你处理、哪个已经跑完但还没看，往往得挨个点进去才知道。"
   },
   "schemaVersion": 1,
   "scripts": {

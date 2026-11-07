@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "d3f4f10cea9ef9177e3d1326924ff5b3754da726"
   },
   "github": {
@@ -43,27 +43,40 @@
   },
   "id": "gh:1445774112",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@delthin/dsh-fast",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@delthin/dsh-fast@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@delthin/dsh-fast",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/3f22160e7d1c70d9f7ad03e075af405c779008e20ac216f1dd5fb966e323b444/Delthin/dsh-fast",
     "description": "Session-scoped Standard/Fast mode and a compact draggable model picker for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness（DSH）提供当前会话的「标准 / Fast」档位切换，以及带推理等级调节的模型选择器。Fast 将一个明确配置的 provider、一个完整的 Responses URL 的请求转发到指定 Codex Responses URL，并设置 servicetier: \"priority\"。"
   },
   "schemaVersion": 1,
   "scripts": {

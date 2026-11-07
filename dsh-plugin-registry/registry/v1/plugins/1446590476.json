@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "00b45341f3da5900ae23ce44d0d9d99faa1c5b12"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1446590476",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-lit-filecheck",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Rcyc-1025/dsh-lit-filecheck#00b45341f3da5900ae23ce44d0d9d99faa1c5b12",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-lit-filecheck",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bdf59a80fe1e022f3115eb944e23399f4e6ed442907275cdcd0ae14a625b4cf7/Rcyc-1025/dsh-lit-filecheck",
     "description": "lit + FileCheck test loop for DSH: lit_run / lit_rerun_failed / filecheck"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DSH plugin that brings the lit + FileCheck test loop into a session. Three tools:"
   },
   "schemaVersion": 1,
   "scripts": {

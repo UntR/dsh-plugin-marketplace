@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "2faa8dae39812ec181439be73ae730267666abec"
   },
   "github": {
@@ -43,27 +43,37 @@
   },
   "id": "gh:1446459458",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-guardrail",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:darkmagic-ai/dsh-guard#2faa8dae39812ec181439be73ae730267666abec",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-guardrail",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a0fe3cb60a45ab5f88e1861cb6e4c297a4340711da479e543e5ecd43c43466c4/darkmagic-ai/dsh-guard",
     "description": "DSH (DeepSeek Harness) security guard plugin: blocks/asks on dangerous commands & sensitive paths, redacts secrets in tool output, local JSONL audit log + guard_report. DSH 安全护栏插件。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "建议先装到一个单独的测试 profile 里试用："
   },
   "schemaVersion": 1,
   "scripts": {

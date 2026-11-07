@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "d6608962b124e3e77f18d864ed0e20f1f12e4d33"
   },
   "github": {
@@ -49,24 +49,35 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-redo",
+    "status": "valid",
+    "type": "module",
+    "version": "0.4.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/99fda93a981ed498141824380bc6d50d874eb9bae9c954ef5a293b851e48a64c/YZKZK01/dsh-redo",
     "description": "Fork of Imzl-zl/dsh-redo (MIT) + \"Cancel rewrite\": click ✎ to edit in place, then cancel without losing the message. 原地重发 + 取消重写"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "---"
   },
   "schemaVersion": 1,
   "scripts": {

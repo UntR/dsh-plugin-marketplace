@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "852e3ea22f90ee9d1105767cc0df238f098452b0"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1446402962",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-activity-view",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:bloodtmai-cmyk/dsh-activity-view#852e3ea22f90ee9d1105767cc0df238f098452b0",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-activity-view",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/08b603a6ea4c2621650155136ac71cdd92c2a395efbecc657fc439295e3f9c10/bloodtmai-cmyk/dsh-activity-view",
     "description": "DSH 活动视图：把侧栏会话列表换成按活跃度排序的扁平列表，每行带所属项目名，运行中的会话置顶 · Activity view for the DSH sidebar: recently active sessions first, workspace name per row, running sessions pinned on top. Install: plugin_manager install_bundle github:bloodtmai-cmyk/dsh-activity-view"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 活动视图 — 把 DeepSeek Harness 左侧「工作区 / 会话」列表的列表主体换成活动视图：顶部是被手动置顶的会话（不带分组标题），其余按「今天 / 昨天 / 更早」分组，组内运行中的会话排在前面并带圆形运行标记。原生列表的其余结构（工具栏、搜索、视图选项等）保持原生。"
   },
   "schemaVersion": 1,
   "scripts": {

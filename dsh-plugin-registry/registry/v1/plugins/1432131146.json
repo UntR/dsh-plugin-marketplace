@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "0192073625fffd86dfe072208b210a795df7774b"
   },
   "github": {
@@ -50,11 +50,11 @@
     "preferred": "npm",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "dsh-qq-tools@0.9.0",
-    "version": "0.9.0"
+    "spec": "dsh-qq-tools@0.10.2",
+    "version": "0.10.2"
   },
   "npm": {
-    "latestVersion": "0.9.0",
+    "latestVersion": "0.10.2",
     "published": true,
     "repositoryMatches": true
   },
@@ -68,6 +68,9 @@
       "./tools/qq-favorite-faces": "./tools/qq-favorite-faces/index.js",
       "./tools/qq-favorite-faces/locale/en.json": "./tools/qq-favorite-faces/locale/en.json",
       "./tools/qq-favorite-faces/locale/zh.json": "./tools/qq-favorite-faces/locale/zh.json",
+      "./tools/qq-friend-management": "./tools/qq-friend-management/index.js",
+      "./tools/qq-friend-management/locale/en.json": "./tools/qq-friend-management/locale/en.json",
+      "./tools/qq-friend-management/locale/zh.json": "./tools/qq-friend-management/locale/zh.json",
       "./tools/qq-get-group-history": "./tools/qq-get-group-history/index.js",
       "./tools/qq-get-group-history/locale/en.json": "./tools/qq-get-group-history/locale/en.json",
       "./tools/qq-get-group-history/locale/zh.json": "./tools/qq-get-group-history/locale/zh.json",
@@ -80,6 +83,9 @@
       "./tools/qq-private-chat": "./tools/qq-private-chat/index.js",
       "./tools/qq-private-chat/locale/en.json": "./tools/qq-private-chat/locale/en.json",
       "./tools/qq-private-chat/locale/zh.json": "./tools/qq-private-chat/locale/zh.json",
+      "./tools/qq-qzone": "./tools/qq-qzone/index.js",
+      "./tools/qq-qzone/locale/en.json": "./tools/qq-qzone/locale/en.json",
+      "./tools/qq-qzone/locale/zh.json": "./tools/qq-qzone/locale/zh.json",
       "./tools/qq-send-face": "./tools/qq-send-face/index.js",
       "./tools/qq-send-face/locale/en.json": "./tools/qq-send-face/locale/en.json",
       "./tools/qq-send-face/locale/zh.json": "./tools/qq-send-face/locale/zh.json",
@@ -88,21 +94,24 @@
       "./tools/qq-send-group-message/locale/zh.json": "./tools/qq-send-group-message/locale/zh.json",
       "./tools/qq-send-poke": "./tools/qq-send-poke/index.js",
       "./tools/qq-send-poke/locale/en.json": "./tools/qq-send-poke/locale/en.json",
-      "./tools/qq-send-poke/locale/zh.json": "./tools/qq-send-poke/locale/zh.json"
+      "./tools/qq-send-poke/locale/zh.json": "./tools/qq-send-poke/locale/zh.json",
+      "./tools/qq-set-avatar": "./tools/qq-set-avatar/index.js",
+      "./tools/qq-set-avatar/locale/en.json": "./tools/qq-set-avatar/locale/en.json",
+      "./tools/qq-set-avatar/locale/zh.json": "./tools/qq-set-avatar/locale/zh.json"
     },
     "main": "lib/index.js",
     "name": "dsh-qq-tools",
     "status": "valid",
     "type": "module",
-    "version": "0.8.2"
+    "version": "0.10.2"
   },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1b94e5633e04f5ce4734998fcda517765fb62f7e309bf66ea485bad09af5a02b/cyhddyx/dsh-qq-tools",
-    "description": "DSH QQ group/private chat tools: groups, history, send, faces, favorites, private chat, pokes (OneBot 11 / SnowLuma)"
+    "description": "DSH QQ group/private chat tools: groups, history, send, faces, favorites, private chat, pokes. Requires SnowLuma; other OneBot implementations (including NapCat) are not supported."
   },
   "readme": {
     "available": true,
-    "excerpt": "给 DSH（DeepSeek Harness）里的大肥鱼会话用的 QQ 群/私聊工具，走 OneBot 11 HTTP + WebSocket。系统表情在 SnowLuma / NapCat 上都能发；收藏表情用 SnowLuma 的自定义表情扩展接口，和 QQ 客户端里的收藏夹是同一份数据。"
+    "excerpt": "给 DSH（DeepSeek Harness）里的大肥鱼会话用的 QQ 群/私聊工具。只支持 SnowLuma（通过它的 OneBot 11 HTTP + WebSocket 接口），NapCat 或其他 OneBot 实现都不支持。发表情只发 QQ 收藏夹里的自定义表情；收藏表情、更改头像、好友管理和 QQ 空间走 SnowLuma 的扩展接口，和 QQ 客户端里的数据是同一份。"
   },
   "schemaVersion": 1,
   "scripts": {

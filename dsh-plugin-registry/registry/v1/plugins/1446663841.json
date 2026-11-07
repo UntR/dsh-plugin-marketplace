@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "75b2b9e3e07154789a0b6100939c158a391d7500"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1446663841",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-token-dog",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ccoderJava/dsh-token-dog#75b2b9e3e07154789a0b6100939c158a391d7500",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-token-dog",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2ae9754dbee767cf365eee89dd0994050854141c35ca243f89d198687bd6dd33/ccoderJava/dsh-token-dog",
     "description": "DeepSeek Harness 的 Token 用量面板：按会话/模型统计，每日堆叠矩形图 + 全年日历热力图"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "插件直接读 Session 日志，所以装上之前的对话也一起统计，不需要从今天开始重新记账。"
   },
   "schemaVersion": 1,
   "scripts": {

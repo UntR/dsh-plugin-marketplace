@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "81a1727eaaaf243abd3010cca404937bba4dcf8e"
   },
   "github": {
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,30 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      "./mcp-client-documented": {
+        "default": "./lib/mcp-client-documented.mjs",
+        "types": "./lib/mcp-client-documented.d.mts"
+      },
+      "./tool-docs": {
+        "default": "./lib/tool-docs.mjs",
+        "types": "./lib/tool-docs.d.mts"
+      }
+    },
+    "main": null,
+    "name": "@degraw4/dsh-tool-discovery",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/23a858ad0dd84d9535de6fbb8e823cc16eaecf808390e836d35a0a4f37bfcd64/degraw4/dsh-tool-discovery",
     "description": "Progressive tool-parameter documentation for DeepSeek Harness native TypeScript PTC, with a reproducible 78-tool evaluation"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Keep frequent tool inputs complete. Load complex parameter details only when needed."
   },
   "schemaVersion": 1,
   "scripts": {

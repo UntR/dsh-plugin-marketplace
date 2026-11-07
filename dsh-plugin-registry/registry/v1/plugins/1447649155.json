@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "e921325889ddfaef235ef2b1004435063476ec25"
   },
   "github": {
@@ -52,27 +52,39 @@
   },
   "id": "gh:1447649155",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@acfufu/dsh-wiki",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Acfufu/dsh-wiki#e921325889ddfaef235ef2b1004435063476ec25",
+    "version": "0.1.2"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@acfufu/dsh-wiki",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1f0585ff6ced039feff6ca265600d2c0ec5004ec8a9ba753a59842829ac28db8/Acfufu/dsh-wiki",
     "description": "DeepWiki-style local repo wiki for DeepSeek Harness (DSH) — agent-generated, path:line evidence, zero upload. 纯本地仓库 Wiki 插件，零上传零网络。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepWiki 式本地仓库 Wiki，为 DeepSeek Harness (DSH) 而做：零上传、零网络、证据优先。 agent 在本地读懂仓库 → 产出带 路径:行号 证据引用的分页 wiki（目录树 + 图表）→ 构建单文件自包含站点，挂在本机 DSH 宿主上直接浏览。"
   },
   "schemaVersion": 1,
   "scripts": {

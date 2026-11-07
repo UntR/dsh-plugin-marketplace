@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "47b6350c9440a2837c37e94fe3f8b3771115a937"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1447330582",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mindmap",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:TheycallmeXH/dsh-mindmap#47b6350c9440a2837c37e94fe3f8b3771115a937",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.18.6",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-mindmap",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/61ac48cad28460473b81425bc570b3c33624cbf020405cff84842205b6e02038/TheycallmeXH/dsh-mindmap",
     "description": "XMind-style mind maps inside the DeepSeek Harness web GUI. Markdown is the source of truth; edit the map, write back to the note."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "XMind 风格的思维导图，长在 DeepSeek Harness 右侧栏里。Markdown 是唯一真相： 标题层级和列表缩进就是节点，右侧栏只是同一份文件的另一个编辑器。改写自 gogoga-mindmap（Obsidian 插件，MIT） 的核心思路——Markdown ⇄ 树的无损互转、%%…%% 标记、.xmind 读入——重做成 DSH 的 Host/Client 插件。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "8b9658ccc59a461b6e3091dad505c92db25f8bbc"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1447718714",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-build-servers",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-build-servers@1.0.1",
+    "version": "1.0.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-build-servers",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9c68dbfd359a95b5b171b8dcbf93a084263aaf2d22f24dce3181cd65377bdf18/ji-tz/dsh-build-servers",
     "description": "Remote build servers for DeepSeek Harness: per-session binding, source upload, build/install/test pipeline, SSH terminal, and agent tools."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness bundle for working with remote build machines from inside a conversation: bind one server to the current session, upload local source, run configure → build → install → test, watch the result, and open an SSH shell without leaving the chat."
   },
   "schemaVersion": 1,
   "scripts": {

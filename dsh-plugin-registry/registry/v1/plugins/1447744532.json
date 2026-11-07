@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "e602090ba3f591c15005aca90d9c61cdf63fdd64"
   },
   "github": {
@@ -48,27 +48,40 @@
   },
   "id": "gh:1447744532",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-token-board",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-token-board@0.1.4",
+    "version": "0.1.4"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.4",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./ledger": "./lib/ledger-merge.js",
+      "./package.json": "./package.json",
+      "./usage": "./lib/usage.js"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-token-board",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/607360a2109e9e52696e804e9b95016b1e3d8e44055021748367cfb4339a9e6c/HTempt/dsh-token-board",
     "description": "为 DeepSeek Harness Web GUI 提供 Token 用量看板：今日/本月/区间消耗、热力日历、来源明细、提供商与模型排行、双轴趋势；只读本机会话日志，不联网。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness Web GUI 提供 Token 用量看板的插件，dsh web 与 DSH Desktop 都能用：它把本机会话日志折叠成日/提供商/模型三个维度的统计，在侧边栏加一个「使用统计」入口，并渲染今日、本月与所选区间的消耗卡片、可切 3/6/12 个月或「全部」的热力日历、点开某天查看按来源拆分的明细、提供商与模型排行，以及 Token 与调用次数的双轴趋势图；全部数据只来自本机、不联网不上报，插件也只写自己的统计与缓存文件。"
   },
   "schemaVersion": 1,
   "scripts": {

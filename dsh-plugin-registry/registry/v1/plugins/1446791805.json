@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "22ba810b85d543c73b504298fbea9dd59d30555b"
   },
   "github": {
@@ -49,27 +49,40 @@
   },
   "id": "gh:1446791805",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-sensitive-data-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:DreamInsight24/dsh-sensitive-data-guard#22ba810b85d543c73b504298fbea9dd59d30555b",
+    "version": "0.2.6"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "@local/dsh-sensitive-data-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/ac0302d9c0c4a8309cbecfb501c56e67c2bf3caf3c86d3559c87fb964d273a0b/DreamInsight24/dsh-sensitive-data-guard",
     "description": "敏感数据守卫（Sensitive Data Guard）：DSH 区域感知、fail-closed 的删除门禁——工作区不保护、.dsh 静默备份、敏感区删除先备份再由用户手动确认"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）用的删除门禁。DSH 的模型在 danger-full-access 下可以删掉工作区之外的 任何东西；这个插件在删除发生之前把它拦下来：先备份，再弹窗问你。备份不成功就硬性阻断， 绝不降级成一句警告。"
   },
   "schemaVersion": 1,
   "scripts": {

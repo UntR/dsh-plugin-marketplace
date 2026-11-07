@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "0b76a9d91eabf446d4ce58f21fa888ae5e503656"
   },
   "github": {
@@ -45,27 +45,43 @@
   },
   "id": "gh:1447258998",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-new-session",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:CassiaTw1g/dsh-new-session#0b76a9d91eabf446d4ce58f21fa888ae5e503656",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-new-session",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/47be9ece24fbc68f4ce4235300cc0ecb958230fa6ffac1a322ce3489430fce20/CassiaTw1g/dsh-new-session",
     "description": "给 DeepSeek Harness 的模型一个真正能用的「新开对话」工具：在当前工作区建会话、投递交接消息、带上一段对话的只读引用，并把 Web UI 自动切过去。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-new-session · 给 DeepSeek Harness 的「新开对话」工具"
   },
   "schemaVersion": 1,
   "scripts": {

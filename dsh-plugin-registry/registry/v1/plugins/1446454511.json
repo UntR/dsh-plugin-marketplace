@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "ea49894c59ab0f8c74881fd9ad5818adcbc44b7d"
   },
   "github": {
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./scan": "./lib/scan.js"
+    },
+    "main": "./lib/index.js",
+    "name": "@local/dsh-link-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/590f035845be3c30d1a9cd352e08b63c407036f3874d786bdc00df7943294de1/deepseekmaid/dsh-link-guard",
     "description": "Cross-session guard for DeepSeek Harness: markdown links must use forward slashes (backslash `\\_` escapes silently break paths)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "跨会话守护 Markdown 文件链接格式的 DeepSeek Harness（DSH）宿主插件。"
   },
   "schemaVersion": 1,
   "scripts": {

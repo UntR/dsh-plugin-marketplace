@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "d0061784ce3e378b47dbd291c1627332ad1af765"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1445406448",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-forge-cnb",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:genius-alray/dsh-plugin-forge-cnb#d0061784ce3e378b47dbd291c1627332ad1af765",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-forge-cnb",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/9605470ca27d51e3bee7c1125e12454a103bac0ef2d0ff413f2d1f09158e291e/genius-alray/dsh-plugin-forge-cnb",
     "description": "CNB (cnb.cool) merge request provider for the DeepSeek Harness forge panel"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "CNB (cnb.cool) provider for the DSH forge registry. It registers a ForgeProvider with ctx.forge, so the change request and working tree panel can show CNB merge requests: state, additions/deletions, mergeability, checks, reviewers, diff, file contents, review publication, and mer"
   },
   "schemaVersion": 1,
   "scripts": {

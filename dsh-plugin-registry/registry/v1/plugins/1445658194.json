@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "f112f1c2adb625e550b90703561eae0af3e48f81"
   },
   "github": {
@@ -48,27 +48,38 @@
   },
   "id": "gh:1445658194",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-comfyui-studio",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Lcxy0316/dsh-comfyui-studio#f112f1c2adb625e550b90703561eae0af3e48f81",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-comfyui-studio",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/12eb0554b23b194b2d435258e5177b9e6705cf407dccf767d2ca818f5adb83b9/Lcxy0316/dsh-comfyui-studio",
     "description": "ComfyUI studio plugin for DeepSeek Harness - generate images on your own GPU with a full in-app control panel (server probe, model list, hardware presets, launcher)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 里直接调用本机（或远程）ComfyUI 出图、出短视频（Wan 2.1 文生视频）。全部参数都能在 GUI 里改，改完写回 cordis.patch.yml，重启后依然是你的配置。"
   },
   "schemaVersion": 1,
   "scripts": {

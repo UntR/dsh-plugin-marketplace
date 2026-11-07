@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "f68eea223b59d8f059700f7b707cacb1e73110d9"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1445905743",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-speak-plus",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:M0Yun/dsh-speak-plus#f68eea223b59d8f059700f7b707cacb1e73110d9",
+    "version": "1.10.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./adapters/dsh/speech-hook.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "adapters/dsh/speech-hook.js",
+    "name": "dsh-speak-plus",
+    "status": "valid",
+    "type": null,
+    "version": "1.10.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7c3318a369eae68b99385f0576da2069575ac2a03da992d735bb597566cc4207/M0Yun/dsh-speak-plus",
     "description": "让 DSH 把回答念出来：中间过程合并朗读、审批/提问优先播报、新内容自动换手、Alt+S 停止（dsh-speak 1.8.4 增强分支）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DeepSeek Harness 把回答念出来——而且中间过程也念，不是只念最后一句。"
   },
   "schemaVersion": 1,
   "scripts": {

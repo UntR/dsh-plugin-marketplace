@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "24bed7d009022e786884645df525ae8fdcdab40d"
   },
   "github": {
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,27 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "require": "./dist/index.cjs",
+        "types": "./dist/index.d.ts"
+      }
+    },
+    "main": "dist/index.cjs",
+    "name": "dsh-software-factory",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/e634297c593afd7083223db7674ae87dcb1fd91ddf60e2d9d3f7d3a4e33976d1/aditya-deokar/dsh-software-factory",
-    "description": ""
+    "description": "DeepSeek Harness (dsh) plugin for Software Factory (aditya-deokar/software-factory)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness (dsh) plugin for Software Factory (aditya-deokar/software-factory)."
   },
   "schemaVersion": 1,
   "scripts": {

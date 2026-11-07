@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "3a80a0f48caf02f167006e270a69c0681a33c6c1"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1446354598",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-skillhealth",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hello-piper/SkillHealth#3a80a0f48caf02f167006e270a69c0681a33c6c1",
+    "version": "1.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-skillhealth",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/19b2518a3cdca524f3fe5bb8b2c4263bab10eff8fffdef06a2bce417d8e6e3c2/hello-piper/SkillHealth",
     "description": "SkillHealth: skill usage statistics, health diagnostics, and default-load control for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "SkillHealth is a DeepSeek Harness (DSH) plugin that records skill invocations and answers three questions: is a skill actually used, how well does it perform, and should the library be tidied up?"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "f5e76a82791877edfe8fb3092e0ba9f3103eccf1"
   },
   "github": {
@@ -49,27 +49,40 @@
   },
   "id": "gh:1446779283",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@zyfgood/dsh-email-notify",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@zyfgood/dsh-email-notify@0.2.0",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@zyfgood/dsh-email-notify",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/146beb9751907955cadbf033b6ad4ddfd6cd4fba5b4df7b58e318d89393bad31/zyfgood/dsh-email-notify",
     "description": "DeepSeek Harness plugin: SMTP email send/receive (email_send + email_check) for agents - task reports, cron notifications, inbox summaries. Credentials via env refs. npm: @zyfgood/dsh-email-notify"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 邮件插件：注册 emailsend（发信）与 emailcheck（收信） 两个模型工具，让 agent 发送任务结果/通知邮件、阅读/汇总收件邮件。 凭证（user/pass，邮箱「授权码」）SMTP 与 IMAP 共用；IMAP 主机默认从 host 推导（smtp.yeah.net → imap.yeah.net:993），可用 imapHost 覆盖。"
   },
   "schemaVersion": 1,
   "scripts": {

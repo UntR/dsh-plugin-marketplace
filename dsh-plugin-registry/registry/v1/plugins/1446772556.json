@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "f55c5e25d32ab7e279a2837a5f1a8ac61c832597"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1446772556",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-feishu-oauth",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-feishu-oauth@0.2.2-rc.2",
+    "version": "0.2.2-rc.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.2-rc.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/server/index.js",
+      "./client": "./dist/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/server/index.js",
+    "name": "dsh-feishu-oauth",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2-rc.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5f34b23bb0ba2111d1d7f10143648a9ef42bffd6e06e0fb016ab228534bba7ca/lloydzhou/dsh-feishu-oauth",
     "description": "Feishu OAuth login plugin for DeepSeek Harness using native session cookies"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "需要 Node.js >=24.9.0，以及提供 webServer.readResource()、connection.browserPeer 和原生认证接口的 DSH。清单声明的版本下限为 >=0.2.1-rc.3，但不保证较旧版本具备这些 API；已使用提取的 0.2.2-rc.1 原生模块进行兼容测试，不等同所有版本或真实飞书端到端验证。"
   },
   "schemaVersion": 1,
   "scripts": {

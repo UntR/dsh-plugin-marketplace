@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "8720b4d6abdf4a67ba9a0e40655b289011a10926"
   },
   "github": {
@@ -48,27 +48,47 @@
   },
   "id": "gh:1445967097",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/cbh-mode",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Lavaver/Cargo-by-Harness#8720b4d6abdf4a67ba9a0e40655b289011a10926",
+    "version": "1.9.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./commands": "./src/interface/commands/plugin.js",
+      "./commands/icon": "./icon.svg",
+      "./commands/locale/*.json": "./src/interface/commands/locale/*.json",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./skills": "./src/interface/skills/plugin.js",
+      "./skills/icon": "./icon.svg",
+      "./skills/locale/*.json": "./src/interface/skills/locale/*.json",
+      "./tools": "./src/interface/tools/plugin.js",
+      "./tools/icon": "./icon.svg",
+      "./tools/locale/*.json": "./src/interface/tools/locale/*.json"
+    },
+    "main": null,
+    "name": "@local/cbh-mode",
+    "status": "valid",
+    "type": "module",
+    "version": "1.9.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4d6aba0e28790f686c41e588b67c944929ce8528b157a580e971097994e9d8b4/Lavaver/Cargo-by-Harness",
     "description": "Rust, Evolved. A DSH session mode that grounds the Agent in your local Cargo cache instead of hallucinating APIs. Features pure-JS macro_rules! expansion, a strict cargo check feedback loop, and beginner-first guidance."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness session mode, That gives everyone the ability to build reliable, efficient Rust software"
   },
   "schemaVersion": 1,
   "scripts": {

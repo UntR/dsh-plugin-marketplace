@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
-    "headSha": "5e6c95c333bc5c54054c895899ff238f7f7249bb"
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
+    "headSha": "739b6adf7f8d007ff6eee16dc4dc83e804ca1f1e"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH drawio ai plugin",
     "fork": false,
     "forks": 0,
-    "headSha": "5e6c95c333bc5c54054c895899ff238f7f7249bb",
+    "headSha": "739b6adf7f8d007ff6eee16dc4dc83e804ca1f1e",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOVlFKgQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a7fe3ac8bce09ab9ef6d7db67f7109e5e49cbbb7b89231258cd86c9b6dffaed8/xuedipiaofei/dsh-drawio-chat",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/779b31a3ea52c7e7a1e638b0091de1b6e45ee8e0dbcb6e264becfeb975861e1c/xuedipiaofei/dsh-drawio-chat",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/2942032?u=df76cdb3c78508a0479a6e1474a30d0f991a4334&v=4",
       "login": "xuedipiaofei"
     },
-    "pushedAt": "2026-11-06T11:17:15Z",
+    "pushedAt": "2026-11-06T15:45:02Z",
     "slug": "xuedipiaofei/dsh-drawio-chat",
     "stars": 0,
     "topics": [
@@ -46,38 +46,58 @@
       "dsh-plugins",
       "visualization"
     ],
-    "updatedAt": "2026-11-06T11:29:51Z",
+    "updatedAt": "2026-11-06T15:45:06Z",
     "url": "https://github.com/xuedipiaofei/dsh-drawio-chat"
   },
   "id": "gh:1448168065",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-drawio-chat",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-drawio-chat@0.2.2",
+    "version": "0.2.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types/client/index.d.ts"
+      },
+      "./locale/en.json": "./locale/en.json",
+      "./locale/zh.json": "./locale/zh.json",
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-drawio-chat",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a7fe3ac8bce09ab9ef6d7db67f7109e5e49cbbb7b89231258cd86c9b6dffaed8/xuedipiaofei/dsh-drawio-chat",
+    "coverUrl": "https://opengraph.githubassets.com/779b31a3ea52c7e7a1e638b0091de1b6e45ee8e0dbcb6e264becfeb975861e1c/xuedipiaofei/dsh-drawio-chat",
     "description": "DSH drawio ai plugin"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "The chat-first draw.io plugin for DeepSeek Harness. The model creates, inspects and edits native .drawio files, the chat renders them with the real draw.io viewer, and every diagram stays in the workspace."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

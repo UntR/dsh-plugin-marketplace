@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "cb084539549f001d6b3871ff323e2956dac8aef0"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1445660024",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-rayburst",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:cat-Logan/dsh-rayburst#cb084539549f001d6b3871ff323e2956dac8aef0",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-rayburst",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7ef627763e9585b365b4f918df4f9a2f5a1c86bb307f4c85ddb8ceabc8fcd0c2/cat-Logan/dsh-rayburst",
     "description": "DeepSeek Harness 插件：把下载交给 Rayburst（aria2-next 内核）引擎，断点续传 + 多线程，不再让模型啃字节"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DeepSeek Harness 的下载走 Rayburst（aria2-next 内核），而不是让模型自己在进程里流式读字节。"
   },
   "schemaVersion": 1,
   "scripts": {

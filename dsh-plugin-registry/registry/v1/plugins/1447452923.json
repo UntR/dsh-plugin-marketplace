@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
-    "headSha": "ad4abedc54e7fb415820b788d2f95c9a06cd173b"
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
+    "headSha": "c1d5d371bd9f2c98fe8150776941742f82c64587"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "GPT/Codex 对话桥 —— 把本机 Codex CLI 的多轮会话接进 DeepSeek Harness（DSH）：侧栏/右侧抽屉查看往来、会话落库可用 resume 续接、模型与推理强度可切换。",
     "fork": false,
     "forks": 0,
-    "headSha": "ad4abedc54e7fb415820b788d2f95c9a06cd173b",
+    "headSha": "c1d5d371bd9f2c98fe8150776941742f82c64587",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVkZg-w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/85e7e462b1070c8ba2d1f19e122fd5782ad756ad9e5938f85cc8a33f97d75ce1/HATO-24/dsh-codex-handoff",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8d80413a25c0c9a4dc9d06df3eb02a786cb6a4d0a961f08dd020ae8fc30a0062/HATO-24/dsh-codex-handoff",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/140962649?u=dd7a4411781b607443544870bae6e5dd8d189423&v=4",
       "login": "HATO-24"
     },
-    "pushedAt": "2026-11-05T22:23:26Z",
+    "pushedAt": "2026-11-06T19:18:36Z",
     "slug": "HATO-24/dsh-codex-handoff",
     "stars": 0,
     "topics": [
@@ -42,32 +42,44 @@
       "gpt",
       "openai"
     ],
-    "updatedAt": "2026-11-05T22:23:32Z",
+    "updatedAt": "2026-11-06T19:18:38Z",
     "url": "https://github.com/HATO-24/dsh-codex-handoff"
   },
   "id": "gh:1447452923",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-codex-handoff",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-codex-handoff@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-codex-handoff",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/85e7e462b1070c8ba2d1f19e122fd5782ad756ad9e5938f85cc8a33f97d75ce1/HATO-24/dsh-codex-handoff",
+    "coverUrl": "https://opengraph.githubassets.com/8d80413a25c0c9a4dc9d06df3eb02a786cb6a4d0a961f08dd020ae8fc30a0062/HATO-24/dsh-codex-handoff",
     "description": "GPT/Codex 对话桥 —— 把本机 Codex CLI 的多轮会话接进 DeepSeek Harness（DSH）：侧栏/右侧抽屉查看往来、会话落库可用 resume 续接、模型与推理强度可切换。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把本机 Codex CLI（GPT）接进 DeepSeek Harness：每一轮往来都能在 DSH 侧栏点开查看，会话落进 Codex 会话库， 并且可以用一个工具让 GPT 作为 DSH 的子代理被调用、按同一个 thread 多轮续接。"
   },
   "schemaVersion": 1,
   "scripts": {

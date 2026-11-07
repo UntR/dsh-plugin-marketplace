@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "e91557742fc27432c20a315b3b5e65b177779b70"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1447179290",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-file-annotations",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-file-annotations@0.6.2",
+    "version": "0.6.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.6.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.mjs",
+    "name": "dsh-file-annotations",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c1011e20a0c6a9904d5aea35990f9a1babc5fddd781fe9a7b360f10753efdfe3/DEVbyQIN/dsh-file-annotations",
     "description": "Review file notes above the composer and send them with your message"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "批注是预览期间的临时草稿。收起右侧边栏、切换标签页或切换会话时会保留。确认关闭文件预览后，清理该文件的 JSON、localStorage、待发送卡片、蓝色引用和图片预览缓存，10 秒内可点「撤销」。撤销期后删除已确认无引用的未发送截图，已发送消息引用的图片继续保留。"
   },
   "schemaVersion": 1,
   "scripts": {

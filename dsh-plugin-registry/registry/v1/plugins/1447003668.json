@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "029ee577eceacf8ba02027051fbf25509d6aa833"
   },
   "github": {
@@ -45,27 +45,39 @@
   },
   "id": "gh:1447003668",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-prompt-injector",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:qbclex/dsh-prompt-injector#029ee577eceacf8ba02027051fbf25509d6aa833",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "index.js",
+    "name": "dsh-prompt-injector",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0ad506988ec7d9b9b7d28931474ec6cf010601c81c5e4ac1539110124b089597/qbclex/dsh-prompt-injector",
     "description": "DSH 插件：把准备好的提示词注入系统提示词，可随时回退（Prompt injection with rollback for DeepSeek Harness）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）用的系统提示词注入插件：把准备好的提示词注入 DSH 的系统提示词，对所有会话生效，并随时可以回退到之前的状态甚至程序运行前的原样。"
   },
   "schemaVersion": 1,
   "scripts": {

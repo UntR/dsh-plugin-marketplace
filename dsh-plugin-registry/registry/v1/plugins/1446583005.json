@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "5089856e0ee5918112afc62d72f1a58796d5b800"
   },
   "github": {
@@ -47,27 +47,39 @@
   },
   "id": "gh:1446583005",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@shudingbo/dsh-plugin-autosshfs",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:shudingbo/dsh-plugin-autosshfs#5089856e0ee5918112afc62d72f1a58796d5b800",
+    "version": "1.0.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@shudingbo/dsh-plugin-autosshfs",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.3"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d14230ab4cd31cdf52d0b35baadd843867ac93faeb7fc604652dba5d68724e63/shudingbo/dsh-plugin-autosshfs",
     "description": "dsh-sshfs挂载管理插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件：用 sshfs 在 Linux / macOS 上挂载、卸载远端目录。 把 nrs-tools/lib/autosshfs.js 的 sshfs 挂载 / 卸载能力做成 DeepSeek Harness 插件： 入口是左侧栏的全局面板按钮（与「插件」「自动化任务」同一排），点击后在整个主界面打开独立页面 （不是设置页）；点该行的固定按钮还能把它收进「更多」菜单。同一组操作以 autosshfs 工具暴露给 Agent。"
   },
   "schemaVersion": 1,
   "scripts": {

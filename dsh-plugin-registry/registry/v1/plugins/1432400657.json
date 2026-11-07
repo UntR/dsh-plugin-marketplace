@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "43cd01ee21a73512977f4b45f3522d6f9cfc6375"
   },
   "github": {
@@ -45,27 +45,38 @@
   },
   "id": "gh:1432400657",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-desktop-mcp-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:linglanxin/codex-dsh-bridge#43cd01ee21a73512977f4b45f3522d6f9cfc6375",
+    "version": "0.2.1-rc3-windows.6"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1-rc2",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/desktop-plugin.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-desktop-mcp-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1-rc3-windows.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/0eefeca82f2e8ec7e5c5a84680d923137db6dc2a5eaafa39cf2f52dfc26e7e4a/linglanxin/codex-dsh-bridge",
     "description": "Codex supervises DeepSeek Harness Desktop on Windows: MCP delegation, blocking questions, stage review, revisions and artifact verification."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "由 Codex 接收任务、制定验收标准和监督进度，DeepSeek Harness Desktop 执行；遇到方向问题暂停并回传 Codex，成果由 Codex 检查，必要时在同一会话中返工。"
   },
   "schemaVersion": 1,
   "scripts": {

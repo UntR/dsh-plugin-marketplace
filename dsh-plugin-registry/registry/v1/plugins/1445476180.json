@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "b9414b9732e39b93f2e3d560bc3edd9c0ac9e6cb"
   },
   "github": {
@@ -50,27 +50,43 @@
   },
   "id": "gh:1445476180",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workspace-pin",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Richard2091/dsh-workspace-pin#b9414b9732e39b93f2e3d560bc3edd9c0ac9e6cb",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workspace-pin",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/4190f4e310714466ba19722b85e4cba07349e25b9741319c5f29e8863b07b60d/Richard2091/dsh-workspace-pin",
     "description": "DSH 插件：给侧栏工作区（文件夹）行补上和「会话置顶」完全同款的图钉——hover 出官方 16×16 按钮，置顶后无 hover 留灰色实心 pin，官方 Tooltip；置顶集合由宿主持久化，跨浏览器、清缓存不丢。不改 dsh 源码。Pin workspaces in the DSH Web sidebar exactly like the official session pin, with a host-persisted pin set shared across browsers."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）Web 侧栏的工作区（文件夹）行补上一个和会话置顶完全同款的图钉：hover 出现 16×16 的官方同款按钮，置顶后无 hover 时留一枚灰色实心 pin，悬浮提示用官方 Tooltip；点一下把该工作区钉到列表最前。"
   },
   "schemaVersion": 1,
   "scripts": {

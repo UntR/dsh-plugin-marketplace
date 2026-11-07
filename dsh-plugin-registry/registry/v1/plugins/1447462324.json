@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "3aabdbcb4339812d7ef633e341b20613371ad212"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1447462324",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-stock-ticker",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kfat77/dsh-stock-ticker#3aabdbcb4339812d7ef633e341b20613371ad212",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-stock-ticker",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/486dd979be1449c4457c0fc1f9203ac5dc61d8da8d17a367225f8e8538cdc717/kfat77/dsh-stock-ticker",
     "description": "Scrolling stock ticker strip for the DeepSeek Harness Web UI: custom CN/HK/US watchlist with indices, configurable refresh interval and alert threshold, click-through quote card."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness Web 界面顶部显示一条从右向左滚动的股票行情条，样式参考交易所跑马灯。股票代码、刷新频率和涨跌提醒阈值都可以在界面上修改，并写入 profile 配置长期保存。"
   },
   "schemaVersion": 1,
   "scripts": {

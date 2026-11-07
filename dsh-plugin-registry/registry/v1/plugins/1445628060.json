@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "ef1f445a1393329ca965079af2de0ff440e5b3dc"
   },
   "github": {
@@ -44,27 +44,40 @@
   },
   "id": "gh:1445628060",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-at-handoff",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Xiacqi1/dsh-at-handoff#ef1f445a1393329ca965079af2de0ff440e5b3dc",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-at-handoff",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2c6523cae21a68c90764fc9299c205b14132b97b31c502760453fba908a8cb93/Xiacqi1/dsh-at-handoff",
     "description": "给 DSH 的上下文交接插件：盯住当前会话的上下文大小，点一下让模型把这一轮写成交接文档，再点一下在同项目里开一个新会话"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DSH 的上下文交接插件：盯住当前会话的上下文大小，越过「智能线」（默认 120k）就在输入框上方冒出一枚胶囊；点一下让模型把这一轮写成交接文档，再点一下在同项目里开一个新会话、把文档当作未发送的开场话送过去。旧会话留在侧栏，不丢。"
   },
   "schemaVersion": 1,
   "scripts": {

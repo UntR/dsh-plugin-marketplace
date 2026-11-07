@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "a50a825864901377949d6ab5d80af844f31b93d2"
   },
   "github": {
@@ -50,27 +50,45 @@
   },
   "id": "gh:1446569347",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@lvxianchao/dsh-video-preview",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@lvxianchao/dsh-video-preview@1.1.1",
+    "version": "1.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client.d.ts"
+      },
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@lvxianchao/dsh-video-preview",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/c902730be9a28e0fa109012d5983e0cb022f13e059f5fb3ebb47525bdaf03856/lvxianchao/dsh-video-preview",
     "description": "Streaming video preview for the DeepSeek Harness Web UI sidebar: mp4/webm/mov play in place over an authenticated byte-range route (206), no size cap, no build step and zero dependencies."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A video preview for the DeepSeek Harness (DSH) Web UI sidebar. Click an .mp4, .webm or .mov in the file tree, an @ reference, or the workspace-changes list, and it plays in place — instead of \"preview is not available for this file type yet\"."
   },
   "schemaVersion": 1,
   "scripts": {

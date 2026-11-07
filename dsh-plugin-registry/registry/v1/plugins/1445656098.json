@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "560659d4854a81576017370cf9d2dd8d44e37ba3"
   },
   "github": {
@@ -43,27 +43,42 @@
   },
   "id": "gh:1445656098",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-community/dsh-req-workbench",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wowswows/dsh-req-workbench#560659d4854a81576017370cf9d2dd8d44e37ba3",
+    "version": "0.2.1-dsh021.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@dsh-community/dsh-req-workbench",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1-dsh021.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/8e7cab08c3689191534658117e0759bca2dbbafe91982920ca4303c953a2feae/wowswows/dsh-req-workbench",
     "description": "DSH 会话功能需求清单：AI 主动整理、通俗表达、合并更新。非官方 rc.5 适配重构版，保留 MIT 原作者归属。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "聊项目时，AI 主动把你想做的功能整理成一份简单清单；后续讨论会更新已有条目，而不是堆成聊天记录。清单在会话上方的「需求」页，与「对话 / 轨迹 / 上下文 / 编队」同级。"
   },
   "schemaVersion": 1,
   "scripts": {

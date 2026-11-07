@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "060deba72aef046b0d7caa9c4a30c81d9b12e355"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1446480321",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-subtitle-remover",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lijianbin2/dsh-subtitle-remover#060deba72aef046b0d7caa9c4a30c81d9b12e355",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-subtitle-remover",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/2d7482f06f011ecd55088ad6adae338ad64d8834959d483f26f84eda7e157c3d/lijianbin2/dsh-subtitle-remover",
     "description": "DeepSeek Harness 插件：左侧栏「字幕擦除」页面，调用本地 video-subtitle-remover 引擎——画面框选/多区域、自动识别与模型判定、实时前后对比、处理区间与一键打开成片。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DSH Web UI plugin with a left-sidebar entry for video-subtitle-remover: pick a video, see a frame, mark one or more subtitle regions on it (or let the engine propose them), then run the job — or the whole automatic path — without leaving the Harness window."
   },
   "schemaVersion": 1,
   "scripts": {

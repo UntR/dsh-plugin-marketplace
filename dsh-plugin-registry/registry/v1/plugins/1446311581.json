@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "7641d1274332dc65f466618dde83ea1cd538bf58"
   },
   "github": {
@@ -44,27 +44,40 @@
   },
   "id": "gh:1446311581",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-preview-theme-dark",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xiaoqiangch/dsh-preview-theme-dark#7641d1274332dc65f466618dde83ea1cd538bf58",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-preview-theme-dark",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/fd7095d1dc7e8dc3ecae9a0cd385432d91a0290064410d9b72efa0fcd348ae87/xiaoqiangch/dsh-preview-theme-dark",
     "description": "DeepSeek Harness 文档预览深色模式插件：标题栏一键浅/深切换、跟随系统外观、浅深两侧配色分别记忆（MIT，独立增强版）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 右侧边栏的文档预览加一层「深色阅读」：PDF、Word（docx/doc，经 LibreOffice 转 PDF）、 PowerPoint（转 PDF）、Excel（xlsx/xls/csv/tsv）都适用。只改显示，不改文件——全部是浏览器里的 CSS， 原文件一个字节都不会动。"
   },
   "schemaVersion": 1,
   "scripts": {

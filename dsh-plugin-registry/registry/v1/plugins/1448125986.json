@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "231507dd87452f354d8526c5448e82ca9d04a0d3"
   },
   "github": {
@@ -46,27 +46,38 @@
   },
   "id": "gh:1448125986",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@skyrocks/dsh-model-switcher",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:skyrocks/dsh-model-switcher#231507dd87452f354d8526c5448e82ca9d04a0d3",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./match": "./match.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "@skyrocks/dsh-model-switcher",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/a73c82ef670074f8f20e02a2ba8edcb3671d82e12a36dc975ac84df151f226b0/skyrocks/dsh-model-switcher",
     "description": "让模型自己查 / 切模型（find_models + switch_model） | Model list & switch tools for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（dsh）用的模型切换工具插件：把「查目录 / 切模型」做成模型可调用的 function call，你在对话里说一句「换到 glm」就够了。手动选模型仍然用内置 /model 弹窗—— 这里不重造轮子，只是让模型也能拿到同一份目录、走同一条切换路径。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "4c39c66698b50a58097e82cd919fa70b51ed3970"
   },
   "github": {
@@ -50,27 +50,42 @@
   },
   "id": "gh:1446423008",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-harness-restart",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:githublmk/dsh-harness-restart#4c39c66698b50a58097e82cd919fa70b51ed3970",
+    "version": "0.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./relaunch": "./relaunch.mjs"
+    },
+    "main": "index.js",
+    "name": "dsh-harness-restart",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/1eb17f470ce4d440ae39e819c3594a6e89fe25b5d3c77d881263034748dd4387/githublmk/dsh-harness-restart",
     "description": "Restart control for the DeepSeek Harness Desktop caption band: restarts the app and its Host after a confirmation."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 桌面端标题栏菜单条加一个 重启 按钮 —— 位置就在全局面板导航的「更多」后面，点一下（二次确认）重启「应用与 Host」。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "8e431c134c2b2637201ef099d7d30c92a5263033"
   },
   "github": {
@@ -41,27 +41,39 @@
   },
   "id": "gh:1448086579",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/sidebar-sysmon",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ami3go/dsh-sidebar-sysmon#8e431c134c2b2637201ef099d7d30c92a5263033",
+    "version": "1.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/sidebar-sysmon",
+    "status": "valid",
+    "type": "module",
+    "version": "1.3.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7dcb9a204fb609df65704aae940724dca56120e20b363170efb372fa2bdf1e11/ami3go/dsh-sidebar-sysmon",
     "description": "Live CPU and memory meter for the DeepSeek Harness Web sidebar"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A Harness Web UI plugin that shows live CPU, memory, root-disk, and /tmp load at the bottom of the left sidebar, in the footer strip beside the Cordis panel action and above Settings."
   },
   "schemaVersion": 1,
   "scripts": {

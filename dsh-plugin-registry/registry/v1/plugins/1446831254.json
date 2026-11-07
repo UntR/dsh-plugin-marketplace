@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "57a3ce397ceea0c96e33053f123bc143d08b3a8e"
   },
   "github": {
@@ -44,27 +44,39 @@
   },
   "id": "gh:1446831254",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-stellar-effort",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-stellar-effort@1.1.6",
+    "version": "1.1.6"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.1.6",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host.mjs",
+      "./client": "./dist/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/host.mjs",
+    "name": "dsh-stellar-effort",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5a33b0688960fb797aaf83b8dfaa3f0192f3513ba8d4d3adc1427ee9a3341df3/wangtheme-coder/dsh-stellar-effort",
     "description": "星轨推理：真实 DSH 推理强度控制与轻量、持续演化的微缩宇宙"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness（DSH）的推理强度插件：在输入框上方用一条滑轨调节模型的推理等级，滑轨背后是一个持续演化的微缩宇宙。从 Off 到 Max，淡蓝星光逐渐收缩、坍缩成黑洞，再展开成完整的深空。视觉全部由程序实时生成，另有 10 张 ESA/Hubble 照片作为远处天体（见 ASSETSCREDITS.md）。"
   },
   "schemaVersion": 1,
   "scripts": {

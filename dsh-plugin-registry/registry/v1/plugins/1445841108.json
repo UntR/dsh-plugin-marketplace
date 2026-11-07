@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "db0876db559906ed1faf9b1bc1a0eda241191472"
   },
   "github": {
@@ -43,27 +43,44 @@
   },
   "id": "gh:1445841108",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-plugin-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:wodaimnd/dsh-plugin-guard#db0876db559906ed1faf9b1bc1a0eda241191472",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./audit": "./lib/audit.js",
+      "./check": "./lib/check.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./repair": "./lib/repair.js",
+      "./rows": "./lib/rows.js"
+    },
+    "main": null,
+    "name": "@local/dsh-plugin-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/bc3aa4b811740d9824638910108280268e0f4773455bce953deb923f29d89e59/wodaimnd/dsh-plugin-guard",
     "description": "DSH 插件运维台：兼容性体检 + 装载行修复（patch-bundle-row）+ 授权闸门（plan/apply/undo）+ 装前静态体检与装后复验账本。把 dsh-compat-vet 的审查修复层与 dsh-forge 的锻造台合到一处。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 dsh-compat-vet 的审查修复层与 dsh-forge 的锻造台合成一个插件， 并补上两者都没有的那一格：装载行的 name 能不能被 loader 解析。"
   },
   "schemaVersion": 1,
   "scripts": {

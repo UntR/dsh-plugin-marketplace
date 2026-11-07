@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "e36df165bf24a487c5146c26bd874898e9c46152"
   },
   "github": {
@@ -18,14 +18,14 @@
     "fork": false,
     "forks": 0,
     "headSha": "e36df165bf24a487c5146c26bd874898e9c46152",
-    "homepageUrl": null,
+    "homepageUrl": "https://deepwhale.org.cn/plugins.html",
     "language": "JavaScript",
     "license": {
       "name": "MIT License",
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViovZg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/2cdba64f28c817141a5c86614acd5ab77412cefde29993bfcac8c2613d9de091/feely0208/dsh-agent-permission-audit",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c223cb5a54776cc27fd4ed23f69960a5b84b654732e3003df8abd9aae648edfc/feely0208/dsh-agent-permission-audit",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/286251768?u=0d72e00f036a10e56e53ae6507d82222d753272f&v=4",
       "login": "feely0208"
@@ -38,32 +38,44 @@
       "dsh",
       "dsh-plugin"
     ],
-    "updatedAt": "2026-11-04T12:05:23Z",
+    "updatedAt": "2026-11-07T01:26:20Z",
     "url": "https://github.com/feely0208/dsh-agent-permission-audit"
   },
   "id": "gh:1445605222",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@deepwhale-cn/dsh-agent-permission-audit",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@deepwhale-cn/dsh-agent-permission-audit@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@deepwhale-cn/dsh-agent-permission-audit",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/2cdba64f28c817141a5c86614acd5ab77412cefde29993bfcac8c2613d9de091/feely0208/dsh-agent-permission-audit",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/c223cb5a54776cc27fd4ed23f69960a5b84b654732e3003df8abd9aae648edfc/feely0208/dsh-agent-permission-audit",
+    "description": "把「插件/预设声明要什么能力」和「会话日志里实际用了什么」摆在一起，列出差集：哪些调用超出了声明（红）、哪些声明了却一直没用（黄，可以收窄）。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把「插件/预设声明要什么能力」和「会话日志里实际用了什么」摆在一起，列出差集：哪些调用超出了声明（红）、哪些声明了却一直没用（黄，可以收窄）。"
   },
   "schemaVersion": 1,
   "scripts": {

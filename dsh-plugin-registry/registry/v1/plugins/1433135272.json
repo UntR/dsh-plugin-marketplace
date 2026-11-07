@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "7b94e7bf76e87afe63a77fb635020f7911d184c6"
   },
   "github": {
@@ -48,27 +48,42 @@
   },
   "id": "gh:1433135272",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@wilshi/dsh-ssh-workspace",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@wilshi/dsh-ssh-workspace@0.2.2",
+    "version": "0.2.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@wilshi/dsh-ssh-workspace",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/25296e6f06303a3c4eba814797b69ac87845934a9ee0728ccdeac5da17580dc8/WilShi/dsh-ssh-workspace",
     "description": "SSH/SFTP remote workspaces for DSH Desktop with local cache, conflict-safe sync, and remote terminal"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的 SSH 远程工作区插件：模型、Agent、会话和记忆继续运行并保存在本机，服务器目录通过 SSH/SFTP 映射为受控的本地缓存工作区。"
   },
   "schemaVersion": 1,
   "scripts": {

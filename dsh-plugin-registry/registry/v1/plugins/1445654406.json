@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "8c41d6719f492ea92f813c6d758936a840129b54"
   },
   "github": {
@@ -32,44 +32,59 @@
     },
     "pushedAt": "2026-11-05T05:36:14Z",
     "slug": "MFJip612/dsh-remote-wsl",
-    "stars": 1,
+    "stars": 2,
     "topics": [
       "dsh-plugin",
       "dsh-plugin-market",
       "dsh-plugins"
     ],
-    "updatedAt": "2026-11-05T05:42:21Z",
+    "updatedAt": "2026-11-06T15:26:19Z",
     "url": "https://github.com/MFJip612/dsh-remote-wsl"
   },
   "id": "gh:1445654406",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-remote-wsl",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:MFJip612/dsh-remote-wsl#8c41d6719f492ea92f813c6d758936a840129b54",
+    "version": "0.1.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./client": "./dist/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-remote-wsl",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
     "coverUrl": "https://repository-images.githubusercontent.com/1445654406/d2f13495-1933-4321-9a47-b92b2afabcba",
     "description": "Open a project inside a WSL distribution directly in DeepSeek Harness (DSH)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Open a project inside a WSL distribution directly in DeepSeek Harness (DSH): \"Add workspace\" gains a Connect WSL entry, where you pick a distribution, browse Linux folders, and make the selected directory a DSH workspace. In that workspace the sidebar terminal runs inside the dis"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

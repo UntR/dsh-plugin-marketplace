@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "f1e6673f54e24ec0820cdd10420b7d0896580b3f"
   },
   "github": {
@@ -46,27 +46,39 @@
   },
   "id": "gh:1445644936",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-multi-model-collab",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:delltig/dsh-multi-model-collab#f1e6673f54e24ec0820cdd10420b7d0896580b3f",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-multi-model-collab",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/7c9e0faa936e829085d14fd273d48f106dd2f292d9990140fc9176998807cf39/delltig/dsh-multi-model-collab",
     "description": "DeepSeek Harness 插件：注册 multi_model_run 工具，让同一个任务同时交给多个大模型协作执行（并行对比 或 主模型+副模型验证），并按策略聚合结果。Registers a multi_model_run tool that fans one task out to several configured models in parallel or primary/secondary mode, then aggregates the answers."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让同一个任务同时交给多个大模型协作完成，而不是单模型串行——一个 DeepSeek Harness（dsh）插件。"
   },
   "schemaVersion": 1,
   "scripts": {

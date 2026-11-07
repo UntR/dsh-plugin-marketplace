@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "2c25ab5852a42809090dd8accffc15b0f9a18ea0"
   },
   "github": {
@@ -48,27 +48,41 @@
   },
   "id": "gh:1445739321",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-workspace-archive",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ChineseRyan/dsh-plugin-workspace-archive#2c25ab5852a42809090dd8accffc15b0f9a18ea0",
+    "version": "0.1.6"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-workspace-archive",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.6"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/5b5f46816ade8fb2bf3731437c5429c0070cb0a4762b53b7fb97c2ffb4a4c2ef/ChineseRyan/dsh-plugin-workspace-archive",
     "description": "往工作区行「…」菜单添加「归档工作区」：归档该工作区下全部会话并从侧边栏隐藏，可随时恢复。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一键归档整个工作区，让侧边栏只留下你正在用的东西。"
   },
   "schemaVersion": 1,
   "scripts": {

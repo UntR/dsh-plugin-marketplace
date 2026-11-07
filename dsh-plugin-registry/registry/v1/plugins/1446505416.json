@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
     "headSha": "cdac1099ea3ca7fe215ce2c7db96eb846bdc549f"
   },
   "github": {
@@ -43,27 +43,39 @@
   },
   "id": "gh:1446505416",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-glean",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Morange1/Glean-#cdac1099ea3ca7fe215ce2c7db96eb846bdc549f",
+    "version": "0.6.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-glean",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.0"
+  },
   "presentation": {
     "coverUrl": "https://opengraph.githubassets.com/d533fbda67792d493d1adb91881e9db40517c26544facc5a338e363d18fd87b2/Morange1/Glean-",
     "description": "Catch task candidates from replies and manage them in a session-grouped console — without waking the model."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在对话里把一条助手回复标记为\"候选任务\"，写入工作区的 tasks/candidates.json。 整个过程不唤醒模型：命令由宿主执行，只在会话日志里留下 command/run / command/done。"
   },
   "schemaVersion": 1,
   "scripts": {

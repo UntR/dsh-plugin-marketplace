@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
-    "enrichmentStatus": "failed",
-    "headSha": "8ddc926815d991022e8b6a03a74afbca2698c66b"
+    "enrichedAt": "2026-11-07T10:56:30.272Z",
+    "enrichmentStatus": "ok",
+    "headSha": "038a93f6a06009479c5761fed07ecc963783e326"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Persistent WSL (Windows Subsystem for Linux) terminal backend for DeepSeek Harness: registers the `wsl` terminal type on the shipped terminal-tool stack.",
     "fork": false,
     "forks": 0,
-    "headSha": "8ddc926815d991022e8b6a03a74afbca2698c66b",
+    "headSha": "038a93f6a06009479c5761fed07ecc963783e326",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVlGMiA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3760411211c4bf9c084e1e877ef1cca7c13219f27df3682226dea96d2b96f431/kx2398/dsh-terminal-wsl",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ab83c25aa0f6d217983ac2cea170bda5535a4a53ec877610f3d05d8f0ebdbce0/kx2398/dsh-terminal-wsl",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/39648717?u=19c00e080fcd3eb379ac39b8d2d552838ac80403&v=4",
       "login": "kx2398"
     },
-    "pushedAt": "2026-11-06T11:33:35Z",
+    "pushedAt": "2026-11-06T12:00:30Z",
     "slug": "kx2398/dsh-terminal-wsl",
     "stars": 0,
     "topics": [
@@ -41,32 +41,46 @@
       "terminal",
       "wsl"
     ],
-    "updatedAt": "2026-11-06T11:33:34Z",
+    "updatedAt": "2026-11-06T12:00:34Z",
     "url": "https://github.com/kx2398/dsh-terminal-wsl"
   },
   "id": "gh:1448184968",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-terminal-wsl",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kx2398/dsh-terminal-wsl#038a93f6a06009479c5761fed07ecc963783e326",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./wsl-tool": "./wsl-tool.js"
+    },
+    "main": null,
+    "name": "dsh-terminal-wsl",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3760411211c4bf9c084e1e877ef1cca7c13219f27df3682226dea96d2b96f431/kx2398/dsh-terminal-wsl",
+    "coverUrl": "https://opengraph.githubassets.com/ab83c25aa0f6d217983ac2cea170bda5535a4a53ec877610f3d05d8f0ebdbce0/kx2398/dsh-terminal-wsl",
     "description": "Persistent WSL (Windows Subsystem for Linux) terminal backend for DeepSeek Harness: registers the `wsl` terminal type on the shipped terminal-tool stack."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）补一个 WSL 后端：沿用内置的 terminal 工具，在 Windows 上 通过 wsl.exe 打开 Linux 子系统的持久交互式 bash，后端类型为 wsl。"
   },
   "schemaVersion": 1,
   "scripts": {
