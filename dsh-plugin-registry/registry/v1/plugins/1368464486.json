@@ -5,19 +5,19 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-11-06T11:50:56.546Z",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
     "enrichmentStatus": "ok",
-    "headSha": "f42e9f7f67ce0bde3bd71e9543481673afc59c66"
+    "headSha": "b377adacc8d96b8b9671cee02555526a4145317f"
   },
   "github": {
     "archived": false,
     "createdAt": "2026-09-13T14:30:16Z",
     "databaseId": 1368464486,
     "defaultBranch": "main",
-    "description": "Control local coding agents from a phone through a secure WeChat QR web console.",
+    "description": "用微信扫码从手机控制电脑上运行中的编程 Agent（Claude Code / Codex / DeepSeek Harness / DSH Desktop）。电脑是唯一执行端，凭据不出本机。DSH Desktop 插件已上架插件市场。",
     "fork": false,
     "forks": 0,
-    "headSha": "f42e9f7f67ce0bde3bd71e9543481673afc59c66",
+    "headSha": "b377adacc8d96b8b9671cee02555526a4145317f",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,19 +25,25 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUZEcZg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b19e9ac5c312371b574e466d80430259ae98c406cfcae3baeecbf7490901e7c2/chenacc1/agentbridge",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f02060abe3ca00c8ab29148a4c326fb1444f3174fcbbafe6bb964d21085cb98d/chenacc1/agentbridge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/126102062?u=054293fd49c44d56072efefd74444b7cf3a58d7e&v=4",
       "login": "chenacc1"
     },
-    "pushedAt": "2026-11-05T17:30:22Z",
+    "pushedAt": "2026-11-08T16:38:21Z",
     "slug": "chenacc1/agentbridge",
     "stars": 0,
     "topics": [
+      "claude-code",
+      "codex",
       "deepseek-harness",
-      "dsh-plugin"
+      "dsh-plugin",
+      "mobile",
+      "qrcode",
+      "remote-control",
+      "wechat"
     ],
-    "updatedAt": "2026-11-05T17:30:26Z",
+    "updatedAt": "2026-11-08T16:38:22Z",
     "url": "https://github.com/chenacc1/agentbridge"
   },
   "id": "gh:1368464486",
@@ -56,19 +62,26 @@
     "repositoryMatches": null
   },
   "package": {
+    "exports": {
+      ".": "./src/server.js",
+      "./package.json": "./package.json",
+      "./remote": "./src/remote.js",
+      "./server": "./src/server.js",
+      "./tunnel": "./src/tunnel.js"
+    },
     "main": null,
-    "name": "agentbridge-mvp",
+    "name": "@chenacc/agentbridge",
     "status": "valid",
     "type": "module",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b19e9ac5c312371b574e466d80430259ae98c406cfcae3baeecbf7490901e7c2/chenacc1/agentbridge",
-    "description": "Control local coding agents from a phone through a secure WeChat QR web console."
+    "coverUrl": "https://opengraph.githubassets.com/f02060abe3ca00c8ab29148a4c326fb1444f3174fcbbafe6bb964d21085cb98d/chenacc1/agentbridge",
+    "description": "用微信扫码从手机控制电脑上运行中的编程 Agent（Claude Code / Codex / DeepSeek Harness / DSH Desktop）。电脑是唯一执行端，凭据不出本机。DSH Desktop 插件已上架插件市场。"
   },
   "readme": {
     "available": true,
-    "excerpt": "手机与桌面共享同一份可追加事件流，因此消息、工具活动、审批和任务状态始终同步。电脑是唯一的执行端：手机只下发命令，不运行 Agent，也拿不到任何供应商凭据。"
+    "excerpt": "手机与桌面共享同一份可追加事件流，因此消息、工具活动、审批和任务状态始终同步。电脑是唯一的执行端：手机只运行界面，不运行 Agent，也拿不到任何供应商凭据。"
   },
   "schemaVersion": 1,
   "scripts": {

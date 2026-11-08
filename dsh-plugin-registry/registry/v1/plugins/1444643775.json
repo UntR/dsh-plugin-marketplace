@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "456f5ecf34b4daa122f5f2bb21ecf30d70797923"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVhuDvw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3f80724ea875a1d55ff1509da478bcbeb62e958a1984f1f0eb1963cee0b59ed9/Rcyc-1025/dsh-build-driver",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/875863707e7bc528a54f602ec757fba2b77dc18d6a61bb7cef72fb85eff1f1ff/Rcyc-1025/dsh-build-driver",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/327470990?v=4",
       "login": "Rcyc-1025"
@@ -46,27 +46,38 @@
   },
   "id": "gh:1444643775",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-build-driver",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Rcyc-1025/dsh-build-driver#456f5ecf34b4daa122f5f2bb21ecf30d70797923",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-build-driver",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3f80724ea875a1d55ff1509da478bcbeb62e958a1984f1f0eb1963cee0b59ed9/Rcyc-1025/dsh-build-driver",
+    "coverUrl": "https://opengraph.githubassets.com/875863707e7bc528a54f602ec757fba2b77dc18d6a61bb7cef72fb85eff1f1ff/Rcyc-1025/dsh-build-driver",
     "description": "DSH 插件：CMake + Ninja + MSVC 构建工具（configure / build / status / stop）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：把 CMake + Ninja + MSVC 的配置 / 构建 / 后台任务 / 停止做成 4 个工具，供 agent 直接调用。 覆盖增量构建、MSVC 环境自动注入、编译诊断解析、长构建转后台。"
   },
   "schemaVersion": 1,
   "scripts": {

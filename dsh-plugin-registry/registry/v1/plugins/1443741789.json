@@ -5,9 +5,9 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
-    "headSha": "f1a8c955411d4c7b738da41a1cf80636eb53d868"
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
+    "headSha": "a8dee1fd6aa1509a48398f3eb98c42d5f3c19142"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH open-source ecosystem plugin (topic: dsh-plugin): capability memory for long sessions. Consumes the handoff ledger, extracts reusable skills (SKILL.md) and negative paths (negatives.jsonl) from finished sessions, and never imports the slicing plugin. — DSH open-source ecosystem (topic: dsh-plugin)",
     "fork": false,
     "forks": 0,
-    "headSha": "f1a8c955411d4c7b738da41a1cf80636eb53d868",
+    "headSha": "a8dee1fd6aa1509a48398f3eb98c42d5f3c19142",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVg3AXQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/0767ddf23e8d85c3d196dc089c75cd3ee66a8eeb98a666bd2fc1294c31732b06/corvus-dsh/dsh-memory",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d728879e0c4bb7be4ed5c953b6f028e348f8d238a056b610b7101908f3c7bfde/corvus-dsh/dsh-memory",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/345965932?v=4",
       "login": "corvus-dsh"
     },
-    "pushedAt": "2026-11-07T10:47:29Z",
+    "pushedAt": "2026-11-08T13:27:27Z",
     "slug": "corvus-dsh/dsh-memory",
     "stars": 1,
     "topics": [
@@ -41,21 +41,21 @@
       "memory",
       "skills"
     ],
-    "updatedAt": "2026-11-07T10:47:32Z",
+    "updatedAt": "2026-11-08T13:27:31Z",
     "url": "https://github.com/corvus-dsh/dsh-memory"
   },
   "id": "gh:1443741789",
   "install": {
     "available": true,
-    "packageName": "dsh-memory",
+    "packageName": "@corvus-dsh/dsh-memory",
     "preferred": "github",
     "reason": null,
-    "requiresBuildApproval": false,
-    "spec": "github:corvus-dsh/dsh-memory#d588698695ded1c32123df57b2c8b3911facfbc1",
-    "version": "1.0.1"
+    "requiresBuildApproval": true,
+    "spec": "github:corvus-dsh/dsh-memory#a8dee1fd6aa1509a48398f3eb98c42d5f3c19142",
+    "version": "0.9.0-beta.2"
   },
   "npm": {
-    "latestVersion": "0.1.0",
+    "latestVersion": "0.0.0-stage",
     "published": true,
     "repositoryMatches": false
   },
@@ -65,27 +65,29 @@
       "./client": "./client.js",
       "./icon": "./icon.svg",
       "./locale/*.json": "./locale/*.json",
-      "./manifest": "./manifest.json"
+      "./manifest": "./manifest.json",
+      "./retrieve": "./lib/retrieve.js",
+      "./store": "./lib/store.js"
     },
     "main": "./lib/index.js",
-    "name": "dsh-memory",
+    "name": "@corvus-dsh/dsh-memory",
     "status": "valid",
     "type": "module",
-    "version": "1.0.1"
+    "version": "0.9.0-beta.2"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/0767ddf23e8d85c3d196dc089c75cd3ee66a8eeb98a666bd2fc1294c31732b06/corvus-dsh/dsh-memory",
+    "coverUrl": "https://opengraph.githubassets.com/d728879e0c4bb7be4ed5c953b6f028e348f8d238a056b610b7101908f3c7bfde/corvus-dsh/dsh-memory",
     "description": "DSH open-source ecosystem plugin (topic: dsh-plugin): capability memory for long sessions. Consumes the handoff ledger, extracts reusable skills (SKILL.md) and negative paths (negatives.jsonl) from finished sessions, and never imports the slicing plugin. — DSH open-source ecosyst"
   },
   "readme": {
     "available": true,
-    "excerpt": "能力记忆：把做过的会话沉淀成可复用的技能与负知识。DSH 开源生态插件（topic dsh-plugin）。"
+    "excerpt": "顺序有意义：dsh-paradise 是内核，其余三个都依赖它提供的协议。先装内核，后装业务插件。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

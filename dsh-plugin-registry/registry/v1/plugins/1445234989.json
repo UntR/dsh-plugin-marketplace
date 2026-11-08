@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "bc9c9a6e26f2458af283aaa146c443b184d3be7e"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViSJLQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/47fe366a159aca9f1d94860e1d99794f3f67df096e3db59617d939508662c425/AngChow/xrxs-dsh-harmony-publish",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/20fa4ad67f7004ddee3be1120068552e0d35cae9006a904a37cf95a42609f591/AngChow/xrxs-dsh-harmony-publish",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/10240280?u=2db2637b51cce9941849a2221984bc92f7e2e660&v=4",
       "login": "AngChow"
@@ -47,33 +47,49 @@
   },
   "id": "gh:1445234989",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "xrxs-dsh-harmony-publish",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:AngChow/xrxs-dsh-harmony-publish#bc9c9a6e26f2458af283aaa146c443b184d3be7e",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "xrxs-dsh-harmony-publish",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/47fe366a159aca9f1d94860e1d99794f3f67df096e3db59617d939508662c425/AngChow/xrxs-dsh-harmony-publish",
+    "coverUrl": "https://opengraph.githubassets.com/20fa4ad67f7004ddee3be1120068552e0d35cae9006a904a37cf95a42609f591/AngChow/xrxs-dsh-harmony-publish",
     "description": "DSH plugin: safe HarmonyOS build, Bugly symbol upload, AppGallery Connect upload and review submission with credential redaction and human approval"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness (DSH) 插件：把 harmony-agc-publish Codex skill 的鸿蒙发布流水线 （签名检查 → 版本校验 → devecocli 打包 → Bugly 符号表 → 上传 AGC → 提审）以安全、可审计的方式暴露给 DSH Agent。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

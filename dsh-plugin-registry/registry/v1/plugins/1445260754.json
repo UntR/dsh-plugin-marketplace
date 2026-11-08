@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "5bd1bd9a48f38ea833cb4e30b6b3f9c144793b9a"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViTt0g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/878d84fee2f477226d3ea92ce25016ce4432d551ea62cf217990e75ae61c1348/constraint21/dsh-long-message-fold",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/24ec9c49816b01fc37b2367fcf5338dde0fbdea8bea89ced890af4cbc899ea46/constraint21/dsh-long-message-fold",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/73483055?v=4",
       "login": "constraint21"
@@ -45,27 +45,39 @@
   },
   "id": "gh:1445260754",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-long-message-fold",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:constraint21/dsh-long-message-fold#5bd1bd9a48f38ea833cb4e30b6b3f9c144793b9a",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/dsh-long-message-fold",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/878d84fee2f477226d3ea92ce25016ce4432d551ea62cf217990e75ae61c1348/constraint21/dsh-long-message-fold",
+    "coverUrl": "https://opengraph.githubassets.com/24ec9c49816b01fc37b2367fcf5338dde0fbdea8bea89ced890af4cbc899ea46/constraint21/dsh-long-message-fold",
     "description": "Folds over-long user messages in the DSH Web chat: 360px preview, fading edge, Expand/Collapse toggle; short messages are untouched."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness Web 的对话加一条能力：超长的用户消息自动折叠成固定高度（默认 360px ≈ 16 行），底部渐隐，点「展开全文」看完整内容，再点「收起」回去。短消息一个像素都不变。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "be24c4525245b0eafb901d1a850af44914ccd6c9"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVhhX9g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/9a6c0b2e7d025159d65519631cafc36a265b4f3e269d3c97a842dc50f0e6b98e/123zxs345/dsh-plugin-companion-memory",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/2c49039613c9f24b40e15f0c5e300bdda6b69b3eb4303bbba39f511421517bfd/123zxs345/dsh-plugin-companion-memory",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/198459885?v=4",
       "login": "123zxs345"
@@ -51,27 +51,62 @@
   },
   "id": "gh:1444435958",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-companion-memory",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-plugin-companion-memory@0.3.3",
+    "version": "0.3.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/runtime/dsh/companion-memory-plugin.js",
+        "types": "./lib/runtime/dsh/companion-memory-plugin.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./disclosure": {
+        "import": "./lib/memory/disclosure.js",
+        "types": "./lib/memory/disclosure.d.ts"
+      },
+      "./icon": "./icon.svg",
+      "./package.json": "./package.json",
+      "./recall": {
+        "import": "./lib/memory/recall.js",
+        "types": "./lib/memory/recall.d.ts"
+      },
+      "./retrieval-policy": {
+        "import": "./lib/memory/retrieval-policy.js",
+        "types": "./lib/memory/retrieval-policy.d.ts"
+      },
+      "./reviewer": {
+        "import": "./lib/memory/reviewer.js",
+        "types": "./lib/memory/reviewer.d.ts"
+      },
+      "./user-profile": {
+        "import": "./lib/memory/user-profile.js",
+        "types": "./lib/memory/user-profile.d.ts"
+      }
+    },
+    "main": "./lib/runtime/dsh/companion-memory-plugin.js",
+    "name": "dsh-plugin-companion-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/9a6c0b2e7d025159d65519631cafc36a265b4f3e269d3c97a842dc50f0e6b98e/123zxs345/dsh-plugin-companion-memory",
+    "coverUrl": "https://opengraph.githubassets.com/2c49039613c9f24b40e15f0c5e300bdda6b69b3eb4303bbba39f511421517bfd/123zxs345/dsh-plugin-companion-memory",
     "description": "DSH 情感陪伴记忆插件：人也记不住每次闲聊。主动学习用户画像，提炼你在意、会自己记住的经历；三层渐进披露、缓存与总结复用。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "遗忘本身不是问题。重要的是，从经历里提炼出这个人真正会记住的东西。"
   },
   "schemaVersion": 1,
   "scripts": {

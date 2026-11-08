@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.example.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "311fee7f684f079682dd8858933c99f2cc86bfd9"
   },
   "github": {
@@ -22,7 +22,7 @@
     "language": "JavaScript",
     "license": null,
     "nodeId": "R_kgDOUkwHLQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e61efc57bfb31536a4e7eb9cc087d19651e39dfcf81772162746544c06643796/xgone/dsh-redis",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/12dc414627749bfa3c0793d27e7c1d493ff846191ee9256dafb7a1dce048cb17/xgone/dsh-redis",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/6811277?u=999f08def221882407011ccf7d67fc11be99748a&v=4",
       "login": "xgone"
@@ -49,27 +49,38 @@
   },
   "id": "gh:1380714285",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-redis",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xgone/dsh-redis#311fee7f684f079682dd8858933c99f2cc86bfd9",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./cordis.patch.example.yml": "./cordis.patch.example.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-redis",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e61efc57bfb31536a4e7eb9cc087d19651e39dfcf81772162746544c06643796/xgone/dsh-redis",
+    "coverUrl": "https://opengraph.githubassets.com/12dc414627749bfa3c0793d27e7c1d493ff846191ee9256dafb7a1dce048cb17/xgone/dsh-redis",
     "description": "DSH Redis 插件：让 Agent 通过模型工具安全读写 Redis（string/hash/list/set/zset），写操作逐次人工确认，凭据不进对话 | Redis plugin for DeepSeek Harness: safe agent tools with per-write approval and credentials kept out of chat"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-redis 是 DeepSeek Harness 的 Redis Host 插件，让 Agent 通过模型工具安全地连接 Redis，执行常用的增删改查操作。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "62979d17f7b6b08f4bd9089717146434494477b9"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVhixBg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/2df7ccd32e4b704f2b556bdf67b9329ff3faaeaa7cb34fab6323303de2b3c96e/Eclipse-NotFound/dsh-usage-replay",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5e9d0e340bd73d43eba22bb57d1e9af8fcb9dcc6e3793362028126c808a25b79/Eclipse-NotFound/dsh-usage-replay",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/316807841?v=4",
       "login": "Eclipse-NotFound"
@@ -45,27 +45,39 @@
   },
   "id": "gh:1444458758",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-usage-replay",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Eclipse-NotFound/dsh-usage-replay#62979d17f7b6b08f4bd9089717146434494477b9",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-usage-replay",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/2df7ccd32e4b704f2b556bdf67b9329ff3faaeaa7cb34fab6323303de2b3c96e/Eclipse-NotFound/dsh-usage-replay",
+    "coverUrl": "https://opengraph.githubassets.com/5e9d0e340bd73d43eba22bb57d1e9af8fcb9dcc6e3793362028126c808a25b79/Eclipse-NotFound/dsh-usage-replay",
     "description": "Cross-session per-model token usage for DeepSeek Harness: replays every persisted session log and aggregates provider-reported usage by model, day and workspace. Tokens only."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Cross-session per-model token usage for DeepSeek Harness: a usage panel tab, a per-conversation per-model popover, and two local read-only HTTP routes. Every number is replayed from the harness's own persisted session logs — nothing is accounted in a side channel, so uninstalling"
   },
   "schemaVersion": 1,
   "scripts": {

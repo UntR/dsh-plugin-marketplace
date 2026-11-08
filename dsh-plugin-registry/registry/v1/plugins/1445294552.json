@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "9ed3a669b0ded9c4b0be4606cc2183600c0a42c4"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViVx2A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7b11730566c61a3553e2e5256db4ca645b13687e9fa49a267d94194bb3595813/Octidote/dsh-memory",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/54caa63cd1e49a52bdbde3bea88ea0f201a1337b9594c26f338e8dba6433579a/Octidote/dsh-memory",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/224209991?u=712237e897750a49287817e99e8dfb882d37aebf&v=4",
       "login": "Octidote"
@@ -45,27 +45,41 @@
   },
   "id": "gh:1445294552",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-memory",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Octidote/dsh-memory#9ed3a669b0ded9c4b0be4606cc2183600c0a42c4",
+    "version": "0.17.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-memory",
+    "status": "valid",
+    "type": "module",
+    "version": "0.17.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7b11730566c61a3553e2e5256db4ca645b13687e9fa49a267d94194bb3595813/Octidote/dsh-memory",
+    "coverUrl": "https://opengraph.githubassets.com/54caa63cd1e49a52bdbde3bea88ea0f201a1337b9594c26f338e8dba6433579a/Octidote/dsh-memory",
     "description": "Shared local memory pool for DeepSeek Harness conversations"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给本机所有 DeepSeek Harness 对话共用的一个持久记忆池。相关话题被提及时自动召回，侧边栏底部提供可视化面板；记忆的存储与召回都在本地完成。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
-    "headSha": "0a998997669196b51bf65ec963a11a446b9946af"
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
+    "headSha": "e3856ba0ac39f53059760a4a3a12166b6e012ef9"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Reach this DeepSeek Harness from your phone over a private mesh network such as Tailscale: one gateway on the tailnet, optional key, the real client.",
     "fork": false,
     "forks": 0,
-    "headSha": "0a998997669196b51bf65ec963a11a446b9946af",
+    "headSha": "e3856ba0ac39f53059760a4a3a12166b6e012ef9",
     "homepageUrl": "https://github.com/icrefin/dsh-remote-access#readme",
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViYc6A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/74bf4d27bd193aa121f393c5b83f7ecffd623aa56cd48276fa600b5214b5e653/icrefin/dsh-remote-access",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/930b9577c0bff8f22ae9ccd66cd9e3b1bfc2ed42bcba4804cd66fee6df6cff4f/icrefin/dsh-remote-access",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/4637281?u=69e7e2cf231fc726ab754739ac71f2149190424f&v=4",
       "login": "icrefin"
     },
-    "pushedAt": "2026-11-04T08:26:25Z",
+    "pushedAt": "2026-11-08T15:44:19Z",
     "slug": "icrefin/dsh-remote-access",
     "stars": 0,
     "topics": [
@@ -45,7 +45,7 @@
       "wireguard",
       "zerotier"
     ],
-    "updatedAt": "2026-11-04T08:26:07Z",
+    "updatedAt": "2026-11-08T15:44:22Z",
     "url": "https://github.com/icrefin/dsh-remote-access"
   },
   "id": "gh:1445338344",
@@ -53,24 +53,39 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.4.11",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-remote-access",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.4"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/74bf4d27bd193aa121f393c5b83f7ecffd623aa56cd48276fa600b5214b5e653/icrefin/dsh-remote-access",
+    "coverUrl": "https://opengraph.githubassets.com/930b9577c0bff8f22ae9ccd66cd9e3b1bfc2ed42bcba4804cd66fee6df6cff4f/icrefin/dsh-remote-access",
     "description": "Reach this DeepSeek Harness from your phone over a private mesh network such as Tailscale: one gateway on the tailnet, optional key, the real client."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Reach this DeepSeek Harness from your phone, tablet, or another computer over a private mesh network — Tailscale, ZeroTier, NetBird — and get the real Harness client, not a cut-down remote control. One switch, one link."
   },
   "schemaVersion": 1,
   "scripts": {

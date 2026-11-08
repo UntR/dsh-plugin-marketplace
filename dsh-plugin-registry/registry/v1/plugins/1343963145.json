@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "5fd80921cfc9436b095153dfb175ac71ac652017"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUBtACQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e8b8046867c30a134b4bb8ee2e4cc13e78b4d407f1fae00080d4cb2f6b576383/miaoxintechnology/dsh-deepseek-cost",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5d25480565485f1cfdbae19bb7228e2232f7d1918359c9ba262acd8074e27a85/miaoxintechnology/dsh-deepseek-cost",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/317022486?u=f85cd26c4a26b0ae636fe3d4fb9532a9932c4d8a&v=4",
       "login": "miaoxintechnology"
@@ -41,27 +41,49 @@
   },
   "id": "gh:1343963145",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-deepseek-cost",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-deepseek-cost@0.3.2",
+    "version": "0.3.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/types-client.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./pricing": {
+        "default": "./lib/pricing.js",
+        "types": "./lib/types.d.ts"
+      }
+    },
+    "main": "lib/index.js",
+    "name": "dsh-deepseek-cost",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e8b8046867c30a134b4bb8ee2e4cc13e78b4d407f1fae00080d4cb2f6b576383/miaoxintechnology/dsh-deepseek-cost",
+    "coverUrl": "https://opengraph.githubassets.com/5d25480565485f1cfdbae19bb7228e2232f7d1918359c9ba262acd8074e27a85/miaoxintechnology/dsh-deepseek-cost",
     "description": "DeepSeek Harness计费"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个用于 DeepSeek Harness(DSH)Web 聊天页的 DeepSeek API 费用统计插件。它在输入框下方的统计行里实时显示当前会话(任务)累计消耗的 DeepSeek API 费用,点击可展开按模型、按峰谷时段的明细。"
   },
   "schemaVersion": 1,
   "scripts": {

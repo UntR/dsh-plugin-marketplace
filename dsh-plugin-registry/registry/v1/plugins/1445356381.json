@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "08d420f70ab969f9cd470e00b3a89130a620faea"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViZjXQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5ca4df8af145f3f47cfc58a8dfde31bebb8b04a50703ad0ae4f4dd6ffb300414/superchao5717/dsh-local-superagent",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/306fbc41f26e200cc21d8c72af9ae75b6452bf6ecb84e9790443732322e4a374/superchao5717/dsh-local-superagent",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/55935408?v=4",
       "login": "superchao5717"
@@ -46,27 +46,39 @@
   },
   "id": "gh:1445356381",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-local-superagent",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:superchao5717/dsh-local-superagent#08d420f70ab969f9cd470e00b3a89130a620faea",
+    "version": "0.6.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/dsh-local-superagent",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5ca4df8af145f3f47cfc58a8dfde31bebb8b04a50703ad0ae4f4dd6ffb300414/superchao5717/dsh-local-superagent",
+    "coverUrl": "https://opengraph.githubassets.com/306fbc41f26e200cc21d8c72af9ae75b6452bf6ecb84e9790443732322e4a374/superchao5717/dsh-local-superagent",
     "description": "Local Superagent task board plugin for DeepSeek Harness (DSH): local task dispatch, isolated worker sessions, supervisor review, minimal-interruption human decisions."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：一个本地版 Superagent 任务看板。你在自己的 DSH 工作区里布置任务，插件自动把任务派发给独立执行会话（worker），由\"主管\"会话按验收条件审查结果并决定下一步；只在真正需要你决定时才把任务放到「待你决定」。入口在左侧导航栏 Superagent。"
   },
   "schemaVersion": 1,
   "scripts": {

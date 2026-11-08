@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "746c7dfa6b566fa7aef3365804ba503231bb35c0"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViIg0g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/64b91d641fe591aa536e8c25bcaf047717a297cb144499ca5243924e9ded76f6/doraasn/dsh-speed-monitor",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/cfdc3e61523cd2b90370b08546681504aab8f073cce636aa2592a785d986627b/doraasn/dsh-speed-monitor",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/46470983?u=734b8228864c783789ad87249085f946bf6aadbb&v=4",
       "login": "doraasn"
@@ -47,27 +47,41 @@
   },
   "id": "gh:1445077202",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-speed-monitor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:doraasn/dsh-speed-monitor#746c7dfa6b566fa7aef3365804ba503231bb35c0",
+    "version": "0.9.8"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-speed-monitor",
+    "status": "valid",
+    "type": "module",
+    "version": "0.9.8"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/64b91d641fe591aa536e8c25bcaf047717a297cb144499ca5243924e9ded76f6/doraasn/dsh-speed-monitor",
+    "coverUrl": "https://opengraph.githubassets.com/cfdc3e61523cd2b90370b08546681504aab8f073cce636aa2592a785d986627b/doraasn/dsh-speed-monitor",
     "description": "DSH ????????:? 5 ??????????,????????????,???????"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件「速度监控」：侧栏入口点开后，右侧面板用 DSH 自己的模型清单 测中转/官方接口的流式速度，默认每分钟一轮，可同时测多个模型。"
   },
   "schemaVersion": 1,
   "scripts": {

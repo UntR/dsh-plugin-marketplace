@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "0ddd58d64f2b2193b3ed8336c5757c36f2adb7a5"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVibqBw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/9708aee00008a5aee7512894245a32a5d3fb0c6d77dc1e91285ce64db0401691/lukebest/dsh-plugin-profile-sync",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/373615c7d8dfda7bc42547e05ca5f6f5aef76d13391d4ab530c2da413663afee/lukebest/dsh-plugin-profile-sync",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/49224885?u=ba11f5c8c80bb268d14bdc1d25dc5396bcf8a768&v=4",
       "login": "lukebest"
@@ -41,27 +41,39 @@
   },
   "id": "gh:1445390855",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/profile-sync",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:lukebest/dsh-plugin-profile-sync#0ddd58d64f2b2193b3ed8336c5757c36f2adb7a5",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/profile-sync",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/9708aee00008a5aee7512894245a32a5d3fb0c6d77dc1e91285ce64db0401691/lukebest/dsh-plugin-profile-sync",
+    "coverUrl": "https://opengraph.githubassets.com/373615c7d8dfda7bc42547e05ca5f6f5aef76d13391d4ab530c2da413663afee/lukebest/dsh-plugin-profile-sync",
     "description": "DeepSeek Harness plugin that exports and privately syncs profile plugins and configuration."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Export this DeepSeek Harness profile's selected plugins and configuration, then merge that snapshot into another machine. The same snapshot can be stored in a private GitHub repository through the GitHub CLI."
   },
   "schemaVersion": 1,
   "scripts": {

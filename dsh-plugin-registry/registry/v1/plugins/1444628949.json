@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "5dc23fcc13659eba9baba95a077d3abac475c062"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOVhtJ1Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/bc2e23754d23f34e8048907c3e5f1bafb148a6e3b236defda2502039f4477bf2/HanYu-me/dsh-project-kanban",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/062f8683c5fb131152f7d7ba5a74d459ac14ca4962add6759f195030213c5c10/HanYu-me/dsh-project-kanban",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/53964456?u=d93e0881771f43e31c0eb96450eba8ccc0919e0f&v=4",
       "login": "HanYu-me"
@@ -41,27 +41,44 @@
   },
   "id": "gh:1444628949",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-project-kanban",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:HanYu-me/dsh-project-kanban#5dc23fcc13659eba9baba95a077d3abac475c062",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.8.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./src/index.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./src/client/index.tsx"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-project-kanban",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/bc2e23754d23f34e8048907c3e5f1bafb148a6e3b236defda2502039f4477bf2/HanYu-me/dsh-project-kanban",
+    "coverUrl": "https://opengraph.githubassets.com/062f8683c5fb131152f7d7ba5a74d459ac14ca4962add6759f195030213c5c10/HanYu-me/dsh-project-kanban",
     "description": "Project kanban for the DeepSeek Harness (dsh) web GUI: a sidebar board grouped by project with four fixed columns (待办 / 进行中 / 待反馈 / 已完成)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness (DSH) 插件：左侧边栏出现「项目看板」入口，点开后在主区域按项目分区管理任务。每个项目固定四列：待办 → 进行中 → 待反馈 → 已完成。"
   },
   "schemaVersion": 1,
   "scripts": {

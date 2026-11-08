@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "eb6889099437885ca92ced45f4f1af8e257677cf"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "AGPL-3.0"
     },
     "nodeId": "R_kgDOVex1tw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/0717af1584a2f54966785805f59c60dc9ebf6d43539c618cbb18142418bf3fa9/TwinsEarth/dsh-fang",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7c073bfcdecae0d6ccf2c5847ebc2769416c6c226ead1dcba6a6d85021202273/TwinsEarth/dsh-fang",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/330384445?u=7fe4e062436ce61dc443990cdff19935ec73af79&v=4",
       "login": "TwinsEarth"
@@ -46,27 +46,59 @@
   },
   "id": "gh:1441559991",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-fang",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:TwinsEarth/dsh-fang#eb6889099437885ca92ced45f4f1af8e257677cf",
+    "version": "3.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.mjs",
+      "./adapter": "./src/plugins/adapter.mjs",
+      "./approver": "./src/plugins/approver.mjs",
+      "./auditor": "./src/plugins/auditor.mjs",
+      "./buffer-keeper": "./src/plugins/buffer-keeper.mjs",
+      "./client": {
+        "browser": "./client.js",
+        "default": "./client.js"
+      },
+      "./compose": "./src/compose.mjs",
+      "./forker": "./src/plugins/forker.mjs",
+      "./healer": "./src/plugins/healer.mjs",
+      "./hot-reloader": "./src/plugins/hot-reloader.mjs",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./orchestrator": "./src/plugins/orchestrator.mjs",
+      "./restart-guard": "./src/plugins/restart-guard.mjs",
+      "./router": "./src/plugins/router.mjs",
+      "./scorer": "./src/plugins/scorer.mjs",
+      "./session-bridge": "./src/plugins/session-bridge.mjs",
+      "./session-catalog": "./src/plugins/session-catalog.mjs",
+      "./session-router": "./src/plugins/session-router.mjs",
+      "./session-sync": "./src/plugins/session-sync.mjs",
+      "./umbrella": "./src/plugins/umbrella.mjs"
+    },
+    "main": null,
+    "name": "@local/dsh-fang",
+    "status": "valid",
+    "type": "module",
+    "version": "3.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/0717af1584a2f54966785805f59c60dc9ebf6d43539c618cbb18142418bf3fa9/TwinsEarth/dsh-fang",
+    "coverUrl": "https://opengraph.githubassets.com/7c073bfcdecae0d6ccf2c5847ebc2769416c6c226ead1dcba6a6d85021202273/TwinsEarth/dsh-fang",
     "description": "dsh-Fang：通过让dsh-Web（瓮城）做为DeepSeekHarness（主城）的隔离区&审核区，保护DSH不再崩溃&无需频繁重启。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "加载、运行、更新、回滚、卸载、回收，全生命周期管理。"
   },
   "schemaVersion": 1,
   "scripts": {

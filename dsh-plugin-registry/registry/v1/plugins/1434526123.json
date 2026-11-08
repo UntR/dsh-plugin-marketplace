@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "de822755980ebc0e453d851d92fb13d4cb196792"
   },
   "github": {
@@ -14,7 +14,7 @@
     "createdAt": "2026-10-26T14:51:59Z",
     "databaseId": 1434526123,
     "defaultBranch": "master",
-    "description": "High-performance retrieval and construction governance for DeepSeek Harness: fff-backed search, tree-sitter symbols, and a tolerant edit engine with snapshots and rollback.",
+    "description": "Retrieval and edit tooling for DeepSeek Harness: fuzzy find/grep, tree-sitter symbols, dependency tracing, and a tolerant edit engine with snapshots, rollback and static verification (10 ff_* tools).",
     "fork": false,
     "forks": 0,
     "headSha": "de822755980ebc0e453d851d92fb13d4cb196792",
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVYEhqw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f98f1dacf9b76e8bf2c47864e55605fc92f99e1712ca4a9a0bcb63f0104d63ad/Asaiuta/dsh-forge",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/fa0db9fe9d30003a38e66d5f323a974f116b72d99f08b226ed2138ca06bd24e2/Asaiuta/dsh-forge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/36721683?u=f7da375959df704ca3f179e257bafda72f25fa19&v=4",
       "login": "Asaiuta"
     },
     "pushedAt": "2026-11-06T16:24:38Z",
     "slug": "Asaiuta/dsh-forge",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "code-search",
       "context-engineering",
@@ -41,38 +41,57 @@
       "llm-agent",
       "retrieval"
     ],
-    "updatedAt": "2026-11-06T16:24:43Z",
+    "updatedAt": "2026-11-08T13:50:24Z",
     "url": "https://github.com/Asaiuta/dsh-forge"
   },
   "id": "gh:1434526123",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-forge",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:Asaiuta/dsh-forge#de822755980ebc0e453d851d92fb13d4cb196792",
+    "version": "0.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./http": {
+        "default": "./lib/http-plugin.js",
+        "types": "./lib/types/http-plugin.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-forge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f98f1dacf9b76e8bf2c47864e55605fc92f99e1712ca4a9a0bcb63f0104d63ad/Asaiuta/dsh-forge",
-    "description": "High-performance retrieval and construction governance for DeepSeek Harness: fff-backed search, tree-sitter symbols, and a tolerant edit engine with snapshots and rollback."
+    "coverUrl": "https://opengraph.githubassets.com/fa0db9fe9d30003a38e66d5f323a974f116b72d99f08b226ed2138ca06bd24e2/Asaiuta/dsh-forge",
+    "description": "Retrieval and edit tooling for DeepSeek Harness: fuzzy find/grep, tree-sitter symbols, dependency tracing, and a tolerant edit engine with snapshots, rollback and static verification (10 ff_* tools)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DSH（DeepSeek Harness） 打造的检索与施工治理插件：把 fff 的 Rust 检索引擎接进工具系统，配上多语言 AST 符号定位和一套带台账、快照、回滚的容错编辑引擎。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

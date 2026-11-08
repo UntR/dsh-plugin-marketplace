@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "dbf2973d694715249e0306fbdb702c0dec2b3ee4"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVhh2bA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/000cce059f47dd88a3651ceaf7ac59e21de2887c8d892fd3b696f7c1305d7745/chaoguang668/dsh-continual-evolve-handoff",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/435692c405ea450493f5a8ab6bc6ac5197edda607461e555563b0d2dabef2e9d/chaoguang668/dsh-continual-evolve-handoff",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/267874834?v=4",
       "login": "chaoguang668"
@@ -48,33 +48,48 @@
   },
   "id": "gh:1444443756",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-continual-evolve",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:chaoguang668/dsh-continual-evolve-handoff#dbf2973d694715249e0306fbdb702c0dec2b3ee4",
+    "version": "0.19.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.19.4",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./client/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-continual-evolve",
+    "status": "valid",
+    "type": "module",
+    "version": "0.19.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/000cce059f47dd88a3651ceaf7ac59e21de2887c8d892fd3b696f7c1305d7745/chaoguang668/dsh-continual-evolve-handoff",
+    "coverUrl": "https://opengraph.githubassets.com/435692c405ea450493f5a8ab6bc6ac5197edda607461e555563b0d2dabef2e9d/chaoguang668/dsh-continual-evolve-handoff",
     "description": "Fork of ZK-Andy/dsh-continual-evolve: adds evolve_read action=handoff - the four-question handoff view (who / progress / next / blocked) as a projection over the memory store."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness 提供有治理、可自进化的记忆层。 模型提议，代码门禁，一个数据库落盘。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

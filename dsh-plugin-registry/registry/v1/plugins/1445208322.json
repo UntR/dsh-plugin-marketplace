@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "faa1cab712378eb6248fc0129d0296c09e85a1fa"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViQhAg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/2f221d2e4c30be0309d7fddf7102972a39139d06b9513b7e685404d8af10ffc9/ollamadou/dsh-downloader",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/2402d95e50b0d4e471818c82287ef5b90436201c9e70312bcd9f07e0d8cf4166/ollamadou/dsh-downloader",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/205111816?v=4",
       "login": "ollamadou"
@@ -41,27 +41,40 @@
   },
   "id": "gh:1445208322",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dshdownloader",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ollamadou/dsh-downloader#faa1cab712378eb6248fc0129d0296c09e85a1fa",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "dshdownloader",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/2f221d2e4c30be0309d7fddf7102972a39139d06b9513b7e685404d8af10ffc9/ollamadou/dsh-downloader",
+    "coverUrl": "https://opengraph.githubassets.com/2402d95e50b0d4e471818c82287ef5b90436201c9e70312bcd9f07e0d8cf4166/ollamadou/dsh-downloader",
     "description": "Resumable multi-connection downloader for DeepSeek Harness with China mirror and proxy presets, plus DeepSeek-assisted resource discovery."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dshdownloader 是一个面向 DeepSeek Harness（DSH）的下载插件：断点续传、多路合并、超时重试、国内镜像/代理预置、DeepSeek 资源发现、定时进度反馈，以及可沉淀的问题日志与主机调优。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "352869c5d69531923192d518eb10f65d11e0749f"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVh7_IA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/ec61b3aef81b89c14576ec96b78028607f7a3cff88a553ba704dff0d7d28185c/drscrewdriver/dsh-cookie-cleaner",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f32db4418e4f2f48247b12a732e410361f87955a925784531eb2a6d10bb2432d/drscrewdriver/dsh-cookie-cleaner",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/19632018?u=2d7614545514d34083f753282e17aa16e1d3dd70&v=4",
       "login": "drscrewdriver"
@@ -42,27 +42,40 @@
   },
   "id": "gh:1444871968",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cookie-cleaner",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-cookie-cleaner@0.2.3",
+    "version": "0.2.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/index.js",
+      "./client": "./lib/client.js",
+      "./core": "./src/core.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "src/index.js",
+    "name": "dsh-cookie-cleaner",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/ec61b3aef81b89c14576ec96b78028607f7a3cff88a553ba704dff0d7d28185c/drscrewdriver/dsh-cookie-cleaner",
+    "coverUrl": "https://opengraph.githubassets.com/f32db4418e4f2f48247b12a732e410361f87955a925784531eb2a6d10bb2432d/drscrewdriver/dsh-cookie-cleaner",
     "description": "DSH plugin: reports the local dsh-auth-* entries left in the desktop client cookie store and ships a standalone command that purges them once the client is fully closed."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "清理 DSH（DeepSeek Harness）桌面客户端 cookie 库里堆积的本地登录凭据 cookie（dsh-auth-）， 解决的现象是启动报 desktop welcome: Web authentication failed（HTTP 431，约 70 次随机端口启动后必现，见下文因果链）， 并把「为什么只能在客户端关闭时清理」讲清楚——不用每次再去问一遍 AI。"
   },
   "schemaVersion": 1,
   "scripts": {

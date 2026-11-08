@@ -5,8 +5,8 @@
     "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "649c087aaf567b2568d180742c7acf0828b19478"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUGE5fQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e8ae1db42c6740efdf70fecf3f703ba73ec4d3934db5f024f425bb228f174765/vb2250158/dsh-environment-sync",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5e76ee55dfdd893448191aa039c8b656830047101533d3aa387e65b8a35cabda/vb2250158/dsh-environment-sync",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/32808497?u=5ff97c59e26eb7af269c7e056100f24cc7cbed5a&v=4",
       "login": "vb2250158"
@@ -46,8 +46,8 @@
     "preferred": "github",
     "reason": null,
     "requiresBuildApproval": false,
-    "spec": "github:vb2250158/dsh-environment-sync#8023c3d72769e454e8c02d629ba79fd2e5d0fd09",
-    "version": "0.8.2"
+    "spec": "github:vb2250158/dsh-environment-sync#649c087aaf567b2568d180742c7acf0828b19478",
+    "version": "0.8.3"
   },
   "npm": {
     "latestVersion": null,
@@ -67,15 +67,15 @@
     "name": "dsh-environment-sync",
     "status": "valid",
     "type": "module",
-    "version": "0.8.2"
+    "version": "0.8.3"
   },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e8ae1db42c6740efdf70fecf3f703ba73ec4d3934db5f024f425bb228f174765/vb2250158/dsh-environment-sync",
+    "coverUrl": "https://opengraph.githubassets.com/5e76ee55dfdd893448191aa039c8b656830047101533d3aa387e65b8a35cabda/vb2250158/dsh-environment-sync",
     "description": "Open-source DSH environment synchronization and personal plugin management"
   },
   "readme": {
     "available": true,
-    "excerpt": "0.8.2 支持显式保留机器本地插件。在本机 DSH Home 的 private-sync.local.yaml 添加以下字段；默认是空数组。name 是包名，entryIds 列出该插件的本机设置或 Loader 行 ID，包名不必与行 ID 相同；没有额外行时使用 []。"
+    "excerpt": "0.8.3 修复 0.8.2 及此前导出时把本机 overlay 误当作共享字段删除的问题。已有可信快照时，显式 overlay 遮住的可移植叶值保留原共享值；本机差异仍只在该电脑导入时覆盖。settings 与 profile-config 使用同一规则，未遮罩的修改和删除照常同步。首次导出没有旧值时不上传本机值。机器路径、设备地址、凭据内容、固定机器命名空间及 local-only 插件继续排除；环境变量凭据引用和模型标识仍可移植。先按正常流程接收，再发布；已有 Home 仍以真实 appliedCommit 为基准，不能在最新 clone 上导出旧"
   },
   "schemaVersion": 1,
   "scripts": {

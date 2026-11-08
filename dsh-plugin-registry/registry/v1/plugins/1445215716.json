@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "d176dceb400519a0d8f813f13a6512aaf8b45e1e"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOViQ95A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/23e6e691e9b674b5c1efe88a38e23f2e1a0d56ca4858dbe718608a5dc7b1b26e/aidrama-lab/dsh-volc-mem0",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c00322231f9ffde828a93870d7002de0fa49139d4dd10f410ccd7d1d153ad6eb/aidrama-lab/dsh-volc-mem0",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/225338210?v=4",
       "login": "aidrama-lab"
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@aidrama/dsh-volc-mem0",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.9"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/23e6e691e9b674b5c1efe88a38e23f2e1a0d56ca4858dbe718608a5dc7b1b26e/aidrama-lab/dsh-volc-mem0",
+    "coverUrl": "https://opengraph.githubassets.com/c00322231f9ffde828a93870d7002de0fa49139d4dd10f410ccd7d1d153ad6eb/aidrama-lab/dsh-volc-mem0",
     "description": "为 DeepSeek Harness（DSH）接入火山引擎 Mem0，支持跨会话记忆、自动召回、后台学习与经验自进化，并提供多项目管理和原生设置页面。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness（DSH）接入火山引擎托管 Mem0，支持跨会话记忆、自动召回和后台学习。可用于延续创作方法、用户偏好、作品设定及其他 Agent 任务。"
   },
   "schemaVersion": 1,
   "scripts": {

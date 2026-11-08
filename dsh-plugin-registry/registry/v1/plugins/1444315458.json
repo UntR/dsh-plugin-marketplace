@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "5ece4cd679687d901a4b9e485185692bb241d150"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVhaBQg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a09cf4abf7c0e46a7f9c0a06afb1d6e1545213b6d1b62d919f7c258ec1f0bce0/dingcang/dsh-tailnet-ingress",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/95c27dfbff9b577883cffff44e776e494706451a740b3030aed57fa7d117119d/dingcang/dsh-tailnet-ingress",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/17334895?v=4",
       "login": "dingcang"
@@ -46,27 +46,38 @@
   },
   "id": "gh:1444315458",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dingcang/dsh-tailnet-ingress",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@dingcang/dsh-tailnet-ingress@1.2.2",
+    "version": "1.2.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.2.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@dingcang/dsh-tailnet-ingress",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a09cf4abf7c0e46a7f9c0a06afb1d6e1545213b6d1b62d919f7c258ec1f0bce0/dingcang/dsh-tailnet-ingress",
+    "coverUrl": "https://opengraph.githubassets.com/95c27dfbff9b577883cffff44e776e494706451a740b3030aed57fa7d117119d/dingcang/dsh-tailnet-ingress",
     "description": "Serves the loopback DSH Web UI on the machine's own private, CGNAT and tunnel IPv4 addresses, following the listener's port."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个小的 DSH bundle：把回环地址上的 Web UI 同时服务到本机的其他非公网地址上。DSH 刻意只绑定一个具体地址并拒绝通配地址，本插件让部署能同时应答局域网网卡和隧道网卡，而 http://127.0.0.1: 照常可用。"
   },
   "schemaVersion": 1,
   "scripts": {

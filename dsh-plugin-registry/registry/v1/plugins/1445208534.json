@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "62d41d52f6390e2998aa21ac5542a2a0ad230dd0"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViQh1g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/79aad5870885694504b52c3d09d13f5b2ab0975a2b35c3abf8160104dba023f3/BrainZombie/dsh-skill-autopilot",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ce06968b83f43806af87971b514d33efac18f3c4cafeb69290b3531ead4bedea/BrainZombie/dsh-skill-autopilot",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/35189622?u=5ae6d40220df81027c28ee479605c72d1fbb992d&v=4",
       "login": "BrainZombie"
@@ -42,27 +42,39 @@
   },
   "id": "gh:1445208534",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-skill-autopilot",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:BrainZombie/dsh-skill-autopilot#62d41d52f6390e2998aa21ac5542a2a0ad230dd0",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-skill-autopilot",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/79aad5870885694504b52c3d09d13f5b2ab0975a2b35c3abf8160104dba023f3/BrainZombie/dsh-skill-autopilot",
+    "coverUrl": "https://opengraph.githubassets.com/ce06968b83f43806af87971b514d33efac18f3c4cafeb69290b3531ead4bedea/BrainZombie/dsh-skill-autopilot",
     "description": "Review pending mnemon skill-evolution suggestions with your configured model, gate them through an anti-fragmentation policy, then apply the approved SKILL.md (versioned, rollback-safe)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DSH「记忆系统 → 技能管理 → 进化」里那批待处理建议，交给你配置的大模型审查，按一套反碎片化的准入策略裁决，通过后打包成 SKILL.md 并经技能数据源落盘（带版本记录、可回滚）。"
   },
   "schemaVersion": 1,
   "scripts": {

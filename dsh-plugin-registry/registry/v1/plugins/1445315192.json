@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "df977da9b637944f646c78ec82d518a7c4f06b9e"
   },
   "github": {
@@ -22,7 +22,7 @@
     "language": "JavaScript",
     "license": null,
     "nodeId": "R_kgDOViXCeA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b4d6285e1bfc71ef1c29da620d00204b49a202f89ad931743acc88646fef0b9e/kkwalking/dsh-stall-guard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c32bdac4c37cd67f86c40101e47eda275130dc0e2f1455cadeb07b0db19c16a8/kkwalking/dsh-stall-guard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/22633670?u=6530d9694041e246f92f9e263f57daed88d7c2b1&v=4",
       "login": "kkwalking"
@@ -38,27 +38,40 @@
   },
   "id": "gh:1445315192",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-stall-guard",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:kkwalking/dsh-stall-guard#df977da9b637944f646c78ec82d518a7c4f06b9e",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": null,
+    "name": "@local/dsh-stall-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b4d6285e1bfc71ef1c29da620d00204b49a202f89ad931743acc88646fef0b9e/kkwalking/dsh-stall-guard",
-    "description": ""
+    "coverUrl": "https://opengraph.githubassets.com/c32bdac4c37cd67f86c40101e47eda275130dc0e2f1455cadeb07b0db19c16a8/kkwalking/dsh-stall-guard",
+    "description": "DeepSeek Harness 的「断流守卫」插件：监测指定模型的轮次收尾，发现「文本说完了、但没有工具调用却结束了」的截断时，用另一个模型复查，并提示或自动续跑。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的「断流守卫」插件：监测指定模型的轮次收尾，发现「文本说完了、但没有工具调用却结束了」的截断时，用另一个模型复查，并提示或自动续跑。"
   },
   "schemaVersion": 1,
   "scripts": {

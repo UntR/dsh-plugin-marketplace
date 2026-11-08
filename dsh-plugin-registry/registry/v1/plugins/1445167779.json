@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "991a1d4d8fd1ad6046f8b40e117577851fdfbe42"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViOCow",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/31a78a08ae3373502a96c796082c8e570ee8f9b7dbfd17174f5c182585aea19b/clioo/dsh-claude-agent",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/9f2471bcdc38fddbf1cb117536ae168b881c7c3d22d75286e24ceaace60fc90e/clioo/dsh-claude-agent",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/18723887?u=c45fe45eb54c9ead1f7b84d0c30974c1af712c1b&v=4",
       "login": "clioo"
@@ -48,27 +48,39 @@
   },
   "id": "gh:1445167779",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-claude-agent",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:clioo/dsh-claude-agent#991a1d4d8fd1ad6046f8b40e117577851fdfbe42",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-claude-agent",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/31a78a08ae3373502a96c796082c8e570ee8f9b7dbfd17174f5c182585aea19b/clioo/dsh-claude-agent",
+    "coverUrl": "https://opengraph.githubassets.com/9f2471bcdc38fddbf1cb117536ae168b881c7c3d22d75286e24ceaace60fc90e/clioo/dsh-claude-agent",
     "description": "Claude Agent provider for DeepSeek Harness: opencode's official Claude Agent SDK approach, >90% steady-state prompt-cache hit, and Anthropic's current auth and branding policies."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A claude-agent model provider for DeepSeek Harness that follows the design opencode shipped in its own claude-agent provider: it runs the user's installed claude binary through Anthropic's official Claude Agent SDK. Claude Code keeps its own authentication, its own client and its"
   },
   "schemaVersion": 1,
   "scripts": {

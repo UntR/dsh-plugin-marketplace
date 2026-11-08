@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "7576c738fdf3d0480db5e785160c406c105bf0e7"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVhhrwQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/4cb61619c7560520b5b0aab8b7a3711bb169a5c2c75f803821ca4f77c728ffd4/ZhiX-Wang/dsh-tsinghua-course-sync",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/72fbe5042a1186b908bee298cc1cb7cb5d5538d48987aae4d938f26e3b6fc351/ZhiX-Wang/dsh-tsinghua-course-sync",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/331473284?v=4",
       "login": "ZhiX-Wang"
@@ -41,27 +41,36 @@
   },
   "id": "gh:1444441025",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-tsinghua-course-sync",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:ZhiX-Wang/dsh-tsinghua-course-sync#7576c738fdf3d0480db5e785160c406c105bf0e7",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js"
+    },
+    "main": "index.js",
+    "name": "dsh-tsinghua-course-sync",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/4cb61619c7560520b5b0aab8b7a3711bb169a5c2c75f803821ca4f77c728ffd4/ZhiX-Wang/dsh-tsinghua-course-sync",
+    "coverUrl": "https://opengraph.githubassets.com/72fbe5042a1186b908bee298cc1cb7cb5d5538d48987aae4d938f26e3b6fc351/ZhiX-Wang/dsh-tsinghua-course-sync",
     "description": "清华网络学堂课程资料增量同步，按登录用户读取课程，使用默认浏览器和配套扩展，保存去重日志。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在自己的浏览器中登录清华网络学堂，将当前学期课程资料按科目保存到本机。再次调用时检查学堂文件标识、更新时间、大小和本地 SHA-256 校验值，跳过未变化的文件。每轮同步保留逐项日志。"
   },
   "schemaVersion": 1,
   "scripts": {

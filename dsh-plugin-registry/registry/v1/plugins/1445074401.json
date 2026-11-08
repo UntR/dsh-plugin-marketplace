@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "8758e4f2ea0189bb3867e25e02132b66ec8ce385"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOViIV4Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/de6c4dc9b64b046fcc0b78911eea834499c4752b6651cb5d046d0d397c1da916/xuanyuanchumo/dsh-kaogong",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/02250e3210115faa55a6a0033033c54873cce03918ccc7dc7315195747772673/xuanyuanchumo/dsh-kaogong",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/147020637?u=bdf78a6f68dbe4c3ea07958c46665760fa220389&v=4",
       "login": "xuanyuanchumo"
     },
     "pushedAt": "2026-11-04T07:35:45Z",
     "slug": "xuanyuanchumo/dsh-kaogong",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "civil-service",
       "deepseek-harness",
@@ -40,32 +40,46 @@
       "exam",
       "kaogong"
     ],
-    "updatedAt": "2026-11-04T07:34:52Z",
+    "updatedAt": "2026-11-08T10:58:52Z",
     "url": "https://github.com/xuanyuanchumo/dsh-kaogong"
   },
   "id": "gh:1445074401",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-kaogong",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-kaogong@1.12.0",
+    "version": "1.12.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.12.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/host/index.js",
+      "./client": "./dist/client/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./server": "./dist/server/http.js",
+      "./shared": "./dist/shared/manifest.js"
+    },
+    "main": "dist/host/index.js",
+    "name": "dsh-kaogong",
+    "status": "valid",
+    "type": "module",
+    "version": "1.12.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/de6c4dc9b64b046fcc0b78911eea834499c4752b6651cb5d046d0d397c1da916/xuanyuanchumo/dsh-kaogong",
+    "coverUrl": "https://opengraph.githubassets.com/02250e3210115faa55a6a0033033c54873cce03918ccc7dc7315195747772673/xuanyuanchumo/dsh-kaogong",
     "description": "考公备考整合插件（DSH 宿主原生面板）— 15 开源仓库一键式整合 · 离线可视化 · SRS 错题本 · 专项刷题记忆 · 交互图谱 · 白盒可观测"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "安装即生效：Host 挂载同源路由 /kaogong/ → Client 注册双入口 → 刷新 GUI → 点左栏 📚。"
   },
   "schemaVersion": 1,
   "scripts": {

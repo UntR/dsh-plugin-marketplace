@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "d377f2b4fa1d6c6bad18618326dcd22828e2dcfe"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViL5zw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/87c7dec2b89def1a439104c3d84f0368805226c156b5f9745e3760b9a64df1aa/xia-sc/dsh-language-policy",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b73e0faeb16cec2d26bc9120210d2a22efce0f4fc812a501b5fed5f8a3e22a3b/xia-sc/dsh-language-policy",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/59762173?u=d2c04c2df73b92181477c454c1e061cb254e9c80&v=4",
       "login": "xia-sc"
@@ -44,27 +44,39 @@
   },
   "id": "gh:1445132751",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@xia-sc/dsh-language-policy",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@xia-sc/dsh-language-policy@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "@xia-sc/dsh-language-policy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/87c7dec2b89def1a439104c3d84f0368805226c156b5f9745e3760b9a64df1aa/xia-sc/dsh-language-policy",
+    "coverUrl": "https://opengraph.githubassets.com/b73e0faeb16cec2d26bc9120210d2a22efce0f4fc812a501b5fed5f8a3e22a3b/xia-sc/dsh-language-policy",
     "description": "DSH host-only bundle that pins a Simplified-Chinese reasoning/response policy at the end of the system prompt"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个只做一件事的 Host-only DSH bundle：把一条简体中文语言策略钉在系统提示词的最末尾，让模型的内部推理（reasoning）和用户回复保持中文。"
   },
   "schemaVersion": 1,
   "scripts": {

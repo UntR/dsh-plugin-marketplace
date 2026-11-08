@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "aedd8ffbc36d465e6351e91ac82d8a1cc0cfe23d"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViZEkw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/03170b63de101ad548aeae6c55ba9614f146f7496f4681db6c5f1819124a192d/comeonzhj/SuperAgent-General",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/da79a1753712d8fbf743cf9dae32e57af05ab5c4bb8dbcca25792958feecc899/comeonzhj/SuperAgent-General",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/23088731?u=bc6994e14e6dfc3a40e3b31262425ad60831f98a&v=4",
       "login": "comeonzhj"
@@ -44,7 +44,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -54,14 +54,31 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./feishu-watch": "./lib/feishu-watch.js",
+      "./github-watch": "./lib/github-watch.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-superagent-general",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/03170b63de101ad548aeae6c55ba9614f146f7496f4681db6c5f1819124a192d/comeonzhj/SuperAgent-General",
+    "coverUrl": "https://opengraph.githubassets.com/da79a1753712d8fbf743cf9dae32e57af05ab5c4bb8dbcca25792958feecc899/comeonzhj/SuperAgent-General",
     "description": "基于官方 SuperAgent 原型的通用 DSH 插件：飞书应用接入、原生面板与 Router/Worker 会话。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "基于 DeepSeek Harness 官方 SuperAgent 原型 的通用 DSH 插件。通过飞书机器人接收私聊和群聊消息，由常驻 Router 协调任务，在独立的 DSH Worker Session 中执行。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "d7753b638236b69e4ec193c38bb42ee6eade2332"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViHjUg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/720ae890c5b9aba7903d1806b00195e3048db02475795bfde3a90ccc37b85f78/m430/dsh-brainstorming",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c03df9c287e4d71e662193f5bd3b3647e7fef33e64e01043a6ab14da7052a243/m430/dsh-brainstorming",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/4023173?u=104aa1b4ae30023986baa6981090b63e5db884e2&v=4",
       "login": "m430"
@@ -45,33 +45,50 @@
   },
   "id": "gh:1445061458",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-brainstorming",
+    "preferred": "npm",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "dsh-brainstorming@0.0.5",
+    "version": "0.0.5"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.5",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/host/index.js",
+        "types": "./lib/host/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/host/index.js",
+    "name": "dsh-brainstorming",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.5"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/720ae890c5b9aba7903d1806b00195e3048db02475795bfde3a90ccc37b85f78/m430/dsh-brainstorming",
+    "coverUrl": "https://opengraph.githubassets.com/c03df9c287e4d71e662193f5bd3b3647e7fef33e64e01043a6ab14da7052a243/m430/dsh-brainstorming",
     "description": "AI brainstorming canvas plugin for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness Web UI 的 AI 头脑风暴插件：在无限画布上从一个模糊点子出发，默认通过「访谈」对齐问题，再「确认调研」生成大纲与结果；也可选「发散」快速展开方向。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "edba70d931ccfb25308e980e71537a0abdf60844"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViQp9w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/667522cd6877c439c22dbf964068dcc9d6ca6a3d46ae87e0cfc8add301d840d1/BTYG123/dsh-memory-ladder",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7c83dd3c29c856a3fc7e5a3e0aab14b0bcdfbc536197d52cd75bb53180b4eec1/BTYG123/dsh-memory-ladder",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/305836450?u=5c549a66127e23adcf74a4a531f1e6ff2d446a45&v=4",
       "login": "BTYG123"
@@ -45,27 +45,40 @@
   },
   "id": "gh:1445210615",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-memory-ladder",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:BTYG123/dsh-memory-ladder#edba70d931ccfb25308e980e71537a0abdf60844",
+    "version": "0.3.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./compact": "./lib/compact-engine.js",
+      "./lib/archive.js": "./lib/archive.js",
+      "./lib/pure.js": "./lib/pure.js",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-memory-ladder",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/667522cd6877c439c22dbf964068dcc9d6ca6a3d46ae87e0cfc8add301d840d1/BTYG123/dsh-memory-ladder",
+    "coverUrl": "https://opengraph.githubassets.com/7c83dd3c29c856a3fc7e5a3e0aab14b0bcdfbc536197d52cd75bb53180b4eec1/BTYG123/dsh-memory-ladder",
     "description": "Tiered \"sleep\" compaction backend for DeepSeek Harness: the newest round owns T/3 of the context window, older tiers halve (T/6, T/12, …), and one model-written ladder replaces the shadowed history. MIT."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "新版保留原有分层睡眠事务，并在压缩前将用户、助手及工具消息的文本写入当前会话独立的归档。下一步根据用户问题检索已经离开上下文的原文，经 Harness 的动态上下文接口提供给模型；不会直接改写冻结的模型请求。"
   },
   "schemaVersion": 1,
   "scripts": {

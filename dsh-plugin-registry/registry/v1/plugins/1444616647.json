@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "61b6b532476bc29a33e367084f7b3c889e791c48"
   },
   "github": {
@@ -22,43 +22,56 @@
     "language": "JavaScript",
     "license": null,
     "nodeId": "R_kgDOVhsZxw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/2dddb5589bee9d612103b7d5f383e63215f1420943a5ea34b3bc25312bb92b28/LingQi-07-std/dsh-client-ui-git",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/71b68c92acea47504e6d0bc83b5de7f15a2ae23bb50ce081469c25cf95e63c46/LingQi-07-std/dsh-client-ui-git",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/225495412?u=13d92450e8453b27b233a024863db76335e2f058&v=4",
       "login": "LingQi-07-std"
     },
     "pushedAt": "2026-11-07T03:32:49Z",
     "slug": "LingQi-07-std/dsh-client-ui-git",
-    "stars": 3,
+    "stars": 6,
     "topics": [
       "dsh-plugin"
     ],
-    "updatedAt": "2026-11-07T06:15:59Z",
+    "updatedAt": "2026-11-08T15:06:50Z",
     "url": "https://github.com/LingQi-07-std/dsh-client-ui-git"
   },
   "id": "gh:1444616647",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-external/dsh-client-ui-git",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:LingQi-07-std/dsh-client-ui-git#61b6b532476bc29a33e367084f7b3c889e791c48",
+    "version": "0.1.5"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./typert": "./lib/typert.host.js"
+    },
+    "main": "lib/index.js",
+    "name": "@dsh-external/dsh-client-ui-git",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.5"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/2dddb5589bee9d612103b7d5f383e63215f1420943a5ea34b3bc25312bb92b28/LingQi-07-std/dsh-client-ui-git",
+    "coverUrl": "https://opengraph.githubassets.com/71b68c92acea47504e6d0bc83b5de7f15a2ae23bb50ce081469c25cf95e63c46/LingQi-07-std/dsh-client-ui-git",
     "description": "DSH Web GUI 的 Git 可视化插件：分支/提交图谱、工作区状态、远程操作与 PR 管理"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness Web GUI 的侧边栏底部放一个 Git 按钮（当前分支 + 未提交改动徽标），点开右侧抽屉即可查看并操作当前会话工作区的仓库：提交图、工作区状态、单提交 diff、分支、暂存（stash）、合并冲突、远程同步，以及仓库级设置。"
   },
   "schemaVersion": 1,
   "scripts": {

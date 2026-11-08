@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "8639756c70c93213d04f93fdd199e360f4fc3116"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVhjD-Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/ba478642ced254ecab1d814f7f60a17edfbaf90d51474af9aeb38936a603fed7/imx123/dsh-opencode-session-fix",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/fd2aadbf31c34b29021e91a05d3b94433101b3948042562286749006c95cbed4/imx123/dsh-opencode-session-fix",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/96425710?v=4",
       "login": "imx123"
@@ -49,27 +49,39 @@
   },
   "id": "gh:1444463609",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-opencode-session-fix",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-opencode-session-fix@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-opencode-session-fix",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/ba478642ced254ecab1d814f7f60a17edfbaf90d51474af9aeb38936a603fed7/imx123/dsh-opencode-session-fix",
+    "coverUrl": "https://opengraph.githubassets.com/fd2aadbf31c34b29021e91a05d3b94433101b3948042562286749006c95cbed4/imx123/dsh-opencode-session-fix",
     "description": "DSH Host plugin: supplies x-opencode-session for opencode-go requests that carry no session id, so Auto review stops failing with 400 MissingSessionID."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A Host-only plugin for DeepSeek Harness that repairs one specific failure: with the Auto review permission preset (EXP) and an opencode family provider as the current model, every reviewed tool call fails before its body runs:"
   },
   "schemaVersion": 1,
   "scripts": {

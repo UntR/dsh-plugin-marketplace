@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "c042208fd31eb1b04c37bac09fdafb12078891a1"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVhYiMw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/2ed15413874f96c63feb86d4532f746818a9c9c687ce38c5dea756af40b9f617/hxlog/dsh-skills-tools",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/42bd9002ce4aec60954bf083b7fbd2d7e4cb873019b8b652c9e6fd009deeee45/hxlog/dsh-skills-tools",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/116433827?u=eb864ea5e63774493e592570030ec2a3ca0cf4f8&v=4",
       "login": "hxlog"
@@ -51,27 +51,45 @@
   },
   "id": "gh:1444291123",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-skills-tools",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-skills-tools@1.3.0",
+    "version": "1.3.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.3.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./client/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-skills-tools",
+    "status": "valid",
+    "type": "module",
+    "version": "1.3.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/2ed15413874f96c63feb86d4532f746818a9c9c687ce38c5dea756af40b9f617/hxlog/dsh-skills-tools",
+    "coverUrl": "https://opengraph.githubassets.com/42bd9002ce4aec60954bf083b7fbd2d7e4cb873019b8b652c9e6fd009deeee45/hxlog/dsh-skills-tools",
     "description": "DeepSeek Harness 的 Skills 管理器：从 Git 仓库导入技能，按仓库分组管理，随时启用、停用、补齐与查看内容。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的 Skills 管理器。 从 Git 仓库或本机目录导入 Agent Skills，按仓库分组管理，随时启用、停用、补齐和查看内容。"
   },
   "schemaVersion": 1,
   "scripts": {

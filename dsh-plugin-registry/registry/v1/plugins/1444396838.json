@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "cf38538940e8782bbf6fa79f031fddf9c684757d"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVhe_Jg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/694d0bc81fdd56162ba17db8d1666214d4476741dd48d324be110638a52012e3/buaaflyaway/dsh-progress-nudge",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f3ccb8a89491d6ae9620d96d064f744be278570b7f98aec2a76de7ea181849fe/buaaflyaway/dsh-progress-nudge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/31234564?u=8d067d8e3b2f8a0d25e3f13510d8aa071b2e6b6a&v=4",
       "login": "buaaflyaway"
@@ -45,27 +45,40 @@
   },
   "id": "gh:1444396838",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-progress-nudge",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-progress-nudge@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-progress-nudge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/694d0bc81fdd56162ba17db8d1666214d4476741dd48d324be110638a52012e3/buaaflyaway/dsh-progress-nudge",
+    "coverUrl": "https://opengraph.githubassets.com/f3ccb8a89491d6ae9620d96d064f744be278570b7f98aec2a76de7ea181849fe/buaaflyaway/dsh-progress-nudge",
     "description": "DeepSeek Harness plugin: counts silent tool-only rounds and injects a progress reminder into the next model request, with a Settings page for threshold, wording, language and Agent Teams scope."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DeepSeek Harness（dsh）插件：当模型连续多轮只发起工具调用、不向用户输出任何文字时， 在下一次模型请求之前注入一条简短提醒，要求它先汇报进展再继续执行；一旦模型输出文字，计数器立刻归零。"
   },
   "schemaVersion": 1,
   "scripts": {

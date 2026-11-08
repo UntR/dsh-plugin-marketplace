@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "87899af6b1efcaf0368680c64ec5f29ef9cafcc0"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVhugCQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5076239b49f2cac529440e6b4c920df90688da6238f23730e68b5d59e3319dd4/jeff072333/dsh-live-spend",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/efb8fb3e94de6a76f6e04c7f2d0796679ad153089d90a6f7ed559c2cf388b9ff/jeff072333/dsh-live-spend",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/352101108?v=4",
       "login": "jeff072333"
     },
     "pushedAt": "2026-11-03T18:23:05Z",
     "slug": "jeff072333/dsh-live-spend",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "balance",
       "cost",
@@ -41,32 +41,45 @@
       "dsh-plugin",
       "usage"
     ],
-    "updatedAt": "2026-11-03T18:07:31Z",
+    "updatedAt": "2026-11-07T15:56:19Z",
     "url": "https://github.com/jeff072333/dsh-live-spend"
   },
   "id": "gh:1444651017",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-live-spend",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:jeff072333/dsh-live-spend#87899af6b1efcaf0368680c64ec5f29ef9cafcc0",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-live-spend",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5076239b49f2cac529440e6b4c920df90688da6238f23730e68b5d59e3319dd4/jeff072333/dsh-live-spend",
+    "coverUrl": "https://opengraph.githubassets.com/efb8fb3e94de6a76f6e04c7f2d0796679ad153089d90a6f7ed559c2cf388b9ff/jeff072333/dsh-live-spend",
     "description": "DSH 插件：输入框上方显示本次对话花费、账户余额与当前峰谷时段，每条回答末尾显示该轮消耗 | DSH plugin: live spend, balance and peak/off-peak card"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 加花费显示：输入框上方三行看整场对话花了多少、余额还剩多少、现在是峰价还是谷价；每条回答末尾一个数字看这一轮花了多少。"
   },
   "schemaVersion": 1,
   "scripts": {

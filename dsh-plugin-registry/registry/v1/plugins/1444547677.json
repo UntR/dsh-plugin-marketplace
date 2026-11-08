@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "a1b4a102d7d9bde271eacce54889c72b13e216b6"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVhoMXQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d13217fe242768a1db108c3755b50e2298ac45d005dfd79e9874f1c487c05a4c/zmy15/dsh-plugin-git-status",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/035f517cea0657e24d642928ce1a36188c011ad2ca94c871487214ef0212a554/zmy15/dsh-plugin-git-status",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/109537161?u=7367942678ec5a89a7b9927226b6ec8b9d9c1160&v=4",
       "login": "zmy15"
@@ -44,27 +44,40 @@
   },
   "id": "gh:1444547677",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-git-status",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zmy15/dsh-plugin-git-status#a1b4a102d7d9bde271eacce54889c72b13e216b6",
+    "version": "1.2.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.6.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-git-status",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d13217fe242768a1db108c3755b50e2298ac45d005dfd79e9874f1c487c05a4c/zmy15/dsh-plugin-git-status",
+    "coverUrl": "https://opengraph.githubassets.com/035f517cea0657e24d642928ce1a36188c011ad2ca94c871487214ef0212a554/zmy15/dsh-plugin-git-status",
     "description": "为 DeepSeek Harness 提供 Git 状态提示，支持分支切换、最近提交与未提交改动展示，并安全处理工作区改动。Git status for DeepSeek Harness with branch switching, latest commit details, uncommitted changes, and safe dirty-worktree protection."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）增加一条克制、可直接操作的 Git 状态提示。"
   },
   "schemaVersion": 1,
   "scripts": {

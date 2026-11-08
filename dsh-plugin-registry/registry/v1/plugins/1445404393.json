@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "2ff23ddec4133824c9ae8b491cb025127d06d0c1"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVice6Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/6f1a536dedc01e865207b1a12054bae2865ba50408107c6eef88904da98c3ab4/songrui111/dsh-fine-tune",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/466517f5a1f42088dc2960afc4440a1baef72144ad86133b59b513cccb5e3843/songrui111/dsh-fine-tune",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/107449569?u=e1e3959752a06d279335dfb0c71906c63ef62204&v=4",
       "login": "songrui111"
@@ -46,27 +46,39 @@
   },
   "id": "gh:1445404393",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-fine-tune",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:songrui111/dsh-fine-tune#2ff23ddec4133824c9ae8b491cb025127d06d0c1",
+    "version": "0.6.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.6.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-fine-tune",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/6f1a536dedc01e865207b1a12054bae2865ba50408107c6eef88904da98c3ab4/songrui111/dsh-fine-tune",
+    "coverUrl": "https://opengraph.githubassets.com/466517f5a1f42088dc2960afc4440a1baef72144ad86133b59b513cccb5e3843/songrui111/dsh-fine-tune",
     "description": "DSH plugin: local LoRA/QLoRA fine-tuning with a Web panel — dataset → train → evaluate, GPU or SSH backend. DeepSeek Harness 本地微调插件：数据集→训练→评测，支持本机与远程 GPU。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness 里微调一个小模型，跑在你自己的显卡上。"
   },
   "schemaVersion": 1,
   "scripts": {

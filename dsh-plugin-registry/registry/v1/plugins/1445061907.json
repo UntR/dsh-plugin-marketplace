@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "8681bb2c85314c9b26b739ee36ed3c2385f43519"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViHlEw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3b2102a8dcada65b63b0d9514feec5fbfc130d577f0073c0879a870f85082106/asdw159632/dsh-git-plugin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f440ab1a4820b00bd6d011f0d97a30ca662b48b4dc0805287bc547e11b1b926c/asdw159632/dsh-git-plugin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/50094958?u=9f490e488b97f2aea8e1bd6849dd7e3b90fcca8c&v=4",
       "login": "asdw159632"
@@ -48,7 +48,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -58,14 +58,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./client/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-git-plugin",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3b2102a8dcada65b63b0d9514feec5fbfc130d577f0073c0879a870f85082106/asdw159632/dsh-git-plugin",
+    "coverUrl": "https://opengraph.githubassets.com/f440ab1a4820b00bd6d011f0d97a30ca662b48b4dc0805287bc547e11b1b926c/asdw159632/dsh-git-plugin",
     "description": "DSH plugin: visualize a repository's git history and operate on it from the GUI (add / commit / pull / push / merge)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）插件：可视化 Git 提交历史，并在 GUI 里直接完成 add / commit / pull / push / merge 等操作。"
   },
   "schemaVersion": 1,
   "scripts": {

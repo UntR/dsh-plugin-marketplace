@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "bec25f79d8d1565f5a673bdace227aed915cad0b"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViLsZg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/411e1f8016a7c30603f47d255643b614e8368fa7f59b2fa8a74180494545dbfc/loveandbeepbrother/dsh-tts-service",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/b8f1224ee2458deb707cad77a10e5d3661574131433477b472d61203cde28ff3/loveandbeepbrother/dsh-tts-service",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/55726334?u=d9ecc2d0f8fa2f9303d10e2c0072aebda65994dc&v=4",
       "login": "loveandbeepbrother"
     },
     "pushedAt": "2026-11-04T03:51:59Z",
     "slug": "loveandbeepbrother/dsh-tts-service",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "deepseek-harness",
       "dsh",
@@ -41,32 +41,56 @@
       "text-to-speech",
       "tts"
     ],
-    "updatedAt": "2026-11-04T03:52:04Z",
+    "updatedAt": "2026-11-08T15:48:18Z",
     "url": "https://github.com/loveandbeepbrother/dsh-tts-service"
   },
   "id": "gh:1445129318",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@loveandbeepbrother/dsh-tts-service",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@loveandbeepbrother/dsh-tts-service@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./src/service.js",
+        "types": "./index.d.ts"
+      },
+      "./bailian": "./src/bailian.js",
+      "./bailian/locale/*.json": "./locale/bailian/*.json",
+      "./doubao": "./src/doubao.js",
+      "./doubao/locale/*.json": "./locale/doubao/*.json",
+      "./locale/*.json": "./locale/service/*.json",
+      "./openai-compatible": "./src/openai-compatible.js",
+      "./openai-compatible/locale/*.json": "./locale/openai-compatible/*.json",
+      "./package.json": "./package.json",
+      "./say": "./src/say.js",
+      "./say/locale/*.json": "./locale/say/*.json",
+      "./speaker-windows": "./src/speaker-windows.js",
+      "./speaker-windows/locale/*.json": "./locale/speaker-windows/*.json"
+    },
+    "main": "./src/service.js",
+    "name": "@loveandbeepbrother/dsh-tts-service",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/411e1f8016a7c30603f47d255643b614e8368fa7f59b2fa8a74180494545dbfc/loveandbeepbrother/dsh-tts-service",
+    "coverUrl": "https://opengraph.githubassets.com/b8f1224ee2458deb707cad77a10e5d3661574131433477b472d61203cde28ff3/loveandbeepbrother/dsh-tts-service",
     "description": "Multi-provider text-to-speech (TTS) service for DeepSeek Harness (dsh): Doubao, Alibaba Bailian and OpenAI-compatible providers, user-chosen voices, per-segment tone."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Multi-provider text-to-speech (TTS) service for DSH: Doubao TTS 2.0, Alibaba Bailian and OpenAI-compatible providers register independently and the user picks the voice; the agent can speak with per-segment tone, and other plugins reuse the same service."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "91335af6012c36f0f454918e86471d8ff5966f13"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVhpCoQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/0aa2287dc75db7b0f959c84db8833b2a68f1a696bd1248c67a80bf8728e0938c/bowenphys/dsh-vasp-periodic-table",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/993268e46974fb527583ec3e48c7507e12569ed81fbcaceb035598a4962debe3/bowenphys/dsh-vasp-periodic-table",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/49714479?u=fc5758ad0336af873b29e1e251126293c1f61cf3&v=4",
       "login": "bowenphys"
@@ -45,27 +45,39 @@
   },
   "id": "gh:1444561569",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@dsh-vasp/periodic-table",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:bowenphys/dsh-vasp-periodic-table#91335af6012c36f0f454918e86471d8ff5966f13",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@dsh-vasp/periodic-table",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/0aa2287dc75db7b0f959c84db8833b2a68f1a696bd1248c67a80bf8728e0938c/bowenphys/dsh-vasp-periodic-table",
+    "coverUrl": "https://opengraph.githubassets.com/993268e46974fb527583ec3e48c7507e12569ed81fbcaceb035598a4962debe3/bowenphys/dsh-vasp-periodic-table",
     "description": "VASP periodic table for DeepSeek Harness: PAW potentials, ZVAL/ENMAX, MAGMOM, POTCAR snippets"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "面向 VASP 用户的 DeepSeek Harness Web 插件：在左侧栏打开一个独立的元素周期表面板， 把「选哪个 PAW 势、ZVAL/ENMAX 是多少、初始磁矩怎么给、ENCUT 取多少、POTCAR 怎么拼」 这些每天要查的东西放在一页里，并可直接复制 INCAR / POTCAR / POSCAR / MAGMOM 片段。"
   },
   "schemaVersion": 1,
   "scripts": {

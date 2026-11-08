@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "078c7dfc4e2523935f11be0754080076b5c02a0b"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViFxKQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e6fc9092bc7a649cf348838ce8c1d40eef2842aee371c6095b79ac22a4748c5b/ffyfox/dsh-theme-mist",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/51849496e396d742a337139950370d70e6ed25d8300e21c91ead3a56ed7ebe12/ffyfox/dsh-theme-mist",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/299493445?u=e934af5d179f593d1ef375743bb5d94f81eccc98&v=4",
       "login": "ffyfox"
@@ -45,24 +45,37 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-theme-mist",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e6fc9092bc7a649cf348838ce8c1d40eef2842aee371c6095b79ac22a4748c5b/ffyfox/dsh-theme-mist",
+    "coverUrl": "https://opengraph.githubassets.com/51849496e396d742a337139950370d70e6ed25d8300e21c91ead3a56ed7ebe12/ffyfox/dsh-theme-mist",
     "description": "DSH Go 视觉语言主题插件，作为 DeepSeek Harness 的可热插拔客户端主题——六种强调色、浅色/深色/跟随系统、零 DOM 重写。DSH Go visual language as a hot-pluggable client theme for DeepSeek Harness — six accents, light/dark/system, zero DOM rewrite."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness（桌面端与 Web 端）打造的客户端视觉主题插件。"
   },
   "schemaVersion": 1,
   "scripts": {

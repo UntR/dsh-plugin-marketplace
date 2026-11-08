@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "ea423b0a99bf47a11745b353315bd168ec32e390"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViCUUQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5133d6a5bee30dde875374600bd99af81921cb0c093f9502412eb6f100107efb/MUKAPP/dsh-codebridge",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8bbed313d4b7c25d5718893a00050b17f65695226ec4bfb2d7d28ee19be94a1c/MUKAPP/dsh-codebridge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/41848070?u=6363750be373cbf64b8038b834d3605037c47f86&v=4",
       "login": "MUKAPP"
@@ -42,33 +42,53 @@
   },
   "id": "gh:1444975697",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-codebridge",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:MUKAPP/dsh-codebridge#ea423b0a99bf47a11745b353315bd168ec32e390",
+    "version": "0.1.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-codebridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5133d6a5bee30dde875374600bd99af81921cb0c093f9502412eb6f100107efb/MUKAPP/dsh-codebridge",
+    "coverUrl": "https://opengraph.githubassets.com/8bbed313d4b7c25d5718893a00050b17f65695226ec4bfb2d7d28ee19be94a1c/MUKAPP/dsh-codebridge",
     "description": "在 DSH 标准模式中运行 JavaScript/TypeScript，通过代码编排工具并汇总结果。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DSH 标准模式也能用代码调用工具：执行 JavaScript / TypeScript，在同一会话中保留变量、函数、导入和中间结果，通过 tools. 完成多步操作，再把需要的结果返回给模型。原有工具仍可直接调用。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
     "postinstall": false,
     "preinstall": false,
-    "prepare": false
+    "prepare": true
   }
 }

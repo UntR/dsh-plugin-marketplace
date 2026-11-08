@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "7cd008ec66129d20cff9bca3700e53594df3b1aa"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOVhbPEQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/1d8f68cbc97ad04afee48b316557ce760a17e810e6b2124c1b544129de930df6/Henvy-Mango/dsh-porthole",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/4ea4b3f68980fa2b6477f09749571fde378e0b8553a983fd0c6572001984aa04/Henvy-Mango/dsh-porthole",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/33375791?u=00c9d1090c99c850b64212a1fadde324432758a5&v=4",
       "login": "Henvy-Mango"
@@ -48,27 +48,41 @@
   },
   "id": "gh:1444335377",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-porthole",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Henvy-Mango/dsh-porthole#7cd008ec66129d20cff9bca3700e53594df3b1aa",
+    "version": "1.5.3"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client/client.js",
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-porthole",
+    "status": "valid",
+    "type": "module",
+    "version": "1.5.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/1d8f68cbc97ad04afee48b316557ce760a17e810e6b2124c1b544129de930df6/Henvy-Mango/dsh-porthole",
+    "coverUrl": "https://opengraph.githubassets.com/4ea4b3f68980fa2b6477f09749571fde378e0b8553a983fd0c6572001984aa04/Henvy-Mango/dsh-porthole",
     "description": "DeepSeek Harness 的本机门户：局域网或经 frps/EasyTier 打进来的流量都落在同一个反代+门禁上。双密码、防篡改锁、会话投影剥离、远程工作区管理。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "porthole 专注反向代理与内网穿透接入。外部链路交给 frps / EasyTier，这里负责统一入口、鉴权和转发。二级目录也做了专门优化：挂在 /dsh 等子路径时，登录入口、Location、Cookie Path 都会自动适配。"
   },
   "schemaVersion": 1,
   "scripts": {

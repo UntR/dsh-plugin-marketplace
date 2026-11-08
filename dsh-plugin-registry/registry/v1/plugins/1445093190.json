@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
-    "headSha": "af4ab478d92a36cb3993faab2da4372e2274e3d3"
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
+    "headSha": "ea249ebcae40c88de2e545072ce2cd184c49f675"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Voice chat mode for DeepSeek Harness: always-on VAD listening, local SenseVoice transcription, auto-submit, Edge TTS read-aloud, settings UI and a voice_mode tool.",
     "fork": false,
     "forks": 0,
-    "headSha": "af4ab478d92a36cb3993faab2da4372e2274e3d3",
+    "headSha": "ea249ebcae40c88de2e545072ce2cd184c49f675",
     "homepageUrl": null,
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViJfRg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/726d09b8b250d69e257143ac48aed0ddc7b25f23291c3aaa6876a2d658f2b3fa/BeepFlyer/dsh-voice-chat-mode",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f0c6ee26f3b41760f3e795bec721fa5b66895edc749a0bd2f5d99d1590452542/BeepFlyer/dsh-voice-chat-mode",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/99161787?u=2815f0467862b08fe09836405473d6b4d89b0686&v=4",
       "login": "BeepFlyer"
     },
-    "pushedAt": "2026-11-07T10:04:21Z",
+    "pushedAt": "2026-11-08T06:24:16Z",
     "slug": "BeepFlyer/dsh-voice-chat-mode",
     "stars": 0,
     "topics": [
@@ -40,32 +40,44 @@
       "tts",
       "voice"
     ],
-    "updatedAt": "2026-11-07T10:04:21Z",
+    "updatedAt": "2026-11-08T06:24:20Z",
     "url": "https://github.com/BeepFlyer/dsh-voice-chat-mode"
   },
   "id": "gh:1445093190",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-voice-chat-mode",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:BeepFlyer/dsh-voice-chat-mode#ea249ebcae40c88de2e545072ce2cd184c49f675",
+    "version": "0.7.11"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "index.js",
+    "name": "dsh-voice-chat-mode",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.11"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/726d09b8b250d69e257143ac48aed0ddc7b25f23291c3aaa6876a2d658f2b3fa/BeepFlyer/dsh-voice-chat-mode",
+    "coverUrl": "https://opengraph.githubassets.com/f0c6ee26f3b41760f3e795bec721fa5b66895edc749a0bd2f5d99d1590452542/BeepFlyer/dsh-voice-chat-mode",
     "description": "Voice chat mode for DeepSeek Harness: always-on VAD listening, local SenseVoice transcription, auto-submit, Edge TTS read-aloud, settings UI and a voice_mode tool."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）加一个语音聊天模式：说话自动触发录音、自动转写、自动提交；助手回复用 Edge TTS 或系统语音念出来（支持口播稿协议）。复用 DSH 内置语音栈做识别，只额外加一层很薄的 Host 路由（Edge TTS 与模型控制工具）。"
   },
   "schemaVersion": 1,
   "scripts": {

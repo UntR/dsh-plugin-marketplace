@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "b14204a0ec9b9c86cd7c3121a9e0b2238dbf79c0"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViT9zw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/471b306af42242139c1107715ead7c2a000521808e73d18818989d1a0145b563/Manbaout-08/dsh-purge",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8e77e1a5d7af2fc36d00b5cf5e30faf1fb61c09d989f0df773bba951ed91cdf3/Manbaout-08/dsh-purge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/187042829?v=4",
       "login": "Manbaout-08"
@@ -42,27 +42,40 @@
   },
   "id": "gh:1445264847",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@manbaout-08/dsh-purge",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@manbaout-08/dsh-purge@1.0.1",
+    "version": "1.0.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "@manbaout-08/dsh-purge",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/471b306af42242139c1107715ead7c2a000521808e73d18818989d1a0145b563/Manbaout-08/dsh-purge",
+    "coverUrl": "https://opengraph.githubassets.com/8e77e1a5d7af2fc36d00b5cf5e30faf1fb61c09d989f0df773bba951ed91cdf3/Manbaout-08/dsh-purge",
     "description": "Permanently delete DeepSeek Harness sessions and workspaces — real disk deletion, right in the session menu."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 内置的删除是「取消注册」，不是真删：删掉工作区后会话会掉进「未分组」，会话本身则根本没有删除入口（核心设计：会话只能归档）。"
   },
   "schemaVersion": 1,
   "scripts": {

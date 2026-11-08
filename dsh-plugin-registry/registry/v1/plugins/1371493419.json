@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "bf6dce7ab399fb4cc8aadfb91f31bce725774134"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOUb9UKw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/4ca4ce1a14a1aeca88841bb20930735fb2c5d36cbf4d0b26ee6a355ddd0fcaed/Maxkun2333/dsh-plugin-catalog",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/69201e8e9b088fd5b0a400fe297c4082d169c8caed90c7d804a25c7dd4a6dcd5/Maxkun2333/dsh-plugin-catalog",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/317267992?u=fe6aa0ba78f817055856f6cd664cc8c694ff0687&v=4",
       "login": "Maxkun2333"
@@ -45,27 +45,39 @@
   },
   "id": "gh:1371493419",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-installed-plugins",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Maxkun2333/dsh-plugin-catalog#bf6dce7ab399fb4cc8aadfb91f31bce725774134",
+    "version": "0.2.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./catalog": "./lib/catalog.mjs",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-installed-plugins",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.4"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/4ca4ce1a14a1aeca88841bb20930735fb2c5d36cbf4d0b26ee6a355ddd0fcaed/Maxkun2333/dsh-plugin-catalog",
+    "coverUrl": "https://opengraph.githubassets.com/69201e8e9b088fd5b0a400fe297c4082d169c8caed90c7d804a25c7dd4a6dcd5/Maxkun2333/dsh-plugin-catalog",
     "description": "Plugin catalog for DeepSeek Harness: a settings-page tab listing every installed third-party plugin with what it does, its version, and whether an update is available. Rebuilds itself when you install or remove a plugin."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A plugin catalog for DeepSeek Harness — stop wondering what all those plugins you installed actually do."
   },
   "schemaVersion": 1,
   "scripts": {

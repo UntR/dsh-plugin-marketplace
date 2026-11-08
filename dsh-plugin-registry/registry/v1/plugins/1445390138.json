@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "02f3f0937cf0f306e86aa6b80490b57fac3d6fc1"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVibnOg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5435aea9a96d7bd9777ba89a45fde2a430346004b6bda32cf623eb554477a294/FlashPoint007/dsh-wecom-soul-bot",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/3c10c49a4e1846d7d45614892020b31ff4c98dc8d7dc67b8afd4dd7ca5367544/FlashPoint007/dsh-wecom-soul-bot",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/48714656?u=44abc5ea1d2bafae10de8ecc593965e2d1eb54be&v=4",
       "login": "FlashPoint007"
@@ -46,7 +46,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -56,14 +56,26 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/host/index.js",
+      "./client": "./dist/client.js",
+      "./icon": "./icon.svg",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/host/index.js",
+    "name": "dsh-wecom-soul-bot",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5435aea9a96d7bd9777ba89a45fde2a430346004b6bda32cf623eb554477a294/FlashPoint007/dsh-wecom-soul-bot",
+    "coverUrl": "https://opengraph.githubassets.com/3c10c49a4e1846d7d45614892020b31ff4c98dc8d7dc67b8afd4dd7ca5367544/FlashPoint007/dsh-wecom-soul-bot",
     "description": "企业微信智能机器人长连接 + 人设 + 长期记忆，DeepSeek Harness 插件"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件：把企业微信智能机器人通过官方长连接（Bot ID + Secret，无需公网回调）接入 DSH，并给它加上人设、发送者身份、三层长期记忆、提醒和主动消息。私聊直接对话，群里 @ 它回复。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "49a64d90d81b7af05822195a883ca5e2ddfefe4b"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViUjnQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/58408fea1b68e9604702803e6da9bf3dc4cab96159e9796ba30ea13f0e4352b0/yelinos/dsh-chrome-bridge",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/9db890ee5fb7c0e767638796b4f1e645dcb1999284db153d6772e407a990be4e/yelinos/dsh-chrome-bridge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/93527796?v=4",
       "login": "yelinos"
@@ -47,27 +47,43 @@
   },
   "id": "gh:1445274525",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-chrome-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yelinos/dsh-chrome-bridge#49a64d90d81b7af05822195a883ca5e2ddfefe4b",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.16.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json",
+      "./service": "./service.js",
+      "./service/icon": "./icon.svg",
+      "./service/locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-chrome-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/58408fea1b68e9604702803e6da9bf3dc4cab96159e9796ba30ea13f0e4352b0/yelinos/dsh-chrome-bridge",
+    "coverUrl": "https://opengraph.githubassets.com/9db890ee5fb7c0e767638796b4f1e645dcb1999284db153d6772e407a990be4e/yelinos/dsh-chrome-bridge",
     "description": "Codex Chrome extension-style browser control for DeepSeek Harness: per-domain approval, one tab group per session, real mouse and keyboard input, inline screenshots."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DeepSeek Harness（DSH）的 Agent 操作你真实、已登录的 Chromium 浏览器。 思路对齐 OpenAI Codex 的 Chrome 扩展：浏览器里装一个小扩展作为桥，Agent 通过它在 专用标签组里开页、读页、点击、输入、截图；第一次接触某个域名时先征求你的批准。"
   },
   "schemaVersion": 1,
   "scripts": {

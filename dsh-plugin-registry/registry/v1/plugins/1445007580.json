@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-07T10:56:30.272Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-08T17:08:43.327Z",
+    "enrichmentStatus": "ok",
     "headSha": "01360ad3355d609c0933cdb915826874bb01726b"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOViEQ3A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/c61585b472df82cba76a19fd91906245a0e48ccf3b6090a2520a7b2436f1d842/yyqinfo/dsh-session-project-logs",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f7974de8bbbbbf4d3c2c94d60397317937a7f48c7000457a84e544b36c49922b/yyqinfo/dsh-session-project-logs",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/20163646?v=4",
       "login": "yyqinfo"
@@ -45,27 +45,39 @@
   },
   "id": "gh:1445007580",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/session-project-logs",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:yyqinfo/dsh-session-project-logs#01360ad3355d609c0933cdb915826874bb01726b",
+    "version": "0.0.18"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./core": "./lib/core.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/session-project-logs",
+    "status": "valid",
+    "type": "module",
+    "version": "0.0.18"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/c61585b472df82cba76a19fd91906245a0e48ccf3b6090a2520a7b2436f1d842/yyqinfo/dsh-session-project-logs",
+    "coverUrl": "https://opengraph.githubassets.com/f7974de8bbbbbf4d3c2c94d60397317937a7f48c7000457a84e544b36c49922b/yyqinfo/dsh-session-project-logs",
     "description": "DSH plugin: keep each project's session logs inside the project (.dsh/sessions) instead of the central ~/.dsh/sessions root"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "让 DSH 的新会话把日志写进项目自己的 .dsh/sessions/，而不是全部堆在 /.dsh/sessions："
   },
   "schemaVersion": 1,
   "scripts": {
