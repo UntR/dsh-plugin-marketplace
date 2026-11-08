@@ -45,34 +45,60 @@ export class GitHubClient implements RepositoryEnrichmentClient {
     }
   }
 
-  private async request(url: string, init: RequestInit, timeoutMs = this.timeoutMs): Promise<Response> {
+  private async requestJson(
+    url: string,
+    init: RequestInit,
+    options: { timeoutMs?: number; missingAsNull?: boolean; authenticated?: boolean } = {},
+  ): Promise<unknown> {
+    const context = `${init.method ?? 'GET'} ${url}`
     let lastError: unknown
+    let failure = 'network request failed'
     for (let attempt = 0; attempt < 5; attempt += 1) {
       let response: Response | null = null
       try {
         response = await this.fetchImpl(url, {
           ...init,
-          headers: { ...this.headers, ...init.headers },
-          signal: AbortSignal.timeout(timeoutMs),
+          headers: options.authenticated === false
+            ? (init.headers ?? {})
+            : { ...this.headers, ...init.headers },
+          signal: AbortSignal.timeout(options.timeoutMs ?? this.timeoutMs),
         })
-        if (!retryable(response)) return response
-        lastError = new Error(`GitHub API returned ${response.status}.`)
       } catch (error) {
         lastError = error
+        failure = 'network request failed or timed out'
+      }
+      if (response !== null) {
+        if (options.missingAsNull === true && response.status === 404) return null
+        if (!response.ok) {
+          failure = `HTTP ${response.status}`
+          lastError = new Error(failure)
+          // Release retryable error bodies without attempting to parse them as JSON.
+          await response.body?.cancel().catch(() => {})
+          if (!retryable(response)) throw new Error(`${context} failed: ${failure}.`)
+        } else {
+          try {
+            // Reading the body belongs to the same timed attempt as fetching headers.
+            return await response.json()
+          } catch (error) {
+            lastError = error
+            failure = `HTTP ${response.status}; invalid JSON or unreadable response body`
+          }
+        }
       }
       if (attempt < 4) await this.sleep(retryDelay(response, attempt))
     }
-    throw lastError
+    throw new Error(`${context} failed after 5 attempts: ${failure}.`, { cause: lastError })
   }
 
   readonly graphql: GraphqlRequest = async (query, variables) => {
-    const response = await this.request('https://api.github.com/graphql', {
+    const envelope = await this.requestJson('https://api.github.com/graphql', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ query, variables }),
-    }, this.graphqlTimeoutMs)
-    if (!response.ok) throw new Error(`GitHub GraphQL request failed with ${response.status}.`)
-    const envelope = await response.json() as { data?: unknown; errors?: unknown }
+    }, { timeoutMs: this.graphqlTimeoutMs }) as { data?: unknown; errors?: unknown }
+    if (envelope === null || typeof envelope !== 'object') {
+      throw new Error('GitHub GraphQL returned an invalid envelope.')
+    }
     if (envelope.errors !== undefined) {
       throw new Error(`GitHub GraphQL returned errors: ${JSON.stringify(envelope.errors)}`)
     }
@@ -91,10 +117,9 @@ export class GitHubClient implements RepositoryEnrichmentClient {
       : `https://api.github.com/repos/${repository.slug}/contents/${encodedPath}`
     const url = new URL(endpoint)
     if (repository.headSha !== null) url.searchParams.set('ref', repository.headSha)
-    const response = await this.request(url.href, { method: 'GET' })
-    if (response.status === 404) return null
-    if (!response.ok) throw new Error(`GitHub contents request failed with ${response.status}.`)
-    const value = await response.json() as { type?: unknown; encoding?: unknown; content?: unknown }
+    const value = await this.requestJson(url.href, { method: 'GET' }, { missingAsNull: true }) as
+      { type?: unknown; encoding?: unknown; content?: unknown } | null
+    if (value === null) return null
     if (value.type !== 'file' || value.encoding !== 'base64' || typeof value.content !== 'string') return null
     return Buffer.from(value.content.replaceAll('\n', ''), 'base64').toString('utf8')
   }
@@ -108,12 +133,9 @@ export class GitHubClient implements RepositoryEnrichmentClient {
   }
 
   async npmMetadata(packageName: string): Promise<unknown | null> {
-    const response = await this.fetchImpl(`https://registry.npmjs.org/${encodeURIComponent(packageName)}`, {
+    return this.requestJson(`https://registry.npmjs.org/${encodeURIComponent(packageName)}`, {
+      method: 'GET',
       headers: { accept: 'application/json', 'user-agent': 'dsh-plugin-registry' },
-      signal: AbortSignal.timeout(this.timeoutMs),
-    })
-    if (response.status === 404) return null
-    if (!response.ok) throw new Error(`npm registry request failed with ${response.status}.`)
-    return response.json()
+    }, { missingAsNull: true, authenticated: false })
   }
 }
