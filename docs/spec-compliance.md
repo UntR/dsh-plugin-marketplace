@@ -46,3 +46,7 @@ The destructive external-state Definition-of-Done check was completed with the a
 3. The disposable repository was deleted after verification, and the GitHub repository API returned HTTP 404.
 
 This verifies the complete discovery and removal lifecycle against production GitHub state, deployed Registry artifacts, and the Marketplace client path rather than only fixtures.
+
+## LLM enrichment implementation
+
+AI records live outside the replaceable facts directory. Public snapshots preserve all stable IDs and overlay only reviewed results matching the current source and semantic input. Added optional v1 AI fields and detail hashes are explicitly parsed by both producer and client; publication revisions include the merged data. Model execution remains local, with per-attempt durable journaling, 5-hour/weekly budget gates and explicit handling for uncertain outcomes. Native format1 export is restricted to independently inspected exact npm archives and requires a supplied target DSH version; no installation success is implied. See [operations](llm-pipeline-operations.md) for validation and remaining integration requirements.

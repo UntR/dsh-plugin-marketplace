@@ -24,6 +24,8 @@ jobs:
       - run: pnpm --filter dsh-plugin-registry typecheck
       - run: pnpm --filter dsh-plugin-registry test
       - run: pnpm --filter dsh-plugin-registry build
+      - run: pnpm --filter dsh-plugin-registry publish:registry
+      - run: node --import tsx dsh-plugin-registry/src/native-cli.ts publish/registry/v1 native-data/v1/proofs auto publish/native/format1
       - run: pnpm --filter dsh-plugin-registry generate:schemas
       - run: git diff --exit-code -- dsh-plugin-registry/schemas
       - run: pnpm --filter untr-dsh-marketplace typecheck
@@ -35,3 +37,10 @@ jobs:
           pnpm --filter untr-dsh-marketplace pack --pack-destination "$RUNNER_TEMP/dsh-marketplace-pack"
           tarball=$(find "$RUNNER_TEMP/dsh-marketplace-pack" -maxdepth 1 -name '*.tgz' -print -quit)
           node --import tsx dsh-marketplace/scripts/verify-pack.ts "$tarball"
+
+  ai-catalog-offline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - name: Validate AI catalog preparation offline
+        run: python3 -m unittest discover -s tools/ai-catalog -p 'test_*.py' -v

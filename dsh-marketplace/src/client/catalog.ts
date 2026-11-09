@@ -21,6 +21,8 @@ export function filterCatalog(
       plugin.slug,
       plugin.owner.login,
       plugin.description,
+      plugin.ai?.summaryZh ?? '',
+      ...(plugin.ai?.tags ?? []),
       ...plugin.topics,
       plugin.install.packageName ?? '',
     ].map(normalized)

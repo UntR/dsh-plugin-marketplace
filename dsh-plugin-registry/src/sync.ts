@@ -53,6 +53,7 @@ export interface SyncSummary {
   removed: number
   enrichmentFailed: number
   registryChanged: boolean
+  changes: Array<{ id: string; kind: 'added' | 'content' | 'metadata' | 'removed' }>
 }
 
 export async function syncRegistry(options: {
@@ -99,19 +100,22 @@ export async function syncRegistry(options: {
     ...(previous.meta === undefined ? {} : { previousMeta: previous.meta }),
   })
   const registryChanged = await replaceRegistry(options.directory, documents)
+  const changes: SyncSummary['changes'] = []
   let added = 0
   let changed = 0
   let metadataOnly = 0
   let unchanged = 0
   for (const detail of details) {
     const old = previous.details.get(detail.id)
-    if (old === undefined) added += 1
-    else if (old.crawl.headSha !== detail.crawl.headSha) changed += 1
-    else if (JSON.stringify(old) !== JSON.stringify(detail)) metadataOnly += 1
+    if (old === undefined) { added += 1; changes.push({ id: detail.id, kind: 'added' }) }
+    else if (old.crawl.headSha !== detail.crawl.headSha) { changed += 1; changes.push({ id: detail.id, kind: 'content' }) }
+    else if (JSON.stringify(old) !== JSON.stringify(detail)) { metadataOnly += 1; changes.push({ id: detail.id, kind: 'metadata' }) }
     else unchanged += 1
   }
   const currentIds = new Set(details.map(detail => detail.id))
+  for (const id of previous.details.keys()) if (!currentIds.has(id)) changes.push({ id, kind: 'removed' })
   return {
+    changes,
     discovered: repositories.length,
     added,
     changed,

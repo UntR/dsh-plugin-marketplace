@@ -17,6 +17,8 @@ export function PluginDetails({ plugin, t, onClose, onInstall }: Props) {
   const [coverFailed, setCoverFailed] = useState(false)
   useEffect(() => {
     let active = true
+    setDetail(null)
+    setFailed(false)
     void fetch(`/dsh-marketplace/api/plugin/${encodeURIComponent(plugin.id)}`)
       .then(async response => {
         if (!response.ok) throw new Error(`detail ${response.status}`)
@@ -24,7 +26,7 @@ export function PluginDetails({ plugin, t, onClose, onInstall }: Props) {
       })
       .catch(() => { if (active) setFailed(true) })
     return () => { active = false }
-  }, [plugin.id])
+  }, [plugin.id, plugin.detailHash])
   useEffect(() => {
     const opener = document.activeElement as HTMLElement | null
     close.current?.focus()
@@ -65,6 +67,15 @@ export function PluginDetails({ plugin, t, onClose, onInstall }: Props) {
         <h2 id="marketplace-detail-title">{plugin.name}</h2>
         <p>{t('owner')}: {plugin.owner.login} · {plugin.slug}</p>
         <p>{plugin.description}</p>
+        {plugin.ai !== undefined && <section aria-label={t('aiSummary')}>
+          <p>{t('aiSummary')} · {plugin.ai.tags.join(' · ')}</p>
+          <p>{t('aiReview')}: {plugin.ai.reviewLevel === 'human-reviewed' ? t('aiHumanReviewed') : plugin.ai.reviewLevel === 'automated' ? t('aiAutomated') : t('aiBatchReviewed')}</p>
+          {plugin.ai.limitations.length > 0 && <ul>{plugin.ai.limitations.map((text, i) => <li key={i}>{text}</li>)}</ul>}
+          <details><summary>{t('originalDescription')}</summary><p>{plugin.ai.originalDescription || '—'}</p>
+            <p>{t('aiSource')}: <a href={`${plugin.repositoryUrl}/tree/${plugin.ai.sourceHeadSha}`} target="_blank" rel="noopener noreferrer">{plugin.ai.sourceHeadSha.slice(0, 12)}</a> · {formatDate(plugin.ai.reviewedAt)}</p>
+          </details>
+        </section>}
+        <p>{t('installNotVerified')}</p>
         <dl>
           <dt>{t('stars')}</dt><dd>{plugin.stats.stars}</dd>
           <dt>{t('forks')}</dt><dd>{plugin.stats.forks}</dd>

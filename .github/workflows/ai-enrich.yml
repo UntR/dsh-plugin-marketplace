@@ -1,0 +1,88 @@
+name: Enrich plugin catalog
+
+on:
+  schedule:
+    - cron: '41 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      batch_size:
+        description: Maximum model attempts (1-1000)
+        default: '1000'
+        required: true
+      verify_count:
+        description: Maximum new npm/Git packages to inspect
+        default: '200'
+        required: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: dsh-plugin-registry-sync
+  cancel-in-progress: false
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    env:
+      BATCH_SIZE: ${{ inputs.batch_size || '1000' }}
+      VERIFY_COUNT: ${{ inputs.verify_count || '200' }}
+      GH_TOKEN: ${{ secrets.REGISTRY_GITHUB_TOKEN || github.token }}
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          ref: main
+      - name: Validate numeric batch bounds
+        run: |
+          python3 - <<'PY'
+          import os
+          batch=int(os.environ['BATCH_SIZE']);verify=int(os.environ['VERIFY_COUNT'])
+          assert 1 <= batch <= 1000 and 1 <= verify <= 500
+          PY
+      - name: Configure generated-data commits
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Prepare incremental tasks and durable paid-call lease
+        run: python3 tools/ai-catalog/action.py prepare --limit "$BATCH_SIZE"
+      - name: Persist lease before sending any model requests
+        run: |
+          git add ai-state
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore(ai): checkpoint bounded enrichment batch'
+            git push origin HEAD:main
+          fi
+      - name: Enrich with subscription key
+        env:
+          MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
+        run: python3 tools/ai-catalog/action.py run --limit "$BATCH_SIZE" --weighted-budget 4000000
+      - name: Preserve results even if interrupted
+        if: always()
+        run: |
+          if test -f .local/ai-action/state.sqlite3; then
+            python3 tools/ai-catalog/action.py save
+            git add ai-state ai-data
+            if ! git diff --cached --quiet; then
+              git commit -m 'chore(ai): save generated summaries and progress'
+              git push origin HEAD:main
+            fi
+          fi
+      - name: Inspect exact package metadata without executing plugins
+        if: success()
+        run: python3 tools/ai-catalog/verify_native.py dsh-plugin-registry/registry/v1 native-data/v1/proofs --limit "$VERIFY_COUNT"
+      - name: Persist native package proofs
+        if: success()
+        run: |
+          git add native-data
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore(native): refresh verified package sources'
+            git push origin HEAD:main
+          fi
+
+  publish:
+    needs: enrich
+    if: always() && needs.enrich.result == 'success'
+    uses: ./.github/workflows/registry-publish.yml

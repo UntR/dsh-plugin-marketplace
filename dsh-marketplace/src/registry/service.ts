@@ -1,5 +1,5 @@
 import { mkdir, mkdtemp, readFile, rename, rm, writeFile } from 'node:fs/promises'
-import { randomUUID } from 'node:crypto'
+import { createHash, randomUUID } from 'node:crypto'
 import { dirname, join } from 'node:path'
 import { CACHE_TTL_MS, FETCH_TIMEOUT_MS } from '../shared/constants.js'
 import { MarketplaceError } from '../shared/errors.js'
@@ -14,6 +14,19 @@ import {
   type RegistryMeta,
   type RegistryPluginDetail,
 } from '../shared/schema.js'
+
+function canonical(value: unknown): string {
+  if (Array.isArray(value)) return `[${value.map(canonical).join(',')}]`
+  if (value !== null && typeof value === 'object') {
+    const obj = value as Record<string, unknown>
+    return `{${Object.keys(obj).sort().map(k => `${JSON.stringify(k)}:${canonical(obj[k])}`).join(',')}}`
+  }
+  return JSON.stringify(value)!
+}
+function matchesDetail(detail: RegistryPluginDetail, entry: RegistryIndexEntry): boolean {
+  return detail.id === entry.id && (entry.detailHash === undefined
+    || entry.detailHash === `sha256:${createHash('sha256').update(canonical(detail)).digest('hex')}`)
+}
 
 interface Snapshot {
   meta: RegistryMeta
@@ -206,27 +219,28 @@ export class RegistryService {
     const catalog = await this.getCatalog()
     const entry = catalog.plugins.find(plugin => plugin.id === id)
     if (entry === undefined) throw new MarketplaceError('plugin-not-found', 'Plugin was not found.', 404)
-    const cachedPath = join(this.options.cacheDir, entry.detailPath.replace(/^\.\//, ''))
+    const cachedPath = join(this.options.cacheDir, 'details', catalog.registry.revision.slice(7), `${entry.githubDatabaseId}.json`)
     try {
       const cached = registryPluginDetailSchema.parse(JSON.parse(await readFile(cachedPath, 'utf8')))
-      if (cached.id === id) return cached
+      if (matchesDetail(cached, entry)) return cached
     } catch {
       // A missing or invalid detail cache is fetched again below.
     }
-    const pending = this.detailFetches.get(id)
+    const fetchKey = `${catalog.registry.revision}:${id}`
+    const pending = this.detailFetches.get(fetchKey)
     if (pending !== undefined) return pending
-    const operation = this.fetchPluginDetail(id, entry.detailPath, cachedPath)
-    this.detailFetches.set(id, operation)
+    const operation = this.fetchPluginDetail(entry, cachedPath)
+    this.detailFetches.set(fetchKey, operation)
     try {
       return await operation
     } finally {
-      if (this.detailFetches.get(id) === operation) this.detailFetches.delete(id)
+      if (this.detailFetches.get(fetchKey) === operation) this.detailFetches.delete(fetchKey)
     }
   }
 
-  private async fetchPluginDetail(id: string, detailPath: string, cachedPath: string): Promise<RegistryPluginDetail> {
-    const detailResult = registryPluginDetailSchema.safeParse(await this.fetchJson(detailPath.replace(/^\.\//, '')))
-    if (!detailResult.success || detailResult.data.id !== id) {
+  private async fetchPluginDetail(entry: RegistryIndexEntry, cachedPath: string): Promise<RegistryPluginDetail> {
+    const detailResult = registryPluginDetailSchema.safeParse(await this.fetchJson(entry.detailPath.replace(/^\.\//, '')))
+    if (!detailResult.success || !matchesDetail(detailResult.data, entry)) {
       throw new MarketplaceError('registry-invalid', 'Plugin registry detail is invalid.', 502)
     }
     await mkdir(dirname(cachedPath), { recursive: true })

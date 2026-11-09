@@ -1,4 +1,5 @@
 import { resolve } from 'node:path'
+import { writeFile } from 'node:fs/promises'
 import { GitHubClient } from './github.js'
 import { formatSyncSummary, syncRegistry } from './sync.js'
 
@@ -14,4 +15,5 @@ const summary = await syncRegistry({
   enrichment: client,
   allowLargeRemoval: process.env.REGISTRY_ALLOW_LARGE_REMOVAL === '1',
 })
+if (process.env.REGISTRY_SYNC_MANIFEST) await writeFile(resolve(process.env.REGISTRY_SYNC_MANIFEST), JSON.stringify(summary, undefined, 2) + '\n')
 process.stdout.write(`${formatSyncSummary(summary)}\n`)

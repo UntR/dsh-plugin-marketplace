@@ -1,5 +1,13 @@
 export const en = {
   dateLocale: 'en-US',
+  aiSummary: 'AI summary',
+  aiAutomated: 'Automatically generated; not manually reviewed',
+  aiReview: 'Content review',
+  aiHumanReviewed: 'Individually reviewed',
+  aiBatchReviewed: 'Batch sample reviewed',
+  originalDescription: 'Original description',
+  aiSource: 'Source revision',
+  installNotVerified: 'Directory metadata does not verify installation, security, or compatibility.',
   marketplace: 'Marketplace',
   marketplaceSubtitle: 'Discover and install plugins to extend DeepSeek Harness.',
   openMarketplace: 'Open Marketplace',
@@ -139,6 +147,14 @@ export const en = {
 
 export const zh: Record<keyof typeof en, string> = {
   dateLocale: 'zh-CN',
+  aiSummary: 'AI 中文摘要',
+  aiAutomated: '自动生成，未人工审核',
+  aiReview: '内容审核',
+  aiHumanReviewed: '逐条人工审核',
+  aiBatchReviewed: '批次抽查通过',
+  originalDescription: '原始介绍',
+  aiSource: '资料版本',
+  installNotVerified: '目录信息不代表已验证安装、安全性或兼容性。',
   marketplace: '插件市场',
   marketplaceSubtitle: '发现并安装插件，扩展 DeepSeek Harness 的能力。',
   openMarketplace: '打开插件市场',

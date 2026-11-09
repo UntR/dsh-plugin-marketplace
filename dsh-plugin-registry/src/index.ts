@@ -37,3 +37,6 @@ export type {
   RegistryMeta,
   RegistryPluginDetail,
 } from './types.js'
+
+export { loadAiRecords, overlayAi, validateRecord } from './ai.js'
+export { publishRegistry } from './publish.js'

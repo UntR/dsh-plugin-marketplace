@@ -8,6 +8,36 @@ const nullableUrl = z.url().nullable()
 const nonNegativeInteger = z.int().nonnegative()
 export const pluginCategorySchema = z.enum(PLUGIN_CATEGORIES)
 
+function aiText(min: number, max: number) {
+  return z.string().refine(value => Array.from(value).length >= min && Array.from(value).length <= max,
+    `Expected ${min}–${max} Unicode characters`).meta({ minLength: min, maxLength: max })
+}
+export const aiResultSchema = z.object({
+  id: githubId,
+  summary_zh: aiText(15, 140),
+  category: pluginCategorySchema,
+  tags: z.array(aiText(1, 30)).min(2).max(5),
+  confidence: z.number().min(0).max(1),
+  insufficient_evidence: z.boolean(),
+  evidence: z.array(z.object({
+    paragraph_id: z.string().min(1), quote: aiText(20, 120), fact: aiText(1, 300),
+  }).strict()).min(1).max(3),
+  limitations: z.array(aiText(1, 300)).max(5),
+}).strict()
+
+export const aiPublicSchema = z.object({
+  status: z.literal('approved'),
+  summaryZh: aiText(15, 140),
+  tags: z.array(aiText(1, 30)).min(2).max(5),
+  sourceInputHash: sha256,
+  sourceHeadSha: z.string().regex(/^[0-9a-f]{40}$/),
+  model: z.string().min(1), promptVersion: z.string().min(1),
+  reviewLevel: z.enum(['human-reviewed', 'batch-approved', 'automated']), reviewedAt: dateTime,
+  originalDescription: z.string(),
+  limitations: z.array(aiText(1, 300)).max(5),
+  evidence: aiResultSchema.shape.evidence,
+}).strict()
+
 export const registryMetaSchema = z.object({
   schemaVersion: z.literal(1),
   registryVersion: z.literal('1'),
@@ -28,6 +58,7 @@ export const registryIndexEntrySchema = z.object({
   repositoryUrl: z.url(),
   homepageUrl: nullableUrl,
   description: z.string(),
+  ai: aiPublicSchema.optional(),
   coverUrl: nullableUrl,
   category: pluginCategorySchema.optional(),
   topics: z.array(z.string().min(1)),
@@ -46,6 +77,7 @@ export const registryIndexEntrySchema = z.object({
     version: z.string().min(1).nullable(),
     requiresBuildApproval: z.boolean(),
   }).passthrough(),
+  detailHash: sha256.optional(),
   detailPath: z.string().regex(/^\.\/plugins\/[0-9]+\.json$/),
 }).passthrough()
 
@@ -71,6 +103,7 @@ const packageSchema = z.union([
 export const registryPluginDetailSchema = z.object({
   schemaVersion: z.literal(1),
   id: githubId,
+  ai: aiPublicSchema.optional(),
   github: z.object({
     databaseId: z.int().positive(),
     nodeId: z.string().min(1),

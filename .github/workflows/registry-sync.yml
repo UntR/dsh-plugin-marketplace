@@ -32,6 +32,7 @@ jobs:
       - name: Build Registry
         env:
           GH_TOKEN: ${{ secrets.REGISTRY_GITHUB_TOKEN || github.token }}
+          REGISTRY_SYNC_MANIFEST: /tmp/dsh-registry-changes.json
         run: |
           set -o pipefail
           pnpm --filter dsh-plugin-registry sync 2>&1 | tee /tmp/dsh-registry-summary.txt
@@ -48,22 +49,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore(registry): publish changed plugin facts"
           git push
-      - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
-      - name: Prepare minimal Pages artifact
-        run: |
-          mkdir -p "$RUNNER_TEMP/dsh-plugin-registry-pages/registry"
-          cp -R dsh-plugin-registry/registry/v1 "$RUNNER_TEMP/dsh-plugin-registry-pages/registry/v1"
-      - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
-        with:
-          path: ${{ runner.temp }}/dsh-plugin-registry-pages
 
-  deploy:
+  publish:
     needs: sync
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy static Registry
-        id: deployment
-        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+    uses: ./.github/workflows/registry-publish.yml

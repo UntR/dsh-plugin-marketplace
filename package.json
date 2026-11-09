@@ -9,7 +9,10 @@
   "scripts": {
     "build": "pnpm -r build",
     "test": "pnpm -r test",
-    "typecheck": "pnpm -r typecheck"
+    "typecheck": "pnpm -r typecheck",
+    "ai": "python3 tools/ai-catalog/cli.py",
+    "ai:test": "python3 -m unittest discover -s tools/ai-catalog -p 'test_*.py' -v",
+    "publish:registry": "pnpm --filter dsh-plugin-registry publish:registry"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

@@ -1,5 +1,19 @@
 # DSH Plugin Marketplace
 
+## Client 订阅链接
+
+在 DSH Client 的 **Plugins → Discover → Index sources** 添加：
+
+**https://untr.github.io/dsh-plugin-marketplace/market-index.json**
+
+- [全量目录](https://untr.github.io/dsh-plugin-marketplace/catalog.json)：保留全部发现的独立仓库，AI简介逐批补齐，无结果时显示原介绍。
+- [覆盖进度](https://untr.github.io/dsh-plugin-marketplace/status.json)：当前目录数、AI简介数、原生源条目数及排除原因。
+- 原生源按包身份去重，只输出精确安装来源与`engines.dsh`已核验的条目；不把目录收录当成安装实测。
+
+`Enrich plugin catalog` Action 每6小时补一批，默认最多1000次模型尝试、200个新包核验；使用仓库`MINIMAX_API_KEY` Secret。进度和结果写回Git，下一次只跑缺失或变化项。简介标记为自动生成，不再要求逐条人工批准。调度有5小时冷却与单次用量上限，但不是账户剩余额度的实时保证；不会充值、升级或切换按量Key。
+
+首次启用：设置同名订阅Secret → 在Actions运行`Enrich plugin catalog`。本文下面的架构及历史验证说明保留供维护参考。
+
 给 [DeepSeek Harness](https://github.com/deepseek-ai/DeepSeek-Harness) 开了一家插件杂货铺。
 
 你当然可以继续在 GitHub 搜 `dsh-plugin`，打开二十个 README，把浏览器标签页养成孔雀；也可以点开 Marketplace，先看看有什么，再决定要不要往 DSH 里塞。
@@ -138,3 +152,9 @@ pnpm build
 ## License
 
 [MIT](./dsh-marketplace/LICENSE)。拿去用，出问题先看日志，别先看星座。
+
+## AI 中文目录管线
+
+Registry 的 LLM 摘要与分类使用独立 `ai-data/v1` 保存，事实同步不会覆盖审核成果。模型任务在本地通过隐藏输入的订阅 Key 运行，支持按实际输入增量处理、SQLite 断点保存、双窗口额度门禁与人工审核；Actions 只校验和发布批准数据。
+
+详见 [设计与改动清单](docs/llm-pipeline-design.md) 和 [操作步骤与当前边界](docs/llm-pipeline-operations.md)。没有 AI 结果的条目仍完整保留。原生 format 1 导出仅包含元信息已核验且适配目标 DSH 版本的项目，默认未接入线上发布。
