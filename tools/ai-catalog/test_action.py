@@ -58,6 +58,7 @@ class ActionTests(unittest.TestCase):
   with patch('action.read_readme',side_effect=[ValueError('Oversized source'),(RAW,{'headSha':'a'*40,'path':'README.md','rawHash':'c'*64})]):result=prepare(self.store,registry,state,2)
   self.assertEqual(result['selected'],1);self.assertEqual(len(result['sourceFailures']),1)
   self.assertTrue((state/'source-failures/1.json').exists())
+  (state/'lease.json').unlink()  # Simulate a resolved run before the next planning pass.
   with patch('action.read_readme',side_effect=AssertionError('Failed source is cached; prepared item is reused')):result=prepare(self.store,registry,state,2)
   self.assertEqual(result['selected'],1)
  def test_insufficient_source_does_not_auto_publish(self):
