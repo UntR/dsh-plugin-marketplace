@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Bounded GitHub Actions enrichment. Public JSON checkpoints survive runner loss."""
-import argparse,collections,concurrent.futures,json,os,pathlib,time,uuid
+import argparse,collections,concurrent.futures,json,os,pathlib,time,uuid,urllib.error
 from schema import VERSIONS,canonical,digest,make_input,metadata,validate
 from source import read_readme
 from store import Store,stamp
@@ -92,17 +92,25 @@ def prepare(store,registry,state,limit):
      if tries<2:store.retry(e['id'],'One bounded automated content repair')
     if old['status']=='source_failed':continue
     if not (old['status']=='prepared' and json.loads(old['versions'])!=VERSIONS):continue
+  failure_path=pathlib.Path(state)/'source-failures'/(e['id'][3:]+'.json')
+  if failure_path.exists():
+   prior=json.loads(failure_path.read_text())
+   if prior['headSha']==sha and prior['metadataHash']==mh and prior['retryAfter']>time.time():continue
   count+=1
   try:
    raw,source=read_readme(e,detail,store.path.parent/'sources',os.environ.get('GH_TOKEN'))
    prepared,h=make_input(e,raw);source.update({'metadataHash':mh,'registryRevision':index['revision']})
    store.put(e['id'],h,prepared,source,e['stats']['stars'])
+   if failure_path.exists():failure_path.unlink()
    if not any(len(p['text'])>=20 for p in prepared['paragraphs']):
     with store.db:store.db.execute("UPDATE tasks SET status='source_failed' WHERE id=? AND input_hash=?",(e['id'],h))
   except Exception as error:
    failures.append({'id':e['id'],'kind':type(error).__name__})
-   # Don't hammer rate/auth failures. The next scheduled run resumes planning.
-   break
+   # Rate/auth failures pause planning. A single oversized or malformed source
+   # must not starve the rest of the catalog on every scheduled run.
+   if isinstance(error,urllib.error.HTTPError) and error.code in (401,403,429):break
+   atomic_json(failure_path,{'id':e['id'],'headSha':sha,'metadataHash':mh,'kind':type(error).__name__,'reason':str(error)[:160],'retryAfter':time.time()+86400})
+   continue
  store.remove_missing({e['id'] for e in entries})
  selected=[r for r in store.pending(limit) if json.loads(r['versions'])==VERSIONS]
  checkpoint(store,state)

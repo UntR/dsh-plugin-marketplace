@@ -49,6 +49,17 @@ class ActionTests(unittest.TestCase):
  def test_six_hour_usage_expires(self):
   state=self.root/'state';atomic_json(state/'window-usage.json',{'events':[{'id':'expired','completedAt':time.time()-21601,'attempts':800,'weightedTokens':4000000}]})
   self.assertEqual(window_events(state),[])
+ def test_bad_repository_does_not_block_new_catalog_items(self):
+  registry=self.root/'registry';(registry/'plugins').mkdir(parents=True);state=self.root/'state';entries=[]
+  for i in (1,2):
+   e={**ENTRY,'id':'gh:'+str(i),'slug':'example/p'+str(i),'state':{'fork':False},'repositoryUrl':'https://github.com/example/p'+str(i),'detailPath':'./plugins/'+str(i)+'.json'};entries.append(e)
+   (registry/'plugins'/(str(i)+'.json')).write_text(json.dumps({'github':{'headSha':'a'*40}}))
+  (registry/'index.json').write_text(json.dumps({'revision':'sha256:'+'b'*64,'plugins':entries}))
+  with patch('action.read_readme',side_effect=[ValueError('Oversized source'),(RAW,{'headSha':'a'*40,'path':'README.md','rawHash':'c'*64})]):result=prepare(self.store,registry,state,2)
+  self.assertEqual(result['selected'],1);self.assertEqual(len(result['sourceFailures']),1)
+  self.assertTrue((state/'source-failures/1.json').exists())
+  with patch('action.read_readme',side_effect=AssertionError('Failed source is cached; prepared item is reused')):result=prepare(self.store,registry,state,2)
+  self.assertEqual(result['selected'],1)
  def test_insufficient_source_does_not_auto_publish(self):
   self.task();a=self.store.begin(self.store.current(ENTRY['id']),0,0);self.store.finish(a,'success',output={**self.o,'insufficient_evidence':True})
   self.assertEqual(auto_export(self.store,self.root/'ai')['recordCount'],0)
