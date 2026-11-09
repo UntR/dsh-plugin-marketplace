@@ -10,7 +10,7 @@
 - [覆盖进度](https://untr.github.io/dsh-plugin-marketplace/status.json)：当前目录数、AI简介数、原生源条目数及排除原因。
 - 原生源按包身份去重，只输出精确安装来源与`engines.dsh`已核验的条目；不把目录收录当成安装实测。
 
-`Enrich plugin catalog` Action 每6小时补一批，默认最多800次模型尝试、200个新包核验；使用仓库`MINIMAX_API_KEY` Secret。进度和结果写回Git，下一次只跑缺失或变化项。简介标记为自动生成，不再要求逐条人工批准。调度有5小时冷却与单次用量上限，但不是账户剩余额度的实时保证；不会充值、升级或切换按量Key。
+`Enrich plugin catalog` Action 每6小时补一批，默认最多800次模型尝试、200个新包核验；使用仓库`MINIMAX_API_KEY` Secret。进度和结果写回Git，下一次只跑缺失或变化项。简介标记为自动生成，不再要求逐条人工批准。定时和手动运行共享滚动6小时累计800次请求与用量上限，但不是账户剩余额度的实时保证；不会充值、升级或切换按量Key。
 
 首次启用：设置同名订阅Secret → 在Actions运行`Enrich plugin catalog`。本文下面的架构及历史验证说明保留供维护参考。
 

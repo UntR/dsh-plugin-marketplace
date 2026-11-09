@@ -17,6 +17,19 @@ def deduplicate(entries):
   selected.append(e);seen_id.add(e['id']);seen_repo.add(repo)
  return selected,aliases
 
+WINDOW_SECONDS=6*3600
+WINDOW_ATTEMPTS=800
+
+def window_events(root,now=None):
+ now=time.time() if now is None else now;root=pathlib.Path(root);path=root/'window-usage.json'
+ if path.exists():events=json.loads(path.read_text())['events']
+ else:
+  previous=root/'last-run.json';r=json.loads(previous.read_text()) if previous.exists() else {}
+  events=[{'id':'legacy:'+str(r['completedAt']),'completedAt':r['completedAt'],'attempts':r.get('attempts',0),'weightedTokens':r.get('weightedTokens',0)}] if r.get('completedAt') else []
+ return [e for e in events if e['completedAt']>=now-WINDOW_SECONDS]
+
+def save_window(root,events):atomic_json(pathlib.Path(root)/'window-usage.json',{'windowHours':6,'maxAttempts':800,'events':events})
+
 def checkpoint(store,directory):
  root=pathlib.Path(directory)
  for row in store.db.execute('SELECT * FROM tasks WHERE current=1'):
@@ -43,10 +56,16 @@ def restore(store,directory):
  # silently replay possibly paid requests. Results saved by the always step win.
  lease=root/'lease.json'
  if lease.exists():
-  for r in json.loads(lease.read_text())['tasks']:
+  abandoned=json.loads(lease.read_text());unresolved=0
+  for r in abandoned['tasks']:
    row=store.current(r['id'])
    if row and row['input_hash']==r['inputHash'] and row['status']=='prepared':
+    unresolved+=1
     with store.db:store.db.execute("UPDATE tasks SET status='uncertain',errors='[\"previous_runner_lease_unresolved\"]' WHERE id=? AND input_hash=?",(r['id'],r['inputHash']))
+  if unresolved:
+   events=window_events(root);ident=abandoned.get('run','unknown-lease')
+   events=[e for e in events if e['id']!=ident]
+   events.append({'id':ident,'completedAt':time.time(),'attempts':len(abandoned['tasks']),'weightedTokens':4000000,'uncertain':True});save_window(root,events)
  store.recover()
 
 def auto_export(store,directory):
@@ -93,13 +112,17 @@ def prepare(store,registry,state,limit):
  atomic_json(pathlib.Path(state)/'plan.json',report);return report
 
 def execute(store,state,key,limit,weighted_budget):
- root=pathlib.Path(state);previous=root/'last-run.json'
- if previous.exists() and time.time()-json.loads(previous.read_text()).get('completedAt',0)<5*3600:
+ root=pathlib.Path(state);events=window_events(root);requested=limit
+ used=sum(e['attempts'] for e in events);prior_tokens=sum(e['weightedTokens'] for e in events)
+ limit=min(limit,max(0,WINDOW_ATTEMPTS-used));weighted_budget=max(0,weighted_budget-prior_tokens)
+ if not limit or not weighted_budget:
   (root/'lease.json').unlink(missing_ok=True)
-  return {'attempts':0,'stopReason':'pipeline_five_hour_cooldown','states':store.counts()}
+  return {'attempts':0,'stopReason':'six_hour_window_limit','windowAttempts':used,'states':store.counts()}
  lease=json.loads((pathlib.Path(state)/'lease.json').read_text());allowed={(r['id'],r['inputHash']) for r in lease['tasks']}
  rows=[r for r in store.pending(limit) if (r['id'],r['input_hash']) in allowed];queue=collections.deque(rows)
- limiter=Limiter();active={};spent=0;attempts=0;stop=None;run_started=time.monotonic()
+ limiter=Limiter();active={};spent=0;attempts=0;stop=None;run_started=time.monotonic();event_id=lease.get('run',str(uuid.uuid4()))
+ def record_window():
+  save_window(root,events+[{'id':event_id,'completedAt':time.time(),'attempts':attempts,'weightedTokens':spent+sum(v[2] for v in active.values())}])
  with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
   while queue or active:
    for future in list(active):
@@ -114,7 +137,7 @@ def execute(store,state,key,limit,weighted_budget):
     if result['outcome']=='rate_limited':
      limiter.throttle(time.monotonic(),min(600,max(60,result.get('delay',60))));stop='rate_limited_pause_until_next_schedule'
     elif result['outcome'] in ('uncertain','fatal','quota'):stop=result['outcome']
-    checkpoint(store,state)
+    checkpoint(store,state);record_window()
    if not stop:
     while queue and len(active)<limiter.concurrency and attempts<limit:
      row=queue[0];prepared=json.loads(row['payload']);repair=json.loads(row['errors']) or None;tokens,_=reserve(prepared,repair)
@@ -125,13 +148,15 @@ def execute(store,state,key,limit,weighted_budget):
      ts=time.monotonic()
      if limiter.wait(ts,tokens)>0:break
      queue.popleft();ident=store.begin(row,0,0,payload(prepared,repair));attempts+=1;limiter.add(ident,ts,tokens)
+     save_window(root,events+[{'id':event_id,'completedAt':time.time(),'attempts':attempts,'weightedTokens':spent+sum(v[2] for v in active.values())+reservation}])
      active[executor.submit(request,prepared,key,repair)]=(ident,row,reservation)
    if stop or attempts>=limit:queue.clear()
    if active:concurrent.futures.wait(active,timeout=1,return_when=concurrent.futures.FIRST_COMPLETED)
    elif queue:time.sleep(min(2,max(.1,limiter.wait(time.monotonic(),reserve(json.loads(queue[0]['payload']))[0]))))
  checkpoint(store,state)
  (pathlib.Path(state)/'lease.json').unlink(missing_ok=True)
- report={'completedAt':time.time(),'attempts':attempts,'weightedTokens':spent,'stopReason':stop,'elapsedSeconds':round(time.monotonic()-run_started,2),'states':store.counts()}
+ record_window()
+ report={'requestedAttemptLimit':requested,'allowedAttemptLimit':limit,'windowAttempts':used+attempts,'completedAt':time.time(),'attempts':attempts,'weightedTokens':spent,'stopReason':stop,'elapsedSeconds':round(time.monotonic()-run_started,2),'states':store.counts()}
  atomic_json(pathlib.Path(state)/'last-run.json',report);return report
 
 

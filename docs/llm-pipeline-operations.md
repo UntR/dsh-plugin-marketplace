@@ -2,7 +2,7 @@
 
 以README中的Client链接和`.github/workflows/ai-enrich.yml`为当前可用流程：每6小时增量执行、Git检查点续跑、自动生成简介、核验npm和Git精确来源、统一Pages发布。用户已授权将指定env中的订阅Key保存为仓库MINIMAX_API_KEY Secret。无需为每批重新输入Key或做逐条人工批准；发布数据的reviewLevel明确为automated。
 
-自动任务每批上限800次模型尝试、4,000,000加权token预算，之后5小时内不再次消耗模型；限流或不确定请求会暂停并保留状态。预算只约束本管线，不声称已读取账户剩余配额。失败/不确定项不会被无限重试；有有效旧结果时复用，无AI时回退原介绍。
+自动任务每批上限800次模型尝试、4,000,000加权token预算，手动与定时运行共享滚动6小时累计最多800次尝试，已完成和在途请求均计入；限流或不确定请求会暂停并保留状态。预算只约束本管线，不声称已读取账户剩余配额。失败/不确定项不会被无限重试；有有效旧结果时复用，无AI时回退原介绍。
 
 硬中断恢复：付费调用前把整批租约推送到Git。若runner在保存结果前消失，相关未决任务隔离为uncertain，不自动重复计费；需核查Actions日志与状态后显式重试。正常完成和always保存阶段会清理租约并保存逐条状态。
 
@@ -154,3 +154,5 @@ python3 tools/ai-catalog/cli.py resume --limit 26 --env-file ~/.config/keys/mini
 ```
 
 解析器只读取该命名赋值，支持常见单引号、双引号、export及注释；不source文件、不执行shell替换，不把Key写入进程环境、日志、数据库或请求预览，不复制保存凭据。仍拒绝按量Key。此授权替代了之前每次必须隐藏输入的操作方式，保留其他预算和重试约束。39项Python离线测试通过。
+
+滚动窗口账本保存在`ai-state/window-usage.json`，从此前last-run记录迁移已有调用；同一窗口内可手动补跑剩余额度，不再整批冷却5小时。输出会报告requestedAttemptLimit、allowedAttemptLimit与windowAttempts。
