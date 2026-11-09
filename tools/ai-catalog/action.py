@@ -136,8 +136,8 @@ def execute(store,state,key,limit,weighted_budget):
 
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('phase',choices=['prepare','run','save']);p.add_argument('--registry',type=pathlib.Path,default=pathlib.Path('dsh-plugin-registry/registry/v1'));p.add_argument('--state-dir',type=pathlib.Path,default=pathlib.Path('ai-state'));p.add_argument('--db',type=pathlib.Path,default=pathlib.Path('.local/ai-action/state.sqlite3'));p.add_argument('--output',type=pathlib.Path,default=pathlib.Path('ai-data/v1'));p.add_argument('--limit',type=int,default=1000);p.add_argument('--weighted-budget',type=int,default=4000000);a=p.parse_args()
- if not 1<=a.limit<=1000 or not 20000<=a.weighted_budget<=6000000:raise ValueError('Invalid bounded batch settings')
+ p=argparse.ArgumentParser();p.add_argument('phase',choices=['prepare','run','save']);p.add_argument('--registry',type=pathlib.Path,default=pathlib.Path('dsh-plugin-registry/registry/v1'));p.add_argument('--state-dir',type=pathlib.Path,default=pathlib.Path('ai-state'));p.add_argument('--db',type=pathlib.Path,default=pathlib.Path('.local/ai-action/state.sqlite3'));p.add_argument('--output',type=pathlib.Path,default=pathlib.Path('ai-data/v1'));p.add_argument('--limit',type=int,default=800);p.add_argument('--weighted-budget',type=int,default=4000000);a=p.parse_args()
+ if not 1<=a.limit<=800 or not 20000<=a.weighted_budget<=6000000:raise ValueError('Invalid bounded batch settings')
  store=Store(a.db)
  try:
   if a.phase=='prepare':result=prepare(store,a.registry,a.state_dir,a.limit)

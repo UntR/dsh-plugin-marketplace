@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
     inputs:
       batch_size:
-        description: Maximum model attempts (1-1000)
-        default: '1000'
+        description: Maximum model attempts (1-800)
+        default: '800'
         required: true
       verify_count:
         description: Maximum new npm/Git packages to inspect
@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 55
     env:
-      BATCH_SIZE: ${{ inputs.batch_size || '1000' }}
+      BATCH_SIZE: ${{ inputs.batch_size || '800' }}
       VERIFY_COUNT: ${{ inputs.verify_count || '200' }}
       GH_TOKEN: ${{ secrets.REGISTRY_GITHUB_TOKEN || github.token }}
     steps:
@@ -40,7 +40,7 @@ jobs:
           python3 - <<'PY'
           import os
           batch=int(os.environ['BATCH_SIZE']);verify=int(os.environ['VERIFY_COUNT'])
-          assert 1 <= batch <= 1000 and 1 <= verify <= 500
+          assert 1 <= batch <= 800 and 1 <= verify <= 500
           PY
       - name: Configure generated-data commits
         run: |
