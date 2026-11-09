@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "e43b92094431d489d24445b827b246beea59ab1c"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVaJCJQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/6d036c91c1450dd9bfc1433d6abab7d4522e826f261be844d8c2cab4c5c68bf1/LJY-YL/dsh-workbuddy-connect",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/9bde126cb12e8b6669fc8c6a61d6d9aa0fb2e38d8e9e9648f399de955583fbcd/LJY-YL/dsh-workbuddy-connect",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/196682727?v=4",
       "login": "LJY-YL"
@@ -46,27 +46,42 @@
   },
   "id": "gh:1436697125",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-workbuddy-connect",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:LJY-YL/dsh-workbuddy-connect#e43b92094431d489d24445b827b246beea59ab1c",
+    "version": "0.7.9-p1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.7.9",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-workbuddy-connect",
+    "status": "valid",
+    "type": "module",
+    "version": "0.7.9-p1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/6d036c91c1450dd9bfc1433d6abab7d4522e826f261be844d8c2cab4c5c68bf1/LJY-YL/dsh-workbuddy-connect",
+    "coverUrl": "https://opengraph.githubassets.com/9bde126cb12e8b6669fc8c6a61d6d9aa0fb2e38d8e9e9648f399de955583fbcd/LJY-YL/dsh-workbuddy-connect",
     "description": "dsh-workbuddy-connect 0.7.9 社区修复版：① 修复渠道拦截（http 400 / code 11128「请求被拦截」）；② 兼容全部 DSH 0.2.x 内核（rc.2 / rc.3 / rc.5 实测），开箱即用、免版本豁免。详见 README-PATCH.md。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "将已登录的 WorkBuddy / WorkBuddy AI 桌面应用中可用的模型接入 DeepSeek Harness；两版分别显示各自的模型分组，并沿用各自的账号登录与积分。"
   },
   "schemaVersion": 1,
   "scripts": {

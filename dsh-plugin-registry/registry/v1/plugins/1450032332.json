@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "b6759ed0cb1809cc935657caf891deddedd54d5c"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVm28zA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f23dc5409dc5bcb7e73dc95403b769e72ae463456034f48312761fb920c85517/lightporta/dsh-plugin-trust-broker",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/bcc198958829bc75f334bf4b5a39297867b813e3f976f2cbbaabc2a262118b0a/lightporta/dsh-plugin-trust-broker",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/149225182?u=cdb33441c58b622b79a31921fe2d09127f5495eb&v=4",
       "login": "lightporta"
@@ -53,7 +53,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -63,14 +63,35 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./dist/plugin/index.js",
+        "types": "./dist/plugin/index.d.ts"
+      },
+      "./cli": "./dist/cli/main.js",
+      "./client": "./client.js",
+      "./core": {
+        "default": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      },
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/plugin/index.js",
+    "name": "dsh-plugin-trust-broker",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f23dc5409dc5bcb7e73dc95403b769e72ae463456034f48312761fb920c85517/lightporta/dsh-plugin-trust-broker",
+    "coverUrl": "https://opengraph.githubassets.com/bcc198958829bc75f334bf4b5a39297867b813e3f976f2cbbaabc2a262118b0a/lightporta/dsh-plugin-trust-broker",
     "description": "面向 DeepSeek Harness（DSH）的 Host 侧插件信任代理：安装前对比权限声明与静态检出、绑定内容哈希信任锚点，加载后对工具调用与上下文写入做只追加审计。只产出事实与差异，不做安全裁决。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English README · 架构 · 安全模型 · 审计 schema · 对抗性审查"
   },
   "schemaVersion": 1,
   "scripts": {

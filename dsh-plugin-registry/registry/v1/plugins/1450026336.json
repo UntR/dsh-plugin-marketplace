@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "58e26817d5ccc1811c9263aa6f9bb992c6c013c0"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVm2lYA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e32dece407098820830f21d2bfd34e3ad899611f622611167a8abc649b96d9ce/vamyane/dsh-provider-pool",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ae3a8774350ccfab7fe5dbc13ed8a4602f3dafc1db97002148c296dab769ec62/vamyane/dsh-provider-pool",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/19571772?u=acade4b2f604b4ac48ba4cbbe82c5bdbb752fb9a&v=4",
       "login": "vamyane"
@@ -44,27 +44,42 @@
   },
   "id": "gh:1450026336",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-provider-pool",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vamyane/dsh-provider-pool#58e26817d5ccc1811c9263aa6f9bb992c6c013c0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-provider-pool",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e32dece407098820830f21d2bfd34e3ad899611f622611167a8abc649b96d9ce/vamyane/dsh-provider-pool",
+    "coverUrl": "https://opengraph.githubassets.com/ae3a8774350ccfab7fe5dbc13ed8a4602f3dafc1db97002148c296dab769ec62/vamyane/dsh-provider-pool",
     "description": "Provider pool for DeepSeek Harness: an OpenAI-compatible local proxy with priority fallback across multiple LLM providers and usage stats."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DeepSeek Harness plugin: a local OpenAI-compatible proxy with a prioritized provider pool and automatic fallback."
   },
   "schemaVersion": 1,
   "scripts": {

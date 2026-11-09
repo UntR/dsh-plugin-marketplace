@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "fda659395813fd9adec22182bc55508779ac7f6b"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOVnCgiA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a10d7115e44c817c232b518482e7c69856326b2afdbe8de7a633b7f6537ff644/PerryLink/dsh-claim-check",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/915abb87f80ac55b2ab97ea4ab7df086249a1eed58f21a4f666d6486f63c1929/PerryLink/dsh-claim-check",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/255665900?u=c45dcefbeb0005ad85d4a3d472d67eec6d962dae&v=4",
       "login": "PerryLink"
@@ -47,27 +47,40 @@
   },
   "id": "gh:1450221704",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@perrylink/dsh-claim-check",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@perrylink/dsh-claim-check@0.1.2",
+    "version": "0.1.2"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.2",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "@perrylink/dsh-claim-check",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a10d7115e44c817c232b518482e7c69856326b2afdbe8de7a633b7f6537ff644/PerryLink/dsh-claim-check",
+    "coverUrl": "https://opengraph.githubassets.com/915abb87f80ac55b2ab97ea4ab7df086249a1eed58f21a4f666d6486f63c1929/PerryLink/dsh-claim-check",
     "description": "Deterministic claim support checking for DeepSeek Harness: verbatim quote spans, number matching, labelled-value contradiction, negation and hedging polarity against the cited sentence, REP v1 evidence/claim/verdict records and SARIF output. A paraphrase is reported as insufficie"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Does the source actually support the claim as written?"
   },
   "schemaVersion": 1,
   "scripts": {

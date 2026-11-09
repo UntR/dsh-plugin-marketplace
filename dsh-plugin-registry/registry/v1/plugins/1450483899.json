@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "b6548178c8f5c39c5ffbb6b224ac8506fc96333c"
   },
   "github": {
@@ -14,7 +14,7 @@
     "createdAt": "2026-11-08T17:04:37Z",
     "databaseId": 1450483899,
     "defaultBranch": "main",
-    "description": "每天 00:00 把自己名下以 DSH 开头的插件仓库打上 dsh-plugin topic（缺 cordis 标记自动补），让 dsh.market 自动收录。零依赖，不调用模型。",
+    "description": "每天 00:00 把自己名下 DSH 插件仓库自动送进 dsh.market：补 dsh-plugin topic 与插件标记文件，零依赖、不调模型",
     "fork": false,
     "forks": 0,
     "headSha": "b6548178c8f5c39c5ffbb6b224ac8506fc96333c",
@@ -25,46 +25,60 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnSguw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/639d5710dd325f56648eb49f4bc51ae3d65e0621c11c77418ab2ec17caceacda/xkzdwb/DSH-MarketSync-WhenNewPlugin",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/173a1148168a471b9ab70f5a6240ec252ef7253843cf44e3092a28e1094b4024/xkzdwb/DSH-MarketSync-WhenNewPlugin",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/94174584?u=0f217c83ac23c2c13cacb2197727e63a668220c7&v=4",
       "login": "xkzdwb"
     },
     "pushedAt": "2026-11-08T17:05:13Z",
     "slug": "xkzdwb/DSH-MarketSync-WhenNewPlugin",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "automation",
       "cordis-plugin",
+      "deepseek",
+      "dsh",
       "dsh-market",
-      "dsh-plugin"
+      "dsh-plugin",
+      "plugin"
     ],
-    "updatedAt": "2026-11-08T17:05:14Z",
+    "updatedAt": "2026-11-09T06:31:17Z",
     "url": "https://github.com/xkzdwb/DSH-MarketSync-WhenNewPlugin"
   },
   "id": "gh:1450483899",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-market-sync",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xkzdwb/DSH-MarketSync-WhenNewPlugin#b6548178c8f5c39c5ffbb6b224ac8506fc96333c",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/plugin.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "src/plugin.js",
+    "name": "dsh-market-sync",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/639d5710dd325f56648eb49f4bc51ae3d65e0621c11c77418ab2ec17caceacda/xkzdwb/DSH-MarketSync-WhenNewPlugin",
-    "description": "每天 00:00 把自己名下以 DSH 开头的插件仓库打上 dsh-plugin topic（缺 cordis 标记自动补），让 dsh.market 自动收录。零依赖，不调用模型。"
+    "coverUrl": "https://opengraph.githubassets.com/173a1148168a471b9ab70f5a6240ec252ef7253843cf44e3092a28e1094b4024/xkzdwb/DSH-MarketSync-WhenNewPlugin",
+    "description": "每天 00:00 把自己名下 DSH 插件仓库自动送进 dsh.market：补 dsh-plugin topic 与插件标记文件，零依赖、不调模型"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个零依赖的 DSH 插件，不调用任何模型：一次跑批 13 秒、几十次 GitHub API 请求。它只做一件事——让市场每天 06:00 的采集器看得到你的新插件。不用提 issue，不用手工打标签。"
   },
   "schemaVersion": 1,
   "scripts": {

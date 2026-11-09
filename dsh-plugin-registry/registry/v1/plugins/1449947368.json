@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "92526132e3852016145a10e1a46a933c02076991"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVmxw6A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/31900fd4d3f9163f3fd3e0c03fb08f41c42cd10454d070c7f371f25051deffd3/Twelve212/dsh-quote-shot",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a9cadfe2e935656b9a08923c85449e39c185aa82edb60f60d8b4a9429f0bb5f1/Twelve212/dsh-quote-shot",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/233587995?v=4",
       "login": "Twelve212"
@@ -45,27 +45,38 @@
   },
   "id": "gh:1449947368",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-quote-shot",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-quote-shot@0.2.1",
+    "version": "0.2.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-quote-shot",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/31900fd4d3f9163f3fd3e0c03fb08f41c42cd10454d070c7f371f25051deffd3/Twelve212/dsh-quote-shot",
+    "coverUrl": "https://opengraph.githubassets.com/a9cadfe2e935656b9a08923c85449e39c185aa82edb60f60d8b4a9429f0bb5f1/Twelve212/dsh-quote-shot",
     "description": "Quote a whole DSH message by reference: the composer carries only a message id, and the model reads the full text on demand."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "按 id 引用整条消息：点助手消息下方的引号图标，输入框里只多一行 [引用消息 ——请先调用 quoteread 读取全文，再回答]， 模型按需调 quoteread 读全文——不把几百字塞进 prompt。"
   },
   "schemaVersion": 1,
   "scripts": {

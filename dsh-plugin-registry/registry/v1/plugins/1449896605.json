@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "a04e32b6f78833b85697231ae9ce7d198b747aa3"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVmuqnQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/192ebe4d2d5c692b0f035c6ea6cd35bcf58f4795e563df7f9911126ef89fd231/Unstivl/dsh-cost-speed",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e9b32701f621c7683d782ff0e1061ff4da1429094387605d1b7a662b8f320dbd/Unstivl/dsh-cost-speed",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/125283589?u=b2d70ffb2b440f708cc1736264e8003faae24c63&v=4",
       "login": "Unstivl"
@@ -48,27 +48,38 @@
   },
   "id": "gh:1449896605",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-cost-speed",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Unstivl/dsh-cost-speed#a04e32b6f78833b85697231ae9ce7d198b747aa3",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-cost-speed",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/192ebe4d2d5c692b0f035c6ea6cd35bcf58f4795e563df7f9911126ef89fd231/Unstivl/dsh-cost-speed",
+    "coverUrl": "https://opengraph.githubassets.com/e9b32701f621c7683d782ff0e1061ff4da1429094387605d1b7a662b8f320dbd/Unstivl/dsh-cost-speed",
     "description": "DeepSeek Harness 插件：本地计费与速度面板，按真实 BPE 估算 token 成本，显示流式 TPS、首字延迟与上下文占用。 Local cost and speed monitor for DSH."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 的本地计费与速度面板。停靠条贴在输入框上方，默认显示今日估算费用；悬浮展开时、日、周、月四张图。流式生成时同时显示 TPS、首字延迟和上下文占用。"
   },
   "schemaVersion": 1,
   "scripts": {

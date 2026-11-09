@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "8fcb8176f858d60a43290b6578cdd3649930e7b4"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnFM4w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/30d8d7b606724495cf2e65161feb1e3246f05fe0500d7a7a77b75c78a14e8f26/Jimmy-20100728/dsh-token-usage",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/85770e45766de03d86b7b0199e9dc73a9089d72399b628fbb19e3b31300ab8cd/Jimmy-20100728/dsh-token-usage",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/310424888?v=4",
       "login": "Jimmy-20100728"
@@ -44,27 +44,38 @@
   },
   "id": "gh:1450265827",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-token-usage",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Jimmy-20100728/dsh-token-usage#8fcb8176f858d60a43290b6578cdd3649930e7b4",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "2.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-token-usage",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/30d8d7b606724495cf2e65161feb1e3246f05fe0500d7a7a77b75c78a14e8f26/Jimmy-20100728/dsh-token-usage",
+    "coverUrl": "https://opengraph.githubassets.com/85770e45766de03d86b7b0199e9dc73a9089d72399b628fbb19e3b31300ab8cd/Jimmy-20100728/dsh-token-usage",
     "description": "DSH plugin: local DeepSeek token usage & cost analysis - trends, per-model/per-API-key breakdowns, cache savings, spike detection."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "导入 DeepSeek 官方导出 ZIP（amount-.csv + cost-.csv）、通用 CSV 或 通用 JSON， 在会话界面新增的「Token 用量」标签页里查看费用趋势、模型 / API Key / 自定义分组对比、 缓存命中与节省、输入输出构成、异常用量检测；也可以在对话里直接让 Agent 调用 tokenanalysis 工具。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "4bd3dada1c77a4c3b411226eace6a6c2b6d9500e"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnMvWg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/2b5ac0a4693a25f9ca6c94a200f7d27d8cc307eb5e0c218e972966f5b127c159/h2298511604-ops/dsh-anatomy",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d0d896934887711fa68280e9bef7b8491c422be1a01ebef6205765bf871adbd7/h2298511604-ops/dsh-anatomy",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/250115595?u=836348882434b63ba79734f6e83fcf18fba911c7&v=4",
       "login": "h2298511604-ops"
@@ -45,27 +45,41 @@
   },
   "id": "gh:1450389338",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-anatomy",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-anatomy@1.0.1",
+    "version": "1.0.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-anatomy",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/2b5ac0a4693a25f9ca6c94a200f7d27d8cc307eb5e0c218e972966f5b127c159/h2298511604-ops/dsh-anatomy",
+    "coverUrl": "https://opengraph.githubassets.com/d0d896934887711fa68280e9bef7b8491c422be1a01ebef6205765bf871adbd7/h2298511604-ops/dsh-anatomy",
     "description": "Live layered architecture map of the DeepSeek Harness: plugins, services, tools, sessions, models and MCP rendered as a real-time call-flow diagram. Host + Client DSH plugin."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-anatomy 是一个 DSH 插件（Host + Client 两部分）：在左侧栏加一个「架构透视」图标， 点击后在主区域打开整页 DSH 架构透视 · 实时架构 —— 从左到右 5 层、14 个组件域的实时架构图， 以及底部的运行指标 / 组件架构 / 调用日志 / 时间线四个视图。"
   },
   "schemaVersion": 1,
   "scripts": {

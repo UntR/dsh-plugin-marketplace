@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "d83cc954ce84161b36ecbb3d509e5685b24dcea1"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnHxUA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/c3a4351a0a217a9360507f881d9ddc613e5b25602d25851f239faecae8909171/BaChongYingovo/ark-plan-api",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/fd1b0ce7a580a207a11457429e2c1a19fe49c2b1ad37815ac3899184f2b5e6e8/BaChongYingovo/ark-plan-api",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/231841836?v=4",
       "login": "BaChongYingovo"
@@ -47,27 +47,39 @@
   },
   "id": "gh:1450307920",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "ark-plan-api",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:BaChongYingovo/ark-plan-api#d83cc954ce84161b36ecbb3d509e5685b24dcea1",
+    "version": "0.2.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "ark-plan-api",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/c3a4351a0a217a9360507f881d9ddc613e5b25602d25851f239faecae8909171/BaChongYingovo/ark-plan-api",
+    "coverUrl": "https://opengraph.githubassets.com/fd1b0ce7a580a207a11457429e2c1a19fe49c2b1ad37815ac3899184f2b5e6e8/BaChongYingovo/ark-plan-api",
     "description": "DeepSeek Harness (DSH) 插件：把火山方舟 Ark 的 Agent Plan / Coding Plan / 后付费 provider（含 BytePlus 海外）接入原生模型选择器，只需填 API Key"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English: ark-plan-api registers five Volcengine Ark provider routes (Agent Plan, Coding Plan, post-paid, CN and BytePlus) on DSH's native pi-ai adapter via a cordis.patch.yml bundle patch. You supply only an API key — no code, no build step."
   },
   "schemaVersion": 1,
   "scripts": {

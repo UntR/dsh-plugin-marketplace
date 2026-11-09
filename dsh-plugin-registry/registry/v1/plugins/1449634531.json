@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "abb43bb3d96820cc8f28e1232429ab0b5de43ef2"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVmeq4w",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/48690407313a4bf708c1cc3b37ad5ac1689963a75602bff77cf847ff5d98ae88/SpiritronPersonality/dsh-density-panel",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/4d41f849d14b784770a5e61cd78f0f95b0aebfe3afe230a3592196ab2a9f7806/SpiritronPersonality/dsh-density-panel",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/322215137?v=4",
       "login": "SpiritronPersonality"
@@ -47,27 +47,39 @@
   },
   "id": "gh:1449634531",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/density-panel",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:SpiritronPersonality/dsh-density-panel#abb43bb3d96820cc8f28e1232429ab0b5de43ef2",
+    "version": "0.31.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/density-panel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.31.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/48690407313a4bf708c1cc3b37ad5ac1689963a75602bff77cf847ff5d98ae88/SpiritronPersonality/dsh-density-panel",
+    "coverUrl": "https://opengraph.githubassets.com/4d41f849d14b784770a5e61cd78f0f95b0aebfe3afe230a3592196ab2a9f7806/SpiritronPersonality/dsh-density-panel",
     "description": "Quality-first context compression for DSH: structured tool-output summaries with on-demand recall and a per-window ledger."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DSH client plugin that compresses only the tool output it can compress without losing answers, archives the originals, and keeps a per-context-window ledger of what it saved."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "3f912cf1f893f3d890ce0d8fd115c25ded6ad76a"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVm1Y-Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/72c39a787559e5b1f1a629be3ccf023581b62cd7eab2a6cd4e721613cbf1251a/czp0312/dsh-ssh-workspace",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/3b0bc08d38043152fdfb9877f10bf5368ed42cd612b8da9e787c3f86fa665b27/czp0312/dsh-ssh-workspace",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/175614636?v=4",
       "login": "czp0312"
@@ -44,27 +44,41 @@
   },
   "id": "gh:1450006777",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ssh-workspaces",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-ssh-workspaces@0.3.3",
+    "version": "0.3.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.3.3",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/src/index.d.ts"
+      },
+      "./client": "./lib/client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-ssh-workspaces",
+    "status": "valid",
+    "type": "module",
+    "version": "0.3.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/72c39a787559e5b1f1a629be3ccf023581b62cd7eab2a6cd4e721613cbf1251a/czp0312/dsh-ssh-workspace",
+    "coverUrl": "https://opengraph.githubassets.com/3b0bc08d38043152fdfb9877f10bf5368ed42cd612b8da9e787c3f86fa665b27/czp0312/dsh-ssh-workspace",
     "description": "dsh远程开发插件，支持SSH/WSL，与原生侧栏工作空间。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 SSH 服务器、WSL 和 Docker 容器里的项目，直接放进 DeepSeek Harness 当前窗口的项目侧栏。"
   },
   "schemaVersion": 1,
   "scripts": {

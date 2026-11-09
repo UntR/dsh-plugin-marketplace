@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "831be281e8df02e0dd59e61a0763981d53a3075c"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnEypw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/474c3b3317849e824c3f9deedc3709ca2c632df94345c7db41c90fc877dafb2e/CELLOPOI/moyuban",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/90cfdc5be0149b6fe7ede678245ac61a13d86c1c2904f74bfe041f8d28b335eb/CELLOPOI/moyuban",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/180845359?u=92648b3e85725cc6154ea24201f10a4c51571c14&v=4",
       "login": "CELLOPOI"
@@ -45,27 +45,40 @@
   },
   "id": "gh:1450259111",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "moyuban",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:CELLOPOI/moyuban#831be281e8df02e0dd59e61a0763981d53a3075c",
+    "version": "0.14.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host/index.js",
+      "./client": "./dist/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./src/host/index.js",
+    "name": "moyuban",
+    "status": "valid",
+    "type": "module",
+    "version": "0.14.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/474c3b3317849e824c3f9deedc3709ca2c632df94345c7db41c90fc877dafb2e/CELLOPOI/moyuban",
+    "coverUrl": "https://opengraph.githubassets.com/90cfdc5be0149b6fe7ede678245ac61a13d86c1c2904f74bfe041f8d28b335eb/CELLOPOI/moyuban",
     "description": "摸鱼办 · 在 DeepSeek Harness 的工作区里刷小红书、逛百度贴吧、读 NGA 和引用回帖。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness（DSH）的工作区里，用文字索引刷小红书、逛贴吧、看 NGA。装好后，点左栏 资料摘录 → 阅读索引 就能打开小红书推荐。想看论坛，点 百度贴吧 或 资料整理 右侧的 新会话（＋） 选吧、选版面。"
   },
   "schemaVersion": 1,
   "scripts": {

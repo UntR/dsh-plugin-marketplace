@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "8728598fac6b5b670825a845ce35e98485fdfb97"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVms7cQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/6bd4b1f1263777c7a62d9dcba6438087d6382600673a6d2edd6530b4c138d378/X-max0/dsh-override-guard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/3bab2bedbc808bb13b9dd6d92d9b07b1f18b72693179850e89143c3d75d424bd/X-max0/dsh-override-guard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/260577142?v=4",
       "login": "X-max0"
@@ -49,32 +49,43 @@
   },
   "id": "gh:1449868145",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-override-guard",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:X-max0/dsh-override-guard#8728598fac6b5b670825a845ce35e98485fdfb97",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./core": "./lib/core.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-override-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/6bd4b1f1263777c7a62d9dcba6438087d6382600673a6d2edd6530b4c138d378/X-max0/dsh-override-guard",
+    "coverUrl": "https://opengraph.githubassets.com/3bab2bedbc808bb13b9dd6d92d9b07b1f18b72693179850e89143c3d75d424bd/X-max0/dsh-override-guard",
     "description": "凌驾于 dsh-purge 之上的净化层：装配后二级净化、反制消息吞没与工具 blocked、侦测伪造拒答、自愈 purge 源码 | An override layer that outranks dsh-purge"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A sanitizing layer that outranks dsh-purge. It does not touch the model and does not swap prompts. It exists so that no plugin gets to speak on the model's behalf."
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
-    "postinstall": false,
+    "postinstall": true,
     "preinstall": false,
     "prepare": false
   }

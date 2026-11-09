@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "fee66fff37138c6d3d76fa0defa8d336c91f19ed"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOVnCnTQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/76f44df0239b078bf4f25235a85d6c187a3c4d1c6837ccc5ea01632cfb72f71d/PerryLink/dsh-notebook-capture",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7bcf868e9a99329fdb889aca05c7b038029828bca86700fa578bd91addc7393c/PerryLink/dsh-notebook-capture",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/255665900?u=c45dcefbeb0005ad85d4a3d472d67eec6d962dae&v=4",
       "login": "PerryLink"
@@ -47,27 +47,40 @@
   },
   "id": "gh:1450223437",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-notebook-capture",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-notebook-capture@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-notebook-capture",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/76f44df0239b078bf4f25235a85d6c187a3c4d1c6837ccc5ea01632cfb72f71d/PerryLink/dsh-notebook-capture",
+    "coverUrl": "https://opengraph.githubassets.com/7bcf868e9a99329fdb889aca05c7b038029828bca86700fa578bd91addc7393c/PerryLink/dsh-notebook-capture",
     "description": "Notebook reproducibility capture for DeepSeek Harness: reads .ipynb JSON without executing it, reports kernel/language, code vs markdown cells, execution order (out-of-order and never-run cells), imports, runtime installs, seeds, absolute paths and output state; hashes the notebo"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A notebook that runs on your machine is not yet reproducible. Capture what the saved file actually says."
   },
   "schemaVersion": 1,
   "scripts": {

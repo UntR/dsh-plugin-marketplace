@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "933163603ffe08692101dc02f551a473732851ee"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOVmaMpQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/10f5a3ab414b1a927e749bed9d791507a391dcab04aa5f29c8f682683421184b/BErrybearl/dsh-subagent-plus",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/acc8279fea329f387b45c562b0f00ff752175b1685665d2351f029aaa264d8e8/BErrybearl/dsh-subagent-plus",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/24304195?v=4",
       "login": "BErrybearl"
@@ -43,27 +43,39 @@
   },
   "id": "gh:1449561253",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-subagent",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:BErrybearl/dsh-subagent-plus#933163603ffe08692101dc02f551a473732851ee",
+    "version": "1.1.26"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.0.1",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-subagent",
+    "status": "valid",
+    "type": "module",
+    "version": "1.1.26"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/10f5a3ab414b1a927e749bed9d791507a391dcab04aa5f29c8f682683421184b/BErrybearl/dsh-subagent-plus",
+    "coverUrl": "https://opengraph.githubassets.com/acc8279fea329f387b45c562b0f00ff752175b1685665d2351f029aaa264d8e8/BErrybearl/dsh-subagent-plus",
     "description": "把本机外部 CLI（Codex、Pi、Qoder、OpenCode、CodeBuddy 等）注册成 dsh 子代理，带运行面板与后端管理。dsh-subagent 的社区增强分支。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把本机的外部 CLI（Codex、Pi、Qoder、OpenCode、CodeBuddy 等）注册成 dsh（DeepSeek Harness）的子代理后端， 再配一个看得见运行状态的轻量面板。"
   },
   "schemaVersion": 1,
   "scripts": {

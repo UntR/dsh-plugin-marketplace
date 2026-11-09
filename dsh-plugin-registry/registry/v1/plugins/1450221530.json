@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "88043e4f6ec8075cdd38abe50167d4636f9dcc8f"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOVnCf2g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5834b20214a11d5b294cc517a3249a62529293cf77ee02d9684c7ffa2afc2994/PerryLink/dsh-statcheck",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/dabfbc7cafc7a115d4d3787007535b246cb610afbc7dea41b9ef7bbb19dd5b5a/PerryLink/dsh-statcheck",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/255665900?u=c45dcefbeb0005ad85d4a3d472d67eec6d962dae&v=4",
       "login": "PerryLink"
@@ -48,27 +48,40 @@
   },
   "id": "gh:1450221530",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-statcheck",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-statcheck@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-statcheck",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5834b20214a11d5b294cc517a3249a62529293cf77ee02d9684c7ffa2afc2994/PerryLink/dsh-statcheck",
+    "coverUrl": "https://opengraph.githubassets.com/dabfbc7cafc7a115d4d3787007535b246cb610afbc7dea41b9ef7bbb19dd5b5a/PerryLink/dsh-statcheck",
     "description": "Recompute the statistics reported in a manuscript and flag self-inconsistent p values for DeepSeek Harness: APA-style t/F/chi-square/r/z parsing, two-tailed and upper-tail p values from zero-dependency distributions, CI-versus-p checks, exact character locators, Markdown and SARI"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Recompute the statistics a manuscript reports — and flag the ones that do not add up."
   },
   "schemaVersion": 1,
   "scripts": {

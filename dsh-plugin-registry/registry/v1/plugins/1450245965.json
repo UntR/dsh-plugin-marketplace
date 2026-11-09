@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "d1f65e63a50906ed2435934db186c65765097548"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnD_TQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/6e01ace2f7c6c24d7232fc2d85efcbf778ecd420e324a103d1b757d852eb5cc1/AkotaP/dsh-compact-codex",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/036d719879a867ef22a6b6f8b5b10d3bb176727015a01a27da2874eaa23cbc72/AkotaP/dsh-compact-codex",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/136944425?u=ba22912893eda9a1f75822be84cbcd0f6dd2d95d&v=4",
       "login": "AkotaP"
@@ -43,27 +43,40 @@
   },
   "id": "gh:1450245965",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-compact-codex",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:AkotaP/dsh-compact-codex#d1f65e63a50906ed2435934db186c65765097548",
+    "version": "1.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/plugin.js",
+      "./client": "./lib/client.js",
+      "./engine": "./lib/index.js",
+      "./package.json": "./package.json",
+      "./preset": "./lib/preset.js"
+    },
+    "main": "./lib/plugin.js",
+    "name": "dsh-compact-codex",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/6e01ace2f7c6c24d7232fc2d85efcbf778ecd420e324a103d1b757d852eb5cc1/AkotaP/dsh-compact-codex",
+    "coverUrl": "https://opengraph.githubassets.com/036d719879a867ef22a6b6f8b5b10d3bb176727015a01a27da2874eaa23cbc72/AkotaP/dsh-compact-codex",
     "description": "Codex-style compaction backend for dsh: zero-summary window switch and experimental context management, shipped as a detachable plugin."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）插件：在压缩点用程序生成的上下文交接替代模型摘要。生成不调用模型，因此瞬间完成；会话日志不被删除，旧内容仍可按事件编号回查。"
   },
   "schemaVersion": 1,
   "scripts": {

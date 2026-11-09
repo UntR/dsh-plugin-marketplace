@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "1ca734e349536f868f264df503ea7fdc95a3701c"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnAq5g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/6550f09a1872d1b6b7b700b2ad80c3be62ffc999071a00253794f1862e3e0f65/vinson1101/dsh-task-dispatch",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/2e16745d89fee4856bfe537d0672b8663da5ade33f95e71c7992cfd720db5315/vinson1101/dsh-task-dispatch",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/11420251?v=4",
       "login": "vinson1101"
@@ -46,27 +46,38 @@
   },
   "id": "gh:1450191590",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-task-dispatch",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:vinson1101/dsh-task-dispatch#1ca734e349536f868f264df503ea7fdc95a3701c",
+    "version": "0.6.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-task-dispatch",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/6550f09a1872d1b6b7b700b2ad80c3be62ffc999071a00253794f1862e3e0f65/vinson1101/dsh-task-dispatch",
+    "coverUrl": "https://opengraph.githubassets.com/2e16745d89fee4856bfe537d0672b8663da5ade33f95e71c7992cfd720db5315/vinson1101/dsh-task-dispatch",
     "description": "在 DSH 里按工作空间给真实会话派发任务，带持久任务台账与只读结果查询（零依赖插件）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Deliver a message to a real DSH session by session id, and optionally wait for its reply."
   },
   "schemaVersion": 1,
   "scripts": {

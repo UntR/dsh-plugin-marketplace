@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
-    "headSha": "8447631f5d514ef346e9ba91e9645c2435d1542a"
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
+    "headSha": "02b7c7c04cee48807d803c0860bc84a91231b5a6"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Visual skill & MCP manager for dsh-TUI: full-screen scene behind /skill-mcp (M0 probe / M1 skeleton)",
     "fork": false,
     "forks": 0,
-    "headSha": "8447631f5d514ef346e9ba91e9645c2435d1542a",
+    "headSha": "02b7c7c04cee48807d803c0860bc84a91231b5a6",
     "homepageUrl": null,
     "language": "TypeScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVmXxxw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d93f0262d03b251b94f4a017c78b4427bd2f6d5d12b41e95cfdf8abe05bb24f2/wuqiuwangtian/dsh-tui-skill-mcp-panel",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/3276e2fbd3562063409163bda78ba042148262bc29d22a4925d794bc9b69b5f1/wuqiuwangtian/dsh-tui-skill-mcp-panel",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/120927755?u=383aae5a3ece2d093150e7239f0e8a2f2f4a3370&v=4",
       "login": "wuqiuwangtian"
     },
-    "pushedAt": "2026-11-08T06:17:45Z",
+    "pushedAt": "2026-11-09T11:40:19Z",
     "slug": "wuqiuwangtian/dsh-tui-skill-mcp-panel",
     "stars": 1,
     "topics": [
@@ -42,7 +42,7 @@
       "terminal",
       "terminal-tui"
     ],
-    "updatedAt": "2026-11-08T06:20:19Z",
+    "updatedAt": "2026-11-09T11:40:23Z",
     "url": "https://github.com/wuqiuwangtian/dsh-tui-skill-mcp-panel"
   },
   "id": "gh:1449521607",
@@ -50,7 +50,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -60,14 +60,28 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "import": "./lib/types/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/types/index.js",
+    "name": "dsh-tui-skill-mcp-panel",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0-dev.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d93f0262d03b251b94f4a017c78b4427bd2f6d5d12b41e95cfdf8abe05bb24f2/wuqiuwangtian/dsh-tui-skill-mcp-panel",
+    "coverUrl": "https://opengraph.githubassets.com/3276e2fbd3562063409163bda78ba042148262bc29d22a4925d794bc9b69b5f1/wuqiuwangtian/dsh-tui-skill-mcp-panel",
     "description": "Visual skill & MCP manager for dsh-TUI: full-screen scene behind /skill-mcp (M0 probe / M1 skeleton)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 dsh-TUI 的技能（skill）与 MCP 服务器可视化管理面板：在终端里输入 /skill-mcp 打开全屏管理场景，不用离开 TUI 就能查看、启用/停用、添加、分组技能与 MCP 服务器；改动尽量热加载，不要求重启 TUI。"
   },
   "schemaVersion": 1,
   "scripts": {

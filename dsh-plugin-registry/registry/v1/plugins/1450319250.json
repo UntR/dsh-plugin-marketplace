@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "ac12e20e13ffb9283f12e74007c6f0d5358ec05a"
   },
   "github": {
@@ -22,7 +22,7 @@
     "language": "JavaScript",
     "license": null,
     "nodeId": "R_kgDOVnIdkg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/d5c73050edfef392ad9b9cd554d0f4e3c6130ee31726486d3b369da8677d28bc/xiaijianghe/dsh-serial-monitor",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f0e395c6917a9d0c31c75272c3c7ad4f54062997032921ecf84ab43a54be1661/xiaijianghe/dsh-serial-monitor",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/342038268?v=4",
       "login": "xiaijianghe"
@@ -38,27 +38,39 @@
   },
   "id": "gh:1450319250",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/serial-monitor",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:xiaijianghe/dsh-serial-monitor#ac12e20e13ffb9283f12e74007c6f0d5358ec05a",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/serial-monitor",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/d5c73050edfef392ad9b9cd554d0f4e3c6130ee31726486d3b369da8677d28bc/xiaijianghe/dsh-serial-monitor",
+    "coverUrl": "https://opengraph.githubassets.com/f0e395c6917a9d0c31c75272c3c7ad4f54062997032921ecf84ab43a54be1661/xiaijianghe/dsh-serial-monitor",
     "description": "DSH 串口监视器插件，支持在线调参"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "在 DeepSeek Harness Web UI 中读取 Windows 串口（COM 口）数据。调参部分按 VOFA+ 的方式做成自适应的：通道数量从数据里自动识别、通道可以自己命名、通道顺序 / PID 默认值 / 限幅都能跟工程源码一键对齐，不再需要每次改固件都改插件。"
   },
   "schemaVersion": 1,
   "scripts": {

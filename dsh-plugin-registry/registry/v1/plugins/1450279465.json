@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "e324f2bc4f067a57a451aa587268bbe1b0bc314d"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnGCKQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/0ce428cc8dcefadda9ecc13eb385eabca2629c23757ae3aa512e7103d5369e6b/Red-Rayux/dsh-plugin-jetson",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/2a099fd3f1cca34b4d939b1abd5790fc90f9b2a8a0afd80330e564ae72ddcaee/Red-Rayux/dsh-plugin-jetson",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/260032971?v=4",
       "login": "Red-Rayux"
@@ -51,7 +51,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -61,14 +61,24 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dist/index.mjs",
+      "./package.json": "./package.json"
+    },
+    "main": "./dist/index.mjs",
+    "name": "dsh-plugin-jetson",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/0ce428cc8dcefadda9ecc13eb385eabca2629c23757ae3aa512e7103d5369e6b/Red-Rayux/dsh-plugin-jetson",
+    "coverUrl": "https://opengraph.githubassets.com/2a099fd3f1cca34b4d939b1abd5790fc90f9b2a8a0afd80330e564ae72ddcaee/Red-Rayux/dsh-plugin-jetson",
     "description": "DSH (DeepSeek Harness) Host plugin: six tools to operate a NVIDIA Jetson (Ubuntu/ROS1 Noetic) over SSH, with file-bridge health checks and self-repair."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 NVIDIA Jetson（Xavier NX / Ubuntu 20.04 / ROS1 Noetic / aarch64）接入 DeepSeek Harness（DSH） 的 Host 插件：注册 6 个模型可见工具，让 agent 用一次工具调用操作真实板子——执行命令、读写文件、列目录、体检 SSH 文件桥、断链自动修复。"
   },
   "schemaVersion": 1,
   "scripts": {

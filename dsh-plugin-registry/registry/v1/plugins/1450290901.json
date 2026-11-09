@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "59a7d2a95d43a4df4a66524041780231a5a9241e"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnGu1Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/dc1b653157ca5ea7b9ca2bd8bcfc799916246ea1b36023ec2f9e035fd51e7623/irerc/dsh-sync",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/189b57631a72706df7f6f26c783820615d919b29c16a2b3417d44ffb2127083b/irerc/dsh-sync",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/157017626?u=a8fc6b385b80b3141923908058d9a828f1f43467&v=4",
       "login": "irerc"
@@ -47,27 +47,39 @@
   },
   "id": "gh:1450290901",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-sync",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:irerc/dsh-sync#59a7d2a95d43a4df4a66524041780231a5a9241e",
+    "version": "1.2.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.3",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-sync",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/dc1b653157ca5ea7b9ca2bd8bcfc799916246ea1b36023ec2f9e035fd51e7623/irerc/dsh-sync",
+    "coverUrl": "https://opengraph.githubassets.com/189b57631a72706df7f6f26c783820615d919b29c16a2b3417d44ffb2127083b/irerc/dsh-sync",
     "description": "DSH 多设备文件型同步插件：本地目录 / WebDAV / peer 直连，支持 .dshsync 导入导出与自动同步"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH（DeepSeek Harness）的多设备同步插件：把用户选定的本地目录（DSH profile、会话记录、工作区文档等）以内容快照的形式发布到本地目录 / WebDAV / 另一台 DSH，并在多设备间做双向、增量、可冲突保护的同步；同时支持 .dshsync 单文件归档的导出与导入。"
   },
   "schemaVersion": 1,
   "scripts": {

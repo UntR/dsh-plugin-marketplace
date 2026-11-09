@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "c3ad9ec59a5ec049efa540a9e6d5bb8bf2ff9261"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOVnCmNQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/c0fba493f49abdf75e360750eccb78d68e64b6fa613ceeea8bf4df105d8cf070/PerryLink/dsh-source-cnki",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d980121ee25a9a0e5481a5e0406f5755e0acfdff8bf564472a91c092e984c427/PerryLink/dsh-source-cnki",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/255665900?u=c45dcefbeb0005ad85d4a3d472d67eec6d962dae&v=4",
       "login": "PerryLink"
@@ -48,27 +48,40 @@
   },
   "id": "gh:1450223157",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-source-cnki",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-source-cnki@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-source-cnki",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/c0fba493f49abdf75e360750eccb78d68e64b6fa613ceeea8bf4df105d8cf070/PerryLink/dsh-source-cnki",
+    "coverUrl": "https://opengraph.githubassets.com/d980121ee25a9a0e5481a5e0406f5755e0acfdff8bf564472a91c092e984c427/PerryLink/dsh-source-cnki",
     "description": "Chinese-literature tooling for DeepSeek Harness without scraping: import RIS/EndNote-style or labeled (题名：/作者：/来源：) exports into stable records, format GB/T 7714-2015 (顺序编码制) or APA 7 citations (no invented fields), and run structural metadata validation (missing fields, implausi"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Chinese-literature records: import your export, cite it in GB/T 7714, check the metadata — without scraping CNKI."
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "e0d928a952ab224a9c65761017378c3464847dca"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVmtp2g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7dbd79a442a7d987ac115851c91842fffc65b8f6b01760cb3d1a4365b8f6f129/bushizhanghan/dsh-arg-guard",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/0aae3cd365f003d79e64b1005d65650c86563056b00b9a93147d8745dd176bd8/bushizhanghan/dsh-arg-guard",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/270928395?v=4",
       "login": "bushizhanghan"
@@ -42,27 +42,38 @@
   },
   "id": "gh:1449880026",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@bushizhanghan/dsh-arg-guard",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@bushizhanghan/dsh-arg-guard@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./engine": "./lib/engine.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@bushizhanghan/dsh-arg-guard",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7dbd79a442a7d987ac115851c91842fffc65b8f6b01760cb3d1a4365b8f6f129/bushizhanghan/dsh-arg-guard",
+    "coverUrl": "https://opengraph.githubassets.com/0aae3cd365f003d79e64b1005d65650c86563056b00b9a93147d8745dd176bd8/bushizhanghan/dsh-arg-guard",
     "description": "DSH plugin: validate every tool call against the schema the tool declared (tool-argument schema guard)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "这个插件补上那道缺口：在 host 的 tools/pre-execute 瀑布里，按工具自己声明的 parameters 校验入参；违规就拒绝，并把确切的 JSON 路径 + 期望类型交给模型。 模型看到的不再是崩溃，而是一句能照着改的错。"
   },
   "schemaVersion": 1,
   "scripts": {

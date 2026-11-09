@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "870d5de064188f60911dbefddaed484585d7a1a9"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVmzXKg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f6130bdf15ee1b88ed9fda6f9e72b8ea85015266e07b9a51988569cdd4c0f76f/zh-Littlebird/dsh-plugin-gpustack",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/3a2e0646dc4b1ff45bd4bf6258ceb03b91442966fe017f017e781a146954bb0b/zh-Littlebird/dsh-plugin-gpustack",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/50728951?v=4",
       "login": "zh-Littlebird"
@@ -46,27 +46,39 @@
   },
   "id": "gh:1449973546",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-gpustack",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zh-Littlebird/dsh-plugin-gpustack#870d5de064188f60911dbefddaed484585d7a1a9",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client/index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-gpustack",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f6130bdf15ee1b88ed9fda6f9e72b8ea85015266e07b9a51988569cdd4c0f76f/zh-Littlebird/dsh-plugin-gpustack",
+    "coverUrl": "https://opengraph.githubassets.com/3a2e0646dc4b1ff45bd4bf6258ceb03b91442966fe017f017e781a146954bb0b/zh-Littlebird/dsh-plugin-gpustack",
     "description": "GPUStack v2 cluster tools for DSH: deploy and inspect models, workers, GPUs, logs, usage. DSH 的 GPUStack 集群运维工具：部署、盘点、日志与用量。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 GPUStack v2 的 /docs 运维接口做成 DeepSeek Harness 的 Agent 工具。安装后，模型可以直接盘点集群、部署模型、看实例日志、等就绪、跑推理验收、查用量，也能通过通用请求覆盖其余 200+ 端点。"
   },
   "schemaVersion": 1,
   "scripts": {

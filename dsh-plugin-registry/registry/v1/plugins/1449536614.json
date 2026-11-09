@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "d33494aada64336b22706d55fd8950570e4e6687"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVmYsZg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/dcaf88a8b830e3ac1e6c9d72432412f31f65b4e33a00db3c45dbdc32a7fcfdf9/zyzzyzyzyzzy/chat-to-persona",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c015e24f61db43b32e4a08394de68dedb4a242a2fdb2ba7d75313ddf011c0550/zyzzyzyzyzzy/chat-to-persona",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/196197155?v=4",
       "login": "zyzzyzyzyzzy"
@@ -55,7 +55,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -65,14 +65,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./core/*": "./lib/core/*",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "chat-to-persona",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/dcaf88a8b830e3ac1e6c9d72432412f31f65b4e33a00db3c45dbdc32a7fcfdf9/zyzzyzyzyzzy/chat-to-persona",
+    "coverUrl": "https://opengraph.githubassets.com/c015e24f61db43b32e4a08394de68dedb4a242a2fdb2ba7d75313ddf011c0550/zyzzyzyzyzzy/chat-to-persona",
     "description": "Turn exported chat logs (QQ record txt / DeepSeek export zip-txt) into AI persona cards for ??. Zero-dependency Node CLI + dsh plugin + skill."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把聊天记录蒸馏成能导入的角色卡。"
   },
   "schemaVersion": 1,
   "scripts": {

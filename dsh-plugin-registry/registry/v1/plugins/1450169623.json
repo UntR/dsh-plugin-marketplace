@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "38243d75d1e4ee6c513d12a027ccbbfa85c464cf"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVm_VFw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/b939c5364e1397e9e21e69b086e3f7c67936698e79776eb3064c9fae77620813/k623615746/dsh-chat-split",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/c36a9db5fed654115cbca71c570cee4a18e4bb87d6718758dfb25692cda10f55/k623615746/dsh-chat-split",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/88095859?u=7d2cdd25e07cb4928f7cad8de209b3349c0ffc2a&v=4",
       "login": "k623615746"
@@ -44,27 +44,39 @@
   },
   "id": "gh:1450169623",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-chat-split",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:k623615746/dsh-chat-split#38243d75d1e4ee6c513d12a027ccbbfa85c464cf",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-chat-split",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/b939c5364e1397e9e21e69b086e3f7c67936698e79776eb3064c9fae77620813/k623615746/dsh-chat-split",
+    "coverUrl": "https://opengraph.githubassets.com/c36a9db5fed654115cbca71c570cee4a18e4bb87d6718758dfb25692cda10f55/k623615746/dsh-chat-split",
     "description": "DSH 分屏对话插件：左侧栏入口 + 最多 4 屏并行对话，拖拽入屏即分屏，宿主顶栏与侧栏原样保留"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "左侧栏多一个入口，点开就是一块「最多四屏」的对话区：可以同时看不同工作区的不同对话，也可以把其中一个铺满。"
   },
   "schemaVersion": 1,
   "scripts": {

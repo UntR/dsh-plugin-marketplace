@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "6cf8c8467ebd9ee83f32f992723e31e3c5493382"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVmsbDQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/ba39adb07a9d51f8957f44740f5c8b9f40bebab6cc16be8dabe13489ba23acd0/a5899/dsh-powershell",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/5325443cd3f1d7a333fed6f5f8e23b51025aaf6a5c4cce6121b52cca91f61a94/a5899/dsh-powershell",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/113815243?v=4",
       "login": "a5899"
@@ -48,27 +48,38 @@
   },
   "id": "gh:1449859853",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-powershell",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:a5899/dsh-powershell#6cf8c8467ebd9ee83f32f992723e31e3c5493382",
+    "version": "1.0.12"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-powershell",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.12"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/ba39adb07a9d51f8957f44740f5c8b9f40bebab6cc16be8dabe13489ba23acd0/a5899/dsh-powershell",
+    "coverUrl": "https://opengraph.githubassets.com/5325443cd3f1d7a333fed6f5f8e23b51025aaf6a5c4cce6121b52cca91f61a94/a5899/dsh-powershell",
     "description": "DSH plugin: run PowerShell commands directly from the agent (inline code, no script files) with an explicit UAC-elevated tool, live streamed output, and an always-on 'prefer commands over scripts' policy."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 的 agent 一个直接敲命令的工具：PowerShell 代码进，输出出， 需要时还能弹 UAC 提权运行。目标不是\"多一个工具\"，而是让 agent 默认输入命令， 而不是为了跑一条命令先写一个 .ps1 再运行。"
   },
   "schemaVersion": 1,
   "scripts": {

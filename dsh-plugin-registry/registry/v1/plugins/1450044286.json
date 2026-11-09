@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
-    "headSha": "1e13aa3539a285663325b34358e97ee300334306"
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
+    "headSha": "0ead1cb31949f0fed013dc058fba0b59e6990465"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "DSH (DeepSeek Harness) plugin that compresses large tool outputs before they enter the model context, with hash-based retrieval of the original text.",
     "fork": false,
     "forks": 0,
-    "headSha": "1e13aa3539a285663325b34358e97ee300334306",
+    "headSha": "0ead1cb31949f0fed013dc058fba0b59e6990465",
     "homepageUrl": null,
     "language": "Python",
     "license": {
@@ -25,13 +25,13 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVm3rfg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f54e3e70ffa339890cf5418d2ba96c3873f159750220b67cfa33ee562c90536d/AQYLPZ/headroom-auto",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/61bec0a51330118f8c1275d247852b9f2cc547d94de3ee79ce31fe6107fd2d61/AQYLPZ/bale",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/152156547?v=4",
       "login": "AQYLPZ"
     },
-    "pushedAt": "2026-11-08T15:29:59Z",
-    "slug": "AQYLPZ/headroom-auto",
+    "pushedAt": "2026-11-09T06:26:33Z",
+    "slug": "AQYLPZ/bale",
     "stars": 0,
     "topics": [
       "ai-agent",
@@ -43,32 +43,42 @@
       "headroom",
       "llm"
     ],
-    "updatedAt": "2026-11-08T15:30:03Z",
-    "url": "https://github.com/AQYLPZ/headroom-auto"
+    "updatedAt": "2026-11-09T06:26:37Z",
+    "url": "https://github.com/AQYLPZ/bale"
   },
   "id": "gh:1450044286",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "bale",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:AQYLPZ/bale#0ead1cb31949f0fed013dc058fba0b59e6990465",
+    "version": "0.1.3"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "bale",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.3"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f54e3e70ffa339890cf5418d2ba96c3873f159750220b67cfa33ee562c90536d/AQYLPZ/headroom-auto",
+    "coverUrl": "https://opengraph.githubassets.com/61bec0a51330118f8c1275d247852b9f2cc547d94de3ee79ce31fe6107fd2d61/AQYLPZ/bale",
     "description": "DSH (DeepSeek Harness) plugin that compresses large tool outputs before they enter the model context, with hash-based retrieval of the original text."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个 DSH （DeepSeek Harness）插件。当 pwsh / bash / webfetch / runcode 等工具产生超大输出时，本插件在模型看到之前把它压缩成结构化摘要，同时把完整原文按内容哈希存到本地，模型需要细节时用 headroomretrieve(hash) 一键取回。"
   },
   "schemaVersion": 1,
   "scripts": {

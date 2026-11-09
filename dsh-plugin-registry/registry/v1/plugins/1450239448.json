@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "78ed190d3847efff90058bb8f74604c723fda92c"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnDl2A",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/0dcb3a5ecf65ef7fbe0ce73af6fb43085a1b32802efc7e1e99dc2832f71cdcf3/niueigang/dsh-capability-center",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/75e192bbaa306f28a3980e9a13b2d88d0913b67207b79cbeb2775003cae6ab40/niueigang/dsh-capability-center",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/95154754?u=91109eea98d9da5357f940e029a632cfa11169ce&v=4",
       "login": "niueigang"
@@ -46,27 +46,39 @@
   },
   "id": "gh:1450239448",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-capability-center",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:niueigang/dsh-capability-center#78ed190d3847efff90058bb8f74604c723fda92c",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-capability-center",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/0dcb3a5ecf65ef7fbe0ce73af6fb43085a1b32802efc7e1e99dc2832f71cdcf3/niueigang/dsh-capability-center",
+    "coverUrl": "https://opengraph.githubassets.com/75e192bbaa306f28a3980e9a13b2d88d0913b67207b79cbeb2775003cae6ab40/niueigang/dsh-capability-center",
     "description": "豆包式 DSH 能力中心：技能/插件/组合包/连接器可视化、可开关、点一下插进对话"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness 加一个豆包式的能力管理页： 技能、插件、组合包、MCP 连接器放在同一页，分组卡片 + 右侧开关 + 搜索； 技能点开能读完整说明，点「插入到对话」直接把 /技能名 放进输入框 —— 回车就是一次调用。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "6a70a077fc83dcb3da7a692f9f83c2c1e7783938"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVmzX0Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/398f9af6da9488b9f09ac8a91bb6dfedfdab73b1879b762e6f757c2af47cc2ac/zh-Littlebird/dsh-plugin-process-cleanup",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/2b82468ff4b84a59194236fed0364fe53d00ff86f9d2d6f592623abc528a4f71/zh-Littlebird/dsh-plugin-process-cleanup",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/50728951?v=4",
       "login": "zh-Littlebird"
@@ -45,27 +45,39 @@
   },
   "id": "gh:1449973713",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-process-cleanup",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zh-Littlebird/dsh-plugin-process-cleanup#6a70a077fc83dcb3da7a692f9f83c2c1e7783938",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "index.js",
+    "name": "dsh-plugin-process-cleanup",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/398f9af6da9488b9f09ac8a91bb6dfedfdab73b1879b762e6f757c2af47cc2ac/zh-Littlebird/dsh-plugin-process-cleanup",
+    "coverUrl": "https://opengraph.githubassets.com/2b82468ff4b84a59194236fed0364fe53d00ff86f9d2d6f592623abc528a4f71/zh-Littlebird/dsh-plugin-process-cleanup",
     "description": "Tidy temp files after a DSH task: delete or move them into .dsh-trash. DSH 任务收尾清理：清理本轮过程文件，直接删除或移入回收目录。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "任务收尾清理：在会产生文件的任务里提醒模型先清理过程文件，再给出最终答复。"
   },
   "schemaVersion": 1,
   "scripts": {

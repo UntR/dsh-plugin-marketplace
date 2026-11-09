@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "6ad000855c453362dd9dad48e676e37fbbf37dfd"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVZgSqg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/1604b586150b996e316edc3107d996fa711a67b9798f93247e4e69a68a967c09/smynbnb/dsh-ide-bridge",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/4df3b1d409d93e28e583d25508337cccf609dfcc4a5be51084e19dc6eabbcf83/smynbnb/dsh-ide-bridge",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/146512182?v=4",
       "login": "smynbnb"
@@ -47,27 +47,38 @@
   },
   "id": "gh:1436029610",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-ide-bridge",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:smynbnb/dsh-ide-bridge#6ad000855c453362dd9dad48e676e37fbbf37dfd",
+    "version": "0.5.6"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dsh-plugin/index.js",
+      "./mcp": "./dsh-plugin/mcp-bridge.js",
+      "./ui": "./dsh-plugin/ui-server.js"
+    },
+    "main": "dsh-plugin/index.js",
+    "name": "dsh-ide-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.6"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/1604b586150b996e316edc3107d996fa711a67b9798f93247e4e69a68a967c09/smynbnb/dsh-ide-bridge",
+    "coverUrl": "https://opengraph.githubassets.com/4df3b1d409d93e28e583d25508337cccf609dfcc4a5be51084e19dc6eabbcf83/smynbnb/dsh-ide-bridge",
     "description": "Bridge DeepSeek Harness into a JetBrains IDE tool window: compact panel, live streaming, approval prompts, IDE theme sampling, and MCP tools."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 DeepSeek Harness 接进 JetBrains IDE 的工具窗口： 桌面端照常运行，IDE 右侧直接对话、看流式输出、处理权限审批，不用再开浏览器标签页。"
   },
   "schemaVersion": 1,
   "scripts": {

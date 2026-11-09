@@ -1,13 +1,13 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
-    "headSha": "72c62b483d93e843eacccd8989cb0d148725e3cc"
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
+    "headSha": "11ed532ac7571e5b73c76ede0feaf1435663be12"
   },
   "github": {
     "archived": false,
@@ -17,7 +17,7 @@
     "description": "Local full-disk knowledge base plugin for DSH: C:/ + E:/ documents indexed into SQLite FTS5 trigram, with a searchable sidebar panel and a token-efficient kb agent tool.",
     "fork": false,
     "forks": 0,
-    "headSha": "72c62b483d93e843eacccd8989cb0d148725e3cc",
+    "headSha": "11ed532ac7571e5b73c76ede0feaf1435663be12",
     "homepageUrl": "https://github.com/hql6662/dsh-local-kb#readme",
     "language": "JavaScript",
     "license": {
@@ -25,12 +25,12 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVmYjcA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/020969359e7553477124fe1a121e75af520e86761f3c1c11ae167f04141b9dda/hql6662/dsh-local-kb",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/16000e0801d95d816cebdcd2e5d060a3b3a72f23865b69443b8dd00939271a34/hql6662/dsh-local-kb",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/200691490?v=4",
       "login": "hql6662"
     },
-    "pushedAt": "2026-11-07T16:31:45Z",
+    "pushedAt": "2026-11-09T10:18:00Z",
     "slug": "hql6662/dsh-local-kb",
     "stars": 0,
     "topics": [
@@ -42,32 +42,45 @@
       "local-first",
       "sqlite"
     ],
-    "updatedAt": "2026-11-07T16:30:32Z",
+    "updatedAt": "2026-11-09T10:18:01Z",
     "url": "https://github.com/hql6662/dsh-local-kb"
   },
   "id": "gh:1449534320",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-local-kb",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:hql6662/dsh-local-kb#11ed532ac7571e5b73c76ede0feaf1435663be12",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./assets/icon-180.png",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-local-kb",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/020969359e7553477124fe1a121e75af520e86761f3c1c11ae167f04141b9dda/hql6662/dsh-local-kb",
+    "coverUrl": "https://opengraph.githubassets.com/16000e0801d95d816cebdcd2e5d060a3b3a72f23865b69443b8dd00939271a34/hql6662/dsh-local-kb",
     "description": "Local full-disk knowledge base plugin for DSH: C:/ + E:/ documents indexed into SQLite FTS5 trigram, with a searchable sidebar panel and a token-efficient kb agent tool."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把本机 C: / E: 全盘文档（PDF / Markdown / TXT / Word / PPT / Excel / EPUB / MOBI / CHM / RTF / HTML / JSON / CSV / …）抽成纯文本，写入一个 SQLite FTS5 trigram 全文索引；以 DSH 侧栏插件提供搜索面板，并提供一个给 Agent 用的 kb 工具。"
   },
   "schemaVersion": 1,
   "scripts": {

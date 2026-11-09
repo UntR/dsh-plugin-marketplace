@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "6a2193db14135347fff17d2b86782c2e64c482c4"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnQylg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/2a5934a8dc8dca5c7532a3be3a08eb6fe81a8f49244d02f1dfc64c298d1bffd8/F-YXL/dsh-mimo-speak",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7dadb8c726ccd2f0f6e4421bff3b5783b45eafcefcd407f4e5587cda3693960f/F-YXL/dsh-mimo-speak",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/170423531?v=4",
       "login": "F-YXL"
@@ -47,27 +47,46 @@
   },
   "id": "gh:1450455702",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-mimo-speak",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:F-YXL/dsh-mimo-speak#6a2193db14135347fff17d2b86782c2e64c482c4",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/node/index.js",
+        "types": "./lib/node/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/node/client/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/node/index.js",
+    "name": "dsh-mimo-speak",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/2a5934a8dc8dca5c7532a3be3a08eb6fe81a8f49244d02f1dfc64c298d1bffd8/F-YXL/dsh-mimo-speak",
+    "coverUrl": "https://opengraph.githubassets.com/7dadb8c726ccd2f0f6e4421bff3b5783b45eafcefcd407f4e5587cda3693960f/F-YXL/dsh-mimo-speak",
     "description": "Read assistant replies aloud in DeepSeek Harness — Xiaomi MiMo TTS with 9 preset voices, voice cloning, and an optional Edge TTS fallback"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Reads assistant replies out loud in DeepSeek Harness, using Xiaomi MiMo TTS."
   },
   "schemaVersion": 1,
   "scripts": {

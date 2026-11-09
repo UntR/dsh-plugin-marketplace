@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "e8747c07e6956d907d341b58b621c4ac8a1878ee"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVm3MZw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/73743e8dd8776d5be97f13b22e2acce270746952e2f918835d1ed816495c0d0c/shuirongshen/dsh-git-fork-chat",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7ffbfc3c4f5a87f08ded7dbb96d4c1daa47469e9ef91dda86852485c7e0b85d5/shuirongshen/dsh-git-fork-chat",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/309968195?v=4",
       "login": "shuirongshen"
@@ -47,27 +47,43 @@
   },
   "id": "gh:1450036327",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-gitchat",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:shuirongshen/dsh-git-fork-chat#e8747c07e6956d907d341b58b621c4ac8a1878ee",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json",
+      "./src/*": "./src/*"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-gitchat",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/73743e8dd8776d5be97f13b22e2acce270746952e2f918835d1ed816495c0d0c/shuirongshen/dsh-git-fork-chat",
+    "coverUrl": "https://opengraph.githubassets.com/7ffbfc3c4f5a87f08ded7dbb96d4c1daa47469e9ef91dda86852485c7e0b85d5/shuirongshen/dsh-git-fork-chat",
     "description": "一个可以让 AI 对话成为树状图的 dsh 插件，可以进行归档，fork，上下文继承式管理 / A DSH plugin that turns AI chats into a Git-like tree."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Conversations are trees. Your context should be too."
   },
   "schemaVersion": 1,
   "scripts": {

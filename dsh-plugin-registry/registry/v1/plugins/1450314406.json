@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "fe4c5f4b596251ceb3456949c02e5dadec2a86c1"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnIKpg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3f03519a0231bdac058bfebb1635dbb69dbfca4b3e224e4fcfbe2077446c96f2/yuweitk/dsh-lan-proxy",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/90681cf0dc60367cb6d9a7e4a31ba52a00dcf50cde6a54f375d6074bdabeb29f/yuweitk/dsh-lan-proxy",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/46144620?u=fa5a758da083a737c32d39e0fcebaccd3bb3b323&v=4",
       "login": "yuweitk"
@@ -50,24 +50,42 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.2.10",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.js",
+        "types": "./lib/client/index.d.ts"
+      },
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "@wingsky-1/dsh-lan-proxy",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.10-fork.2"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3f03519a0231bdac058bfebb1635dbb69dbfca4b3e224e4fcfbe2077446c96f2/yuweitk/dsh-lan-proxy",
+    "coverUrl": "https://opengraph.githubassets.com/90681cf0dc60367cb6d9a7e4a31ba52a00dcf50cde6a54f375d6074bdabeb29f/yuweitk/dsh-lan-proxy",
     "description": "Fork of @wingsky-1/dsh-lan-proxy@0.2.10 with same-origin Referer rewrite for LAN access"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "局域网访问 dsh web UI：在 0.0.0.0: 监听，把 HTTP/HTTPS 与 WebSocket 转发到回环 web 服务器（默认 127.0.0.1:3080），并重写 Host / Origin / 同源 Referer， 以便通过 /api 的浏览器信任围栏。"
   },
   "schemaVersion": 1,
   "scripts": {

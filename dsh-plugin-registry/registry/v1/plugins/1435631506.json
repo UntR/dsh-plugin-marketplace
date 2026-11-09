@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "1fe79d8d0b5a6bb74faea9e53dab86f9049044f5"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOVZH_kg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/8eaf5d6641ac8202b3dc35233cdccf3815e28b2f2af250d872f91bdd5cbf28c1/schrolemons/chat-harness-7-2-lays-for-a-AI-bot",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e791359c14ec6cbe142a273024cabc859a686f189594316a3ae3451b94d8e80e/schrolemons/chat-harness-7-2-lays-for-a-AI-bot",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/134617538?u=3b143bd3beb7fd04111c8ca6c3ecdf674b951220&v=4",
       "login": "schrolemons"
@@ -44,32 +44,46 @@
   },
   "id": "gh:1435631506",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "qq-bridge",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:schrolemons/chat-harness-7-2-lays-for-a-AI-bot#1fe79d8d0b5a6bb74faea9e53dab86f9049044f5",
+    "version": "0.5.1"
   },
   "npm": {
     "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./dsh-entry.mjs",
+      "./client": "./dsh-client.js",
+      "./dsh-mcp-entry.mjs": "./dsh-mcp-entry.mjs",
+      "./locale/*": "./locale/*",
+      "./package.json": "./package.json",
+      "./plugins/*": "./plugins/*"
+    },
+    "main": "./dsh-entry.mjs",
+    "name": "qq-bridge",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/8eaf5d6641ac8202b3dc35233cdccf3815e28b2f2af250d872f91bdd5cbf28c1/schrolemons/chat-harness-7-2-lays-for-a-AI-bot",
+    "coverUrl": "https://opengraph.githubassets.com/e791359c14ec6cbe142a273024cabc859a686f189594316a3ae3451b94d8e80e/schrolemons/chat-harness-7-2-lays-for-a-AI-bot",
     "description": "7+2 chat harness for DSH, OneBot and optional Codex Peer; privacy-clean distribution"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个面向 QQ 私聊与群聊的有状态 Agent harness，以 DeepSeek Harness（DSH）为模型、会话与工具宿主，通过 SnowLuma 接入 QQ。它在消息收发之外，管理上下文装填、记忆、人物身份、发送计划、等待、主动行为和运行观测。"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
-    "postinstall": false,
+    "postinstall": true,
     "preinstall": false,
     "prepare": false
   }

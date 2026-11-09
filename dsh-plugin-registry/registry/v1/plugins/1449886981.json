@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "e4c1178e6baeedcde73af6df7a880af9e77f3257"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVmuFBQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/bf918fa10b807a01676324dbc99783bc63511cc67b56aef80c7b7f3573b97c43/991206772-debug/dsh-notes",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d91865ac48f5d87c3fda264e0749c6c5e8790e3530790a615d832a7d773286a1/991206772-debug/dsh-notes",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/244015694?v=4",
       "login": "991206772-debug"
@@ -41,27 +41,39 @@
   },
   "id": "gh:1449886981",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-notes",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:991206772-debug/dsh-notes#e4c1178e6baeedcde73af6df7a880af9e77f3257",
+    "version": "1.0.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/dsh-notes",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/bf918fa10b807a01676324dbc99783bc63511cc67b56aef80c7b7f3573b97c43/991206772-debug/dsh-notes",
+    "coverUrl": "https://opengraph.githubassets.com/d91865ac48f5d87c3fda264e0749c6c5e8790e3530790a615d832a7d773286a1/991206772-debug/dsh-notes",
     "description": "Pinned project notes in the Harness sidebar; enabled notes are injected into the agent's system prompt."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "A DSH bundle that adds a left-sidebar page of notes pinned per project. Notes you switch on are rendered into the agent's system prompt on every step, so project conventions and personal preferences stay in context without being repeated."
   },
   "schemaVersion": 1,
   "scripts": {

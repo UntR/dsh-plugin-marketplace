@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "dd09c4c59171c25a10ed8d5741540259ddfd0411"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVmXYiw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/95057cff77e7a474a0c55e87c3a759654fe9281c55e836f1789f71e6c16bb148/xbzbing/dsh-github-message",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/e3df308e73037fa14b2dab97a661c233eb3be46881f029d40043fe67b3805c24/xbzbing/dsh-github-message",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/1829426?v=4",
       "login": "xbzbing"
@@ -43,27 +43,40 @@
   },
   "id": "gh:1449515147",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-github-message",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-github-message@0.1.0",
+    "version": "0.1.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./client": "./lib/client.js",
+      "./icon": "./assets/icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "./lib/index.js",
+    "name": "dsh-github-message",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/95057cff77e7a474a0c55e87c3a759654fe9281c55e836f1789f71e6c16bb148/xbzbing/dsh-github-message",
+    "coverUrl": "https://opengraph.githubassets.com/e3df308e73037fa14b2dab97a661c233eb3be46881f029d40043fe67b3805c24/xbzbing/dsh-github-message",
     "description": "Github 消息来源：通过 gh 命令轮询获取 github 的消息，可以主动提醒或者作为数据源接入 superagent。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "dsh-github-message 是 DSH（DeepSeek Harness） 的一个消息来源插件： 用本机 gh 只读轮询 GitHub，把「待我评审的 PR」「我维护的仓库里新开的 Issue」「有人 @ 我」翻译成 my-superagent/v1 信号，交给 dsh-my-superagent 决定要不要打扰主人。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "39bd078fc04f71a85ecbabcf686ed5357b827d25"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVm9fYg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/04af26929cbce71250c3c66d8c2eeb018036a57852b941fc1dca04f1b5428279/c10ck-p/dsh-checkpoint-dock",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/52fe2109bb9bdb3f257351284c4e5e37c69570414c1e84d73134c802a34d73a1/c10ck-p/dsh-checkpoint-dock",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/125860744?u=97f387400f9473dd33a345738b1561a4d8ed6a48&v=4",
       "login": "c10ck-p"
@@ -41,27 +41,40 @@
   },
   "id": "gh:1450139490",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-checkpoint-dock",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "dsh-checkpoint-dock@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.mjs",
+      "./client": "./client/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json",
+      "./typert": "./typert.host.mjs"
+    },
+    "main": "./index.mjs",
+    "name": "dsh-checkpoint-dock",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/04af26929cbce71250c3c66d8c2eeb018036a57852b941fc1dca04f1b5428279/c10ck-p/dsh-checkpoint-dock",
+    "coverUrl": "https://opengraph.githubassets.com/52fe2109bb9bdb3f257351284c4e5e37c69570414c1e84d73134c802a34d73a1/c10ck-p/dsh-checkpoint-dock",
     "description": "Per-turn, per-file checkpoints for DeepSeek Harness: keep, undo, redo, and revert to here from a dock above the composer."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness 提供一个 IDE 风格的检查点 dock：agent 每一轮改过哪些文件、改了什么，都会出现在输入框上方，并且可以直接 保留、撤销、重做、回退。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "b8b17ac4fb974b8d0576449abf759f2861595c0d"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVm9skw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/32f371a7669077f67c8bf5e3ab4d53170127034970aead0bb230765462e5d8df/Anmoku-Yomogi/dsh-convert-token-to-cny",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/8380cc8f5e8f5d0924d399fff995d6b93db9e4bc9d1d11b15ebbae1e9d2fe6a5/Anmoku-Yomogi/dsh-convert-token-to-cny",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/273981061?v=4",
       "login": "Anmoku-Yomogi"
@@ -45,27 +45,39 @@
   },
   "id": "gh:1450142867",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@local/dsh-token-cost",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Anmoku-Yomogi/dsh-convert-token-to-cny#b8b17ac4fb974b8d0576449abf759f2861595c0d",
+    "version": "1.0.1"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "@local/dsh-token-cost",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/32f371a7669077f67c8bf5e3ab4d53170127034970aead0bb230765462e5d8df/Anmoku-Yomogi/dsh-convert-token-to-cny",
+    "coverUrl": "https://opengraph.githubassets.com/8380cc8f5e8f5d0924d399fff995d6b93db9e4bc9d1d11b15ebbae1e9d2fe6a5/Anmoku-Yomogi/dsh-convert-token-to-cny",
     "description": "在 DeepSeek Harness 对话信息栏显示本会话 Token 花费折算成人民币的估算值，自动区分峰谷价。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 的底部信息栏本来就会显示 Token 总量和缓存命中率，但「这段对话到底花了多少钱」还得自己心算。这个插件在完全保留原有信息的前提下，追加一枚 ≈￥0.0123 的小胶囊，悬停即可看到完整拆分。"
   },
   "schemaVersion": 1,
   "scripts": {

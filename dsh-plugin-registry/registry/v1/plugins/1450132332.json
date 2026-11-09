@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "93f31e2a362d403f243584029badc24519343eb1"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVm9DbA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/3248aa0e9af872f5dd97775db18b2e75c48dcd512941487878169b4d7307927c/zbc0315/dsh-jargon-list",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/3c20dbd9cd4107efc5eb922feb4fd8ad062431833a3a668c39490412e0d5fbc7/zbc0315/dsh-jargon-list",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/62389427?v=4",
       "login": "zbc0315"
@@ -45,27 +45,40 @@
   },
   "id": "gh:1450132332",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@tom2012/dsh-jargon-list",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@tom2012/dsh-jargon-list@0.1.1",
+    "version": "0.1.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.1",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./src/host/index.js",
+      "./client": "./client/bundle.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "src/host/index.js",
+    "name": "@tom2012/dsh-jargon-list",
+    "status": "valid",
+    "type": null,
+    "version": "0.1.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/3248aa0e9af872f5dd97775db18b2e75c48dcd512941487878169b4d7307927c/zbc0315/dsh-jargon-list",
+    "coverUrl": "https://opengraph.githubassets.com/3c20dbd9cd4107efc5eb922feb4fd8ad062431833a3a668c39490412e0d5fbc7/zbc0315/dsh-jargon-list",
     "description": "黑话单：记录本项目里临时起的简称（黑话）及其详细含义，人和 agent 共用一份；右侧栏页签浏览、增删改查（DSH 插件）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness Web 用的持久化插件：把 agent 在任务里临时起的短名（黑话）和一个项目内的详细含义记在一张表里，人和 agent 共用同一份数据。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "3a3a2f418164e6b34b0a94404a3e0c495b0f5e15"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnP50Q",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e4fe7fcefaaeb5a4113986835184e2f6dedc0d3c112f5e41e9b59fa11f0e3b01/zhangweijian97/dsh-clamawake",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/314d45bb3703f971a82ed6f32d6799b1fb222d398ebcd2f34087ea0d1ec72cef/zhangweijian97/dsh-clamawake",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/52686008?u=0eb5c860415631a4f9f0467a9d04adbd06bcab17&v=4",
       "login": "zhangweijian97"
@@ -41,27 +41,38 @@
   },
   "id": "gh:1450441169",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-clamawake",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zhangweijian97/dsh-clamawake#3a3a2f418164e6b34b0a94404a3e0c495b0f5e15",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-clamawake",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e4fe7fcefaaeb5a4113986835184e2f6dedc0d3c112f5e41e9b59fa11f0e3b01/zhangweijian97/dsh-clamawake",
+    "coverUrl": "https://opengraph.githubassets.com/314d45bb3703f971a82ed6f32d6799b1fb222d398ebcd2f34087ea0d1ec72cef/zhangweijian97/dsh-clamawake",
     "description": "Bind the ClamAwake lid-closed keep-alive recipe to the DeepSeek Harness host lifecycle (macOS)."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 ClamAwake 的合盖保活配方绑到 DSH 宿主生命周期上：DSH 启动 = 保活在跑，DSH 停止 = 保活停。没有 web 面板（无 UI 需求），纯宿主半边的后台插件。"
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "d1cd1c724012548775b26098470662edf45d3131"
   },
   "github": {
@@ -25,14 +25,14 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVm88Pw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/07e0493de659dfa0f1947d842f65137ffa563b0f0f8c7da43759f797b90f8ac6/CarryChang/dsh-task2docker-studio",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/99cf4bfbe63d8450b7c40a979dc549ab914f7bc25cc58ab90ebb113921f86f74/CarryChang/dsh-task2docker-studio",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/32272468?u=01879330d3f913fc9fbafd1af3ce86b8bf1d28a0&v=4",
       "login": "CarryChang"
     },
     "pushedAt": "2026-11-08T09:52:24Z",
     "slug": "CarryChang/dsh-task2docker-studio",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "agent-skill",
       "container",
@@ -45,7 +45,7 @@
       "ssh",
       "task-dispatch"
     ],
-    "updatedAt": "2026-11-08T09:53:47Z",
+    "updatedAt": "2026-11-09T08:08:51Z",
     "url": "https://github.com/CarryChang/dsh-task2docker-studio"
   },
   "id": "gh:1450130495",
@@ -53,7 +53,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose a ready package entry point.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -63,14 +63,30 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./package.json": "./package.json",
+      "./skill": "./SKILL.md"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-task2docker-studio",
+    "status": "valid",
+    "type": "module",
+    "version": "0.5.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/07e0493de659dfa0f1947d842f65137ffa563b0f0f8c7da43759f797b90f8ac6/CarryChang/dsh-task2docker-studio",
+    "coverUrl": "https://opengraph.githubassets.com/99cf4bfbe63d8450b7c40a979dc549ab914f7bc25cc58ab90ebb113921f86f74/CarryChang/dsh-task2docker-studio",
     "description": "把本机跑不动/不敢跑的任务下发到你自己的 SSH 服务器执行：Docker 容器隔离运行 + scp 文件传输 + 状态/日志跟随监控，厂家中立，附带可装进 Claude Code/Cursor/Copilot 的通用 Agent Skill。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "English · 简体中文"
   },
   "schemaVersion": 1,
   "scripts": {

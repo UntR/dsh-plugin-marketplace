@@ -5,8 +5,8 @@
     "patchExists": null
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "3f621e09f7a6e5cee72cb64995063d54d6e59c4e"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVm34XQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e6ec86a207f5b1571955b6359883e581e60940bf89c97e407e04f2b85b6d0bad/hhhhjjjkk/dsh-astra-effort",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/75231ed560bdffded5cb9e65ddce1c8856c3938f21f54e0f826d5d1463100f46/hhhhjjjkk/dsh-astra-effort",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/259222292?u=60570e59235d9e7e30ee35026db4fe37d09e80c9&v=4",
       "login": "hhhhjjjkk"
@@ -49,7 +49,7 @@
     "available": false,
     "packageName": null,
     "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "reason": "Repository does not expose an installable DSH bundle.",
     "requiresBuildApproval": false,
     "spec": null,
     "version": null
@@ -59,14 +59,25 @@
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./package.json": "./package.json"
+    },
+    "main": "./index.js",
+    "name": "dsh-astra-effort",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e6ec86a207f5b1571955b6359883e581e60940bf89c97e407e04f2b85b6d0bad/hhhhjjjkk/dsh-astra-effort",
+    "coverUrl": "https://opengraph.githubassets.com/75231ed560bdffded5cb9e65ddce1c8856c3938f21f54e0f826d5d1463100f46/hhhhjjjkk/dsh-astra-effort",
     "description": "DSH 持久插件：Astra 风格思考强度选择卡片（拖拽滑条+粒子动画+可打断动画+强度护栏）"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个为 DeepSeek Harness（DSH） 开发的持久插件。把输入框原本朴素的模型/思考强度选择器，换成 Astra 风格白色卡片：大号强度名称、拖拽滑条、粒子动画，并附带强度合法性兜底（防止用户在某个模型上选择了它不支持的思考强度而报错）。"
   },
   "schemaVersion": 1,
   "scripts": {

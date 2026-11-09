@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "46f665a8c25fa04563e4172fa153a3d910096e56"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "NOASSERTION"
     },
     "nodeId": "R_kgDOVnQPGw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/5597a4c9a37ecac03ab29b76bd43fd2904bb193dd582cdb33adc76354f9501db/tedcriss/dsh-matlab",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/dfff5a574c9a287a40aa18693082642ee024dd13a92c3d644495316bfadd60e2/tedcriss/dsh-matlab",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/20439247?u=9568edf171f252cacbe2edfb0ab650a23b045406&v=4",
       "login": "tedcriss"
@@ -44,27 +44,42 @@
   },
   "id": "gh:1450446619",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-matlab",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:tedcriss/dsh-matlab#46f665a8c25fa04563e4172fa153a3d910096e56",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-matlab",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/5597a4c9a37ecac03ab29b76bd43fd2904bb193dd582cdb33adc76354f9501db/tedcriss/dsh-matlab",
+    "coverUrl": "https://opengraph.githubassets.com/dfff5a574c9a287a40aa18693082642ee024dd13a92c3d644495316bfadd60e2/tedcriss/dsh-matlab",
     "description": "MATLAB Agentic Toolkit skills and MATLAB MCP Server tools for DeepSeek Harness."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "把 MathWorks 官方的 MATLAB 能力接进 DeepSeek Harness 与 DSH Desktop："
   },
   "schemaVersion": 1,
   "scripts": {

@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "0863bb8461230339e3cb75e6ddae54ec168c1dd4"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnB6tQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/6ce9dc67d19f7da4166d3dae5fbc298acacf0d486ebd0a653901b9ca45f393d9/nuclearmilk/dsh-hud",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/ad8ead39a55db67f1dc1ed96fd5c42bcd4b073da3028baf8d8b94806720df4ed/nuclearmilk/dsh-hud",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/110899828?v=4",
       "login": "nuclearmilk"
@@ -48,27 +48,42 @@
   },
   "id": "gh:1450212021",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-hud",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:nuclearmilk/dsh-hud#0863bb8461230339e3cb75e6ddae54ec168c1dd4",
+    "version": "1.5.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.1.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-hud",
+    "status": "valid",
+    "type": "module",
+    "version": "1.5.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/6ce9dc67d19f7da4166d3dae5fbc298acacf0d486ebd0a653901b9ca45f393d9/nuclearmilk/dsh-hud",
+    "coverUrl": "https://opengraph.githubassets.com/ad8ead39a55db67f1dc1ed96fd5c42bcd4b073da3028baf8d8b94806720df4ed/nuclearmilk/dsh-hud",
     "description": "Cappella-style floating bubble task notification HUD for DeepSeek Harness"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness 打造的屏幕贴边任务通知流。群唱（Cappella）风格的水润毛玻璃气泡会在屏幕边缘实时浮出，汇报 THINKING / WORKING / STEP DONE / COMPLETED 四类进度，像聊天一样陪着你干活。"
   },
   "schemaVersion": 1,
   "scripts": {

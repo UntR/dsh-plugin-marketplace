@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "d9d9545dec7bbae083f8ee599c3f84932b747d30"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVmhW6g",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/08b7e11e8997b14c3067f3c3e7d797baa81098db4f1bf0bc7a00097fa31ad1fc/YansongG-HKU/dsh-design-studio",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/71b176321b3042a78ecb6906e16734073081e9a2f37fb195eaccfc8a398dab05/YansongG-HKU/dsh-design-studio",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/150799901?v=4",
       "login": "YansongG-HKU"
@@ -52,27 +52,40 @@
   },
   "id": "gh:1449678570",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-design-studio",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:YansongG-HKU/dsh-design-studio#d9d9545dec7bbae083f8ee599c3f84932b747d30",
+    "version": "1.3.1"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "0.14.0",
+    "published": true,
+    "repositoryMatches": false
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-design-studio",
+    "status": "valid",
+    "type": "module",
+    "version": "1.3.1"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/08b7e11e8997b14c3067f3c3e7d797baa81098db4f1bf0bc7a00097fa31ad1fc/YansongG-HKU/dsh-design-studio",
+    "coverUrl": "https://opengraph.githubassets.com/71b176321b3042a78ecb6906e16734073081e9a2f37fb195eaccfc8a398dab05/YansongG-HKU/dsh-design-studio",
     "description": "设计台（dsh-design-studio）: Claude Design-class design studio for DeepSeek Harness — 6-step start wizard with intake questions, design-system context, 3 graded HTML variants, Figma-class editor, inline comments, Tweaks, headless-browser checks (0-100 A-F), 5 export formats. Pure Node"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个装在 DeepSeek Harness 里的设计工作台：用真实 HTML 做画布，用真实无头浏览器做质检，产出可以直接交接的代码。它是 Claude Design 能力在 DSH 原生的实现——不是模仿截图，而是把「开始与提问 → 语境采集 → 三档变体 → 画布编辑 → 质量门禁 → 导出」这条工作流做成 11 个 agent 工具、一组本地 HTTP 路由和一个侧边栏面板。"
   },
   "schemaVersion": 1,
   "scripts": {

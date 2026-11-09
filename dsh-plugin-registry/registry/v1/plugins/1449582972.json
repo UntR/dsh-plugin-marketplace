@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "6e84ae930958d8e3a94412ad86dbbd843f993ecd"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVmbhfA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f81dd0cdb05eb9122df5548f8e139110413e0c8f59dde07fc30f902da2bc1338/phoenixyun/dsh-plugin-dlidl",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f282d6501135e0cd2e77acc2806906ccaf13fb6a4fc1246febf4f087de2f1a54/phoenixyun/dsh-plugin-dlidl",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/48388649?u=4f146764c62a433340cfcce7873443ca6afaf5bb&v=4",
       "login": "phoenixyun"
@@ -46,27 +46,43 @@
   },
   "id": "gh:1449582972",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-dlidl",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:phoenixyun/dsh-plugin-dlidl#6e84ae930958d8e3a94412ad86dbbd843f993ecd",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./lib/client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-dlidl",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f81dd0cdb05eb9122df5548f8e139110413e0c8f59dde07fc30f902da2bc1338/phoenixyun/dsh-plugin-dlidl",
+    "coverUrl": "https://opengraph.githubassets.com/f282d6501135e0cd2e77acc2806906ccaf13fb6a4fc1246febf4f087de2f1a54/phoenixyun/dsh-plugin-dlidl",
     "description": "DliDli — Bilibili-style danmaku mode for DeepSeek Harness: the model's streaming reply flies across the top of the window as bullet comments, while the composer keeps its place."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Danmaku and live-chat overlays for DSH. The model's streaming reasoning and answer can be shown in two ways, switchable at runtime:"
   },
   "schemaVersion": 1,
   "scripts": {

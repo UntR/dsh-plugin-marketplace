@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "e3ae53f6619dcc806ab50cf5b3340079421c7f4b"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVmxTmw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/f4885f69bf9eda43cbcc44084199ecee7dfa954b2f28f488cf7fe68f9337380a/creatjy/dsh-context-control",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/7df8fc77f24e2cbc2ee70108944788e220237b473eb3a9d6d6b5e07dafc22b14/creatjy/dsh-context-control",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/353934884?v=4",
       "login": "creatjy"
@@ -47,27 +47,43 @@
   },
   "id": "gh:1449939867",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-context-control",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:creatjy/dsh-context-control#e3ae53f6619dcc806ab50cf5b3340079421c7f4b",
+    "version": "0.6.8"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": {
+        "default": "./client.js"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-context-control",
+    "status": "valid",
+    "type": "module",
+    "version": "0.6.8"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/f4885f69bf9eda43cbcc44084199ecee7dfa954b2f28f488cf7fe68f9337380a/creatjy/dsh-context-control",
+    "coverUrl": "https://opengraph.githubassets.com/7df8fc77f24e2cbc2ee70108944788e220237b473eb3a9d6d6b5e07dafc22b14/creatjy/dsh-context-control",
     "description": "DeepSeek Harness 上下文管控：看清 token 构成，按会话懒加载技能/MCP/插件，按需压缩。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "Context control for DeepSeek Harness. 看清 token 花在哪，再决定这一轮发什么。"
   },
   "schemaVersion": 1,
   "scripts": {

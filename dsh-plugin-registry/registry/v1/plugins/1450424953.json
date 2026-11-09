@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "c649b7da9ad26bedbc0db97c50833612194b1d27"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnO6eQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/c5f7b22b4d8bb2af475d5a0b1f91fdff1cfb773c45fbee826dec86ae8dfd932f/Luohuayeyv/dsh-account-hub",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/2408ff356df1debd9b60ddc40032fa47fdb3dac7fcd2d3a02c06f726e40917fa/Luohuayeyv/dsh-account-hub",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/354063670?u=4468b78b46c95ccc4e7784ac74d3460838b8311b&v=4",
       "login": "Luohuayeyv"
@@ -43,32 +43,44 @@
       "dsh-plugin",
       "human-verification"
     ],
-    "updatedAt": "2026-11-08T17:06:19Z",
+    "updatedAt": "2026-11-08T17:14:40Z",
     "url": "https://github.com/Luohuayeyv/dsh-account-hub"
   },
   "id": "gh:1450424953",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-account-hub",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Luohuayeyv/dsh-account-hub#c649b7da9ad26bedbc0db97c50833612194b1d27",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": null,
+    "name": "dsh-account-hub",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/c5f7b22b4d8bb2af475d5a0b1f91fdff1cfb773c45fbee826dec86ae8dfd932f/Luohuayeyv/dsh-account-hub",
+    "coverUrl": "https://opengraph.githubassets.com/2408ff356df1debd9b60ddc40032fa47fdb3dac7fcd2d3a02c06f726e40917fa/Luohuayeyv/dsh-account-hub",
     "description": "Site account manager for DeepSeek Harness: encrypted site accounts (URL + username + password) with a Settings page, plus Edge-based authenticated search/fetch tools for agents, including a human-verification handoff in a visible browser window."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DeepSeek Harness 插件：在 设置 → 账号管理 中保存网站账号（网址 + 账号 + 密码），并让子智能体在搜索/阅读资料时复用这些登录会话；遇到验证码 / 人机验证 / 二次验证时，自动弹出可见浏览器窗口，由你亲手完成验证后继续（插件不会自动破解验证码）。"
   },
   "schemaVersion": 1,
   "scripts": {

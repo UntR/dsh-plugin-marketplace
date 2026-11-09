@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "3126fefb4d9e69c6a44cf6c3ac149aad6a6f217c"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnHDYg",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/63f53c77e77578efd10d4513edf22475c4add91c21b343a941b90ca9ab86462e/liuhange789/dsh-toolgate-plus",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/2c2295f9d989689296889b70699a59336a02124c723a7c815e648dd683ac09b0/liuhange789/dsh-toolgate-plus",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/279878550?u=f3ce1e153d784ac6892d9a6ffbfae4ee941337c1&v=4",
       "login": "liuhange789"
@@ -43,27 +43,44 @@
   },
   "id": "gh:1450296162",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "@liuhange/dsh-toolgate-plus",
+    "preferred": "npm",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "@liuhange/dsh-toolgate-plus@1.0.0",
+    "version": "1.0.0"
   },
   "npm": {
-    "latestVersion": null,
-    "published": false,
-    "repositoryMatches": null
+    "latestVersion": "1.0.0",
+    "published": true,
+    "repositoryMatches": true
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./host/dist/index.js",
+        "types": "./host/dist/index.d.ts"
+      },
+      "./client": {
+        "default": "./client/dist/index.js",
+        "types": "./client/dist/index.d.ts"
+      },
+      "./package.json": "./package.json"
+    },
+    "main": "./host/dist/index.js",
+    "name": "@liuhange/dsh-toolgate-plus",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/63f53c77e77578efd10d4513edf22475c4add91c21b343a941b90ca9ab86462e/liuhange789/dsh-toolgate-plus",
+    "coverUrl": "https://opengraph.githubassets.com/2c2295f9d989689296889b70699a59336a02124c723a7c815e648dd683ac09b0/liuhange789/dsh-toolgate-plus",
     "description": "DSH plugin: session-stage-aware dynamic tool gating (explore / edit / debug) with throttled agent.followup hints and a status-bar stage indicator."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "会话阶段感知的动态工具准入插件。监听 tools/pre-execute，用最近 5 次工具调用判断当前处于探索、编辑还是调试阶段，并在阶段切换时给出一次性建议。"
   },
   "schemaVersion": 1,
   "scripts": {

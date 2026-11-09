@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "439f474d10f5e26897d330f61111621ef2b29c7e"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVmzXnw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/bd8b46614e7cc3d4af2a64ef42a21edac57b8a68c346eb0659496e45a21d4e3e/zh-Littlebird/dsh-plugin-ssh-hosts",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/d9a0df1827bc1b06477869c6655b5245bb9e8a7b7c684e4c65eaa5fd113849ac/zh-Littlebird/dsh-plugin-ssh-hosts",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/50728951?v=4",
       "login": "zh-Littlebird"
@@ -45,27 +45,41 @@
   },
   "id": "gh:1449973663",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-ssh-hosts",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zh-Littlebird/dsh-plugin-ssh-hosts#439f474d10f5e26897d330f61111621ef2b29c7e",
+    "version": "1.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client/index.js",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-ssh-hosts",
+    "status": "valid",
+    "type": "module",
+    "version": "1.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/bd8b46614e7cc3d4af2a64ef42a21edac57b8a68c346eb0659496e45a21d4e3e/zh-Littlebird/dsh-plugin-ssh-hosts",
+    "coverUrl": "https://opengraph.githubassets.com/d9a0df1827bc1b06477869c6655b5245bb9e8a7b7c684e4c65eaa5fd113849ac/zh-Littlebird/dsh-plugin-ssh-hosts",
     "description": "SSH fleet management for DSH: host inventory, sudo policy, SFTP, approvals, encrypted secrets. DSH 的多服务器 SSH 管理：清单、执行、上传下载、审批与加密凭据。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "一个可独立安装的 DeepSeek Harness（DSH）Host 插件：让 Agent 在多台 Linux 服务器上执行命令、读写文件、上传下载，同时把密码/私钥/口令隔离在模型之外，并对高风险命令要求人工审批。"
   },
   "schemaVersion": 1,
   "scripts": {

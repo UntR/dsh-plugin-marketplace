@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "3042c7d2a9f7339a911180406259262b987e897a"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnB2sA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7d43d3bf732e263dcf16358f299f97b304de9740101be9bbf2a34bc53f62f52c/Dorufoc/dsh-model-retry",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/a7b350f1ab8374575895e3762deb8f4a40815c7a2b4011b5a652b24c55314546/Dorufoc/dsh-model-retry",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/125817061?v=4",
       "login": "Dorufoc"
@@ -50,27 +50,41 @@
   },
   "id": "gh:1450210992",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-model-retry",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:Dorufoc/dsh-model-retry#3042c7d2a9f7339a911180406259262b987e897a",
+    "version": "0.2.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./index.js",
+      "./client": "./client.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./icon": "./icon.svg",
+      "./locale/*.json": "./locale/*.json",
+      "./package.json": "./package.json"
+    },
+    "main": "index.js",
+    "name": "dsh-model-retry",
+    "status": "valid",
+    "type": "module",
+    "version": "0.2.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7d43d3bf732e263dcf16358f299f97b304de9740101be9bbf2a34bc53f62f52c/Dorufoc/dsh-model-retry",
+    "coverUrl": "https://opengraph.githubassets.com/a7b350f1ab8374575895e3762deb8f4a40815c7a2b4011b5a652b24c55314546/Dorufoc/dsh-model-retry",
     "description": "Per-model failure-retry policy for DeepSeek Harness: retry count (0 = unlimited, counted per step), fixed or incrementing cooldowns, and transient-error retries for direct model calls such as auto review."
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "为 DeepSeek Harness 提供按模型的重试策略：次数、冷却方式，以及自动审查这类「直接模型调用」的瞬时错误重试。"
   },
   "schemaVersion": 1,
   "scripts": {

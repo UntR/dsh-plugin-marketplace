@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "stale",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "afe8b72842444f5d78e414a6c058b0c450fe089f"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVZI2NA",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/a7db4bd657deff1f41cd27ff1b69c3195816b0a3d4274454d3ac341ff88b528f/zmy15/dsh-plugin-retry-backoff",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/948141a5054c499f08a4689f8b9a6c004b578a61cb5e3daa7e6ea20be2b16540/zmy15/dsh-plugin-retry-backoff",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/109537161?u=7367942678ec5a89a7b9927226b6ec8b9d9c1160&v=4",
       "login": "zmy15"
@@ -43,27 +43,45 @@
   },
   "id": "gh:1435645492",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-retry-backoff",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:zmy15/dsh-plugin-retry-backoff#afe8b72842444f5d78e414a6c058b0c450fe089f",
+    "version": "1.0.4"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js",
+        "types": "./lib/types/index.d.ts"
+      },
+      "./client": {
+        "default": "./lib/client.bundle.js",
+        "types": "./lib/types/client.d.ts"
+      },
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-retry-backoff",
+    "status": "valid",
+    "type": "module",
+    "version": "1.0.4"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/a7db4bd657deff1f41cd27ff1b69c3195816b0a3d4274454d3ac341ff88b528f/zmy15/dsh-plugin-retry-backoff",
+    "coverUrl": "https://opengraph.githubassets.com/948141a5054c499f08a4689f8b9a6c004b578a61cb5e3daa7e6ea20be2b16540/zmy15/dsh-plugin-retry-backoff",
     "description": "DSH 插件：模型请求遇到 429 / 限流等可重试失败时，按自定义指数退避自动延长重试轮次与等待时间，直到请求成功。网页端与桌面端共用同一份设置。"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "DSH 插件：模型请求遇到 429 / 限流等\"可通过重试解决\"的失败时，按你在设置面板里 自定义的指数退避，延长重试轮次与等待时间，直到请求成功。"
   },
   "schemaVersion": 1,
   "scripts": {

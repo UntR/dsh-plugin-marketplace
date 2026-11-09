@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "d27941ba13e361f7429398cefe937c5ceee125fc"
   },
   "github": {
@@ -16,7 +16,7 @@
     "defaultBranch": "main",
     "description": "DeepSeek Harness 破甲：默认提示词面向国模「鸢码」，完整开放版，无付费墙，技能库与知识库全含。破解市面上收费 388u 的版本，免费公开。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐",
     "fork": false,
-    "forks": 44,
+    "forks": 81,
     "headSha": "d27941ba13e361f7429398cefe937c5ceee125fc",
     "homepageUrl": null,
     "language": "JavaScript",
@@ -25,14 +25,14 @@
       "spdxId": "Apache-2.0"
     },
     "nodeId": "R_kgDOVmbdjw",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/7cd291d025a5007bb4bcf2636af3c6652274435876d6b4595c22edf035ceba8e/CallMeGuLab/dsh-purge-safe",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/f80fa856447c9f7e3e0f8c5a359bf6588c79765c1033878210792933832b13e8/CallMeGuLab/dsh-purge-safe",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/319308597?u=586752fa4b4da3af41458b8d23091a65162aef1a&v=4",
       "login": "CallMeGuLab"
     },
     "pushedAt": "2026-11-07T17:27:27Z",
     "slug": "CallMeGuLab/dsh-purge-safe",
-    "stars": 36,
+    "stars": 78,
     "topics": [
       "deepseek",
       "deepseek-harness",
@@ -43,37 +43,54 @@
       "prompt-injection",
       "red-team"
     ],
-    "updatedAt": "2026-11-08T16:47:36Z",
+    "updatedAt": "2026-11-09T11:26:18Z",
     "url": "https://github.com/CallMeGuLab/dsh-purge-safe"
   },
   "id": "gh:1449581967",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
-    "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "available": true,
+    "packageName": "dsh-purge-safe",
+    "preferred": "github",
+    "reason": null,
+    "requiresBuildApproval": true,
+    "spec": "github:CallMeGuLab/dsh-purge-safe#d27941ba13e361f7429398cefe937c5ceee125fc",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": {
+        "default": "./lib/index.js"
+      },
+      "./client": "./client.js",
+      "./package.json": "./package.json",
+      "./redteam": "./lib/redteam/index.js",
+      "./redteam/store": "./lib/redteam/store.js",
+      "./redteam/tools": "./lib/redteam/tools.js",
+      "./redteam/ui": "./lib/redteam/ui.js"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-purge-safe",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/7cd291d025a5007bb4bcf2636af3c6652274435876d6b4595c22edf035ceba8e/CallMeGuLab/dsh-purge-safe",
+    "coverUrl": "https://opengraph.githubassets.com/f80fa856447c9f7e3e0f8c5a359bf6588c79765c1033878210792933832b13e8/CallMeGuLab/dsh-purge-safe",
     "description": "DeepSeek Harness 破甲：默认提示词面向国模「鸢码」，完整开放版，无付费墙，技能库与知识库全含。破解市面上收费 388u 的版本，免费公开。Jailbreak for every model — swap prompts per model. 求 Star 收藏 ⭐"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "---"
   },
   "schemaVersion": 1,
   "scripts": {
     "install": false,
-    "postinstall": false,
+    "postinstall": true,
     "preinstall": false,
     "prepare": false
   }

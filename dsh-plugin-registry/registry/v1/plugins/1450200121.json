@@ -1,12 +1,12 @@
 {
   "bundle": {
-    "detected": false,
-    "patch": null,
-    "patchExists": null
+    "detected": true,
+    "patch": "./cordis.patch.yml",
+    "patchExists": true
   },
   "crawl": {
-    "enrichedAt": "2026-11-08T17:08:43.327Z",
-    "enrichmentStatus": "failed",
+    "enrichedAt": "2026-11-09T12:33:18.222Z",
+    "enrichmentStatus": "ok",
     "headSha": "a0dd267b7ac224e31d2060c49cf51bbdd1472186"
   },
   "github": {
@@ -25,7 +25,7 @@
       "spdxId": "MIT"
     },
     "nodeId": "R_kgDOVnBMOQ",
-    "openGraphImageUrl": "https://opengraph.githubassets.com/e8062d293ea70966fab7bee111b62342d9eb448cb6a485061614a7ee121b4ed8/TimYi/dsh-plugin-bilibili-subtitle",
+    "openGraphImageUrl": "https://opengraph.githubassets.com/051e6f3493f1e4771e562f15e1ebcc17753da1f4637821cf342f23039aaa0a07/TimYi/dsh-plugin-bilibili-subtitle",
     "owner": {
       "avatarUrl": "https://avatars.githubusercontent.com/u/7494892?v=4",
       "login": "TimYi"
@@ -46,27 +46,38 @@
   },
   "id": "gh:1450200121",
   "install": {
-    "available": false,
-    "packageName": null,
-    "preferred": null,
-    "reason": "Repository enrichment is unavailable.",
+    "available": true,
+    "packageName": "dsh-plugin-bilibili-subtitle",
+    "preferred": "github",
+    "reason": null,
     "requiresBuildApproval": false,
-    "spec": null,
-    "version": null
+    "spec": "github:TimYi/dsh-plugin-bilibili-subtitle#a0dd267b7ac224e31d2060c49cf51bbdd1472186",
+    "version": "0.1.0"
   },
   "npm": {
     "latestVersion": null,
     "published": false,
     "repositoryMatches": null
   },
-  "package": null,
+  "package": {
+    "exports": {
+      ".": "./lib/index.js",
+      "./cordis.patch.yml": "./cordis.patch.yml",
+      "./package.json": "./package.json"
+    },
+    "main": "lib/index.js",
+    "name": "dsh-plugin-bilibili-subtitle",
+    "status": "valid",
+    "type": "module",
+    "version": "0.1.0"
+  },
   "presentation": {
-    "coverUrl": "https://opengraph.githubassets.com/e8062d293ea70966fab7bee111b62342d9eb448cb6a485061614a7ee121b4ed8/TimYi/dsh-plugin-bilibili-subtitle",
+    "coverUrl": "https://opengraph.githubassets.com/051e6f3493f1e4771e562f15e1ebcc17753da1f4637821cf342f23039aaa0a07/TimYi/dsh-plugin-bilibili-subtitle",
     "description": "Bilibili subtitle extraction plugin for DeepSeek Harness (official CC/AI track + local SenseVoice ASR)"
   },
   "readme": {
-    "available": false,
-    "excerpt": ""
+    "available": true,
+    "excerpt": "给 DeepSeek Harness（DSH）用的 B 站字幕提取插件。 丢一个视频链接或 BV 号，工作区里就会多出 .srt 和 .txt。"
   },
   "schemaVersion": 1,
   "scripts": {
