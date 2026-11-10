@@ -75,10 +75,12 @@ def auto_export(store,directory):
    store.approve(row['id'],'Automated schema/evidence checks; AI-generated, not manually reviewed','automated')
  return export(store,directory)
 
-def prepare(store,registry,state,limit):
+def prepare(store,registry,state,limit,max_seconds=300):
  root=pathlib.Path(registry);index=json.loads((root/'index.json').read_text());entries,aliases=deduplicate(index['plugins']);failures=[];count=0
  restore(store,state)
+ deadline=time.monotonic()+max_seconds;stop=None
  for e in entries:
+  if time.monotonic()>=deadline:stop='preparation_time_limit';break
   if len(store.pending(limit))>=limit:break
   if count>=limit:break
   detail=json.loads((root/e['detailPath']).read_text());sha=detail['github']['headSha'];old=store.current(e['id']);mh=digest(metadata(e))
@@ -116,10 +118,10 @@ def prepare(store,registry,state,limit):
  checkpoint(store,state)
  lease={'run':str(uuid.uuid4()),'created':stamp(),'tasks':[{'id':r['id'],'inputHash':r['input_hash']} for r in selected]}
  atomic_json(pathlib.Path(state)/'lease.json',lease)
- report={'total':len(index['plugins']),'unique':len(entries),'aliases':aliases,'selected':len(selected),'sourceFailures':failures}
+ report={'total':len(index['plugins']),'unique':len(entries),'aliases':aliases,'selected':len(selected),'sourceFailures':failures,'stopReason':stop}
  atomic_json(pathlib.Path(state)/'plan.json',report);return report
 
-def execute(store,state,key,limit,weighted_budget):
+def execute(store,state,key,limit,weighted_budget,max_seconds=2400):
  root=pathlib.Path(state);events=window_events(root);requested=limit
  used=sum(e['attempts'] for e in events);prior_tokens=sum(e['weightedTokens'] for e in events)
  limit=min(limit,max(0,WINDOW_ATTEMPTS-used));weighted_budget=max(0,weighted_budget-prior_tokens)
@@ -133,6 +135,7 @@ def execute(store,state,key,limit,weighted_budget):
   save_window(root,events+[{'id':event_id,'completedAt':time.time(),'attempts':attempts,'weightedTokens':spent+sum(v[2] for v in active.values())}])
  with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
   while queue or active:
+   if not stop and time.monotonic()-run_started>=max_seconds:stop='configured_time_limit'
    for future in list(active):
     if not future.done():continue
     ident,row,reserved=active.pop(future)
@@ -148,6 +151,7 @@ def execute(store,state,key,limit,weighted_budget):
     checkpoint(store,state);record_window()
    if not stop:
     while queue and len(active)<limiter.concurrency and attempts<limit:
+     if time.monotonic()-run_started>=max_seconds:stop='configured_time_limit';break
      row=queue[0];prepared=json.loads(row['payload']);repair=json.loads(row['errors']) or None;tokens,_=reserve(prepared,repair)
      # Conservative byte reservation plus output budget; this is a PIPELINE cap,
      # not fabricated account quota or an assertion about remaining subscription.
@@ -169,15 +173,16 @@ def execute(store,state,key,limit,weighted_budget):
 
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('phase',choices=['prepare','run','save']);p.add_argument('--registry',type=pathlib.Path,default=pathlib.Path('dsh-plugin-registry/registry/v1'));p.add_argument('--state-dir',type=pathlib.Path,default=pathlib.Path('ai-state'));p.add_argument('--db',type=pathlib.Path,default=pathlib.Path('.local/ai-action/state.sqlite3'));p.add_argument('--output',type=pathlib.Path,default=pathlib.Path('ai-data/v1'));p.add_argument('--limit',type=int,default=800);p.add_argument('--weighted-budget',type=int,default=4000000);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('phase',choices=['prepare','run','save']);p.add_argument('--registry',type=pathlib.Path,default=pathlib.Path('dsh-plugin-registry/registry/v1'));p.add_argument('--state-dir',type=pathlib.Path,default=pathlib.Path('ai-state'));p.add_argument('--db',type=pathlib.Path,default=pathlib.Path('.local/ai-action/state.sqlite3'));p.add_argument('--output',type=pathlib.Path,default=pathlib.Path('ai-data/v1'));p.add_argument('--limit',type=int,default=800);p.add_argument('--weighted-budget',type=int,default=4000000);p.add_argument('--max-seconds',type=int,default=None);a=p.parse_args()
+ if a.max_seconds is not None and not 1<=a.max_seconds<=2400:raise ValueError('Time limit must be 1-2400 seconds')
  if not 1<=a.limit<=800 or not 20000<=a.weighted_budget<=6000000:raise ValueError('Invalid bounded batch settings')
  store=Store(a.db)
  try:
-  if a.phase=='prepare':result=prepare(store,a.registry,a.state_dir,a.limit)
+  if a.phase=='prepare':result=prepare(store,a.registry,a.state_dir,a.limit,a.max_seconds if a.max_seconds is not None else 300)
   elif a.phase=='run':
    key=os.environ.get('MINIMAX_API_KEY','')
    if not key.startswith('sk-cp-') or len(key)<17:raise ValueError('Configure MINIMAX_API_KEY subscription secret; never use PAYG')
-   try:result=execute(store,a.state_dir,key,a.limit,a.weighted_budget)
+   try:result=execute(store,a.state_dir,key,a.limit,a.weighted_budget,a.max_seconds if a.max_seconds is not None else 2400)
    finally:key=None
    auto_export(store,a.output)
   else:

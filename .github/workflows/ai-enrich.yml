@@ -9,6 +9,10 @@ on:
         description: Maximum model attempts (1-800)
         default: '800'
         required: true
+      run_seconds:
+        description: Stop starting model requests after this many seconds (1-2400)
+        default: '2400'
+        required: true
       verify_count:
         description: Maximum new npm/Git packages to inspect
         default: '200'
@@ -26,10 +30,11 @@ concurrency:
 jobs:
   enrich:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
+    timeout-minutes: 65
     env:
       BATCH_SIZE: ${{ inputs.batch_size || '800' }}
       VERIFY_COUNT: ${{ inputs.verify_count || '200' }}
+      RUN_SECONDS: ${{ inputs.run_seconds || '2400' }}
       GH_TOKEN: ${{ secrets.REGISTRY_GITHUB_TOKEN || github.token }}
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
@@ -39,15 +44,15 @@ jobs:
         run: |
           python3 - <<'PY'
           import os
-          batch=int(os.environ['BATCH_SIZE']);verify=int(os.environ['VERIFY_COUNT'])
-          assert 1 <= batch <= 800 and 1 <= verify <= 500
+          batch=int(os.environ['BATCH_SIZE']);verify=int(os.environ['VERIFY_COUNT']);seconds=int(os.environ['RUN_SECONDS'])
+          assert 1 <= batch <= 800 and 1 <= verify <= 500 and 1 <= seconds <= 2400
           PY
       - name: Configure generated-data commits
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
       - name: Prepare incremental tasks and durable paid-call lease
-        run: python3 tools/ai-catalog/action.py prepare --limit "$BATCH_SIZE"
+        run: python3 tools/ai-catalog/action.py prepare --limit "$BATCH_SIZE" --max-seconds 300
       - name: Persist lease before sending any model requests
         run: |
           git add ai-state
@@ -58,7 +63,7 @@ jobs:
       - name: Enrich with subscription key
         env:
           MINIMAX_API_KEY: ${{ secrets.MINIMAX_API_KEY }}
-        run: python3 tools/ai-catalog/action.py run --limit "$BATCH_SIZE" --weighted-budget 4000000
+        run: python3 tools/ai-catalog/action.py run --limit "$BATCH_SIZE" --weighted-budget 4000000 --max-seconds "$RUN_SECONDS"
       - name: Preserve results even if interrupted
         if: always()
         run: |

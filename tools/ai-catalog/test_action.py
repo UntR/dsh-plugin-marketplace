@@ -34,6 +34,29 @@ class ActionTests(unittest.TestCase):
   self.task();atomic_json(state/'lease.json',{'tasks':[]})
   with patch('action.request',side_effect=AssertionError('Must not call twice in same five-hour budget window')):result=execute(self.store,state,'FAKE',1,100000)
   self.assertEqual(result['attempts'],0)
+ def test_time_deadline_drains_inflight_and_preserves_unstarted_tasks(self):
+  self.task();self.store.put('gh:2',self.h,self.p,self.source,11)
+  state=self.root/'state';atomic_json(state/'lease.json',{'tasks':[{'id':r['id'],'inputHash':self.h} for r in self.store.pending(2)]})
+  clock=[0];limiter=__import__('minimax_validate').Limiter();limiter.concurrency=1
+  def fake(*args):
+   clock[0]=11
+   return {'outcome':'success','output':self.o,'usage':{'prompt_tokens':100,'completion_tokens':10,'total_tokens':110},'flags':[]}
+  with patch('action.time.monotonic',side_effect=lambda:clock[0]),patch('action.Limiter',return_value=limiter),patch('action.request',side_effect=fake) as request:
+   result=execute(self.store,state,'FAKE',2,100000,max_seconds=10)
+  self.assertEqual(request.call_count,1);self.assertEqual(result['stopReason'],'configured_time_limit')
+  self.assertEqual(result['attempts'],1);self.assertEqual(self.store.counts(),{'candidate':1,'prepared':1})
+  self.assertFalse((state/'lease.json').exists())
+  other=Store(self.root/'resumed.sqlite3')
+  try:
+   restore(other,state);self.assertEqual(other.counts(),{'candidate':1,'prepared':1})
+   self.assertEqual(len(other.pending(2)),1)
+  finally:other.close()
+ def test_preparation_deadline_preserves_pending_and_never_fetches(self):
+  self.task();registry=self.root/'registry';registry.mkdir();state=self.root/'state'
+  (registry/'index.json').write_text(json.dumps({'revision':'test','plugins':[{**ENTRY,'state':{'fork':False},'repositoryUrl':'https://github.com/example/plugin'}]}))
+  with patch('action.read_readme',side_effect=AssertionError('Deadline reached')):
+   result=prepare(self.store,registry,state,2,max_seconds=0)
+  self.assertEqual(result['stopReason'],'preparation_time_limit');self.assertEqual(result['selected'],1)
  def test_six_hour_budget_migrates_previous_run(self):
   state=self.root/'state';atomic_json(state/'last-run.json',{'completedAt':time.time(),'attempts':14,'weightedTokens':100937})
   self.assertEqual(sum(e['attempts'] for e in window_events(state)),14)
