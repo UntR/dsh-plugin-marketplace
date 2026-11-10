@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "17 3 * * *"
   workflow_dispatch:
+    inputs:
+      max_seconds:
+        description: Stop API work after this many seconds (1-1200)
+        default: '1200'
+        required: true
 
 permissions:
   contents: write
@@ -17,6 +22,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
@@ -30,8 +36,10 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - name: Build Registry
+        id: build_registry
         env:
           GH_TOKEN: ${{ secrets.REGISTRY_GITHUB_TOKEN || github.token }}
+          REGISTRY_SYNC_SECONDS: ${{ inputs.max_seconds || '1200' }}
           REGISTRY_SYNC_MANIFEST: /tmp/dsh-registry-changes.json
         run: |
           set -o pipefail
@@ -39,15 +47,20 @@ jobs:
       - name: Publish job summary
         if: always()
         run: test ! -f /tmp/dsh-registry-summary.txt || cat /tmp/dsh-registry-summary.txt >> "$GITHUB_STEP_SUMMARY"
-      - name: Commit changed Registry
+      - name: Save checkpoints and completed Registry
+        if: always()
         run: |
-          git add dsh-plugin-registry/registry/v1
-          if git diff --cached --quiet -- dsh-plugin-registry/registry/v1; then
+          mkdir -p registry-sync-state/v1
+          git add registry-sync-state
+          if test "${{ steps.build_registry.outcome }}" = success; then
+            git add dsh-plugin-registry/registry/v1
+          fi
+          if git diff --cached --quiet; then
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore(registry): publish changed plugin facts"
+          git commit -m "chore(registry): save sync progress and completed facts"
           git push
 
   publish:

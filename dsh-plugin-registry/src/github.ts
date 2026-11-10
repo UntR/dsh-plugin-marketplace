@@ -1,3 +1,4 @@
+import { SyncPaused } from './sync-pause.js'
 import type { DiscoveredRepository, GraphqlRequest } from './discovery.js'
 import type { RepositoryEnrichmentClient } from './enrich.js'
 
@@ -8,6 +9,9 @@ export interface GitHubClientOptions {
   fetch?: typeof globalThis.fetch
   sleep?: (milliseconds: number) => Promise<void>
   timeoutMs?: number
+  maxDurationMs?: number
+  maxRequests?: number
+  now?: () => number
   graphqlTimeoutMs?: number
 }
 
@@ -29,10 +33,18 @@ export class GitHubClient implements RepositoryEnrichmentClient {
   private readonly sleep: (milliseconds: number) => Promise<void>
   private readonly timeoutMs: number
   private readonly graphqlTimeoutMs: number
+  private readonly now: () => number
+  private readonly deadline: number
+  private readonly maxRequests: number
+  private requests = 0
+  private paused: SyncPaused | undefined
   private readonly headers: HeadersInit
 
   constructor(options: GitHubClientOptions) {
     if (options.token.trim() === '') throw new Error('GitHub token is required.')
+    this.now = options.now ?? Date.now
+    this.deadline = this.now() + (options.maxDurationMs ?? Number.POSITIVE_INFINITY)
+    this.maxRequests = options.maxRequests ?? Number.POSITIVE_INFINITY
     this.fetchImpl = options.fetch ?? globalThis.fetch
     this.sleep = options.sleep ?? (milliseconds => new Promise(resolve => setTimeout(resolve, milliseconds)))
     this.timeoutMs = options.timeoutMs ?? 10_000
@@ -54,6 +66,12 @@ export class GitHubClient implements RepositoryEnrichmentClient {
     let lastError: unknown
     let failure = 'network request failed'
     for (let attempt = 0; attempt < 5; attempt += 1) {
+      if (this.paused) throw this.paused
+      if (this.now() >= this.deadline || this.requests >= this.maxRequests) {
+        this.paused = new SyncPaused(this.now() >= this.deadline ? 'time_budget' : 'request_budget')
+        throw this.paused
+      }
+      this.requests += 1
       let response: Response | null = null
       try {
         response = await this.fetchImpl(url, {
@@ -68,6 +86,15 @@ export class GitHubClient implements RepositoryEnrichmentClient {
         failure = 'network request failed or timed out'
       }
       if (response !== null) {
+        const remaining = response.headers.get('x-ratelimit-remaining')
+        const exhausted = remaining !== null && Number(remaining) <= 50
+        if (exhausted || [401, 403, 429].includes(response.status)) {
+          this.paused = new SyncPaused(`api_quota_or_auth HTTP ${response.status}; reset=${response.headers.get('x-ratelimit-reset') ?? 'unknown'}`)
+          if (!response.ok) {
+            await response.body?.cancel().catch(() => {})
+            throw this.paused
+          }
+        }
         if (options.missingAsNull === true && response.status === 404) return null
         if (!response.ok) {
           failure = `HTTP ${response.status}`
@@ -85,7 +112,7 @@ export class GitHubClient implements RepositoryEnrichmentClient {
           }
         }
       }
-      if (attempt < 4) await this.sleep(retryDelay(response, attempt))
+      if (attempt < 4) await this.sleep(Math.min(60_000, Math.max(0, this.deadline - this.now()), retryDelay(response, attempt)))
     }
     throw new Error(`${context} failed after 5 attempts: ${failure}.`, { cause: lastError })
   }

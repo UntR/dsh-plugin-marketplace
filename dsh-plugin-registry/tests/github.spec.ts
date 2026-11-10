@@ -18,6 +18,57 @@ describe('GitHub client', () => {
     expect(fetch.mock.calls[0]?.[1]?.body).not.toContain('secret-token')
   })
 
+  it('shares a quota circuit and does not retry exhausted quota', async () => {
+    const fetch = vi.fn<typeof globalThis.fetch>(async () => new Response('', {
+      status: 403, headers: { 'x-ratelimit-remaining': '0', 'x-ratelimit-reset': '12345' },
+    }))
+    const sleep = vi.fn(async (_ms: number) => {})
+    const client = new GitHubClient({ token: 'secret', fetch, sleep })
+    await expect(client.graphql('query', { cursor: null })).rejects.toThrow('api_quota_or_auth HTTP 403; reset=12345')
+    await expect(client.graphql('query', { cursor: null })).rejects.toThrow('api_quota')
+    expect(fetch).toHaveBeenCalledTimes(1);expect(sleep).not.toHaveBeenCalled()
+  })
+
+  it('keeps a successful response while reserving quota for subsequent work', async () => {
+    const fetch = vi.fn<typeof globalThis.fetch>(async () => Response.json({ data: {} }, {
+      headers: { 'x-ratelimit-remaining': '50' },
+    }))
+    const client = new GitHubClient({ token: 'secret', fetch })
+    await expect(client.graphql('query', { cursor: null })).resolves.toEqual({})
+    await expect(client.graphql('query', { cursor: null })).rejects.toThrow('api_quota')
+    expect(fetch).toHaveBeenCalledTimes(1)
+  })
+
+  it('stops before sending requests beyond a shared budget or deadline', async () => {
+    const fetch = vi.fn<typeof globalThis.fetch>(async () => Response.json({ data: {} }))
+    const client = new GitHubClient({ token: 'secret', fetch, maxRequests: 1 })
+    await client.graphql('query', { cursor: null })
+    await expect(client.graphql('query', { cursor: null })).rejects.toThrow('request_budget')
+    let now = 0
+    const timed = new GitHubClient({ token: 'secret', fetch, now: () => now, maxDurationMs: 10 })
+    now = 10
+    await expect(timed.graphql('query', { cursor: null })).rejects.toThrow('time_budget')
+    expect(fetch).toHaveBeenCalledTimes(1)
+  })
+
+  it('pauses instead of waiting an hour for secondary rate limits', async () => {
+    const fetch = vi.fn<typeof globalThis.fetch>(async () => new Response('', {
+      status: 429, headers: { 'retry-after': '3600' },
+    }))
+    const sleep = vi.fn(async (_ms: number) => {})
+    const client = new GitHubClient({ token: 'secret', fetch, sleep })
+    await expect(client.graphql('query', { cursor: null })).rejects.toThrow('api_quota')
+    expect(fetch).toHaveBeenCalledTimes(1);expect(sleep).not.toHaveBeenCalled()
+  })
+
+  it.each([401, 403, 429])('pauses every worker on HTTP %s even without rate headers', async status => {
+    const fetch = vi.fn<typeof globalThis.fetch>(async () => new Response('', { status }))
+    const client = new GitHubClient({ token: 'secret', fetch })
+    await expect(client.graphql('query', { cursor: null })).rejects.toThrow(`HTTP ${status}`)
+    await expect(client.graphql('query', { cursor: null })).rejects.toThrow('api_quota_or_auth')
+    expect(fetch).toHaveBeenCalledTimes(1)
+  })
+
   it('returns missing repository content as null', async () => {
     const client = new GitHubClient({
       token: 'secret-token',
@@ -100,7 +151,7 @@ describe('GitHub client', () => {
   it('retries transport failures and honors Retry-After on server failures', async () => {
     const fetch = vi.fn<typeof globalThis.fetch>()
       .mockRejectedValueOnce(new TypeError('connection reset'))
-      .mockResolvedValueOnce(new Response('', { status: 429, headers: { 'retry-after': '3' } }))
+      .mockResolvedValueOnce(new Response('', { status: 503, headers: { 'retry-after': '3' } }))
       .mockResolvedValueOnce(Response.json({ data: { topic: null } }))
     const sleep = vi.fn(async (_milliseconds: number) => {})
     const client = new GitHubClient({ token: 'secret-token', fetch, sleep })

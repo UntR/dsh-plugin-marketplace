@@ -1,3 +1,5 @@
+import { loadCheckpoints, saveCheckpoint } from '../src/sync-checkpoint.js'
+import { SyncPaused } from '../src/sync-pause.js'
 import { mkdtemp, readFile, readdir, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
@@ -52,6 +54,39 @@ const enrichment: RepositoryEnrichmentClient = {
 }
 
 describe('registry sync', () => {
+  it('checkpoints in-flight successes, preserves published facts on pause, and resumes without refetch', async () => {
+    const root = await mkdtemp(join(tmpdir(), 'dsh-paused-'))
+    const directory = join(root, 'v1'); const state = join(root, 'checkpoints')
+    await syncRegistry({ directory, graphql: graphql([node(1), node(2)]), enrichment,
+      now: () => new Date('2026-11-01T00:00:00Z') })
+    const before = await readFile(join(directory, 'index.json'), 'utf8')
+    const changed = [node(1), node(2)]
+    changed[0]!.defaultBranchRef.target.oid = 'e'.repeat(40)
+    changed[1]!.defaultBranchRef.target.oid = 'f'.repeat(40)
+    let release!: () => void
+    const saved = new Promise<void>(resolve => { release = resolve })
+    const blocked: RepositoryEnrichmentClient = { ...enrichment, readText: async (repo, path) => {
+      if (repo.id === 'gh:2') { await saved; throw new SyncPaused('api_quota') }
+      return enrichment.readText(repo, path)
+    } }
+    await expect(syncRegistry({ directory, graphql: graphql(changed), enrichment: blocked,
+      now: () => new Date('2026-11-02T00:00:00Z'),
+      onDetail: async detail => { await saveCheckpoint(state, detail); release() },
+    })).rejects.toThrow('api_quota')
+    expect(await readFile(join(directory, 'index.json'), 'utf8')).toBe(before)
+    const checkpoints = await loadCheckpoints(state)
+    expect([...checkpoints.keys()]).toEqual(['gh:1'])
+    const readText = vi.fn<RepositoryEnrichmentClient['readText']>(async (repo, path) => {
+      if (repo.id === 'gh:1') throw new Error('Checkpoint must be reused')
+      return enrichment.readText(repo, path)
+    })
+    const summary = await syncRegistry({ directory, graphql: graphql(changed),
+      enrichment: { ...enrichment, readText }, checkpoints,
+      now: () => new Date('2026-11-02T00:01:00Z') })
+    expect(summary.changed).toBe(2);expect(summary.enrichmentFailed).toBe(0)
+    expect(readText).toHaveBeenCalledTimes(2)
+  })
+
   it('publishes every repository condition without using installability as a filter', async () => {
     const root = await mkdtemp(join(tmpdir(), 'dsh-registry-'))
     const variants = [

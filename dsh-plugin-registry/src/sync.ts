@@ -61,6 +61,8 @@ export async function syncRegistry(options: {
   graphql: GraphqlRequest
   enrichment: RepositoryEnrichmentClient
   now?: () => Date
+  checkpoints?: ReadonlyMap<string, RegistryPluginDetail>
+  onDetail?: (detail: RegistryPluginDetail) => Promise<void>
   allowLargeRemoval?: boolean
 }): Promise<SyncSummary> {
   const previous = await loadRegistry(options.directory)
@@ -75,9 +77,15 @@ export async function syncRegistry(options: {
     )
   }
   const generatedAt = (options.now ?? (() => new Date()))().toISOString()
+  const reusable = new Map(previous.details)
+  for (const [id, detail] of options.checkpoints ?? []) {
+    const old = reusable.get(id)
+    if (!old || Date.parse(detail.crawl.enrichedAt) > Date.parse(old.crawl.enrichedAt)) reusable.set(id, detail)
+  }
   const details = await enrichRepositories({
     repositories,
-    previous: previous.details,
+    previous: reusable,
+    ...(options.onDetail ? { onDetail: options.onDetail } : {}),
     client: options.enrichment,
     enrichedAt: generatedAt,
   })

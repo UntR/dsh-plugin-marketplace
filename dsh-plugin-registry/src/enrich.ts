@@ -1,3 +1,4 @@
+import { SyncPaused } from './sync-pause.js'
 import { selectDescription } from './description.js'
 import { inferInstall, parsePackageJson, type ParsedPackage } from './install.js'
 import type { DiscoveredRepository } from './discovery.js'
@@ -190,11 +191,13 @@ export async function enrichRepositories(options: {
   previous: ReadonlyMap<string, RegistryPluginDetail>
   client: RepositoryEnrichmentClient
   enrichedAt: string
+  onDetail?: (detail: RegistryPluginDetail) => Promise<void>
 }): Promise<RegistryPluginDetail[]> {
   const details = new Array<RegistryPluginDetail>(options.repositories.length)
   let nextIndex = 0
+  let stopped: unknown
   const enrichNext = async (): Promise<void> => {
-    while (nextIndex < options.repositories.length) {
+    while (nextIndex < options.repositories.length && stopped === undefined) {
       const index = nextIndex
       nextIndex += 1
       const repository = options.repositories[index]
@@ -214,16 +217,24 @@ export async function enrichRepositories(options: {
         details[index] = unchangedHead
           ? await refreshNpmFacts(repository, previous, options.client, options.enrichedAt)
           : await enrichRepository(repository, options.client, options.enrichedAt)
-      } catch {
+      } catch (error) {
+        if (error instanceof SyncPaused) { stopped = error; return }
         details[index] = previous === undefined
           ? minimalDetail(repository, options.enrichedAt, 'failed')
           : reuseDerived(repository, previous, 'stale', options.enrichedAt)
       }
+      const completed = details[index]
+      if (completed?.crawl.enrichmentStatus === 'ok') {
+        try { await options.onDetail?.(completed) }
+        catch (error) { stopped = error; return }
+      }
     }
   }
-  await Promise.all(Array.from(
+  const settled = await Promise.allSettled(Array.from(
     { length: Math.min(ENRICHMENT_CONCURRENCY, options.repositories.length) },
     enrichNext,
   ))
+  for (const result of settled) if (result.status === 'rejected') throw result.reason
+  if (stopped !== undefined) throw stopped
   return details
 }
