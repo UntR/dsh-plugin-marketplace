@@ -1,3 +1,9 @@
+## 2026-11-28：Luna 全量交接
+
+定时的 MiniMax 任务沿用已有入口和预算。发布时的 catalog 指纹已固定在 `ai-state/incremental-baseline.json`：同一个 ID 的 Git 提交和影响模型输入的元数据没变，就不进模型队列。新增 ID 或指纹变化才处理；未决请求按原检查点保留。未变的历史积压不自动补跑，未有合格 AI 结果的条目继续显示原简介。
+
+本次发现一条历史回执把同一固定来源绑到了错误 ID；对应目录项在 registry 同步过滤中暂时排除。单纯 README 路径 404、缺回执、缺固定版本不等于仓库无效，不批量删除。恢复该项时，应先有独立可归属的请求及版本证据，再解除过滤。
+
 # 当前自动化入口
 
 以README中的Client链接和`.github/workflows/ai-enrich.yml`为当前可用流程：每6小时增量执行、Git检查点续跑、自动生成简介、核验npm和Git精确来源、统一Pages发布。用户已授权将指定env中的订阅Key保存为仓库MINIMAX_API_KEY Secret。无需为每批重新输入Key或做逐条人工批准；发布数据的reviewLevel明确为automated。

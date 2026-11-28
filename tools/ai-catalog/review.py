@@ -12,7 +12,7 @@ def atomic_json(path,value):
  finally:
   if os.path.exists(temp):os.unlink(temp)
 
-def _export_files(store,directory):
+def _export_files(store,directory,eligible=None):
  root=pathlib.Path(directory);byid={}
  if (root/'meta.json').exists():
   previous=json.loads((root/'meta.json').read_text())
@@ -21,6 +21,7 @@ def _export_files(store,directory):
    value=json.loads((root/'records'/(ident[3:]+'.json')).read_text());byid[ident]=value
   if digest(sorted(byid.values(),key=lambda r:r['id']))!=previous['revision']:raise ValueError('Prior export checksum mismatch')
  for row in store.db.execute("SELECT * FROM tasks WHERE current=1 AND status='approved' ORDER BY id"):
+  if eligible is not None and not eligible(row):continue
   value=json.loads(row['output']);prepared=json.loads(row['payload']);source=json.loads(row['source'])
   errors=validate(value,prepared)
   if errors:raise ValueError(f'Approved output no longer valid: {row["id"]}')
@@ -37,7 +38,7 @@ def _export_files(store,directory):
  atomic_json(root/'meta.json',meta)
  return meta
 
-def export(store,directory):
+def export(store,directory,eligible=None):
  root=pathlib.Path(directory);root.parent.mkdir(parents=True,exist_ok=True)
  backup=root.with_name(root.name+'.export-backup')
  # Recover a crash between directory renames before validating the previous generation.
@@ -45,7 +46,7 @@ def export(store,directory):
  staging=pathlib.Path(tempfile.mkdtemp(prefix='.'+root.name+'-export-',dir=root.parent))
  try:
   if root.exists():shutil.copytree(root,staging,dirs_exist_ok=True)
-  meta=_export_files(store,staging)
+  meta=_export_files(store,staging,eligible)
   if backup.exists():shutil.rmtree(backup)
   had_root=root.exists()
   if had_root:os.replace(root,backup)

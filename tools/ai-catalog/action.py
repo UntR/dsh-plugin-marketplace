@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Bounded GitHub Actions enrichment. Public JSON checkpoints survive runner loss."""
-import argparse,collections,concurrent.futures,json,os,pathlib,time,uuid,urllib.error
+import argparse,collections,concurrent.futures,json,os,pathlib,re,time,uuid,urllib.error
 from schema import VERSIONS,canonical,digest,make_input,metadata,validate
 from source import read_readme
 from store import Store,stamp
@@ -68,22 +68,71 @@ def restore(store,directory):
    events.append({'id':ident,'completedAt':time.time(),'attempts':len(abandoned['tasks']),'weightedTokens':4000000,'uncertain':True});save_window(root,events)
  store.recover()
 
-def auto_export(store,directory):
+def auto_export(store,directory,eligible=None):
  for row in store.db.execute("SELECT * FROM tasks WHERE current=1 AND status='candidate'").fetchall():
+  if eligible is not None and not eligible(row):continue
   output=json.loads(row['output']);prepared=json.loads(row['payload'])
   if not validate(output,prepared) and not output['insufficient_evidence']:
    store.approve(row['id'],'Automated schema/evidence checks; AI-generated, not manually reviewed','automated')
- return export(store,directory)
+ return export(store,directory,eligible)
 
-def prepare(store,registry,state,limit,max_seconds=300):
+def incremental_candidates(root,state,entries):
+ baseline_path=pathlib.Path(state)/'incremental-baseline.json'
+ if not baseline_path.exists():return None
+ baseline=json.loads(baseline_path.read_text()); fingerprints=baseline['fingerprints']
+ if (baseline['schemaVersion']!=1 or not fingerprints
+     or digest(fingerprints)!=baseline['checksum']
+     or not re.fullmatch(r'sha256:[0-9a-f]{64}',baseline['registryRevision'])):
+  raise ValueError('Incremental baseline integrity failure')
+ current={}
+ for e in entries:
+  detail=json.loads((root/e['detailPath']).read_text())
+  sha=detail['github']['headSha'];mh=digest(metadata(e))
+  if digest([sha,mh])!=fingerprints.get(e['id']):current[e['id']]=(sha,mh)
+ return current
+
+def matching_source(row,current):
+ source=json.loads(row['source'])
+ return current.get(row['id'])==(source.get('headSha'),source.get('metadataHash'))
+
+def published_current(output,current):
+ already=set()
+ if current and output is not None and (pathlib.Path(output)/'meta.json').exists():
+  pub=pathlib.Path(output)
+  for ident in current.keys() & set(json.loads((pub/'meta.json').read_text())['records']):
+   rec=json.loads((pub/'records'/(ident[3:]+'.json')).read_text())
+   if rec['id']!=ident:raise ValueError('AI record identity mismatch')
+   if current[ident]==(rec['source']['headSha'],rec['source']['metadataHash']):already.add(ident)
+ return already
+
+def export_eligibility(registry,state,output=None):
+ root=pathlib.Path(registry)
+ if not (pathlib.Path(state)/'incremental-baseline.json').exists():return None
+ entries,_=deduplicate(json.loads((root/'index.json').read_text())['plugins'])
+ current=incremental_candidates(root,state,entries)
+ already=published_current(output,current)
+ return lambda row:row['id'] not in already and matching_source(row,current)
+
+def prepare(store,registry,state,limit,max_seconds=300,output=None):
  root=pathlib.Path(registry);index=json.loads((root/'index.json').read_text());entries,aliases=deduplicate(index['plugins']);failures=[];count=0
  restore(store,state)
+ current=incremental_candidates(root,state,entries)
+ already=published_current(output,current)
+ if current is not None:
+  # Only lease additions or changed source/metadata, never unchanged backlog.
+  # An unresolved paid attempt is retained in the existing checkpoint.
+  def eligible(row):
+   return row['id'] not in already and matching_source(row,current) and json.loads(row['versions'])==VERSIONS
+ else:
+  eligible=None
  deadline=time.monotonic()+max_seconds;stop=None
  for e in entries:
   if time.monotonic()>=deadline:stop='preparation_time_limit';break
-  if len(store.pending(limit))>=limit:break
+  if current is not None and (e['id'] not in current or e['id'] in already):continue
+  if len(store.pending(limit,eligible))>=limit:break
   if count>=limit:break
   detail=json.loads((root/e['detailPath']).read_text());sha=detail['github']['headSha'];old=store.current(e['id']);mh=digest(metadata(e))
+  if current is not None and old and old['status'] in ('uncertain','in_flight'):continue
   if old:
    source=json.loads(old['source'])
    if source['headSha']==sha and source['metadataHash']==mh:
@@ -114,11 +163,11 @@ def prepare(store,registry,state,limit,max_seconds=300):
    atomic_json(failure_path,{'id':e['id'],'headSha':sha,'metadataHash':mh,'kind':type(error).__name__,'reason':str(error)[:160],'retryAfter':time.time()+86400})
    continue
  store.remove_missing({e['id'] for e in entries})
- selected=[r for r in store.pending(limit) if json.loads(r['versions'])==VERSIONS]
+ selected=[r for r in store.pending(limit,eligible) if json.loads(r['versions'])==VERSIONS]
  checkpoint(store,state)
  lease={'run':str(uuid.uuid4()),'created':stamp(),'tasks':[{'id':r['id'],'inputHash':r['input_hash']} for r in selected]}
  atomic_json(pathlib.Path(state)/'lease.json',lease)
- report={'total':len(index['plugins']),'unique':len(entries),'aliases':aliases,'selected':len(selected),'sourceFailures':failures,'stopReason':stop}
+ report={'total':len(index['plugins']),'unique':len(entries),'aliases':aliases,'selected':len(selected),'incrementalCandidates':len(current) if current is not None else None,'sourceFailures':failures,'stopReason':stop}
  atomic_json(pathlib.Path(state)/'plan.json',report);return report
 
 def execute(store,state,key,limit,weighted_budget,max_seconds=2400):
@@ -129,7 +178,7 @@ def execute(store,state,key,limit,weighted_budget,max_seconds=2400):
   (root/'lease.json').unlink(missing_ok=True)
   return {'attempts':0,'stopReason':'six_hour_window_limit','windowAttempts':used,'states':store.counts()}
  lease=json.loads((pathlib.Path(state)/'lease.json').read_text());allowed={(r['id'],r['inputHash']) for r in lease['tasks']}
- rows=[r for r in store.pending(limit) if (r['id'],r['input_hash']) in allowed];queue=collections.deque(rows)
+ rows=store.pending(limit,lambda r:(r['id'],r['input_hash']) in allowed);queue=collections.deque(rows)
  limiter=Limiter();active={};spent=0;attempts=0;stop=None;run_started=time.monotonic();event_id=lease.get('run',str(uuid.uuid4()))
  def record_window():
   save_window(root,events+[{'id':event_id,'completedAt':time.time(),'attempts':attempts,'weightedTokens':spent+sum(v[2] for v in active.values())}])
@@ -178,15 +227,15 @@ def main():
  if not 1<=a.limit<=800 or not 20000<=a.weighted_budget<=6000000:raise ValueError('Invalid bounded batch settings')
  store=Store(a.db)
  try:
-  if a.phase=='prepare':result=prepare(store,a.registry,a.state_dir,a.limit,a.max_seconds if a.max_seconds is not None else 300)
+  if a.phase=='prepare':result=prepare(store,a.registry,a.state_dir,a.limit,a.max_seconds if a.max_seconds is not None else 300,a.output)
   elif a.phase=='run':
    key=os.environ.get('MINIMAX_API_KEY','')
    if not key.startswith('sk-cp-') or len(key)<17:raise ValueError('Configure MINIMAX_API_KEY subscription secret; never use PAYG')
    try:result=execute(store,a.state_dir,key,a.limit,a.weighted_budget,a.max_seconds if a.max_seconds is not None else 2400)
    finally:key=None
-   auto_export(store,a.output)
+   auto_export(store,a.output,export_eligibility(a.registry,a.state_dir,a.output))
   else:
-   store.recover();checkpoint(store,a.state_dir);auto_export(store,a.output)
+   store.recover();checkpoint(store,a.state_dir);auto_export(store,a.output,export_eligibility(a.registry,a.state_dir,a.output))
    # Saving completed/uncertain task statuses resolves the pre-run lease.
    (a.state_dir/'lease.json').unlink(missing_ok=True);result=store.counts()
   print(canonical(result))

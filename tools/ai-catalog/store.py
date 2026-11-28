@@ -37,8 +37,9 @@ class Store:
    for row in self.db.execute('SELECT id FROM tasks WHERE current=1').fetchall():
     if row['id'] not in ids:self.db.execute('UPDATE tasks SET current=0 WHERE id=?',(row['id'],))
  def current(self,ident):return self.db.execute('SELECT * FROM tasks WHERE id=? AND current=1',(ident,)).fetchone()
- def pending(self,limit):
+ def pending(self,limit,eligible=None):
   rows=self.db.execute("SELECT * FROM tasks WHERE current=1 AND status='prepared' ORDER BY updated, id").fetchall()
+  if eligible is not None:rows=[r for r in rows if eligible(r)]
   # Reserve 20% for oldest entries; fill remaining slots by stars.
   oldest=rows[:max(1,limit//5)];chosen={(r['id'],r['input_hash']) for r in oldest}
   rest=sorted((r for r in rows if (r['id'],r['input_hash']) not in chosen),key=lambda r:(-r['stars'],r['id']))

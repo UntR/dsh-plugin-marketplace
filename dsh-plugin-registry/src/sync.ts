@@ -66,7 +66,9 @@ export async function syncRegistry(options: {
   allowLargeRemoval?: boolean
 }): Promise<SyncSummary> {
   const previous = await loadRegistry(options.directory)
-  const repositories = await discoverRepositories(options.graphql)
+  // Catalog hold after a request receipt bound this repository's exact source to the wrong stable ID.
+  const repositories = (await discoverRepositories(options.graphql))
+    .filter(repository => repository.id !== 'gh:1347042946')
   const previousCount = previous.details.size
   const removalCount = previousCount - repositories.length
   const destructiveRemoval = (previousCount > 0 && repositories.length === 0)

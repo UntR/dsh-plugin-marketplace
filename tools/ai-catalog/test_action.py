@@ -1,7 +1,7 @@
 import contextlib,json,pathlib,tempfile,time,unittest
 from unittest.mock import patch
-from action import auto_export,checkpoint,deduplicate,execute,prepare,restore,window_events
-from schema import canonical,digest
+from action import auto_export,checkpoint,deduplicate,execute,export_eligibility,prepare,restore,window_events
+from schema import canonical,digest,metadata
 from store import Store
 from review import atomic_json
 from test_pipeline import ENTRY,RAW,fixture
@@ -57,6 +57,31 @@ class ActionTests(unittest.TestCase):
   with patch('action.read_readme',side_effect=AssertionError('Deadline reached')):
    result=prepare(self.store,registry,state,2,max_seconds=0)
   self.assertEqual(result['stopReason'],'preparation_time_limit');self.assertEqual(result['selected'],1)
+ def test_incremental_handoff_skips_unchanged_backlog_and_leases_only_delta(self):
+  self.task();registry=self.root/'registry';state=self.root/'state';pub=self.root/'ai'
+  old={**ENTRY,'state':{'fork':False},'repositoryUrl':'https://github.com/example/plugin','detailPath':'old.json'}
+  new={**old,'id':'gh:2','slug':'example/new','repositoryUrl':'https://github.com/example/new','detailPath':'new.json'}
+  revision='sha256:'+'b'*64;head=self.source['headSha']
+  atomic_json(registry/'index.json',{'revision':revision,'plugins':[old,new]})
+  for e in (old,new):atomic_json(registry/e['detailPath'],{'github':{'headSha':head}})
+  fingerprints={old['id']:digest([head,digest(metadata(old))])}
+  atomic_json(state/'incremental-baseline.json',{'schemaVersion':1,'registryRevision':revision,'checksum':digest(fingerprints),'fingerprints':fingerprints})
+  with patch('action.read_readme',return_value=(RAW,dict(self.source))) as reader:
+   result=prepare(self.store,registry,state,1,output=pub)
+  self.assertEqual(result['selected'],1);self.assertEqual(result['incrementalCandidates'],1)
+  self.assertEqual(reader.call_args.args[0]['id'],'gh:2')
+  self.assertEqual(self.store.current(old['id'])['status'],'prepared')
+  attempt=self.store.begin(self.store.current(old['id']),0,0)
+  self.store.finish(attempt,'success',output=self.o)
+  self.assertEqual(auto_export(self.store,pub,export_eligibility(registry,state))['recordCount'],0)
+  # A changed HEAD on a baseline ID becomes eligible, but the older candidate is not reused.
+  (state/'lease.json').unlink()
+  head2='f'*40
+  atomic_json(registry/old['detailPath'],{'github':{'headSha':head2}})
+  with patch('action.read_readme',return_value=(RAW+' updated',dict(self.source,headSha=head2))) as reader:
+   result=prepare(self.store,registry,state,2,output=pub)
+  self.assertEqual(result['incrementalCandidates'],2)
+  self.assertEqual(reader.call_args.args[0]['id'],old['id'])
  def test_six_hour_budget_migrates_previous_run(self):
   state=self.root/'state';atomic_json(state/'last-run.json',{'completedAt':time.time(),'attempts':14,'weightedTokens':100937})
   self.assertEqual(sum(e['attempts'] for e in window_events(state)),14)
